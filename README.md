@@ -6,18 +6,18 @@
 ## Overview
 This project aims to develop a **Retrieval-Augmented Generation (RAG)** system that enhances large language models (LLMs) using **real Reddit user experiences**.
 
-Often, finding a Reddit post that answers a specific question is time-consuming, while asking an LLM alone may lead to inaccurate or “hallucinated” responses.  
-For example:  
-> *“What’s the experience like riding the trams in Graz, Austria?”*  
+Often, finding a Reddit post that answers a specific question is time-consuming, while asking an LLM alone may lead to inaccurate or “hallucinated” responses.
+For example:
+> *“What’s the experience like riding the trams in Graz, Austria?”*
 
-An LLM has never had this experience, but Reddit users often share such firsthand accounts.  
+An LLM has never had this experience, but Reddit users often share such firsthand accounts.
 Our system bridges this gap by retrieving relevant Reddit posts and injecting them into an LLM’s context window to improve the realism and accuracy of its responses.
 
 ---
 
 ## Main Idea
-1. **Scrape or load** Reddit data (posts and threads) from public sources such as  
-   - [HuggingFace Datasets](https://huggingface.co/)  
+1. **Scrape or load** Reddit data (posts and threads) from public sources such as
+   - [HuggingFace Datasets](https://huggingface.co/)
    - [Reddit Dataset on GitHub](https://github.com/linanqiu/reddit-dataset/tree/master)
 2. **Pre-process and embed** each post using transformer-based embeddings (e.g., BERT).
 3. **Store** both text and embeddings in a **vector database** that supports efficient similarity search.
