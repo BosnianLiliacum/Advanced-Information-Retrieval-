@@ -1,43 +1,34 @@
 # Retrieval-Augmented Generation Reddit Search Engine
 **Advanced Information Retrieval – Group 12**
 
----
+## Getting started
+```
+uv sync
+source .venv/bin/activate
+git clone git@hf.co:datasets/PranavVerma-droid/reddit data/reddit
+```
 
-## Overview
-This project aims to develop a **Retrieval-Augmented Generation (RAG)** system that enhances large language models (LLMs) using **real Reddit user experiences**.
 
-Often, finding a Reddit post that answers a specific question is time-consuming, while asking an LLM alone may lead to inaccurate or “hallucinated” responses.
-For example:
-> *“What’s the experience like riding the trams in Graz, Austria?”*
+### Game plan
+text input query
+    -> make into sentence like data with llm
+    -> search based on similarity (in database)
+    -> output top 5 posts/comments, subreddit, sort based on upvotes
+    -> have llm make output nicer
 
-An LLM has never had this experience, but Reddit users often share such firsthand accounts.
-Our system bridges this gap by retrieving relevant Reddit posts and injecting them into an LLM’s context window to improve the realism and accuracy of its responses.
+- possibly write a web scraper if you want?
 
----
+- [ ] choose which data we want
+- [ ] pre-process data (title, content [vectorize], top k comments, url)
+- [ ] vectorize all data and insert into db with tags to each vector with subreddit, upvotes, downvotes
+- [ ] user text input, reformulate with an llm to be like the data in the db
+- [ ] vector similarity search in db, output top 5 closest nodes
+- [ ] evaluation criteria
+    - does the subreddit make sense for the query?
+- [ ]
 
-## Main Idea
-1. **Scrape or load** Reddit data (posts and threads) from public sources such as
-   - [HuggingFace Datasets](https://huggingface.co/)
-   - [Reddit Dataset on GitHub](https://github.com/linanqiu/reddit-dataset/tree/master)
-2. **Pre-process and embed** each post using transformer-based embeddings (e.g., BERT).
-3. **Store** both text and embeddings in a **vector database** that supports efficient similarity search.
-4. **Retrieve** the most relevant posts for a given user query using cosine similarity or other heuristics.
-5. **Augment** an LLM (e.g., LLaMA 4, Mistral 3.1) with those retrieved posts to generate a richer, more personal answer.
 
----
 
-## Technologies & Tools
-| Category | Tools / Libraries |
-|-----------|-------------------|
-| **Language** | Python |
-| **ML / NLP** | PyTorch, Transformers |
-| **Embeddings** | BERT, Sentence-Transformers |
-| **Databases** | [HelixDB](https://github.com/HelixDB/helix-db), [Qdrant](https://github.com/qdrant/qdrant) |
-| **LLMs** | [Meta’s LLaMA 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Mistral 3.1](https://mistral.ai/news/mistral-small-3-1) |
-| **Visualization / Analysis** | Matplotlib, Pandas |
-| **Documentation** | LaTeX, Overleaf |
-
----
 
 ## Data Processing Pipeline
 ```text
@@ -52,9 +43,4 @@ Vector Database Insertion (HelixDB or Qdrant)
 Query Embedding & Similarity Search
         ↓
 Retrieval-Augmented LLM Response
-
 ```
-
-
-### Game plan
--
