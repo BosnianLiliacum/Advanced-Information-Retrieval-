@@ -1,0 +1,66 @@
+Post Title: Looking for a self hosted cloud storage with this option (into in comments)
+Author: Mohanad__
+Score: 6
+URL: https://i.redd.it/9q07eeqn27dd1.png
+Number of comments: 11
+Created UTC: 2024-07-18 03:14:41
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: nevotheless
+  Comment: What does that even mean?
+  Score: 14
+  Created UTC: 2024-07-18 07:28:28
+
+Comment 2:
+  Author: NikStalwart
+  Comment: `rm -rf /`  
+
+/s but not really. Have you considered rclone remotes? 
+
+IF you want selective sync / on-demand sync, then what r34p3r suggests will work.
+  Score: 16
+  Created UTC: 2024-07-18 04:35:05
+
+Comment 3:
+  Author: tw25888
+  Comment: Synology drive offers that feature. Tried mac and windows and both clients work very smoothly
+  Score: 3
+  Created UTC: 2024-07-18 10:47:34
+
+Comment 4:
+  Author: zezimeme
+  Comment: Nextcloud
+  Score: 3
+  Created UTC: 2024-07-18 06:25:35
+
+Comment 5:
+  Author: mlazzarotto
+  Comment: Seafile does that
+  Score: 1
+  Created UTC: 2024-07-18 14:50:41
+
+Comment 6:
+  Author: Mohanad__
+  Comment: TLDR: is there anything like but I can selfhost?
+
+Thanks so much in advanced
+
+Hello, in one drive there is a feature where u can have files in your system path but they're not taking up storage here like   
+c:\\test.mp4 is offset to one drive, then when a program is trying to open it it will download it  
+to offset a file, u can right click and choose free up space  
+I think this is similar to icloud's optimize storage option
+  Score: 0
+  Created UTC: 2024-07-18 03:19:08
+
+Comment 7:
+  Author: VoidTheSecond
+  Comment: Nextcloud, Owncloud and seafile all suck. Tried them all, don't work like Google Drive 
+
+Clients on Linux pathetic. Need virtual file support so I don't need to download 10TB to every device
+  Score: -8
+  Created UTC: 2024-07-18 10:27:46
+

@@ -1,0 +1,77 @@
+Post Title: Router Recommendations?
+Author: notdoreen
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e60i3x/router_recommendations/
+Number of comments: 32
+Created UTC: 2024-07-18 02:29:08
+
+Post Content:
+I'm in the market for a new router with built-in VPN functionality, and/or one with good hardware to flash OpenWRT onto. My plan is to set up my VPN on the router so I can bypass the VPN's 5 device limit. Eventually I'd also like to play with  opening ports for remote access. I still feel unconfortable with that as I'm still learning (3 years self-hosting). The most I've done with that is set up Tailscale once but I'd like to play around with other options, preferably the best option. Anyways, hoping to get recommendations from people who know more than me on a reliable router that can do these things.
+
+Top 7 comments:
+Comment 1:
+  Author: johngizzard
+  Comment: An Asus with merlin is a great entry point.
+
+If you're feeling game, a dedicated mini pc running opnsense is probably the most expandable option.
+
+I went straight from Google wifi (lol) to virtualized opnsense and didn't have too much trouble, virtualization definitely upped the complexity though.
+
+It painlessly runs as an exit node for tailscale, all I need to do is connect to tailscale and I'm effectively in my network
+  Score: 7
+  Created UTC: 2024-07-18 03:03:26
+
+Comment 2:
+  Author: LCZ_
+  Comment: OPNsense OPNsense OPNsense OPNsense
+
+**Build your own router.** Either that or get one of those multi-NIC mini PCs from AliExpress. One of the most fun projects I've done in my homelab, and it's the gift that keeps giving with all sorts of plugins, extensions, VLAN capabilities, etc.
+
+It's really a rabbit hole once you start. And you'll never look back.
+  Score: 8
+  Created UTC: 2024-07-18 05:47:22
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: Had one main question: What hardware do you currently have access to? (If any)
+
+OPNsense can install on any x86 processor machine and [doesn't have high requirements](https://docs.opnsense.org/manual/hardware.html). Will provide you with everything you need (example has build in wiregaurd)
+
+If you don't have the hardwar and want a cheaper option; as another comment mentioned. A good entry point is Asus with merlin. Merlin should support every Asus router which is why it is a safe choice over looking for routers that support OpenWrt (which isn't hard to do but just pointing our the support of Merlin)
+
+Hope that helps
+  Score: 4
+  Created UTC: 2024-07-18 04:17:06
+
+Comment 4:
+  Author: ksteink
+  Comment: I had too many issues with OpenWRT that I ended up ditching it up.  I moved on to Mikrotik and I am not going back.
+
+If you want a solid experience with tons of options for configuration and multiple VPN protocols take a look of Mikrotik Routers.
+
+You may want to consider the L009 or the RB5009
+  Score: 4
+  Created UTC: 2024-07-18 04:25:21
+
+Comment 5:
+  Author: nightcom
+  Comment: MikroTik or OPNsense
+  Score: 4
+  Created UTC: 2024-07-18 04:52:10
+
+Comment 6:
+  Author: cookies_are_awesome
+  Comment: Check out the GL inet Flint 2. It can do wireguard (or openvpn but why) out of the box, has 2 x 2.5 gig ports, 4 additional 1 gig ports, Wi-Fi 6, nice UI with lots of features, and it's based on OpenWRT. Actually you can just flash OpenWRT on it for the full effect.
+
+If you are interested, hurry and you can catch it for $127 on Amazon before Prime Day ends.
+  Score: 3
+  Created UTC: 2024-07-18 05:18:02
+
+Comment 7:
+  Author: etgohomeok
+  Comment: Ubiquiti.
+
+Dream router for a simple drop-in replacement of a consumer router, or go full UDM if you want to really dive into their ecosystem.
+  Score: 3
+  Created UTC: 2024-07-18 02:52:17
+

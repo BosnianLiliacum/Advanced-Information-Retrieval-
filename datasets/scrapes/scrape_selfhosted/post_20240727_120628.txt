@@ -1,0 +1,76 @@
+Post Title: Alternative to Grafana+InfluxDB
+Author: niemand112233
+Score: 9
+URL: https://www.reddit.com/r/selfhosted/comments/1ea22jm/alternative_to_grafanainfluxdb/
+Number of comments: 15
+Created UTC: 2024-07-23 07:49:57
+
+Post Content:
+I would like to dith Grafana and Influxdb since it uses too much resources and the changes in the influx-syntax is a nightmare. 
+
+  
+What I would like to monitor: CPU usage of nodes, power usage of my TP-Link smart meters, some SNMP stuff and the most crucial part: which LXC/VM of my Proxmox host uses which resources (CPU, RAM, Bandwith). 
+
+  
+I would like to monitor several nodes and I would like to create my own "dashboard". 
+
+  
+What would you recommend? 
+
+Top 7 comments:
+Comment 1:
+  Author: lunakoa
+  Comment: prometheus and node exporter
+  Score: 14
+  Created UTC: 2024-07-23 08:36:33
+
+Comment 2:
+  Author: bufandatl
+  Comment: Prometheus and grafana. 
+
+Zabbix 
+
+Observium 
+
+Checkmk 
+
+So many monitoring tools available just need to compare which suits the best for you.
+  Score: 9
+  Created UTC: 2024-07-23 09:04:23
+
+Comment 3:
+  Author: cornflake123321
+  Comment: What is too much resources? Are you sure it's configured correctly? Mine influxdb2 instance is running on ancient hardware and is monitoring a lot more than yours yet cpu and ram usage are quite low.
+  Score: 4
+  Created UTC: 2024-07-23 09:18:17
+
+Comment 4:
+  Author: guigouz
+  Comment: Victoriametrics is a drop-in replacement for the ingestion part, is lighter on resources and compatible with prometheus for the query part.  You have to change dashboards to use promql though. 
+
+Depending on the amount of data,  you can consider the free grafana cloud tier.
+  Score: 6
+  Created UTC: 2024-07-23 10:32:16
+
+Comment 5:
+  Author: tonym128
+  Comment: I thought I was coming to reccomend Glances and Dozzle for CPU and container monitoring, but maybe Home Assistant with MQTT would enable you to submit metrics and build a nice looking dashboard. 
+
+Homepage ( [gethomepage.dev](http://gethomepage.dev) ) is pretty good as well for a dashboard.
+  Score: 4
+  Created UTC: 2024-07-23 09:19:50
+
+Comment 6:
+  Author: WiseCookie69
+  Comment: VictoriaMetrics + Grafana.
+
+VictoriaMetrics can also ingest InfluxDB. So depending on your setup, that is an easy drop-in replacement.
+  Score: 4
+  Created UTC: 2024-07-23 11:59:17
+
+Comment 7:
+  Author: sassanix
+  Comment: Tianji has server status information that you might like.
+  Score: 1
+  Created UTC: 2024-07-23 12:57:05
+

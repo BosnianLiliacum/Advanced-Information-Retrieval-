@@ -1,0 +1,62 @@
+Post Title: Selfhosting Mail server
+Author: ImAxolotlik
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eah3b6/selfhosting_mail_server/
+Number of comments: 19
+Created UTC: 2024-07-23 19:45:43
+
+Post Content:
+Hello I have Debian 11 server with dedicated public IP, and I want to host a mail server, I do not know what to use and how to set it up? Do you even recommend it?
+
+Top 7 comments:
+Comment 1:
+  Author: White_sh
+  Comment: [https://github.com/mjl-/mox](https://github.com/mjl-/mox)
+
+[https://github.com/stalwartlabs/mail-server](https://github.com/stalwartlabs/mail-server)
+  Score: 4
+  Created UTC: 2024-07-23 21:39:42
+
+Comment 2:
+  Author: washedFM
+  Comment: If you don’t know the basics don’t even get started
+  Score: 14
+  Created UTC: 2024-07-23 20:37:42
+
+Comment 3:
+  Author: ajc3197
+  Comment: You'll find plenty of info if you really want to try it. Or not.
+
+[https://www.fastmail.com/blog/pros-and-cons-of-hosting-your-own-email/](https://www.fastmail.com/blog/pros-and-cons-of-hosting-your-own-email/)
+  Score: 3
+  Created UTC: 2024-07-23 19:58:37
+
+Comment 4:
+  Author: driversti
+  Comment: This is the best guide I have ever read https://www.linuxbabe.com/mail-server/setup-basic-postfix-mail-sever-ubuntu
+I set up my mail server about 3 or 4 years ago and have had no problems so far. Try it and you will see that self hosting a mail server is not as difficult as many say.
+  Score: 2
+  Created UTC: 2024-07-24 04:43:49
+
+Comment 5:
+  Author: 399ddf95
+  Comment: If you have to ask, no, it is not recommended. 
+
+*Why* do you want to host a mail server? What are you going to do with it? 
+
+Michael W. Lewis has just written a book "Run Your Own Mail Server" that's about to be released. If you're determined to do this, that's probably a good place to start. https://mwl.io/nonfiction/tools#ryoms
+  Score: 4
+  Created UTC: 2024-07-23 19:51:48
+
+Comment 6:
+  Author: 654354365476435
+  Comment: There is only one recommendation for self hosted email server - don't.
+  Score: 5
+  Created UTC: 2024-07-23 21:42:00
+
+Comment 7:
+  Author: boxingdog
+  Comment: don't, all your emails are going to be sent straight to spam
+  Score: 3
+  Created UTC: 2024-07-23 20:23:32
+

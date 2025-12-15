@@ -1,0 +1,93 @@
+Post Title: Introducing Hexagonal Grid Text Encryption: A Approach to Data Security
+Author: 0_Python
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1edhwx9/introducing_hexagonal_grid_text_encryption_a/
+Number of comments: 12
+Created UTC: 2024-07-27 14:40:45
+
+Post Content:
+# What My Project Does
+
+I'm excited to share my latest project, a **Hexagonal Grid Text Encryption** system! This encryption method transforms a given text into a hexagonal grid, permutes it based on a key, and then converts it back to encrypted text. The system includes functions to create a hexagonal grid, permute it based on a key, convert text to and from a matrix format, and ultimately encrypt and decrypt the text.
+
+Here’s a brief overview of the key components:
+
+* **Hexagonal Grid Creation**: Generates a hexagonal grid pattern based on a specified size.
+* **Grid Permutation**: Uses a key to permute the grid using a pseudorandom shuffle.
+* **Text to Matrix Conversion**: Converts a text string to a matrix of ASCII values based on the hexagonal grid.
+* **Matrix to Text Conversion**: Converts the matrix back to a text string.
+* **Encryption and Decryption**: Uses the hexagonal grid and permutation to securely encrypt and decrypt text.
+
+The code ensures the original text can be perfectly reconstructed from the encrypted text, provided the same key is used.
+
+# Target Audience
+
+This project is primarily intended for:
+
+* **Cryptography Enthusiasts**: If you're interested in exploring unique and unconventional methods of data encryption, this project is for you.
+* **Educational Purposes**: This project can be a great learning tool for those studying data encryption techniques, Python programming, or algorithm design.
+* **Hobbyists and Developers**: While not recommended for production use due to the unconventional and possibly unproven nature of the encryption method, it's a fun project for developers to tinker with and extend.
+
+# Comparison
+
+Unlike traditional encryption methods like AES or RSA, which are well-studied and widely used in secure communication, this Hexagonal Grid Text Encryption system offers a novel approach by leveraging geometric patterns for data transformation. Here are some key differences:
+
+* **Uniqueness**: This method uses a hexagonal grid for text transformation, which is not commonly seen in standard encryption algorithms.
+* **Educational Value**: The project provides a hands-on way to understand and implement the concept of data permutation and transformation.
+* **Not Production-Ready**: Unlike established encryption methods, this project is more of a toy project and educational tool rather than a secure encryption standard suitable for sensitive data.
+
+Feel free to check out the code on github, and let me know what you think! Feedback and contributions are always welcome.
+
+[https://github.com/00-Python/Hexagonal-Permutation-Cipher](https://github.com/00-Python/Hexagonal-Permutation-Cipher)
+
+Feel free to try it out and share your thoughts or improvements!
+
+Top 4 comments:
+Comment 1:
+  Author: AutoModerator
+  Comment: Hi there, from the /r/Python mods.
+
+We want to emphasize that while security-centric programs are fun project spaces to explore we do not recommend that they be treated as a 
+security solution unless they’ve been audited by a third party, security professional and the audit is visible for review.
+
+Security is not easy. And making project to learn how to manage it is a great idea to learn about the complexity of this world. That said, there’s a difference 
+between exploring and learning about a topic space, and trusting that a product is secure for sensitive materials in the face of adversaries. 
+
+We hope you enjoy projects like these from a safety conscious perspective. 
+
+Warm regards and all the best for your future Pythoneering,
+
+/r/Python moderator team
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/Python) if you have any questions or concerns.*
+  Score: 1
+  Created UTC: 2024-07-27 14:40:45
+
+Comment 2:
+  Author: SheriffRoscoe
+  Comment: You lost me at "novel".
+  Score: 5
+  Created UTC: 2024-07-27 15:31:19
+
+Comment 3:
+  Author: bethebunny
+  Comment: Hey, cool project! You really put a lot of time into polishing the code and it's really nice and easy to read.
+
+Since this cypher is visually inspired, I think it'd be really helpful to create a visual explanation of a specific example going through the encryption and decryption process, and showing the permuted grids.
+
+A couple thoughts:
+- You convert to a matrix of ints, but as far as I can tell the values of these ints aren't used in the process and you could just leave them as the individual characters for clarity.
+- A lot of your code is dealing with flattening matricies to make the index math simpler. I think you could create a simple matrix class which has a couple methods for indexing according to a flat indexing scheme, which would simplify your code.
+- From a security perspective, if I'm understanding the algorithm correctly, this is in a class of encryption schemes called [transposition ciphers](https://en.m.wikipedia.org/wiki/Transposition_cipher). These can be pretty fun to study! I wouldn't recommend using these types of ciphers for truly sensitive materials, as they have a number of weaknesses outlined in the Wikipedia article.
+  Score: 4
+  Created UTC: 2024-07-27 15:34:47
+
+Comment 4:
+  Author: fortunatefaileur
+  Comment: Please edit your post to explain it’s a toy or a puzzle in the first sentence.
+
+Obviously no one should use this at all, and it’s dishonest of you to post it like that.
+  Score: 1
+  Created UTC: 2024-07-27 14:47:51
+
+Note: This post has only 4 comments at the time of scraping.

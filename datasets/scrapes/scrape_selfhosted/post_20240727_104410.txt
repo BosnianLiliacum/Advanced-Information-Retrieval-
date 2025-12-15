@@ -1,0 +1,63 @@
+Post Title: GPUs in home servers
+Author: Void-ux
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ohu3/gpus_in_home_servers/
+Number of comments: 11
+Created UTC: 2024-07-16 13:20:57
+
+Post Content:
+Hey, I'm looking at making a relatively powerful home server for hosting game servers, Plex/Jellyfin (transcoding etc.) and other software. I assume a GPU would be beneficial in this, in case I ever want a DE and for the whole transcoding portion (+ Immich ML). Would you guys recommend simply putting in a cheap 3050?
+
+Top 7 comments:
+Comment 1:
+  Author: h3r4ld
+  Comment: At least for media transcoding, you're better off with QuickSync on a recent-gen Intel CPU than you are using a GPU.  Cheaper and much more efficient to run for the same performance.
+  Score: 19
+  Created UTC: 2024-07-16 13:35:17
+
+Comment 2:
+  Author: R1s1ngDaWN
+  Comment: A GPU won't help with the game server portion but for transcoding, either get a modern Intel CPU for QSV or, if for whatever reason you don't like Intel CPU's, get an A310 GPU
+  Score: 6
+  Created UTC: 2024-07-16 16:41:57
+
+Comment 3:
+  Author: deelayman
+  Comment: For transcoding, QSV is probably the better option. Especially if you'll be hosting a game server which I assume to mean streaming gameplay to remote devices. I'm recalling something about a low limit on active NVENC streams on most NVIDIA GPU's (like 5 or something) - and this allotment is likely to be shared between encodes for media and active game sessions. Additionally, if you want to host any local AI models a GPU seems to be a semi-requirement.
+
+So a GPU is a good idea for some things you might want to do. But transcoding may be better served by an Intel CPU with QSV
+  Score: 3
+  Created UTC: 2024-07-16 13:43:17
+
+Comment 4:
+  Author: KillerTic
+  Comment: I am running fine with a 1060 6GB for Immich and Jellyfin 4K transcoding. Small LLMs in Ollama perform okay as well. Stay with Nvidia, I tried AMD and it was so much hustle to get running.
+  Score: 2
+  Created UTC: 2024-07-16 20:16:02
+
+Comment 5:
+  Author: Dangerous-Raccoon-60
+  Comment: If it’s just about video (not ML), how about an Intel Arc GPU? Quickync. AV1. Small. Cheap.
+  Score: 1
+  Created UTC: 2024-07-16 18:14:30
+
+Comment 6:
+  Author: grendel_151
+  Comment: Simply getting a server to RDP or VNC while using a GPU to speed it up has been almost impossible.  I have an old 1080 I threw in a server to see if I could get it to work and it still isn't working right almost a year later.  I got it sorta working with TurboVNC but even that's started not launching correctly.
+
+Of course this could be just me, I'm not a very good sysadmin.
+
+The instructions I came across last year when I was working at it heavily said that nVidia was much harder to get working because it's hard to get it to use a virtual frame buffer and it doesn't work right if a monitor isn't connected.
+
+This may or may not be pertinent to your situation.
+
+Otherwise, I'm running Ark, Valheim and Minecraft servers all the time without the GPU really doing anything and having no issues whatsoever using an AMD 5900X.  Usual use is 2 valheim servers and a minecraft server and then also other random household stuff without any slowdowns anyone's noticed.
+  Score: 1
+  Created UTC: 2024-07-16 19:17:31
+
+Comment 7:
+  Author: Hamza9575
+  Comment: If you want non gaming stuff related gpu, then weakest gpu is fine, but it has to be the latest generation. So i recommend not 3050 but rather 4060. Due to the better nvenc chip. 4070 and higher uses 2 nvenc chip if you wanna do more powerful stuff.
+  Score: 1
+  Created UTC: 2024-07-16 14:05:35
+

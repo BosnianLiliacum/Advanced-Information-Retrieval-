@@ -1,0 +1,79 @@
+Post Title: Immich workflow on iOS to avoid iCloud storage?
+Author: Timely_Anteater_9330
+Score: 42
+URL: https://www.reddit.com/r/selfhosted/comments/1e7ymvq/immich_workflow_on_ios_to_avoid_icloud_storage/
+Number of comments: 39
+Created UTC: 2024-07-20 15:47:19
+
+Post Content:
+I finally made the plunge into Immich and backed up my entire photo library in under 10 minutes which was impressive. But I wanted to ask people who are primarily using Immich to avoid having to pay for iCloud storage and have been running Immich for a while. What does your workflow look like? And what I mean by 'workflow':
+
+1. after doing the initial backup, do you just wipe all the photos in the iOS Photo app?
+2. how do you manage new photos on your iOS device moving forward? Do you manually delete them? Or can Immich delete them from iOS Photo app after backup?
+3. also please share any tips and tricks you wish you knew when you started this. The good and the bad.
+
+Thank you in advance &lt;3
+
+# Follow up:
+
+I'm starting to realize there's no easy replacement to iOS Photos. I can't do simple edits in Immich (yet) such as rotating a photo or cropping. Then there is the **Memories** which aren't really a deal breaker for me but it is for other family members. The main friction point is getting other family members to use something that is "watered down" from what they are use to and I use that term loosely. I understand Immich is free, open source and does a few things pretty great but I feel Immich is more of a backup rather than a replacement for iCloud/Photo app... unless I am missing something here?
+
+Top 7 comments:
+Comment 1:
+  Author: rambostabana
+  Comment: Keep in mind you should have a 3-2-1 backup if you care about your photos at all
+  Score: 21
+  Created UTC: 2024-07-20 16:42:54
+
+Comment 2:
+  Author: Odd-Let9042
+  Comment: I’m thinking of using an icloudpd docker container to automatically download photos from iCloud, then push them into Immich (by using CLI) and then deleting the photos from iCloud. I will be using iCloud only as a temporary storage to transfer photo to Immich and I don’t need to pay for it then.
+  Score: 13
+  Created UTC: 2024-07-20 17:24:23
+
+Comment 3:
+  Author: 0xKaishakunin
+  Comment: I use [ifuse](https://github.com/libimobiledevice/ifuse) to mount my iPhone and rsync to sync the photos in HEIC format to my file server. 
+
+The immich-cli imports the images into immich and rclone syncs the original HEICs encrypted to a cloud storage box. 
+
+Icloud is disabled at my device for the photos.
+  Score: 9
+  Created UTC: 2024-07-20 18:53:57
+
+Comment 4:
+  Author: tomi35
+  Comment: Yes, currently you have to delete the pics in the iOS Photos app after they've been backed up. You'll have to delete from recently deleted too.
+
+Also I use Immich as the main "gallery app" so backup is more reliable and frequent with the foreground backup turned on.
+  Score: 6
+  Created UTC: 2024-07-20 16:00:39
+
+Comment 5:
+  Author: kryptonite93
+  Comment: I host Immich and a container called icloupd on my server, I use iOS native integration for iCloud so that daily my photos get backed up to iCloud then that container syncs those photos to my server and I have Immich point to a it’s directly ad a READ-ONLY external library. This way no issues with Immich will ever cause me to lose photos and the auto upload of iCloud is way more reliable than Immich’s app (not immich’s fault it’s just the way iOS works). Whenever my 50gb tier for iCloud that I share with my fiancé fills up we both delete all our iOS Photos and they’re all still backed up in Immich. I found this to be the easiest for peace of mind
+  Score: 4
+  Created UTC: 2024-07-20 21:07:11
+
+Comment 6:
+  Author: young_mummy
+  Comment: I'm curious how you did the initial backup. I set it up on my wife's phone but she has like 20k pictures and I simply cannot get the upload process to stay alive even leaving her phone on overnight with disabling sleep etc.
+
+I'm thinking I'm going to have to download to a PC and upload with CLI for initial backup.
+  Score: 2
+  Created UTC: 2024-07-20 18:09:06
+
+Comment 7:
+  Author: GredditGeek
+  Comment: Sorry to semi-hijack this thread but I didn’t get traction in the Immich subreddit. I too have a few items to smooth out before getting everyone on-board…
+
+SANITY CHECK 1: I want to lessen the use on the device so once I have a good secondary immutable backup of Immich, I go into the iOS PHOTOS app and delete old data. Accessing those deleted photos will be done through Immich. Old photos on local cleanup needs to be done periodically, manually, from the iOS PHOTOS app.
+
+SANITY CHECK 2: Immich is auto backing up (is this a good idea?). There is always a lot of churn for the newest 2-weeks probably of photos... deleting, editing, etc. What happens when a photo is backed up, but the original has been edited on the device? Will there now be 2 copies in Immich?
+
+SANITY CHECK 3: If #2 above means there will be 2 copies, that’s not optimal. I understand there isn’t an “only backup photos older than 14 days” or some other filter. How could this be managed? Hmmm...
+
+SANITY CHECK 4: If doing a local phone photos cleanup (ie. deleting some old stuff not wanted, deep clean), should always do it inside the Immich app “Library” section so it will be deleted both in cloud and local? Because only deleting on local won’t reflect back into Immich.
+  Score: 2
+  Created UTC: 2024-07-21 16:53:35
+

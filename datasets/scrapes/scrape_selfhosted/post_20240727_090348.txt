@@ -1,0 +1,44 @@
+Post Title: How much ram for a mc server
+Author: TTVMrGeo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eary54/how_much_ram_for_a_mc_server/
+Number of comments: 11
+Created UTC: 2024-07-24 03:55:56
+
+Post Content:
+I want to set up a large mc server using bungeecord. I hope it will have a couple hundred people max. I currently have 24gb ram. How much will I need and how should I split it between servers? (Lobby, skyblock, pvp ect.)
+
+Top 5 comments:
+Comment 1:
+  Author: Skangendo
+  Comment: How much deditated wam do you need for your minecraft serber?
+  Score: 39
+  Created UTC: 2024-07-24 04:13:40
+
+Comment 2:
+  Author: KurisuAteMyPudding
+  Comment: For a couple hundred players at minimum I'd recommend 32-48 GB of ram to ensure a smooth player experience. More is always better
+  Score: 5
+  Created UTC: 2024-07-24 04:39:18
+
+Comment 3:
+  Author: MaxKulik1
+  Comment: [https://www.youtube.com/watch?v=\_pVNvSuA2mM](https://www.youtube.com/watch?v=_pVNvSuA2mM)
+  Score: 3
+  Created UTC: 2024-07-24 05:20:55
+
+Comment 4:
+  Author: Questwalker101
+  Comment: Do not dedicate too much RAM otherwise the server will suffer performance issues. For vanilla servers, some sources say around two gigabytes is fine.
+
+If the server needs more RAM, then just up the memory by 1GB each until server is stable.
+  Score: 1
+  Created UTC: 2024-07-24 21:40:26
+
+Comment 5:
+  Author: msanangelo
+  Comment: how much ram? all of it. it's java, you want as much as possible. :P
+  Score: 1
+  Created UTC: 2024-07-24 11:31:05
+
+Note: This post has only 5 comments at the time of scraping.

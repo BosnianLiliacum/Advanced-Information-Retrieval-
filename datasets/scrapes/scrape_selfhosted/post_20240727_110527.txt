@@ -1,0 +1,64 @@
+Post Title: Centralized storage for Docker Swarm
+Author: Stitch10925
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e3dhqa/centralized_storage_for_docker_swarm/
+Number of comments: 11
+Created UTC: 2024-07-14 21:34:04
+
+Post Content:
+Hey everyone, 
+
+TLDR;
+
+Looking for alternate Docker Swarm volume storage besides NFS shares because of corrupt SQLite databases. But I'm not too sure about tech like CEPH, GlusterFS, SeaweedFS, etc. because of the need for at least 3 nodes and the inability to access files directly on the hard drive. Looking for insights, suggestions, advice.
+
+---
+The story:
+
+I have been running Docker Swarm for a few years. Besides a few hiccups, mainly due to my fault or lack of knowledge, it has been running pretty great.
+
+This week I noticed that the database of my Trillium Wiki was corrupt. A couple of days later I found out that the database of IAMMETER (power measuring device) was also corrupt. 
+
+Both are SQLite databases. Docker volumes are mounted from the NAS' NFS share, on which the databases are also stored. I realize this is bad practice, but since I am only running single instances I thought it would be fine. 
+
+Recently I had a problem with one of my Docker nodes running out of space and a Proxmox backup job that got stuck, which forced me to reboot the machine. Since some of my Docker nodes run on VM's, they had to be restarted as well. 
+
+I assume the restarts caused the databases to become corrupt somehow. Maybe services did not spin up on time causing docker to schedule a new one which may have caused a bit of overlap. Who knows, but it has me worried for future data-loss.
+
+I am looking for an alternative way to attach my volumes so I don't have to worry about locking issues and corrupt databases. I know about CEPH, GlusterFS, SeaweedFS, etc, but I have no experience with them. What bothers me about these technologies is the need for at least 3 nodes, which I honestly cannot justify. Another issue is that the files are not directly accessible. You have to FUSE mount to get to them. I believe this makes backups more difficult and you can't just pull the disk and access the files if something goes wrong. Maybe I'm missing something or misunderstanding these technologies?
+
+Any feedback, insights or suggestions would be greatly appreciated!
+
+Top 3 comments:
+Comment 1:
+  Author: mqmq0
+  Comment: Been in the exact same situation. Tried all the things, GlusterFS, Minio, public s3,SMB... All fails with sqlite. Except CephFS.
+ I can tell you already have Proxmox, so setting it up just like 10 click in the Gui. Then on your docker nodes you have to install the ceph client, mount ALL your cephfs nodes. All can be found in the ofc docs, or message me if you get stuck. 
+Using it since a year, zero corrupted sqlite databases since.
+  Score: 1
+  Created UTC: 2024-07-14 23:57:20
+
+Comment 2:
+  Author: neroita
+  Comment: I have a proxmox cluster wit ceph and swarm.
+
+setup is:
+ceph -&gt; cephfs -&gt; nfs-ganesha ha -&gt; docker.
+
+ceph and cephfs run on proxmox.
+nfs-ganesha cluster is made by two vm on proxmox.
+docker swarm is 3 manager and 5 worker on proxmox vm.
+
+It work really well.
+  Score: 1
+  Created UTC: 2024-07-15 05:48:54
+
+Comment 3:
+  Author: RedSquirrelFtw
+  Comment: What is the issue you are getting exactly, are your VMs basically locking up and corrupting data?  Do you get tons of stack traces and messages in dmesg  like "task blocked for more than 120 sec" when this happens?
+
+If yes, in your NFS mount options for each VM server, or any client that mounts shares, try adding the "async" option.  Until I did this on my network I used to get TONS of issues. VMs would randomly lock up, file systems would corrupt etc.  This would happen completely randomly overnight. I caught it in the act a few times, the whole infrastructure just starts to grind to a halt, you can no longer type anything in SSH sessions, services stop working etc one by one, until the VM locks right up.  I switched all my mounts to async mode (unfortunately have to do it on every single client, as it's not a server option) and have not had any issues since.
+  Score: 1
+  Created UTC: 2024-07-15 07:29:28
+
+Note: This post has only 3 comments at the time of scraping.

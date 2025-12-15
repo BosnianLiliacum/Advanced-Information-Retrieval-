@@ -1,0 +1,42 @@
+Post Title: Qnap for Ark Server
+Author: Flaky_Manufacturer49
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4au6y/qnap_for_ark_server/
+Number of comments: 6
+Created UTC: 2024-07-16 00:24:25
+
+Post Content:
+Hello, I am looking to use the qnap tvs 6 bay thunderbolt nas to host an Ark Survival Evolved server. How can I utilize the ram of the qnap and keep it running 24/7? 
+
+Right now, I can only seem to get the server to use the ram of my laptop plugged into it. Which is maxing out my asus zenbook pro. I’m very new to Nas’s and I got one for a video editing business. Hoping to use it to host a server as an added bonus. 
+ 
+Any help is appreciated. Thank you
+
+Top 3 comments:
+Comment 1:
+  Author: Azuras33
+  Comment: I don't think you can, and even if you can, it has an old i5 and 8gb of ram, I don't think it's enough for running an Ark server.
+  Score: 1
+  Created UTC: 2024-07-16 07:41:47
+
+Comment 2:
+  Author: Flaky_Manufacturer49
+  Comment: This is the tvs-h674t… it says it has 32gb of ram
+  Score: 1
+  Created UTC: 2024-07-16 07:44:12
+
+Comment 3:
+  Author: Althyrios
+  Comment: &gt;Right now, I can only seem to get the server to use the ram of my laptop plugged into it.
+
+Maybe I'm misunderstanding, but for me this sounds rather like the server is installed/running on your notebook and not on the qnap.
+
+More Information is definitely needed here.
+
+AFAIK you have 2 possibilities:
+- Set up a VM to run the ARK server on
+- Install a Docker Image
+  Score: 1
+  Created UTC: 2024-07-16 11:29:00
+
+Note: This post has only 3 comments at the time of scraping.

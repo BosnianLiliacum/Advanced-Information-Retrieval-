@@ -1,0 +1,36 @@
+Post Title: Best way to watch our phone gallery pics and videos on smart TV?
+Author: nandeyanen83
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ea703v/best_way_to_watch_our_phone_gallery_pics_and/
+Number of comments: 3
+Created UTC: 2024-07-23 12:49:11
+
+Post Content:
+Hey all!
+
+Still a beginner but have managed to have a setup with proxmox and some SSD harddrives. Got Nextcloud lxc automatically uploading all our photos and videos taken from our phones in the family, to these SSD drives. We can check them out with the nextcloud app on our phones or PC.
+
+We'd like to watch them together infront of the TV as a family. What are your easy recommendations here? I've only heard about Jellyfin and Plex, but that's about it. Thankful for recommendations on how to do it in the easiest way!
+
+Top 3 comments:
+Comment 1:
+  Author: tyros
+  Comment: Most phones these days come with screen casting capability (Chromecast on Android, not sure what it's called on Apple). If your TV supports it, it's literally a button tap to cast photos/videos to your TV. What phones/TV do you have?
+  Score: 2
+  Created UTC: 2024-07-23 13:12:16
+
+Comment 2:
+  Author: joelnodxd
+  Comment: A Chromecast + a gallery app on your phone with Chromecast support is probably the easiest way + gives you control over what you're showing on the TV
+  Score: 1
+  Created UTC: 2024-07-23 14:04:05
+
+Comment 3:
+  Author: sassanix
+  Comment: Share the Nextcloud folders that you want through Plex, only allow access to the accounts associated with them.
+
+Or cast to TV using a chromecast or Apple TV, or any dlna supported device.
+  Score: 1
+  Created UTC: 2024-07-23 16:45:00
+
+Note: This post has only 3 comments at the time of scraping.

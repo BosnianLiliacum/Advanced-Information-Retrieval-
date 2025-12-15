@@ -1,0 +1,24 @@
+Post Title: Monthly Data Engineering Python Newsletter
+Author: _amol_
+Score: 28
+URL: https://www.reddit.com/r/Python/comments/1ec132n/monthly_data_engineering_python_newsletter/
+Number of comments: 3
+Created UTC: 2024-07-25 17:45:46
+
+Post Content:
+[https://alessandromolina.substack.com/p/python-data-engineering-july-2024](https://alessandromolina.substack.com/p/python-data-engineering-july-2024)
+
+I have been working in the data engineering world for a few years, and have been contributing to many OSS projects that are foundations to it. This month I decided to start a dedicated newsletter to help everyone stay informed with what goes on in the data engineering world.   
+  
+The **Python Data Engineering** newsletter was born as a way to scratch my own itch of having to keep up with updates to all the components that are foundations for data engineering projects in Python, and aims to be different from the usual ones that focus on data science and analytics, as it concentrates more on the fundamental building blocks needed to create platforms on which data science can run.
+
+Hope it will be helpful for other people too and lightweight enough that it won’t introduce additional information overload for its readers.
+
+Top 1 comments:
+Comment 1:
+  Author: Mr7Pieces
+  Comment: So it's monthly python
+  Score: 12
+  Created UTC: 2024-07-25 19:01:12
+
+Note: This post has only 1 comments at the time of scraping.

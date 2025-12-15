@@ -1,0 +1,59 @@
+Post Title: What is your preferred streaming device?
+Author: notdoreen
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8dcpl/what_is_your_preferred_streaming_device/
+Number of comments: 28
+Created UTC: 2024-07-21 03:42:10
+
+Post Content:
+Those of you who watch content(self-hosted or otherwise), what's your preferred device?
+
+[View Poll](https://www.reddit.com/poll/1e8dcpl)
+
+Top 7 comments:
+Comment 1:
+  Author: clintkev251
+  Comment: Shield TV Pro
+  Score: 26
+  Created UTC: 2024-07-21 03:47:03
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: No option for a PC/ old machine you have lying around the house?
+
+The issue with most of the devices listed; they all come with ads. Yes easy plug and play but the amount of ads is ridiculous. (I guess you can install a custom home screen/launcher)
+
+With a PC/ old machine you have lying around, this isn't a problem.
+  Score: 6
+  Created UTC: 2024-07-21 04:17:54
+
+Comment 3:
+  Author: No_Ja
+  Comment: Apple TV - hands down. 
+  Score: 13
+  Created UTC: 2024-07-21 04:01:29
+
+Comment 4:
+  Author: DerEinePunkt
+  Comment: Apple TV
+  Score: 18
+  Created UTC: 2024-07-21 04:00:49
+
+Comment 5:
+  Author: chriberg
+  Comment: Apple TV
+  Score: 8
+  Created UTC: 2024-07-21 04:31:26
+
+Comment 6:
+  Author: superwizdude
+  Comment: I have a plex server and use the plex app built into my LG C3 TV.
+  Score: 4
+  Created UTC: 2024-07-21 04:57:39
+
+Comment 7:
+  Author: suicidaleggroll
+  Comment: Apple TV
+  Score: 7
+  Created UTC: 2024-07-21 04:39:37
+

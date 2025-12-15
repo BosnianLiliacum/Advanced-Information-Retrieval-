@@ -1,0 +1,71 @@
+Post Title: Trying to simulate what would happen if I lost my iPhone and needed to use Vaultwarden thats only accessible via VPN while away from home. What are the best options currently?
+Author: psychosynapt1c
+Score: 57
+URL: https://www.reddit.com/r/selfhosted/comments/1e4dbdk/trying_to_simulate_what_would_happen_if_i_lost_my/
+Number of comments: 93
+Created UTC: 2024-07-16 02:23:50
+
+Post Content:
+I currently use tailscale to access my vaultwarden instance, and tailscale is authenticated via google. I need my phone to 2FA into my google account to get into my VPN. But I wouldn't have my phone to text the code to or use my 2FAS auth app. If I needed to transfer my sim/esim over to a new phone, I would need another 2fa code on my cellular providers website to get access ( + my password, which is stored in vaultwarden)
+
+I have backup contacts for my google 2fa, and my icloud, but if those contacts weren't with me or I couldn't get in touch with them...I'm still screwed.
+
+Curious what some peoples backup plans would be if they ran into this situation. I just can't stomach having so much valuable data accessible to the public internet in any way shape or form, but it pretty much butt fucks me if I need access without my phone.
+
+Top 7 comments:
+Comment 1:
+  Author: brothatscool
+  Comment: Make a Linux install on a USB stick (w persistence, not live). Encrypt at the OS level. Put your emergency passwords somewhere in there, preferably also encrypted with the same password as your OS. Keep the USB on your keychain. Keep a spare image of it on a second USB somewhere safe. Test it a couple times a year.
+  Score: 70
+  Created UTC: 2024-07-16 02:44:29
+
+Comment 2:
+  Author: Geoffman05
+  Comment: You can setup a glass break password in bitwarden.  Print it off then put it in your safe.
+  Score: 20
+  Created UTC: 2024-07-16 02:33:51
+
+Comment 3:
+  Author: jkirkcaldy
+  Comment: I ran into a very similar situation a couple of years ago. Got a new phone and had to trade in my old one. But I didn’t log into my Apple account on the new phone before erasing the old. And because I’d been playing with sub domains my vaultwarden was inaccessible. 
+
+I was due to meet my other half for lunch but didn’t have her number so couldn’t call or message her. I was locked out of everything because it’s all managed by my password manager. 
+
+This is why I decided that I couldn’t have it all ways. If I wanted to self host my passwords, I had to acknowledge that there was going to be some risk but it was necessary. 
+
+Here’s the thing though, whenever you see a password manager hack in the news, it’s almost always a person problem not a software security problem. They target the people who work for the companies rather than the internet facing software/hardware. And it’s far, far more valuable to target Bitwarden actual, or last pass etc where in a single breach you’ll gain access to thousands if not millions of people’s passwords  rather than targeting random self hosted instances. 
+
+I am against the default advice of “behind a vpn for everything for everyone”.
+  Score: 19
+  Created UTC: 2024-07-16 06:49:47
+
+Comment 4:
+  Author: Apprehensive_Poem218
+  Comment: Have a Look at a yubikey. Maybe is it a solution to work with a securitykey?
+  Score: 5
+  Created UTC: 2024-07-16 04:46:32
+
+Comment 5:
+  Author: ericesev
+  Comment: I have three security keys. I can't think of a situation where I wouldn't have access to at least two of them when travelling. Everything can be bootstrapped from any one of the three.
+
+The WebAuthn and TOTP credentials on the keys are password protected to protect against theft. I keep a list of sites they're used with and can easily revoke the keys. Beyond passwords, I also have my [SSH and PGP keys stored on them](https://esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/). These can be used to recover TOTP seeds and the encrypted Bitwarden backups should something get corrupted/lost. These are also password protected and can be revoked without much trouble.
+
+I just need to remember the password to these security keys and for my primary email account. I don't even know my bitwarden master password. It's 256 random bits and encrypted with the PGP key.
+  Score: 7
+  Created UTC: 2024-07-16 04:19:22
+
+Comment 6:
+  Author: eric0e
+  Comment: When I travel, I carry two phones, one on me, one kept in my room, both well secured, and both with VPN access to my systems.  That said, I use Keepassxc, which uses a single encrypted file, that I have ways to get to a copy of the file remotely when I'm on travel.  This way, in a worse case scenario, I can buy a new phone/pc/tablet, and get to my passwords.
+  Score: 3
+  Created UTC: 2024-07-16 03:50:49
+
+Comment 7:
+  Author: AnApexBread
+  Comment: complete repeat sulky chase society desert ten seemly worry wrong
+
+ *This post was mass deleted and anonymized with [Redact](https://redact.dev)*
+  Score: 8
+  Created UTC: 2024-07-16 11:14:54
+

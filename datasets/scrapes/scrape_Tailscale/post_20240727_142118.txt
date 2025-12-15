@@ -1,0 +1,26 @@
+Post Title: Apple private relay password
+Author: FearIsStrongerDanluv
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1ebbq9u/apple_private_relay_password/
+Number of comments: 4
+Created UTC: 2024-07-24 20:29:31
+
+Post Content:
+I regrettably signed up to Tailscale with an Apple private relay account, now when i'm trying to sign in to another device (Windows) , it's requesting the password but unfortunately, i have no idea what it is, i also don't see any option anywhere in Tailsscale web interface to reset my password, are there any suggestions to resolve this issue?
+
+Top 1 comments:
+Comment 1:
+  Author: caolle
+  Comment: Tailscale doesn't allow you to sign in with an Email and Password. Instead they require use of an Identity Provider.
+
+If you used "Sign In With Apple"/Hide My Email when creating your account, do the same when trying to login:
+
+1. Choose Sign In With Apple
+2. Use Your Apple ID to sign in
+3. You should be able to get in
+
+My email address on tailscale is a Private Relay account that I created with Sign in With Apple and I just use my normal AppleID / Password to login.
+  Score: 4
+  Created UTC: 2024-07-24 20:44:37
+
+Note: This post has only 1 comments at the time of scraping.

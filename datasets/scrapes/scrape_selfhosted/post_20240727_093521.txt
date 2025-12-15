@@ -1,0 +1,88 @@
+Post Title: Cheapest way to make a website? (domain/email/web builder)
+Author: Fair_Prize2787
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8s79v/cheapest_way_to_make_a_website_domainemailweb/
+Number of comments: 13
+Created UTC: 2024-07-21 17:56:22
+
+Post Content:
+Hello!! I am an artist who is looking to expand beyond twitter commissions and i would love to have a website with a newsletter.   
+Im looking into options right now, and i was wondering if anyone here knows what the best combination of cheap domain + a business email + website builder is?
+
+Im currently using carrd (free) for my site. i could upgrade to pro for $19/year, buy a domain and connect it to carrd and get a business email to use Sender (generous free plan) to start a newsletter, im missing a few puzzle pieces, or if anyone knows a better way to do this please let me know! thank you :)
+
+Top 7 comments:
+Comment 1:
+  Author: micalm
+  Comment: This sub is about [literal self-hosting](https://www.reddit.com/r/selfhosted/wiki/selfhosted/) (i.e. an oldish PC in your basement or a virtual machine hosted somewhere else by a provider, but completely maintained by you), so you might not get the answer you need here.
+
+If you're willing to do a bit of grunt work though, as in installing a preferably Linux-based OS, learning a few console commands to work a static site generator and understanding concepts like servers and domains a little bit deeper you might be in the right place.
+
+DON'T go with GoDaddy if you can help it. DO outsource your email if you're not at least an intermediate sysadmin ;). A Synology/QNAP NAS (to be that "oldish PC") might be helpful if you already have one.
+
+Let us know if you want to go forward with this journey, it's not that hard. Really. ;)
+  Score: 11
+  Created UTC: 2024-07-21 20:35:39
+
+Comment 2:
+  Author: vantasmer
+  Comment: I know this is r/selfhosted  but IMO cheapest way without exposing your home network is a free tier VPS + duckDNS. Use docker or k3s to run the webserver.
+  Score: 2
+  Created UTC: 2024-07-21 21:39:11
+
+Comment 3:
+  Author: a1990b2
+  Comment: Domain: goDaddy  
+Hosting:   
+A. DigitalOcean (get a droplet and host your site on it) - this is good if you are building your own site   
+B. [Olasty.com](http://Olasty.com) a no-code store builder tailored for creatives. You can add your domain to it and it is all yours. I encourage you to subscribe and you should be notified once it is open for public.   
+C. Use an e-commerce store builder like shopify or wix, the catch here is the amount of effort you will put in order to get a functioning site.   
+
+
+Email: this is usually a configuration in your domain DNS, for example if you used goDaddy to purchase your domain, you will need to add some records to your DNS there that maps to your email service provider (gmail for example), you can read more here  
+[https://www.thexyz.com/account/knowledgebase/210/Pointing-your-Godaddy-domain-DNS-to-Gmail.html](https://www.thexyz.com/account/knowledgebase/210/Pointing-your-Godaddy-domain-DNS-to-Gmail.html)
+
+All the best
+  Score: 1
+  Created UTC: 2024-07-22 16:18:14
+
+Comment 4:
+  Author: whiteh4cker
+  Comment: VPS: Oracle Free Tier (free, credit card required)
+
+Domain: pp.ua from nic.ua (free, credit card required, can use virtual card)
+
+Paid domain alternative: .ovh (cheap renewal)
+
+How to: By using Hestia. There is a tutorial on YT. Here is the link: https://youtu.be/Hz58Zkke4VE?feature=shared
+  Score: 1
+  Created UTC: 2024-07-23 03:51:21
+
+Comment 5:
+  Author: LieselotteHanna55
+  Comment: I totally get wanting to expand beyond Twitter! For a cost-effective setup, consider combining your Carrd pro plan with beehiiv for your newsletter. beehiiv offers top-notch customization and zero fees on premium subs which can really help you grow your audience and monetize your content. Good luck!
+  Score: 1
+  Created UTC: 2024-07-23 05:16:52
+
+Comment 6:
+  Author: Eragon1442
+  Comment: You can deploy a small website for free with cloudflare. My example uses hugo as website builder.
+
+https://hugo-demo-5zv.pages.dev/posts/setup-for-the-blog/
+  Score: 0
+  Created UTC: 2024-07-22 05:21:21
+
+Comment 7:
+  Author: 80Ships
+  Comment: Raspberry Pi (or alternative)
+
+Docker
+
+Wordpress
+
+A Domain Name
+
+Cloudflare Tunnels
+  Score: 1
+  Created UTC: 2024-07-21 20:42:17
+

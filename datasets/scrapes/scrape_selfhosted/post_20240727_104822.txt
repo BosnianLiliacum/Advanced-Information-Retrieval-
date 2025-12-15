@@ -1,0 +1,121 @@
+Post Title: Why use so much overkill software?
+Author: ArchBTW123
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4dw5y/why_use_so_much_overkill_software/
+Number of comments: 49
+Created UTC: 2024-07-16 02:52:40
+
+Post Content:
+Just a bit of context: I would consider myself a self hoster but more of a simple one.
+
+Hi everyone,
+
+I have a general question about using so much software, as in why setup so many solutions when from what I can see the benefit is minimal.
+
+For example, you can setup caddy which does 1001 things for you, running a whole stack which seems overkill (ignorance on my part), but instead for most projects it can be hosted on a lighttpd server.
+
+I see caddy being pushed for web certs, why?
+It’s perfectly fine and “easy” to set up certs, 1-2 commands and a predefined config to add.
+
+
+Personally I have my pihole, homepage and some self made PHP applications running on my lighttpd web server, what’s the need for a whole tech stack?
+
+Another thing I see a lot of is authentication methods such as authetik (again ignorance since I have never touched it), when SSH and/or WireGuard is perfect, I can vpn from my laptop, pc, phone etc.
+
+
+
+I can fully understand software like cloud storage and software like Jellyfin, but why go all in for everything, everytime, what’s wrong with KISS?
+
+Is it just me who sees a problem with giant solutions for minimal problems, both from a hardware utilisation and security perspective.
+
+
+
+
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: vermyx
+  Comment: One person’s overkill is another person’s not enough. In the examples you posed they’re honestly bad. 
+
+In the example of lighttpd vs caddy, Caddy is a much more user friendly web server that does a lot of things right when used out of the box. Lighttpd is a pain comparatively to configure and you do not get auto ssl renewal. The benefit of lighttpd is performance which doesn’t pay dividends until you are at large scale which is beyond the majority of the use cases of this subreddit.
+
+You say ssh and wireguard is enough but neither are helpful for public hosting. This also rarely passed the non tech savvy partner test. Authentik is used for identity management for all of your services under one service.
+
+&gt; Personally I have my pihole, homepage and some self made PHP applications running on my lighttpd web server, what’s the need for a whole tech stack? 
+
+I also cant believe you are saying this unironically when this is essentially a tech stack…
+
+&gt;I can fully understand software like cloud storage and software like Jellyfin, but why go all in for everything, everytime, what’s wrong with KISS?
+
+You missed the point of KISS. You can either have KISS from a setup perspective meaning you have domain knowledge of everything you are setting up or you have KISS from turn key perspective to get it running.
+
+&gt; Is it just me who sees a problem with giant solutions for minimal problems, both from a hardware utilisation and security perspective.
+
+From a hardware utilization perspective you only care if you are on the embedded hardware side because usually you are trying to maximize everything. On the PC side you have more than enough power to spare and with hardware from the last 5ish years or so pretty energy efficient set ups. You have OS’es like Gentoo that do care about minimalism and performance and why the os kernel is compiled at install to make it efficient. The problem is when you have 16GB of ram do you really care if a stack uses350MB of memory vs 400? Embedded development does. From a security perspective you wouldn’t expose your system period. Network security isn’t about being unhackable - it is about making it difficult enough that you can either pull the plug before they get to the good stuff or make someone else a better target cause they have less bullshit to cut through.
+  Score: 25
+  Created UTC: 2024-07-16 03:28:05
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: From your post (and please correct me if I'm wrong as I'm not trying to offend, we are just having a discussion) it seems you self host just for yourself and no one else. 
+
+There are many reasons why a person might not follow KISS. And it depends on who your client is. 
+
+- do you self host for friends?
+- how about family? 
+- how about extended family
+- how about a small business? Maybe a non for profit?
+
+There is nothing wrong with KISS but sometimes depending on your client, it's not as easy as putting everything behind a VPN. Maybe your client will not understand to turn it on and instead they prefer 2FA
+
+Maybe it's a non for profit and they needs services to run on a public setting.
+
+Or maybe it's just a single person that wants to learn more about technology because at work they are limited by company rules,  the company stack and don't want to affect their company environment. 
+
+So while KISS is important to follow. Depending on who your selfhosting for, it might not always be the best answer. Especially if a person wants to learn and keep pushing the boundaries of their knowledge. 
+
+Hope that helps
+  Score: 12
+  Created UTC: 2024-07-16 03:19:14
+
+Comment 3:
+  Author: ThatGermanFella
+  Comment: Only read the title.
+
+
+Answer: **Because we can.** And because we want to. And because we want to see and test different things.
+  Score: 36
+  Created UTC: 2024-07-16 03:03:30
+
+Comment 4:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 8
+  Created UTC: 2024-07-16 03:12:38
+
+Comment 5:
+  Author: revereddesecration
+  Comment: If you think Caddy is overkill, you don’t understand Caddy.
+  Score: 7
+  Created UTC: 2024-07-16 04:32:33
+
+Comment 6:
+  Author: mrkesu
+  Comment: You've displayed no real interest in learning why others do other things so I don't know what you want out of this post. And you replying with "so tell me" isn't you trying to learn.
+
+
+If you don't have a problem with your method, great.
+  Score: 5
+  Created UTC: 2024-07-16 07:29:49
+
+Comment 7:
+  Author: mishrashutosh
+  Comment: I like Caddy because it's a single binary with a single config file. Everything stays in the Caddyfile. I don't use Caddy's auto TLS feature. I also haven't noticed it using a ton of memory or anything, although I could be wrong.
+
+
+If Caddy does anything shady in future, I will just go back to nginx or httpd. I have personally never tried lighttpd. May fire it up on a VM to see how it works.
+  Score: 4
+  Created UTC: 2024-07-16 03:15:58
+

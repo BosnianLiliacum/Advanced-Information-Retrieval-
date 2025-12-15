@@ -1,0 +1,26 @@
+Post Title: qnap ts-412 still viable?
+Author: Thebandroid
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e67kce/qnap_ts412_still_viable/
+Number of comments: 9
+Created UTC: 2024-07-18 09:53:00
+
+Post Content:
+I know they are old but all I'd be using it for is network storage, I've got a different server to run apps and what not. I'd just want to host a zfs pool on it.
+
+Top 2 comments:
+Comment 1:
+  Author: anonimeni
+  Comment: [Marvell CPU w/256 MB DDRII](https://www.qnap.com/en/product/ts-412/specs/hardware). I doubt its OS supports ZFS at all, and with non-Intel CPU's you're stuck with QTS, but even if, with those specs...
+
+Otherwise QNAP makes decent hardware. You should be fine with JBOD or RAID I, perhaps with not a lot of concurrent writes, like media file storage for the apps on the other server.
+  Score: 1
+  Created UTC: 2024-07-18 11:49:02
+
+Comment 2:
+  Author: bufandatl
+  Comment: There is no zfs for that one. It’s over a decade old I retired ( gave them to my brother) years ago because they are not up to standard anymore.
+  Score: 1
+  Created UTC: 2024-07-18 15:09:23
+
+Note: This post has only 2 comments at the time of scraping.

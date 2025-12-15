@@ -1,0 +1,54 @@
+Post Title: Using swagger-ui with flask but *not* with flask-restplus?
+Author: Kaba-Otoko
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1ecrtwm/using_swaggerui_with_flask_but_not_with/
+Number of comments: 7
+Created UTC: 2024-07-26 16:04:49
+
+Post Content:
+We have a python flask-based application that currently uses flask-restplus, and this application makes use of the flask-restplus Swagger facilities. However, we are now required to get rid of flask-restplus (long story which is not relevant to this question), but we still want to use basic flask.
+
+We need to use Swagger in this application, and I have found the python "swagger-ui" package, but I haven't been able to determine whether this swagger-ui package can work with basic flask \*without\* flask-restplus.
+
+Does anyone have any successful experience using swagger-ui with the non-flask-restplus version of flask?
+
+If so, could you point me to docs and hopefully sample code which illustrates how to use swagger-ui with non-flask-restplus flask?
+
+Thank you in advance.
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: FloxaY
+  Comment: &gt;I haven't been able to determine whether this swagger-ui package can work with basic flask \*without\* flask-restplus.
+
+Why? Have you tried it? Did you check its dependencies?
+
+&gt;non-flask-restplus version of flask
+
+These are extensions for Flask, not different versions of it.
+
+&gt;but we still want to use basic flask
+
+This is problematic, a reliable OpenAPI or Swagger schema for Swagger cannot be generated with Flask as-is. You can't have "basic" Flask code and Swagger without some missing/wrong stuff.
+
+There are a number of these types of extensions out for Flask, most seem to be unmaintained. The two you mentioned are both unmaintaned; Flask-restplus is abandoned since 2020, flask-swagger-ui is abandoned since 2022. Does not really look like something worth migrating to. That's the issue, you have to modify your code to move between different extensions as these don't seem to work the same way.
+
+What is the reason of dropping flask-restplus? If it's because it's unmaintained why not just swap it out for flask-restx which is a maintained fork of restplus, this way the changes required \*should be\* minimal or non-existent.
+  Score: 4
+  Created UTC: 2024-07-26 17:06:10
+
+Comment 2:
+  Author: crawl_dht
+  Comment: [APIFairy](https://github.com/miguelgrinberg/APIFairy)
+  Score: 1
+  Created UTC: 2024-07-27 10:45:45
+
+Comment 3:
+  Author: Goupix_zer
+  Comment: You can check the pip package "flasgger", it enables a swagger UI with a basic Flask application. I don't know how well it is maintained tho.
+  Score: 1
+  Created UTC: 2024-07-27 12:46:15
+
+Note: This post has only 3 comments at the time of scraping.

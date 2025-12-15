@@ -1,0 +1,38 @@
+Post Title: YouTrack, Certs, and Mobile App…
+Author: phospholipid77
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e5kugv/youtrack_certs_and_mobile_app/
+Number of comments: 8
+Created UTC: 2024-07-17 15:20:01
+
+Post Content:
+I'm having a difficult time connecting to YouTrack with my mobile device. 
+I can connect to it just fine from my laptops. When I try to connect with the mobile device, I get that error. I' installed build Build 2024.2.37269 from a ZIP on a Mac workstation trying to connect using an iOS 17 device. 
+
+The app does NOT like self-signed certs. I had self-signed certificates, but changed those. I now have a CA set up on that same workstation and I re-generated everything through that CA. There's not an issue with my browsers or WebCatalog. It's just the mobile device. I will say that my browsers do complain. They used to complain that the cert was self-signed. Now they complain that they don't recognize the CA. But I can still use it. I added the CA profile to the iPhone, but that didn't help.
+
+Do I need to use an independent CA? Do I need to try certbot? Or is it something else? For all the years I've done in tech, certificates are something I've just never paid attention to. It's always been "accept risks" or not. So, what do you folks think my next steps are?
+
+Top 2 comments:
+Comment 1:
+  Author: TheEvilRoot
+  Comment: Let’s encrypt? I’m running YouTrack with let’s encrypt certificates just fine.
+  Score: 6
+  Created UTC: 2024-07-17 16:08:19
+
+Comment 2:
+  Author: JBu92
+  Comment: You don't need to use a public CA. Adding a private CA to iPhone is a bit of a process, but I believe the following should work:  
+1. put your internal CA cert on a web host (e.g. my.internal.host/ca.crt)  
+2. open that link in specifically safari  
+3. it should prompt you about a "configuration profile"; hit allow and install  
+4. open the settings app, go to Certificate Trust Settings  
+5. enable full trust on the imported cert  
+  
+It is my understanding that opening/installing the cert is limited to either Safari or the iOS Mail app, so you could also email it to yourself if you're using the Mail app.  
+
+Depending on your desktop OS and browsers, you can also absolutely install your private CA cert into the relevant trust stores so your browsers stop complaining.
+  Score: 3
+  Created UTC: 2024-07-17 22:40:43
+
+Note: This post has only 2 comments at the time of scraping.

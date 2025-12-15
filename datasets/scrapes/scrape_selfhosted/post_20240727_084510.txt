@@ -1,0 +1,76 @@
+Post Title: What Mini-PC do you recommend?
+Author: IAlwaysSayMadonna
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebr2mh/what_minipc_do_you_recommend/
+Number of comments: 27
+Created UTC: 2024-07-25 10:00:26
+
+Post Content:
+I don’t run resource intensive programs on my current homeserver (i think). I would want to spend 200€/$ at max. It should be quiet and energy efficient since my current one costs me ~14€/15$ per month. 
+
+For reference, these are the programs I run:
+- Monica
+- TubeArchivist
+- MeTube
+- Nextcloud
+- Immich
+- BookStack
+- Jellyfin
+- Audiobookshelf
+- Homebox
+- Send
+- Paperless-ngx
+- haven
+- Writefreely
+- Picsur
+- Firefly III
+- Mealie
+
+Top 7 comments:
+Comment 1:
+  Author: Zestyclose_Car1088
+  Comment: N100
+  Score: 14
+  Created UTC: 2024-07-25 10:05:42
+
+Comment 2:
+  Author: Asche77
+  Comment: Lenovo m720q / m920q
+  Score: 3
+  Created UTC: 2024-07-25 12:48:21
+
+Comment 3:
+  Author: Plane_Resolution7133
+  Comment: Dell/HP/Lenovo all have great SFF/mini models with 8th gen Intel CPUs and up. 
+
+ServeTheHome have tested a huge amount of mini PCs.
+  Score: 5
+  Created UTC: 2024-07-25 10:22:15
+
+Comment 4:
+  Author: Matvalicious
+  Comment: Odroid has just released their new H4 board which are running on the Intel N97 (or the N305 for the H4-Ultra). Idle power usage is around 2-3W and it shouldn't exceed 20W under full CPU and GPU stress. I'm just about to order the H4+ to replace my 7 year old Intel Pentium-based home server.
+  Score: 1
+  Created UTC: 2024-07-25 11:05:19
+
+Comment 5:
+  Author: Rosenqvist
+  Comment: My beelink is fine
+  Score: 1
+  Created UTC: 2024-07-25 12:02:49
+
+Comment 6:
+  Author: physx_rt
+  Comment: You could get an 8th gen or newer quad-core non-Atom NUC. An i5 would be plenty for those. If you get the taller version, you'll have space for an m.2 PCIe drive, as well as a 2.5" SATA drive. And Thunderbolt 3, of course, which would allow you to add virtually anything.
+  Score: 1
+  Created UTC: 2024-07-25 15:07:58
+
+Comment 7:
+  Author: ggagnidze
+  Comment: What I am looking for is 3 or 4 nvme, ecc support and 2 or more 2.5 (or more) ports. SFP+ is ok too.   
+internal psu will be great. 
+
+but as far as I can see it’s just a wet dreams :(
+  Score: 1
+  Created UTC: 2024-07-25 18:33:53
+

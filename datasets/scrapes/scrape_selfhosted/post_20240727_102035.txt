@@ -1,0 +1,63 @@
+Post Title: What and where cheapest yearly domains?
+Author: Potential_Cat4255
+Score: 80
+URL: https://www.reddit.com/r/selfhosted/comments/1e67mkh/what_and_where_cheapest_yearly_domains/
+Number of comments: 111
+Created UTC: 2024-07-18 09:57:09
+
+Post Content:
+What and where cheapest yearly domains?
+
+Asking seriously.
+
+Top 7 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 152
+  Created UTC: 2024-07-18 10:44:17
+
+Comment 2:
+  Author: Tk5423
+  Comment: Watch out for renewal price. Don't be fooled by cheap first year price.
+  Score: 119
+  Created UTC: 2024-07-18 10:06:19
+
+Comment 3:
+  Author: JAP42
+  Comment: Cloudflare, they literally charge icann fees only. No markup including renewals
+  Score: 136
+  Created UTC: 2024-07-18 11:10:30
+
+Comment 4:
+  Author: Simon-RedditAccount
+  Comment: Strictly speaking, the cheapest ($1/yr) domains are [https://gen.xyz/1111b](https://gen.xyz/1111b) 
+
+For more TLDs, use [https://tld-list.com](https://tld-list.com) and sort for renewal price.
+
+Also, Cloudflare sells domains at no-markup: exactly what they pay the registry. Often this is the best way to go.
+  Score: 36
+  Created UTC: 2024-07-18 10:37:41
+
+Comment 5:
+  Author: Spherical_Cow_42
+  Comment: I always look at something like [https://domcomp.com/](https://domcomp.com/)  or  [https://tld-list.com/](https://tld-list.com/)
+  Score: 17
+  Created UTC: 2024-07-18 10:16:32
+
+Comment 6:
+  Author: Meanee
+  Comment: Just moved most of my domains from GoDaddy to Porkbun. They are reasonable, their web site is not cancer, and there's no upsell at every corner. 
+  
+DNS by Cloudflare.
+  Score: 10
+  Created UTC: 2024-07-18 13:34:18
+
+Comment 7:
+  Author: jusepal
+  Comment: For second level domain, nothing beats 6-7randomnumber.xyz.. just 99c at namecheap and few other registrar that supports it. It doesn't look nice though and won't be useable for email since most firewall outright block .xyz. Second cheapest after that will be .de .be .in .uk .ovh for $4-6.
+
+For third level domain aka subdomain, cheapest is free. Countless free dynamic dns providers out there giving access to free subdomain.
+  Score: 7
+  Created UTC: 2024-07-18 12:14:02
+

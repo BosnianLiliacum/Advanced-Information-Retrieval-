@@ -1,0 +1,35 @@
+Post Title: Ollama 0.3.0: Tool support
+Author: jmorganca
+Score: 47
+URL: https://www.reddit.com/r/ollama/comments/1ecanzn/ollama_030_tool_support/
+Number of comments: 4
+Created UTC: 2024-07-26 00:30:16
+
+Post Content:
+Hi everyone, Ollama 0.3.0 was just released with support for \`tools\` as a first-class part of the API. This makes it easy to build agents and other sorts of applications that were pretty hard to do before. Excited to see what gets built!
+
+Read more: [https://github.com/ollama/ollama/releases/tag/v0.3.0](https://github.com/ollama/ollama/releases/tag/v0.3.0)  
+
+
+Top 3 comments:
+Comment 1:
+  Author: peopleworksservices
+  Comment: ![gif](giphy|uWhtBJjSeh8zTF4ECj|downsized)
+
+Ollama ⭐⭐⭐⭐⭐
+  Score: 5
+  Created UTC: 2024-07-26 03:12:06
+
+Comment 2:
+  Author: CoAX
+  Comment: Has anyone found an “awesome list” of what’s being built or was built?
+  Score: 1
+  Created UTC: 2024-07-27 15:35:35
+
+Comment 3:
+  Author: nic_key
+  Comment: Is there a library you know of similar to composio that comes with predefined tools that can be used in ollama?
+  Score: 1
+  Created UTC: 2024-07-26 10:10:54
+
+Note: This post has only 3 comments at the time of scraping.

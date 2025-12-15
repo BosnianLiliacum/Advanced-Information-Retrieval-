@@ -1,0 +1,60 @@
+Post Title: Reverse Proxies
+Author: Friendly_Ground_51
+Score: 122
+URL: https://www.reddit.com/r/selfhosted/comments/1e8nqw7/reverse_proxies/
+Number of comments: 153
+Created UTC: 2024-07-21 14:38:00
+
+Post Content:
+What reverse proxy is everyone here using ? I had been using Nginx Proxy Manager but after reading they could fall behind on updates moved over to traefik and after some fits and starts last night got it running. Still learning it, was just curious what everyone else is doing.
+
+  
+Edit: After more tinkering today, was happy to get Traefik to work with User namespaces (Though still using host namespace for traffic its self), and be able to really drop the linux capabilities on it as well. Appreciate everyones responses its been very interesting I didn't know that much of the software mentioned existed. 
+
+Top 7 comments:
+Comment 1:
+  Author: ISoloContent
+  Comment: Caddy for its simplicity.
+  Score: 119
+  Created UTC: 2024-07-21 14:53:45
+
+Comment 2:
+  Author: PaperDoom
+  Comment: Traefik, caddy, swag are all pretty popular. Another option you don't see mentioned a lot but should be is Zoraxy.
+
+There is also a fork of NPM called NPMPlus that is more aggressively maintained and has some quality of life features that NPM doesn't.
+  Score: 35
+  Created UTC: 2024-07-21 14:46:52
+
+Comment 3:
+  Author: Reasonable-Papaya843
+  Comment: Traefik in docker with crowdsec integration and all logs going to grafana for further monitoring
+  Score: 83
+  Created UTC: 2024-07-21 15:25:05
+
+Comment 4:
+  Author: MaxBelastung
+  Comment: HAProxy
+  Score: 41
+  Created UTC: 2024-07-21 14:49:28
+
+Comment 5:
+  Author: eddyizm
+  Comment: Caddy
+  Score: 13
+  Created UTC: 2024-07-21 15:37:24
+
+Comment 6:
+  Author: DocDrydenn
+  Comment: Still kinda new and under development... but give Zoraxy a check.
+
+[https://github.com/tobychui/zoraxy](https://github.com/tobychui/zoraxy)
+  Score: 10
+  Created UTC: 2024-07-21 15:12:52
+
+Comment 7:
+  Author: After-Vacation-2146
+  Comment: Just regular nginx. It can auto update with unattended-upgrades and grab certs with cert-bot.
+  Score: 28
+  Created UTC: 2024-07-21 15:26:45
+

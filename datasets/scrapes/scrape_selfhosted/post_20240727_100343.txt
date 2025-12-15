@@ -1,0 +1,133 @@
+Post Title: Linkwarden - An open-source collaborative bookmark manager to collect, organize and preserve webpages | July 2024 Update - New iOS App, Full Page Copy, User Administration and more... 🚀
+Author: Daniel31X13
+Score: 150
+URL: https://www.reddit.com/r/selfhosted/comments/1e74crr/linkwarden_an_opensource_collaborative_bookmark/
+Number of comments: 41
+Created UTC: 2024-07-19 13:56:20
+
+Post Content:
+https://preview.redd.it/7nl28usedhdd1.jpg?width=2000&amp;format=pjpg&amp;auto=webp&amp;s=6a61037814d777fad85288393a3be36719f7e822
+
+Hello everybody, Daniel here!
+
+I'm back with some huge updates for Linkwarden.
+
+Before we start, we'd like to express our sincere thanks to all of our [Cloud](https://linkwarden.app/#pricing?utm_source=Reddit&amp;utm_medium=social&amp;utm_campaign=v2_6_announcement) subscription users. Your support is crucial to our growth and allows us to continue improving. Thank you for being such an important part of our journey. 🚀
+
+# What's New?
+
+# 📄 Full Page Copy
+
+This new feature allows users to save a complete copy of a webpage in a HTML format. It's perfect for archiving pages in their entirety, capturing all content as it appears at a specific point in time.
+
+https://preview.redd.it/v0zvdwffdhdd1.jpg?width=1280&amp;format=pjpg&amp;auto=webp&amp;s=6d910604c71c97ca4a736259211036fb48ae1085
+
+# 👥 User Administration
+
+Server administrators can now manage user addition and deletion with greater ease. This feature is especially useful for organizations that need to manage multiple users.
+
+https://preview.redd.it/k24eczjgdhdd1.jpg?width=1280&amp;format=pjpg&amp;auto=webp&amp;s=a87927e4cc3cebd8d07018acaae07f07e0a63634
+
+# 🧱 New Masonry View
+
+View your bookmarks in a visually appealing masonry layout, where content is arranged in an optimal position based on available vertical space. This feature is perfect for users who prefer a more visual approach to browsing their bookmarks.
+
+https://preview.redd.it/5yof0bfhdhdd1.jpg?width=1280&amp;format=pjpg&amp;auto=webp&amp;s=96898d061dc6aa745986ac213217a66f38530ab5
+
+# 🍏 iOS and MacOS Apps (Maintained by JGeek00)
+
+We're excited to announce the release of the new iOS and MacOS apps, developed and maintained by [JGeek00](https://github.com/JGeek00). These apps provide a seamless experience for users who prefer to access Linkwarden on their Apple devices. You can download the apps directly from the [App Store](https://apps.apple.com/ca/app/my-links-for-linkwarden/id6504573402).
+
+
+# 📥 Import from Wallabag
+
+There was a high demand for this feature, and we're excited to announce that you can now import your bookmarks from Wallabag. This feature simplifies the transition process, allowing users to maintain their bookmarks without hassle.
+
+# 🌐 Support for Other Languages (i18n)
+
+Linkwarden has recently expanded to support Italian in addition to English. As this feature is quite new, there might be some bugs, and we're actively working to refine it. We're also looking for community help with translations to make Linkwarden accessible in more languages soon!
+
+# 📁 Image and PDF Uploads
+
+Users can now upload images and PDF files directly to Linkwarden. This feature is perfect for users who want to store paywalled or password-protected content.
+
+https://preview.redd.it/jtcyyiujdhdd1.jpg?width=1164&amp;format=pjpg&amp;auto=webp&amp;s=9aafd44592f6ab755c28d6b69bd6793304413497
+
+# 🔒 Enhanced Security
+
+This update includes several security enhancements to protect your data and ensure a secure browsing experience. We've also fixed several bugs and improved overall performance.
+
+# 🔑 Support for Google OAuth
+
+You can now use Google OAuth to sign in to Linkwarden. This feature simplifies the login process and provides a secure authentication method. Just note that we're still pending Google's approval for the OAuth consent screen and it will be available soon.
+
+# ✅ And More...
+
+Check out the full changelog below.
+
+**Full Changelog**: [https://github.com/linkwarden/linkwarden/compare/v2.5.3...v2.6.0](https://github.com/linkwarden/linkwarden/compare/v2.5.3...v2.6.0)
+
+If you like what we're doing, you can **support the project by either starring ⭐️ the repo** to make it more visible to others or by subscribing to the [Cloud plan](https://linkwarden.app/#pricing?utm_source=Reddit&amp;utm_medium=social&amp;utm_campaign=v2_5_announcement) (which helps the project, a lot).
+
+Feedback is always welcome, so feel free to share your thoughts!
+
+**Website**: [https://linkwarden.app](https://linkwarden.app?utm_source=Reddit&amp;utm_medium=social&amp;utm_campaign=v2_6_announcement)
+
+**GitHub**: [https://github.com/linkwarden/linkwarden](https://github.com/linkwarden/linkwarden)
+
+**Read the blog**: [https://blog.linkwarden.app/releases/2.6](https://blog.linkwarden.app/releases/2.6?utm_source=Reddit&amp;utm_medium=social&amp;utm_campaign=v2_6_announcement)
+
+Top 7 comments:
+Comment 1:
+  Author: panjadotme
+  Comment: Any plans for an Android app?
+  Score: 22
+  Created UTC: 2024-07-19 22:27:41
+
+Comment 2:
+  Author: heeelga
+  Comment: That‘s great! I‘m using Linkwarden for a couple of weeks now and already love it. Keep up the good work!
+  Score: 16
+  Created UTC: 2024-07-19 16:44:59
+
+Comment 3:
+  Author: Fillwe
+  Comment: Amazing! This might replace Raindrop.io for me. One of the only apps I haven’t been able to find a full replacement for.
+  Score: 8
+  Created UTC: 2024-07-19 19:05:33
+
+Comment 4:
+  Author: danz0l
+  Comment: I love this app but i do have a few suggestions.
+
+* Enable discussions on your GitHub so we can talk about things, improvements etc
+* Instead of the global Archive Settings, have the option to change it on a per link basis. It makes sense to have certain archive settings for different links. Readable format, HTML, pdf, screenshot etc, per site (just a simple toggle when adding or editing the link). This cuts down on waste or dead screenshots, badly formatted html for site refusal scraping etc. Also cuts down on the app footprint building garbage on some links you simply don't want.
+* As per above, instead of a drop-down to see available formats archived, have a small set of icons showing these captured options on the link page (then you can see at a glance what captured options are available per link).
+* The ability to upload a screenshot per link that can be shown in the place of the automated captured one, which can sometimes capture blank screens or login screens instead of the actual purpose of the link.
+* In collections, when clicking a main collection, show the sub collections also.
+* Also although the drag interface functions ok, it can be cumbersome sometimes. Have the ability to define the collection or sub collection by showing the nest in the collections drop down (indent a sub collection or the parent as when you have lots of sub collections the output can be confusing and difficult to find the required sub collection).
+
+The app is turning out to be really nice and I love the interface. Keep up the good work.
+  Score: 8
+  Created UTC: 2024-07-20 07:55:03
+
+Comment 5:
+  Author: Lopsided-Painter5216
+  Comment: After trying it out it's exactly what I needed, pages seem to be saved correctly without any issues, which is a huge plus for me.
+
+Do you have any solution for dealing with paywalled content? I saved a .webarchive in the meantime if you ever decide to support it in the future.
+  Score: 5
+  Created UTC: 2024-07-19 23:03:50
+
+Comment 6:
+  Author: Lopsided-Painter5216
+  Comment: This look like amazing changes, esp the multi platform apple app. I've been using some solutions for a similar task, namely readeck, hoarder, archivebox but they either do too much/too little or they fail to save the readable content of webpages. I'll give this a spin this week-end!
+  Score: 3
+  Created UTC: 2024-07-19 20:04:52
+
+Comment 7:
+  Author: bedgear
+  Comment: Maybe I'm blind, but I cant find documentation on how to perform an update from an existing install. Anyone know the process for updating a manual install?
+  Score: 3
+  Created UTC: 2024-07-19 22:36:39
+

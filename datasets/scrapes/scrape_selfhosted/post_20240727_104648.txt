@@ -1,0 +1,99 @@
+Post Title: Made a Cloudflare DDNS script for my Raspberry Pi
+Author: joyfullystoic
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4jlpo/made_a_cloudflare_ddns_script_for_my_raspberry_pi/
+Number of comments: 14
+Created UTC: 2024-07-16 08:39:20
+
+Post Content:
+I got frustrated with how complicated [ddclient](https://github.com/ddclient/ddclient) seemed and couldn't get it to work on my Raspberry Pi, so I wrote my own JavaScript script to update my Cloudflare DNS.
+
+  
+It's a super simple script I pulled together in 30 min but it works. [Here it is](https://github.com/bogdanrbucur/cloudflare-ddns).
+
+Top 5 comments:
+Comment 1:
+  Author: iProModzZ
+  Comment: Well that’s script no. 2847284 that updates ddns settings…
+  Score: 9
+  Created UTC: 2024-07-16 10:00:27
+
+Comment 2:
+  Author: Less_Ad7772
+  Comment: Lol weird.
+  Score: 3
+  Created UTC: 2024-07-16 09:40:13
+
+Comment 3:
+  Author: Open_Resolution_1969
+  Comment: ChatGPT was able to convert this to a single file shell script with no major effort:
+
+To convert the `cloudflare-ddns` JavaScript project to a single bash script, we need to replicate its functionality: obtaining the public IP, checking it against the current DNS record, and updating the DNS record if necessary using Cloudflare's API. Below is the single bash script version:
+
+    #!/bin/bash
+    
+    # Configuration variables
+    ZONE_ID="your_cloudflare_zone_id"
+    RECORD_ID="your_cloudflare_record_id"
+    API_TOKEN="your_cloudflare_api_token"
+    DNS_NAME="your_dns_name"
+    TTL=120
+    PROXIED=false
+    
+    # Get current public IP address
+    CURRENT_IP=$(curl -s http://checkip.amazonaws.com)
+    
+    # Get the current DNS record details
+    DNS_RECORD=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$RECORD_ID" \
+         -H "Authorization: Bearer $API_TOKEN" \
+         -H "Content-Type: application/json")
+    
+    # Extract the existing IP from the DNS record
+    EXISTING_IP=$(echo $DNS_RECORD | jq -r '.result.content')
+    
+    # Compare the current IP with the existing IP
+    if [ "$CURRENT_IP" == "$EXISTING_IP" ]; then
+        echo "IP has not changed. Exiting."
+        exit 0
+    fi
+    
+    # Update the DNS record with the new IP
+    UPDATE_RESPONSE=$(curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$RECORD_ID" \
+         -H "Authorization: Bearer $API_TOKEN" \
+         -H "Content-Type: application/json" \
+         --data "{\"type\":\"A\",\"name\":\"$DNS_NAME\",\"content\":\"$CURRENT_IP\",\"ttl\":$TTL,\"proxied\":$PROXIED}")
+    
+    # Check if the update was successful
+    if echo $UPDATE_RESPONSE | jq -e '.success' &gt; /dev/null; then
+        echo "DNS record updated successfully to $CURRENT_IP"
+    else
+        echo "Failed to update DNS record"
+        echo $UPDATE_RESPONSE | jq
+        exit 1
+    fi
+
+  
+I think this is better than having to pull all the dependencies required by nodejs
+
+  
+Hope it helps.
+  Score: 4
+  Created UTC: 2024-07-16 12:59:13
+
+Comment 4:
+  Author: thekrautboy
+  Comment: Wouldnt it be much lighter to just use bash and curl for example? ...
+
+https://akashrajpurohit.com/blog/dynamic-dns-made-easy-with-cloudflare-api/
+  Score: 2
+  Created UTC: 2024-07-16 08:42:40
+
+Comment 5:
+  Author: HopeDoesStufff
+  Comment: or just use this docker client that works great?
+
+https://github.com/favonia/cloudflare-ddns/
+  Score: 3
+  Created UTC: 2024-07-16 23:17:15
+
+Note: This post has only 5 comments at the time of scraping.

@@ -1,0 +1,46 @@
+Post Title: Experiences with open source personal finance applications
+Author: HaphazardlyNerdy
+Score: 22
+URL: https://www.reddit.com/r/selfhosted/comments/1e4w6bm/experiences_with_open_source_personal_finance/
+Number of comments: 15
+Created UTC: 2024-07-16 18:34:55
+
+Post Content:
+The title is quite obvious, but I have looked into a few options and find it difficult to figure out the differences, pros, and cons between the different options. Thus, I am asking if any of you have any experiences with anything similar. I live within the EU and would like to utilise the PSD2 benefits. My goal is not necessarily to make budgets, but gain an overview of spendings, categorizing transactions, and similar.
+
+So far I have looked into [Actual Budget](https://github.com/actualbudget/actual), [Maybe](https://github.com/maybe-finance/maybe), and [Firefly III](https://github.com/firefly-iii/firefly-iii). All of these have integrations with GoCardless, and I find it difficult to choose between them. Anyone who would like to share their potential experiences, or if they have experiences with any other similar applications?
+
+Top 4 comments:
+Comment 1:
+  Author: danz0l
+  Comment: it really depends on your needs. If your doing zero budget then either of those you mentioned are solid canditates although i had a personal hate relationship with Actual Budget, i think its just overly complex to use unless your happy with one month at a time budgetting.
+
+For me, i gave up looking after countless installs from so many and have continued to use Anmoney, a 15 year old android app that has never let me down. With Anmoney i can input my recurring and incoming expense, whether that be weekly, monthly, yearly, every second week, whatever, and then predict my finiance based on that. I kinda envelope budget within it, assigning expense to  categories (i.e Rent, gas/electric, water, council tax, car etc) and from that, as its just classed as a recurring payment, i can report on my finiance based on that. So if i assign say £500 a month to a holiday saving, i can have a report that will tell me what that amount will be in x amount of months from now, even years if i want to. Its a great system that i've not seen replicated in ANY android, online or even self hosted app since (i've tried so many to replicate it and replace it).
+  Score: 6
+  Created UTC: 2024-07-16 18:55:49
+
+Comment 2:
+  Author: perchard
+  Comment: I started using [Beancount](https://github.com/beancount/beancount) recently and really like it. It has a relatively steep learning curve, though, and requires some basic programming experience to set up.
+
+Other similar open source options are [GnuCash](https://www.gnucash.org/), [ledger](https://ledger-cli.org/), and [hledger](https://hledger.org/). They are all based on the double-entry accounting system.
+
+I keep it pretty simple and just track one credit card and one checking account, using [beancount-import](https://github.com/jbms/beancount-import) to import transactions from manually downloaded ofx files once or twice a month. Beancount has a nice web interface too, [fava](https://github.com/beancount/fava), and even its own [query language](https://beancount.github.io/docs/beancount_query_language.html).
+
+You can learn more about all of these tools over at [r/plaintextaccounting](https://www.reddit.com/r/plaintextaccounting/). I should probably add a warning that it’s a bit of a rabbit hole. But I’m happy with my setup, and have tried a lot of different personal finance software, both open- and closed-source. The tooling actually makes what’s otherwise a relatively boring exercise fun, for me at least.
+  Score: 3
+  Created UTC: 2024-07-17 02:30:56
+
+Comment 3:
+  Author: Server22
+  Comment: I have been in the same boat. I am very curious what you find.
+  Score: 2
+  Created UTC: 2024-07-16 23:54:46
+
+Comment 4:
+  Author: Odd-Let9042
+  Comment: Actual budget user for over a year. I have been using excel files previously. I really really like the app. But I suggest to first read about enveloped based budgeting!
+  Score: 2
+  Created UTC: 2024-07-17 07:29:10
+
+Note: This post has only 4 comments at the time of scraping.

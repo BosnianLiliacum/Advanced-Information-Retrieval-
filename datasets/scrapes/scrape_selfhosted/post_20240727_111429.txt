@@ -1,0 +1,21 @@
+Post Title: One of my HDDs are dying. How to ensure that the videos are not corrupt?
+Author: zmtp
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed21z3/one_of_my_hdds_are_dying_how_to_ensure_that_the/
+Number of comments: 3
+Created UTC: 2024-07-26 23:23:35
+
+Post Content:
+Hi, I have a 2TB HDD with some (unimportant) videos. I did a zfs scrub on the drive and it said it corrected 400K files and 2K are permanently damaged (most of them are /usr /bin /var ....
+
+Some of my videos are corrupted. Some not. I currently FTP'd into the drive and copy the kinda important ones over to my PC. When the file (video) is not listed in the `zfs status -v`does that mean it is save? Is there a way to check that fast (except watching the entire video)?  
+
+
+Top 1 comments:
+Comment 1:
+  Author: AreYouDoneNow
+  Comment: You can use ffmpeg -v to validate video files, as a starting point.
+  Score: 1
+  Created UTC: 2024-07-27 04:26:16
+
+Note: This post has only 1 comments at the time of scraping.

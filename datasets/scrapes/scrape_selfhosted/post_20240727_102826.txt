@@ -1,0 +1,61 @@
+Post Title: Anybody know how to add extra users to Your_Spotify?
+Author: 24-7Games
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e5p6fl/anybody_know_how_to_add_extra_users_to_your/
+Number of comments: 5
+Created UTC: 2024-07-17 18:14:42
+
+Post Content:
+Found a really cool project to track Spotify stats for my account and am hosting it on the Synology NAS w/ Docker. I've set it up successfully for myself, but want to allow it to function for other spotify accounts for the family.
+
+I'm very new to docker, have setup like 6\~ containers functionally on my system, I'm just wary of altering this compose without any documentation.
+
+Current Docker-compose YAML I'm running (Minus spotify apis, and local IPs):
+
+    services:
+      server:
+        image: yooooomi/your_spotify_server
+        restart: always
+        ports:
+          - 8080:8080 
+      links:
+        - mongo 
+      depends_on:
+        - mongo 
+      environment: 
+        API_ENDPOINT: http://(Local IP):8080 # This MUST be included as a valid URL in the spotify dashboard (see below) 
+        CLIENT_ENDPOINT: http://(Local IP):3001 
+        SPOTIFY_PUBLIC: (My Current DEV Public) # Spotify DEV Public 
+        SPOTIFY_SECRET: (My Current DEV Secret) # Spotify DEV Secret 
+      mongo: 
+        container_name: mongo 
+        image: mongo:4.4 #Synology NAS doesn't work w/ newer versions(?) 
+        volumes:
+           - /volume1/docker/your_spotify:/data/dbweb: image: yooooomi/your_spotify_client 
+      
+      web:
+        image: yoomi/your_spotify_client
+        restart: always 
+        ports:
+         - 3001:3000 
+        environment: 
+        API_ENDPOINT: http://(Local IP):8080
+
+I'd appreciate any help, I found the project just looking thru linuxservers list of things and some people have mentioned it in the past on this sub, just not a lot of documentation to parse my way thru.
+
+EDIT: The YAML apparently killed itself as I posted, so its closer to normal formatting now
+
+Top 2 comments:
+Comment 1:
+  Author: Maxio_
+  Comment: Go to the Spotify developer site and I think you should add your friends email address to your API key. Im not home so I can't tell you more
+  Score: 3
+  Created UTC: 2024-07-17 20:39:14
+
+Comment 2:
+  Author: rayjump
+  Comment: As default users can register as far as I know. That can be turned off in the web ui when logged in as admin.
+  Score: 2
+  Created UTC: 2024-07-17 19:29:47
+
+Note: This post has only 2 comments at the time of scraping.

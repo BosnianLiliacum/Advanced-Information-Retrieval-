@@ -1,0 +1,20 @@
+Post Title: gravity-sync has been archived
+Author: gjunk1e
+Score: 16
+URL: https://www.reddit.com/r/selfhosted/comments/1ecwlum/gravitysync_has_been_archived/
+Number of comments: 6
+Created UTC: 2024-07-26 19:25:02
+
+Post Content:
+Just got a notice that gravity-sync was archived today. Any viable Pi-Hole syncing alternatives or forks?
+
+https://github.com/vmstan/gravity-sync
+
+Top 1 comments:
+Comment 1:
+  Author: Avandalon
+  Comment: Orbital-sync
+  Score: 22
+  Created UTC: 2024-07-26 19:44:24
+
+Note: This post has only 1 comments at the time of scraping.

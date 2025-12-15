@@ -1,0 +1,28 @@
+Post Title: Does anyone know of a self-hosted lab management platform. I’d like to be able to keep track of inventory and user tickets
+Author: G1bs0nNZ
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e3sds7/does_anyone_know_of_a_selfhosted_lab_management/
+Number of comments: 2
+Created UTC: 2024-07-15 11:25:36
+
+Post Content:
+The title pretty much says it all. I’m most comfortable in an Ubuntu environment, but overall am pretty flexible.
+
+Docker would be nice. Will likely need to be exposed externally for ease of use.
+
+Top 2 comments:
+Comment 1:
+  Author: 2000nesman
+  Comment: Request Tracker. Never used it but it has tickets and inventory tracking.
+  Score: 1
+  Created UTC: 2024-07-15 12:16:31
+
+Comment 2:
+  Author: Fluffer_Wuffer
+  Comment: When I see people wanting a servicedesk home, is does make me wonder, if we're missing a trick..  I mean, we have the Farming simulator, the Cleaning simulator.... now the ultimate simulator -  SysAdmin Simulator.
+
+Featuring VDSL, borked infrastructure, pissed off users, and for those that aspire to IT Manager... we have Weekend at the CEO's house (installing WIFI...).
+  Score: 3
+  Created UTC: 2024-07-15 17:52:26
+
+Note: This post has only 2 comments at the time of scraping.

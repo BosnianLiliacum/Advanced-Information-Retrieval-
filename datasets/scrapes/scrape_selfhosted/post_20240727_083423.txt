@@ -1,0 +1,68 @@
+Post Title: Is OnlyOffice Russian? Is an issue?
+Author: fossfan83
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ecgwp1/is_onlyoffice_russian_is_an_issue/
+Number of comments: 28
+Created UTC: 2024-07-26 06:08:52
+
+Post Content:
+When researching OnlyOffice a bit, Google point me to a question - Is OnlyOffice Russian? Their website claim they are Latvian so that question surprise me.
+
+I find a discussion at Cryptpad forum: [https://forum.cryptpad.org/d/232-onlyoffice-concerns-vendor-makes-shady-moves](https://forum.cryptpad.org/d/232-onlyoffice-concerns-vendor-makes-shady-moves)   
+But also dedicated website: [https://eviloffice.tutdomen.com/](https://eviloffice.tutdomen.com/)
+
+And there is more. Licensing problems: [https://opensource.stackexchange.com/questions/9481/is-onlyoffice-restricting-our-freedom-with-their-faq-agpl-v3](https://opensource.stackexchange.com/questions/9481/is-onlyoffice-restricting-our-freedom-with-their-faq-agpl-v3) (is not really open source?) and mobile clients going proprietary: [https://www.reddit.com/r/NextCloud/comments/fktqug/onlyoffice\_fcked\_us/](https://www.reddit.com/r/NextCloud/comments/fktqug/onlyoffice_fcked_us/)
+
+I know we want keep politics out of software, but it also be nice if Russia keep tanks out of Ukraine... So I have reasons not to trust.
+
+Do you think this is structural risk? There are hackers try to get backdoors in open source tools. Here we have company that has to do what Russian government want. Many of their employees are seem to be in Russia.
+
+I do not feel comfortable installing Russian backdoor on my server.
+
+I know they are 'open source', but it not mean much when they do not have any outside contributors - it means nobody actually looks at code. Everyone here care about security and privacy so I ask, what do you think about this?
+
+Top 7 comments:
+Comment 1:
+  Author: bufandatl
+  Comment: Then use libreoffice
+  Score: 97
+  Created UTC: 2024-07-26 07:46:52
+
+Comment 2:
+  Author: leetnewb2
+  Comment: Reading back the OO/NC saga (what fun that was), it sort of reminds me of the Emby devs being obstinate and getting combative with parts of the community, ultimately going closed source, spawned Jellyfin. Can't really blame OO for trying to figure out how to monetize the project, but compare how they responded to community feedback to Immich.
+  Score: 31
+  Created UTC: 2024-07-26 06:55:05
+
+Comment 3:
+  Author: notonyanellymate
+  Comment: OnlyOffice is 100% Russian. They have gone to a lot of effort to hide this. Make of that what you will.
+  Score: 42
+  Created UTC: 2024-07-26 10:30:11
+
+Comment 4:
+  Author: aaronryder773
+  Comment: So what? Nginx is also Russian. It doesnt mean people will stop using it.
+  Score: 30
+  Created UTC: 2024-07-26 10:50:52
+
+Comment 5:
+  Author: rocket1420
+  Comment: If you are concerned, then don't use it. I wouldn't trust random Internet people to tell me that I'm worried about nothing. You've done enough research to know what you know.
+  Score: 11
+  Created UTC: 2024-07-26 07:41:19
+
+Comment 6:
+  Author: FactoryOfShit
+  Comment: I feel like it's dishonest to judge OnlyOffice for hiding their Russian origins, but then immediately saying that you wouldn't want to use something made in Russia just because it's made by russians. That's exactly why they have to hide it.
+
+At the end of the day, it's your server. You can choose not to install something just because. I don't think it's a risk just because it's made in russia - A LOT of high quality software in use worldwide is made in russia. But if it is a genuine worry for you - just use something else.
+  Score: 52
+  Created UTC: 2024-07-26 09:14:05
+
+Comment 7:
+  Author: ShroomShroomBeepBeep
+  Comment: If you're not comfortable running it or have doubts about security of having it on your server then don't. Find something else that meets your needs and use that.
+  Score: 18
+  Created UTC: 2024-07-26 07:16:46
+

@@ -1,0 +1,104 @@
+Post Title: Proxmox is awesome!
+Author: [deleted]
+Score: 259
+URL: https://www.reddit.com/r/selfhosted/comments/1e5c8ge/proxmox_is_awesome/
+Number of comments: 84
+Created UTC: 2024-07-17 07:33:47
+
+Post Content:
+I've been selfhosting a few months now, in Docker on my Synology NAS. To be fair to it that Celeron really punches above its weight but I thought I'd upgrade since I upgraded the CPU/mainboard in my framework laptop and thus had an old 11th Gen i5 mainboard lying around!
+
+I installed Proxmox and set up a Debian VM for all my docker containers: it was incredibly easy to copy over the Docker compose files and point them to my Synology via an NFS share, so the data is still stored on the NAS but they run on the new server.
+
+I could then install home assistant OS as another VM, and currently I've got a third for a wireguard server. I really like how everything is compartmentalised and I can just spin up a new VM for testing without breaking anything else! I'll probably spin up another as a game server via Pterodactyl, after that I'm not sure what else I could do but I'm sure I'll find something!
+
+I also span up a Proxmox backup server VM on my NAS so every week it takes a snapshot of the VMs and stores them on the NAS then uploads them to Backblaze.
+
+How are you using Proxmox?
+
+Top 7 comments:
+Comment 1:
+  Author: ChrisSlash0
+  Comment: Proxmox is one of the best free/open source tools I came in touch with.
+Wish there was a homelab license maybe limited to a few nodes, so I can support the devs.
+300€/year is a bit to much for just a homelab.
+  Score: 149
+  Created UTC: 2024-07-17 08:06:38
+
+Comment 2:
+  Author: heeelga
+  Comment: Well, I'm using Proxmox for a couple of years now but I'm having a torn relationship to it since a couple of weeks. I'm not sure whether this is Kernel/PVE version related but I created a cluster of 3 nodes and had so many problems with it (random reboots and freezes of nodes, really bad pings from time to time etc.) that I just gave up and now I'm running a single (more powerful) Proxmox node.
+
+I really wanted this cluster to work but troubleshooting these problems took way too much of my time.
+
+I'm running all of my services (20 lxc containers and 2 vms) on Proxmox. My Synology NAS is mounted as NFS share for backups.
+  Score: 11
+  Created UTC: 2024-07-17 09:42:06
+
+Comment 3:
+  Author: ItsPwn
+  Comment: All things proxmox
+* https://tteck.github.io/Proxmox/
+
+Synology can be perfectly hosted as a VM in Proxmox ,no need to buy overpriced hardware - Awesome NAS
+
+Go to releases for USB image
+
+https://github.com/AuxXxilium/arc
+
+/r/xpenology
+
+* Docker
+
+Portainer extra templates few hundred apps (it's docker
+ manager app) add .Jason in settings
+
+* https://github.com/Lissy93/portainer-templates
+  Score: 42
+  Created UTC: 2024-07-17 08:21:41
+
+Comment 4:
+  Author: sebasdt
+  Comment: It gets even better when looking into clustering and making backups!
+
+Al be clustering a bit challenging and more recource intensive. its the best when you have multiple nodes that are the same. I've have been homelabbing for over 5 years now and yet have to use clusters the way it was intended.
+
+About backing up vm's and lxc's on proxmox look into Proxmox Backup Server (PBS)  
+It's a solution by the creators of pve to backup LXC's and vm's with "easy of use in mind" . 
+
+one of many features it has is deduping capabilaties. it looks at what files have changed in a lxc and vm disk then only stores those changes. (of-course its simplified here.)
+
+Due to this keep in mind lxc backups can take a bit longer if the disk is huge. then again a vm that doesnt have its Qemu-guest-agent installed and enabled takes also longer.. usually my backups take like 5 minutes.  
+[https://pbs.proxmox.com/wiki/index.php/Main\_Page](https://pbs.proxmox.com/wiki/index.php/Main_Page)
+
+
+
+ I will soon look into SND, dont quite understand yet how it works but its like a network within a network.   
+[https://pve.proxmox.com/pve-docs/chapter-pvesdn.html](https://pve.proxmox.com/pve-docs/chapter-pvesdn.html)
+  Score: 7
+  Created UTC: 2024-07-17 09:54:32
+
+Comment 5:
+  Author: MrAlfabet
+  Comment: Using containers where I can: way more lightweight. I've got PBS running as well, but in a container.
+
+You can run docker in a container as well (as opposed to VM).
+
+Tip: use snapshots when developing/installing something new. If you fuck up, it only takes a few seconds to revert to the pre-fuckup state (if you remembered to take a snapshot)
+  Score: 6
+  Created UTC: 2024-07-17 13:05:23
+
+Comment 6:
+  Author: Moriksan
+  Comment: This is very good to hear! I only recently started mucking around with Proxmox (as an alternative to VMware). Is Proxmox Backup Server required, in your opinion, even if VMs/LXCs are being stored on a true ZFS zvol block storage which takes snapshots on its own?
+  Score: 4
+  Created UTC: 2024-07-17 11:39:28
+
+Comment 7:
+  Author: x86_64_
+  Comment: Proxmox really is awesome.  I ran ESXi, then Hyper-V in my homelab but ESXi isn't free anymore and Hyper-V isn't an excellent choice when 90% of your VMs are some flavor of Linux.   
+
+Proxmox ticks all the boxes.  Auto-starting VMs, automatic backups, networking, clustering, built-in 2FA, ZFS.  It's amazing that the Community tier does everything that it does.
+  Score: 4
+  Created UTC: 2024-07-17 13:47:11
+

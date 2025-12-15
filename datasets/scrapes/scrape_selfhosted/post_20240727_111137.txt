@@ -1,0 +1,88 @@
+Post Title: TriliumNext Notes - The last note taking app you should ever need
+Author: homegrowntechie
+Score: 57
+URL: https://www.reddit.com/r/selfhosted/comments/1ed8h9c/triliumnext_notes_the_last_note_taking_app_you/
+Number of comments: 22
+Created UTC: 2024-07-27 05:03:31
+
+Post Content:
+TLDR: After the fantastic [Trilium Notes entered maintenance mode](https://github.com/zadam/trilium/issues/4620), a significant group of community members (*including myself*) have committed to moving the project forward.  
+🎁 An official backward-compatible [TriliumNext Notes](https://github.com/TriliumNext/Notes) release should be available soon!
+
+If you haven't heard of Trilium Notes (Or TriliumNext Notes), you should check it out. For an example of what TriliumNotes looks like, you can check out the slightly outdated [screenshot tour](https://triliumnext.github.io/Docs/Wiki/screenshot-tour). Trilium Notes is IMO the best truly open, and truly libre note taking software that exists.
+
+Originally coming from OneNote, I've tried many...many alternatives, and it has been a joy switching to TriliumNotes.
+
+🍻 This free (gratis), open-source, self-hosted, personal wiki/note software offers all the following with no nags, no paywall and no restricted features - you get all the goodies up front!
+
+* Note cloning (notes can exist in multiple locations at once)
+* Interactive note visualization maps
+* Various note types (canvas, mermaid diagrams, web view, relation map, code, etc)
+* Various bulk folder import and export options (HTML, Markdown, Text)
+* Revision history (and recent changes view)
+* Scripting (Very powerful - automate tagging, deletion, etc)
+* Full documented ETAPI for external scripting or development
+* Browser extension for web clipping
+* Fast fuzzy search &amp; advanced search (search by tags, parent note, size, etc)
+* Sharing notes with a public url with a simple toggle
+* Encrypted notes
+* Extensive and versatile note tagging (inheritable tags, relationship tags, etc)
+* Note note tabs, zen mode, multi-note views
+* Note archiving
+* Note linking and embedding (embed notes inside other notes)
+* Full wysiwyg editor (with markdown and math syntax completion) - external editors supported
+* Unlimited note nesting
+* Daily note journaling feature
+* Extendable with widgets, custom plugins, themes, scripts, etc
+* Customizable keyboard shortcuts (and VIM keyboard bindings)
+* Automatic note syncing to server (or other clients that are setup in 'server' mode)
+* Automatic backups
+* Cross platform (Windows, Mac, Linux, Flathub, Docker - very simple compose)
+* Good documentation, [Matrix](https://matrix.to/#/#triliumnext:matrix.org) support chat, Github Discussion forums, [awesome lists](https://github.com/Nriver/awesome-trilium)
+
+The main downsides are:
+
+* The mobile (android) app currently is only for composing notes (not for reading other notes on the server).  You must use the mobile browser version (which works quite well) to get a 'fuller' experience. (The new TriliumNext project does plan to improve the mobile experience).
+* Only one user per server is currently supported (this is a high priority for the TriliumNext team)
+* Some people don't like database note taking software since they prefer files in a directory, but this isn't an issue for me since I can automate the export of TriliumNotes (using the api) and save the notes to Nextcloud or my local file system for easy viewing.
+
+📢 If this project interests you, you can follow the progress on [github](https://github.com/TriliumNext/Notes) and get involved if you would like to see this project flourish! There are [teams](https://github.com/orgs/TriliumNext/teams) to help with development, issue triaging, documentation, testing, etc.
+
+🗳️ If you'd like to [vote on the new TriliumNext logo](https://github.com/orgs/TriliumNext/discussions/272), you can do that too!
+
+Happy Note Taking!
+
+Top 5 comments:
+Comment 1:
+  Author: probablynotmine
+  Comment: I tried Trilium and loved it, but could not get past the abysmal support for code blocks. If you plan to add syntax highlighting and code formatting, I’ll jump back in.
+
+I remember the limitation was in the selected wysiwyg text editor it uses?
+  Score: 16
+  Created UTC: 2024-07-27 06:28:19
+
+Comment 2:
+  Author: stevie-tv
+  Comment: Do you have a docker container built yet?
+  Score: 7
+  Created UTC: 2024-07-27 08:03:01
+
+Comment 3:
+  Author: johimself
+  Comment: If you could draw in this using a Galaxy tab or MS surface I would be all over this. I am desperate to get away from OneNote
+  Score: 2
+  Created UTC: 2024-07-27 08:12:13
+
+Comment 4:
+  Author: Stanthewizzard
+  Comment: Thanks for the info
+  Score: 1
+  Created UTC: 2024-07-27 11:02:20
+
+Comment 5:
+  Author: SupaSaiyan9000
+  Comment: tried it extensively , hated it.
+  Score: 1
+  Created UTC: 2024-07-27 10:29:02
+
+Note: This post has only 5 comments at the time of scraping.

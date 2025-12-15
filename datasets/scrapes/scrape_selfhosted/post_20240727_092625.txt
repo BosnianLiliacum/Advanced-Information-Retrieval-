@@ -1,0 +1,35 @@
+Post Title: Looking for a selfhosted software for planning of availability of 3 Cars and 2 Sports grounds.
+Author: EasyPen1533
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e9dkz2/looking_for_a_selfhosted_software_for_planning_of/
+Number of comments: 7
+Created UTC: 2024-07-22 12:54:24
+
+Post Content:
+Basically just the Title. in our company we have 3 Cars and 2 Sportsgrounds where we just wanna have a basic system to reserve them from hour x to y and to who. No need for payments to go through there.
+
+Top 3 comments:
+Comment 1:
+  Author: olejazz
+  Comment: Try:
+
+- https://github.com/LibreBooking/app
+- First set up the cars and grounds as resources.
+- In the calendar you can then search for free slots for a resource using "Find A Time" under "Reservations". Then bookings can be done against the resource.
+- The software is an opensource version of BookedScheduler. You can see a [demo here](https://demo.bookedscheduler.com).
+  Score: 8
+  Created UTC: 2024-07-22 13:55:32
+
+Comment 2:
+  Author: Electronic_Title_370
+  Comment: How about a Groupware System with a calendar ressource functionality (Microsoft Exchange, or SOGo)
+  Score: 2
+  Created UTC: 2024-07-22 13:29:10
+
+Comment 3:
+  Author: HacerM4N
+  Comment: I need this stuff as well!
+  Score: 2
+  Created UTC: 2024-07-22 15:17:48
+
+Note: This post has only 3 comments at the time of scraping.

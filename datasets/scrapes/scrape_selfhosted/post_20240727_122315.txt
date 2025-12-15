@@ -1,0 +1,48 @@
+Post Title: Looking for: An application that can swap and back-up specific files.
+Author: iIEricTheRedIi
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e90laz/looking_for_an_application_that_can_swap_and/
+Number of comments: 4
+Created UTC: 2024-07-22 00:08:14
+
+Post Content:
+I am struggling to find an application that would be able to look at a specific directory, and be able to swap a file while backing up the files so no data is lost. I want this for swapping save files in a game with limited slots, and I would like to not have to do this manually every time. The game is Monster Hunter: World, if that helps.
+
+Putting it as simply as I can, I want the application to:  
+Look at the folder where the game saves are stored  
+Create a copy of the save in a designated folder for back ups  
+Move a different save file to the save directory  
+Back up the moved file for safety
+
+If this is the wrong subreddit to look for an application like this, I apologize. If any one who sees this knows of a better subreddit to post this, please share.
+
+Top 4 comments:
+Comment 1:
+  Author: noname9412
+  Comment: Did u tried opencloudsaves?
+  Score: 2
+  Created UTC: 2024-07-22 00:40:25
+
+Comment 2:
+  Author: HecateRaven
+  Comment: Are you on windows or Linux?
+
+On windows use power shell script, on Linux, bash script
+  Score: 2
+  Created UTC: 2024-07-22 03:29:14
+
+Comment 3:
+  Author: Psychological_Try559
+  Comment: I mean, the two solutions you can do yourself are copy the saves manually or with a script (possibly renaming them?), or using git.  If you're a coder or interested in code git is absolutely a tool worth learning...but if not it can be a bit much to learn.
+
+If you want something more specific for this, I'll defer to others.
+  Score: 2
+  Created UTC: 2024-07-22 05:24:25
+
+Comment 4:
+  Author: danielnieto89
+  Comment: You don’t need an app, just ask chatgpt to create a bash script to do this
+  Score: 1
+  Created UTC: 2024-07-22 00:41:04
+
+Note: This post has only 4 comments at the time of scraping.

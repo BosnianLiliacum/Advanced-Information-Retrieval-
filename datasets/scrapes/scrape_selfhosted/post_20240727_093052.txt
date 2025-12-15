@@ -1,0 +1,84 @@
+Post Title: Pass password in backup script
+Author: Proximus88
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e98d5g/pass_password_in_backup_script/
+Number of comments: 9
+Created UTC: 2024-07-22 07:35:49
+
+Post Content:
+At the moment I use Restic to backup my servers twice a day, locally and to Backblaze.
+
+I wrote a backupscript that runs with cron twice a day. My Restic repository is encrypted with a password. The script needs the password the be able to backup to the encrypted repository. 
+
+At the moment I pass on the password as a file, that file is owned by root and only accessible by root. But I still prefer not to have my password in plain text.
+
+I already use pass, is there a way to let the script grap the password from pass instead of a file? 
+
+Thanks for any tips.
+
+```  
+export B2_ACCOUNT_ID="backblaze_id"  
+export B2_ACCOUNT_KEY="backblaze_key"  
+export RESTIC_REPOSITORY="b2:Bucket"  
+export RESTIC_PASSWORD_FILE=/etc/restic-password
+```
+
+Top 6 comments:
+Comment 1:
+  Author: FuriousRageSE
+  Comment: No idea. But im eager to see the ideas because now when i got my proxmox server "up'n'running" im going to have to look into backing up stuff off-site and would have the same conundrum with password protecting/encrypting the stuff.
+  Score: 2
+  Created UTC: 2024-07-22 08:40:32
+
+Comment 2:
+  Author: mrcruton
+  Comment: pass insert restic/password
+
+
+export B2_ACCOUNT_ID=“backblaze_id”
+export B2_ACCOUNT_KEY=“backblaze_key”
+export RESTIC_REPOSITORY=“b2:Bucket”
+export RESTIC_PASSWORD=$(pass restic/password)
+
+restic backup /path/to/backup
+  Score: 2
+  Created UTC: 2024-07-22 09:05:21
+
+Comment 3:
+  Author: vogelke
+  Comment: Instead of storing the password, could you generate it within your backup script?
+
+I have gnupg and libgcrypt installed, and that comes with a program called **hmac256**.  This computes a Message Authentication Code using a key and an existing file.  I'll use "restic" for the key and a root-readable file that hasn't changed since I installed my system: /etc/mail/certs/host.key
+
+    me% hmac256 "restic" /etc/mail/certs/host.key
+    2740ff67522536bc62e8459...c8c54d3899e019b112f  /etc/mail/certs/host.key
+
+Use "274..." as your password.  Granted, if someone gets a copy of your script and the "host.key" file, you're hosed.  If the "host.key" file changes, suddenly your backup encryption will fail.
+
+There's other ways to tweak this: store the file on another system accessible only with a given SSH identity file from your host so generating the decryption password on an attacker's host becomes more difficult, but nothing will stop someone who (say) gets access to your hardware.
+  Score: 1
+  Created UTC: 2024-07-22 09:31:31
+
+Comment 4:
+  Author: DBaakman
+  Comment: Next to \`RESTIC\_PASSWORD\_FILE\` restic also supports \`RESTIC\_PASSWORD\_COMMAND\`. In that way, the password is also not stored inside an environment variable (but tbh, the attack vector doesn't really change that much, as no matter what in the end the application somehow needs to know the password...).
+
+I also make use of Restic and Backblaze, but I have an intermediate backup server (= old NAS). So, my NAS first backs up to the backup server that is running a append-only restic rest server, and then I use rclone to sync the restic repository to Backblaze. Rclone supports passing the password in a similar fashion: \`RCLONE\_PASSWORD\_COMMAND\`.
+  Score: 1
+  Created UTC: 2024-07-22 13:20:55
+
+Comment 5:
+  Author: that_one_wierd_guy
+  Comment: create a credential file, and have the script call that?
+  Score: 1
+  Created UTC: 2024-07-23 05:26:35
+
+Comment 6:
+  Author: xkcd__386
+  Comment: `RESTIC_PASSWORD_COMMAND` is likely to be safer than `RESTIC_PASSWORD_FILE`.
+
+This is what I use, though in my case the password comes from KeePassXC, by way of Linux's "secret-tool" command (libsecret).
+  Score: 1
+  Created UTC: 2024-07-23 12:03:19
+
+Note: This post has only 6 comments at the time of scraping.

@@ -1,0 +1,93 @@
+Post Title: How to setup Samba in LXC on Proxmox
+Author: Grumpy_Refrigerator
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4txeh/how_to_setup_samba_in_lxc_on_proxmox/
+Number of comments: 5
+Created UTC: 2024-07-16 17:03:43
+
+Post Content:
+Hi,
+
+I want to use an LXC on Proxmox as a File Server via Samba.
+
+  
+I have created a privileged LXC:
+
+* IP: `ip_of_LXC`
+* Mount Point: `mp=/mnt/mount_dir`
+* New user: `user_name`
+* New samba user: `user_name`
+* New directories:
+   * `/mnt/mount_dir/Share_Name`
+   * `/mnt/mount_dir/.recyclebin`
+
+I have configured samba (`/etc/samba/smb.conf`):
+
+    [global]
+    client max protocol = default
+    client min protocol = SMB2
+    server max protocol = default
+    server min protocol = SMB2
+    
+    vfs object = recycle
+    recycle:repository = /mnt/mount_dir/.recyclebin
+    recycle:keeptree = Yes
+    recycle:versions = Yes
+    recycle:maxsize = 0
+    
+    usershare allow guests = no
+    
+    [Share_Name]
+    path = /mnt/mount_dir/Share_Name
+    available = yes
+    browseable = yes
+    guest ok = no
+    writeable = yes
+    write list = user_name
+    read list = user_name
+
+  
+Then I tested the configuration with `testparm` which said it was `OK`.
+
+I restarted samba with `systemctl restart smbd.service` .
+
+I tried to access the share with another Linux machine via
+
+`smbclient //ip_of_LXC/Share_Name -U user_name`
+
+but I got the following error:
+
+    smbXcli_negprot_smb1_done: No compatible protocol selected by server.
+    protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+
+
+
+The other Linux machine has the following `/etc/samba/smb.conf`:
+
+    [global]
+    client min protocol = CORE
+    client max protocol = SMB3
+    server min protocol = CORE
+    server max protocol = SMB3
+
+  
+Does anyone know what could be the problem here?
+
+Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: Ben237
+  Comment: Tteck script for webmin, install samba extension module. Can do it all through the ui 🙌
+  Score: 2
+  Created UTC: 2024-07-16 17:28:06
+
+Comment 2:
+  Author: Athensz343
+  Comment: You configured a samba in one machine with min/max of SMB2 and then in the other one a min/max of SMB3?
+
+Did I read that right?
+  Score: 1
+  Created UTC: 2024-07-17 01:03:33
+
+Note: This post has only 2 comments at the time of scraping.

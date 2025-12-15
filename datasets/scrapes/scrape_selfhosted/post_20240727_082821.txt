@@ -1,0 +1,58 @@
+Post Title: What features or how different would you wish if there were a new free/paid email hosting service?
+Author: gulimacha
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ecuzzh/what_features_or_how_different_would_you_wish_if/
+Number of comments: 4
+Created UTC: 2024-07-26 18:16:18
+
+Post Content:
+Toying with the idea of starting a free/paid email service to challenge the status quo. The idea is to offer an email delivery system, but let developers build plugins/apps/services on top of it. Think of it as Wordpress, but with plugins and templates.
+
+Example:
+
+1. Developers might have different way to tackle spam. So there could be Spam Plugin X by one developer, and Spam Plugin Y by another developer. Users can select which plugin they think works best for them.
+2. Developers can design different UX and UI on the front-end webmail user interface
+3. Developers can create different style of categorization/label plugin
+
+Of course this would build a developer ecosystem where they can also make money from the platform. Just like what Wordpress offers.
+
+What do you think would standout against the existing players? What frustrates you most with current players?  What features do you see missing? What is your wishlist?
+
+Top 4 comments:
+Comment 1:
+  Author: Brutus5000
+  Comment: I'm not sure who you are targeting.
+For business customers there are already lots of solutions and email is just one message channel where their "plugins" need to handle all of them.
+
+For end customers there is a high barrier to switch an email address to a different provider. Why do you need to run your own email service for that? Why not build a platform on top of existing email inboxes and connect via imap.
+
+And there are approaches with good idea but bad implementations your solution could shine.
+
+Spam detection is just a start. Content detection, categorization and context based workflows could be interesting.
+
+E.g. I'd like to archive all my invoices and maybe auto-check the amount against an existing threshold.
+We received your order &amp; co emails could goo into something more logical (list of orders and their status), and the actual email is just a lot of noise.
+  Score: 2
+  Created UTC: 2024-07-26 19:23:33
+
+Comment 2:
+  Author: priestoferis
+  Comment: Self-hosted email is already quite like that. Look at e.g. all the services this particular setup puts together to make it work: https://github.com/docker-mailserver/docker-mailserver
+
+You could always write a "plugin" for this.
+  Score: 1
+  Created UTC: 2024-07-26 21:00:30
+
+Comment 3:
+  Author: Frequent_Rate9918
+  Comment: I do not know your background or experience but I caution against email unless you know what you are doing otherwise you may find yourself easily on the email black list and find it very hard to get off that list. If you are on the list all emails hosted by your IP will be flagged as spam and then you will have a hard time to troubleshoot what got you on and then getting off that list. Microsoft had this issue with one of their Exchange Online servers and it took them over a month to resolve the issue.
+  Score: 1
+  Created UTC: 2024-07-27 01:29:33
+
+Comment 4:
+  Author: clountainsluddy
+  Comment: Your idea sounds awesome! One thing that could set you apart is offering intuitive, easy-to-follow tutorials for users and developers alike. Sometimes, onboarding and getting started with new platforms can be daunting. I use Guidde for creating how-to videos and visual documentationit makes training super straightforward and could help your users get up to speed quickly. Plus, it integrates easily with tons of platforms!
+  Score: 1
+  Created UTC: 2024-07-27 06:50:41
+
+Note: This post has only 4 comments at the time of scraping.

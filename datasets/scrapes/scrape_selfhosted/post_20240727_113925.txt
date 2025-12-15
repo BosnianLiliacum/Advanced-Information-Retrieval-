@@ -1,0 +1,100 @@
+Post Title: why doesnt this exist or does it?
+Author: patrolsnlandrcuisers
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebfsmw/why_doesnt_this_exist_or_does_it/
+Number of comments: 62
+Created UTC: 2024-07-24 23:20:55
+
+Post Content:
+So i have a question which forgive me if it is stupid but i cant find the answer on google and im suprised if no one is working on this.
+
+Background: I self host everything nextcloud apps emby etc and it contains all my digital life coupled with the companion apps. I am still forced constantly to use work apps like teams, discord, outlook, work calandar.
+
+Problem: Its annoying as f&amp;\*6 being forced into these corporate environments when i dont want to be and they all refuse to allow 3rd party intergrations, which i understand security etc, but like i cant even use thunderbird anymore to check my emails at work, have to use outlook client only one allowed, i want my chats on other platforms to be sent to my nextcloud talk or some cohesive app that i can intergrate everything into so i can search between my different accounts etc.
+
+Solution:? Im all ears any feedback appreciated, but my idea is basically a docker container that is kinda like matterbridge but essentially its a per user container, so it runs a chrome instance, and is programmed to do random general surfing and looking like its legit, then i can just enter my (edit: this got off track so lets say my personal credentials for my whatsapp and facebook) and my container waits for a notification that i got a message, then switches tabs and pastes the message, then switches back etc. Could do the same thing for emails, outlook email arrives, download, send to my local proton bridge, i send an email it goes to the bridge and gets copy pasted into the app, if they refuse to allow any programatic interface for me to connect to then cant we make a visual based app that literally clicks buttons and clicks send...
+
+I did this for another app once using python because edit:(should have been more specific lol the app had no button to mass edit lines so it just clicked edit button and pasted into excel then mass edits made then back into app) i wasnt allowed to download the data so made a program that just clicks on items and clicks download then scroll then click etc... does anything like this exist? should it? is it stupid? am i missing something? If a message or email is addressed to me regardless of the corporate @ its MY MAIL or MY MESSAGE i want my data safely on my own server do interogate as i see fit, im not talking about downloading work documents or anything literally just a letter or message that was sent to me, most attachments now are linked anyway through internal links so no worry about data coming off their system....thoughts?
+
+Edit: Thanks for the replies i appreciate it! it was just a thought lol and everyone seems to be saying the same thing which is its not my data if sent to a work email or work teams message, which i clearly didnt understand, but rather than get totally hung up on that part what about my own whats\_app, signal, fb messenger, telegram, and discord, thats my data right? Has no one made an application that will bridge all these chat services into one place?
+
+Top 7 comments:
+Comment 1:
+  Author: Hotshot55
+  Comment: That's just leaking corporate data and it's a very big no-no.
+  Score: 49
+  Created UTC: 2024-07-24 23:27:42
+
+Comment 2:
+  Author: SCREAM2NIGHT
+  Comment: Let's say you manage to implement this, and 6 months from now you quit or are fired. Do you think your company would be fine with a former employee having copies of sensitive information on a non-corporate device?
+
+It is NOT your data, it should NOT touch any of your personal devices.
+  Score: 13
+  Created UTC: 2024-07-25 00:00:07
+
+Comment 3:
+  Author: icebear80
+  Comment: Anything sent to you while working is NOT your data! As stated before, by doing what you describe you probably break half a dozen company rules and the code of conduct. Would not even think about this!
+  Score: 17
+  Created UTC: 2024-07-24 23:40:55
+
+Comment 4:
+  Author: 1WeekNotice
+  Comment: &gt;So i have a question which forgive me if it is stupid but i cant find the answer on google and im suprised if no one is working on this.
+
+&gt;Problem: Its annoying as f&amp;*6 being forced into these corporate environments when i dont want to be and they all refuse to allow 3rd party intergrations, which i understand security etc, but like i cant even use thunderbird anymore to check my emails at work, have to use outlook client only one allowed, i want my chats on other platforms to be sent to my nextcloud talk or some cohesive app that i can intergrate everything into so i can search between my different accounts etc. 
+
+So a couple of things here:
+
+- The reason why you can't find any of this information online is because it is common sense (I know common sense isn't really that common) that you separate work and personal life. 
+- you should not be doing any personal tasks on a work computer. Your company pays a lot of money to provide their employees with specific machines for security reasons, confidentiality of there information and of course for there employees to do there jobs. 
+- the reason why you need to use their corporate environments is because it cost more money for them to host there own services and to maintain them. It is  a lot cheaper and easier for them to buy these environments and get someone else to manage it. 
+- also note: that your work will monitor everything you do on their machines, even if you aren't connected to their VPN.
+- this includes every email you send, every chat message you sent
+- you can't and shouldn't try to integrate into their systems because that is their information, it is not yours (which includes the chats you send to your colleagues)
+- remember their machines are their property, not yours.
+- everything you do for them, it's their property, not yours
+- every email and chat you send on their systems, it is their property, not yours.
+
+&gt;If a message or email is addressed to me regardless of the corporate @ its MY MAIL or MY MESSAGE
+
+You are hired by them, meaning you are representing them. All emails that are sent to you (through their systems), all chat messages that you received (on their systems) are their information because you are representing them since you work for them.
+
+All this information will be in the company handbook, code of conduct/ the contract you signed when they hired you. There is probably a line stating "I will follow the company handbook/code of conduct" in your contact.
+
+By breaking any of the rules, especially storing information that is not yours, can lead to legal actions. So don't do it, don't even think about it. 
+
+Hope that clarifies things
+  Score: 6
+  Created UTC: 2024-07-25 00:00:11
+
+Comment 5:
+  Author: sujal_singh
+  Comment: This thread seems more like r/legaladvice than r/selfhosted, come on people, if OP wants to do this and their employer is okay with it, I don't see the problem.
+
+&gt;my idea is basically a docker container that is kinda like matterbridge but essentially its a per user container, so it runs a chrome instance
+
+You'll want to look into [playwright](https://playwright.dev/) or [selenium](https://www.selenium.dev/), selenium also has [this](https://www.selenium.dev/documentation/grid/) project for managing multiple browser instances. Now one problem you might run into with this is that some websites will try and successfully detect whether you're in an automated environment and change behaviour accordingly. Another problem with this approach is that even tiny interface changes might break things, which happens more frequently than you'd like, so you'll be playing a mouse and cat game forever.
+
+&gt; if they refuse to allow any programatic interface for me to connect to then cant we make a visual based app that literally clicks buttons and clicks send
+
+I thought the primary purpose of running a browswer was to do exactly this, if you're not doing this then I assume you're talking about reverse engineering whatever website and directly interfacing with it, for that you wouldn't need a browser running.
+  Score: 4
+  Created UTC: 2024-07-25 04:41:02
+
+Comment 6:
+  Author: thekrautboy
+  Comment: Find a different job...
+
+or keep messing with things like this and you are forced to find a new job.
+  Score: 4
+  Created UTC: 2024-07-24 23:51:23
+
+Comment 7:
+  Author: pigers1986
+  Comment: any data sent from/to your work is property of your company   
+use other devices to work than in home .. or change work to grave digging.
+  Score: 2
+  Created UTC: 2024-07-25 00:05:48
+

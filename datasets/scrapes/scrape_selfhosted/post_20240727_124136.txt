@@ -1,0 +1,19 @@
+Post Title: Roadmap / Learningpath
+Author: Shot_Restaurant_5316
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7sxbj/roadmap_learningpath/
+Number of comments: 2
+Created UTC: 2024-07-20 10:52:05
+
+Post Content:
+Hi,
+a few weeks ago someone posted a link to a website, where different roadmaps or learningpathes with details were listed for different technologies like Ansible or Kubernetes. I didn't save the link and can't find it again. Maybe someone can Help? :)
+
+Top 1 comments:
+Comment 1:
+  Author: kljhklhkjvhgvnb
+  Comment: Probably https://roadmap.sh/roadmaps
+  Score: 2
+  Created UTC: 2024-07-20 15:14:35
+
+Note: This post has only 1 comments at the time of scraping.

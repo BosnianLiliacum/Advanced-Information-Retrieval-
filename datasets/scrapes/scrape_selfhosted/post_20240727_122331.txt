@@ -1,0 +1,71 @@
+Post Title: SSL certificates on LAN webservers
+Author: especiallylime
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e8znhc/ssl_certificates_on_lan_webservers/
+Number of comments: 8
+Created UTC: 2024-07-21 23:23:18
+
+Post Content:
+I want to get rid of the "your connection is not private" error message. I have an AD domain with some nginx and apache webservers that I'd like to secure with SSL. Nothing is exposed to the outside, all traffic is on LAN.
+
+What is the best way to do this? Setup Active Directory Certificate Services? Self-sign certificates and trust via Group Policy? Any help would be greatly appreciated.
+
+Top 7 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Look at reverse proxy or just plain certbot/lego/acme to get valid certs from Lets Encrypt.
+
+Can be done without exposing any services to the public internet, but you do need to own a valid (sub)domain and the DNS providers of that domain needs to be supported by the tool you pick (if you want to have it done automatically and renewed, if you want to get/renew certs manually then you could create the DNS records for Lets Encrypt authentication manually, not ideal but possible).
+
+Thousands of tutorials about this exist already.
+  Score: 6
+  Created UTC: 2024-07-21 23:36:16
+
+Comment 2:
+  Author: certuna
+  Comment: Do you own a domain? Then it’s really easy, just a regular AAAA record service.yourdomain.com pointing to your nginx reverse proxy.
+
+There are lots of tutorials how to set up free Letsencrypt certs with nginx.
+  Score: 2
+  Created UTC: 2024-07-22 00:29:11
+
+Comment 3:
+  Author: sidusnare
+  Comment: Use the DNS module to get a wildcard Letsencrypt cert. Then automate copying the very to all the places it's needed.
+  Score: 2
+  Created UTC: 2024-07-22 01:12:46
+
+Comment 4:
+  Author: SammyDavidJuniorJr
+  Comment: Buy a domain and use a DNS host that supports LetsEncrypt DNS challenges. (I use Digital Ocean, their DNS stuff is free).
+
+https://community.letsencrypt.org/t/dns-providers-who-easily-integrate-with-lets-encrypt-dns-validation/86438
+
+Use a DNS-01 challenge to get a wildcard for your domain and you're pretty much good to go.
+
+You don't have to open up any of your LAN services to do this because the DNS challenge does everything via your DNS provider.
+  Score: 5
+  Created UTC: 2024-07-22 00:33:37
+
+Comment 5:
+  Author: FoodvibesMY
+  Comment: use cloudflare DNS challenge and resolve them locally using pihole
+  Score: 1
+  Created UTC: 2024-07-22 02:07:23
+
+Comment 6:
+  Author: suicidaleggroll
+  Comment: Buy a domain from one of the major hosts for like $10/year, then set up a reverse proxy with a dns-challenge Let's Encrypt wildcard cert, then point your DNS to the reverse proxy and point your reverse proxy to all of your various services.  That's the most painless way, and you never have to open up any ports in the firewall or deal with handing out certs or renewing them manually since it's all automatic.
+  Score: 1
+  Created UTC: 2024-07-22 04:55:21
+
+Comment 7:
+  Author: ModernSimian
+  Comment: The issue with using ADCS is non windows domain joined systems are not going to trust that cert chain automatically. You can add it, but that's work on every device you want to be error free.
+
+It will work, it's fine, ADCS has been around a long time and there isn't much to it, but it isn't much better than importing that unsigned cert into your cert store.
+
+Just doing a proper lets encrypt setup on your own domain is going to be less work over time and minimal dollars.
+  Score: 1
+  Created UTC: 2024-07-22 10:34:45
+

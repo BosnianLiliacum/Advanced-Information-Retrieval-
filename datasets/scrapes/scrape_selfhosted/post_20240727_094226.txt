@@ -1,0 +1,57 @@
+Post Title: Power efficient system build for managing servers and also daily usage
+Author: noname9412
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8ftvp/power_efficient_system_build_for_managing_servers/
+Number of comments: 8
+Created UTC: 2024-07-21 06:20:05
+
+Post Content:
+Hey redditors,
+I'm running a xpenology nas on my old pc running i5 7400 and also running proxmox on n100 mini pc(which i planned to transfer jellyfin from xpenology), i also owned a gaming pc with ryzen 5 5600 and rtx 2060s,
+Currently if i want to manage servers or even just browsing internet, i have to use my gaming pc which consumes lot of electricity,i recorded around 90w plus in normal usage. 
+
+My question is what system is power efficient just for daily normal usage and managing servers(through browser)... I already own kvm which so i can switch between gaming pc and suggested system... 
+
+Edit: i don't mind if it's old system, in fact i preferred used due to low cost in used market, as long as its power efficient, something like celeron, as long as it should be good enough for normal browsing... 
+Thank you 
+
+Top 4 comments:
+Comment 1:
+  Author: weiken79
+  Comment: Pi4 or 5 would work if you're really worried about power.
+  Score: 3
+  Created UTC: 2024-07-21 06:32:42
+
+Comment 2:
+  Author: transconductor
+  Comment: Maybe just get a (used) Laptop?
+
+This also has the advantage of not having to sit on your desk for all of your PC use. I have a desktop PC, but I still use my (crappy) laptop half of the time because I'm sitting on the couch or at my dining table.
+
+They probably can't compete with an Raspberry Pi in terms of power usage, though.
+
+Also, running two servers does come with a decent amount of power usage, too? Even if you have an efficient i5 system, that's already &gt;25W idle 24/7 for both of them?
+  Score: 3
+  Created UTC: 2024-07-21 10:11:03
+
+Comment 3:
+  Author: sardine_lake
+  Comment: Balance is the key. You want power efficient system but also want all your things to work + a little future proof.
+
+What I mean is your system has to not only handle your current stack (file server, websites (if any) and any other things you use on xpenology but also have enough power to handle 10+ new things you will install in future. Obviously in future you will have more things installed than you have now.  For example, you might want immich (google photos/Synology photos replacement), or seafile (Synology drive, Dropbox, google drive/onedrive replacement) or note taking or bookmarks/article saving app (hoarder). You might even want to have Firefox (docker based) installed so you can book flights and do banking when on holiday overseas.Believe me the list will only increase as your knowledge grows and you take charge of your data.
+
+I use an intel NUC that I bought second hand (8th gen i5 + 16gb ram) for $200. It is power efficient and takes very little space. I just have to make sure all my files get backed up to some cloud (onedrive/Dropbox etc)
+
+As for power efficiency, you just want to have peace of mind that your system is power efficient. I am sure you can afford running even a desktop PC without stressing about power bill (most countries do not have very very high power bill where you have to work 5 extra hours a week just to cover that bill).
+  Score: 2
+  Created UTC: 2024-07-21 08:34:41
+
+Comment 4:
+  Author: suicidaleggroll
+  Comment: It sounds like either a standard laptop or an all-in-one mini PC would work for you.  I wouldn’t use a Raspberry Pi for this personally since they can be a little limiting and software compatibility can sometimes be a pain due to the ARM architecture.
+
+My ”daily driver” machines are a Razer Blade 16 (2024) laptop and a Protectli VP4670, both run Mint 22.  I really like both of them, they’re great machines.  The Razer pulls about 30W idle, the Protectli about 10W.  The Razer is quite a bit more powerful with its GPU and it’s portable of course, but for many applications those don’t matter.  The fanless design of the Protectli is awesome if noise is a concern.
+  Score: 2
+  Created UTC: 2024-07-21 14:27:25
+
+Note: This post has only 4 comments at the time of scraping.

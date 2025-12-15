@@ -1,0 +1,38 @@
+Post Title: Free vps without credit card
+Author: notanhumanonlyai25
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ec2z5g/free_vps_without_credit_card/
+Number of comments: 13
+Created UTC: 2024-07-25 19:02:16
+
+Post Content:
+Hey,do you know any vps provider that gives my vps server without putting my credit card just like vercel
+
+Top 4 comments:
+Comment 1:
+  Author: jusepal
+  Comment: Doubt theres any that would yolo gives access to root server without any kyc whatsoever. Thats like them begging to host script kiddies, brute forcers, malware c&amp;c etc.
+
+If you're that desperate, prepaid debit cards mostly works too unless you're a 13yo can't even legally own cards.
+  Score: 2
+  Created UTC: 2024-07-25 19:19:03
+
+Comment 2:
+  Author: 4224aso
+  Comment: There are a few providers out there that let you pay with Bitcoin. A quick search will pull up some, and then you choose if they are real/safe enough for what you need.
+  Score: 2
+  Created UTC: 2024-07-26 13:31:02
+
+Comment 3:
+  Author: FactoryOfShit
+  Comment: No such thing exists. Allowing people to anonymously use server capacity will just lead to such a service being flooded with cryptominers.
+  Score: 2
+  Created UTC: 2024-07-26 16:20:28
+
+Comment 4:
+  Author: Victorioxd
+  Comment: If you're a student, check out GitHub education, they offer a bunch of free stuff for students, like free credits for Azure and digital Ocean
+  Score: 1
+  Created UTC: 2024-07-25 19:08:44
+
+Note: This post has only 4 comments at the time of scraping.

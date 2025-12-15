@@ -1,0 +1,30 @@
+Post Title: (Self)hosted wiki with app?
+Author: BoringStatus465
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5stc4/selfhosted_wiki_with_app/
+Number of comments: 5
+Created UTC: 2024-07-17 20:43:04
+
+Post Content:
+I'm looking for a wiki like software where I can save and transfer the folder (which is currently a horrible mess of unsorted .txt documents mostly, btw 😅) where I write down all the things I've learned on my way and important commands etc.. 
+
+I only access my server via VPN so If I'm outside and no VPN = no Access to my data therefore something with an Android app where I can offline view/download everything would be really nice.
+
+I would really like a selfhosted solution but if there isn't something like this a trustworthy paid solution would also be ok. Preferably settled in a country with high Data protection standards. 🙂
+
+Top 2 comments:
+Comment 1:
+  Author: suicidaleggroll
+  Comment: A potential alternative you may not have thought of: you could use any wiki platform that supports scheduled or API-based markdown export, then you can sync that over to your phone and use a markdown reader to view it.
+
+Personally I use Trilium for my wiki.  A little script on the Trilium VM uses the API to pull a markdown export of the wiki every hour and automatically pushes it to git.  On my phone I can use WorkingCopy to sync to the repo and view an offline copy of the Wiki with full markdown parsing.  It’s read-only and it doesn’t have *all* the formatting of the real thing, but it’s probably 95% (images, tables, links, both internal and external, are all functional), and more than good enough for a quick reference if I don’t have cell coverage or the server is down and I can’t access the live system directly.
+  Score: 1
+  Created UTC: 2024-07-18 14:00:01
+
+Comment 2:
+  Author: miloszmd
+  Comment: I use Outline myself. Self-hosted and has desktop and mobile PWA apps that work really well.
+  Score: 1
+  Created UTC: 2024-07-17 21:30:17
+
+Note: This post has only 2 comments at the time of scraping.

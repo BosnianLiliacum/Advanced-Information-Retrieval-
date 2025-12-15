@@ -1,0 +1,140 @@
+Post Title: `itertools` combinatorial iterators explained with ice-cream
+Author: RojerGS
+Score: 93
+URL: https://www.reddit.com/r/Python/comments/1eaarah/itertools_combinatorial_iterators_explained_with/
+Number of comments: 6
+Created UTC: 2024-07-23 15:30:36
+
+Post Content:
+I just figured I could use ice cream to explain the 4 combinatorial iterators from the module `itertools`:
+
+ 1. `combinations`
+ 2. `combinations_with_replacement`
+ 3. `permutations`
+ 4. `product`
+
+I think this is a good idea because it is quite clear.
+Let me know your thoughts:
+
+### `combinations(iterable, r)`
+
+This iterator will produce tuples of length `r` with all the unique combinations of values from `iterable`.
+
+(“Unique” will make use of the original position in `iterable`, and not the value itself.)
+
+E.g., what ice cream flavour combinations can I get?
+
+```py
+# Possible flavours for 2-scoop ice creams (no repetition)
+
+from itertools import combinations
+
+flavours = ["chocolate", "vanilla", "strawberry"]
+for scoops in combinations(flavours, 2):
+    print(scoops)
+
+"""Output:
+('chocolate', 'vanilla')
+('chocolate', 'strawberry')
+('vanilla', 'strawberry')
+"""
+```
+
+### `combinations_with_replacement(iterable, r)`
+
+Same as `combinations`, but values can be repeated.
+
+E.g., what ice cream flavour combinations can I get if I allow myself to repeat flavours?
+
+```py
+# Possible flavours for 2-scoop ice creams (repetition allowed)
+
+from itertools import combinations_with_replacement
+
+flavours = ["chocolate", "vanilla", "strawberry"]
+for scoops in combinations_with_replacement(flavours, 2):
+    print(scoops)
+
+"""Output:
+('chocolate', 'chocolate')
+('chocolate', 'vanilla')
+('chocolate', 'strawberry')
+('vanilla', 'vanilla')
+('vanilla', 'strawberry')
+('strawberry', 'strawberry')
+"""
+```
+
+### `permutations(iterable, r)`
+
+All possible combinations of size `r` in all their possible orderings.
+
+E.g., if I get 2 scoops, how can they be served?
+
+This is a very important question because the flavour at the bottom is eaten last!
+
+```py
+# Order in which the 2 scoops can be served (no repetition)
+
+from itertools import permutations
+
+flavours = ["chocolate", "vanilla", "strawberry"]
+for scoops in permutations(flavours, 2):
+    print(scoops)
+
+"""Output:
+('chocolate', 'vanilla')
+('chocolate', 'strawberry')
+('vanilla', 'chocolate')
+('vanilla', 'strawberry')
+('strawberry', 'chocolate')
+('strawberry', 'vanilla')
+"""
+```
+
+
+### `product(*iterables, repeat=1)`
+
+Matches up all values of all iterables together.
+(Computes the cartesian product of the given iterables.)
+
+E.g., if I can get either 2 or 3 scoops, and if the ice cream can be served on a cup or on a cone, how many different orders are there?
+
+```py
+# All the different ice-cream orders I could make
+
+from itertools import product
+
+possible_scoops = [2, 3]
+possibly_served_on = ["cup", "cone"]
+for scoop_n, served_on in product(possible_scoops, possibly_served_on):
+    print(f"{scoop_n} scoops served on a {served_on}.")
+
+"""Output:
+2 scoops served on a cup.
+2 scoops served on a cone.
+3 scoops served on a cup.
+3 scoops served on a cone.
+"""
+```
+
+### Conclusion
+
+I think these 4 examples help understanding what these 4 iterators do if you don't have a maths background where “combinations” and “product” and “permutations” already have the meaning you need to understand this.
+
+[In case you want to learn about the 16 other iterators in the module `itertools`, you can read this article](https://mathspp.com/blog/module-itertools-overview).
+
+Top 2 comments:
+Comment 1:
+  Author: ashok_tankala
+  Comment: Amazing article. Loved it
+  Score: 4
+  Created UTC: 2024-07-24 07:07:15
+
+Comment 2:
+  Author: schemathings
+  Comment: I thought you meant [https://github.com/gruns/icecream](https://github.com/gruns/icecream)
+  Score: 6
+  Created UTC: 2024-07-23 19:49:10
+
+Note: This post has only 2 comments at the time of scraping.

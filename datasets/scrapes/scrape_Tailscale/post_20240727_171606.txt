@@ -1,0 +1,24 @@
+Post Title: Exit Node using Relay
+Author: Heavensong89
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ebny1n/exit_node_using_relay/
+Number of comments: 2
+Created UTC: 2024-07-25 06:26:49
+
+Post Content:
+I've got a setup I'm fairly happy with in my Tailscale, but just noticed today that if I ping my exit node, it's going via Relay.
+
+  
+My exit node is a gluetun VPN docker container connected to my PIA account, using UK London. The exit node works just fine in day to day use, but when I ping it using `tailscale ping pia-uk` I notice it's always going via the relay - 18ms response so not awful, but wondered is that always going to be the case because it's acting as an exit node and connected to a PIA server? Or have I missed opening a port somewhere? I can `tailscale ping ubuntuvps` (this is my cloud vps) and it goes direct rather than relay, so it doesn't look to be a wider issue.
+
+  
+For clarity, when pinging, I'm not using the exit node at that time, just connected to the tailnet.
+
+Top 1 comments:
+Comment 1:
+  Author: Anudeepc
+  Comment: Is the docker container running on the ubuntuvps?
+  Score: 1
+  Created UTC: 2024-07-26 02:14:58
+
+Note: This post has only 1 comments at the time of scraping.

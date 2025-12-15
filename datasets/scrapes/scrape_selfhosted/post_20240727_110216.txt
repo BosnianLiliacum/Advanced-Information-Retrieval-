@@ -1,0 +1,57 @@
+Post Title: What PC case am i looking for?
+Author: Strux_DK
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3mbfm/what_pc_case_am_i_looking_for/
+Number of comments: 5
+Created UTC: 2024-07-15 04:49:47
+
+Post Content:
+I don't know much about hardware and it's compatibility, so i hope some of you will lend me a helping hand here.
+
+Right now i have a Dell Precision 3630 tower that i use as a server. However, i just got about 6 6TB HDD's plus the 3 that's already in the case, that i of course want to utilize. I first tried with an external JBOD case, but wasn't happy with that solution, so now i'm looking to migrate all the internals to another case.
+
+I don't know the type of the [mobo](https://www.dell.com/support/manuals/da-dk/precision-3630-workstation/prec_3630_specifications_manual/motherboard-layout?guid=guid-cd1ddaa0-081a-4f7c-8018-2b5cfb5a2b23&amp;lang=en-us), but when i ask chatGPT it says micro ATX. Is that reliable? If it is a micro ATX mobo, is it then necessary for the case to also be micro ATX, or just at least whatever size a micro ATX is (or bigger) and then the mobo will fit in there?
+
+Apart from the size/type, i need:
+
+* Room for 10 3,5" bays at least
+* A case as small as possible without compromising functionality. This is because i have limited space to use. I was hoping something like the size of my current case, but taller, but haven't been able to find something like that.
+* At least one USB 3.0 or newer
+* As cheap as possible
+
+I don't need fancy, smart, lights or for it to be quiet. I live in EU (DK) but have access to the german Amazon.
+
+Best bet i've found is a [Fractal Design Node](https://www.amazon.de/-/da/dp/B00JBBH93K?returnFromLogin=1)
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: Fgfg1rox
+  Comment: First you don’t need an mATX case for your motherboard. Generally speaking any larger case can fit a smaller motherboard. So you can look for towers that can fit ATX motherboards and be just fine.
+
+To check what type of motherboard you have measure it. [Here](https://storage.tweakreviews.com/Motherboard/Motherboards%20demystified:%205%20form%20factors%20for%20every%20need/motherboard-form-factor-size-sheet.jpg) is a chart you can use to see what size it is. 
+
+As for my quick way to check, you can look at the number of PCIE slots it has and if you have the same or less than the number your case has it will fit. Your mobo has 4 and the case has 5 openings so you will be fine with that case.
+
+As for other cases, have you looked at any of JONSBO cases? They have a lot of options, and some specifically for NAS designs.
+  Score: 2
+  Created UTC: 2024-07-15 05:50:35
+
+Comment 2:
+  Author: AreYouDoneNow
+  Comment: Note that OEMs like HP and Dell often use proprietary parts that don't fit standardized form factors. 
+
+Looking at this image and the image of your motherboard: 
+
+https://i.pinimg.com/originals/c6/2d/57/c62d57e5770e4780494a3d0da9707fc3.png
+
+It does seem like it's MicroATX.  What matters is the mounting holes for the screws line up properly... because that's what the case will need to have.
+
+To help your decision I strongly recommend https://pcpartpicker.com/products/
+
+PC Part Picker will let you enter various criteria for your build and it will narrow down compatible choices.  It's fairly reliable.
+  Score: 1
+  Created UTC: 2024-07-15 08:36:10
+
+Note: This post has only 2 comments at the time of scraping.

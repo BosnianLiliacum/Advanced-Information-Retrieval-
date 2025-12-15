@@ -1,0 +1,32 @@
+Post Title: Synology Nas Question - Can it reference another storage NAS/Server?
+Author: Demonik19
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3j8dy/synology_nas_question_can_it_reference_another/
+Number of comments: 3
+Created UTC: 2024-07-15 01:59:46
+
+Post Content:
+I have a Synology NAS running a few docker containers. I was wondering if it is possible to have the containers on my Synology reference the other NAS in my environment? 
+
+These devices are on the same network, and able to ping eachother, but I'm not sure how you could mount a network storage location on a NAS in this format, especially given the other one is quite old at this point. 
+
+Thanks in advance!
+
+Top 2 comments:
+Comment 1:
+  Author: stobbsm
+  Comment: I don’t know synology well, but you generally can mount nfs in a container as a named volume. I do it all the time on my machines, with one central storage server. 
+
+Does it give you a command line to start containers? Or a way to make custom named volumes? If so, use the local driver, and set options of type=nfs o=rw and device=&lt;host&gt;:/path/to/share
+  Score: 2
+  Created UTC: 2024-07-15 04:40:06
+
+Comment 2:
+  Author: gadgetgeek717
+  Comment: I haven't done this before so I may be wrong, but I'm pretty certain you can easily point a container at another machine's dataset with an SMB share if the devices are on the same vlan or subnet. I don't have much experience with Synology NASs though, so I don't know how similar the setup is to Proxmox or TrueNAS.
+
+Looking forward to other's responses on this. I don't have need for it right now, but you never know what could be handy later...
+  Score: 1
+  Created UTC: 2024-07-15 02:50:19
+
+Note: This post has only 2 comments at the time of scraping.

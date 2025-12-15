@@ -1,0 +1,39 @@
+Post Title: Netbird + Authentik + NGXPM
+Author: pksrbx
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e60d1r/netbird_authentik_ngxpm/
+Number of comments: 1
+Created UTC: 2024-07-18 02:21:51
+
+Post Content:
+does anyone know how to set this up i think my problem is with the ngxpm but im not sure.
+
+everytime i try to access netbird i get this from authentik
+
+The request fails due to a missing, invalid, or mismatching redirection URI (redirect\_uri).
+
+and maybe its because of this i dont know how to set up this in NGXPM
+
+|Endpoint|Protocol|Target service and internal-port|
+|:-|:-|:-|
+|/|HTTP|dashboard:80|
+|/signalexchange.SignalExchange/|gRPC|signal:80|
+|/api|HTTP|management:443|
+|/management.ManagementService/|gRPC|management:443Endpoint	Protocol	Target service and internal-port/	HTTP	dashboard:80/signalexchange.SignalExchange/	gRPC	signal:80/api	HTTP	management:443/management.ManagementService/	gRPC	management:443|
+
+Top 1 comments:
+Comment 1:
+  Author: virginity-dongle
+  Comment: In the settings for the oauth2 provider you use for netbird, you need to add:
+
+Http(s)://yourdomain.com
+Http(s)://yourdomain.com.*
+Http://localhost.*
+
+Localhost needs to be there for some reason
+
+Edit: sorry about the formatting, each entry should be on a separate line
+  Score: 1
+  Created UTC: 2024-07-19 11:53:10
+
+Note: This post has only 1 comments at the time of scraping.

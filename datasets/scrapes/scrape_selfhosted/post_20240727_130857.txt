@@ -1,0 +1,148 @@
+Post Title: Banging my head against SWAG+Authelia
+Author: george-its-james
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1e69kow/banging_my_head_against_swagauthelia/
+Number of comments: 4
+Created UTC: 2024-07-18 11:56:35
+
+Post Content:
+I've been trying to get this to work for days now so I decided to try and reach out here. I've used NPM + Authentik for a while now, but it didn't really do exactly what I wanted and config felt a bit convoluted. I decided to switch to SWAG because of the built-in addons, and want to use Authelia for things like remember_me.
+
+SWAG setup wasn't too complicated and I've managed to get a simple reverse proxy working in no time. Getting Authelia working wasn't too hard either, and going straight to auth.mydomain.com works perfectly.
+
+However, getting the two working together is where it just does not work. All tutorials (including the LinuxServer one) online mention just uncommenting the authelia server and location lines in proxy configs, but that just results in 500 server errors. I've tinkered with the configs a bunch but nothing works. Everything including SWAG and Authelia runs in Docker containers, and I made sure they're all added to the same network. Pinging the Authelia container from SWAG works fine as well. Simple reverse proxy's using container names also work.
+
+The Authelia log says mostly this:
+
+level=error msg="Error occurred trying to determine the external Authelia URL for Target URL" error="authelia url lookup failed" method=GET path=/api/authz/auth-request remote_ip=[redacted] target_url="https://service.mydomain.com/"
+
+I feel like it's a simple misconfig somewhere but for the life of me can't figure out where, and Google can't find anything useful with this error message.
+
+I would really appreciate some help here because I've been at it for days but I'm really close to giving up and just using straight HTTP basic auth...
+
+EDIT - Fixed, finally! See my comment below...
+
+Top 3 comments:
+Comment 1:
+  Author: george-its-james
+  Comment: For posterity, if someone in the future has the same issue:
+
+I somehow fixed it by copying the example session configuration from [here](https://www.authelia.com/configuration/session/introduction/). Obviously edit to your config (i.e. change secret etc). Also make sure to remove any 'default_redirection_url' on global level, since that gave me an error while starting up (since it's defined at session level).
+
+    session:
+        secret: 'insecure_session_secret'
+        name: 'authelia_session'
+        same_site: 'lax'
+        inactivity: '5m'
+        expiration: '1h'
+        remember_me: '1M'
+        cookies:
+            - domain: 'example.com'
+            authelia_url: 'https://auth.example.com'
+            default_redirection_url: 'https://www.example.com'
+            name: 'authelia_session'
+            same_site: 'lax'
+            inactivity: '5m'
+            expiration: '1h'
+            remember_me: '1d'
+
+The existing session part in my configuration.yaml which I took from the LinuxServer tutorial looked like this
+
+    session:
+        name: authelia_session
+        secret: [redacted]
+        expiration: 1h
+        inactivity: 5m
+        remember_me: 1M
+        domain: mydomain.com
+
+but yeah, that doesn't work (anymore). The Authelia version in that tutorial is old and a bunch of things don't work using the latest Authelia, but somehow this section did not throw any errors in the logs.
+  Score: 5
+  Created UTC: 2024-07-18 12:42:17
+
+Comment 2:
+  Author: BuckeyeMason
+  Comment: I setup authelia for swag a few months ago, and then when I updated authelia from 4.37 to 4.38 there were some structural changes to the config I had to make to get it to work again.  Which version of authelia did you setup? Most of the tutorials were still showing older config versions when I set mine up.
+
+DId you also activate the swag authelia.subdomain.conf in additiona to uncommenting the blocks?
+
+May also want to check the authelia-server.conf and authelia-location.conf in swag to see if there are any updates needed there. THere were changes I had to make when updating to 4.38
+
+below is my working authelia config, with my domain redacted. sensitive secrets (API Keys and gmail password etc) I use their secret files method so those are all stored in a different folder as standalone files. 
+
+    server:
+      address: 'tcp://:9091/authelia'
+      buffers:
+        read: 4096
+        write: 4096
+    log:
+      level: trace
+      file_path: /config/logs/authelia.log
+      keep_stdout: true
+    duo_api:
+      hostname: myapiurl.duosecurity.com
+    authentication_backend:
+      password_reset:
+        disable: false
+      file:
+        path: /config/users_database.yml
+        password:
+          algorithm: argon2id
+          iterations: 1
+          key_length: 32
+          salt_length: 16
+          memory: 512
+          parallelism: 8
+    access_control:
+      default_policy: deny
+      rules:
+        - domain:
+          - mydomain.pub
+          - "*.mydomain.pub"
+          policy: two_factor
+    session:
+      name: authelia_session
+      expiration: 1h
+      inactivity: 5m
+      remember_me: 1M
+      cookies:
+        - domain: 'mydomain.pub'
+          authelia_url: 'https://authelia.mydomain.pub'
+          default_redirection_url: 'https://mydomain.pub'
+    regulation:
+      max_retries: 3
+      find_time: 2m
+      ban_time: 5m
+    storage:
+      local:
+        path: /config/db.sqlite3
+    notifier:
+      disable_startup_check: false
+      smtp:
+        address: 'smtp://smtp.gmail.com:587'
+        username: myemail@gmail.com
+        sender: authelia@mydomain.pub
+        subject: "[Authelia] {title}"
+        startup_check_address: authelia@mydomain.pub
+        disable_require_tls: false
+        tls:
+          skip_verify: false
+          minimum_version: TLS1.2
+    totp:
+      disable: false
+      issuer: mydomain.pub
+      algorithm: sha1
+      digits: 6
+      period: 30
+      skew: 1
+      secret_size: 32
+  Score: 3
+  Created UTC: 2024-07-18 12:50:39
+
+Comment 3:
+  Author: BelugaBilliam
+  Comment: Check out my github script to setup authelia: https://github.com/lordzeuss/auto-authelia
+  Score: 1
+  Created UTC: 2024-07-18 15:21:06
+
+Note: This post has only 3 comments at the time of scraping.

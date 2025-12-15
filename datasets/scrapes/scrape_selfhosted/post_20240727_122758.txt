@@ -1,0 +1,42 @@
+Post Title: Do someone know a free vps hosting that run 24/7 without have to stay on the google page
+Author: attaporo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8ojen/do_someone_know_a_free_vps_hosting_that_run_247/
+Number of comments: 7
+Created UTC: 2024-07-21 15:13:56
+
+Post Content:
+Do someone know a free vps hosting that run 24/7 without have to stay on the google page for hosting a botnet ?
+
+Top 5 comments:
+Comment 1:
+  Author: cloudswithflaire
+  Comment: If you need to know how to host a botnet for free..... you probably shouldn't have a bot net.
+  Score: 21
+  Created UTC: 2024-07-21 15:55:03
+
+Comment 2:
+  Author: DatabaseMoM66
+  Comment: Nothing is for free
+  Score: 12
+  Created UTC: 2024-07-21 15:35:38
+
+Comment 3:
+  Author: tillybowman
+  Comment: for hosting a botnet. i loled. now get out and away with your spam.
+  Score: 11
+  Created UTC: 2024-07-21 15:37:16
+
+Comment 4:
+  Author: ThecaTTony
+  Comment: Oracle cloud free tier, You need a credit card to register but they don't charge anything.
+  Score: 2
+  Created UTC: 2024-07-21 15:42:10
+
+Comment 5:
+  Author: Impressive-Cap1140
+  Comment: Not self hosted but Oracle. Not sure I fully understand your question.
+  Score: 1
+  Created UTC: 2024-07-21 15:37:31
+
+Note: This post has only 5 comments at the time of scraping.

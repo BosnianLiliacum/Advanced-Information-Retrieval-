@@ -1,0 +1,90 @@
+Post Title: Need a bit of help in Choosing a password manager
+Author: ScatletDevil25
+Score: 39
+URL: https://www.reddit.com/r/selfhosted/comments/1e7nf7m/need_a_bit_of_help_in_choosing_a_password_manager/
+Number of comments: 69
+Created UTC: 2024-07-20 04:34:00
+
+Post Content:
+So far I'm still leaning on self hosting Bitwarden but I'm looking for some suggestions or arguments agast it and for pointers from people hosting the other password managers.
+
+**Bitwarden**
+
+***Selfhosted via Official option***
+
+* needs to be in a Linux VM, can't run on a LXC container or BSD Jail
+* a bit omplicated setup
+* Database Container required 2GB of RAM for some reason
+* if I use the new beta option for unified deployment it apparently supports Postgress and SQLlite I haven't tested it but I imagine it'll be lighter
+* Some mostly enterprise features locked with a License
+
+***Vaultwarden hosting option***
+
+* Much lighter and runs on a LXC container with some effort
+* Bunch of official features missing
+
+**Passky**
+
+* 100 Password Limit, unless you buy premium
+* a bit basic? havent tested and I can't see a list of actual features anywhere
+* easy hosting can use LXC Container
+
+**Passbolt**
+
+* easy hosting can use LXC Container
+* Near Feature Parity with bitwarden with just the free plan although Vaultwarden is still superior cause it's free
+* Admin panel is locked behind a paywall ( stupid )
+
+**UPDATE:** I've decided to go with Vaultwarden, as from the comments it's the most recommended option. plus it has the most features I'd use on a daily basis I might consider Passky and Passbolt in a two or three years give them a bit more time for developemnt. it's nice to know from [CrazyRabbit66](https://www.reddit.com/user/CrazyRabbit66/) that I could generate my own license with Passky. The most important factor for me is ease of use on the frontend and features which only vaultwarden satify at the moment. I'm not paying for a dashboard for PassBolt
+
+Top 7 comments:
+Comment 1:
+  Author: dread_stef
+  Comment: You can just try the free ones and remove them if you don't like it.
+
+I settled for Vaultwarden. Be sure to block the admin url to outside traffic if you want to expose it to the internet.
+  Score: 63
+  Created UTC: 2024-07-20 05:12:14
+
+Comment 2:
+  Author: sardine_lake
+  Comment: If you're hosting (docker/lxc etc) then vaultwarden is the best.
+
+If you don't want to host KeePass xc is good-just put the database in Dropbox/google drive so it is available on all devices. 
+
+Been using vaultwarden for the past 4 years and it has been great.
+  Score: 22
+  Created UTC: 2024-07-20 10:19:04
+
+Comment 3:
+  Author: noobgolang
+  Comment: Vaultwarden, use wireguard split tunneling for vpn if you dont want to connect to vpn all the time
+  Score: 17
+  Created UTC: 2024-07-20 07:14:17
+
+Comment 4:
+  Author: modern-visionary
+  Comment: Try KeePassXC + google drive or other program for sync. Works great in my company and have browser integration for automatic detection of login forms.
+  Score: 24
+  Created UTC: 2024-07-20 09:49:47
+
+Comment 5:
+  Author: suicidaleggroll
+  Comment: I use the official (standard) bitwarden setup, and every month or so I export the vault and import it into keepass so I have an offline copy (aka: no server or VMs required) of all my passwords available as well.  Best of all worlds IMO.  If the official bitwarden is too heavy for your machine, the unified option or vaultwarden could work as well.
+  Score: 8
+  Created UTC: 2024-07-20 13:06:18
+
+Comment 6:
+  Author: dametsumari
+  Comment: Vaultwarden container is the way to go. Ideally rootless podman but docker works too.
+  Score: 5
+  Created UTC: 2024-07-20 09:36:35
+
+Comment 7:
+  Author: snowysysadmin59
+  Comment: Bitwarden. Or vaultwarden. Don't over think it. Just do it.
+
+edit: changed butwarden to bitwarden lmao
+  Score: 6
+  Created UTC: 2024-07-20 13:07:33
+

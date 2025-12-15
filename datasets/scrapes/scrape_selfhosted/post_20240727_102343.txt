@@ -1,0 +1,24 @@
+Post Title: Proxy server at home + traffic diagnostic + scraping and game botting
+Author: alittlesadthing
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e61p1d/proxy_server_at_home_traffic_diagnostic_scraping/
+Number of comments: 1
+Created UTC: 2024-07-18 03:30:35
+
+Post Content:
+I want to use proxies but **if the proxy connection fails** I don't want my machine to be able to have a connection to my home wifi or have anything to do with my home ip and network info. I was thinking of having two proxies, one for gaming and one that provides the internet connection so if a proxy fails there would still be a tunneling active... anyone knows if I should simply do something else for example set a special rule or if I'm on the right track? The way I see it, if a proxy connection and setup fails for some reason, the tunneling also fails exposing some information (idk what exactly, if you know please tell me were I can learn about this) and may expose the real ip or dns or some info that would expose my setup and make it impossible to simply switch proxies and create a new game account after a ban or scraping a site for data. Please correct me if I'm assuming false things, I'm new to networking. I'm on windows 10 but willing to switch to Linux for any reason at all. (don't like windows very much...) 
+
+Also I'd like to know if a machine using a proxy give vm's on it all the benefits of the proxy and if the vm's are swappable easily? For example the account on one vm gets banned, I destroy the vm, create a new one, throw in a new proxy, boom: new machine? (at least for the game or website servers)
+
+All info about where I can learn more on networking (hardware and software), server architecture and cybersecurity is welcome, **ya'll have a pleasant day!**
+
+Top 1 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: &gt; I want to use proxies but if the proxy connection fails I don't want my machine to be able to have a connection to my home wifi or have anything to do with my home ip and network info
+
+This sounds like an XY problem. What’s the actual problem you are trying to solve?
+  Score: 2
+  Created UTC: 2024-07-18 05:24:00
+
+Note: This post has only 1 comments at the time of scraping.

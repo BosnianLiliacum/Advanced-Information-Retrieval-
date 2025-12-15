@@ -1,0 +1,73 @@
+Post Title: Correct Deletion Order arr stack
+Author: sid3ff3ct
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9e4al/correct_deletion_order_arr_stack/
+Number of comments: 8
+Created UTC: 2024-07-22 13:19:26
+
+Post Content:
+I'm about to go through and do a purge of some of the movies/tv shows that have never been watched. Open to any helpful suggestions on tools to help get this done efficiently, but I've resigned myself to do it manually if needed. 
+
+  
+The real question I have is where is the best place to do the deletion so that it permeates through overseer/radarr/sonnarr/bazarr/plex/etc
+
+  
+For example:
+
+1. Do it at the file system level
+
+2. Do it via the plex gui
+
+etc. 
+
+Top 7 comments:
+Comment 1:
+  Author: VVaterTrooper
+  Comment: Deletion? What is the meaning of this word?
+  Score: 13
+  Created UTC: 2024-07-22 14:11:53
+
+Comment 2:
+  Author: Innocent__Rain
+  Comment: When i want to delete something i use "Delete in sonarr/radarr" in jellyseerr. This way it's deleted in jellyseerr, jellyfin, sonarr/radarr and of course the file system.
+  Score: 5
+  Created UTC: 2024-07-22 13:34:10
+
+Comment 3:
+  Author: joost00719
+  Comment: I do it via Sonarr/Radarr, otherwise its gonna be downloaded again in the future.
+  Score: 2
+  Created UTC: 2024-07-22 13:31:42
+
+Comment 4:
+  Author: PaperDoom
+  Comment: Not applicable for right now now, but in the future you should install Tautulli + Deleterr to automatically delete media according to whatever watch criteria that you can pull from Tautulli.
+
+As for right now, if you still have existing requests in Overseerr, I would use the "remove from" option there. Otherwise you should do it from Sonarr and Radarr, and make sure you select the option to remove the media folder as well so you don't get stuck with empty folders.
+  Score: 1
+  Created UTC: 2024-07-22 13:41:57
+
+Comment 5:
+  Author: pigers1986
+  Comment: delete from \*arr with file deletion 
+
+than plex/emby/jelly will catch it during next scan
+  Score: 1
+  Created UTC: 2024-07-22 14:04:36
+
+Comment 6:
+  Author: Illustrious_Dig5319
+  Comment: I setup maintainner and let it do it's job. 
+
+Looks for movies not watched in 2 years OR only watched once in 5 years. Adds them to a "Leaving Soon" collection and then deletes them via radarr after 30 days if they still match the criteria. 
+
+I manage tv series manually, but delete via sonarr
+  Score: 1
+  Created UTC: 2024-07-22 14:16:01
+
+Comment 7:
+  Author: rambostabana
+  Comment: I was hoping someone will explain how to delete media and torrent files at once since deleting only one doesnt free up disk space (hardlinks)
+  Score: 1
+  Created UTC: 2024-07-22 15:53:18
+

@@ -1,0 +1,31 @@
+Post Title: Windows local manga and audio book hosting help
+Author: kevinchronicles
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8pvoi/windows_local_manga_and_audio_book_hosting_help/
+Number of comments: 7
+Created UTC: 2024-07-21 16:13:05
+
+Post Content:
+My server is using windows and I access it all from my iphone. I have plex which is running great so far.
+
+Im looking for something to host on my local server for audio books and manga/manhwa. Id like to download from a gui the manga that I want and get updates on new chapters. I currently have kativa downloaded and the interface is great, but im completely oblivious to its setup and how to download manga for it or access it from my phone.
+
+Audio books im not sure on at all, ive got audible currently and that interface is great. If theres something similar to that and can be hosted and accessed outside the house it would be a win!
+
+Top 2 comments:
+Comment 1:
+  Author: Draakonys
+  Comment: [Audiobookshelf](https://www.audiobookshelf.org) is like a Plex but for audio books and ebooks
+  Score: 3
+  Created UTC: 2024-07-21 16:14:26
+
+Comment 2:
+  Author: phampyk
+  Comment: For manga/manhwa I don't self host, but use [kotatsu](https://github.com/KotatsuApp/Kotatsu) on my android, you can choose the sources from the big list and would give you notifications when there's a new chapter. 
+There's some stuff for self hosted if that's what you really want, I just couldn't be bothered as I don't really keep it once I read it, so I prefer this approach.
+
+Bummer, I just re read your post and you say iPhone... So kotatsu is not really helpful...
+  Score: 1
+  Created UTC: 2024-07-24 01:15:05
+
+Note: This post has only 2 comments at the time of scraping.

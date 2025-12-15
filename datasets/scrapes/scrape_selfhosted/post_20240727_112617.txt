@@ -1,0 +1,69 @@
+Post Title: What is the best provider for self hosting
+Author: jondonessa
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ec7c53/what_is_the_best_provider_for_self_hosting/
+Number of comments: 27
+Created UTC: 2024-07-25 22:02:08
+
+Post Content:
+Hi!, I am new here. 
+
+I noticed that lately I am using more alternatives to popular apps with self-hosting (ex: docmost alternative to notion). I am using railway almost a year but also, I am open to other providers. I know that many of them using aws or gce under the hood but pricing is diverse. 
+
+So what are you using or recommending as a provider? (buying a physical machine is not an option due to economical conditions right now :( )
+
+Top 7 comments:
+Comment 1:
+  Author: Blazemonkey
+  Comment: Your*self.* Hence the term *self.*
+  Score: 59
+  Created UTC: 2024-07-25 23:35:45
+
+Comment 2:
+  Author: Am0din
+  Comment: &gt;What is the best provider for self hosting
+
+Well, that would be... you.  Hence, the self-hosting part.  :P
+
+  
+So glad I did this, my own domains, mail, etc.  I love it. So many people complain about self-hosting mail and claim it to be a pain in the ass.  The only 'hard' part was initializing everything which wasn't even hard, just took some time.  After that, I don't even need to touch anything unless I'm updating.
+  Score: 11
+  Created UTC: 2024-07-26 00:29:35
+
+Comment 3:
+  Author: g00dhum0r
+  Comment: I thought self-hosting meant you bought or created your own physical server .. guess not.  🤔
+  Score: 10
+  Created UTC: 2024-07-26 01:52:48
+
+Comment 4:
+  Author: kraftfahrzeug
+  Comment: I like Hetzner a lot - they seem pretty transparent about many of their decisions, pricing is okay - I have not needed support myself but it’s also supposed to be good.
+Also many different models of VPS/storage/dedicated machines etc
+  Score: 18
+  Created UTC: 2024-07-25 22:58:58
+
+Comment 5:
+  Author: l8s9
+  Comment: A server in your home.
+  Score: 2
+  Created UTC: 2024-07-26 05:50:58
+
+Comment 6:
+  Author: DayshareLP
+  Comment: Prepaid-Host has a banger offer right now:
+6Core
+26GB ECC
+300GB SSD
+8€/Month
+  Score: 2
+  Created UTC: 2024-07-26 06:54:50
+
+Comment 7:
+  Author: FeehMt
+  Comment: Try oracle cloud, their free tier is plentiful. But be aware they might close your account for any reason they want. 
+
+Mine is running for 2 years now.
+  Score: 3
+  Created UTC: 2024-07-25 22:18:03
+

@@ -1,0 +1,25 @@
+Post Title: Autosync iCloud Photos to local storage?
+Author: t0bse1337
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e82m2e/autosync_icloud_photos_to_local_storage/
+Number of comments: 2
+Created UTC: 2024-07-20 18:47:05
+
+Post Content:
+Is it possbile to automatically sync my icloud photo library to a local storage? i would like to have a local backup of it, but in full quality.
+icloud sync on windows takes forever (about 24k photos&amp;videos)
+
+Top 2 comments:
+Comment 1:
+  Author: nothingveryobvious
+  Comment: [icloudpd](https://github.com/boredazfcuk/docker-icloudpd)
+  Score: 2
+  Created UTC: 2024-07-20 18:56:36
+
+Comment 2:
+  Author: hrrrrsn
+  Comment: It's a bit more full-featured than icloudpd, but I use Immich for this
+  Score: 1
+  Created UTC: 2024-07-20 23:11:17
+
+Note: This post has only 2 comments at the time of scraping.

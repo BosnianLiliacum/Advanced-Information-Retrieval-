@@ -1,0 +1,59 @@
+Post Title: on Immich becoming nonfree
+Author: odaman8213
+Score: 0
+URL: https://i.redd.it/ypg7zml9xcdd1.jpeg
+Number of comments: 16
+Created UTC: 2024-07-18 22:55:57
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: land8844
+  Comment: I'm more than happy to toss the devs some cash. It's a great product, they clearly worked hard on it. 
+
+That said, I don't trust the "license/trial" wording they chose to use.
+  Score: 18
+  Created UTC: 2024-07-19 07:27:55
+
+Comment 2:
+  Author: hxck
+  Comment: &gt; We think if you like and use software, you should pay for it, but we're never going to force anyone to pay or try to limit Immich for those who don't.
+
+You can get a license if you want to support, but you don't have to. Sounds pretty straightforward to me.
+  Score: 14
+  Created UTC: 2024-07-19 00:59:27
+
+Comment 3:
+  Author: eastboundzorg
+  Comment: It's literally still AGPLv3 and as long as that's the case nothing has changed.
+  Score: 3
+  Created UTC: 2024-07-19 10:50:20
+
+Comment 4:
+  Author: revereddesecration
+  Comment: So many of you have never written software in your life and it shows.
+
+It takes lots of time to write software. If you want people to work part time so they actually have time to work on their passion projects (like Immich) then sometimes you’re going to have to accept a monetisation scheme.
+  Score: 12
+  Created UTC: 2024-07-19 03:59:19
+
+Comment 5:
+  Author: gabrielcossette
+  Comment: You should change the title, it's still open source.
+  Score: 2
+  Created UTC: 2024-07-19 20:51:04
+
+Comment 6:
+  Author: odaman8213
+  Comment: You guys can downvote me on you want. We'll see who's right in 6 months.
+  Score: 2
+  Created UTC: 2024-07-20 16:09:57
+
+Comment 7:
+  Author: untrained9823
+  Comment: Yeah, how dare these devs actually want to get paid instead of working for free.
+  Score: 3
+  Created UTC: 2024-07-19 04:33:42
+

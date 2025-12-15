@@ -1,0 +1,45 @@
+Post Title: Help setting up qbittorrent with Mullvad vpn
+Author: Over_Werewolf_9013
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ecjq5g/help_setting_up_qbittorrent_with_mullvad_vpn/
+Number of comments: 3
+Created UTC: 2024-07-26 09:20:54
+
+Post Content:
+I went through "The complete guide to building your personal self hosted server for streaming and ad-blocking powered by Plex, Jellyfin, Adguard Home and Docker" and want to add vpn in qflood. the guide briefly mentions it but i've spent over 5 hours looking at different tutorials trying to get it to work. I can get the vpn to work but when its connected i can't connect to the server. i tried setting it up where only qbittorrent connected to the vpn but then none of the other containers can talk to qbittorrent. I'm sure there's a guide somewhere to do this but i can't find it. I also a saw theres a way to enable vpn directly through qflood but i don't understand the hotio wiki and the only other guide i found is for kubernetes and i can't figure out how to translate the information into my setup. plus, i don't know that this would solve the issue of the other containers being able to talk to it. What do i do
+
+the server is running on proxmox as Ubuntu 24.04 server, headless, if that's useful info
+
+Top 3 comments:
+Comment 1:
+  Author: CyberJack77
+  Comment: Difficult to answer without seeing some configuration.
+
+&gt; i tried setting it up where only qbittorrent connected to the vpn but then none of the other containers can talk to qbittorrent.
+
+If you use Docker (with compose) and if you use the `network_mode: "service:..."` setting, then all traffic is routed through the service provided here (most likely your vpn container). All other containers need to go through this service container as well. Lets say, for example, you have 3 containers. A, B and C. Container B runs an application that listens on port 1234 and uses container A to route the traffic. If you want container C to connect to the application that runs in container B, then you need to use container A (instead of container B) and port 1234 (so `A:1234`) to access the application. The same goes for you internal network. If you want to use the application that runs in container B, you need to expose the ports on container A.
+
+I made this `docker-composer.yaml` example a few years ago that does exactly that: https://pastebin.com/TPaVY9Yg 
+
+It doesn't expose ports, but it configures Treafik labels (Traefik is a reverse proxy), but that is not necessary.
+Maybe it will help with your setup.
+  Score: 2
+  Created UTC: 2024-07-26 10:02:42
+
+Comment 2:
+  Author: Parking-Cow4107
+  Comment: Does it not have socks5?
+  Score: 1
+  Created UTC: 2024-07-26 12:24:08
+
+Comment 3:
+  Author: sk1nT7
+  Comment: Use gluetun to establish a mullvad VPN network connection. Then define the gluetun service as network for all other containers that shall use the VPN. Ensure to port map those container ports that will use the gluetun service as VPN at the gluetun container service from now on. Then you can access the container services properly.
+
+An example arr-stack:
+
+[Compose-Examples/examples/arr-suite at main · Haxxnet/Compose-Exa](https://github.com/Haxxnet/Compose-Examples/tree/main/examples/arr-suite)[mples (github.com)](https://github.com/Haxxnet/Compose-Examples/tree/main/examples/arr-suite)
+  Score: 1
+  Created UTC: 2024-07-26 13:23:23
+
+Note: This post has only 3 comments at the time of scraping.

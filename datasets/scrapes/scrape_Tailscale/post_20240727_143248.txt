@@ -1,0 +1,96 @@
+Post Title: Adding static route manually ? (without --accept-routes=TRUE)
+Author: moopops
+Score: 5
+URL: https://www.reddit.com/r/Tailscale/comments/1ecinpb/adding_static_route_manually_without/
+Number of comments: 4
+Created UTC: 2024-07-26 08:05:34
+
+Post Content:
+I'm trying to add a specific static route to one of my tailscale node since I don't want to accept all routes on this device.
+
+This is the tailscale route table with `--accept-routes=TRUE`
+
+    ~$ sudo tailscale up --accept-routes=TRUE
+    ~$ ip route show table 52
+    10.59.101.0/24 dev tailscale0
+    10.72.100.0/23 dev tailscale0
+    10.72.119.0/24 dev tailscale0
+    10.72.120.0/24 dev tailscale0
+    100.68.10.1 dev tailscale0
+    100.72.0.31 dev tailscale0
+    100.72.59.1 dev tailscale0
+    100.72.60.1 dev tailscale0
+    100.72.100.1 dev tailscale0
+    100.100.100.100 dev tailscale0
+    192.168.10.7 dev tailscale0
+    192.168.10.44 dev tailscale0
+    192.168.10.45 dev tailscale0
+    192.168.10.46 dev tailscale0
+    
+    ~$ ping 10.72.100.1
+    PING 10.72.100.1 (10.72.100.1) 56(84) bytes of data.
+    64 bytes from 10.72.100.1: icmp_seq=1 ttl=64 time=136 ms
+    64 bytes from 10.72.100.1: icmp_seq=2 ttl=64 time=53.6 ms
+    64 bytes from 10.72.100.1: icmp_seq=3 ttl=64 time=64.9 ms
+    64 bytes from 10.72.100.1: icmp_seq=4 ttl=64 time=64.3 ms
+    64 bytes from 10.72.100.1: icmp_seq=5 ttl=64 time=48.6 ms
+    ^C
+    ---  ping statistics ---
+    5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+    rtt min/avg/max/mdev = 48.560/73.373/135.524/31.698 ms
+
+And this is the tailscale route table with `--accept-routes=FALSE`
+
+    ~$ sudo tailscale up --accept-routes=FALSE
+    ~$ ip route show table 52
+    100.68.10.1 dev tailscale0
+    100.72.0.31 dev tailscale0
+    100.72.59.1 dev tailscale0
+    100.72.60.1 dev tailscale0
+    100.72.100.1 dev tailscale0
+    100.100.100.100 dev tailscale0
+
+So I tried to add an identical static route manually
+
+    ~$ sudo ip route add table 52 scope global 10.72.100.0/23 dev tailscale0
+    ~$ ip route show table 52
+    10.72.100.0/23 dev tailscale0
+    100.68.10.1 dev tailscale0
+    100.72.0.31 dev tailscale0
+    100.72.59.1 dev tailscale0
+    100.72.60.1 dev tailscale0
+    100.72.100.1 dev tailscale0
+    100.100.100.100 dev tailscale0
+
+But network router is not pingable
+
+    $ ping 10.72.100.1
+    PING 10.72.100.1 (10.72.100.1) 56(84) bytes of data.
+    ^C
+    ---  ping statistics ---
+    52 packets transmitted, 0 received, 100% packet loss, time 52201ms
+
+So it looks like that `--accept-routes=TRUE` is doing more things that justing adding advertised routes. 
+
+Any idea ?
+
+Top 2 comments:
+Comment 1:
+  Author: tonioroffo
+  Comment: interesting - following this.
+  Score: 1
+  Created UTC: 2024-07-26 09:13:05
+
+Comment 2:
+  Author: JWS_TS
+  Comment: Correct, accepting routes also changes the Wireguard configuration to allow transit to those IP Addresses. 
+
+I think that the way to do what you're aiming at here is through Via Grants - this allows you to only share specific routes to specific devices: 
+
+https://tailscale.com/kb/1324/acl-grants#via
+
+If a machine is advertising a route, but the second machine is not in the via grant, then that second machine will not see it when they `--accept-routes` - They will accept all of the *other* routes.
+  Score: 1
+  Created UTC: 2024-07-26 13:49:17
+
+Note: This post has only 2 comments at the time of scraping.

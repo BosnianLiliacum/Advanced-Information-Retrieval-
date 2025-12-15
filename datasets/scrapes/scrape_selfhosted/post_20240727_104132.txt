@@ -1,0 +1,42 @@
+Post Title: File sharing
+Author: Puzzled-Essay-2555
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4saga/file_sharing/
+Number of comments: 8
+Created UTC: 2024-07-16 15:59:09
+
+Post Content:
+I'm wanting to host a simple file sharing service available in the browser. I have a lot of drivers and installers from work I want to have available to download behind a password I can share with my team. I've accomplished this before with next cloud however I don't really want everything else that it has. Any suggestions?
+
+Top 5 comments:
+Comment 1:
+  Author: FlashTwerk69
+  Comment: pingvin share
+  Score: 3
+  Created UTC: 2024-07-16 17:42:30
+
+Comment 2:
+  Author: R3AP3R519
+  Comment: Nginx setup to share files from a directory with http basic auth?
+  Score: 2
+  Created UTC: 2024-07-16 16:32:26
+
+Comment 3:
+  Author: Baader-Meinhof
+  Comment: Filebrowser works fine for this.
+  Score: 2
+  Created UTC: 2024-07-16 17:06:23
+
+Comment 4:
+  Author: jmarya9
+  Comment: [dufs](https://github.com/sigoden/dufs) - its simple and does what its supposed to
+  Score: 2
+  Created UTC: 2024-07-16 17:52:40
+
+Comment 5:
+  Author: opensrcdev
+  Comment: Minio
+  Score: 1
+  Created UTC: 2024-07-16 17:06:26
+
+Note: This post has only 5 comments at the time of scraping.

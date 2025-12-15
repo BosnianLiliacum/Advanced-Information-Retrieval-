@@ -1,0 +1,30 @@
+Post Title: My homepage dashboard - anything else that i can add to play with?
+Author: mrpbennett
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e66dbd/my_homepage_dashboard_anything_else_that_i_can/
+Number of comments: 2
+Created UTC: 2024-07-18 08:28:28
+
+Post Content:
+https://preview.redd.it/l47cnhngm8dd1.png?width=2852&amp;format=png&amp;auto=webp&amp;s=5c4d33c99e0d2e207d4a5fff273ed000b0924661
+
+Wondering what else i can use my cluster for? I don't do streaming / torrents as this is taken care of via a friend. So looking for more nerdy projects / apps to run, but can't seem to think of anything.
+
+Maybe home assistant but I heard that's a bit to run in kubernetes. 
+
+The unifi button is out of action, I'm moving soon and going to set up a unifi network then .
+
+Top 2 comments:
+Comment 1:
+  Author: planeturban
+  Comment: You can’t run supervised Home Assistant in k8s, however it isn’t that hard to get working as a standalone installation. You’ll have to have Multus installed if you want to do service discovery and such. 
+  Score: 2
+  Created UTC: 2024-07-18 08:39:48
+
+Comment 2:
+  Author: IgnisDa
+  Comment: If you watch media/are into fitness then I suggest Ryot (https://github.com/ignisda/ryot).
+  Score: 0
+  Created UTC: 2024-07-18 08:47:42
+
+Note: This post has only 2 comments at the time of scraping.

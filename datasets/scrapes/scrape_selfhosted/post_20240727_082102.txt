@@ -1,0 +1,31 @@
+Post Title: What is the best solution for self-hosted servers and Android clients enabling chat with attachments and audio with up to 5 users?
+Author: Any_Risk_2900
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed9vit/what_is_the_best_solution_for_selfhosted_servers/
+Number of comments: 4
+Created UTC: 2024-07-27 06:33:45
+
+Post Content:
+End-to-end encryption is a must, and ease of administration is highly appreciated.  
+It will be hosted on a VPC.
+
+Top 3 comments:
+Comment 1:
+  Author: cltrmx
+  Comment: Have a look into Matrix with synapse as sever and element as client.
+  Score: 3
+  Created UTC: 2024-07-27 06:41:20
+
+Comment 2:
+  Author: Steve_1st
+  Comment: I found rocket chat a while back - it's free tier is self hosted and the code is open (but it's a license limited to 10 users)
+  Score: 2
+  Created UTC: 2024-07-27 07:18:38
+
+Comment 3:
+  Author: MaxSan
+  Comment: Xmpp
+  Score: 1
+  Created UTC: 2024-07-27 08:08:39
+
+Note: This post has only 3 comments at the time of scraping.

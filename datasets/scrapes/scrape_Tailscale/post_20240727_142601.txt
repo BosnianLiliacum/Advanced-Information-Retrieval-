@@ -1,0 +1,67 @@
+Post Title: Hosts in routed subnets not able to access tailnet
+Author: _ttnk_
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ea5lwe/hosts_in_routed_subnets_not_able_to_access_tailnet/
+Number of comments: 3
+Created UTC: 2024-07-23 11:36:05
+
+Post Content:
+I have a node in my tailnet which acts as a subnet router, and which also has a docker with a few containers installed. The connection from the node/docker host to the tailnet is fine. 
+
+However, i started to investigate, since the docker containers are _not_ able to access any of the tailnet nodes. The docker containers are able to access the internet quite fine, so i assumed that they are also able to access the tailnet quite fine - but this is not the case. Accessing the containers from the tailnet, however, is working. All tutorials/blogposts/forum posts suggest to use tailscale sidecar containers which i do not want to, since: 
+
+- It will drastically increase the node count in my tailnet, and i'm on the free tier, so it is somehow limited. 
+- Access from tailnet and internet to the nodes should occur via a traefik reverse proxy, which is currently working fine. 
+- It is a lot of work
+- Access from the containers to the internet is fine, so why not to the tailnet? 
+
+During debugging i noticed that the same issue is with accessing an advertised subnet for which the specific node acts as a subnet router. The tailnet can access the subnet quite fine, but the subnet can _not_ access the tailnet. 
+
+The physical router of the physical network where the node is placed in has a static route enabled which routes tailscale traffic from the subnet via the subnet router node. This is confirmed with traceroute, it shows the first hop as the physical router, and the second hop as the subnet router node - but no further hops. 
+
+Needless to say, i have IP forwarding enabled in the kernel of the subnet router. However, i also have nftables running on this node with some specific rules, but did _not_ change anything after i have enabled tailscale. And there was also a time when subnet routing from the subnet to the tailnet went fine. 
+
+So, my questions are: 
+
+- Are docker containers supposed to reach the tailnet like they are able to reach the internet? If they have container host SNAT, this is fine for me. However, currently they can only access the internet and not the tailnet. 
+- Why is my subnet routing not working for egress traffic, but only for ingress? Is this the intended behaviour? 
+- tailscale does some firewall magic with DERP which i am not fully familiar with and accepted the "it just works" policy - however, i am a bit unsure if my nftables rules are interfering with that. 
+
+For reference, this is my current nftables config: https://pastebin.com/iQRvBHVz - basically simple port blocking, and masquerading egress traffic from docker and wireguard (legacy, i want to completely omit vanilla wireguard for tailscale). 
+
+If i disable the nftables service, this does not change anything in the behavior. 
+
+Any ideas? 
+I have also already submitted a support request to tailscale but maybe this problem is too specific. However, the bug report ID is BUG-41432d175d4537ce7246b04a6ddfdb8b49b05d0c796d11bf13d308bc707d985e-20240723105318Z-16e599ccb666c180 if someone official from tailscale may be reading this.
+
+Top 3 comments:
+Comment 1:
+  Author: skizzerz1
+  Comment: Only nodes joined to Tailscale have access to the tailnet. Subnet routes are a way for your tailnet nodes to securely access nodes not on the tailnet but this access is one-way. Containers are separate from the host so it is expected they don’t automatically get access to everything the host can access; that would be a security nightmare otherwise.
+
+To have nodes not joined to the tailnet accessing Tailscale IPs you’d need to route their connection through something that is joined first. Static routes can work and are what I’d recommend, but otherwise Funnel is a thing you can look into as well.
+  Score: 3
+  Created UTC: 2024-07-23 13:20:55
+
+Comment 2:
+  Author: julietscause
+  Comment: &gt;Why is my subnet routing not working for egress traffic, but only for ingress? Is this the intended behaviour?
+
+
+Your internal non tailscale clients have no idea what the 100.x.x.x/10 is.  You need to make a static route for this.  
+
+Log into your internet router and create a static route for 100.x.x.x./10 and point it to the local ip address of your subnet router.  
+
+This static route will tell any of your non tailscale clients "if you want go get to the 100.x.x.x/10 subnet talk to the subnet router local ip address"
+  Score: 2
+  Created UTC: 2024-07-23 13:27:52
+
+Comment 3:
+  Author: AutoModerator
+  Comment: Hi there! It looks like you've included a Tailscale bug reference code in your post. If you're experiencing issues with Tailscale, we recommend reaching out to our support team via the contact form at https://tailscale.com/contact/support/. There, you can get in touch with our experts who will be happy to assist you. Thanks for using Tailscale!
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/Tailscale) if you have any questions or concerns.*
+  Score: 1
+  Created UTC: 2024-07-23 11:36:05
+
+Note: This post has only 3 comments at the time of scraping.

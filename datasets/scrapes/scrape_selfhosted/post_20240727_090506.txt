@@ -1,0 +1,31 @@
+Post Title: Sophos Firewall vs Unifi UDM 
+Author: fabio_teixei
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eaop3x/sophos_firewall_vs_unifi_udm/
+Number of comments: 3
+Created UTC: 2024-07-24 01:09:53
+
+Post Content:
+I have an Unifi UDM that was my main router and firewall. A while ago I left the UDM as only my Unifi controller and I purchased a mini PC an put Sophos XG (at the time) to be my main router/firewall.
+The goal was to use the SSL inspection feature of Sophos to manage/control the internet usage on my home. I wanted for instance to be able to read https packets to block shorts on YouTube or Reels on instagram without block the whole app.
+
+On web browsers that works great but on the apps, because of SSL cert pinning, that does not work at all, even if I put my router root cert on the devices, the apps bypass and uses the pinned certificate and the app stops working.
+
+Deal with certificates is a pain as well, because is for my home use and I don't have corporate solutions like Intune or other MDM to push certificates to mobile devices, so I need to send manually the certificate to each device and install it manually. iPhone is a pain on the butt for this part.
+
+So in short, Sophos Firewall (no longer XG) use case is ever diminished for me. The question is. Should I ditch Sophos completely and get back to UDM as my firewall, os should I stick with Sophos?
+
+What are your thoughts?
+
+PS.: For now going with PFSense or OPNSense is not an option, to keep an enterprise grade firewall I will stick with Sophos because I like it better than PFSense and OPNSense. The question is really about Sophos vs Unifi.
+
+Top 1 comments:
+Comment 1:
+  Author: ovizii
+  Comment: If "The goal was to use the SSL inspection feature of Sophos " was your only reason for using it, and its not fulfilling your expectations, ditch it.
+
+If you are using other features of the Sophos FW keep it.
+  Score: 1
+  Created UTC: 2024-07-24 07:17:40
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,59 @@
+Post Title: PSA: Make sure your router fully support ipv6 before self hosting
+Author: RevealShot104
+Score: 106
+URL: https://www.reddit.com/r/selfhosted/comments/1ech6u7/psa_make_sure_your_router_fully_support_ipv6/
+Number of comments: 101
+Created UTC: 2024-07-26 06:26:53
+
+Post Content:
+My ISP no longer provides public IPv4 addresses due to IPv4 exhaustion. So I spent countless hours learning and setting up an IPv6 server, only to discover that my router, TP-Link C1200, [doesn't fully support IPv6 even though it claimed to be](https://community.tp-link.com/us/home/forum/topic/94783).
+
+TP-Link C1200 has a built-in IPv6 firewall that blocks all ports by default, and you CANNOT DISABLE IT. This renders the public IPv6 address useless since you can’t open ports to the public internet. Thanks a lot, TP-Link.
+
+Top 7 comments:
+Comment 1:
+  Author: neon5k
+  Comment: Pretty sure many old routers doesn’t support ipv6 on wan. Though work perfectly for wlan and lan.
+  Score: 108
+  Created UTC: 2024-07-26 06:41:23
+
+Comment 2:
+  Author: autisticit
+  Comment: Another advantage to running your own router instead of consumer brands.
+  Score: 79
+  Created UTC: 2024-07-26 06:44:51
+
+Comment 3:
+  Author: SuperQue
+  Comment: I look at it this way. It's a good excuse to replace a very old, EoL and unsupported, router.
+  Score: 15
+  Created UTC: 2024-07-26 07:35:06
+
+Comment 4:
+  Author: adamshand
+  Comment: Do your ISPs provide IPv6?  Or are you tunnelling them from somewhere?
+  Score: 12
+  Created UTC: 2024-07-26 09:23:51
+
+Comment 5:
+  Author: uoxou_xoxo
+  Comment: I don’t have the exact same router, but maybe see if OpenWRT doesn’t fix? I have repurposed many routers that way
+
+https://forum.openwrt.org/t/build-for-tp-link-archer-c1200-ac1200/2547
+  Score: 9
+  Created UTC: 2024-07-26 10:17:07
+
+Comment 6:
+  Author: pm_something_u_love
+  Comment: Or change to a ISP that offers static IPv4 because maybe ISPs don't have IPv6 yet. Most ISPs offer them for a small one off fee, at least here in NZ.
+  Score: 12
+  Created UTC: 2024-07-26 07:14:41
+
+Comment 7:
+  Author: cookiengineer
+  Comment: OpenWRT is the way to go.
+
+[wiki entry of TP-Link Archer C1200 v2](https://openwrt.org/toh/tp-link/archer_c1200_v2)
+  Score: 3
+  Created UTC: 2024-07-26 12:09:56
+

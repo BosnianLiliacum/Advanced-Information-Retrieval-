@@ -1,0 +1,73 @@
+Post Title: Self-hosted Spotify Alternative
+Author: GoldfishGam3r
+Score: 57
+URL: https://www.reddit.com/r/selfhosted/comments/1e3sbxm/selfhosted_spotify_alternative/
+Number of comments: 39
+Created UTC: 2024-07-15 11:22:30
+
+Post Content:
+Couldn't find a good anwer for this, so here goes:  
+  
+I'm already self-hosting my movies, shows, anime, cloud storage, etc. But one thing I can't find a good alternative to is Spotify.   
+  
+Thing is, I really like their daily playlists to discover new songs, and that's something I haven't seen replicated with the self hosted solutions I've found. You can host your own music, sure, but finding new music doesn't seem to be a possibilty. Writting this to see if I'm wrong (I hope I am).
+
+Thank you!
+
+Top 7 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: What you're looking for are scrobble platforms. Listenbrainz and LastFM will take your scrobble data and produce lists for you. Listenbrainz does a pretty good weekly list and LastFM will produce both kind of ad-hoc recommendations and lists.
+
+Navidrome, which is what people are usually going to for self-hosted music server these days, can connect to ListenBrainz directly. ListenBrainz can also connect directly to Spotify. LastFM can connect directly to Spotify, but I don't think it connects to Navidrome. There are also some independent platforms that aren't meant for scrobbling that you can use to find similar tracks.
+
+So basically there isn't a single solution, but between various free and self-hosted services you can get most of the way there.
+
+If you want to keep Spotify but don't want the premium account you can check out Spotube.
+
+  
+edit: Plex + PlexAmp player can also do some level of recommendations as well. Thought it was worth mentioning.
+  Score: 44
+  Created UTC: 2024-07-15 11:44:23
+
+Comment 2:
+  Author: xrmnx
+  Comment: How would you discover new music in your own collection?
+  Score: 33
+  Created UTC: 2024-07-15 11:41:45
+
+Comment 3:
+  Author: ilijamt
+  Comment: What about Navidrome. https://github.com/navidrome/navidrome
+  Score: 10
+  Created UTC: 2024-07-15 15:17:38
+
+Comment 4:
+  Author: Kaleodis
+  Comment: Lidify can recommend new bands based on the ones in your Lidarr library.  
+From there just \*find\* stuff that you might like, have a library of 15000 songs and hit random. you can't not discover something new that way.
+  Score: 4
+  Created UTC: 2024-07-15 13:23:30
+
+Comment 5:
+  Author: SurvivorOfTheCentury
+  Comment: I've managed to settle with emby over plexamp.
+
+Not perfect, not close to being Spotify but works well enough to me
+  Score: 3
+  Created UTC: 2024-07-15 13:47:50
+
+Comment 6:
+  Author: nick_ian
+  Comment: [Navidrome](https://www.navidrome.org/) with the "Spotify-ish" theme. Or [Koel](https://koel.dev).
+  Score: 3
+  Created UTC: 2024-07-15 19:18:51
+
+Comment 7:
+  Author: mjc7373
+  Comment: Not really what you asked for but I’ve been looking at Lidarr which is sort of like music discovery, in that it searches usenet/torrents for any music you don’t already have in your collection, based on the existing artists.  
+
+For example if you have a folder named The Talking Heads with a few of their albums in there, it will search for and download any other albums it finds by the band and add them to your collection. There’s always the chance it’ll add an album you didn’t know about or haven’t heard.
+  Score: 3
+  Created UTC: 2024-07-16 01:03:11
+

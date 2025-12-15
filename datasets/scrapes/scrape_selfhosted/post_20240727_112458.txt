@@ -1,0 +1,28 @@
+Post Title: Free for Developers, list of free tools and services
+Author: xboxhaxorz
+Score: 23
+URL: https://www.reddit.com/r/selfhosted/comments/1ecerqk/free_for_developers_list_of_free_tools_and/
+Number of comments: 2
+Created UTC: 2024-07-26 04:00:24
+
+Post Content:
+I was looking for free stuff for a non profit animal rescue i volunteer with and came across this site
+
+&amp;#x200B;
+
+Perhaps its useful [https://free-for.dev/#/](https://free-for.dev/#/)
+
+Top 2 comments:
+Comment 1:
+  Author: Lying_Hedgehog
+  Comment: That's a massive list, thanks for sharing
+  Score: 5
+  Created UTC: 2024-07-26 08:18:31
+
+Comment 2:
+  Author: Curious_Perspective8
+  Comment: Cool
+  Score: 1
+  Created UTC: 2024-07-26 13:49:20
+
+Note: This post has only 2 comments at the time of scraping.

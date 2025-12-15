@@ -1,0 +1,23 @@
+Post Title: Anyone running seafile behing nginx proxy manager on docker
+Author: ZeusRahman
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9yuqn/anyone_running_seafile_behing_nginx_proxy_manager/
+Number of comments: 2
+Created UTC: 2024-07-23 04:24:15
+
+Post Content:
+hey all ,
+
+ running into the CSRF issue but i have the "CSRF_TRUSTED_ORIGINS=[’ https mydomain . com '] defined in env and its available as exported var to container .. apparently thats the way to fix it but doesnt work for me.
+
+cheers
+
+Top 1 comments:
+Comment 1:
+  Author: daveyap__
+  Comment: I solved the CSRF issue by having the line `CSRF_TRUSTED_ORIGINS=['https://example.com']`
+inside of `seafile-data/seafile/conf/seahub_settings.py` and it worked for me.
+  Score: 1
+  Created UTC: 2024-07-23 06:37:33
+
+Note: This post has only 1 comments at the time of scraping.

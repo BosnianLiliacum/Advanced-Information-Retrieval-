@@ -1,0 +1,80 @@
+Post Title: Having some trouble with my catch all Nginx config, can anyone lend me a quick hand?
+Author: LucianaSkyWthDiamnds
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4culo/having_some_trouble_with_my_catch_all_nginx/
+Number of comments: 2
+Created UTC: 2024-07-16 02:00:55
+
+Post Content:
+I have a single IPv4 address that I'm planning to host several services on. In order to make this work, I've been using Nginx. I've got things working well so far, but I'm having trouble making a catch all configuration that would redirect traffic where I'd like it to go.
+
+My main domain, "example.com", hosts nothing more than a simple static page. If someone was to enter a subdomain that doesn't exist, such as "broken.example.com", I'd like for them to be redirected to "example.com". To facilitate that, I have the following catch all set-up:
+
+    server {
+        listen 80 default_server;
+        listen 443 ssl default_server;
+        server_name _;
+    
+        ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+        ssl_certificate_key /etc/live/example.com/privkey.pem;
+    
+        return 404;
+    }
+
+Now, I realize that having `return 404;` is not what needs to be there, but I can't figure out what I need to put instead. For example, I've tried using `proxy_pass` [`http://serverip:80`](http://serverip:80)`;` and a couple of other solutions, but so far I've been unable to find the correct syntax.
+
+For reference, this is what my config looks like for my main domain:
+
+    server {
+        listen 80;
+        listen 443 ssl;
+        server_name example.com www.example.com;
+    
+        ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+        ssl_certificate_key /etc/live/example.com/privkey.pem;
+    
+        root /var/www/example.com;
+        index index.html;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
+
+And this is what a config looks like for one of my subdomains:
+
+    server {
+        listen 80;
+        listen 443 ssl;
+        server_name sub1.example.com;
+    
+        ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+        ssl_certificate_key /etc/live/example.com/privkey.pem;
+    
+        location / {
+            proxy_pass http://127.0.0.1:8081;
+        }
+    }
+
+I should also note that each of these configs is there own file, so `catch_all` , [`example.com`](http://example.com) , and `sub1.example.com`. The idea is that as I add services, I can quickly write up [`sub2.example.com`](http://sub2.example.com) and manage each service separately by using sim links between sites-available and sites-enabled.
+
+Can anyone offer me any insight or tips that would help me achieve what I'm trying to do here? Any help would be greatly appreciated. Thanks!
+
+Top 1 comments:
+Comment 1:
+  Author: NikStalwart
+  Comment: I appreciate that you've provided examples and put effort into formatting your post properly, this demonstrates at least some commitment. However, from the configs you've posted, I can see that you might not read the documentation for the directives you're trying to use. I *highly* recommend reading the [nginx documentation](http://nginx.org/en/docs/). In particular:
+
+ * [Beginner's Guide](http://nginx.org/en/docs/beginners_guide.html);
+ * **[Server Names](http://nginx.org/en/docs/http/server_names.html)**;
+ * [`ngx_http_core_module`](http://nginx.org/en/docs/http/ngx_http_core_module.html);
+ * [`ngx_http_ssl_module`](http://nginx.org/en/docs/http/ngx_http_ssl_module.html).
+
+To redirect someone, you need one of the following return codes: `301`, `302`, `307` or `308`. `301` is a permanent redirect (the browser should remember it and hit the desired URL in the future) while `302` is a temporary redirect (which means the browser should check every time whether the redirect is still in place). Doing a bare `proxy_pass` is not the best idea, especially not without a corresponding `location` block. 
+
+As a matter of personal preference, I don't like defining `listen 80; listen 443 ssl;` for the same `server` block. This is more compact, but it doesn't allow you to force HTTPS as easily. My preference is to have a single catch-all listening on port 80 with a `return 301 https://$host$request_uri;`which will automatically force browsers to visit the secure version of my sites. 
+
+So, the simple solution is to just `return 302 https://example.com` from your `default_server` block.
+  Score: 2
+  Created UTC: 2024-07-16 03:02:07
+
+Note: This post has only 1 comments at the time of scraping.

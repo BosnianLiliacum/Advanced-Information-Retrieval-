@@ -1,0 +1,28 @@
+Post Title: Advice request: self hosted photos and videos accessible only to family members (distributed around the US)
+Author: milkipedia
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eb3501/advice_request_self_hosted_photos_and_videos/
+Number of comments: 2
+Created UTC: 2024-07-24 14:40:29
+
+Post Content:
+Looking for advice on what I should use to host a family photo contribution library. I'd like relatively tech-unsavvy family members, many of whom don't live near me (so I can't set up their devices for them, etc), to be able to contribute and share photos and videos. 
+
+I run a homelab (SFF proxmox + a Synology NAS that I won't expose directly... too much important stuff on it to risk) that's currently only accessible via Wireguard, but I would consider opening up this specific service with a port and DNS name, reverse proxy, or cloud hosting if that's better in the long run... but I hate recurring bills, just like many of you. 
+
+So what should I use?
+
+Top 2 comments:
+Comment 1:
+  Author: thijsjek
+  Comment: Use Tailscale, easy as installing random software from online. You can share access to their accounts and you control what access they have on your tailnet.
+  Score: 1
+  Created UTC: 2024-07-24 14:51:57
+
+Comment 2:
+  Author: Dodgy_Past
+  Comment: I use Immich and run it behind swag as a reverse proxy.
+  Score: 1
+  Created UTC: 2024-07-24 15:35:54
+
+Note: This post has only 2 comments at the time of scraping.

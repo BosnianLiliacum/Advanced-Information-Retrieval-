@@ -1,0 +1,18 @@
+Post Title: Your thoughts on kind? (The kubernetes thing)
+Author: steveiliop56
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4agzi/your_thoughts_on_kind_the_kubernetes_thing/
+Number of comments: 1
+Created UTC: 2024-07-16 00:07:04
+
+Post Content:
+So I want to learn some basic kubernetes because... Why not? I think basic kubernetes is a good skill to have. My issue is that I want to have something that I can take with me (that sounds stupid ik) and always have fun with it. I always carry my pi (pi5 8gb) with me running some basic docker services so I could install k3s directly on it but 1 node cluster is no fun. Then I came across kind a simple cool tool that makes a kubernetes cluster with as many nodes as you want in docker containers! So I've been thinking is that a good enough tool for me to learn some basic kubernetes or does it miss something?
+
+Top 1 comments:
+Comment 1:
+  Author: Azuras33
+  Comment: With K3D you can spawn any number of node in dockers, great way to learn.
+  Score: 1
+  Created UTC: 2024-07-16 07:38:49
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,56 @@
+Post Title: 1Password  alternative with SSH Terminal Integration
+Author: Own_Profession6242
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e4my0a/1password_alternative_with_ssh_terminal/
+Number of comments: 7
+Created UTC: 2024-07-16 12:06:19
+
+Post Content:
+Hi everyone,
+
+I'm currently using 1Password through the GitHub Student Pack, which offers a year of free service. However, due to budget constraints, I'm looking for a good alternative, especially one with strong SSH terminal integration.  
+I've considered Bitwarden, but I'm not sure if it offers the SSH terminal integration I'm looking for. Any recommendations or experiences with other password managers that meet these criteria would be greatly appreciated!
+
+Top 6 comments:
+Comment 1:
+  Author: Particular-School798
+  Comment: KeePassXC comes with its own SSH agent
+  Score: 5
+  Created UTC: 2024-07-16 13:23:00
+
+Comment 2:
+  Author: Extreme-Net-7271
+  Comment: KeepassXC with the encrypted Db on synced cloud storage like dropbox or onedrive. Been serving me well more than decade
+  Score: 2
+  Created UTC: 2024-07-16 15:27:58
+
+Comment 3:
+  Author: mpember
+  Comment: Someone has written a python script that may offer the functionality you seek with Bitwarden.
+
+https://github.com/joaojacome/bitwarden-ssh-agent
+  Score: 3
+  Created UTC: 2024-07-16 21:39:36
+
+Comment 4:
+  Author: vivekkhera
+  Comment: Are you on a mac? It provides a built in ssh agent as well, though to make it seamless you need a tiny script to run at login.
+  Score: 1
+  Created UTC: 2024-07-16 20:25:17
+
+Comment 5:
+  Author: mrbmi513
+  Comment: I believe bitwarden has an official CLI for you to use.
+  Score: 1
+  Created UTC: 2024-07-17 01:20:49
+
+Comment 6:
+  Author: 2TAP2B
+  Comment: Have a look at awesome self host?
+
+
+[here](https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#password-managers)
+  Score: -1
+  Created UTC: 2024-07-16 13:14:01
+
+Note: This post has only 6 comments at the time of scraping.

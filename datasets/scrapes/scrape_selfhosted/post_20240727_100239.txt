@@ -1,0 +1,30 @@
+Post Title: should sonarr/radarr/sab be installed on my nas or my minipc with plex
+Author: twobrain
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e767vp/should_sonarrradarrsab_be_installed_on_my_nas_or/
+Number of comments: 3
+Created UTC: 2024-07-19 15:16:58
+
+Post Content:
+picked up a synology nas, i need to migrate my plex/arr setup from a windows machine to either a beelink eq12 or the ds923+. i plan on running plex on the eq12 for quicksync. does it make more sense to install sab/arr on the nas? if installed on the eq12, does that mean extraction of the files will need to go through the network?
+
+Top 2 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: Either could work, however you can avoid some permissions and network share issues by putting sonarr on the same machine as the one where the media files are stored. Sonarr needs to be able to move, delete, and rename files, and if it has to do it over network share then you may run into stale file handle issues, conflicting permission issues, among other things that would require more ongoing attention. It would still work though.
+  Score: 1
+  Created UTC: 2024-07-19 15:55:05
+
+Comment 2:
+  Author: AuthorYess
+  Comment: I run my NAS as only storage so nothing on it except network filesharing stuff. For security mainly.
+
+I use proxmox and a temp storage device attached (that doesn't get backed up with the server) to hold any temp downloads and other temp files from my containers. 
+
+The main downside is once it downloads, I have to move it over to the new server, which takes time. It can be remedied  slightly with with 10g networking though...
+
+The other downside is if I'm using BitTorrent for Linux ISO that it becomes troublesome to seed with multiple versions of the same file and lack of space on the mini PC but I don't use BitTorrent very often.
+  Score: 1
+  Created UTC: 2024-07-20 22:56:51
+
+Note: This post has only 2 comments at the time of scraping.

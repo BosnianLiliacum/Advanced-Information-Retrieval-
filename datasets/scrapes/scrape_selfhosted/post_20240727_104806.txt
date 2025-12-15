@@ -1,0 +1,36 @@
+Post Title: Anyone selfhosting a BBS, MUD, etc. using a telnet connection?
+Author: fedapoc
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4flhm/anyone_selfhosting_a_bbs_mud_etc_using_a_telnet/
+Number of comments: 8
+Created UTC: 2024-07-16 04:22:24
+
+Post Content:
+[This post has no text content]
+
+Top 4 comments:
+Comment 1:
+  Author: flicman
+  Comment: Shit, dude, is it 1994? MUDs were all eaten by a grue.
+  Score: 2
+  Created UTC: 2024-07-16 04:36:08
+
+Comment 2:
+  Author: cspotme2
+  Comment: Did they update pcboard?
+  Score: 1
+  Created UTC: 2024-07-16 04:41:17
+
+Comment 3:
+  Author: BenMtl
+  Comment: BBS's are still alive .. have a look at [https://www.telnetbbsguide.com/](https://www.telnetbbsguide.com/)
+  Score: 1
+  Created UTC: 2024-07-16 10:23:16
+
+Comment 4:
+  Author: _omega
+  Comment: [The Serial Port](https://www.youtube.com/watch?v=qrG2MUNneHc) has a series on YouTube.
+  Score: 1
+  Created UTC: 2024-07-16 15:34:50
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,53 @@
+Post Title: Control D and Tailscale: Granular DNS for every device on your network
+Author: thisisparker
+Score: 40
+URL: https://tailscale.com/blog/controld/?utm_source=reddit&amp;utm_medium=owned-social&amp;utm_campaign=devrel-social
+Number of comments: 17
+Created UTC: 2024-07-25 17:15:21
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: rishimd
+  Comment: Might be a rookie question here, but how is this different than running custom blocklists and upstream servers on Adguard Home or Pihole on a tailnet device (and overriding the local DNS on the Tailscale admin to point to that node). I'd imagine ControlD directly offers more performance than the NAS in the corner of my office. 😂 Just wondering if there are any other major benefits besides the stated "letting you analyze traffic patterns and assess risk on each device separately."
+  Score: 13
+  Created UTC: 2024-07-26 03:26:41
+
+Comment 2:
+  Author: dns_guy02
+  Comment: I was waiting for this forever since I ditched nextdns. Works great!
+  Score: 7
+  Created UTC: 2024-07-25 23:53:19
+
+Comment 3:
+  Author: JustinHoMi
+  Comment: Does this work with the free Control D plan?
+  Score: 3
+  Created UTC: 2024-07-26 05:56:11
+
+Comment 4:
+  Author: Forsaked
+  Comment: But no support for conditional profiles by tag?
+  Score: 1
+  Created UTC: 2024-07-26 03:12:07
+
+Comment 5:
+  Author: mrpink57
+  Comment: For those using Headscale this works fine, just use the DoH endpoint in your config.
+  Score: 1
+  Created UTC: 2024-07-26 13:43:47
+
+Comment 6:
+  Author: grivooga
+  Comment: I'm definitely going to look into this. I've been running my own DNS resolver with PFSense for awhile and using DNS overrides to keep LAN traffic internal for my home server services (mostly Plex and the Arrs). That works great most of the time but things occasionally get weird when Tailscale gets involved. Some of my services like Plex are externally routed while most others are access controlled to LAN and Tailnet only. This works most of the time but occasionally mobile devices that are jumping on and off of Wifi need to be rebooted to straighten out the routing.
+  Score: 1
+  Created UTC: 2024-07-26 15:30:07
+
+Comment 7:
+  Author: FastCharger69
+  Comment: Finally!
+  Score: 1
+  Created UTC: 2024-07-27 06:31:55
+

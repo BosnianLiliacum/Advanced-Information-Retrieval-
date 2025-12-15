@@ -1,0 +1,49 @@
+Post Title: Looking for an Open Source CRM Solution For My (Small) Construction/Contracting Business
+Author: guitarfreak2105
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e872g5/looking_for_an_open_source_crm_solution_for_my/
+Number of comments: 6
+Created UTC: 2024-07-20 22:14:36
+
+Post Content:
+Hey all, I have been lurking a lot the last few weeks and I cannot tell you how much this sub has helped me, and I am so grateful for that! Thank you! 
+
+  
+I am a (for now) single man show Contractor and there are an absolute TON of non-open-source options, that is for sure. But, I am way into hosting all of my own apps because 1) it's cheaper 2) I am in control of my data backups etc. 3) It is way less expensive (usually) 
+
+  
+As far as functionality I am looking for something along the lines of [Jobber](https://getjobber.com/), [Joist](https://www.joist.com/), [Pipeline](https://pipelinecrm.com/industries/construction-crm/), [Housecall Pro](https://www.housecallpro.com/), [Structur](https://www.structur.com/) etc. 
+
+Basically I am hoping to find something that can be used easily on a phone or tablet, has SMS reminders (for residential customers), email integration for sending estimates and invoices, the ability to generate and sign contracts, ability to send contracts to be signed on a phone or tablet and then of course all of the normal customer database stuff, lead tracking, accounting stuff etc.
+
+  
+Might be a tall order but I figured I would ask before I pulled the trigger on anything paid.
+
+  
+Thanks!
+
+Top 3 comments:
+Comment 1:
+  Author: peterAtheist
+  Comment: [https://www.espocrm.com/](https://www.espocrm.com/)
+
+[https://www.dolibarr.org/](https://www.dolibarr.org/)
+
+  
+Maybe?
+  Score: 3
+  Created UTC: 2024-07-21 02:59:30
+
+Comment 2:
+  Author: Thin_Pie8081
+  Comment: Check out SuiteCRM or Odoo, both are strong open-source options with the flexibility you need. By the way, when you get everything set up, you might find Guidde really useful for creating quick how-to videos and documentation for your team and customers. It makes onboarding much simpler!
+  Score: 2
+  Created UTC: 2024-07-21 23:54:30
+
+Comment 3:
+  Author: Upbeat-Program9853
+  Comment: Budget?
+  Score: 2
+  Created UTC: 2024-07-22 16:23:01
+
+Note: This post has only 3 comments at the time of scraping.

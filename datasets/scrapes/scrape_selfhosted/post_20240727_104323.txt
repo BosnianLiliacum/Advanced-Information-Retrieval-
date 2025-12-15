@@ -1,0 +1,66 @@
+Post Title: looking for a self-hosted system to manage returns
+Author: chefsslaad
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ov28/looking_for_a_selfhosted_system_to_manage_returns/
+Number of comments: 7
+Created UTC: 2024-07-16 13:37:20
+
+Post Content:
+I'm looking for a lightweight self-hosted solution to manage returns. specifically, I need:
+
+* a customer portal to request a return and communicate
+* integration with delivery services
+* recieving and booking returns
+* keeping track of the status of individual returns
+* dashboards and reporting
+
+I've checked out some open source projects such as [Odoo](https://www.odoo.com/), [ERPNext](https://erpnext.com/) and [inventree](https://inventree.org/). And although they look great, I'm afraid they are too big for my need. 
+
+could anyone recommend me a good solution?
+
+TY. 
+
+Top 7 comments:
+Comment 1:
+  Author: aceospos
+  Comment: I don’t think Odoo is too big for your use. You probably are overwhelmed with the number of modules. You only need the Inventory module in this case. Should be straightforward configuring that for your use
+  Score: 4
+  Created UTC: 2024-07-16 15:33:48
+
+Comment 2:
+  Author: jo_ranamo
+  Comment: Have a look at budibase
+  Score: 5
+  Created UTC: 2024-07-16 14:30:28
+
+Comment 3:
+  Author: kdanovsky
+  Comment: I doubt there is anything lightweight that satisfies all of your requirements. It looks like you might need to build something custom, and a low-code platform like [UI Bakery self-hosted](https://uibakery.io/on-premise-ui-bakery), might work for you in this case.
+  Score: 2
+  Created UTC: 2024-07-16 15:02:05
+
+Comment 4:
+  Author: LEGENDofNEMEAN
+  Comment: Perfex CRM might fit your needs. I have it running for my personal usage.
+  Score: 2
+  Created UTC: 2024-07-16 17:21:34
+
+Comment 5:
+  Author: MillieKiss68
+  Comment: You might want to check out Returnly or Loop Returns. They offer robust yet lightweight solutions tailored for managing returns, including customer portals and delivery integrations. Maybe not exactly what you're after, but thought I'd suggest beehiiv if you're ever looking to enhance your email marketing alongside managing returns!
+  Score: 1
+  Created UTC: 2024-07-16 23:06:15
+
+Comment 6:
+  Author: BakGikHung
+  Comment: You'll need to customize a no code solution. I recommend baserow. It'll let you design some mini apps.
+You can also look at some competitor nocode tools. Maybe budibase.
+  Score: -1
+  Created UTC: 2024-07-16 14:23:44
+
+Comment 7:
+  Author: YesGoodBuddy
+  Comment: Check out codecanyon
+  Score: -1
+  Created UTC: 2024-07-16 13:42:29
+

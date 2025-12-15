@@ -1,0 +1,91 @@
+Post Title: Looking for advice on highly secured home servers/networks
+Author: cabaucom376
+Score: 9
+URL: https://www.reddit.com/r/selfhosted/comments/1e796na/looking_for_advice_on_highly_secured_home/
+Number of comments: 20
+Created UTC: 2024-07-19 17:21:14
+
+Post Content:
+Hey Reddit, I am seeking to embark on locking down my digital life as much as reasonably possible and would like some advice. I currently enjoy light self hosting and getting away from cloud providers as much as possible where makes sense to maintain control over my data. As I am starting to get into some cybersecurity I want to try my hand at locking down my network and devices the best I can.
+
+I want to do everything in steps as I decide to allocate more budget to this project. Currently I am doing all my self hosting from a raspberryPi so I think the first step should be to build a new setup. I am thinking about building some sort of mini-ITX setup with enough horsepower to run everything I would need as well as handle some 4k Jellyfin transcoding. I want to keep future proofing and upgrades in mind. Some hardware recommendations would be nice. I don’t mind spending a little bit if it’ll last me for longer down the line. But I also have many other pieces of this puzzle to consider.
+
+I currently don’t have a lot of data to store but I would like to eventually add a dedicated NAS to my setup down the road for backups once I start collecting more data. For now I think a few TB for my server will hold me fine.
+
+What are some OS/software recommendations for the server with strong encryption and Docker in mind? I’ve briefly looked at Unraid.
+
+What are some network architecture considerations I need to make? My plan is primarily to only have access to my home network via a Wirguard tunnel with IP whitelisting. Are there some additional layers I can add for even more security?
+
+Overall I just need some advice from more knowledgeable people with a good approach to a highly secure home network with strong data encryption, security and limited access.
+
+Top 7 comments:
+Comment 1:
+  Author: RexNebular518
+  Comment: Install Crowdstrike, you will be totally secure.
+  Score: 88
+  Created UTC: 2024-07-19 17:27:39
+
+Comment 2:
+  Author: Deventerz
+  Comment: You need to think about your threat model to understand what threat types you're trying to protect against.
+
+Some security measures protect against someone breaking into your house and stealing your physical drives, others protect against an outside attacker gaining access to your network, others protect against users or devices already on your network from acting maliciously.
+
+The type of data also matters, your passwords have different security requirements from your legally acquired TV shows.
+  Score: 22
+  Created UTC: 2024-07-19 17:38:22
+
+Comment 3:
+  Author: RedKomrad
+  Comment: My advice is to follow security podcasts,  blogs,
+and youtube videos. Do a lot of Web searches and reading until you understand server, application , and  network security.
+
+Write down what you’re going to do with your home network, and then carefully plan how you are going to secure it.  
+
+There are too many variables for someone to just give you an answer like “42”.  The solution is very dependent on what you want to secure. 
+  Score: 6
+  Created UTC: 2024-07-19 20:16:21
+
+Comment 4:
+  Author: Red_Redditor_Reddit
+  Comment: Yeah, you need to think more deeply about what your trying to do. What are you trying to run?  What are you trying to be secure against?  These are questions you need to answer before you can come to a meaningful conclusion.
+  Score: 3
+  Created UTC: 2024-07-19 18:24:40
+
+Comment 5:
+  Author: ElkEven7227
+  Comment:  Close all ports on your router firewall (except maybe 53 for dhcp if required for your isp). Install Tailscale on your server and client machines so you can access your server over an encrypted connection from anywhere without opening any ports in your network. Additionally enable firewall on your server and open only ports needed for services you run, so even if someone gains access to your home network you still have a second line of defense. If you set up ssh use ssh keys and disable password access. Install fail2ban on your server to ban IPs that attempt to access your network too many times with a wrong key/pw. That’s a pretty good start.
+  Score: 3
+  Created UTC: 2024-07-20 04:58:38
+
+Comment 6:
+  Author: AvatarQAZ
+  Comment: Securing a network or services is NEVER an easy deal.  To echo some statements already:
+
+-the most secure network is an unplugged network.  
+-it is complicated.
+
+First, start with the basic questions:
+
+-Who, how, what, where, when (in that order)
+
+Who do I want to access my network.  Everyone, easy... no authentication, no firewall rules... Leave it wide open.  Some people, ok... How do you auth?  Certificate, oauth, password?  Make these decisions about all of your services.  Define WHO you will trust by multiple methods.  Certs, IP/geo, 
+
+How.  Kinda answered above... But how do you want them to access.  Don't forget to include via what port/socket.  By introducing the 'how' you should learn about what you are potentially exposing.  If you are running everything on a local lab that you feel is well protected, you might just use password and http to access anything local especially if you are using a VPN or tunnel.  If you expose things, you really need to get into the how and understand what you are doing and what concessions you'll have to make to get the user experience you want. 
+
+What services AND what tools do you need to accomplish the how.  UFW is a great tool for dropping ACLs on a host and determining what IPs can access.  UFW is a great starting tool to initial security but it isn't a panacea.  It only provides the first solid deadbolt.  Authentik or a self hosted SSO where you roll the creds is also a good way forward.  Reverse proxies are your friend as well.  Start layering every tool at every OSI stack to secure things.  
+
+Where... This is more of an overall question.  Where are your services?  Where are your users?  In other words, know and document your network and who will be using them.  Where do you need firewalls to protect services?  Where is your IPS/IDS?   Just WHERE!?
+
+When... Probably not a good question for a homelab as when is always but in an enterprise when do you expect users to peak?  Around what services?  Do we traffic shape at certain times, etc.  Since I doubt many people are pushing the limits of their homelab and connections (assuming people are on gig Internet), then this isn't a huge question but in a larger deployment, when can determine where and how.  
+
+Just a few thoughts...
+  Score: 2
+  Created UTC: 2024-07-20 03:32:00
+
+Comment 7:
+  Author: Ariquitaun
+  Comment: Proxmox. Opnsense router.
+  Score: 2
+  Created UTC: 2024-07-19 17:34:02
+

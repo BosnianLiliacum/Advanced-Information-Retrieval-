@@ -1,0 +1,24 @@
+Post Title: Challenges when developing and implementing an open-source core banking system
+Author: lklimusheuskaja
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eclmj0/challenges_when_developing_and_implementing_an/
+Number of comments: 3
+Created UTC: 2024-07-26 11:22:41
+
+Post Content:
+How to implement a core banking system using open-source solutions: [https://innowise.com/blog/core-banking-system-implementation/](https://innowise.com/blog/core-banking-system-implementation/)
+
+Top 2 comments:
+Comment 1:
+  Author: Brutus5000
+  Comment: Did anyone see the link to the code? I did not
+  Score: 3
+  Created UTC: 2024-07-26 17:25:29
+
+Comment 2:
+  Author: gabrielcossette
+  Comment: Show me the code 😆
+  Score: 2
+  Created UTC: 2024-07-26 23:20:44
+
+Note: This post has only 2 comments at the time of scraping.

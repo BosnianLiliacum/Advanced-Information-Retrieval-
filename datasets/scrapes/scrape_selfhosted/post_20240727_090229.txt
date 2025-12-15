@@ -1,0 +1,69 @@
+Post Title: What is the best way to setup local cloud on windows?
+
+Author: TRECT0
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eax7m6/what_is_the_best_way_to_setup_local_cloud_on/
+Number of comments: 26
+Created UTC: 2024-07-24 09:34:29
+
+Post Content:
+I've been looking for a way to setup a cloud for my house and I've yet to find anything that works on windows. I've tried setting up Nextcloud but the whole domain and ports thing didn't workout with me so I would like something that's more compatible with windows.
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: mrkesu
+  Comment: Good luck buddy.
+  Score: 7
+  Created UTC: 2024-07-24 11:57:09
+
+Comment 2:
+  Author: Lukas2401
+  Comment: As others have already said, on Windows, Docker might be your best option.
+
+A middle ground between Windows and going full Linux might be something like [NextcloudPi](https://nextcloudpi.com/) or [CasaOS](https://casaos.io/) as suggested by u/Playful-Owl8590. If you want something that "just works", having to learn basic Linux CLI administration first IS quite a hassle, and I say that as someone who now uses Linux 90% of my time.
+
+There's nothing wrong with starting small and, in case you're getting into it, you can always upgrade your setup to something like baremetal Ubuntu or virtualization with Proxmox as you're learning more
+  Score: 2
+  Created UTC: 2024-07-24 16:23:17
+
+Comment 3:
+  Author: shadoodled
+  Comment: I won't say doing this on Windows is wrong but you would definitely staring with a disadvantage. Start learning Linux. Your future self will thank you
+  Score: 2
+  Created UTC: 2024-07-24 09:39:39
+
+Comment 4:
+  Author: Murky-Sector
+  Comment: Is full virtualization a requirement or will simple containerization suffice? You could just run docker. Otherwise you should use linux to avoid persistent headaches.
+  Score: 1
+  Created UTC: 2024-07-24 16:59:27
+
+Comment 5:
+  Author: Simorious
+  Comment: Filerun works on windows. It's an alternative to nextcloud. It's not open source or free though. It's about $100 for a home use license that covers 5 users. I run it under iis on my Windows server.
+  Score: 1
+  Created UTC: 2024-07-26 16:36:15
+
+Comment 6:
+  Author: parametricRegression
+  Comment: Not sure what exactly you're trying to set up. It is theoretically possible, especially if you use WSL, where you have a Linux instance running within your Windows machine, but it is probably going to add complications.
+
+I used to work professionally with Windows Server in the Ballmer era, and even Pro versions of non-Server Windows had massive restrictions on what it allowed you to do. Plus managing a Windows server requires a lot of non-portable, platform-specific (and relatively hard to find) knowledge. Windows (Server) is a viable server OS if you are using a full MS software stack, which typically involves paying them a *lot* of money, and is generally tailored for banks, insurance conglomerates and the like, not self-hosting hackers.
+
+I think starting your self-hosting journey is probably better served by considering your exact goals, and getting a RPi 5, or a cheap cloud VM to host it.
+  Score: 1
+  Created UTC: 2024-07-24 10:00:56
+
+Comment 7:
+  Author: Playful-Owl8590
+  Comment: I use Casa OS and Unraid.   
+Both offer a huge appstore with easy to install apps, nextcloud and alternatiives included.  
+Umbrel an Yunohost might do the trick as well.  
+Not windows based, but easy to use.
+
+Obviously there will be limitations
+  Score: 1
+  Created UTC: 2024-07-24 11:56:48
+

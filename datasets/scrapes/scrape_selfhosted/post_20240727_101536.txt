@@ -1,0 +1,65 @@
+Post Title: Jellyfin External Access: Options &amp; Considerations
+Author: Reaper-Of-Roses
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6ezcw/jellyfin_external_access_options_considerations/
+Number of comments: 11
+Created UTC: 2024-07-18 15:59:14
+
+Post Content:
+Hi everyone,
+
+I have a Jellyfin server hosted on my network. I’d like to share access with friends and family. For the time being, I’ve port-forwarded a high external port to the server over http and used my firewall to whitelist my friends’/familiy’s IPs. I know this isn’t very secure. 
+
+I recently bought a domain on Cloudflare and set up a reverse proxy via Caddy on my Jellfyin machine. This is good for encrypting my connection, but I’m forced to open port 443 and I can’t whitelist IPs since Let’s Encrypt needs access from various IPs. 
+
+My last thought is purchasing an SSL certificate, converting it to PKCS12 format for Jellyfin, and installing it locally. I haven’t seen any guides about people doing this, however. 
+
+Is there anyone who’s purchased an SSL cert and installed it on Jellyfin without a reverse proxy? 
+Also, is there a way I’m missing to limit access to my server if hosted on 443 via reverse proxy?
+
+Thank you for your time,
+
+RoR
+
+Top 3 comments:
+Comment 1:
+  Author: springs87
+  Comment: Why not have the certificate on your reverse proxy?
+
+This is how a lot of people do it within their homelabs
+  Score: 3
+  Created UTC: 2024-07-18 16:24:13
+
+Comment 2:
+  Author: TormundGaming
+  Comment: I did three things for my external jellyfin:
+
+1. LetsEncrypt SSL certificate via reverse proxy
+2. Non-standard port to reduce noise.
+3. Secondary docker container with read-only access to the media.
+  Score: 2
+  Created UTC: 2024-07-19 04:33:08
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: &gt;This is good for encrypting my connection, but I’m forced to open port 443 and I can’t whitelist IPs since Let’s Encrypt needs access from various IPs. 
+
+You can change to a DNS challenge so you don't need to worry about the HTTP challenge and let's encrypt with IP whitelisting of there servers. Of course you can keep whitelist your friends IPs
+
+Here is how you do a [caddy DNS challenge](https://github.com/DoTheEvo/selfhosted-apps-docker/blob/master/caddy_v2/readme.md#caddy-dns-challenge)
+
+This walkthrough will use cloudflare but for anyone else reading you can use any of the caddy [DNS module](https://github.com/caddy-dns)
+
+You may also want to look into CrowdSec. Here is a sample for [caddy](https://github.com/hslatman/caddy-crowdsec-bouncer)
+
+Note I haven't done CrowdSec with caddy. I put it on my firewall 
+
+Edit: for an already made caddy docker image for cloudflare and CrowdSec by [serfriz](https://github.com/serfriz/caddy-custom-builds). Understand if you want to build the caddy image on your own or if you plan on using more caddy modules where you need to build on your own. 
+
+Let me know if you have any questions 
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-18 17:29:16
+
+Note: This post has only 3 comments at the time of scraping.

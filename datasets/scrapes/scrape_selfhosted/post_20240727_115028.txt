@@ -1,0 +1,50 @@
+Post Title: Storing links and names - "mindmap"-like software? "Bookmark manager"?
+Author: MioCuggino
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eazssh/storing_links_and_names_mindmaplike_software/
+Number of comments: 4
+Created UTC: 2024-07-24 12:06:50
+
+Post Content:
+I'm reaching a point where I have found a LOT of different software and websites that I want to categorize for a quick searching
+
+For example, here's the way I memorize all the useful software I've found for Windows, Linux and Android
+
+https://imgur.com/a/2vH89O7
+
+It's a simple table on Notion.so, where each column rappresent a property of the software itself (Operating system, is Open Source?, download link, short description, etc)
+
+I have a similar page for links that's referring to certain topics (e.g. website for downloading things, training etc)
+
+**These pages are shared on notion.so, so are viewable by friends** (so I can do the heavy lift of collecting and updating them and friends can enjoy the work I've done).
+
+The issue is that this mechanism is starting to burden me: adding link is A PAIN, searching for them is even worse.
+
+The system is not scaling: I'm still creating .txt to desktop, sending me message on Telegram or using Google Keep notes (ugh) instead of centralizing them on Notion.so because is much more easier to save the, (but useless in the long term, because they are not searchable efficiently in every of these software).
+
+I'm desperately searching for an alternative solution, becuase I truly need a way to find what I've found in the past in an efficient way.
+
+Basically, the perfect way would be something like "obsidian canvas", where you could create pages with different topics and link them somehow. However, isn't the most practical way to simply links things one to another, but surely having a graphical way (a graph is very nice to see) to analyze and search by tag or simply with a look of an eye what I'm looking for.
+
+I found that there's an entire category of software called "mind map" that basically realize this somehow, but I can't find anything truly OSS, selfhostable and that could facilitate what I'm trying to do.
+
+The most good looking software I've found is [WiseMapping](https://app.wisemapping.com/c/maps/3/try), but isn't so easy to build a graph like I've found initially.
+
+Because in the end you can see my goal as a "selfhostable OSS search-friendly" way to collect links, I've also thought to use [Linkwarden](https://linkwarden.app/) to do that. Would be a good way to achieve my goal (I could use tags to actually rappresent above table colums?) but I guess that then it would miss a "graph-like" way to search things and also the possibility to expose a public page with links. I know that [Raindrop.io](https://raindrop.io/) have public pages, but I would like something selfhostable and OSS (because we like autarchy, I guess).
+
+Can someone help me with my endless search for the "perfect software" to catch all these beautiful info I found around the web and make them as much searchable-friendly as possible?
+
+Top 2 comments:
+Comment 1:
+  Author: albtechno
+  Comment: use linkwarden bro
+  Score: 5
+  Created UTC: 2024-07-24 18:36:10
+
+Comment 2:
+  Author: joeygoksu
+  Comment: This might be useful [https://markwise.app](https://markwise.app)
+  Score: 2
+  Created UTC: 2024-07-25 07:38:10
+
+Note: This post has only 2 comments at the time of scraping.

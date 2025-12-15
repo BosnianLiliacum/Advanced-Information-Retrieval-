@@ -1,0 +1,79 @@
+Post Title: Selfhosting makes happy
+Author: PresenceKlutzy7167
+Score: 669
+URL: https://www.reddit.com/r/selfhosted/comments/1e4rnp4/selfhosting_makes_happy/
+Number of comments: 39
+Created UTC: 2024-07-16 15:33:05
+
+Post Content:
+This is a bit of a feel-good story, so don’t expect any new findings and tips. 
+
+My son has been playing Minecraft since some time mostly locally or on public server. A few weeks ago he told me that he and his friends were planning to have a modded server for their group and he signed up to take care of it. 
+
+First they wanted to use one of many paid hosting providers, but I saw my chance and convinced him to use his old PC, install Ubuntu and setup a server by ourselves. 
+
+So went through multiple sessions in which we installed ubuntu, installed pterodactyl and playit.gg to access from the outside.  
+
+We managed to get a working setup yesterday and connected the first of his friends to the server today and my son cannot be more happy. He’s smiling all day and keeps on hugging me, telling me how grateful he is, that I helped him. 
+I’m smiling too, also because he learned quite a bit about Linux, permissions, containers and networking. 
+
+Overall a great experience. 
+Hoping this story gave a few of you a smile.
+ 
+Let’s make sure our kids will be the ones knowing how all this magic computer stuff works. 
+
+Top 7 comments:
+Comment 1:
+  Author: Satans_shill
+  Comment: It's one of things he will remember even when raising his own son.
+  Score: 206
+  Created UTC: 2024-07-16 17:07:00
+
+Comment 2:
+  Author: Philthyzz
+  Comment: My dad was never a computer guy, but he did share his hobbies with me when I was little (model rockets, helicopters, etc). And even though those aren't my preferred pastimes 20+ years later, they were definitely building blocks into things that I do love today. And I will always remember being able to share that stuff with him, wouldn't change it for the world. Great story!
+
+Now I need to find myself a son and pass on my hobbies..
+  Score: 59
+  Created UTC: 2024-07-16 17:13:08
+
+Comment 3:
+  Author: fletchowns
+  Comment: Make sure you set up some backups for the minecraft data, and periodically test the "restore from backup" capability!
+  Score: 48
+  Created UTC: 2024-07-16 18:26:48
+
+Comment 4:
+  Author: Meanee
+  Comment: I still don't know how to get modded Minecraft server setup. My stepson wanted me to host it, but I could only get regular vanilla one done. Any guides on that?
+  Score: 14
+  Created UTC: 2024-07-16 18:53:26
+
+Comment 5:
+  Author: videoerror19946
+  Comment: Marketable job skills too - I know a few people who got their start in IT from running a Minecraft server
+
+Teaches you a good deal about Linux, networking and security
+  Score: 10
+  Created UTC: 2024-07-16 20:03:42
+
+Comment 6:
+  Author: gen_angry
+  Comment: With how often game server providers disappear and/or get stingy with controls to try to milk more money from their customers, it's an awesome feeling being in complete control of your own data. 
+
+Just gotta make sure your backup strategy is sound and tested. During a failure is not when you want to be testing things. 3-2-1 and all that. There's likely going to be a whole lot of hours being spent on this world of theirs, making sure it's safe should be paramount.
+
+If it's just a docker container running on ubuntu: maybe as an idea - after testing backups during a slow time and making sure you can recover quickly. Install something like proxmox and put the minecraft server in a lxc. So if him and his friends get bored of it and want to do something else, he can shut down the LXC and it's preserved as it is, then spin up another new one of whatever game they're into next (rust, ark, valheim, etc). So if they want to go back to minecraft after a time, he can just fire it back up and there it is. 
+
+I use the above method myself and have something like 15 containers of server software of various games my friends and I have felt like playing over the years (as well as like 10 various 'self hosted sites' for the household). They rarely all run at once, just whenever we get into the mood of playing X game. Start it up, run the update script and off we go.
+
+Portainer might be another option that you could probably attach to your existing docker setup but I've not really used it any myself.
+  Score: 7
+  Created UTC: 2024-07-16 21:43:33
+
+Comment 7:
+  Author: hirakath
+  Comment: You’re living my dream man! Cherish it! Happy you get to have these amazing experiences! Those hugs are worth everything!
+  Score: 6
+  Created UTC: 2024-07-16 19:31:36
+

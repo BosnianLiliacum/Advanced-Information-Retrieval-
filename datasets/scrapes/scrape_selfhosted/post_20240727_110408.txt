@@ -1,0 +1,61 @@
+Post Title: How Safe Is Exposing Jellyfin on a Domain?
+Author: ScienceConscious7143
+Score: 129
+URL: https://www.reddit.com/r/selfhosted/comments/1e3eu4c/how_safe_is_exposing_jellyfin_on_a_domain/
+Number of comments: 104
+Created UTC: 2024-07-14 22:29:50
+
+Post Content:
+Hi, I'm not sure if this is a good place to ask this question but I'd like any help. I want to know what kind of risks there are if I self-host Jellyfin on a server (using a reverse proxy), port forwarded it, and make it accessible to anyone (meant for close friends and family though) through a domain. This domain would probably have my name in it, as well as any whois information or whatever it has.
+
+I'm assuming that it is ideal to just not port forward Jellyfin at all, and just have it all behind an exposed VPN on my home network, but if I were to expose Jellyfin directly would that be fine?
+
+Top 7 comments:
+Comment 1:
+  Author: DreamLanky1120
+  Comment: It's fine if you don't use it for any private media.
+
+It's bad
+
+[https://github.com/jellyfin/jellyfin/issues/5415](https://github.com/jellyfin/jellyfin/issues/5415)
+  Score: 222
+  Created UTC: 2024-07-14 23:34:27
+
+Comment 2:
+  Author: Sevynz13
+  Comment: I have been exposing my Plex as well as many other services through reverse proxy with no problems. But remember you don't port forward with a reverse proxy. The only port that is forwarded is 443 to hit the proxy. I use HAproxy installed on my PFsense box.
+  Score: 14
+  Created UTC: 2024-07-15 03:00:53
+
+Comment 3:
+  Author: dskaro
+  Comment: Check out linuxserver/swag as a reverse proxy. It has mods to enable GeoIP blocking to block or allow only IPs from specific countries. It can also be used with Crowdsec to detect and ban various suspicious traffic. [More details here](https://www.linuxserver.io/blog/blocking-malicious-connections-with-crowdsec-and-swag)
+  Score: 28
+  Created UTC: 2024-07-14 22:54:55
+
+Comment 4:
+  Author: cvzero89
+  Comment: Jellyfin can be used with fail2ban https://jellyfin.org/docs/general/networking/fail2ban/
+
+I've set it up as my backup for Plex and I expose it for friends and family that are not tech-savy enough to use a VPN or tailscale. So far things have been good.
+  Score: 28
+  Created UTC: 2024-07-14 23:13:53
+
+Comment 5:
+  Author: meghrathod
+  Comment: You could expose it using a Tailscale IP, basically point a dns record to the 100.x.x.x given to the device using Tailscale, and then only when you are authenticated with it will you be able to access the server. If it’s not a huge shared server doable.
+  Score: 5
+  Created UTC: 2024-07-15 07:06:42
+
+Comment 6:
+  Author: Ariquitaun
+  Comment: Don't. Put it behind VPN access.
+  Score: 5
+  Created UTC: 2024-07-15 08:44:01
+
+Comment 7:
+  Author: WetFishing
+  Comment: Jellyfin is an actively maintained product so I would say that it’s relatively safe as long as you are keeping it updated and using a reverse proxy. Even better if you can isolate it from the rest of your network. You are always accepting some level of risk by exposing any service. I personally expose Jellyfin to the internet using the method you described and have never had an issue.
+  Score: 36
+  Created UTC: 2024-07-14 22:42:55
+

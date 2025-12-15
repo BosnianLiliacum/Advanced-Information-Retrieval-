@@ -1,0 +1,73 @@
+Post Title: What's the going price for having someone set up my own personal server?
+Author: mooncheese95
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ecwxfi/whats_the_going_price_for_having_someone_set_up/
+Number of comments: 9
+Created UTC: 2024-07-26 19:38:56
+
+Post Content:
+I don't really know a lot about technology so sorry if this question seems obvious. 
+
+I like to write dark erotic fiction and am planning to self publish my stories next year on my own (eventual) website. I understand that a website needs to have a server host to operate. Unfortunately, it seems like all the servers I've researched have a policy against sexually explicit content. That's why I just decided to pay someone to make my own server. 
+
+How much is the going rate for such a service? And where can I find people that can do this? 
+
+Top 7 comments:
+Comment 1:
+  Author: sexpusa
+  Comment: You can do it for free with GitHub pages linked to a domain through cloudflare. Domain is $10. Or I can do that for 1,000,000,000 yen
+  Score: 21
+  Created UTC: 2024-07-26 19:54:57
+
+Comment 2:
+  Author: BMalan1
+  Comment: Are you wanting an e-commerce website to sell the stories you make or more of a blog where you post the stories?
+  Score: 2
+  Created UTC: 2024-07-26 19:59:00
+
+Comment 3:
+  Author: HTTP_404_NotFound
+  Comment: Free to do yourself. 
+
+Lots of free wordpress options. It's easy to get started with.
+
+Or, can hire a local consultant, which is going to run 50-200$ /hr.
+
+Or, can use upwork to hire someone from India, for 20$
+  Score: 4
+  Created UTC: 2024-07-26 22:46:41
+
+Comment 4:
+  Author: After-Vacation-2146
+  Comment: Neither of these are self hosted so that may be a factor. 
+
+GitHub pages is an easy way to host stuff for cheap but you’d need to be a bit technical to get the site to look right with html and css. You’d just need a domain name which runs about $10/yr. 
+
+Another option would be to have a hosted Wordpress site and point your domain name at it. The domain name once again is about $10/yr and you can find pricing online about hosted Wordpress. I’d avoid hosting Wordpress on your home network or even hosting it yourself as it’s a highly targeted platform that needs regular security updates. Having a vendor do those updates for you is an easy way to go. I think this should be under $100/yr if not cheaper.
+
+https://wordpress.com/pricing/
+  Score: 2
+  Created UTC: 2024-07-26 20:21:29
+
+Comment 5:
+  Author: sskg
+  Comment: SSD Nodes isn't the most amazing VPS provider, but it allows adult content. If you want a cheaper shared hosting option, TMD Hosting has decent options and also allows adult content.
+
+If you just want like, a WordPress website, just get an account with either, purchase the service of your choice. They both give you the option of preset WordPress installs from the get go.
+  Score: 1
+  Created UTC: 2024-07-26 22:22:57
+
+Comment 6:
+  Author: mrkesu
+  Comment: 😶
+  Score: 1
+  Created UTC: 2024-07-26 22:31:03
+
+Comment 7:
+  Author: Skylarked07
+  Comment: If you don't want to host it on your own hardware &amp; network, there's nothing stopping you from going with Ghost CMS and their in-house hosting options for your type of content.
+
+If you're looking for free options, you can always deploy it on Github Pages or Vercel...
+  Score: 1
+  Created UTC: 2024-07-26 20:00:14
+

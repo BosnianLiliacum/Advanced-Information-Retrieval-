@@ -1,0 +1,66 @@
+Post Title: Self Photo Hosting on a VPS: immichi or Lychee ?
+Author: hhanzo1
+Score: 26
+URL: https://www.reddit.com/r/selfhosted/comments/1e4l4za/self_photo_hosting_on_a_vps_immichi_or_lychee/
+Number of comments: 32
+Created UTC: 2024-07-16 10:21:56
+
+Post Content:
+Currently I thinking Lychee simply as it's been around for longer and is less complex.
+
+* [immich](https://github.com/immich-app/immich)
+* [lychee](https://github.com/LycheeOrg/Lychee)
+
+Looking at Github Stars, immich is about 10x more than Lychee.
+
+More importantly which app is more secure?
+
+Update: corrected typo. Thanks u/[Particular-School798](https://www.reddit.com/user/Particular-School798/)!
+
+Top 7 comments:
+Comment 1:
+  Author: joeldroid
+  Comment: Highly recommend Immich, its a better clone of Google Photos without the spying
+  Score: 30
+  Created UTC: 2024-07-16 13:31:51
+
+Comment 2:
+  Author: jkirkcaldy
+  Comment: They’re different apps for different purposes. 
+
+If you want a google photos type replacement, or to backup/auto upload from your phone, Immich is the one to go for. But it ideally wants a gpu for all the machine learning stuff. 
+
+Lychee as far as I can remember is for managing albums. Like you have to do everything manually.
+  Score: 28
+  Created UTC: 2024-07-16 10:55:52
+
+Comment 3:
+  Author: FaptainCrunch7
+  Comment: If you're looking for less complex then look at Photoview. Simply point to your existing folder and you're all set.
+  Score: 4
+  Created UTC: 2024-07-16 16:05:27
+
+Comment 4:
+  Author: cyt0kinetic
+  Comment: I found Lychee outdated, messy to get going, and extremely underwhelming. Immich by contrast was super easy to set up, has a great and customizable auto upload process. Better management. PhotoPrism is another good one but it's import options aren't as 😊 of, automated backup needs and external app.
+  Score: 2
+  Created UTC: 2024-07-16 20:11:22
+
+Comment 5:
+  Author: insdog
+  Comment: Immich without a doubt
+  Score: 1
+  Created UTC: 2024-07-16 23:32:49
+
+Comment 6:
+  Author: 12_nick_12
+  Comment: Nextcloud with memories
+  Score: 0
+  Created UTC: 2024-07-16 14:41:42
+
+Comment 7:
+  Author: timeslip1974
+  Comment: 2nd nextcloud with Memories, dead easy to setup and great featureset
+  Score: 0
+  Created UTC: 2024-07-16 15:05:06
+

@@ -1,0 +1,37 @@
+Post Title: WEBSITE STOCKING MONITOR
+Author: Orm1server
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7dt1q/website_stocking_monitor/
+Number of comments: 4
+Created UTC: 2024-07-19 20:37:51
+
+Post Content:
+Good afternoon all,
+
+Does anyone have a good docker compose and a guide to setting up a tool to monitor stock status for things (focus on Unifi) to be alerted when an item is back in stock?
+
+
+I've tried to follow a lot of guides online and haven't been successful.
+
+Many thanks,
+Steve
+
+Top 2 comments:
+Comment 1:
+  Author: nothingveryobvious
+  Comment: [ChangeDetection](https://changedetection.io/) maybe?
+  Score: 4
+  Created UTC: 2024-07-19 22:16:39
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: [Techno Tim recently did a video on this](https://youtu.be/o_iG4Wunh98?si=m44y4HMhwXabD8Fr)
+
+The software is change detection 
+
+
+Hope that helps
+  Score: 3
+  Created UTC: 2024-07-19 21:42:19
+
+Note: This post has only 2 comments at the time of scraping.

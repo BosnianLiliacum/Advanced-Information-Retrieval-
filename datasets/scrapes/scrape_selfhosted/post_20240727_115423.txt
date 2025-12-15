@@ -1,0 +1,23 @@
+Post Title: Cisco 880
+Author: DigitalFire880
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eaq2w7/cisco_880/
+Number of comments: 1
+Created UTC: 2024-07-24 02:17:49
+
+Post Content:
+Hello, this is a very stupid question but I have a Cisco 880 router/IPS laying around. 
+
+https://www.cisco.com/c/en/us/products/routers/880-integrated-services-routers-isr/index.html
+
+Would it be possible to connect my main router to the Cisco router and have a server behind the Cisco 880? Is it viable to protect a server against anything considering its age?
+
+
+Top 1 comments:
+Comment 1:
+  Author: Stryker1-1
+  Comment: Only has 10/100 ports
+  Score: 1
+  Created UTC: 2024-07-24 04:31:21
+
+Note: This post has only 1 comments at the time of scraping.

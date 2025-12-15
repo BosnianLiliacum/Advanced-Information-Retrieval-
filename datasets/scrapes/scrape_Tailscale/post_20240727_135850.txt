@@ -1,0 +1,53 @@
+Post Title: Safe?
+Author: sieekuu
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1ebs0ep/safe/
+Number of comments: 10
+Created UTC: 2024-07-25 10:59:41
+
+Post Content:
+Is tailscale safe? What do you think?
+
+Top 7 comments:
+Comment 1:
+  Author: OkSir1011
+  Comment: yes. it is non-toxic
+  Score: 10
+  Created UTC: 2024-07-25 11:22:13
+
+Comment 2:
+  Author: cookies_are_awesome
+  Comment: Just don't run with Tailscale in your hands and you'll be alright
+  Score: 6
+  Created UTC: 2024-07-25 13:00:26
+
+Comment 3:
+  Author: garbles0808
+  Comment: it kidnapped my dog and threatened my family
+  Score: 5
+  Created UTC: 2024-07-25 15:59:43
+
+Comment 4:
+  Author: ScribeOfGoD
+  Comment: For what? Remoting into your devices as advertised? Sure
+  Score: 3
+  Created UTC: 2024-07-25 11:07:32
+
+Comment 5:
+  Author: mega_ste
+  Comment: I'm using it and my computer hasn't exploded yet.
+  Score: 3
+  Created UTC: 2024-07-25 11:20:00
+
+Comment 6:
+  Author: ClintE1956
+  Comment: Wash your hands first. As another commenter mentioned, use protection.
+  Score: 3
+  Created UTC: 2024-07-25 11:51:18
+
+Comment 7:
+  Author: kvg121
+  Comment: Just use protection bro all the best
+  Score: 2
+  Created UTC: 2024-07-25 11:45:13
+

@@ -1,0 +1,41 @@
+Post Title: Domain —&gt; Home
+Author: phospholipid77
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e841ng/domain_home/
+Number of comments: 8
+Created UTC: 2024-07-20 19:52:32
+
+Post Content:
+I'm struggling with a DDNS issue, and I'm hoping y'all can help me out. I've done this a million times before, but it was years ago and today, for some reason, I'm at a loss.
+
+1. I own MyExample.com over at Mochahost. 
+2. I took out a FreeMyIP.com account. I used to use DuckDNS but I wanted to swtich it up a little. So I have Birthday.FreeMyIP.com. 
+3. I created a CNAME record for a subdomain in the Zones section of Mochahost that points WebApp.MyExample.com to Birthday.FreeMyIP.com. 
+4. I have a WebApp on my home server running on http://1.2.3.4:8080 and https://1.2.3.4:8443
+5. In DD-WRT, I set up the DDNS tab using the FreeMyIP.com config settings with my token. It's updating fine. 
+6. I have an instance of Nginx Proxy Manager running on Docker and it's active at 1.2.3.4 at ports 80, 443, and 81. 
+7. In DD-WRT, I'm am forwarding :80 to 1.2.3.4:80 which is my NPM, right? 
+8. In NPM, I have an entry with WebApp.MyExample.com pointing to 1.2.3.4:8080
+
+When I go to WebApp.MyEaxmple.com it brings up the login screen for my DD-WRT which strikes me as bonkers. 
+
+When I go to Birthday.FreeMyIP.com:8443 (just out of curiosity) it gives me nothing. That \*used\* to take me to WebApp, but not any more. 
+
+What have I done? Something is right, if WebApp.MyEaxmple.com it brings up the login screen for my DD-WRT. But something is also horribly wrong. 
+
+Top 2 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: The first thing you need to do is figure out how to disable remote web interface on your router. That shouldn't be enabled and is a huge security risk.
+  Score: 2
+  Created UTC: 2024-07-21 01:00:55
+
+Comment 2:
+  Author: lesigh
+  Comment: Disable wifi on your phone and browse myapp.mydomain.com 
+
+Does it work?
+  Score: 2
+  Created UTC: 2024-07-21 02:19:07
+
+Note: This post has only 2 comments at the time of scraping.

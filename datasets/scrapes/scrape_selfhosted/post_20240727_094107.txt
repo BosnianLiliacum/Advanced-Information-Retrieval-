@@ -1,0 +1,26 @@
+Post Title: Need advice on what service to host for showing pictures and videos on my family members' phone from my NAS
+Author: NatSpaghettiAgency
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8jgyo/need_advice_on_what_service_to_host_for_showing/
+Number of comments: 2
+Created UTC: 2024-07-21 10:40:58
+
+Post Content:
+I have a NAS with pictures and videos. I would like my family members to access them in a way that is user friendly (until now I made them install a SMB client app, but it's not too easy to use nor very secure from outside the LAN). Bonus would be facial recognition. 
+
+So the options are as always Immich, Photoprism and Nextcloud memories, but afaik they all need media to be imported (copied) in their database, and cannot read directly from the NAS' folders. Did I understand correctly? What would you suggest me to do?
+
+Top 2 comments:
+Comment 1:
+  Author: eriklysoe
+  Comment: Immich docker on your nas with external libraries (where your media is on nas) and cloudflare. Works very well. No need to import media into Immich database.
+  Score: 7
+  Created UTC: 2024-07-21 12:18:47
+
+Comment 2:
+  Author: jozzie52
+  Comment: Immich, it just needs access to media, so it could be mounted from nas
+  Score: 5
+  Created UTC: 2024-07-21 11:08:08
+
+Note: This post has only 2 comments at the time of scraping.

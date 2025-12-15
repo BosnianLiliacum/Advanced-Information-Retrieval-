@@ -1,0 +1,68 @@
+Post Title: Invoice Ninja - Update and Backup - Script
+Author: rsysreddit
+Score: 15
+URL: https://www.reddit.com/r/selfhosted/comments/1e9ahsm/invoice_ninja_update_and_backup_script/
+Number of comments: 2
+Created UTC: 2024-07-22 10:02:28
+
+Post Content:
+Hi,
+
+if someone is looking for a script to easily update and back up your self-hosted Invoice Ninja instance, this might be for you. It takes all the bells and whistles from you and helps you to focus on other things.
+
+*Easily update and back up your self-hosted Invoice Ninja instance with a shell script.*
+
+# Invoice Ninja Backup and Update Script
+
+I’ve developed a comprehensive bash script to manage Invoice Ninja backups and updates directly from the command line. This script simplifies the process of updating and backing up your self-hosted Invoice Ninja instance. It automates all the intricate steps, allowing you to focus on more important tasks. The script is crafted from scratch, not just a one-liner. I’ve made an effort to document every aspect of the script to ensure that all questions are answered and to facilitate ease of use.
+
+# Key Features
+
+* **Automated Updates**: Downloads and installs the latest version.
+* **Efficient Backups**: Manages backups with custom settings.
+* **Installations**: Provisioned and clean options.
+* **Maintenance Management**: Handles maintenance mode, cache clearing, and more.
+* **Post-Update Tasks**: Includes data migration, optimization, and integrity checks.
+
+Documentation is provided to guide you through the process and address any potential issues.
+
+[**Backup | Update | Installation - Invoice Ninja - Shell Script**](https://github.com/DrDBanner/inmanage)
+
+Have a great week! 🍒🍒🍒
+
+Update: New Features Arrived!
+
+# Installation Provisioning
+
+During setup, the `.inmanage/.env.example` file is created, mirroring the standard `.env` file of Invoice Ninja. By pre-populating it with `APP_URL` and relevant `DB_` data, and renaming it to `.env.provision`, it becomes a trigger for automated [provisioning.Next](http://provisioning.Next) time you run the script, it performs the following tasks in one batch:
+
+* Creates the database and database user
+* Downloads and installs the tar file
+* Publishes the `.env.provision` template to `.env` for production use
+* Generates the application key
+* Migrates the database
+* Creates an admin user
+* Reminds you to set up cron jobs
+* Prompts you to create an initial backup
+
+**Basically, you save a huge amount of time.**
+
+https://preview.redd.it/psr5qeb8bfed1.png?width=1882&amp;format=png&amp;auto=webp&amp;s=5e0c8805037055f8125c9a8440dbf0ef09c61826
+
+# clean_install
+
+* Downloads and installs the latest version of Invoice Ninja from Github.
+* Target is the $INSTALLATION\_DIRECTORY which must be set during installation in `.env.inmanage`
+* If the target folder already exists, it gets renamed and you start from scratch.
+* Creates a clean .env file
+* Generates the key into the .env file
+* Generates the cronjob string for you (must be installed manually)
+
+Top 1 comments:
+Comment 1:
+  Author: BobcatAnnual5713
+  Comment: This script sounds fantastic for streamlining Invoice Ninja maintenance! If youre ever in need of creating quick how-to videos or comprehensive visual documentation for similar tasks, I highly recommend checking out Guidde. It makes generating and editing these resources a breeze.
+  Score: 1
+  Created UTC: 2024-07-23 13:16:16
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,44 @@
+Post Title: 10 years' worth of user survey data on WordPress hosting (doc)
+Author: ionutn7
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eb4e0s/10_years_worth_of_user_survey_data_on_wordpress/
+Number of comments: 1
+Created UTC: 2024-07-24 15:31:39
+
+Post Content:
+Hi there, WordPress people! I just wanted to show you a ~~quick~~ doc that’s been in the works for about 10 years now.
+
+Okay, we didn’t spend a whole decade making the doc itself, but the data in it did take 10 years to collect. It’s all based on 8 separate surveys we ran on WPShout(.com) from 2014 to 2024.
+
+[~https://docs.google.com/document/d/11pbi1Jpftdx6BSBkC1z6iM1FL\_yZY5yBmk1Bk14E4z8/edit?usp=sharing~](https://docs.google.com/document/d/11pbi1Jpftdx6BSBkC1z6iM1FL_yZY5yBmk1Bk14E4z8/edit?usp=sharing)
+
+The surveys are all about WordPress hosting and who the top companies are – according to real users.
+
+The way these surveys work is that every 1-2 years we repeat the survey to get the freshest feedback and see where the hosting market is going for WordPress. The questions are (nearly) the same every year – we ask users about who they host with, what they think of this host and how likely they are to recommend it.
+
+The doc I’m sharing is a 120+ page roundup of data, covering things like:
+
+* who the most popular web host is over the years
+* which host gets the highest rating – and did this change 2014 to now
+* popular web hosts from country to country
+* whether hosting users care for performance or not
+* what the average hosting bill is for users
+* how many sites people host on average, and more
+
+
+
+In the doc, we’re also linking to raw data files in case you want to download those and put them through some pivot tables yourself (shoutout to Excel gurus(!)).
+
+Oh, and heads up – we’re not selling anything here. No affiliate links or sneaky stuff, promise. It’s just pure data, charts, and tables, plus some conclusions from each survey – up to your interpretation.
+
+  
+
+
+Top 1 comments:
+Comment 1:
+  Author: slpkenney86
+  Comment: Once upon a time I was offered a job at WP-Engine at the time they claimed they were the best and most popular. If they were the best and most popular why did they offer me a job to work in downtown Austin, TX at $27k and except me to live near the office. The closest place I could even find was an hour and a half away. Glad to see they aren’t fully represented in this document.
+  Score: 0
+  Created UTC: 2024-07-24 18:00:03
+
+Note: This post has only 1 comments at the time of scraping.

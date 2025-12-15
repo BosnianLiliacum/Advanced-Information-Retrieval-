@@ -1,0 +1,53 @@
+Post Title: I don't know what I'm doing
+Author: poop_donut
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4x54f/i_dont_know_what_im_doing/
+Number of comments: 5
+Created UTC: 2024-07-16 19:13:54
+
+Post Content:
+I have an old PC that I wish to turn into a multi purpose server. It is running Ubuntu and it will be used primarily to run docker containers of my personal projects, some game servers and a Plex server. Some of which I'd like to have available to the outside, and some only accessible to me. The caveat here is that I do not have room for the machine in my apartment, so the plan is to set it up in my parents house and remote into it from my network for all configuration/maintenance.
+
+I have heard terms like remote proxies and VPN servers floating around, but I don't know what would be best for my use case. I have no experience with this, so I really don't know how to go forward. It would be greatly appreciated if you could point me in the right direction.
+
+Top 4 comments:
+Comment 1:
+  Author: null-count
+  Comment: Have a look at https://tailscale.com/
+  Score: 7
+  Created UTC: 2024-07-16 19:25:36
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: You can setup a VPN on the host machine.
+
+Two ways of doing this
+
+- use a 3rd party service like [Tailscale](https://tailscale.com/)
+- self host your own solution (like with [wg-easy docker container](https://github.com/wg-easy/wg-easy))
+  - with self hosting your own solution you will need to open ports. Wireguard (the solution that you will use in both situations) is safe to open ports for because it is very secure. It will only reply to requests that have the access key
+  - wg-easy also comes with a management UI for your keys
+  - note: only port forward the wireguard instance not the management UI
+
+Hope that helps
+  Score: 7
+  Created UTC: 2024-07-16 21:17:50
+
+Comment 3:
+  Author: HearthCore
+  Comment: Also look if ProxMox fits your usecase, so you can follow „from fresh Ubuntu“ guides for each service you’re building without it affecting the others
+
+ProxMox is a virtualizer based around Debian.
+It provides a webinterface for you to freely setup multiple virtual machines to safely handle and backup, update and expose individually.
+
+Look up TTECKs helper scripts for ProxMox for a headstart for your projects
+  Score: 2
+  Created UTC: 2024-07-17 05:34:46
+
+Comment 4:
+  Author: insdog
+  Comment: Tailscale
+  Score: 1
+  Created UTC: 2024-07-17 05:25:33
+
+Note: This post has only 4 comments at the time of scraping.

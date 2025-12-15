@@ -1,0 +1,44 @@
+Post Title: [Searching for] Self-hosted image board
+Author: Dante_Avalon
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5h6xx/searching_for_selfhosted_image_board/
+Number of comments: 3
+Created UTC: 2024-07-17 12:40:14
+
+Post Content:
+Greetings, 
+
+I'm looking for semi-private image board with authentication (i.e. without Auth you can't get access to images) &amp; tags, the reason for this is that I wanna to create image board for me and my friends.
+
+Since it will accessible from the Internet (since not all my friends are wishing to install VPN client on every single device) - I'm looking for solution that is being maintained 
+
+I looked into
+
+Danbooru / shimmie2 - but it's indented usage is public access to everything, trying to make it self-public image board is like using wrong tools for purpose (and also it requires a lot of untested changes in code which will lead to problematic update)
+
+szurubooru - forgotten project with multiple security critical vulnerabilities
+
+Pinry - even documentation web site is unavailable 
+
+Chevereto - the closest what I need, but the support for tags is WIP
+
+Thank you for your possible recomendation.
+
+P.S. If nothing else, I guess [nginx reverse-proxy with auth](https://github.com/Siecje/nginx-auth-proxy) should work too?
+
+Top 2 comments:
+Comment 1:
+  Author: drpepper
+  Comment: im looking for a project to start to kind of practice my php. does the image board really look like just images that you upload and are grouped based on tags you enter during upload? does local auth (username and hashed pasword in a db) suffice? are comments needed?
+  Score: 1
+  Created UTC: 2024-07-17 13:34:48
+
+Comment 2:
+  Author: chevereto
+  Comment: &gt;Chevereto - the closest what I need, but the support for tags is WIP
+
+I announced tags for v4.2.0 (very next release). Tag progress is about 80% done.
+  Score: 3
+  Created UTC: 2024-07-17 19:04:40
+
+Note: This post has only 2 comments at the time of scraping.

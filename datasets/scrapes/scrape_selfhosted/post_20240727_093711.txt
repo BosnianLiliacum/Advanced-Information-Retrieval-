@@ -1,0 +1,55 @@
+Post Title: Offline-only note taking application with PDF (or similar) export functionality.
+Author: SuperRobotPimpJesus
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e8pqbw/offlineonly_note_taking_application_with_pdf_or/
+Number of comments: 11
+Created UTC: 2024-07-21 16:06:31
+
+Post Content:
+I'm looking for a note taking application I can host locally (obviously) with no network or cloud functionality - not interested in my notes being stored anywhere other than my network. I would also like to be able to export the notes to another file type for backup.
+
+Solutions I've looked at:
+
+Obsidian - Concerned about the Sync function. Does the free version connect to their servers in any way?
+
+Trilium - Active development ceased. Export to PDF seems to be printing the page to PDF rather than an actual export function?
+
+Outline - I know it has a cloud component, is the self-hosted version completely isolated from this? Other than that, I don't hear this one talked about as much.
+
+Top 4 comments:
+Comment 1:
+  Author: Nuradin-Pridon
+  Comment: Obsidian is written in markdown text files so you can pair that up with rsync (or similar utility) and just sync files between devices. Markdown files can also be converted neatly to any other format with utilities like pandoc.
+  Score: 3
+  Created UTC: 2024-07-21 16:20:46
+
+Comment 2:
+  Author: PaperDoom
+  Comment: You can skip the sync functionality of Obsidian and just use any kind of synced folder like dropbox, nextcloud, syncthing, etc and it works just fine
+
+You could also skip those and use a git server instead.
+  Score: 1
+  Created UTC: 2024-07-21 16:26:57
+
+Comment 3:
+  Author: suicidaleggroll
+  Comment: While trilium can’t export to pdf, it can export to markdown and from there you can convert to pdf.
+
+Active development did cease, but that simply means no major new features will be added in the future.  It’s still getting maintenance updates, and everything I could want is already in there, and most other wiki platforms aren’t actively adding major new features either, so that’s not a dealbreaker for me.  But of course YMMV
+  Score: 1
+  Created UTC: 2024-07-22 01:00:19
+
+Comment 4:
+  Author: xkcd__386
+  Comment: Try this:
+
+-   QOwnNotes on laptop for a GUI
+-   any text editor as an alternate form of access+edit (I use vim + ripgrep + fzf)
+-   sync using syncthing -- no cloud
+-   Markor on Android
+
+I've edited files in any of the locations (currently 2 laptops and 3 phones) and the changes show up in the other places.  PDF output is trivial from the GUI of QOwnNotes, or Markor, or even from the plain textfiles using pandoc.
+  Score: 1
+  Created UTC: 2024-07-23 12:06:24
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,42 @@
+Post Title: Proxmox - Dell T630 - brain-trust please help
+Author: Financial-Ad-6298
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e92j88/proxmox_dell_t630_braintrust_please_help/
+Number of comments: 5
+Created UTC: 2024-07-22 01:46:56
+
+Post Content:
+&lt;SOLVED!&gt; 
+
+After I reseated all components in the machine and cleaned everything up, swapped wires and such, the problem continued, but this time it was calling out "sdf" instead.   I had moved the drives in the array around.  I removed all the drives from the array and BOOM!  Worked faster than you can imagine.  After I got Proxmox installed, I installed TrueNAS and pushed in all the drives.   Got that back online and now I'm dealing with one troubled 12TB drive. 
+
+Now to get the last 3 nights of sleep back somehow....
+
+Thank you everyone!!
+
+
+
+Hello all,
+
+I've got a Dell T630 with dual  Xeon(R) CPU E5-2680 v4, 128GB Ram and firmware should all be up to date.  I've been trying to get my server back online after a long time, so I wanted to do a clean install.
+
+So, I downloaded the newest Proxmox 8-2 and it was great for the first few days.  I had a problem with TrueNas (Set as the only VM) and decided to reboot everything.  When I did, it was taking forever to boot and when i looked at the screen, it was having major SSD issues.  So today I swapped the SSD for a 4TB WD Red HD and tried to do a clean boot.
+
+Now while trying to do a clean install again from a thumb drive, I'm seeing a ton of errors with: "Buffer i/o error, dev sda, sector,..."
+
+I have reformatted the thumb drive and same error.  I have used another 8 GB thumb drive and still the same errors.   I am open to try anything at this point here.  Thank you!
+
+Top 2 comments:
+Comment 1:
+  Author: ButCaptainThatsMYRum
+  Comment: When you say the thumb drive, you mean the installation media, right? You're not running an OS from a USB stick are you?
+  Score: 1
+  Created UTC: 2024-07-22 04:34:48
+
+Comment 2:
+  Author: maniakale
+  Comment: The server can have a bad sd card. Try wiping it or just removing it.  Typical use for those cards is to store installation media on them.
+  Score: 1
+  Created UTC: 2024-07-22 07:30:46
+
+Note: This post has only 2 comments at the time of scraping.

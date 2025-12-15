@@ -1,0 +1,94 @@
+Post Title: How can I best secure a machine running a minecraft server?
+Author: xXBassASSXx
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb9du1/how_can_i_best_secure_a_machine_running_a/
+Number of comments: 46
+Created UTC: 2024-07-24 18:54:05
+
+Post Content:
+Currently running linux on an old PC. This is a clean install of linux that only runs a minecraft server.
+
+I opened port 25565 to allow my friend to play on the server as well as opened port 22 to allow SSH access for both me and him off network.
+
+  
+Like I said this is a completely clean install without any personal information on the system. I am not worried they will steal information but more that they could either install malicious programs or gain access to the rest of my network. What are the biggest risks and how best can I secure this setup.
+
+  
+Currently have a 16digit password made of random letters, numbers, and symbols on the machine and that is pretty much it. 
+
+
+
+I wanted to subnet to attempt to wall it from everything else but this feels like overkill and my router does not support this natively so I would have to look into weird setups or new equipment
+
+Top 7 comments:
+Comment 1:
+  Author: clarkn0va
+  Comment: Rather than open (forward) port 25565 on the firewall, I prefer to just run Tailscale on the minecraft server and then share access to your friend's Tailscale account. Now all traffic is encrypted and authenticated, no firewall modification necessary.
+  Score: 23
+  Created UTC: 2024-07-24 19:00:30
+
+Comment 2:
+  Author: etgohomeok
+  Comment: Ditch the SSH port (entirely, don't just change the port number), make sure you're not running a version of MC with that crazy Java exploit, make sure your whitelist is on, and then chill.
+
+
+Don't make your non-technical friends log into your VPN just to play Minecraft.
+  Score: 8
+  Created UTC: 2024-07-24 22:40:07
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: &gt;I wanted to subnet to attempt to wall it from everything else but this feels like overkill and my router does not support this natively so I would have to look into weird setups or new equipment
+
+Not overkill. It is recommended if you are planning on hosting services to other people without using a VPN (selfhosted or third party)
+
+These services should be in a DMZ to protect your network and devices. 
+
+&gt;I opened port 25565 to allow my friend to play on the server as well as opened port 22 to allow SSH access for both me and him off network
+
+&gt;Currently have a 16digit password made of random letters, numbers, and symbols on the machine and that is pretty much it. 
+
+~~Strongly suggest you close port 22 as soon as possible. There has been many stories on this reddit of people getting hacked/ other people got into there network because they opened up SSH to the Internet. (Regardless of which ports it's on)~~
+
+Edit: strike out based on comment below.
+
+&gt;What are the biggest risks and how best can I secure this setup.
+
+Use wireguard and make everyone use a VPN to connect to your network.
+
+You can use 3rd party VPN like [Tailscale](https://tailscale.com/) or you can self host your own VPN like [wg-easy](https://github.com/wg-easy/wg-easy)
+
+If you can't use wireguard (maybe because that is a concept that others don't understand/ to hard for them to turn on a VPN), then ensure you put your services in a DMZ
+
+Hope that helps
+  Score: 2
+  Created UTC: 2024-07-24 19:07:16
+
+Comment 4:
+  Author: LavaCreeperBOSSB
+  Comment: I used Tailscale and added my friend to a specific Tailscale group that only allows access to that IP and only to port 25565
+  Score: 2
+  Created UTC: 2024-07-24 19:53:47
+
+Comment 5:
+  Author: spillman777
+  Comment: Tailscale / ZeroTier / Proton or other zero-config VPN solutions are probably the easiest option.
+
+Aside from that, for general hardening, you can use a host firewall to lock down things, and if you are concerned about SSH access, you can enable 2FA via the PAM plugin for SSH. Just search for enable 2FA for SSH. That way, in addition to having a username and password, you'll have to have a TOTP.
+
+You can also use Fail2Ban, which can monitor log files and alert you when there is suspicious activity, like failed logins, and you can automate blocks for those suspicious IPs in the system firewall.
+  Score: 2
+  Created UTC: 2024-07-24 20:20:51
+
+Comment 6:
+  Author: WolpertingerRumo
+  Comment: Close off ssh, make it only accessible through tailscale/wireguard. I think this is a must for everyone. Make a whitelist for the server, or if your friend is tech savvy, get him to use tailscale. It has SSO for multiple other services, so set up should be easy. I use tailscale with my GitHub account.
+  Score: 1
+  Created UTC: 2024-07-25 08:07:26
+
+Comment 7:
+  Author: 0ka__
+  Comment: Ssh is already secured with a password, for Minecraft you decide, whitelist is enough to stop griefers, that's it, everything that others suggest is just unnecessary
+  Score: 1
+  Created UTC: 2024-07-26 03:56:10
+

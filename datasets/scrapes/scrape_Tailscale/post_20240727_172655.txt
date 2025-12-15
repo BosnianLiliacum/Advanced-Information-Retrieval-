@@ -1,0 +1,34 @@
+Post Title: How to access services hosted on a machine in my Tailnet
+Author: jfromeo
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1edj1lr/how_to_access_services_hosted_on_a_machine_in_my/
+Number of comments: 2
+Created UTC: 2024-07-27 15:31:50
+
+Post Content:
+Total newbie here.
+
+I just installed Tailscale for android on my phone and deployed a Tailscale container on a RPi running OMV behind CG-Nat via docker compose.
+
+I have both machines online when logged into my Tailnet. I can ping successfully each other.
+
+But I think I have not understood the purpose of Tailscale. I want to connect in my case from my phone to my Rpi, and remotely access all my containers running on it (portainer, homeassistant...).
+
+If I type the magicDNS address or IPv4 with port on a browser once on the same Tailnet I get a 404.
+
+Do I have to do something additional in order to get access to the services running on my RPi connected to my Tailnet?
+
+I thought it was as in Wireguard, in which if I connect to it I can see all machines and services running locally as if I were in LAN.
+
+Thanks in advance.
+
+Top 1 comments:
+Comment 1:
+  Author: antiforensics
+  Comment: If you want to access local resources from where your RPi resides, you need to activate [Subnet-Routing](https://tailscale.com/kb/1019/subnets) for the RPi.
+
+After you start advertising the routes, you'll be able to access those devices. You can also enable the RPi as an [Exit Node](https://tailscale.com/kb/1103/exit-nodes), so you can route all traffic through it like a traditional VPN.
+  Score: 2
+  Created UTC: 2024-07-27 16:26:58
+
+Note: This post has only 1 comments at the time of scraping.

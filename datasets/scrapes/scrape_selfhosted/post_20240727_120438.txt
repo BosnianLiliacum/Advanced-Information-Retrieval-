@@ -1,0 +1,60 @@
+Post Title: I’m looking for a peer to peer service that honestly might not be possible.
+Author: Upper_Case3691
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ea48sh/im_looking_for_a_peer_to_peer_service_that/
+Number of comments: 59
+Created UTC: 2024-07-23 10:15:17
+
+Post Content:
+Hey everyone. So, for the better part of a couple months now, I’ve been at a loss. My friend and I both have gigabit capable networks. Under the right conditions and on a fast enough server, downloading for either of us can be anywhere from 65 megabytes, too in some cases 125 or greater. But I think that’s with multiple parallel connections. As theoretically that wouldn’t make sense. Here’s my problem though. I do love cloud storage, don’t get me wrong. But there’s sometimes when I just want to send a very large file over to my friend without having to upload it to the cloud storage provider first, then making a link, and then sharing it. And then it’s up to the cloud provider to manage speed and throttling. And if the file is of a certain size, it will get really slow at a certain point. I’m looking for a solution that lets me locally host files. I prefer not to port forward, but tailscale and or wire guard will half the connection speed. So it’s either one or the other. And I’m willing to sacrifice port forwarding if it means I get faster speed. No matter what I try though, it doesn’t work. I’ve tried stupid non-multithreaded very slow Apache. I have tried NGINX. I’ve tried Caddy.   I even tried this very small GitHub project called mini serve. It’s supposed to be a tiny lite web server. And it does its job very well. It’s just, all of these Web servers have one thing in common. My friend can only pull files off my network at about 5 MB per second. That’s just crazy to me. I’ve had him use ARIA2C with 16 connections, but that just seems to slow down every connection. I’ve also tried smaller connections. To see where the bottleneck is, and there doesn’t really seem to be one, it just doesn’t make the performance better at all. OK, so I gave up on that idea. How about peer to peer. Torrance. Still slow. Then I tried websites like justbeamit.com, filepizza.com, etc. These are unbelievably horrible. I would never recommend that to anyone. If you’re lucky you’ll get maybe one megabyte per second from one user to the other. I assume because it has to go through their relay server. So, how about sync programs? Same thing. resilio–sync. Sync thing. I tried both of those. They are great for large folders, and it makes things awesome when there’s more than one person actively syncing the folder. I’ve gotten 65 MB per second continuously Off of a folder before. But that was with 26 people syncing it. I do know one thing about peer to peer. The more people, the faster the connection. I just don’t even know if this is possible to achieve what I’m looking for. If anyone has suggestions, please let me know. Thank you so much.
+
+Top 7 comments:
+Comment 1:
+  Author: National_Way_3344
+  Comment: You're welcome to use paragraphs at literally any point.
+
+It's free.
+  Score: 195
+  Created UTC: 2024-07-23 12:42:33
+
+Comment 2:
+  Author: K3CAN
+  Comment: 
+&gt;downloading for either of us can be anywhere from 65 megabytes, too in some cases 125 or greater.
+
+What about *uploads*? Some Internet providers offer asymmetrical bandwidth, meaning that your download bandwidth isn't the same as your upload.
+  Score: 47
+  Created UTC: 2024-07-23 10:52:05
+
+Comment 3:
+  Author: No-Concern-8832
+  Comment: Sanity check: please run speed test on your link. Pay close attention to the upload speed, that is your bottleneck. If your physical upload bandwidth is 40Mbps (5MB/s), then that's the maximum download speed for your friend. More connections will not speed it up. In fact, it will slow down all connections. 16 connections = 40Mbps÷16 = 2.5Mbps (313KB/s).
+  Score: 17
+  Created UTC: 2024-07-23 12:33:57
+
+Comment 4:
+  Author: minigato1
+  Comment: Resilio Sync or SyncThing
+  Score: 12
+  Created UTC: 2024-07-23 10:45:10
+
+Comment 5:
+  Author: WirtsLegs
+  Comment: for one offs magic-wormhole is neat
+  Score: 5
+  Created UTC: 2024-07-23 11:53:37
+
+Comment 6:
+  Author: tyros
+  Comment: What's your upload speed? Anything your friend downloads directly from you will still be limited by your upload speed.
+  Score: 4
+  Created UTC: 2024-07-23 14:28:11
+
+Comment 7:
+  Author: sylsylsylsylsylsyl
+  Comment: Just open ports to his IP address alone (if he has a static IP).
+
+His download speed and your upload speed are equally important here. What is your upload speed to the internet on a speedtest website?
+  Score: 7
+  Created UTC: 2024-07-23 11:06:49
+

@@ -1,0 +1,65 @@
+Post Title: Secure access to an internal server without root
+Author: KarmaCut132
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e9yncg/secure_access_to_an_internal_server_without_root/
+Number of comments: 8
+Created UTC: 2024-07-23 04:12:31
+
+Post Content:
+TL;DR: We have an internal server A that can only be reached from within private  network, but can access the internet (though no sudo privileges). For remote collaboration, we want to setup so that external machines B and C can also access A. 
+
+  
+Ideally, I am trying to setup such that only "B and C" can access A from the outside, without relying on third-party services. I am thinking of IP restrictions and key-based authentications. We do not have any spare server, so I try to make do with what I can on A that requires minimal efforts on B and C's sides.
+
+  
+Methods that I have tried:
+
++ ngrok: easy setup, usable, but slow connection (tested) and expose to third party -&gt; NG
+
++ cloudflared: requires sudo on A -&gt; NG
+
++ tailscale/headscale/wireguard: requires sudo on A -&gt; NG
+
++ [frp](https://github.com/fatedier/frp): I looked up a bit and seemed like reverse proxy would be approriate, so I gave frp a try. However, this requires an intermediate server with public static IP (that we do not have ..).
+
+I am fairly new to self-hosting, any advice is greatly appreciated! 
+
+
+
+ 
+
+Top 4 comments:
+Comment 1:
+  Author: PhilipLGriffiths88
+  Comment: Whole bunch of alternatives to ngrok/cloudflare which may be worth trying - [https://github.com/anderspitman/awesome-tunneling](https://github.com/anderspitman/awesome-tunneling). I will advocate for [zrok.io](https://zrok.io) as I work on its parent project, OpenZiti. zrok is open source and has a free (more generous and capable) SaaS than ngrok. 
+
+If you do not want to be exposed to the company I work for who hosts and manages zrok, you can self-host the open source but that obviously requires you to host it somewhere (Oracle has a good free tier).
+  Score: 3
+  Created UTC: 2024-07-23 08:43:27
+
+Comment 2:
+  Author: jerwong
+  Comment: Are B and C using static IPs? If so then you've hit the nail on the head. Combine that with key based authentication and you're good to go. Make sure you keep A patched and up to date. I do the same and I add Fail2ban to protect against brute force attacks. 
+
+
+Ideally A should be in a separate network from the rest of your internal network. You could also just allow A to initiate the connections to B and C and maybe use SSH reverse tunneling if you don't want to expose A to the internet at all. 
+  Score: 1
+  Created UTC: 2024-07-23 04:31:31
+
+Comment 3:
+  Author: sidusnare
+  Comment: This is worded confusingly, what do you mean by access? What does it mean that server A can connect to the internet but is only locally accessible, can is be accessed outside or not? 
+
+My IPv4 solution is to have a wireguard VPN server locally. My IPv6 solution is to have a script that pushes IPs to the routers for firewall updates.
+
+If you lack administrative privileges, you won't be able to affect real changes, only automate information distribution.
+  Score: 1
+  Created UTC: 2024-07-23 13:24:48
+
+Comment 4:
+  Author: virtual-systems
+  Comment: According to mentioned conditions you can't solve this task without third-party service. In this situation I would preffer VPS with static IP, ssh tunneling A -&gt; VPS, then you will have VPS with sudo and available to use any method to authentificate B and C on this VPS.
+  Score: 1
+  Created UTC: 2024-07-24 10:05:29
+
+Note: This post has only 4 comments at the time of scraping.

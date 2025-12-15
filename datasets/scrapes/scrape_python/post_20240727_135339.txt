@@ -1,0 +1,30 @@
+Post Title: Where to find scapy Documentation?
+Author: xkriscendox
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1ed5j9a/where_to_find_scapy_documentation/
+Number of comments: 11
+Created UTC: 2024-07-27 02:17:39
+
+Post Content:
+Im having trouble finding some scapy documentation for the python module. I see a lot of examples and docs of use in linux terminal, but very little for python scripting. I know theres the built in help() function but its kind of hard to wrap my head around it. Mayby im being lazy there. Any additional resources would be appreciated 🙌
+
+Top 3 comments:
+Comment 1:
+  Author: glaucomasuccs
+  Comment: First result on [Google](https://letmegooglethat.com/?q=scapy+documentation)
+  Score: 6
+  Created UTC: 2024-07-27 02:42:41
+
+Comment 2:
+  Author: KingsmanVince
+  Comment: You are lazy
+  Score: 1
+  Created UTC: 2024-07-27 03:25:46
+
+Comment 3:
+  Author: ChangoMandango
+  Comment: Review the code
+  Score: 0
+  Created UTC: 2024-07-27 04:29:09
+
+Note: This post has only 3 comments at the time of scraping.

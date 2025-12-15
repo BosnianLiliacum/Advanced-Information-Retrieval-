@@ -1,0 +1,24 @@
+Post Title: How to guide to use NVIDIA GPU with Docker
+Author: TiZuid
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1eazjbr/how_to_guide_to_use_nvidia_gpu_with_docker/
+Number of comments: 1
+Created UTC: 2024-07-24 11:53:03
+
+Post Content:
+[How to guide to use NVIDIA GPU with Docker](https://www.reddit.com/r/homelab/comments/1eazid0/how_to_guide_to_use_nvidia_gpu_with_docker/)
+
+With the increase in AI workloads and selfhosting Ollama in my homelab I made a blogpost about adding a NVIDIA GPU to Docker.
+
+Ofcourse this can also be used top accelerate Plex transcoding.
+
+Blogpost can be found here:[https://tizutech.com/nvidia-gpu-with-docker/](https://tizutech.com/nvidia-gpu-with-docker/)
+
+Top 1 comments:
+Comment 1:
+  Author: YesGoodBuddy
+  Comment: Good job
+  Score: 1
+  Created UTC: 2024-07-24 12:14:20
+
+Note: This post has only 1 comments at the time of scraping.

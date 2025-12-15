@@ -1,0 +1,99 @@
+Post Title: 3 levels of dns
+Author: clxrdr
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e6589f/3_levels_of_dns/
+Number of comments: 10
+Created UTC: 2024-07-18 07:07:52
+
+Post Content:
+Hi i'd like to acces to diferente points using the same subdomain but with differente addreses, for example dockage.example.com
+
+- if im home to redirect to 10.0.1.1:5001 for my own personal acces
+- if im using tailscale redirect to 100.10.10.1:5001  (or whatevet) for more private access to friend and family
+- if im using clouudflare dns redirecto to their endopoint and public access
+
+But always using the same url. Is there a way to do this... should i use Adguard home  instead of tailscale, are those two services diferent???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+
+Top 7 comments:
+Comment 1:
+  Author: Slendy_Milky
+  Comment: I think you need Technitium dns with the split horizon app, this will allow you to make the dns respond different ip for the same record based on the ip/subnet of the client.
+  Score: 3
+  Created UTC: 2024-07-18 07:59:29
+
+Comment 2:
+  Author: TigerDatnoid
+  Comment: is it a bind views solution ?  
+[https://kb.isc.org/docs/aa-00851](https://kb.isc.org/docs/aa-00851)
+
+You can a domain resolve to different IPs based on where you are querying from.
+  Score: 2
+  Created UTC: 2024-07-18 12:27:23
+
+Comment 3:
+  Author: iProModzZ
+  Comment: Well you can just have a DNS server like Adguard and do an rewrite rule that your domain points to your service. 
+If you are home you use this DNS.
+If you are connected per VPN you should also use the DNS. 
+If you are on mobile data you automatically go through cloudflare
+  Score: 1
+  Created UTC: 2024-07-18 08:47:48
+
+Comment 4:
+  Author: squirrel_crosswalk
+  Comment: I'm working on getting this working with traefik and local DNS overrides.
+  Score: 1
+  Created UTC: 2024-07-18 10:54:45
+
+Comment 5:
+  Author: Wojojojo90
+  Comment: &gt; redirect to 10.0.1.1:5001
+
+That's just not how DNS works, it doesn't do anything about ports or redirects. Best you can do is make it such that example.domain.tld returns an A record for 10.0.1.1 on your home network, an A record for 100.10.10.1 on Tailscale, and the cloudflare endpoint on the public web. 
+
+I don't do this with the third Tailscale option (I just run raw wireguard through my router and end up in my home network with the same private IP space(s) as when at home), but I do this by running a private DNS server internally that returns the private IPs, and then making public DNS records for my public IP stuff. When away from home and not on VPN, my device will use public DNS records and find the public IP address for my domain. When away from home and on VPN, my DNS is tunneled to my home router, where it's then forwarded to my internal DNS server if it's my personal domain. If I'm home, DNS goes through my home router and is forwarded if it's my domain.
+
+PS: the extra complication of forwarding DNS from my router only when it's my domain is so that if my internal DNS server goes down I only lose my personal domain resolution and not the rest of the internet. You don't necessarily need that complication
+  Score: 1
+  Created UTC: 2024-07-18 16:02:41
+
+Comment 6:
+  Author: transconductor
+  Comment: If you don't want to add the port number after the URL, you'll need a reverse proxy in between.
+
+But why do you want to do this in the first place?
+
+I feel like you're looking for a solution for a suboptimal set of requirements. While it's certainly possible (DNS server at home, DNS via Tailscale and via Cloudflare (idk about this part), I'm pretty sure that it'll cause issues at some point. Are those three IPs the same service? Why not 3 subdomains?
+  Score: 1
+  Created UTC: 2024-07-19 08:54:19
+
+Comment 7:
+  Author: clxrdr
+  Comment: Yeah I know but is easily to have 1 URI (and faster) and if you mess up and ending with the domain instead the subdomain now all your services have those. It's just for comfort in the end.
+  Score: 1
+  Created UTC: 2024-07-19 14:13:04
+

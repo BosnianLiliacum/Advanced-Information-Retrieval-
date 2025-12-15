@@ -1,0 +1,94 @@
+Post Title: is there a good self-hosted photo sharing program? 
+Author: upsidedown_aifamgepj
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9yzff/is_there_a_good_selfhosted_photo_sharing_program/
+Number of comments: 4
+Created UTC: 2024-07-23 04:31:53
+
+Post Content:
+I'm a photographer and I have a butt load of photos on my 2tb drive. I was wondering if there is a light-weight, ui friendly, android and windows/Linux program that let's me share photos between the two (android and computer). something similar like plex, where it's light and looks decent.
+
+requirements:
+-can't use docker because I'm a newbie and I don't wanna learn that stuff right now
+-can't use docker because it's too heavy for normal background use
+-can't use more than 200mb of ram
+-free
+
+Top 4 comments:
+Comment 1:
+  Author: chmp2k
+  Comment: Do you want to sync? Or just share like in Dropbox for instance?
+
+For syncing you can use Syncthing. Works without Dropbox.
+
+For actual sharing you will have to host something on a PC or server while you access the data. This might be hard without Dropbox or something similar and with that 200MB RAM requirements.
+  Score: 4
+  Created UTC: 2024-07-23 05:03:19
+
+Comment 2:
+  Author: jkirkcaldy
+  Comment: You don’t have to use docker to deploy any self hosted apps. All apps hosted in a docker co trainer can run natively on a Linux pc. 
+
+The benefit of running them in containers is that you don’t have to install loads of additional applications or drivers, two programmes may have different needs. Eg the image server may need driver version1 but your web browser needs driver version 2 so you end up having to choose which software to break. 
+
+If you want a quick and dirty way in, install docker desktop on windows. Then search for a docker compose file for your chosen software. Most things are filled out for you and you can be up and running in 30mins. 
+
+But here’s the rub. Plex works so well for “people who don’t want to learn” because it’s not 100% self hosted. When you access Plex it goes through their servers and tells your devices where your server is and whether you have permission to view it etc. so if you install something like Immich, none of that happens. You will need to know about it addresses and port numbers, and if you want to access it outside of your home you’re going to need to learn about domian names, https certificates, port forwarding on your firewall or setting up VPNs and connecting to them from your devices. 
+
+My point of bringing all this up isn’t to dissuade you, as most of it isn’t nearly as complicated as it sounds. It’s to highlight that an attitude of I don’t want to learn. I’m a noob.   Isn’t gonna get you very far in a self hosted adventure.
+  Score: 0
+  Created UTC: 2024-07-23 08:06:48
+
+Comment 3:
+  Author: Oracle_at_Delphi
+  Comment: You really aren't going to be able to do this without docker, Three things though.
+
+1. If you are just setting up this one thing, docker desktop on windows will run perfectly fine, and not be difficult for you to get setup  
+2. Docker is not heavy for background use, that's one of the exact points of docker (containers) as opposed to full virtual machines
+
+Now... 200mb of RAM is quite the ask for something that "looks like Plex" , but the beauty of docker is that you can set RAM limitations on the container to keep it from going above a specified amount. (I would still limit it to at least 512mb of RAM for most applications)
+
+3. Plex can handle photos, just not very well.
+
+The only real and easiest options in this space are:
+
+Photoprism:
+
+-Uses about 250mb RAM, and about 750mb of RAM for cache on my system with 1.5TB of pictures.   
+-Doesn't actually sync the photos to your phone but can be installed as a "native" web app.   
+- Android does have a "Gallery" app that is somewhat decent as well.
+
+Immich:
+
+- This has come a long way in the last year and is closest to what you are looking for, there is an App for Android and iPhone  
+- This will sync between your phone and computer for offline use.
+
+Other issues:
+
+- "You don't wanna learn all that stuff" Unfortunately for you to connect to this self hosted service you are going to have to learn a bit.  
+- You'll need to expose whatever application you set up to the outside world, or to your phone.   
+- The easiest solution in your case will likely be tailscale. You'd install tailscale on the system hosting the application and your phone. You'll need to make sure the app is connected on your phone, and then open the Photoprism webpage or Immich app.  
+- Exposing a port externally (this is not recommended, and insecure in many cases without many other layers of setup. This would also require you to have your home IP on hand which often will change, and mess with setting up a domain name so you can properly secure the connection.  
+  
+\*Plex handles external connections by jumping through Plex's actual servers, but these apps don't have servers to hop through.
+
+- How are your photos organized, the simplest solution is YYYY&gt;MM&gt;DD folders, it's going to get messy in these apps if you don't have a defined structure, they will try to auto sort by the metadata in the pictures, but it can be a mess.
+
+I really hope you can do this for yourself, but you have to at least learn a few things in order to self host, google photos, and icloud photos weren't built in a day, and there's a reason you pay for them. Once you get self hosting, you realize that you are maybe paying a bit too much...until you realize, you don't have 3 backups in three locations.   
+  
+My self hosting hardware was a consequence of my profession, that I decided to utilize to my benefit, but even with it replacing many things I used to pay for: TV, renting movies, Photos (except I still pay for icloud), Password Manager, Notion/OneNote (except oneNote was free). It would take roughly 10-15 years of paying for those services to break even.  
+  
+But you have control over your own data, and that's invaluable.
+
+If you have a computer that can run immich, and have the fortitude to setup all the requirements to get it accessible consistently on your phone, do it. Otherwise...put them in Google Photos and pay $10 a month.
+  Score: 1
+  Created UTC: 2024-07-23 06:53:31
+
+Comment 4:
+  Author: PalowPower
+  Comment: You can use something like PairDrop. Probably the fastest way to transfer large amounts of files between devices. It’s like AirDrop but a LOT faster (at least for me).
+Otherwise you can use immich, it’s like selfhosted google photos. Very easy to setup (see immich docs) and very lightweight if you don’t enable face recognition, transcoding, etc.
+  Score: 0
+  Created UTC: 2024-07-23 05:36:00
+
+Note: This post has only 4 comments at the time of scraping.

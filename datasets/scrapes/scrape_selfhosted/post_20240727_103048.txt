@@ -1,0 +1,24 @@
+Post Title: Recommendations request for Grafana stack SBC
+Author: nicheComicsProject
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5jhjk/recommendations_request_for_grafana_stack_sbc/
+Number of comments: 1
+Created UTC: 2024-07-17 14:24:31
+
+Post Content:
+Hi all
+
+I want to set up a Grafana stack at home for home logging.  Right now I'm running something on a Synology but I'm not really comfortable with this device doing several roles.  So what I want to do now is buy a little SBC to do all my logging.  I'm already running a special SBC for my home router.
+
+I want the SBC to have no moving parts, so that means passive cooling (my router is passive cooled).  I don't know how much CPU is needed for this application but the part I'm not certain on is the data storage.  I saw there was an Orange Pi which apparently had 256 gig as a purchase option.  I think that would be enough storage, as I can set how long it is stored.
+
+But I'd like to hear recommendations here to make sure I'm not missing anything important.
+
+Top 1 comments:
+Comment 1:
+  Author: ericesev
+  Comment: I think you'll be fine. I'm collecting logs from three different sites in Loki. With a month of retention it's only using 475M of disk.
+  Score: 1
+  Created UTC: 2024-07-17 15:22:50
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,52 @@
+Post Title: Veracrypt options
+Author: Squanchy2112
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1eajc4m/veracrypt_options/
+Number of comments: 17
+Created UTC: 2024-07-23 21:15:20
+
+Post Content:
+I currently have a veracrypt container that I use to store some large super critically important client files. The container started out small but over the years has grown and it is becoming harder to manage. I have to mount this over network share currently which also adds some reliability and slowness to the mix. Is there any good self hosted file store that has trusted encryption to the degree of an encrypted container? Another nice thing for veracrypt is I currently have multiple copies of the container stored and backed up in several places to ensure its safety if my main server were to die, typical rule of three. I would need something with an easy or at the least robust backup path. I am considering making a dedicated instance of owncloud or something like that, that can handle serving the files but maintaining tight security on them when not being accessed. I hope this makes sense. Thank you for any suggestions ahead of time.
+
+Top 5 comments:
+Comment 1:
+  Author: xkcd__386
+  Comment: 1.  gocryptfs on linux (or its windows eqvt, cppcryptfs) -- been a happy user of this for years.  Use any sync tool (I use `syncthing`) to sync the underlying encrypted files and it just works.
+
+2.  `rclone crypt` does exactly the same thing, and I sometimes use that also.  Difference is in how the password is stored etc.  You still get a tree of encrypted files you can sync elsewhere and mount and use etc.
+  Score: 2
+  Created UTC: 2024-07-24 07:19:05
+
+Comment 2:
+  Author: blackstar2043
+  Comment: Try [Tomb](https://dyne.org/software/tomb/) as an alternative to veracrypt.
+  Score: 1
+  Created UTC: 2024-07-24 04:39:21
+
+Comment 3:
+  Author: JimmyRecard
+  Comment: Maybe https://cryptomator.org/
+
+Very similar to Veracrypt, you make encrypted vaults. The difference is that the vault is a collection of seemingly identical chunked files, which makes it much more responsive and usable over the network.
+  Score: 1
+  Created UTC: 2024-07-24 06:14:41
+
+Comment 4:
+  Author: mishrashutosh
+  Comment: in linux i would create a systemd path unit to watch the client directory. any time a new file is dropped in the directory, a bash script would automatically run to encrypt the file with my gpg key. i would lock down the directory permissions so the files can't be accidentally deleted by others, and have the script automatically upload new files to different locations (with rclone or rsync) after they are encrypted.
+
+for decryption i would have a similar path unit watch over a different folder. any encrypted files dropped here would be decrypted with your private gpg key.
+
+windows already has gpg, and should have something similar to systemd path.
+
+if you'd rather use a straightforward gui app, cryptomator is great.
+  Score: 1
+  Created UTC: 2024-07-24 08:13:05
+
+Comment 5:
+  Author: ctrl-brk
+  Comment: Check out rclone. Keep a local copy, plus Google Drive, etc etc.
+  Score: 1
+  Created UTC: 2024-07-23 22:39:46
+
+Note: This post has only 5 comments at the time of scraping.

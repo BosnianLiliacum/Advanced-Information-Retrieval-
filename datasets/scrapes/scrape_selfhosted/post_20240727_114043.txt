@@ -1,0 +1,82 @@
+Post Title: Nextcloud alternative experience
+Author: Squanchy2112
+Score: 15
+URL: https://www.reddit.com/r/selfhosted/comments/1ebc5ii/nextcloud_alternative_experience/
+Number of comments: 13
+Created UTC: 2024-07-24 20:46:34
+
+Post Content:
+I am currently setting up and testing numerous Nextcloud competitors currently as I am finding Nextcloud stability to be annoying. I am primarily interesting in file management,sharing,client syncing etc. I do not care about added functionality such as Nextcloud Chat/Talk or whatever they call it. My collaboration needs end at sharing files with people via branded links. This data will be my experience as of July early August 2024, I am a intermediate user I would say, I run Unraid and Truenas  Scale but I would imagine using LXC or VMs to run as your docker host this should ring true OS agnostic. I am also a Windows and Linux user my day to day job requires a lot of Windows exclusive software so I am stuck with Windows at work. u/mods if this post is inappropriate by all means I will find somewhere else to share. Fellow hosters please add to the conversation here to help others who are trying to do their research on this, I searched the self hosted sub and compiled recommended software mentioned in the past year to test here. This could basically become a master thread.
+
+1. Seafile
+   1. Unraid community app
+2. Filerun
+3. Patmos
+4. Nextcloud AIO (I have been running this for a few years)
+   1. Unraid community App
+5. Filestash
+6. Microbin
+   1. Disqualified, not a file sharing app, looks like a nice pastebin though.
+7. ownCloud Infinite Scale (OCIS)
+8. ownCloud legacy PHP base
+   1. Unraid community App
+9. Filecloud
+   1. This is a aggregator of storage types if I am convinced otherwise I will attempt linking this to a local            webdav share or somthing
+10. Cloudreve
+11. Kodbox
+12. Unraid community App
+13. FilecloudCE
+14. Chibisafe
+   1. Installation via docker compose was pretty simple not much to it
+   2. initial impressions are a simple UI but a bit too many icons for unrelated things.
+   3. White labelling looks doable for the most part as you can set the title bar and some images.
+   4. Downsides seem to be a 1gb file upload limit.
+   5. Client support appears to not exist.
+15. Arozos
+16. Cozycloud
+17. Spacedrive
+18. Voltaserve
+
+I will be editing this post to include my experience along the way for other users as I feel like this would be useful.
+
+* Kodbox
+   * Installation experience was super easy as there is a native Unraid container available. Once the container starts you are greeted with a DB selection. Nice thing here is you can choose what DB you would like, in my testing I am going to be using internal DBs when possible and utilizing native caching as well to make these perform what should be their worst. In this case I used standard file caching and SQLite. Next step is a admin account prompt, then you are relocated to a login page which is great.
+   * General Impressions: This has a slightly iOS cartoony interface but overall I am impressed, with general testing it seems surprisingly fast and capable. I was able to open every picture, video, and office doc I threw at it natively with no added containers. This does seem to have an app store with plugins that need to be managed and updated.
+   * Client: Windows client seems to be essentially a PWA/Electron app with no native integration to file explorer. It looks like you can do syncing to a specific directory but I am not sure if this is going to create ghost links or actually copy everything.
+   * Major downsides: this thing seems extremely Chinese, even the client defaults to Chinese. There also appears to be user caps or some paid registration I am not exactly sure as a lot of the pages are in Chinese.
+   * White Labelling: Looks like you can change title bar info, login page graphics and things so I would bet white labelling is on the table for this. Once logged in all of that will go out the window but if you at least want your login page to reflect your org or homelab stuff its there.
+* Nextcloud AIO
+   * Installation not overly complicated with docker compose or straight up docker, I believe there is also a native community app in Unraid. Installation documentation is acceptable but I found the backup path to be impossible to setup where the borgbackup container within AIO just doesnt work at all.
+   * General impressions, Nextcloud is highly recommended for many as the go to. I can understand why as it is a jack of all trades tool, it is not a master of none but its a master of some. File management/transfer/sharing all of that is excellent. There are many plugins for handling photos (immich is better check that out if youve been under a rock). I will say getting office integrations to work is difficult at least for me I could not reliably get office suite stuff to open at all.
+   * Client: People seem to really hate the nextcloud client. I actually find it to be great. I have the ability to browse all the files I have and if I need them they quickly download without having to have them all automatically be stored on my client and host. My understanding is you can use the Owncloud client which others have said is superior. I do not have experience with this client and nextcloud but I will with owncloud. The clients only real weakness I find is updates want to restart your computer or at the least explorer.
+   * Major downsides: Performance is heavily dependent on your hardware, configuration, the lord. Its very subjective. I found standard nextcloud setup even following all the tweak and config guides that performance was too poor to be used. Switching to AIO boosted my performance a lot but no doubt this is still slow. I have most modules disabled and its still not great for speed. HUGE downside for me are updates. AIO will attempt to auto update and most of the time things go fine, but other times some contianers will get hung or you will get weird errors and have to trace down which piece of the puzzle is jacked up. For example the whole reason I even started this was the recent update [29.0.3.4](http://29.0.3.4) occurred and i wake up and its all down. I try starting the containers or using the master container and its just error after error. Its now been a few days and I wake up and all of a sudden its all running and its all good now. Either way im likely moving away to something that doesnt feel so flighty. I am simply replacing google drive things dont need to be so overly complicated.
+   * White labelling is no issue, you can control logos and names Id say the only time you have to deal with the nextcloud branding on a user level is when using the windows client or cell apps.
+* Owncloud PHP Based Legacy
+   * experience seems to be about the same as with Nextcloud being that Nextcloud is a fork I would say nextcloud or owncloud whichever is easiest to get running and stable you will likely have essentially the same experience.
+* Seafile
+   * Installation utilizing unraid community app was fairly painless it just requires a custom docker network which is not a problem. It also requires a DB to bind to I used mariadb.
+   * General impressions are that its on par with my tweaked nextcloud instance in speed and has a slightly uglier interface, it does seem to match nextcloud in its file sharing abilities almost to the point where it feels like the nextcloud file portion just stripped out which is not a bad thing
+   * Downsides I noticed are speed as it doesnt seem any faster than its alternatives and for me I am unable to upload files or access it behind a reverse proxy as  there is some issue with the csrf header or something, I will likely dive into this one more an update here.
+
+TLDR: There is no TLDR read the post or dont lol.
+
+Top 3 comments:
+Comment 1:
+  Author: mickael-kerjean
+  Comment: Seeing Filestash in your list, I would love to get some feedbacks on how to improve especially from people who have tried  but decided not to use it. In effect my objective is to build the world best file manager period. In my bias mind it's already way above everything else out there but that's probably because it does everything I want it to do when other solutions don't, nothing better to actually ask the people in this kind of thread to get unfiltered feedbacks. All in all there's still a long way to go but the objective is getting closer every day with the rewrite beeing almost complete and already available under the canary flag
+  Score: 3
+  Created UTC: 2024-07-25 08:23:18
+
+Comment 2:
+  Author: hxck
+  Comment: Voltaserve is one you could look into.
+  Score: 2
+  Created UTC: 2024-07-24 23:15:04
+
+Comment 3:
+  Author: Zerebos
+  Comment: I've also used just plain Filebrowser and have been playing around with Spacedrive. Might be worth a look
+  Score: 2
+  Created UTC: 2024-07-24 23:42:16
+
+Note: This post has only 3 comments at the time of scraping.

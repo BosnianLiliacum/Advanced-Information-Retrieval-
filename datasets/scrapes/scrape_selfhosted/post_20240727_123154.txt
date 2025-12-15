@@ -1,0 +1,34 @@
+Post Title: A/B experimentation framework
+Author: spsneo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8g2g8/ab_experimentation_framework/
+Number of comments: 3
+Created UTC: 2024-07-21 06:35:45
+
+Post Content:
+What are some of the latest recommended self-hosted open source A/B experimentation framework?
+
+Top 3 comments:
+Comment 1:
+  Author: _CottonEyeHoe_
+  Comment: I have absolutely no idea what this means, but I am curious. Can you explain more what you are looking for?
+  Score: 2
+  Created UTC: 2024-07-21 09:23:21
+
+Comment 2:
+  Author: Capable_Delay4802
+  Comment: Posthog maybe.  I think they have open source.
+  Score: 1
+  Created UTC: 2024-07-21 12:01:45
+
+Comment 3:
+  Author: dickhardpill
+  Comment: Acid/base?
+
+Are you extracting DMT?
+
+\#joerogan
+  Score: 1
+  Created UTC: 2024-07-21 12:05:42
+
+Note: This post has only 3 comments at the time of scraping.

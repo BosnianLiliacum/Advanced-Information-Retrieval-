@@ -1,0 +1,35 @@
+Post Title: Looking for a lightweight way to glue api's togheter
+Author: NekoLuka
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e6e6mm/looking_for_a_lightweight_way_to_glue_apis/
+Number of comments: 2
+Created UTC: 2024-07-18 15:25:08
+
+Post Content:
+Hi everyone,
+
+As the title says, I'm looking for a lightweight system to glue my api's togheter.
+
+I have a caddy and sftpgo instance, and I need to make requests to both for my setup.
+
+Does anyone know of a way to glue them togheter so that I only need to make 1 request to a service that then makes the requests for me?
+
+I also need it to be declarative, since I could do this with something like node-red, but I can't deploy that with ansible...
+
+  
+Thnx in advance.
+
+Top 2 comments:
+Comment 1:
+  Author: HTTP_404_NotFound
+  Comment: You could deploy a simple node.js service which takes the request, and then splits between caddy/sftpgo.
+  Score: 1
+  Created UTC: 2024-07-18 16:39:46
+
+Comment 2:
+  Author: Bagican
+  Comment: I was about to recommend Node-RED and then I finished reading your post... Hmm good question, I'm looking forward to the answers.
+  Score: 1
+  Created UTC: 2024-07-18 21:31:50
+
+Note: This post has only 2 comments at the time of scraping.

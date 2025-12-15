@@ -1,0 +1,63 @@
+Post Title: Can NGINX Proxy Manager be used to host multiple top level domains from one dynamic IP address with SSL?
+Author: mtinman6969
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e52qxs/can_nginx_proxy_manager_be_used_to_host_multiple/
+Number of comments: 11
+Created UTC: 2024-07-16 23:08:13
+
+Post Content:
+Hey All,
+
+I hope I'm asking the right question to get the answer I'm seeking, please let me explain.
+
+I have 2 domains currently registered with namecheap, one is a .net, and the other one is a .io domain. I am currently serving one of them (the .net) from from a freedombox on a SBC on my home LAN through an ADSL modem/router provided by my ISP. This domain is a personal domain for my family to use, and features SSL through letsencrypt, along with a dynamic dns updater, because I do not have a static IP from my ISP - I would have to upgrade to business class service to get a static ip from them, which is cost prohibitive for me.
+
+I want to use the .io domain for my small business website, and retain my .net for my family to use, but serve both from the same dynamic IP address, with SSL through letsencrypt enabled for both sites. Is this possible?
+
+I don't have a working knowledge of NPM, but the majority of documents I have looked at for setting up NPM have just one TLD with multiple hostsnames, example: host1.mydomain.tld, host2.mydomain.tld, etc. - This is NOT what I'm trying to accomplish here.
+
+Currently, for hardware resources on my LAN, I have the following:
+
+1. ADSL modem/router from my ISP to provide connection.
+2. 2 Piholes to provide DNS services and adblocking, could possibly use 1 for NPM?.
+3. A SBC with freedombox, letsencrypt, and dynamic ip updater installed and working for the .net domain services.
+4. A PC to host my business website, and provide other necessary services for the .io domain.
+
+I am open to constructive feedback regarding how to set this up, if it is possible. If it is not, please feel free to suggest possible alternatives that could/would work with what I'm trying to achieve.
+
+Thanks for help in advance, I greatly appreciate it.
+
+Top 4 comments:
+Comment 1:
+  Author: shadoodled
+  Comment: Yes you can. I have 6 in there (7 if I include the duckdns one)
+  Score: 3
+  Created UTC: 2024-07-16 23:18:48
+
+Comment 2:
+  Author: CubeRootofZero
+  Comment: I have multiple domains (managed via Cloudflare DNS). I have OPNsense handing Dynamic DNS so that if my WAN IP changes, Cloudflare DNS gets updated as well. NPM then handles 80/443 traffic and proxies whatever domain traffic comes in to the appropriate local IP on my LAN.
+
+I don't currently separate traffic based on the domain, but that wouldn't be a bad way to go. Have each TLD go to a different VLAN or something, where each has its own firewall rules. You could also set up Cloudflare tunnels too, they're quite easy to implement.
+
+Basically, you can proxy with NPM as many TLDs as you want. I have a few, and they all get proper LE certs just fine.
+  Score: 2
+  Created UTC: 2024-07-16 23:22:37
+
+Comment 3:
+  Author: cyt0kinetic
+  Comment: Yes ... I use two, soon to be 3. Main thing is having a client to update the DDNS records, I use a python script that updates my A and AAAA records. Then you tell your server what domains it should answer to. Request for XYZ.com happens the DNS points at your ip a computer on your network goes oh hey that's me. Have abc.com point to your IP it can even point to the same server server has a different vhost for abc.com and answers that as well. You can even point different subdomains at different IPs.
+  Score: 2
+  Created UTC: 2024-07-17 02:56:34
+
+Comment 4:
+  Author: were-all-geeks
+  Comment: Yes! Just have the A record of those domains point to your NPM external IP.  Whatever ports you are using (sounds like 80/443) need to be forwarded from your ISP modem/router.  You might want to investigate Cloudflare Tunnels so you don't have to expose local 80/443 ports.  
+
+Personally I have a very small vps that only runs NPM in the cloud and I use Tailscale on it and my internal devices.  That way NPM is public facing but has access to internal services via the private Tailscale network (and you can secure NPM by user access).  
+
+Another thing I do is setup a wildcard DNS A or CName record such that \*.NPM (just an example) on my [domainname.com](http://domainname.com) points to the public NPM and then I can setup something like [plex.npm.domainname.com](http://plex.npm.domainname.com) on NPM and not have to do any DNS config.  And becuse NPM is controlling all traffic, someone going to [wtf.npm.domainname.com](http://wtf.npm.domainname.com) will get a nice NPM error page.
+  Score: 2
+  Created UTC: 2024-07-17 13:23:23
+
+Note: This post has only 4 comments at the time of scraping.

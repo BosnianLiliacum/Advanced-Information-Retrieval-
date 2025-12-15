@@ -1,0 +1,38 @@
+Post Title: Seeking local RAG solution for indexing GitHub repos as AI assistant knowledge base
+Author: Kyxstrez
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1eb1eqn/seeking_local_rag_solution_for_indexing_github/
+Number of comments: 1
+Created UTC: 2024-07-24 13:24:44
+
+Post Content:
+I'm looking for a solution similar to Codeium's remote indexing feature, but preferably one that works locally. My goal is to create an AI assistant with up-to-date knowledge of specific frameworks by using Retrieval-Augmented Generation (RAG) on GitHub repositories.Ideal workflow:
+
+1. Pull 4-5 relevant GitHub repos
+2. Convert repos into searchable indexes
+3. Attach these indexes as a knowledge base to an AI assistant
+4. Query the AI assistant normally, leveraging the indexed repo information
+
+Current options I've explored:
+
+* Supermaven: Indexes repos but only uses context for autocompletion, not chat
+* Amazon Q: Recently added similar feature, but limited to the current working repo
+* Codeium remote indexes: Promising but enterprise-only and likely expensive
+
+Key requirements:
+
+* Local solution preferred
+* Ability to index multiple repos (indexing takes \~20 minutes per repo)
+* Use indexed data as context for AI assistant responses
+* Maintain fresh, token-efficient knowledge base
+
+Has anyone implemented a similar setup or know of tools that could help achieve this? I'm open to using existing solutions or guidance on building a custom implementation. Thanks in advance for any suggestions!
+
+Top 1 comments:
+Comment 1:
+  Author: semtex87
+  Comment: [Danswer AI? ](https://www.danswer.ai/)
+  Score: 1
+  Created UTC: 2024-07-24 23:40:01
+
+Note: This post has only 1 comments at the time of scraping.

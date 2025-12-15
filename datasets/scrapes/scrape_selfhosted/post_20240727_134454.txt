@@ -1,0 +1,45 @@
+Post Title: HETZNER Storage Box in a a'la Dropbox usage - help needed!
+Author: NixonMroq
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3y30r/hetzner_storage_box_in_a_ala_dropbox_usage_help/
+Number of comments: 5
+Created UTC: 2024-07-15 15:46:18
+
+Post Content:
+Hey, I am struggling a lot with this pretty stupid problem.
+
+I am trying to use Storage Box as a kind of "self hosted" Dropbox alternative for my Client friend.
+
+Everything have to be run on Mac machine with storage on HETZNER. The idea is to host everything there with full access when having steady internet connection and as a must is to have ability to set a file as a offline file for use when with no internet connection. Must (could be perfect to) have a GUI.
+
+Tried Nextcloud, but Storage Box is not a Nextcloud based
+
+SeaDrive / SeaFile requires a server
+
+SyncThing does not have selective sync option
+
+SynologyDrive... well, requires Synology
+
+Top 2 comments:
+Comment 1:
+  Author: Sysiphos1234
+  Comment: Why don‘t you use hetzners storage share? It‘s a managed nextcloud and does exactly what you want…
+  Score: 3
+  Created UTC: 2024-07-15 15:56:52
+
+Comment 2:
+  Author: shiftyduck86
+  Comment: One off cost but mountain duck really was excellent when I was on Mac. 
+
+Super userfriendly which is importent if you’re helping someone else.
+
+It’s a per user licence so can install on as many devices as long as they’re used by one user. 
+
+https://mountainduck.io/
+
+
+You can use it live on the internet with good connection but also mark folders/files to always be available offline and they sync whenever connection is established.
+  Score: 1
+  Created UTC: 2024-07-15 20:47:48
+
+Note: This post has only 2 comments at the time of scraping.

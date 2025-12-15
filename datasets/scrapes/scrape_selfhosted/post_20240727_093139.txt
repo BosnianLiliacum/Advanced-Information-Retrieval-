@@ -1,0 +1,61 @@
+Post Title: Cant Get NPM Work
+Author: RahulSharma49
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e97ria/cant_get_npm_work/
+Number of comments: 12
+Created UTC: 2024-07-22 06:54:41
+
+Post Content:
+Ok so today i decided to install Nginx Proxy Manager on my home server so that i can access services which are running on different port via simple url like instead of typing [10.0.0.100:8989](http://10.0.0.100:8989) i can use sonarr.local.
+
+So installed NPM using portainer  shifted apache to different port, and now when i add proxy host in NPM, it dont work.
+
+  
+I had added [10.0.0.100:8989](http://10.0.0.100:8989) to sonarr.local, but when i go to sonarr.local, it just ***This site can’t be reached***.
+
+  
+Sonarr and some other services are not installed using portainer.
+
+Top 5 comments:
+Comment 1:
+  Author: Junk327osrs
+  Comment: Logs? Configs? Troubleshooting?
+
+You need to supply more info.
+  Score: 7
+  Created UTC: 2024-07-22 07:34:12
+
+Comment 2:
+  Author: HearthCore
+  Comment: Lets get networking simplified for how your pc looks up where to send his traffic to, since that seems to be the problem - i.e. cant be reached because service.local has not been set on any reachable DNS server and does not route to your NGinx
+
+- Your Browser asks the DNS which direction the .local domain points to, i.E. your Nginx server.  
+- Where is your DNS located?  
+- Are you using DHCP on your Router and can set the DNS globally to your DNS Server?  
+- Then in your DNS Server, like Pi-Hole or AdGuard, or even on your Routers DNS cache if available, you'd set Service.local to the NGINX IPv4.
+
+The Nginx will then be adressed with the domain which it recognizes and engages its port forwarding rules.
+  Score: 3
+  Created UTC: 2024-07-22 15:40:45
+
+Comment 3:
+  Author: Alexilatooor
+  Comment: Use Caddy
+  Score: 1
+  Created UTC: 2024-07-23 00:41:51
+
+Comment 4:
+  Author: psychosynapt1c
+  Comment: Did you forward the port(s) for npm on your router?
+  Score: 1
+  Created UTC: 2024-07-23 04:50:10
+
+Comment 5:
+  Author: snoo-moo
+  Comment: That's not how proxy's work. Proxy are for wan connection side. .local is not a valid public domain you own. Npm only works on external connections coming in, not internal connections you want redirected. 
+
+If you want to use .local then you need to setup this redirect in dns. If your router allows you to add it, then do it there. If not then you'll need to setup DNS somewhere on your network or a new router that will let you.
+  Score: 1
+  Created UTC: 2024-07-22 07:38:42
+
+Note: This post has only 5 comments at the time of scraping.

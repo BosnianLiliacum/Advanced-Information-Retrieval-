@@ -1,0 +1,72 @@
+Post Title: Update to Self-Hosted Webscraper "Scraperr"
+Author: bluesanoo
+Score: 197
+URL: https://www.reddit.com/r/selfhosted/comments/1e8ryua/update_to_selfhosted_webscraper_scraperr/
+Number of comments: 29
+Created UTC: 2024-07-21 17:46:00
+
+Post Content:
+I have added a large amount of requested features to the self-hosted webscraper "Scraperr". In this new update, I have added:
+
+* Multi-page scraping (within same domain of original link)
+* Custom JSON headers (will override headers of request with entered headers in JSON format)
+* Queuing system, with separation of scraper and API, for interacting with previous jobs and logs while scraping jobs run
+* UI updates
+* View container logs inside of the Web UI via the "View Logs" page
+
+The multi page scraping system will take longer, simply because there are more links to scrape, and there will most likely be lots of bugs in this, please fill out an issue if you encounter one.
+
+[https://github.com/jaypyles/Scraperr](https://github.com/jaypyles/Scraperr)
+
+https://preview.redd.it/kwjgw8obfzdd1.png?width=1916&amp;format=png&amp;auto=webp&amp;s=f2d5ddcdfe2457cf45bebc2e1963e4595199368d
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: frogotme
+  Comment: Sounds good but I'm not too sure on the *err/*arr naming for software that doesn't sail the high seas
+  Score: 176
+  Created UTC: 2024-07-21 21:48:21
+
+Comment 2:
+  Author: Elkemper
+  Comment: First time seeing this project. Looking lovely!
+
+But didn't get the sense of potential use-cases, could someone share their experience with this?  
+I just want to understand if I need this for myself or not. 😅
+  Score: 25
+  Created UTC: 2024-07-21 21:06:50
+
+Comment 3:
+  Author: okbruh_panda
+  Comment: I need to get beefed up on Ansible myself
+  Score: 9
+  Created UTC: 2024-07-21 20:33:11
+
+Comment 4:
+  Author: FunnyPocketBook
+  Comment: That is an amazing update! Very nice new features
+  Score: 3
+  Created UTC: 2024-07-21 18:05:02
+
+Comment 5:
+  Author: crysisnotaverted
+  Comment: Very very cool progress, I just saw your update comment!
+  Score: 3
+  Created UTC: 2024-07-21 18:09:33
+
+Comment 6:
+  Author: kyoumei
+  Comment: How does the actual scraping work in this? Does it emulate a browser and if so, can it perform browser steps?
+
+Also how does Scraperr fair in JavaScript websites (built in React for example)?
+  Score: 4
+  Created UTC: 2024-07-21 21:17:14
+
+Comment 7:
+  Author: extractedx
+  Comment: Does it bypass scraping and bot protection likr datadome?
+  Score: 2
+  Created UTC: 2024-07-22 08:34:54
+

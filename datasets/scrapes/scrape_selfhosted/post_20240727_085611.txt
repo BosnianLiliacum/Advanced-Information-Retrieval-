@@ -1,0 +1,53 @@
+Post Title: Remote secure access
+Author: Secret-Tumbleweed-13
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eb4hpj/remote_secure_access/
+Number of comments: 18
+Created UTC: 2024-07-24 15:35:58
+
+Post Content:
+Hey guys, I have a bunch of projects in my mind but I get distracted by the security layer that is needed in order to securely access my devices and services. Since all of you have this problem if you expose something to the world, what are your 2 cents? I really appreciate every single hint ❤️
+
+Top 5 comments:
+Comment 1:
+  Author: opensrcdev
+  Comment: ZeroTier will solve all your problems. Super easy to set up and it's free.
+  Score: 11
+  Created UTC: 2024-07-24 15:55:10
+
+Comment 2:
+  Author: GlitteringCompote553
+  Comment: One of the easiest ways is probably Tailscale.
+  Score: 10
+  Created UTC: 2024-07-24 15:38:15
+
+Comment 3:
+  Author: ProletariatPat
+  Comment: I started out with just a reverse proxy, and any service pointing outward required a key pair or mfa. Now I have a VPS that reverse proxies my external facing servcies, and hosts the less intensive services. This is connected to my home network through a wireguard tunnel. Then I have an internal reverse proxy that handles requests for internal services and chain proxies through the wireguard tunnel to my VPS for external services hosted on site.
+
+All critical infrastructure (hypervisors, reverse proxy, network, password manager, etc) are secured with a Yubikey for mfa. All external services have mfa through my password manager. I segregate my network using several VLANs and setup ACLs to limit communication between devices. I have automatic updates for some of my infrastructure, my network will drop packets if it detects a flood or intrusion, and my hypervisor has protections to block irregular requests, too many requests, as well as invalid login attempts. I do regular backups keeping a rolling 7 days, 4 weeks, and 4 weeks off-site. I also keep a separate air gapped drive that holds 4 week rolling backups.
+
+Also at both the router level and the reverse proxy level I have geo restrictions in place. So far this has been good. I had a few attempted instructions in June but the logs show the packets were dropped and the IP was banned so my system is doing its job.
+  Score: 2
+  Created UTC: 2024-07-24 21:56:20
+
+Comment 4:
+  Author: x1r5
+  Comment: I implemented sort of network segmentation. 
+My internal services are hosted on a server only reachable via (wireguard) VPN. 
+My external services are hosted on a different server in lxc containers behind a Nginx reverse proxy and only port 443 is exposed to the public internet. 
+
+
+I have firewall rules in place to allow ssh, syncthing and other services only from my internal "privileged" network.
+  Score: 1
+  Created UTC: 2024-07-24 17:04:40
+
+Comment 5:
+  Author: 2cats2hats
+  Comment: &gt; expose something to the world
+
+No need to do this. self-hosted can run fine with no port forwards or rando edge appliance exposure.
+  Score: 2
+  Created UTC: 2024-07-24 16:04:52
+
+Note: This post has only 5 comments at the time of scraping.

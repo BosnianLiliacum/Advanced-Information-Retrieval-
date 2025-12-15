@@ -1,0 +1,58 @@
+Post Title: New in Selfhosting Game 
+Author: Select-Peanut549
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8ifpe/new_in_selfhosting_game/
+Number of comments: 3
+Created UTC: 2024-07-21 09:25:56
+
+Post Content:
+Hello everyone, 
+
+
+
+I'm new to the game and just starting out with self-hosting. I want to give up my M365 infrastructure and just run everything at home. I have a small Proxmoxx server with a virtualized OPNsense, a Raspberry PI 4 that I turned into an openmediavault, another Pi and my MacBook that I virtualize with. PiHole has also been rolled out. What did you start with or continue with, somehow I'm lacking ideas right now. Do you have any input for me? Oh yes, I have Vaultwarden Password Manager. 
+
+
+
+Thank you in advance.
+
+
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: InvaderToast348
+  Comment: There are already a lot of posts in this sub with suggestions and demonstrations. Pop a few things into the search bar and you'll find a lot of posts.
+
+Dashboard
+Idea
+Suggest
+Collection
+
+
+There's also a lot of great resources on the internet like awesome-selfhosted
+  Score: 5
+  Created UTC: 2024-07-21 09:53:34
+
+Comment 2:
+  Author: cyt0kinetic
+  Comment: If you're trying to replace the 365 suite I highly recommend Onlyoffice, with your setup likely in conjunction with NextCloud. I really like the only office suite. It has an equivalent to word, excel, PowerPoint. Paired with NextCloud you get virtually all the rest too. OnlyOffice has stand alone desktop and mobile apps that can connect with the NC cloud storage, and there is a browser based editor, OnlyOffice document server that can interface with NC. NextCloud gives essentially a cloud drive that can be accessed in explorer similar to OneDrive. External data sources can also be added to it. In addition to the file share anchored in web dav, there is also cal dav and card dav, giving you calendars and contacts too. NextCloud does have its own notes and photos features but I prefer to use other solutions for those since the NC features are a bit thin. Be aware NC like to push Collabora as it's office integration solution, Collabora doesn't have the stand alone apps to the same degree as OnlyOffice and overall to me isn't as nice. 
+
+For Notes if you are ok with something non FOSS I recommend Obsidian if you were a OneNote fan. While the app isn't open source it does have a wide open community plugin community, even allowing plugins to replace premium Obsidian services, like note sync. There is a community plugin that provides a bunch of different ways to sync your notes, many that are self hosted, like I do mine with dav. Obsidian is a Markdown editor, and it's file structure is sensible. Every note is "whatever the title is.md", and it's in a directory that mirrors the vault structure. Making it easy to access your notes in other applications like NextCloud (though through the markdown editor versus notes) , you can even use Nextcloud's webdav as your remote storage and sync location. I can literally start a sentence on one device and finish it on another. With similar organization and search as One Note, but with an endless sea of plugins. Including ones to import from OneNote. The community plugins are insane, any obscure, weird or niche use case you can imagine there's probably an Obsidian plugin for it.
+
+For photos I use Immich and PhotoPrism. Maybe soon only PhotoPrism again ... That's a whole other drama atm.
+
+It's nice having my own cloud that does all the things this corporate crap did, but with more privacy, flexibility, access and control.
+  Score: 2
+  Created UTC: 2024-07-22 03:47:33
+
+Comment 3:
+  Author: Furki1907
+  Comment: Maybe you will see something what you like here :)
+
+https://imgur.com/a/6slZTYz
+  Score: -1
+  Created UTC: 2024-07-21 09:54:13
+
+Note: This post has only 3 comments at the time of scraping.

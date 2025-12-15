@@ -1,0 +1,36 @@
+Post Title:  I Built SERPChecking.com - a Free SERP Checker Tool
+Author: SanBirth
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1ea4fb2/i_built_serpcheckingcom_a_free_serp_checker_tool/
+Number of comments: 1
+Created UTC: 2024-07-23 10:26:50
+
+Post Content:
+I created SERP Checking to help analyze search engine results pages (SERPs) from over 230 countries. You can gain insights into Rich Results like Featured Snippets and visualize your potential SERP rankings across desktop and mobile devices. It's perfect for SEO professionals and businesses aiming to enhance their search visibility globally.
+
+Key features:
+
+* Comprehensive SERP analysis for any keyword
+* Multilingual support for precise local SEO insights
+* Detailed breakdown of the top 100 search results
+* Visualization of actual search results
+
+Try it out at [serpchecking.com](http://serpchecking.com) and let me know what you think!
+
+And posted on, share me a vote:)
+
+[https://www.producthunt.com/posts/serp-checking](https://www.producthunt.com/posts/serp-checking)
+
+🔍 Happy SERP checking
+
+Top 1 comments:
+Comment 1:
+  Author: rrrmmmrrrmmm
+  Comment: ~~Can you please link to the selfhosting instructions?~~
+
+I found the repo [here](https://github.com/serping/serp-checker?tab=readme-ov-file#serp-checker).
+Do you have a container image somewhere?
+  Score: 2
+  Created UTC: 2024-07-23 11:59:23
+
+Note: This post has only 1 comments at the time of scraping.

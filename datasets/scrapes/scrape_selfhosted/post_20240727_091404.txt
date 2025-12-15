@@ -1,0 +1,51 @@
+Post Title: Introducing Expedite Bridge - A simple encrypted file transfer utility for humans
+Author: t0xic0der
+Score: 35
+URL: https://www.reddit.com/r/selfhosted/comments/1ea5fxd/introducing_expedite_bridge_a_simple_encrypted/
+Number of comments: 3
+Created UTC: 2024-07-23 11:26:52
+
+Post Content:
+# What my project does
+
+**Expedite Bridge** is a GUI client for **Expedite Service**, a simple encrypted file transfer service (that I published [about](https://www.reddit.com/r/selfhosted/comments/1dx7slo/introducing_expedite_a_simple_encrypted_file/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button) around a couple of weeks back). Written in [PySide6](https://pypi.org/project/PySide6/), the builds are provided for GNU/Linux distributions and Microsoft Windows. With this project, I attempt to make it easier for users where a desktop environment is available, compared to the CLI client **Expedite Prompt**.
+
+# Illustrations
+
+[Expedite Bridge - Delivering](https://preview.redd.it/6ansdl5i69ed1.png?width=397&amp;format=png&amp;auto=webp&amp;s=e8fea63ece172c25904ba40802404d75a33ed0cc)
+
+[Expedite Bridge - Collecting](https://preview.redd.it/s8ag71ml69ed1.png?width=397&amp;format=png&amp;auto=webp&amp;s=621e9c58a12cd5ee0f0e623f3aea6259aedec798)
+
+[Expedite Bridge - Info](https://preview.redd.it/9v313ydf69ed1.png?width=502&amp;format=png&amp;auto=webp&amp;s=18edbebca0f71c1ee68d69d311ee7a35bd3c9d3a)
+
+# Animations
+
+[Expedite Bridge - Delivering Progress](https://i.redd.it/oezjxidt69ed1.gif)
+
+[Expedite Bridge - Collecting Progress](https://i.redd.it/8ugc81zt69ed1.gif)
+
+# Attempting
+
+If this looks exciting to you, please consider giving the project a spin using the [publicly available servers](https://github.com/gridhead/expedite?tab=readme-ov-file#offerings) and let me know how I can further improve the project by [filing](https://github.com/gridhead/expedite/issues) issue tickets for software errors or feature requests. [Starring](https://github.com/gridhead/expedite/stargazers) the project repository, [contributing](https://github.com/gridhead/expedite/fork) to the codebase or [sponsoring](https://github.com/sponsors/gridhead) me to keep working on more FOSS projects would forever be greatly appreciated! &lt;3
+
+The binaries are built using [PyInstaller](https://pypi.org/project/pyinstaller/) on the [GitHub Actions CI](https://github.com/actions) whenever a commit is pushed to the repository. Please visit the [GitHub Actions page](https://github.com/gridhead/expedite/actions) of the project repository to download the builds. While the project can run on any platform supporting Python, the automated builds are available only for GNU/Linux distributions and Microsoft Windows of x86-64 architecture.
+
+# Resources
+
+* [Expedite - GitHub](https://github.com/gridhead/expedite)
+* [Expedite - PyPI](https://pypi.org/project/expedite/)
+* [Expedite - Docker Hub](https://hub.docker.com/r/t0xic0der/expedite)
+* [Gridhead - GitHub Sponsors](https://github.com/sponsors/gridhead)
+
+Top 1 comments:
+Comment 1:
+  Author: xenophonf
+  Comment: That looks super cool and also difficult for normies to use.  Who is the audience for this service?  How is this different from (or better than) something like WinSCP or Syncthing?
+
+128-bit AES is kind of meaningless to people who aren't me, and to me, an expert in the field, it sounds weak because it's the minimum any web service should do.  This service works over WebSockets, right?  So I'd make sure the service gets an A+ score from SSL Labs or Probely or testssl.sh, and I'd market _that_.
+
+You get high marks from me for embedding development environment setup guidance.  That will make collaboration much easier.  I urge you to add some friendly quick-start guidance at the very top of your readme to help onboard outsiders and beginners.  Make it easier for them to download and run.  Sysadmins like me will follow.
+  Score: 17
+  Created UTC: 2024-07-23 13:36:33
+
+Note: This post has only 1 comments at the time of scraping.

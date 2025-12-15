@@ -1,0 +1,90 @@
+Post Title: I am unable to connect to the internet using wireguard
+Author: Civil_Illustrator630
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e40mhf/i_am_unable_to_connect_to_the_internet_using/
+Number of comments: 4
+Created UTC: 2024-07-15 17:26:26
+
+Post Content:
+**Client**
+
+PrivateKey = privatekey
+
+Address = [10.8.0.2/24](http://10.8.0.2/24)
+
+DNS=168.63.129.16
+
+\[Peer\]
+
+PublicKey = publickey
+
+AllowedIPs = [0.0.0.0/0,::/0](http://0.0.0.0/0,::/0)
+
+Endpoint = publicip[:51820](http://20.42.97.232:51820)
+
+PersistentKeepalive = 25
+
+**Server**
+
+\[Interface\]
+
+Address = [10.8.0.1/24](http://10.8.0.1/24)
+
+SaveConfig = true
+
+PostUp = ufw route allow in on wg0 out on eth0
+
+PostUp = iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
+
+PostUp = ip6tables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
+
+PreDown = ufw route delete allow in on wg0 out on eth0
+
+PreDown = iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+PreDown = ip6tables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+ListenPort = 51820
+
+PrivateKey = privatekey
+
+**Resolvctl outputs while connected to the server(client)**
+
+Global: somerandomdns
+
+Link 2 (enp0s31f6):
+
+Link 4 (wlan0): [192.168.1.1](http://192.168.1.1) fe80::1
+
+Link 5 (tailscale0):
+
+**Server dns**
+
+Global: [168.63.129.16](http://168.63.129.16)
+
+Link 13 (wg0):
+
+Link 4 (docker0):
+
+Link 2 (eth0): [168.63.129.16](http://168.63.129.16)
+
+Top 3 comments:
+Comment 1:
+  Author: poeticmichael
+  Comment: I suggest you edit this post and remove your real WAN IP address. I meant the endpoint IP.
+  Score: 5
+  Created UTC: 2024-07-15 17:28:23
+
+Comment 2:
+  Author: Eirikr700
+  Comment: Do you host a local DNS such as AdGuardHome or PiHole ?
+  Score: 1
+  Created UTC: 2024-07-15 18:49:10
+
+Comment 3:
+  Author: Dilly-Senpai
+  Comment: Can the clients ping each other?
+  Score: 1
+  Created UTC: 2024-07-15 20:14:31
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,35 @@
+Post Title: Nginx Invalid host header
+Author: chefmiller
+Score: 0
+URL: https://i.redd.it/h0yfy6ketidd1.jpeg
+Number of comments: 6
+Created UTC: 2024-07-19 18:43:22
+
+Post Content:
+(please ignore the proxy_set_header line in there. I added that as my most recent test but was getting the same error without it)
+
+I have an html page I want to access using a domain rather than localhost. I am using duck dns for a free domain to test it out. I can hit my site from localhost but not from the domain. I am very new to all of this and I’m not sure if there is something I’m missing. I opened up port 80 on my laptop for testing. I’m not sure if I need to do anything with my router, but I have a Google nest wifi system. I’m adding a picture of the sites-enabled/default file here. If anyone can give me any advice on what is causing the Invalid Host Header error I would really appreciate it! 
+
+Top 2 comments:
+Comment 1:
+  Author: YankeeLimaVictor
+  Comment: Ok... so first things first... if you want to access it from the internet, you will need to open port 80 on your router, and FORWARD that port to port 80 on the local IP of your laptop. (This is not advised tho... you should at least do https (port 443) and get a certificate)... but, first things fist... Here is the flow:
+
+* Open and forward ports 80 and 443 in your router to your laptop
+* Verify that you can indeed reach your IP and port.  (Find what is your public IP, and go to [yougetsignal.com](http://yougetsignal.com), put your public IP and port 80 and see if it sees that port open.)
+* Once you get this part setup, you will need to tell your nginx what your domain name is. Seems like you have that part already setup.
+* Then, make sure your domain name actually points to your public IP.
+
+Once this is all working, you should be able to reach your site from the internet, using that domain name.  
+Now, look into certbot and letsencrypt. It has automatic modules for nginx that will automatically renew and apply ssl certificates to your site.  
+Then, just make sure to add a redirection for 80-&gt;443, so that anyone trying your site will always get the encrypted version.
+  Score: 4
+  Created UTC: 2024-07-19 19:27:28
+
+Comment 2:
+  Author: rwclark88
+  Comment: Can we have a rule where you have to ask chatGPT the question first before you post it here?
+  Score: -4
+  Created UTC: 2024-07-19 22:52:37
+
+Note: This post has only 2 comments at the time of scraping.

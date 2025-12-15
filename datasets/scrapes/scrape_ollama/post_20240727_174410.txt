@@ -1,0 +1,33 @@
+Post Title: Llama 3.1 Tool Calling
+Author: iamn0
+Score: 5
+URL: https://www.reddit.com/r/ollama/comments/1ec7dzw/llama_31_tool_calling/
+Number of comments: 1
+Created UTC: 2024-07-25 22:04:16
+
+Post Content:
+In the current Ollama version 0.3.0, it states that the new Llama 3 models are available:
+
+&gt;"Llama 3.1: A new state-of-the-art model from Meta available in 8B, 70B, and 405B parameter sizes with support for tool calling."
+
+However, I believe tool calling is not yet functional with ollama. Is this correct?
+
+I'm particularly interested in the new "code interpreter" feature, but I haven't had success with it (I'm using Ollama/OpenWebUI). I attempted to load a CSV file and create a scatter plot (similar to the example Meta demonstrated). When I tried it in OpenWebUI, I receive the following output so I guess it's not functional:
+
+    &lt;|reserved_special_token_5|&gt;
+    import pandas as pd
+    [...]
+    &lt;|reserved_special_token_4|&gt;
+
+Am I doing something incorrectly, or does Ollama not support tool calling yet?
+
+[https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3\_1/#built-in-tooling](https://llama.meta.com/docs/model-cards-and-prompt-formats/llama3_1/#built-in-tooling)
+
+Top 1 comments:
+Comment 1:
+  Author: FesseJerguson
+  Comment: Tool calling just came out check the GitHub for examples
+  Score: 2
+  Created UTC: 2024-07-26 13:45:21
+
+Note: This post has only 1 comments at the time of scraping.

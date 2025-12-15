@@ -1,0 +1,30 @@
+Post Title: Wanted: simple inventory / photo bucket server (like Imgur) with a JavaScript getUserMedia frontend that allows in-website photo taking
+Author: super_salamander
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ygd1/wanted_simple_inventory_photo_bucket_server_like/
+Number of comments: 5
+Created UTC: 2024-07-15 16:01:01
+
+Post Content:
+I'm looking for a solution whereby people can photographically document the state of items in an inventory.
+
+Basically they should be able to grab an item from my warehouse, scan a QR code on it taking them to the app, and then immediately take a photo (using the getUserMedia Javascript API) and upload it to the site. A nice gallery UI would be nice but is not a must - the main thing is to have the image files on my server.
+
+Does anyone know of such an app? I've tried various apps but they don't seem to support the getUserMedia API.
+
+Am willing to take an existing program and alter it - I'm an OK programmer.
+
+Top 2 comments:
+Comment 1:
+  Author: CosineTau
+  Comment: Have you evaluated SnipeIT? [https://snipeitapp.com/](https://snipeitapp.com/)
+  Score: 1
+  Created UTC: 2024-07-15 17:59:24
+
+Comment 2:
+  Author: Apprehensive_Dig3462
+  Comment: Homebox, this is exactly how we use it minus the getusermedia
+  Score: 1
+  Created UTC: 2024-07-16 00:41:00
+
+Note: This post has only 2 comments at the time of scraping.

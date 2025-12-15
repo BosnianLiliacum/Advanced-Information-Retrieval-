@@ -1,0 +1,38 @@
+Post Title: Installing Tailscale in a container or bare metal. 
+Author: VE3VVS
+Score: 10
+URL: https://www.reddit.com/r/Tailscale/comments/1ed2adb/installing_tailscale_in_a_container_or_bare_metal/
+Number of comments: 8
+Created UTC: 2024-07-26 23:34:41
+
+Post Content:
+Okay so here the thing. I have had Tailscale installed on my 3 host for about a year, and I got to thinking when I did this, I set it up bare metal on all three hosts and it works just fine, but so some reason and I can’t remember why, I set up a container running Tailscale also on the three host, now I’m not meaning a sidecar in a particular apps container, just a container running Tailscale and I can’t for the life of me understand or remember why I did that. Is there a reason that would even be a thing?  The only reason this even came to light is I was seeing errors in the host’s journal about Tailscale and dns issue, and after some digging it wasn’t coming from the bare metal Tailscale it as coming from the container one saying it couldn’t reach controlplane.tailscsle.com , so I stopped the Tailscale container, and everything seams to work but it bugs me why it was there, or why I did it. There is still a Tailscale container and bare metal in the other 2 host, running like it has all this time, so my question is, is there a reason that you would want both a bare metal install and a docker install on the same host. Yes I know, there goes the old guy, doesn’t remember what he did, but there must have been a reason, back then I was following guides from Tailscale and from Reddit when I set them up, but well…
+
+Top 4 comments:
+Comment 1:
+  Author: mikewinsdaly
+  Comment: Running TS in a container makes it much easier to automate any future updates.
+  Score: 4
+  Created UTC: 2024-07-26 23:42:52
+
+Comment 2:
+  Author: spitfireonly
+  Comment: Everytime my container went down, tailscale loses its config and tells me to login again
+  Score: 1
+  Created UTC: 2024-07-27 04:47:26
+
+Comment 3:
+  Author: waltamason
+  Comment: I run it directly on an Ubuntu VM to act as an exit node for my travel router and devices.  No real preference as to method, other than a containerized solution adding one more layer of maintenance if I’m only running one app.
+  Score: 2
+  Created UTC: 2024-07-27 03:20:41
+
+Comment 4:
+  Author: MentionSensitive8593
+  Comment: I run both. Tailscale on the bare metal for accessing that host and any subnet routing I want to do. Tailscale in a container alongside any containerised services I want to expose. It does unfortunately end up with a very long list of tailscale containers to update but each service is then exposed on my tailnet with its own FQDN and a letsencrypt certificate.
+
+Edit: I know my answer kinda sounds like I didn't read your question about why you would have done it but I'm trying to explain how I see the two different methods being used
+  Score: 2
+  Created UTC: 2024-07-27 07:43:01
+
+Note: This post has only 4 comments at the time of scraping.

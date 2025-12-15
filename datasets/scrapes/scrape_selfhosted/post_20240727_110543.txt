@@ -1,0 +1,54 @@
+Post Title: Rss Feed and search in Plex
+Author: Robertusit
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3c75q/rss_feed_and_search_in_plex/
+Number of comments: 3
+Created UTC: 2024-07-14 20:39:01
+
+Post Content:
+Hi,
+
+  
+I need if exist, an RSS Feed, that when there are some new articles, search this movie in plex, and if is available, skip o give me an alert o something like that, i didn't have this content.
+
+  
+For example, i have an rss feed for a website, and now is available Matrix 1999 2160p.
+
+In my plex I have Matrix 1999 in 1080p, o i never had it.
+
+So rss feed tell me that I can upgrade o i didn't have this content.
+
+  
+Exist something like that?
+
+Top 3 comments:
+Comment 1:
+  Author: Conscious-Fault-8800
+  Comment: Radarr. But also /r/plex exists
+  Score: 2
+  Created UTC: 2024-07-14 21:21:43
+
+Comment 2:
+  Author: Robertusit
+  Comment: I setup FreshRSS, but I don't understand how to search a movie, when is available for example in hdencode and search it in my plex, to see if I have already in a good quality, or not, then get links and add into jdownloader.
+
+  
+Example:
+
+I have in my Plex Matrix 1999 1080p.mkv   
+In hdencode rssfeed come out today Matrix 1999 2160p.mkv
+
+  
+How can i check in my plex Matrix automatically ? And check that i don't have for example the 2160p?
+
+And how can I get links from rssfeed about hdencode? ( I can't see any links inside FreshRSS to download )
+  Score: 1
+  Created UTC: 2024-07-16 12:22:30
+
+Comment 3:
+  Author: 2000nesman
+  Comment: Freshrss?
+  Score: 0
+  Created UTC: 2024-07-14 23:24:56
+
+Note: This post has only 3 comments at the time of scraping.

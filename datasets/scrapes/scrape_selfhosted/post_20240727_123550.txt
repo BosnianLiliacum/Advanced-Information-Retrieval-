@@ -1,0 +1,64 @@
+Post Title: `httm` now includes Restic support
+Author: small_kimono
+Score: 53
+URL: https://i.redd.it/odxbvhpc3rdd1.png
+Number of comments: 24
+Created UTC: 2024-07-20 22:35:21
+
+Post Content:
+[This post has no text content]
+
+Top 5 comments:
+Comment 1:
+  Author: small_kimono
+  Comment: [httm](https://github.com/kimono-koans/httm) prints the size, date and corresponding locations of available unique versions (deduplicated by modify time and size) of files residing on snapshots, but can also be used *interactively* to select and restore files, even snapshot mounts by file! `httm` might change the way you use snapshots (because ZFS/BTRFS/NILFS2 aren't designed for finding for unique file versions) or the Time Machine concept (because `httm` is very fast!).
+
+Version [0.40.0](https://github.com/kimono-koans/httm/releases/tag/0.40.0) now includes support for [restic](https://restic.net/) blob backup.
+  Score: 12
+  Created UTC: 2024-07-20 22:38:10
+
+Comment 2:
+  Author: nagasgura
+  Comment: Borg support in the pipeline?
+  Score: 5
+  Created UTC: 2024-07-21 00:23:33
+
+Comment 3:
+  Author: xkcd__386
+  Comment: Edited after seeing response from OP: for those who are more inclined to shell-ish tools, or want to search without having to mount the repo first, take a look at https://github.com/xkcd386at/scripts/blob/master/restic-find-fzf.   About 30-40 lines of shell-ish code that also lets you create and browse a catalog of a remote or offline repo (e.g. USB, gdrive on a slow link...).  Fuzzy search on repo or catalog, but if the repo is available you can multi-select and restore also.  That's it.
+
+----
+(original comment)
+
+wow nice; looks fantastic.
+
+I have no use for zfs/btrfs so I never looked at httm.  Meanwhile, https://github.com/xkcd386at/scripts/blob/master/restic-find-fzf has been serving me well -- like in many of my tools it basically leverages the awesome `fzf` tool for the UI.  It also, like you mentioned, dedups by size+time, and you can multi-select using fzf keybinds and hit enter to restore them to the current directory.
+
+It doesn't do anything else (like diffs etc., as in your screenshot) but it's only a few lines of shell and some inline perl.
+
+One thing it *does* do, not sure if httm also does, is this (copy-pasting from the source because I'm lazy):
+
+&gt; As a special case, if STDOUT is not a terminal, it ignores any arguments and
+&gt; filters provided and produces a full "find" output using "/" as the pattern.
+&gt; You can save this in a local file and use it as STDIN at any time later.
+&gt; This lets you look for files in a restic repo that is not actually available
+&gt; (e.g., on a USB device not currently mounted), though in that case hitting
+&gt; enter ("restore") won't do anything useful.
+
+Edit: huh!  Re-reading that now, I realise I should have just used the phrase "offline catalog" instead of this long-winded description :)
+  Score: 2
+  Created UTC: 2024-07-21 14:11:34
+
+Comment 4:
+  Author: TheFuzzball
+  Comment: This looks very interesting — I use ZFS snapshots and Time Machine
+  Score: 2
+  Created UTC: 2024-07-21 15:29:24
+
+Comment 5:
+  Author: rrrmmmrrrmmm
+  Comment: Can I use it as a frontend for already existing restic backups?
+  Score: 1
+  Created UTC: 2024-07-22 16:13:03
+
+Note: This post has only 5 comments at the time of scraping.

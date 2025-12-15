@@ -1,0 +1,63 @@
+Post Title: I made a self-hostable website where you can view an interactive wellness report and download it for free without any premium membership from Fitbit
+Author: WonderfulCloud9935
+Score: 263
+URL: https://www.reddit.com/gallery/1eb2f0m
+Number of comments: 26
+Created UTC: 2024-07-24 14:09:47
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: _TheLoneDeveloper_
+  Comment: This should be higher up, if it worked with Samsung or Huawei would be an instant download for me.
+  Score: 54
+  Created UTC: 2024-07-24 15:28:02
+
+Comment 2:
+  Author: WonderfulCloud9935
+  Comment: # [Self Hosted Webpage](https://fitbit-report.arpan.app/) (Please Use only one year interval)
+
+**( I recommend using a desktop browser )**
+
+The charts are fully interactive. Feel free to play around.
+
+Hit Ctrl + P to print the document as PDF from your browser. 
+
+Here is the [complete code on GitHub](https://github.com/arpanghosh8453/fitbit-web-ui-app) ( free to run on your own machine locally if you want )
+
+There is a [pre-built docker container](https://github.com/arpanghosh8453/fitbit-web-ui-app?tab=readme-ov-file#self-hosting-with-docker) for self hosting enthusiasts.
+  Score: 18
+  Created UTC: 2024-07-24 14:13:08
+
+Comment 3:
+  Author: Donevito96
+  Comment: But why just one year
+  Score: 8
+  Created UTC: 2024-07-24 17:28:37
+
+Comment 4:
+  Author: burajin
+  Comment: Nice! How does it get the data? Is it possible to link it with my wearOS watch?
+  Score: 4
+  Created UTC: 2024-07-24 17:12:09
+
+Comment 5:
+  Author: thefoxman88
+  Comment: Is there any chance this will do Samsung Health?
+  Score: 2
+  Created UTC: 2024-07-24 22:47:46
+
+Comment 6:
+  Author: garbles0808
+  Comment: Woah this is pretty cool!
+  Score: 1
+  Created UTC: 2024-07-24 15:37:08
+
+Comment 7:
+  Author: Losconquistadores
+  Comment: Nice!  Any alternative to Fitbit for getting the data? Any open-source?
+  Score: 1
+  Created UTC: 2024-07-24 17:16:37
+

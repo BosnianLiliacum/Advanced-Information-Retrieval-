@@ -1,0 +1,58 @@
+Post Title: Which hardware to share usb disks on local network?
+Author: Xwang1976
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5f10i/which_hardware_to_share_usb_disks_on_local_network/
+Number of comments: 4
+Created UTC: 2024-07-17 10:41:13
+
+Post Content:
+Hi to all,
+
+I'd like to share on my local network a pair of usb drives to make them available on the local network.
+
+I have the router given to me by my provider that permits only sharing of fat and ntfs drives using samba protocol.
+
+I need to share an ext4 drive and have hard links, so I would like to share with nfs (I'm using linux pcs).
+
+I do not need and I do not want to make the shared hdd available outside my LAN.
+
+At the moment I have an old asus n752VX laptop (https://www.notebookcheck.net/Asus-N752VX-GC131T-Notebook-Review.161407.0.html) that I use as HTPC and which is always in suspended to ram state except when I use it in order to save energy  (I think it's idle consumption is quite high).
+
+So I think it is better not to use it as nfs server.
+
+I have also a not used lenovo miix720 (https://www.notebookcheck.net/Lenovo-IdeaPad-Miix-720-7500U-QHD-Convertible-Laptop-Review.207928.0.html). 
+
+It has not functional touchscreen and cpu fan cooler, but I've already set it up to never go above 1400Mhz in order to avoid the CPU overheat. 
+
+I'm wondering if I could reuse the lenovo miix 720 or if i should buy some specific hardware (a raspberry, a nuc, etc). I think that the lenovo is already quite low consumption so maybe it is better to reuse it instead of spending money for another hardware.
+
+What you suggest me to do? 
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: &gt;It has not functional touchscreen and cpu fan cooler, but I've already set it up to never go above 1400Mhz in order to avoid the CPU overheat. 
+
+Reuse the lenovo miix 720. Any machine can provide NAS functionality. You can even install it with headless Linux so you don't need the screen. 
+
+Since you have the hardware you might as well use it and test it to see if it fits your needs. 
+
+Typically it's not worth the upfront cost of a new machine VS the power consumption of the hardware you have.
+
+But of course you can do the price comparison of electricity cost of the current hardware you have VS the upfront cost of a new machine. See how long it will take to pay off the new machine with the electricity cost compared to just the old machine electricity cost. If it's 1-2 years then it worth it. If it's 5 years, typically not worth it. 
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-17 13:23:04
+
+Comment 2:
+  Author: RodricTheRed
+  Comment: According to your link, the Miix 720 has a 15-watt SOC. As a rough estimate, keeping it always on would cost $15/year on average in the United States (higher in most other places).
+
+If you are sure your only use case is an NFS server, you might consider selling the Miix 720 for parts and using something more power-efficient like a Raspberry Pi Zero ([&lt; 1 watt](https://raspberrypi.stackexchange.com/revisions/5034/11)).
+  Score: 1
+  Created UTC: 2024-07-17 13:45:32
+
+Note: This post has only 2 comments at the time of scraping.

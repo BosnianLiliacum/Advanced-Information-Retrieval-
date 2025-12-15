@@ -1,0 +1,83 @@
+Post Title: Rio: WebApps in pure Python – Technical Description
+Author: Sn3llius
+Score: 76
+URL: https://www.reddit.com/r/Python/comments/1eb2cta/rio_webapps_in_pure_python_technical_description/
+Number of comments: 31
+Created UTC: 2024-07-24 14:07:01
+
+Post Content:
+Hey everyone!
+
+Last month we recieved a lot of encouraging feedback from you and used it to improve our framework.
+
+First up, we've completely rewritten how components are laid out internally.This was a large undertaking and has been in the works for several weeks now - and the results are looking great! We're seeing much faster layout times, especially for larger (1000+ component) apps. This was an entirely internal change, that not only makes Rio faster, but also paves the way for custom components, something we've been wanting to add for a while.
+
+From all the feedback the most common question we've encountered is, **"How does Rio actually work?"**
+
+The following topics have already been detailed in our [wiki](https://github.com/rio-labs/rio/wiki) for the technical description:
+
+* What are components?
+* How does observing attributes work?
+* How does Diffing, and Reconciliation work?
+
+We are working technical descriptions for:
+
+* How does the Client-Server Communication work?
+* How does our Layouting work?
+
+Thanks and we are looking forward to your feedback! :)
+
+[GitHub](https://github.com/rio-labs/rio)
+
+Top 7 comments:
+Comment 1:
+  Author: ExternalUserError
+  Comment: Developer of [PuePy](https://puepy.dev) here. I like what you're doing here and oddly, even after researching stuff like this quite a bit, this is the first time I've seen Rio!
+
+It looks really nice. Perhaps similar to Reflex or Flet? Something I'm not really clear on, even after browsing the readme, is what *exactly* is going on? Is it that the server handles state and then tells a lot of TypeScript on the frontend to redraw in certain aways, similar to Reflex? Does any actual Python run in the browser or is what's running in the browser more or less a very generalized client?
+
+Anyway: super cool!
+  Score: 5
+  Created UTC: 2024-07-25 08:47:57
+
+Comment 2:
+  Author: v_a_n_d_e_l_a_y
+  Comment: My main experience with web dev in Python are streamlit and gradio (and to an extent shiny, but more from my R days). Those are heavily built on reactive programming which makes them good for, e.g. dashboards. But they struggle at being proper applications in other contexts (or require custom companents).
+
+
+How does Rio compare here? Is it similar or is it much closer to a proper web development language?
+  Score: 7
+  Created UTC: 2024-07-24 16:53:26
+
+Comment 3:
+  Author: JaskoGomad
+  Comment: How would you compare this to Reflex?
+  Score: 3
+  Created UTC: 2024-07-25 05:09:04
+
+Comment 4:
+  Author: riklaunim
+  Comment: Does it support routing? Any live examples and not just screenshots? Option to replace the styles? How data access can be done (REST endpoints, something else)?
+  Score: 5
+  Created UTC: 2024-07-24 15:18:12
+
+Comment 5:
+  Author: imbev
+  Comment: Which approach does Rio take? SSR+Hydration? CSR?
+  Score: 2
+  Created UTC: 2024-07-25 01:51:06
+
+Comment 6:
+  Author: wingedrasengan927
+  Comment: Can I create custom components in Javascript/Typescript
+  Score: 2
+  Created UTC: 2024-07-25 08:09:13
+
+Comment 7:
+  Author: Electronic-Duck8738
+  Comment: It's interesting, but I wish there was a way to rip out all the styling (except for what's structurally necessary to maintain structure - basically, rows and columns layouts). I'd rather write my own CSS from scratch and include a stylesheet. 
+
+That is the single-most frustrating thing about React, et al, is that they try to take design away from actual designers and hand it to programmers.
+  Score: 2
+  Created UTC: 2024-07-25 20:37:42
+

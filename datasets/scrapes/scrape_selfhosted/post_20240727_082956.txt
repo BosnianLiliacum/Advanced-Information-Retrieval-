@@ -1,0 +1,96 @@
+Post Title: Dumb question, but /etc/resolv.conf is driving me nuts.
+Author: VE3VVS
+Score: 30
+URL: https://www.reddit.com/r/selfhosted/comments/1ecp1jr/dumb_question_but_etcresolvconf_is_driving_me_nuts/
+Number of comments: 38
+Created UTC: 2024-07-26 14:10:03
+
+Post Content:
+In the old days /etc/resolv.conf used to be cheap, and cheerful, put in your nameserver addresses and your domain search parms and you where done. 
+
+Now with the advent of NetworkManager, systemd-resolved, and now Tailscale, it's a free for all opportunity for all three to fight for who over writes the /etc/resolv.conf file. I'm on Fedora 40, and for some time at least until Tailscale, to which I love dearly, came on scene, I had disabled systemd-resolved and unlinked /etc/resolv.conf from /run/systemd/resolv/resolv.conf and put my nameservers in NetworkManager, (192.168.0.200 192.168.0.183) and be done with it.
+
+With tailscale and magic DNS, the rules ave all changed, and Tailscale overwites /etc/resolv.conf with nameserver [100.100.100.100](http://100.100.100.100) 
+
+So let me explain as concise as I can my setup:  
+main locally hosted DNS at [192.168.0.200](http://192.168.0.200)   
+secondary locally hosted DNS at [192.168.0.183](http://192.168.0.183)   
+and of course magicdns at [100.100.100.100](http://100.100.100.100) which is needed as I refer to some service via talnet name.
+
+I have tried to include to two locally hosted DNS in Tailscale DNS setup refering to them via the tailnet ip but that doesn't seem to provide internet resolution for anything other than the tailnet, (even with the over write local setting switch applied)
+
+I had tried including [100.100.100.100](http://100.100.100.100) in the list of forwarders in the locally hosted DNS but that has equally disappointing results, in as much as the tailnet does not resolv.
+
+The only thing that seems to work as advertised is if, (by what ever means), the /etc/resolv.conf reads:
+
+'''  
+nameserver [192.168.0.200](http://192.168.0.200)  
+nameserver [192.168.0.183](http://192.168.0.183)  
+nameserver [100.100.100.100](http://100.100.100.100)  
+search [example.net](http://example.net) [taildxxxx.ts.net](http://taildxxxx.ts.net)
+
+'''
+
+Now I was reading last night, that Tailscale "play nice" with systemd-resolved.service, so I when about putting it back it play, but of course that wouldn't go a simple as one would have hope in as much that even through I recreated the symlink  `sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf` the symlink keep getting replaced with a regular file /etc/resolv.conf, either by Tailscale or NetworkManager.
+
+Now I feel pretty stupid having to ask all this, as this "should" be all basic networking 101, so please be gentle and don't down vote me too badly but I would really like to know the way everyone else is dealing with this "dogs breakfast"
+
+Top 7 comments:
+Comment 1:
+  Author: jerwong
+  Comment: I got tired of dealing with this and just made the changes I wanted and then ran chattr +i /etc/resolv.conf
+
+
+This makes the file immutable meaning that no one can change the file until someone runs chattr -i to remove the immutable flag. Be careful that this may cause side effects if certain applications refuse to work and throw a temper tantrum over being unable to change resolv.conf. 
+  Score: 27
+  Created UTC: 2024-07-26 15:33:07
+
+Comment 2:
+  Author: steveiliop56
+  Comment: It's very easy to tell tailscale not to overwrite the resolv file, you just need to do `sudo tailscale up --accept-dns=false` and you should be good to go.
+  Score: 16
+  Created UTC: 2024-07-26 17:22:33
+
+Comment 3:
+  Author: VE3VVS
+  Comment: Well after much input, and I thank you all for your share knowledge, this is what I have as a take away that mostly works:
+
+1) I have reaffirmed in my mind that systemd-resolver is as I had previously concluded, useless and bring nothing to the table, and has once again been disabled.  
+2) The /etc/resolv.conf file need to be just that a file, not a symlink, not anything special about it, it's should be just what it always has been, a file the OS gose to for addresses on name servers to look up other names.  
+3) Telling tailscale to keeps it's mittens off the /etc/resolv.conf file is indefinably a bounus, the few processes playing with that file the better  
+4) Letting Network Manager write the /etc/resolv.conf it at the moment acceptable, at least it gets the basics in place and will create the file at boot time should it have decided to to have gone awol.
+
+Now why tailscale keeps writing in the logs that the dns resolver:  forward:  no upstream resolvers set. return SERVFAIL is anybodies guess, maybe because I'm using my own self hosted DNS (Technetium), one bare metal and one docker on two separate host, (for redundancy and for add/malware filtering), but those local DNS seem to be work for resolving names. Maybe I'll figure it out, maybe someone has an idea
+  Score: 3
+  Created UTC: 2024-07-26 21:20:16
+
+Comment 4:
+  Author: Sgt_ZigZag
+  Comment: What I do is disable tailscale magic DNS on that system so tailscale does not touch my resolv.conf file.
+
+Then on that system I know I need to explicitly use tailscale FQDN if I want to access a tailscale machine.
+  Score: 3
+  Created UTC: 2024-07-26 17:00:44
+
+Comment 5:
+  Author: FaBMak
+  Comment: I had a simmilar issue with Wireguard. So, I've installed resolvconf, and put my costumizations in the head or tail files, located at /etc/resolvconf.d.
+  Score: 3
+  Created UTC: 2024-07-26 16:02:55
+
+Comment 6:
+  Author: ElevenNotes
+  Comment: Maybe use an OS that still works like in the olden days like Alpine. No more systemd overwriting your files 😉
+  Score: 6
+  Created UTC: 2024-07-26 15:29:19
+
+Comment 7:
+  Author: transconductor
+  Comment: I got this setup (NetworkManager, systemd-resolved and Tailscale) working by changing the symlink for systemd-resolved to point to `/etc/resolve.conf.head`, and letting dhcpcd (used by NetworkManager) write `/etc/resolv.conf`. Tailscale uses systemd-resolved.
+
+Works like a charm. But I'll concede that it's not an obvious solution.
+
+I'm on arch (btw) so managing `/etc/reolv.conf` my responsibility anyway.
+  Score: 2
+  Created UTC: 2024-07-26 18:04:18
+

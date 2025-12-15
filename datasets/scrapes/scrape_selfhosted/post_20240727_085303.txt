@@ -1,0 +1,94 @@
+Post Title: Suddenly our Self Hosted application became more than just hobby.
+Author: cs_antorkhan
+Score: 1630
+URL: https://www.reddit.com/r/selfhosted/comments/1eb92an/suddenly_our_self_hosted_application_became_more/
+Number of comments: 192
+Created UTC: 2024-07-24 18:41:26
+
+Post Content:
+If you already don't know, Bangladesh was disconnected from the internet for majority of the last week due to government order. It was shut down without any warning. We were put under curfew 24/7, so no leaving home. 
+
+On the second day of curfew, me, with nothing to do, figured the intranet in our country still worked. So I opened my Jellyfin service up and gave access to my immediate family and friends. Then we had people stepping up. One opened a simple chat application. Believe me, I never felt happier reading messages from a bunch of random people on the internet. Once people started communicating it only got better. We had a jitsi meet up and running within a few hours. People opened up their media library. Last couple of days, I almost didn't miss the traditional internet.
+
+I have to thank you guys for all the encouragement. 
+Also I do have a few questions for you guys.
+
+I'm fearing this will not be the last time we will be blocked from the world. What can we do to make things even better next time?
+One major problem was TLS CERTS stopped working. So the communication was in http using IP address 
+
+What are some apps to host if the same situation to arise again?
+
+Sorry for the bad English, not my first language.
+
+
+Top 7 comments:
+Comment 1:
+  Author: fr1t2
+  Comment: I would look into setting up a DNS server that stays in sync with upstream authoritative DNS servers. Something like [unbound](https://nlnetlabs.nl/projects/unbound/about/) would be my go to.
+
+Distribute your DNS server's IP address to anyone that may need it and save it as the fallback DNS on routers and devices. That way when the main service fails, you have an up to date fallback.
+
+External services still won't work of course, but anything hosted within the connected "geo-fenced" network should still connect.
+
+Props for stepping up and trying to make good a bad situation. Good luck!!
+
+Edit: I will add there are some potential pitfalls to hosting this publicly,and some research into correct deployment is crucial to success. Also, it's been years since I studied the topic, there may be better tools or there for this.
+  Score: 454
+  Created UTC: 2024-07-24 19:36:14
+
+Comment 2:
+  Author: aceospos
+  Comment: Interesting take. We (Nigeria) are bracing for possibly nationwide protests starting in August. Been researching disaster management tech and generally how to be helpful tech wise. Now I have to look at my setup and see what I can stand up. It's almost certain the government will take down the Internet so any advice here would be great. Local Mesh networks and how those work would be a start
+  Score: 187
+  Created UTC: 2024-07-24 20:07:54
+
+Comment 3:
+  Author: BloodyIron
+  Comment: Bruh you're doing just fine with your English! Nice! :D
+
+Also, yay what a lovely success story!
+
+Maybe consider expanding the tooling available to be useful for that scenario. A forum suite? nextCloud with Talk for VoIP? (I like it more than Jitsi, you might like it too) plenty of other useful options too, if you want more ideas of things to spin up let me know :)
+
+Bravo! I'm proud of you! This is a seriously awesome service to humanity, and I'm sorry that you fellow humans are having to go through junk like that :( Stay strong! ❤️❤️❤️
+  Score: 108
+  Created UTC: 2024-07-24 20:17:03
+
+Comment 4:
+  Author: scumola
+  Comment: Cached data is what you need if/when Internet goes away or is limited. Distributed services are also great.
+
+Dns but with a long cache (override standard ttls and do like 2 to 7 day ttls).  Irc instead of bandwidth-hungry chat/video.  Email server.  Web forums.  Imagine it's 1995 all over again and you're hosting the major services.  Maybe a caching web proxy (squid?)
+  Score: 45
+  Created UTC: 2024-07-24 21:04:04
+
+Comment 5:
+  Author: sharar_rs
+  Comment: Of all things today, i did not expect to see a fellow Bangali bhai to post on r/selfhosted today. 
+
+Tried to help others by moving exclusively to IPv6, changing DNS. But nothing worked. Had to give instructions they may not have followed properly either. 
+
+It was so frustrating to see all of this happen and not be able to even make decent calls to know about the safety of the people I know.
+
+u/cs_antorkhan is there a community for selfhosting in BD?
+  Score: 30
+  Created UTC: 2024-07-24 23:23:58
+
+Comment 6:
+  Author: runningOverA
+  Comment: I regretted not doing the following things before this Internet shutdown :
+
+1. buying a shortwave radio. At least you need a window to the outside world.
+2. I have a Pi Zero but that worked as tunnel and backup only. Tried to make it host the services but then discovered I haven't even installed the required software for that on it. With Internet down there's no way to do an "apt-get package"  now. Badly felt the need to install DNS bind services and sqlite on it.
+3. research on whether China has any kind of cheap low orbit satellite solution available.
+  Score: 22
+  Created UTC: 2024-07-25 00:01:29
+
+Comment 7:
+  Author: MBILC
+  Comment: LetsEncrypt certs? Everyone should already have key root certs on their systems which should work, so set up certs now to let them populate around and that should cover that.
+
+Doing ANY of this over HTTP leaves everything wide open for snooping and being exploited.
+  Score: 91
+  Created UTC: 2024-07-24 19:07:33
+

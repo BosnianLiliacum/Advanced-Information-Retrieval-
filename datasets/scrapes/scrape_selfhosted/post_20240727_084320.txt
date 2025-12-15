@@ -1,0 +1,61 @@
+Post Title: PBX
+Author: steviefaux
+Score: 23
+URL: https://www.reddit.com/r/selfhosted/comments/1ebtqhl/pbx/
+Number of comments: 27
+Created UTC: 2024-07-25 12:33:25
+
+Post Content:
+Does anyone run their own PBX? It was back in 2008 an engineer at work said he ran his. His wife is from Georgia (Not the American state) and said it was setup in his parents in laws basement. He used to call out to it and from there make all his calls so he said it was free.
+
+Been watching on here a while and not heard anyone mention it before.
+
+Top 7 comments:
+Comment 1:
+  Author: nerdyviking88
+  Comment: Yes. used to be 3cx, now is FreePBX. 
+
+Currently cloud hosted, but used to sit in my basement. 
+
+Used as a family line. I provide extensions to our Grandparents, aunts, uncles, etc. and they login via app or ATAs. They can then call each other for no cost as it's technically 'internal' calling. 
+
+Been running for approx 5 years
+  Score: 25
+  Created UTC: 2024-07-25 13:07:35
+
+Comment 2:
+  Author: aceospos
+  Comment: Run for self use? Yes. Mostly FreePBX. Looked at FusionPBX briefly but couldn't get my head around it
+  Score: 7
+  Created UTC: 2024-07-25 13:35:19
+
+Comment 3:
+  Author: massiveronin
+  Comment: Freepbx is asterisk with a bunch of gui and backend cruft added. User friendly, but bloated. (Asterisk purist here)
+  Score: 6
+  Created UTC: 2024-07-25 17:59:10
+
+Comment 4:
+  Author: Acrobatic_Idea_3358
+  Comment: I also run freepbx at home, used to play with asterisk alot back in the day. Sip extensions for phones around the house, some radio connectivity ala all-star and VHF repeaters.
+  Score: 5
+  Created UTC: 2024-07-25 14:33:09
+
+Comment 5:
+  Author: ShapesTheFuture
+  Comment: Self-hosted for my business for 16 years. Used to be plain jane asterisk until it became unmanageable. Now it's FreePBX on a dell r610 (overkill but it was unused). ClearlyIP for SIP services and E911; 20 Sangoma deskphones at the warehouse, 39 grand stream ATA devices at my grocery stores, and Sangoma desk phone / soft phone for WFH and "managers" cell phones. Cut our old phone bill by over a factor of 10. Plus the ability to freely configure (and hide our cell phone numbers) is such a bonus.
+  Score: 5
+  Created UTC: 2024-07-25 18:03:23
+
+Comment 6:
+  Author: cop3x
+  Comment: freepbx hosted at home for me :-)
+  Score: 3
+  Created UTC: 2024-07-25 14:44:24
+
+Comment 7:
+  Author: Malchii
+  Comment: Definitely used Asterisk and the proper cards at home during 2010s years. I was an Asterisk trainer back then.
+  Score: 3
+  Created UTC: 2024-07-25 14:51:56
+

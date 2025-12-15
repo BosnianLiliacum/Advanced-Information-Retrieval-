@@ -1,0 +1,24 @@
+Post Title: Photo Viewer/App for *very private* photos
+Author: Signal_Inside3436
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8m93r/photo_viewerapp_for_very_private_photos/
+Number of comments: 5
+Created UTC: 2024-07-21 13:24:11
+
+Post Content:
+My spouse and I would like to start taking and sharing some very private photos between ourselves, of us, if you know what I mean. We already utilize Synology photos for our regular family stuff, but I’d like to use a different app for these in order to maintain separation, so they aren’t accidentally exposed when showing someone family photos. Obviously these will be in a separate encrypted share on the Synology NAS. What’s a good self hosted service/app to view them? Photo Prism, something else?  
+
+Top 2 comments:
+Comment 1:
+  Author: hereisjames
+  Comment: Or Stash, which is made for this purpose. You can also include videos.
+  Score: 4
+  Created UTC: 2024-07-21 16:33:17
+
+Comment 2:
+  Author: Carlchen07
+  Comment: You could use immich, i guess...
+  Score: -1
+  Created UTC: 2024-07-21 14:23:45
+
+Note: This post has only 2 comments at the time of scraping.

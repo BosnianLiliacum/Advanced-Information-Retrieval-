@@ -1,0 +1,64 @@
+Post Title: Turning an Editor PC into a Proxmox Cluster for Editing and Streaming VMs.
+Author: Enigma_0001
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9eh2k/turning_an_editor_pc_into_a_proxmox_cluster_for/
+Number of comments: 7
+Created UTC: 2024-07-22 13:35:59
+
+Post Content:
+Hey everyone,
+
+So as the title states, I want to turn my editing pc into a promox cluster to house an editing and/or streaming vm which I can turn on and off at any given time. I currently own a homelab which runs proxmox but is not really equipped to handle anything graphic related but more to handle automation tasks or even host files (TrueNas).
+
+The idea behind this setup is quite straight forward, I want to have a dual pc streaming setup that I can simply turn on and off at any given time. This means capturing video from my main pc to the streaming vm and the same being done with audio.
+
+I am however very hesitant regarding this decision since I am not sure how much this can be a problem for me. Can Proxmox handle such a setup? How will i manage the power costs if I leave another pc running 24/7? Will i get any performance issues when issue such a setup?...
+
+It would really help to know if anyone has attempted such an approach and what your experiences have been  so far with it.
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: &gt;I want to turn my editing pc into a promox cluster to house an editing and/or streaming vm which I can turn on and off at any given time
+
+Note that a cluster involves a group of PCs not a single one. It sounds like you just want proxmox to host many VMs?
+
+&gt;The idea behind this setup is quite straight forward, I want to have a dual pc streaming setup that I can simply turn on and off at any given time. This means capturing video from my main pc to the streaming vm and the same being done with audio.
+
+Can you clarify this a bit more? Maybe give a specific example. 
+
+It sounds like you just want to remote desktop into a PC. Do you have many VMs that you want to have access to? What are the differences between these VMs vs having everything done on your editor PC? I assume the 24/7 hour uptime. 
+
+You mentioned two use cases
+
+- Editing
+- Steaming
+
+Why can't this be done on a single PC, why do you need two VMs for this?  Unless many people need to access this PC?
+
+&gt;How will i manage the power costs if I leave another pc running 24/7?
+
+You can also look into the possibility of moving the parts from your editor PC into your current proxmox PC(or the other way around ) so you don't have two machines running.
+  Score: 1
+  Created UTC: 2024-07-22 14:12:38
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: &gt;  I want to turn my editing pc into a promox cluster
+
+A cluster is a collection of compute devices, not a single compute device.
+
+
+&gt; to house an editing and/or streaming vm which I can turn on and off at any given time
+
+This sounds more like you want to install VMware Workstation (its free) and use a VM on your Windows desktop.
+
+&gt; The idea behind this setup is quite straight forward, I want to have a dual pc streaming setup that I can simply turn on and off at any given time. 
+
+What’s wrong with PCIe capture cards?
+  Score: 0
+  Created UTC: 2024-07-22 13:48:11
+
+Note: This post has only 2 comments at the time of scraping.

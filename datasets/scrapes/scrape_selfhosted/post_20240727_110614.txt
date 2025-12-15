@@ -1,0 +1,34 @@
+Post Title: Proton VPN Port Forward on Gluetun
+Author: TENCHI125
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ab80/proton_vpn_port_forward_on_gluetun/
+Number of comments: 4
+Created UTC: 2024-07-14 19:10:01
+
+Post Content:
+Hi All,
+
+I'm trying to follow Proton VPNs documentation for port forwarding, however I need to run natpmpc but it comes back as not found.
+
+Does gluten need something extra adding to be able to run the command?
+
+Thanks,
+
+Top 2 comments:
+Comment 1:
+  Author: 8braham-linksys
+  Comment: Describe what you're doing, how you're doing it, and what you expect. Nobody knows what the fuck you're talking about here
+  Score: 3
+  Created UTC: 2024-07-14 20:44:31
+
+Comment 2:
+  Author: mistgate
+  Comment: Think this page might help, i remember seeing it before but haven't done this myself before so not going to be much more help i'm afraid. https://github.com/qdm12/gluetun-wiki/blob/main/setup/providers/protonvpn.md
+
+Seems like you need to add
+
+    VPN_PORT_FORWARDING=on
+  Score: 1
+  Created UTC: 2024-07-14 20:44:29
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,51 @@
+Post Title: Which is better, jdupes vs. BTRFS Duperemove?
+Author: my7h1cal
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5u647/which_is_better_jdupes_vs_btrfs_duperemove/
+Number of comments: 9
+Created UTC: 2024-07-17 21:39:01
+
+Post Content:
+I've been reviewing the TRaSH Guides, and I've been planning on setting up a more efficient media server using my existing media. A big thing I am interested in is replacing duplicate files on the same volume with hardlinks, for example replacing media in the Jellyfin folder with hardlinks. I'd be saving a good amount of storage space if I replaced a duplicate video file with a hardlink instead of having two identical video files in different places on the volume.
+
+  
+A while back when I first started working on more homelab projects, I decided to use BTRFS for my drives. With this, they support the file-based deduplication tool "Duperemove". At the same time, the TRaSH Guides recommend using jdupes for replacing existing files with hardlinks.
+
+  
+In this scenario, would it be better to stick with BTRFS's Duperemove, or to use jdupes as mentioned in the TRaSH Guides to deduplicate media?
+
+Top 5 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: I would address the issue of duplicate files first. Why do you have a movie multiple times in different folders?
+  Score: 1
+  Created UTC: 2024-07-17 21:56:09
+
+Comment 2:
+  Author: ThePixelHunter
+  Comment: Don't they both perform the same block-level deduplication? jdupes has an option for this.
+  Score: 1
+  Created UTC: 2024-07-18 01:51:22
+
+Comment 3:
+  Author: 10leej
+  Comment: Duperemove is actually not a btrfs feature. it's a 3rd parrty tool for XFS and btrfs  
+
+The gentoo wiki has a pretty good top level explainer on it
+https://wiki.gentoo.org/wiki/Duperemove
+  Score: 1
+  Created UTC: 2024-07-18 02:21:43
+
+Comment 4:
+  Author: sevengali
+  Comment: I used jdupes for this and it worked great.
+  Score: 1
+  Created UTC: 2024-07-18 12:37:38
+
+Comment 5:
+  Author: JodyBruchon
+  Comment: I wrote jdupes. I'm biased. It's not perfect. It occasionally has hiccups but mostly works as expected. If you have issues please email me. Use whatever you are more comfortable with.
+  Score: 1
+  Created UTC: 2024-07-19 22:11:38
+
+Note: This post has only 5 comments at the time of scraping.

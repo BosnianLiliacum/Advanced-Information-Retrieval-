@@ -1,0 +1,59 @@
+Post Title: What if you choose one server location to serve the world?
+Author: wowwowwwwwow
+Score: 22
+URL: https://www.reddit.com/r/selfhosted/comments/1e73whe/what_if_you_choose_one_server_location_to_serve/
+Number of comments: 19
+Created UTC: 2024-07-19 13:35:39
+
+Post Content:
+Where would be a good server location for my small but global toy project? Of course, it would be nice to have a multi-region infrastructure, but I can't afford it haha.
+
+If you could only choose one region, where would it be? Umm... I'm in LA, so I think at least three places in Europe, the US, and East Asia shouldn't have too much latency, but I'd like some feedback on my decision.
+
+Top 7 comments:
+Comment 1:
+  Author: pesaventofilippo
+  Comment: Hypothetically: US east (if most probable visitors are from US), otherwise Frankfurt.
+
+In reality: wherever you want, and put it behind Cloudflare for free
+  Score: 55
+  Created UTC: 2024-07-19 13:50:34
+
+Comment 2:
+  Author: DavWanna
+  Comment: Closest to wherever most of the users will be to, rest will just have to deal with it. But I'd except for a small hobby project latency wouldn't really matter all that much at the end of the day anyway. And I guess there's something like Cloudflare that does just-about-free CDN that you could throw on it if you really want to.
+  Score: 19
+  Created UTC: 2024-07-19 13:57:16
+
+Comment 3:
+  Author: Dapper-Inspector-675
+  Comment: I'd also say Frankfurt or US East as thhose are some quite central points and a lot (really a lot) of Datacenters are in Germany.
+  Score: 12
+  Created UTC: 2024-07-19 14:05:35
+
+Comment 4:
+  Author: Skotticus
+  Comment: If there's any concern about the host country requiring you to hand over data about your users, you may want to consider a country that isn't in the 5/9/14 Eyes alliances. That makes Switzerland one of the better options.
+
+If you don't care about that, just consider what regions most of your users will be in and try to place it as central to those locations as possible.
+  Score: 11
+  Created UTC: 2024-07-19 14:04:40
+
+Comment 5:
+  Author: marwood0
+  Comment: My little group of gamers does somewhere in Spain, Frankfurt, Pennsylvania, Chicago, and Denver.  Mostly Frankfurt.
+  Score: 2
+  Created UTC: 2024-07-20 08:30:51
+
+Comment 6:
+  Author: sYsguard
+  Comment: if the infractructure reliabiity is also matter then you are good to go with a single dedicated server by Hetzner located in Frankfurt, Germany + behind of Cloudflare pops
+  Score: 2
+  Created UTC: 2024-07-21 08:48:47
+
+Comment 7:
+  Author: YesGoodBuddy
+  Comment: Sweden
+  Score: 2
+  Created UTC: 2024-07-19 13:43:55
+

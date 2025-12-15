@@ -1,0 +1,84 @@
+Post Title: My backup concept - opinions?
+Author: heeelga
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e6a74c/my_backup_concept_opinions/
+Number of comments: 9
+Created UTC: 2024-07-18 12:28:45
+
+Post Content:
+Hi,
+
+backup concepts should be reviewed from time to time. I would like to get your opinion.
+
+Should I alter my schedule or add more backup destinations? Is there something to improve? What is your backup plan?
+
+My setup is as follows:
+
+* 2 Proxmox nodes (not running in a cluster atm as HA gave me more problems than profit) with about 20 lxc containers and 2 vms.
+* Main Synology Nas (DS1821+) with 7 HDDs right now, configured as RAID5. Planning to add another HDD as this odd number is triggering me haha. 2 x NVMes running a RAID0 configuration as second storage (just for Proxmox and Lancache)
+* Backup NAS DS2415+ with 10HDDs installed, configured as RAID5 also. I'm planning to install it as offsite-backup at my fathers basement and connect via Tailscale VPN. I've done this before but my internet connection was poor and backups took forever. Luckily this has changed dramatically.
+
+Backup configuration:
+
+* Photos from my iPhone are backed up via Immich immediately (Immich lxc on Proxmox, storage on main NAS) -&gt; storage is backed up once a week to my backup NAS via Synology HyperBackup ("intelligent retention policy", 256 verisons max.). NAS is turned off afterwards.
+* My Synology Home folder is backed up once a week via HyperBackup to my second NAS. I also do monthly backups of this folder to an external HDD (encrypted) and place it at my office for a month.
+* lxc containers and vms are backed up daily via PBS to my main NAS. Retention policy is set to keep 1 daily, 2 weekly and 1 monthly -&gt; this is also backed up again to my backup NAS once a week via HyperBackup.
+* My advanced collection of Linux ISOs is not backed up... can't afford another storage with 50+TB right now.
+* I just backup the user directory of my Windows PC via Genie Timeline to my main NAS as there are mainly only games installed.
+* Macbook Pro is irregularly backed up via Thunderbolt 4 SSD (TimeMachine). Not much valuable data here also.
+
+PS: If you're using Bitwarden, do you have any backups or is backing up the lxc container enough?
+
+Top 6 comments:
+Comment 1:
+  Author: Unlucky-Message8866
+  Comment: hell is my backup plan
+  Score: 3
+  Created UTC: 2024-07-18 12:41:57
+
+Comment 2:
+  Author: Neldonado
+  Comment: I pay for small cloud storage for backups of irreplaceable things. Things like documents scanned via paperless ngx, pictures, config files, and anything else I couldn’t recreate with time. This is in addition to my backup server. In the event my house burned down I will at least know my essentials are safe.
+  Score: 3
+  Created UTC: 2024-07-18 14:59:46
+
+Comment 3:
+  Author: Whiplashorus
+  Comment: Luck is my backup plan
+  Score: 2
+  Created UTC: 2024-07-18 14:46:53
+
+Comment 4:
+  Author: Qachmarre
+  Comment: I had an issue last month - power loss made me a little scarred about half of my self-hosted infrastructure.  
+My whole windows selfhosted stack is build with Active Directory and one domain controller only.  
+I tough everything is good until I tried to login to Veeam to check if my backups are good and noticed that I can't login to. I immaditely tried to login to DC and check what happened- but no luck here as well. Fast login to proxmox- console connection to DC and found out that server failed to boot. Big breath and I started to finding out how much am f\*\*\*\*\*. Because I am storing my VM files on TrueNAS with help of ZFS via ISCSI one of volumes failed and whole VM was just dead.
+
+There is whole story how did I managed to restore DC but at the end of the day I did it and I am really proud of lession I learnt.  
+Guys, remember to have backup always- power backup, storage backup, backup of backup etc.  
+It's a good lesson but afterwards I'd like to skip it  :D
+  Score: 2
+  Created UTC: 2024-07-18 17:48:39
+
+Comment 5:
+  Author: purepersistence
+  Comment: &gt;If you're using Bitwarden...is backing up the lxc container enough?
+
+What do you mean by "lxc container" for bitwarden? I run the [Standard Deployment](https://bitwarden.com/help/install-on-premise-linux/) in docker on linux. That automatically sets up rotating nightly backups of the sql database. It's up to you to [backup your docker volumes etc](https://bitwarden.com/help/backup-on-premise/).
+
+But bitwarden being zero knowledge, I'm not comfortable having all my passwords stored in bitwarden so I can't get to them if I can't run bitwarden for some reason. So about once a month I run a batch file that uses the bitwarden CLI to store an unencrypted backup in a json file. The json goes to my veracrypt volume that I backup on and offsite and onto a usb stick.
+  Score: 1
+  Created UTC: 2024-07-19 11:19:44
+
+Comment 6:
+  Author: 2TAP2B
+  Comment: Looks very redundant. Additional offsite storage would be good. 
+Quick overview about my backup plan:
+1 pve with several lxc and VM
+All the lxc and vms backuped on a offsite PBS without the fileserver. 
+Fileserver  / storage backup via borgmatic to offsite hetzner storage box
+That's all, works quite nice for me.
+  Score: 1
+  Created UTC: 2024-07-20 20:16:59
+
+Note: This post has only 6 comments at the time of scraping.

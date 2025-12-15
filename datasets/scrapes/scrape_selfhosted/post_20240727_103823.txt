@@ -1,0 +1,42 @@
+Post Title: Proxmox Hard Drive Management
+Author: TheSpartan18k
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e4xhvr/proxmox_hard_drive_management/
+Number of comments: 6
+Created UTC: 2024-07-16 19:28:24
+
+Post Content:
+Hello!
+
+I am setting up a new Proxmox server. I have 24 bays with 6 currently in use with the idea being future expansion. I plan to use RAIDZ2 with each set of 6 drives movign forward. I have a main VM that runs my docker host and media applications, torrent downloader, etc. I have a few questions about best practices to manage this on Proxmox:
+
+1. Should I use TrueNAS? I've run this in the past. I like the GUI and the automatic management of scrubs, SMART testing, and notifications, etc. If I use TrueNAS, should I "loop" it back into Proxmox with NFS and pass through a large virtual disk to my Ubuntu VM or just connect it to a TrueNAS NFS share?
+
+2. Should I use Cockpit? Would it be better to run direct or in an LXC? I haven't been able to find a decent guide on setting this up. If I use Cockpit, can I manage scrubs, SMART values, and notifications? Or would I need to set that up with the command line?
+
+3. Just use the Proxmox GUI/cli to setup the drives. This seems like the most complicated option and I'd prefer to avoid various scripts for things like SMART and scrub information. I'm fairly comfortable with the command line, but prefer a GUI if one is available. If this is the case, should I pass through a large virtual disk to the Ubuntu VM or setup an NFS share?
+
+I've read all of the Proxmox documentation, but from a usability and management standpoint, I haven't been able to find a set of best practices for managing this on a singular server. CraftComputing did a tutorial on virtualization and virtualized TrueNAS, but I think that was just an example rather than a best practice.
+
+Top 3 comments:
+Comment 1:
+  Author: CubeRootofZero
+  Comment: I replaced a TrueNAS VM with a TurnKey Linux LXC and prefer it. Cockpit or Webmin both work for handling SMB/NFS shares, and then I just passed through a mount from Proxmox where I set up the ZFS pool.
+
+It's a much simpler setup IMO vs TrueNAS. Way better on resources, especially RAM. And I don't have to fiddle with an HBA.
+  Score: 3
+  Created UTC: 2024-07-16 22:59:00
+
+Comment 2:
+  Author: land8844
+  Comment: I know it may not be standard practice, but I utilize a standalone OpenMediaVault-based NAS with various NFS and SMB shares, with my Proxmox cluster completely separate from it. The NAS is only a NAS, while the Proxmox cluster handles the applications and storage mapped to the NAS.
+  Score: 2
+  Created UTC: 2024-07-16 22:12:52
+
+Comment 3:
+  Author: RaceFPV
+  Comment: Why not use proxmox’s built in ceph implementation?
+  Score: 2
+  Created UTC: 2024-07-17 05:35:22
+
+Note: This post has only 3 comments at the time of scraping.

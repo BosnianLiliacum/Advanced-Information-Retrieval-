@@ -1,0 +1,32 @@
+Post Title: Question regarding NAS setup
+Author: gappuji
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb7v4s/question_regarding_nas_setup/
+Number of comments: 2
+Created UTC: 2024-07-24 17:52:47
+
+Post Content:
+I am here again one another question. As I mentioned in  my previous post, I do not have IT or computer background. I just like to play with computers as a hobby. So please be easy on me and excuse my ignorance.
+
+I had an old HP ENVY 750QE DT with i7-6700 processor and 48 GB RAM, that I turned into a Proxmox machine to try out some stuff. I right now have a few different VM on it and am running few dockers as well. 
+
+Now I want to set up a NAS on it. I do have 3 x 8TB NAS HDDs and I am planning to use RAID5. I was thinking of using TrueNAS core as a VM. Again I have read all this and I am not even sure how and what I will do to set it up as I just read tutorials, watch videos and try out things. SO, my first question is that am I on right track. Secondly, I read somewhere that its recommended to use ECC RAM for NAS, however, my PC is a home PC with i7-6700 so I use non-ECC RAM. Will this be a major concern? 
+
+Thanks in adavnce!
+
+Top 1 comments:
+Comment 1:
+  Author: aetherspoon
+  Comment: First off, just a heads-up, using TrueNAS as a VM isn't something I'd ever recommend to a beginner.
+
+Secondly, ZFS (which is the filesystem TrueNAS uses) requires direct access to the hard drive controllers in order to function properly. That means that you can't just pass in some virtual hard drive files or even the drives themselves to the VM, but the object *connecting the hard drives to your computer* need to be passed in. Most people doing this end up buying what is called an HBA, or Hardware Bus Adapter. Basically a controller for SAS and/or SATA drives. They pass that controller (which might need to be modified) to the VM, and plug all of their hard drives into it.
+
+So, if you do go with this approach, you have some additional purchases ahead of you.
+
+Alternately, if you're okay with using some tutorials to set it up and typing some things into the console for Proxmox, you can just set it up directly on Proxmox. Proxmox can also use ZFS (the same file system TrueNAS uses), and that would remove an entire layer of complexity... but at the cost of not having a pretty user interface to do things with.
+
+As for the ECC vs. non-ECC, it isn't *required*, just recommended. As long as you have backups of your data and periodically check to make sure things aren't broken, you're fine.
+  Score: 5
+  Created UTC: 2024-07-24 17:59:09
+
+Note: This post has only 1 comments at the time of scraping.

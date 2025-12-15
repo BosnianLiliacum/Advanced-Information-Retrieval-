@@ -1,0 +1,33 @@
+Post Title: Routing containers through Gluetun
+Author: Merijeek2
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eaq33x/routing_containers_through_gluetun/
+Number of comments: 5
+Created UTC: 2024-07-24 02:18:07
+
+Post Content:
+So, I'm running UnRAID. I've got Gleutun running just fine. My containers seem to be reaching the Internet just fine. 
+
+However, the containers don't seem to be reaching each other all that well, though they're using the same Gluetun container for their network interface. 
+
+  
+I've currently got them setup as ports, where a given port (say, 50001) is getting sent to container on, say, 8787, as that's what I had running before when using an OpenVPN container. 
+
+Can anyone suggest what step I'm missing here? 
+
+Top 2 comments:
+Comment 1:
+  Author: Crypt1de
+  Comment: Are all ports for each service under the gluetun container? Also each of my containers that are connected through gluetun have (network\_mode: "service:gluetun") in the compose file. 
+
+I do not use UnRAID so im just saying what makes it work in my case. Usually it is better imo to have all services running under the same docker compose file along with gluetun which makes it wayy easier to manage each service.
+  Score: 1
+  Created UTC: 2024-07-24 02:44:52
+
+Comment 2:
+  Author: feickoo
+  Comment: You need to set port forwarding on gluetun too for each specific container.
+  Score: 1
+  Created UTC: 2024-07-24 07:11:16
+
+Note: This post has only 2 comments at the time of scraping.

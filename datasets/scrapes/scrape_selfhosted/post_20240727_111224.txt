@@ -1,0 +1,20 @@
+Post Title: Machine Learning DNS filter
+Author: Frequent_Rate9918
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed5qnq/machine_learning_dns_filter/
+Number of comments: 1
+Created UTC: 2024-07-27 02:28:54
+
+Post Content:
+I would love to have a DNS filter that uses ML to improve the content filter. I heard that DNSFilter uses ML to classify content so that it’s not reliant on a static block list to be updated. I want to be able to host this DNS on my hardware. With the rapid emergence of local AI and the such, is there anything like this available yet? 
+
+Top 1 comments:
+Comment 1:
+  Author: zfa
+  Comment: Not sure of what the 'intelligence' is but AdGuard Home has the option of enabling real-time protection via calls to their API for exactly this kind of thing (namely, blocking of emergent threats they detect without relying on the domains bleeding through to your own blocklists and being updated locally).
+
+Think the feature was renamed to 'security web service' or something a little while back.
+  Score: 2
+  Created UTC: 2024-07-27 03:04:51
+
+Note: This post has only 1 comments at the time of scraping.

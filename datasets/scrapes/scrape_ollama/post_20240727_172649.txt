@@ -1,0 +1,28 @@
+Post Title: Did anyone notice a huge token generation speed increase after loading up 0.2.8 or above?
+Author: Porespellar
+Score: 2
+URL: https://www.reddit.com/r/ollama/comments/1edhe1n/did_anyone_notice_a_huge_token_generation_speed/
+Number of comments: 2
+Created UTC: 2024-07-27 14:16:43
+
+Post Content:
+Was there some major improvement in Llama.cpp that was added to Ollama 0.2.8 or higher? I ask because my token generation speed seems like it got a massive boost after about version 0.2.8. 
+
+I know Llamafile had some big breakthrough recently that improved their tokens speed for CPU inference and their stuff usually makes it into Llama.cpp which eventually makes it into Ollama. Maybe that’s what happened? 
+
+Anyone else see a performance increase? For reference I’m running an AMD Threadripper 7960x with 64GB RAM and a RTX 4090.
+
+Top 2 comments:
+Comment 1:
+  Author: Practical-Rate9734
+  Comment: yeah, noticed the speed bump too after updating, pretty cool!
+  Score: 2
+  Created UTC: 2024-07-27 14:19:54
+
+Comment 2:
+  Author: etheredit
+  Comment: No difference on Mac M1 Pro with v. 0.3, but it was already super fast before 😁
+  Score: 1
+  Created UTC: 2024-07-27 15:44:17
+
+Note: This post has only 2 comments at the time of scraping.

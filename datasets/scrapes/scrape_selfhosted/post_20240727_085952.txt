@@ -1,0 +1,104 @@
+Post Title: What can I all do with a Mini PC outside of using it as a server?
+Author: ShadowMoonDragon
+Score: 20
+URL: https://www.reddit.com/r/selfhosted/comments/1eb0prt/what_can_i_all_do_with_a_mini_pc_outside_of_using/
+Number of comments: 38
+Created UTC: 2024-07-24 12:52:44
+
+Post Content:
+Hello.
+
+I'm in the process of building my UNRAID server, and now got the opportunity from an IT friend that works in the same company as me to buy an ASRock Beebox-S 6100U that is not needed anymore for a cheap price (\~100€). I'm really interested in buying it, but not sure what I could all use it for. I know people use them as Servers, but since I already started building a server, and some parts already arrived, I'm look for what else I could do with it.
+
+I was thinking that I could use it for OPNSense or Pi-Hole, but I feel like there are more options.
+
+What are the things I could use the mini PC for?
+
+Thank you in advance and have a nice day.
+
+Top 7 comments:
+Comment 1:
+  Author: Plane_Resolution7133
+  Comment: Proxmox?
+  Score: 24
+  Created UTC: 2024-07-24 12:59:32
+
+Comment 2:
+  Author: redditneight
+  Comment: Media PC behind the TV? Put moonlight on it and join us over at r/cloudygamer.
+  Score: 22
+  Created UTC: 2024-07-24 13:36:34
+
+Comment 3:
+  Author: Famku
+  Comment: you can turn it on and off
+  Score: 8
+  Created UTC: 2024-07-24 14:02:56
+
+Comment 4:
+  Author: HereComesBS
+  Comment: What are the specs?
+
+I have the same machine but DATTO branded. 8GB of ram, running proxmox (mainly to facilitate backup to proxmox backup server). I'm fortunate that I got it for free when it was retired. Would I pay 100€ for it? Probably not, could score an optiplex or something similar with a later gen proc and more memory for the same or not much more.
+
+That being said, it sips power, runs silent and I have a bunch of services on it all running fine, no issues with lack of resources
+
+Short list of services I'm running on it:
+
+* Reverse Proxy
+* piHole
+* Home Assistant
+* Uptime Kuma
+* Automated Speedtesting
+* Shaarli
+* Wireguard
+* Vaultwarden
+
+Plus a few more containers I can't think of ATM.
+  Score: 3
+  Created UTC: 2024-07-24 17:32:52
+
+Comment 5:
+  Author: 1WeekNotice
+  Comment: &gt;I know people use them as Servers, but since I already started building a server, and some parts already arrived, I'm look for what else I could do with it.
+
+Note that server is a very generic term. If you aren't using it as a server, then you are using it as a PC. If you aren't planning on browsing the web/ doing personal tasks for it, then it would be considered a server (since it will be serving some sort of purpose)
+
+
+&gt;I was thinking that I could use it for OPNSense or Pi-Hole, but I feel like there are more options.
+
+You wouldn't use just for Pihole. Nowadays computer hardware is very powerful that can handle many services without breaking a sweat. If you want HA for your services such as pihole, you could run two instances of your services (depending on what you have) on both your unRAID machine and this machine. For example if Pihole on this machine were to go down, then the other instance of Pihole is up and running 
+
+&gt;I know people use them as Servers, but since I already started building a server, and some parts already arrived, I'm look for what else I could do with it.
+
+Depending on how powerful the unRAID machine will be, you can offload some of that load to this server. 
+
+For example, if the unRAID hardware isn't powerful (I doubt it because you are building it), then you can make this PC handling more of the work and only connect to unRAID for storage. 
+
+&gt;What are the things I could use the mini PC for?
+
+- OPNsense
+  - I like this idea, but you would need to buy a managed switch.
+  - you would also need a second Ethernet port or run ROAS (router on a stick) configuration. ROAS has limitations. For example, if you only have 1 gbps Ethernet cords but have 1 gpbs Internet, then you would be bottle necking your Internet speeds with ROAS
+- use it as a backup machine to automatically backup your more important information on the unRAID machine
+  - this would follow 3-2-1 backup rule. 
+- what other tasks do you want to do with your homelab? No one can really answer that but you. And you can dedicate this machine to it.
+
+Hope that helps
+  Score: 4
+  Created UTC: 2024-07-24 13:39:06
+
+Comment 6:
+  Author: seniledude
+  Comment: I use a mini pc with a j4125 for my desktop with Ubuntu desktop.
+  Score: 2
+  Created UTC: 2024-07-24 13:11:01
+
+Comment 7:
+  Author: Robo-boogie
+  Comment: my NAS only does NAS things
+
+all my docker stuff (plex, next cloud) is done by my two mini PCs, I probably wont buy the 6100U and probably go for something 8th gen or higher if possible.
+  Score: 2
+  Created UTC: 2024-07-24 13:34:08
+

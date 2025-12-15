@@ -1,0 +1,60 @@
+Post Title: Cloudflare vs Namecheap or Porkbun
+Author: Thedinotamer01
+Score: 35
+URL: https://www.reddit.com/r/selfhosted/comments/1ec2pnm/cloudflare_vs_namecheap_or_porkbun/
+Number of comments: 37
+Created UTC: 2024-07-25 18:51:09
+
+Post Content:
+I want to purchase a domain so I can reverse proxy stuff like jellyfin and other services so I can access them remotely without the need for a VPN like tailscale. But i’m a bit torn between these three since i’m a more than average privacy conscious person and therefore is leaning more towards Namecheap or Porkbun since atleast Namecheap (I haven’t researched Porkbun much but has heard they are also a good registrar for privacy) has better privacy protection since their whois protection is more anonymized than Cloudflare (from what I’ve found)
+
+But on the other hand Cloudflare is more widely used and will show up in 99% of guides out there which makes it easier for a noob like me.
+
+What are your thoughts?
+
+Top 7 comments:
+Comment 1:
+  Author: LavaCreeperBOSSB
+  Comment: I would get Porkbun. Either way you can get a domain from most registrars and simply change your nameservers to use Cloudflare
+  Score: 65
+  Created UTC: 2024-07-25 18:53:34
+
+Comment 2:
+  Author: Jackson_drake
+  Comment: I bought mine from namecheap and changed dns provider to cloudflare. There are video [tutorial ](https://youtu.be/bso1pGx15PQ) for this available in youtube.
+Afyer changing dns provider to CF you can refer network chuck video or some other video to configure cloudflared tunnel.. Its actually pretty easy. There are lots of videos for nginx proxy manager too.
+  Score: 12
+  Created UTC: 2024-07-25 19:09:26
+
+Comment 3:
+  Author: talkincyber
+  Comment: What about Cloudflare whois info isn’t redacted? None of my information is public
+  Score: 8
+  Created UTC: 2024-07-25 20:33:39
+
+Comment 4:
+  Author: crazedizzled
+  Comment: Been using namecheap for 10+ years, no complaints.
+  Score: 6
+  Created UTC: 2024-07-25 22:31:57
+
+Comment 5:
+  Author: PlannedObsolescence_
+  Comment: I personally think that Cloudflare has too much control of the modern web, and perform a MITM by design for their DDOS protection, caching and CDN services. They've got the literal keys to the kingdom for too many TLS connections.
+
+One thing to note is that Porkbun's nameservers are actually hosted by Cloudflare. You interact with Porkbun's console etc, but the actual records are hosted by nameservers that Cloudflare operate.
+  Score: 17
+  Created UTC: 2024-07-25 20:42:42
+
+Comment 6:
+  Author: death_hawk
+  Comment: Namecheap did something to annoy me years ago so I jumped ship.  Porkbun is my go to unless it's a domain they don't support.  I also have a few on Cloudflare as well. When those come due I might see if they're similarly priced on Porkbun so they're not so spread around.
+  Score: 5
+  Created UTC: 2024-07-25 20:52:47
+
+Comment 7:
+  Author: Blazemonkey
+  Comment: I've used namecheap extensively, and switched to Porkbun a few years ago. It was an excellent decision. I can't recommend them enough.
+  Score: 4
+  Created UTC: 2024-07-25 22:12:08
+

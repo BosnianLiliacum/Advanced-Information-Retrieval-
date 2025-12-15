@@ -1,0 +1,35 @@
+Post Title: Easiest way to work around DSLite restrictions
+Author: Razzmatazz791
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e9k9cg/easiest_way_to_work_around_dslite_restrictions/
+Number of comments: 8
+Created UTC: 2024-07-22 17:37:35
+
+Post Content:
+So im planning to build my own webserver, which will run several services, which should be accessible from outside my network. However, since i cant get a static ip from my provider, and also only have DSLite (which means no public IPv4, only IPv6), im not quite sure how to achieve this. Changing Ip addresses could be resolved by a DDNS, and for the problem with DSLite i had some ideas aswell:
+
+1. Use exclusively IPv6 in my Network. -&gt; Problem: would have to use Kubernetes instead of docker, and it seems like some applications like jellyfin dont work very well with IPv6
+2. Dual Reverse Proxy: Combine the DDNS server with a reverse proxy. My domain would point to a server hosted on AWS, which would expose an API for my router to announce changed IP adresses. Additionally, it would tunnel the IPv4 request via IPv6 to the reverse proxy in my home network, and from there on everythings ipv4 again in my homenetwork (at least i think that should be possible?) -&gt; Problem: would take quite some time to implement, also latency ?
+
+Are there any other solutions that im missing, or that might be easier?
+
+Top 3 comments:
+Comment 1:
+  Author: certuna
+  Comment: You can get Docker to work with IPv6, you just have to set some things manually.
+  Score: 6
+  Created UTC: 2024-07-22 19:21:25
+
+Comment 2:
+  Author: drpepper
+  Comment: I would use a GBA myself.
+  Score: 6
+  Created UTC: 2024-07-22 21:37:51
+
+Comment 3:
+  Author: NachoAverageSwede
+  Comment: Cloudflare tunnels are great!!
+  Score: 2
+  Created UTC: 2024-07-22 18:43:35
+
+Note: This post has only 3 comments at the time of scraping.

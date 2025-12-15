@@ -1,0 +1,78 @@
+Post Title: Are there any adjustments to get better performance? Im a bit new to this, everything works, but it's very slow and my hardware should be fine from what I understand.
+Author: RoleAwkward6837
+Score: 8
+URL: https://www.reddit.com/r/ollama/comments/1ed21kg/are_there_any_adjustments_to_get_better/
+Number of comments: 10
+Created UTC: 2024-07-26 23:23:03
+
+Post Content:
+Im  looking to see if there is some kind of config options I am missing, or if Im just doing something wrong.   
+  
+Running ollama:rocm docker on an Unraid host with the following specs:
+
+* Ryzen 5 2600 6C/12T @ 3.5GHz
+* 64GB DDR4
+* AMD Radeon Instinct MI25 16GB VRAM\*
+* All models stored on 2TB NVME SSD (WD Blue)
+
+\**To clarify on the GPU since it's a little odd. The actual card is the Radeon Instinct MI25 but I BIOS flashed it to a Radeon Pro WX9100.*
+
+  
+I have the Ollama docker setup and configured to use ROCm (AMDs "cuda") and can verify *ironically* using \`nvtop\` that it is utilizing my GPU. 
+
+I then setup Open WebUI and downloaded \`dolphin-mixtral:8x7b\` since it seemed to be one of the top models that can still run on 16GB VRAM. It loaded up and works just fine, except it's really slow.
+
+# TESTS
+
+1. Simple test showed that the first run took 3min 39sec to load the model, and 14sec to print out a 2 sentence reply. 
+2. The next test took only 6sec to begin replying and took just over 1min to print a 4 paragraph response. 
+3. One final run took 33sec to begin replying and 23sec to print a two paragraph response. 
+
+  
+Obviously this isn't "unusable" but it does seem very sluggish. Is there anything that can be tweaked or do I just need to use a smaller model?
+
+Top 6 comments:
+Comment 1:
+  Author: MikeLPU
+  Comment: The large model does not fit in your vram. Your processor is weak and slow, as is RAM.
+  Score: 2
+  Created UTC: 2024-07-27 00:15:25
+
+Comment 2:
+  Author: mahiatlinux
+  Comment: Mixtral 8x7B is a slight stretch. Maybe try Mistral NeMo 12B (fan fav), Gemma 9B (also fan fave). My personal fave for speed and intelligence is DeepSeek Coder V2 Lite.
+  Score: 2
+  Created UTC: 2024-07-27 05:52:03
+
+Comment 3:
+  Author: reneil1337
+  Comment: Try Mistral Nemo 12B its the new daily driver on the rtx 2000 (16gb) in my unraid homelab. It takes up less than 9gb vram and combined with the embedding model mxbai-embed-large (~1gb) the total VRAM usage usually stays below 10GB. This leaves headroom for transcoding via plex, machine learning tasks in immich or longer context for the llm :)
+  Score: 1
+  Created UTC: 2024-07-27 06:09:17
+
+Comment 4:
+  Author: fasti-au
+  Comment: And video cards are not generally support without tweaks in llms because llamacpp is torch based and the. Orm for people to use.   I believe you can get support it’s just more manual and maybe a different host.    You are likely on cpu on processing
+
+
+Now your description implies it’s all getting used but you might also not be off loading to VRam an efficient way.    
+
+I personally have had a few different llm host packages like lmstudio Jan kobold etc and they all do react a little different so it’s likely a layer offload thing your experiencing
+  Score: 1
+  Created UTC: 2024-07-27 06:26:24
+
+Comment 5:
+  Author: AdHominemMeansULost
+  Comment: for 16gb of vram you want to run Mistral Nemo 12b Q8 and even that you won't be able to run with full context length just maybe close to 14k instead of 128k
+  Score: 1
+  Created UTC: 2024-07-27 09:27:16
+
+Comment 6:
+  Author: BoeJonDaker
+  Comment: I third the Mistral-Nemo recommendation.
+
+Also, you can add `--verbose` when you run a model to get performance stats. It's a lot easier for us to interpret t/s - tokens/second :)
+  Score: 1
+  Created UTC: 2024-07-27 15:20:50
+
+Note: This post has only 6 comments at the time of scraping.

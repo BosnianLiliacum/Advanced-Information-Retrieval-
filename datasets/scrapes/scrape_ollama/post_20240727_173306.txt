@@ -1,0 +1,56 @@
+Post Title: Weird and nonsense Response from llama3.1-70b
+Author: North-Hearing-1250
+Score: 5
+URL: https://www.reddit.com/r/ollama/comments/1ebg9fl/weird_and_nonsense_response_from_llama3170b/
+Number of comments: 5
+Created UTC: 2024-07-24 23:41:30
+
+Post Content:
+I installed llama3.1-70b model in my ollama for laptop, tested, works even its too slow. 
+
+  
+Then i transferred the sha- blob file into my more powerful computer with http-server, ( I did this before for other models like gemma2:27b and worked without problem) 
+
+But llama3.1-70 is giving random charachters as a response. Don't know why. It gives response ( so we can think file transfer have no problem )  or we cant?  
+
+
+
+https://preview.redd.it/bqop2bh3zjed1.png?width=1118&amp;format=png&amp;auto=webp&amp;s=91b7f360a75b889b019603e02725797a3b2edad6
+
+
+
+BTw, i stopped it, because there is not end, it continuesly spitting out random chars
+
+Top 5 comments:
+Comment 1:
+  Author: vir_db
+  Comment: Try to pull the model again. First time I downloaded llama3.1-8b I received weird and nonsense reply. Pulling it again fixed
+  Score: 3
+  Created UTC: 2024-07-25 05:33:03
+
+Comment 2:
+  Author: l33t-Mt
+  Comment: Pretty sure that's a borg response.
+  Score: 2
+  Created UTC: 2024-07-25 00:50:22
+
+Comment 3:
+  Author: hellonearthis
+  Comment: I had that when I tried to run an AI model I had just downloaded.  
+Like Vir\_db says, just rm remove it and download it again.
+  Score: 1
+  Created UTC: 2024-07-25 09:36:20
+
+Comment 4:
+  Author: Far-Grapefruit8487
+  Comment: Kolay gelsin reis
+  Score: 1
+  Created UTC: 2024-07-25 16:11:52
+
+Comment 5:
+  Author: ThesePleiades
+  Comment: Did you ask for a translation?
+  Score: 1
+  Created UTC: 2024-07-25 17:25:37
+
+Note: This post has only 5 comments at the time of scraping.

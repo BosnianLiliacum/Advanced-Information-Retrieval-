@@ -1,0 +1,93 @@
+Post Title: Alerting on harddrive/filesystem failure
+Author: Necessary_Routine974
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6rcly/alerting_on_harddrivefilesystem_failure/
+Number of comments: 3
+Created UTC: 2024-07-19 01:05:01
+
+Post Content:
+Hi r/selfhosted ,
+
+I’m currently running a DIY NAS using Linux, and I want to ensure that I get timely email alerts in case any disks or filesystems fail. Given the importance of data integrity and early failure detection, I’m looking for a reliable method to set this up.
+
+Here’s some info on my setup:
+
+* **Operating System**: Ubuntu 24.04
+* **File System**: Btrfs RAID 1
+
+What I’m looking for:
+
+1. **Monitoring Tools**: Recommendations for tools or scripts that can monitor disk health and file-system status.
+2. **Email Alert Setup**: Step-by-step guidance on configuring these tools to send email alerts, preferably just using a gmail account (dont want to have to setup a mail relay and such)
+3. **Best Practices**: Any additional tips or best practices for monitoring and alerting in a NAS environment.
+
+I think it should be a a mix of `smartmontools` for S.M.A.R.T. monitoring and parsing `dmesg` , but I’m unsure how to integrate these with email alerts effectively. Additionally, if there are any other tools or methods you recommend, I’m all ears!
+
+Thanks in advance for your help!
+
+
+
+I'd like to catch things like this when they happen the first time , not after a few months :S
+
+`[86163.282548] ata9.00: exception Emask 0x0 SAct 0x40 SErr 0x0 action 0x0 [86163.282564] ata9.00: irq_stat 0x40000008`
+
+`[86163.282569] ata9.00: failed command: READ FPOMA QUEUED`
+
+`[86163.282573] ata9.00: cmd 60/20:30:20:0a:b3/00:00:77:01:00/40 tag 6 ncq dma 16384 โก`
+
+`[86163.351587] sd 8:0:0:0: [sdb] tag#6 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=2s`
+
+`[86163.351596] sd 8:0:0:0: [sdb] tag#6 Sense Key: Medium Error [current]`
+
+`[86163.351602] sd 8:0:0:0: [sdb] tag#6 Add. Sense: Unrecovered read error`
+
+`[86163.351608] sd 8:0:0:0: [sdb] tag#6 CDB: Read (16) 88 00 00 00 00 01 77 b3 0a a0 00 00 00 20 00 00`
+
+`[86163.351612] critical medium error, dev sdb, sector 6303189664 op 0x0: (READ) flags 0x1000 phys_seg 3 prio class 0`
+
+`[86163.351640] ata9: EH complete [86163.370573] BTRFS info (device sda): read error corrected: ino 0 off 3227254079488 (dev /dev/sdb sector 6303189664)` 
+
+`[86163.371276] BTRFS info (device sda): Read error corrected: ino 0 off 3227254083584 (dev/dev/sdb sector 6303189672)`
+
+`[86163.371527] BTRFS info (device sda): read error corrected: ino 0 off 3227254087680 (dev/dev/sdb sector 6303189680)` 
+
+`[86163.371777] BTRFS info (device sda): read error corrected: ino 0 off 3227254091776 (dev/dev/sdb sector 6303189688)`
+
+`[86216.653087] ata9.00: exception Emask 0x0 SAct 0x20000 SErr 0x0 action 0x0`
+
+`86216.653104] ata9.00: irq_stat 0x40000008 [ [`
+
+`86216.653110] ata9.00: failed command: READ FPDMA QUEUED`
+
+`[86216.653113] ata9.00: cmd 60/20:88:40:0a:b3/00:00:77:01:00/40 tag 17 ncq dma 16384 in res 43/40:20:40:0a:b3/00:00:77:01:00/00 Emask 0x408 (media error) &lt;F&gt;`
+
+`[86216.653126] ata9.00: status: { DRDY SENSE ERR }`
+
+`[86216.653129] ata9.00: eггог: { UNC } [86216.725244] ata9.00: configured for UDMA/133`
+
+`[86216.725278] sd 8:0:0:0: [sdb] tag#17 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=2s`
+
+`86216.725287] sd 8:0:0:0: [sdb] tag#17 Sense Key: Medium Error [current]`
+
+`[86216.725292] sd 8:0:0:0: [sdb] tag#17 Add. Sense: Unrecovered read error`
+
+`[86216.725299] sd 8:0:0:0: [sdb] tag#17 CDB: Read (16) 88 00 00 00 00 01 77 b3 0a 40 00 00 00 20 00 00` 
+
+`[86216.725303] critical medium error, dev sdb, sector 6303189568 op 0x0: (READ) flags 0x1000 phys_seg 2 prio class 0`
+
+`[86216.725330] ata9: EH complete 196216 7426011` 
+
+Top 2 comments:
+Comment 1:
+  Author: St0lz
+  Comment: Take a look at https://github.com/AnalogJ/scrutiny
+  Score: 1
+  Created UTC: 2024-07-19 02:39:04
+
+Comment 2:
+  Author: johnsturgeon
+  Comment: I use zabbix for all my monitoring needs.  A bit of a learning curve. But once you figure it out.  Your done with looking for monitoring tools forever
+  Score: 1
+  Created UTC: 2024-07-19 14:43:33
+
+Note: This post has only 2 comments at the time of scraping.

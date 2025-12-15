@@ -1,0 +1,46 @@
+Post Title: Looking for a Self-Hosted Solution to Stream Music from Multiple Devices to My Old Stereo (hard-/software)
+Author: _snwflake
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e4n2d7/looking_for_a_selfhosted_solution_to_stream_music/
+Number of comments: 7
+Created UTC: 2024-07-16 12:12:23
+
+Post Content:
+Heya, probably the wrong sub, but theres so much HiFi and audio related subs around, that I figured I'd start with a place I can actually relate to.
+
+My dad left me his complete onkyo stereo, that's nearing 50 years of age now. I currently have this sitting in my office hooked up to a surround system from Teufel.
+
+It's complete including tape deck, cd deck, turntables and amp(?), but that's it in terms of inputs. It doesn't even have a native AUX in, so I currently have an AUX to RCA coax adapter dangling off it, that I usually plug my phone or tablet into.
+
+I'm looking for a way to make this thing more flexible. I found some bluetooth to RCA coax thingies, that would work in theory, but I personally hate bluetooth with a passion. pairing/unpairing is a fucking nightmare at the best of times, 2.4ghz band is cluttered with all sorts of garbage nowadays and my house is no exception.
+
+What I do have, is an assortment of arduino nanos/micros/picos, a dozen different rPis and banana Pis of various generations and a wifi 6e mesh.
+
+I already checked the [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#media-streaming---audio-streaming) repo, but am conflicted about the choices there. Primarily because I also stream spotify/deezer/other in addition to the music I have on-prem.
+
+Looking for experience reports, or suggestion of any kind to make this experience a lot smoother.
+
+Cheers
+
+Top 3 comments:
+Comment 1:
+  Author: Spittl
+  Comment: Look into the WiiM Pro Airplay receivers. You can cast whatever music you want to them and they pass it onto a rca output
+  Score: 3
+  Created UTC: 2024-07-16 12:32:50
+
+Comment 2:
+  Author: martimcbro
+  Comment: I would suggest lyrion music server (formerly known as logitech media server) along with the different player options (squeezelite/jivelite) which can run on different hardware. The server supports playing local music as well as various streaming services.
+
+For a pi I would suggest to run picoreplayer as an os. If you decide to use an esp32 there is the very good software squeezelite-esp32. This software does not only run squeezelite to act as a lyrion music server client but can also receive music directly via bluetooth, airplay and spotify.
+  Score: 2
+  Created UTC: 2024-07-16 16:48:27
+
+Comment 3:
+  Author: ezra-rk
+  Comment: You could look into volumio
+  Score: 1
+  Created UTC: 2024-07-16 13:17:50
+
+Note: This post has only 3 comments at the time of scraping.

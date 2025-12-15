@@ -1,0 +1,26 @@
+Post Title: I made a command-line tool that gives you granular control over bulk deleting your Github gists
+Author: Ok-Frosting7364
+Score: 16
+URL: https://www.reddit.com/r/Python/comments/1eclzmr/i_made_a_commandline_tool_that_gives_you_granular/
+Number of comments: 5
+Created UTC: 2024-07-26 11:42:51
+
+Post Content:
+**Source code:** [https://github.com/ben-n93/gists-gone/](https://github.com/ben-n93/gists-gone/)
+
+**What my Project Does**: From the command-line you can bulk delete Github gists. You can be specific about the type of Gists you want deleted - what language, when they were created, whether they are public or private.
+
+**Target Audience**  
+Github users/anyone who uses Github gists!
+
+Top 1 comments:
+Comment 1:
+  Author: mr_claw
+  Comment: I'm looking for a tool that can help me clear large files in my git repository. Files that were added once but have since been removed still add to the overall size of the repo and is making fresh pulls very time taking.
+
+
+Any ideas?
+  Score: 1
+  Created UTC: 2024-07-26 12:54:02
+
+Note: This post has only 1 comments at the time of scraping.

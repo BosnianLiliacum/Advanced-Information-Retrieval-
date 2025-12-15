@@ -1,0 +1,71 @@
+Post Title: VoucherVault - A free, open-source web application to track your vouchers/giftcards/coupons
+Author: sk1nT7
+Score: 52
+URL: https://www.reddit.com/r/selfhosted/comments/1e4vb2s/vouchervault_a_free_opensource_web_application_to/
+Number of comments: 21
+Created UTC: 2024-07-16 17:59:59
+
+Post Content:
+Hi selfhosters,
+
+I've built a Django web application to manage vouchers, coupons and giftcards digitally.
+
+It can regularly remind you about items that will soon expire to ensure timely redemptions. The notifications are handled by Apprise to support a wide range of options. Additionally, you can add fractional transactions to an item's history to keep track of the current, monetary value.
+
+- Completely free and open-source
+- Easily selfhosted via Docker and an example docker-comose.yml file with external Dockerhub images
+- Support for light and dark theme
+- Support for multi-user authentication
+- Responsive design that works on desktop and mobile browsers
+- Displays redeem codes as convenient QR code or EAN13 barcode
+
+You can find the GitHub repository with screenshots here:
+
+https://github.com/l4rm4nd/VoucherVault
+
+Cheers and enjoy!
+
+
+
+
+
+
+
+Top 5 comments:
+Comment 1:
+  Author: regypt
+  Comment: Wasn't there a post just last week looking for something like this? This is awesome!
+  Score: 8
+  Created UTC: 2024-07-16 20:09:11
+
+Comment 2:
+  Author: ssddanbrown
+  Comment: Remember to add a license for your project, otherwise it's just source available, and not open source since you're not providing users open rights of use, modification and distribution. If you're not sure this is often a good starting point: https://choosealicense.com/
+  Score: 7
+  Created UTC: 2024-07-16 23:51:14
+
+Comment 3:
+  Author: CaterpillarOld1929
+  Comment: +1 legend status for using apprise,awesome for notifications
+  Score: 2
+  Created UTC: 2024-07-17 06:41:58
+
+Comment 4:
+  Author: davidh2k
+  Comment: Since you mentioned it yourself in another old Thread about loyalty cards, do you plan to add them too? Can‘t seem to see those beeing supported yet. (There is something for android, Catima, that offers that)
+
+Also, does the PWA need internet or does it cache locally if the receiption is bad? Nothing worse than not beeing able to access those cards with bad receiption in some stores. 
+
+(Still don‘t understand why its so hard to properly support the Apple Wallet in 2024, and why every other provider seems to force their own app for their cards, Bring! is helping a bit there…)
+  Score: 1
+  Created UTC: 2024-07-17 09:00:53
+
+Comment 5:
+  Author: xboxhaxorz
+  Comment: Doesnt look to be working on an ampere oracle server
+
+exec /opt/app/docker/entrypoint.sh: exec format error
+  Score: 1
+  Created UTC: 2024-07-21 00:47:58
+
+Note: This post has only 5 comments at the time of scraping.

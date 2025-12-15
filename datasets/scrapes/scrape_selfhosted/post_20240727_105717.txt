@@ -1,0 +1,48 @@
+Post Title: Photo gallery with good representation based on metadata and exif tags
+Author: rennsau
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ubl6/photo_gallery_with_good_representation_based_on/
+Number of comments: 4
+Created UTC: 2024-07-15 13:05:52
+
+Post Content:
+Hello everyone,
+
+I'm currently using Lightroom to manage my photos and would like to transfer this to a self-hosted version in my Proxmoxx. So far I've tried:
+
+Photoprism  
+immich  
+nextcloud Memories  
+Photoview.
+
+immich is probably the closest to this, but unfortunately it only has a simple timeline.  
+What I would like now is, in addition to a simple catalog display, a "nice" evaluation based on the metadata, e.g. timeline, today, 1,2,3 years ago today, last trip, etc.
+
+In Lightroom, iam using exif tags for organizing and using the list function from lightroom to manage pics. Until now, i found no selfhostet app, which is using exifs tags in a way like lightroom
+
+It would also be great if the software monitored folders, since the raw image editing still takes place in LR and I would then export them via smb.
+
+Top 3 comments:
+Comment 1:
+  Author: AssociateNo3312
+  Comment: I find photoprism is better in this respect.  Immich is more set up for good photos replacement + backup.
+
+Where photoprism is a bit more data centric.
+  Score: 2
+  Created UTC: 2024-07-15 23:28:44
+
+Comment 2:
+  Author: botterway
+  Comment: You should take a look at my app, [Damselfly](https://github.com/webreaper/Damselfly) - it sounds like your use case and workflow are very similar to mine, and the reasons I built it.
+
+It has timeline view, is exif keyword focused, and monitors folders.
+  Score: 2
+  Created UTC: 2024-07-16 07:51:07
+
+Comment 3:
+  Author: DaymanTargaryen
+  Comment: Can't help ya, but would be worth making a suggestion to the Immich devs to see if it's something they would support.
+  Score: 1
+  Created UTC: 2024-07-15 13:56:12
+
+Note: This post has only 3 comments at the time of scraping.

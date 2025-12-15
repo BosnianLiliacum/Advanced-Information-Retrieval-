@@ -1,0 +1,26 @@
+Post Title: metas llama3 link to docs in license iz dead?
+Author: Expensive-Award1965
+Score: 0
+URL: https://www.reddit.com/r/ollama/comments/1ec1uib/metas_llama3_link_to_docs_in_license_iz_dead/
+Number of comments: 4
+Created UTC: 2024-07-25 18:16:32
+
+Post Content:
+i wanted to have a look at the documentation, they give a link at the top of the license but there's nothing there? lol. great QA by the giants
+
+&gt;“Documentation” means the specifications, manuals and documentation accompanying Llama 3.1 distributed by Meta at [https://llama.meta.com/doc/overview](https://llama.meta.com/doc/overview).
+
+is there some hidden conspiracy or does the docs exist at all... i'll have a quick look then give up no doubt, not sure why i'm looking anyway hahaha
+
+Top 1 comments:
+Comment 1:
+  Author: AdHominemMeansULost
+  Comment: took me literally 0.5 seconds to google llama meta docs
+
+https://llama.meta.com/docs/overview
+
+you're missing an S in your URL, it's docs/overview, not doc/overview
+  Score: 1
+  Created UTC: 2024-07-25 20:18:50
+
+Note: This post has only 1 comments at the time of scraping.

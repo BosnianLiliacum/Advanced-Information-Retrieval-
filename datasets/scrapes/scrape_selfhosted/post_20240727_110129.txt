@@ -1,0 +1,28 @@
+Post Title: Towerify - Manage fleet of YunoHost servers.
+Author: csavelief
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ny3q/towerify_manage_fleet_of_yunohost_servers/
+Number of comments: 3
+Created UTC: 2024-07-15 06:31:33
+
+Post Content:
+Hey r/selfhosted,
+
+Our company has decided to open source Towerify, an internal tool designed to manage a fleet of YunoHost servers. This tool simplifies the configuration, deployment, and monitoring of servers, leveraging YunoHost, Osquery, and Vanilo to create a seamless admin experience. Whether you're managing one server or several, Towerify aims to make the process straightforward and accessible for admins of all skill levels.
+
+For more details and to try it out, check out the project on [GitHub](https://github.com/computablefacts/towerify). Hope you find it useful for your self-hosted setups!
+
+Top 2 comments:
+Comment 1:
+  Author: Grizknot
+  Comment: Pretty cool, I didn't realize that YunoHost is still a big deal to the point that people have fleets of them deployed.
+  Score: 1
+  Created UTC: 2024-07-15 13:50:07
+
+Comment 2:
+  Author: johimself
+  Comment: It has taken me so long to work out what a YunoHost is that I no longer care for your product. When did people stop saying what their software is or does?
+  Score: -3
+  Created UTC: 2024-07-15 08:51:54
+
+Note: This post has only 2 comments at the time of scraping.

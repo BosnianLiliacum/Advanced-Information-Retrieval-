@@ -1,0 +1,38 @@
+Post Title: Does anyone remember b2evolution?
+Author: bijomaru78
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ugkb/does_anyone_remember_b2evolution/
+Number of comments: 5
+Created UTC: 2024-07-16 17:25:19
+
+Post Content:
+I found it some time ago while searching for a platform for my personal site. It has everything I need, a blog, a private section, all the customisations, but it's not developed anymore.
+
+After trying to find a better alternative I took the plunge and installed it last night. Started migrating my content, setting up templates etc and it looks great. The minor issue I am having right now is the search results not showing thumbnails of cover images, but that's minor.
+
+
+Obviously, the big issue is the security risk. I want to use it, but I'm worried that if a potential bug is found, I'm risking losing access, etc.
+
+I can't use Wordpress, Wix, Drupal or Joomla. I need something as quick, as '2000s-style' looking, customisable as b2evolution.
+
+Are there any worthy self-hosted alternatives?
+
+Top 2 comments:
+Comment 1:
+  Author: gr8dude
+  Comment: I'm in the same boat; I am still running it, but my plan is to migrate to a static site generator (like Jekyll, Nikola or Hugo) in the future. They are not quite the same thing, but for my use case they still constitute a good fit.
+
+  
+The reason to migrate is that with a static site generator I can lower the requirements for the server - no need for a database or a PHP interpreter, hence it can run on a low-spec machine.
+
+Given my current workload in life, I think that realistically I'll be "temporarily" using b2evo for a long time. If it isn't broken, don't fix it.
+  Score: 2
+  Created UTC: 2024-07-17 07:15:37
+
+Comment 2:
+  Author: xinclub
+  Comment: [Typecho](https://typecho.org/)
+  Score: 1
+  Created UTC: 2024-07-17 11:55:46
+
+Note: This post has only 2 comments at the time of scraping.

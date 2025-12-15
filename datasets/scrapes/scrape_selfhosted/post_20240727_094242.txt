@@ -1,0 +1,58 @@
+Post Title: I made a one-page comprehensive dashboard using Fitbit API, influxdb, and Grafana. Code and setup instructions are available in the comments.
+Author: arpandesign
+Score: 464
+URL: https://i.redd.it/ox9nyqknatdd1.png
+Number of comments: 45
+Created UTC: 2024-07-21 05:58:40
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: arpandesign
+  Comment: Here is the complete code and setup guide: [https://github.com/arpanghosh8453/public-fitbit-projects](https://github.com/arpanghosh8453/public-fitbit-projects) - Feel free to star it if you like it.
+  Score: 48
+  Created UTC: 2024-07-21 05:58:54
+
+Comment 2:
+  Author: Staltrad
+  Comment: Is there any APIs for Garmin products? The data it produces is pretty good, but I'm not a fan of their website UI.
+  Score: 12
+  Created UTC: 2024-07-21 15:19:08
+
+Comment 3:
+  Author: TotalRickalll
+  Comment: I wish other companies allowed us to do something like this with OUR data :(
+  Score: 11
+  Created UTC: 2024-07-21 09:31:24
+
+Comment 4:
+  Author: ziplock9000
+  Comment: Grafana is fantastic. I use it with a wireless weather station I made, with about 8 sensors on it.
+  Score: 3
+  Created UTC: 2024-07-21 12:26:00
+
+Comment 5:
+  Author: TheJeeWee
+  Comment: This makes me happy. Ty!
+  Score: 2
+  Created UTC: 2024-07-21 11:55:47
+
+Comment 6:
+  Author: climateimpact827
+  Comment: Fascinating project! Does this query the data directly from your watch, or are you reliant on their Cloud API at all?
+  Score: 2
+  Created UTC: 2024-07-21 12:10:40
+
+Comment 7:
+  Author: Qachmarre
+  Comment: Shit bro, I instantly saved this post to self host this project on my own and suddenly I figured out that it’s related to person health nor infrastructure XD
+
+Great job anyway, seems pretty nice and usable in a lots of cases.
+Anyway appreciate your sharing and for sure will leave a star on GitHub!
+
+All good for you and family
+  Score: 1
+  Created UTC: 2024-07-21 15:51:06
+

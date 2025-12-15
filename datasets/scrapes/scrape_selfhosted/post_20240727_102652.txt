@@ -1,0 +1,39 @@
+Post Title: Ubuntu with Gnome, sleeps after outage, how to get it back up without login
+Author: classified_x
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5rtrz/ubuntu_with_gnome_sleeps_after_outage_how_to_get/
+Number of comments: 5
+Created UTC: 2024-07-17 20:02:09
+
+Post Content:
+Hi, 
+
+  
+I set up my self hosted HTTPS server. problem is if an outage happens, or if the system crashes, it asks for a login and eventually sleeps.
+
+I was wondering if there is a way to auto login only when the computer is turned on, not removing remote login or SSH via password. anyone can help?
+
+Top 3 comments:
+Comment 1:
+  Author: ke151
+  Comment: When you say "asks for login" do you mean you are running a graphical environment on the server?
+
+If so, you can enable auto login (depends on your DE / login screen for specific steps required). That will just log in to the graphical session, you can still log in via ssh.
+
+Separately -- why are you using a graphical install if you're just running a server? Most distros have a "server" variant that is CLI only since it's assumed you'll just use ssh or something rather than sitting at it with KB+M. Ubuntu has Ubuntu Server for example I think.
+  Score: 3
+  Created UTC: 2024-07-17 21:47:05
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: If no one replies here you can also ask r/linux4noobs
+  Score: 1
+  Created UTC: 2024-07-17 20:42:46
+
+Comment 3:
+  Author: guigouz
+  Comment: Why do you need to login for the http server to start?
+  Score: 1
+  Created UTC: 2024-07-17 22:18:14
+
+Note: This post has only 3 comments at the time of scraping.

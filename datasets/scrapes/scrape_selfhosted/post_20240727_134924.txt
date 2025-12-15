@@ -1,0 +1,58 @@
+Post Title: Digital Garden
+Author: Mrfudog
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3rqgi/digital_garden/
+Number of comments: 6
+Created UTC: 2024-07-15 10:46:52
+
+Post Content:
+I'm on mobile so forgive me for bad formatting.
+
+I've just recently started my selfhosted journey and so far am really happy with it.
+One field where I'm overwhelmed by the options is digital gardening. I would love to set up such an environment as to support my everyday life, as well as selfhosted environment.
+
+So far I set up my old PC as a proxmox server, running a debian vm as well as a windows one. Application wise so far I'm running HASSIO, Pihole and some more services (homer, wireguard).
+In the future I'm planning on setting up a VM for TrueNAS (probably scale) which will be the storage backbone. Additionally I will use NextCloud as well as the arr stack.
+
+For documenting my setup I'm looking into some wiki applications or similar.
+
+But now to the thing I'm having trouble deciding. I want to create a rich garden, so far I have established the following requirements:
+
+I would like to be able to create Notes (such as in OneNote, Notion or Obsidian)
+I would like it to be able to integrate files easily, if possible with viewing of the files in the application, without creating a copy of said file.
+It should be able to handle further features such as tables (if db based even better), good search and organization capabilities (tags etc.) and have a native diagram creation tool.
+If possible it should provide API endpoints and embedding of websites, RSS-feeds and similar.
+It should also have easy management of todo-lists with kanban boards and such.
+It should integrate easily with other services (such as Home Assistant).
+
+So far I've looked into paperless-ngx, obsidian, the brain, baserow, atomic, and many more. But all of them do parts and I'm not sure on the interoperability of these.
+
+Do you have any recommendations? How is your setup of a digital garden or similar?
+
+Top 3 comments:
+Comment 1:
+  Author: No_Refrigerator5700
+  Comment: are you already familiar with Tiago Forte's works? perhaps by taking some ideas on how to optimise your garden even more, you can "cut" the required criteria and customise one of the services you have listed... 
+
+it just seems that there is still no perfect application.
+
+personally i still switch and (and sometimes even duplicate things) between obsidian and anytype 'cause of very different needs (anytype still has a poor graph), but step by step, some once very important features become not so much in demand. so my advice is not to choose the best tool where there is a mush of everything, but to prioritise which functionality is most critical and in which software it is more powerful/convenient
+  Score: 2
+  Created UTC: 2024-07-15 16:05:04
+
+Comment 2:
+  Author: adamshand
+  Comment: Obsidian is probably about as good as it gets.  Logseq is similar but list based.  Joplin is the closest thing to Obsidian that's open source (but it's a long way from Obsidian's features).
+
+I used Dokuwiki for years and was pretty happy with it.  If I was 
+ looking for something like this today, I'd probably try SilverBullet.
+  Score: 2
+  Created UTC: 2024-07-15 21:41:58
+
+Comment 3:
+  Author: Haliphone
+  Comment: Take a look at Hibiscus
+  Score: 2
+  Created UTC: 2024-07-15 21:48:32
+
+Note: This post has only 3 comments at the time of scraping.

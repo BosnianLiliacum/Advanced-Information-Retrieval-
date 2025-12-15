@@ -1,0 +1,36 @@
+Post Title: Which way should I implement my scalable self-hosted WP installation with Swarm?
+Author: RaikastaIlmaa
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8wun3/which_way_should_i_implement_my_scalable/
+Number of comments: 3
+Created UTC: 2024-07-21 21:16:15
+
+Post Content:
+Hi! I'm currently setting up my self-hosted high availability WP installation to learn more about Docker Swarm and scaling services. Now I'm at a crossroad with 2 ways to implement and would like to hear your opinion.
+
+There would be about 3-5 swarm manager nodes and some amount of worker nodes. Manager nodes would host the reverse proxy and be the server users connect to. The reverse proxy would be a `mode: global` meaning there would be 1 per manager node. Worker containers could scale indefinetely.
+
+Option 1: Docker services contains the whole WordPress stuff, including Caddy and PHP. Traefik (or similar) is used to reverse proxy traffic to the container. Reverse proxy just manages traffic.
+
+[Option 1 diagram](https://preview.redd.it/euzkl26atxdd1.png?width=1106&amp;format=png&amp;auto=webp&amp;s=2cc3f5678359f3c2cb4917b8c0f4e31f3aedc41d)
+
+Option 2: Services only include the files and a PHP server. Caddy server is used to reverse proxy traffic to the PHP servers. Containers have only PHP servers and the files. Reverse proxy/web server handles all caching and stuff like that.
+
+[Option 2 diagram](https://preview.redd.it/n74cofgxtxdd1.png?width=1106&amp;format=png&amp;auto=webp&amp;s=2d50d18f59fb05d1e72134d5088edcb970f615e4)
+
+I'm currently bit between the two, maybe turning more to option 1 as Traefik could automatically discover the containers and technically it would be tech-agnostic so I could easily also deploy other services if needed. But option 2 still keeps being on my mind as I think is it necessary to run through two proxies? Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: deafcheese
+  Comment: In my experience, stick with docker and docker compose for as long as you can. If you need more than that, then I would suggest jumping to k3s.  I personally haven't seen a use case where I thought swarm would do better than either docker compose or k3s.  I have seen others speak highly of swarm, but that was never my experience.  Between the lacking features and confusion over the older swarm and the newer swarm, I encourage you to check out k3s before going too far into swarm.
+  Score: 3
+  Created UTC: 2024-07-21 23:30:35
+
+Comment 2:
+  Author: migsperez
+  Comment: Option 1 is the standard setup.
+  Score: 2
+  Created UTC: 2024-07-21 23:11:45
+
+Note: This post has only 2 comments at the time of scraping.

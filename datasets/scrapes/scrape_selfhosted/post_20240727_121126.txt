@@ -1,0 +1,88 @@
+Post Title: NVMe SSD longevity
+Author: saponsky
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9q8u1/nvme_ssd_longevity/
+Number of comments: 10
+Created UTC: 2024-07-22 21:37:59
+
+Post Content:
+A few days ago the NVMe SSD of my mini pc started reporting failures and everything stopped working. I have backups and snapshots in place so I didn’t lose critical data. But what is weird to me is that the disk only lasted about 1 year.
+
+I run about 20 docker services (*arr suite, photoprism, home assistant, etc), and a couple of cron jobs (poll TrueNAS for notifications, export files, etc). Is this too much stress for a single NVMe SSD drive? The drive was rated for 600 TBW, and I know this rating does not translate directly, but now I’m concerned if I just replace the drive and it lasts just one more year.
+
+Could this have been a case of just a bad quality drive or is this “normal” for a 24/7 load of about 20 docker services?
+
+The drive in question is a Silicon Power, not sure of the brand’s reliability but it had about 10k reviews and 4.5 stars.
+
+Top 7 comments:
+Comment 1:
+  Author: suicidaleggroll
+  Comment: Did you check the SMART data?  It should tell you the TBW and/or remaining lifetime, which should tell you if you’re hitting the drive too hard or it was just a random failure.
+
+As a point of reference, my server runs about 20 VMs (full VMs, not containers) 24/7, and writes on average about 100 GB/day.  At that rate it would take about 16 years to hit 600 TB.
+  Score: 5
+  Created UTC: 2024-07-22 21:46:26
+
+Comment 2:
+  Author: marc45ca
+  Comment: I would dig further in the reliability of the Silicon Power drives.
+
+Normally in the consumer space drives like the Samsung Evos (firmware issues have now been fixed) are usually go-to's for decent write endurace.
+
+Otherwise you into the second hand market for Enterprise grade drives but then you're dealing with U.2 adapters etc.
+  Score: 2
+  Created UTC: 2024-07-22 22:22:55
+
+Comment 3:
+  Author: benjamingolub
+  Comment: 12 days ago my Samsung 980 Pro 1TB started reporting failures. Smart output showed:
+
+* `Percentage Used:                    53%`
+* `Data Units Read:                    4,118,330 [2.10 TB]`
+* `Data Units Written:                 585,081,658 [299 TB]`
+* `Media and Data Integrity Errors:    1,696`
+
+It is rated for 600 TBW so I was surprised at the errors happening at \~300. I was also surprised I've written so much to begin with and after some digging discovered I had configured frigate to record to my SSD instead of NAS; moved those writes over and replaced the drive with a 500GB WD Red SN700. The SN700 has been in use for 11 days and is at 315 GB TBW but should be good till 1000 TBW; if I can trust the numbers this drive should last 100 years!
+
+Thank goodness for having good backups!
+  Score: 2
+  Created UTC: 2024-07-22 23:29:19
+
+Comment 4:
+  Author: bst82551
+  Comment: Silicon Power's RMA process is decent. I had an SSD failure and they replaced it for the cost of shipping ($10). Just had to provide a receipt to prove I was still in the warranty period.
+  Score: 2
+  Created UTC: 2024-07-23 01:12:05
+
+Comment 5:
+  Author: 1WeekNotice
+  Comment: &gt;Could this have been a case of just a bad quality drive or is this “normal” for a 24/7 load of about 20 docker services?
+
+Definitely not normal. Unfortunately these things happen. Not every drive is reliable and some slips through QA.
+
+See if it's under warranty. Glad you had backups and snapshots. 
+
+
+For next time you can use 
+- [scrutiny](https://github.com/AnalogJ/scrutiny) to monitor the S.M.A.R.T data
+-  [nfty](https://github.com/binwiederhier/ntfy) for notifications. Note that scrutiny has nfty through [shoutrr](https://github.com/containrrr/shoutrrr/) integration 
+
+Of course even with S.M.A.R.T monitoring and notifications. A drive can fail without any notice. 
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-22 23:50:58
+
+Comment 6:
+  Author: JBu92
+  Comment: 1 year is definitely not ideal. Check and see if it's still under warranty; you may be able to get a replacement.  
+Individual failures happen, that's what warranties are for. Unfortunately systemic failures also happen, and that's why I will no longer buy Samsung SSDs.
+  Score: 1
+  Created UTC: 2024-07-23 01:05:19
+
+Comment 7:
+  Author: virtual-systems
+  Comment: Check SMART Wear\_Leveling\_Count to see if you used most of TBW or it's failed for aother reason.
+  Score: 1
+  Created UTC: 2024-07-24 10:04:51
+

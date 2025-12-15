@@ -1,0 +1,92 @@
+Post Title: Homepage: API Errors
+Author: Green_hammock
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1edang0/homepage_api_errors/
+Number of comments: 6
+Created UTC: 2024-07-27 07:25:38
+
+Post Content:
+https://preview.redd.it/vnofediej0fd1.png?width=462&amp;format=png&amp;auto=webp&amp;s=c41f9980f3e8e37b527ec3e46ce429647ed5c8a6
+
+I have a pretty constant error with my services.yaml file via homepage. 4 out of 6 that I have tried to set up widgets for have an API Error. Does anyone have any idea what could be wrong? I just find it strange that 2 are working, which I think means it is unlikely to be a network issue?
+
+Here is an example of what I have entered into the .yaml file:  
+- Emby:
+
+icon: emby.png
+
+href: [http://myurl:8096/](http://myurl:8096/)
+
+description: Media player   
+
+widget:
+
+type: emby
+
+url: [http://myurl:8096/](http://myurl:8096/)
+
+key: myapikey
+
+- Lidarr:
+
+icon: lidarr.png
+
+href: myurl:8686
+
+description: Music management
+
+widget: 
+
+type: lidarr
+
+url: myurl:8686
+
+key: myapikey
+
+- Navidrome:
+
+icon: navidrome.png
+
+href: myurl:4533/
+
+description: Music player
+
+widget:
+
+type: navidrome
+
+url: myurl:4533/
+
+user: Jeff
+
+token: password+salt md5 token
+
+salt: salt  
+
+
+Top 4 comments:
+Comment 1:
+  Author: gett13
+  Comment: I'm not sure, but I think you must have `http://` in url
+  Score: 2
+  Created UTC: 2024-07-27 07:40:02
+
+Comment 2:
+  Author: thekrautboy
+  Comment: https://github.com/gethomepage/homepage/discussions
+  Score: 1
+  Created UTC: 2024-07-27 07:30:55
+
+Comment 3:
+  Author: adrianitc
+  Comment: I have the last problem since the last update. It has been doing it on and off in the past too
+  Score: 1
+  Created UTC: 2024-07-27 09:18:36
+
+Comment 4:
+  Author: bearonaunicyclex
+  Comment: Go to the projects website and chat with the bot. it'll check your yaml for errors.
+  Score: 1
+  Created UTC: 2024-07-27 09:27:29
+
+Note: This post has only 4 comments at the time of scraping.

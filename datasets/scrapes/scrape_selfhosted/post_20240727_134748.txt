@@ -1,0 +1,36 @@
+Post Title: Self hosted guides for beginners
+Author: fezmid
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e3tiys/self_hosted_guides_for_beginners/
+Number of comments: 5
+Created UTC: 2024-07-15 12:26:50
+
+Post Content:
+I hope this isn't considered self-promotion, but I wanted to share a series I'm writing on self-hosting. I'm looking to do guides for people completely new to the space and welcome feedback, especially on next articles to write.
+
+The first is an overview of what self hosting is and the pros/cons. Then I wrote up a guide on how to setup Proxmox. The third installment sets up both a Linux and Windows VM.
+
+I'm thinking the next one should be Docker with Dockage/Portainer/etc. I also want to write up how to use NAS storage on Proxmox but probably want something a bit more detailed or it'll be a short guide!
+
+Anyway, would love anyone taking a look and providing feedback. It'll be pretty basic stuff for most here but everyone has to start somewhere so I'm hoping I can help some folks.
+
+Pros/cons: https://www.neowin.net/news/self-hosting-what-is-it-and-why-you-might-or-might-not-be-interested/
+
+Proxmox install: https://www.neowin.net/guides/self-hosting-installing-the-proxmox-hypervisor/
+
+VM install: https://www.neowin.net/guides/self-hosting-installing-your-first-virtual-machines-on-the-proxmox-hypervisor/
+
+Top 2 comments:
+Comment 1:
+  Author: Ok-Curve4113
+  Comment: Can you do a guide with ubuntu server?
+  Score: 1
+  Created UTC: 2024-07-15 15:13:04
+
+Comment 2:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 0
+  Created UTC: 2024-07-15 18:25:07
+
+Note: This post has only 2 comments at the time of scraping.

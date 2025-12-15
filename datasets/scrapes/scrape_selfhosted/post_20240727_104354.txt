@@ -1,0 +1,57 @@
+Post Title: Should I reset my server’s Annually?
+Author: PranavVermaa
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ok69/should_i_reset_my_servers_annually/
+Number of comments: 22
+Created UTC: 2024-07-16 13:23:54
+
+Post Content:
+So, currently I have a Ubuntu Linux server, running Homer (Dashboard), Immich (Photo backup), Pufferpanel (Game Server Hosting), Plex (Movie Hosting), Syncthing (to keep a backup of all files to my daily use computer), and VaultWarden (password manager), and so, I was wondering weather I should annually reset my servers, but, it seems like a tedious task to me, and, was wondering weather it would be worth it.
+
+Also, I was wondering weather there were any other services that I should be using, in order to make my Server Experience better.
+
+[View Poll](https://www.reddit.com/poll/1e4ok69)
+
+Top 7 comments:
+Comment 1:
+  Author: binaryhellstorm
+  Comment: Reset as in reboot, or reset as in re-load?
+  Score: 9
+  Created UTC: 2024-07-16 13:35:53
+
+Comment 2:
+  Author: stasj145
+  Comment: Fuck no. That seems like a lot of work for very little gain.
+  Score: 3
+  Created UTC: 2024-07-16 14:35:53
+
+Comment 3:
+  Author: 12Superman26
+  Comment: Why?
+  Score: 2
+  Created UTC: 2024-07-16 13:35:51
+
+Comment 4:
+  Author: j0nathanr
+  Comment: There's no good reason to reset and start from scratch unless you suspect your servers have been compromised and infected with malware. Ubuntu doesn't just bloat by itself like windows might with new feature releases. If your running up on storage than take a look at what's actually using the space, it's possible you have unused docker images just lying on your system waiting to be deleted. You can also try "apt autoremove" to remove any package dependencies you don't need on the system.
+  Score: 2
+  Created UTC: 2024-07-16 18:44:29
+
+Comment 5:
+  Author: insdog
+  Comment: Waste of time
+  Score: 2
+  Created UTC: 2024-07-16 23:34:49
+
+Comment 6:
+  Author: mrkesu
+  Comment: What are you asking, and what made you ask it in the first place?
+  Score: 1
+  Created UTC: 2024-07-16 13:59:39
+
+Comment 7:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 1
+  Created UTC: 2024-07-16 14:04:46
+

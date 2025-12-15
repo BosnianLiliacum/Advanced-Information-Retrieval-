@@ -1,0 +1,63 @@
+Post Title: how to extract tables from unstructured pdfs?
+Author: MacaroonChance5222
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ecfjx8/how_to_extract_tables_from_unstructured_pdfs/
+Number of comments: 12
+Created UTC: 2024-07-26 04:45:41
+
+Post Content:
+I have around 1000 PDFs from the 1960s that I need to extract data from for analysis. These PDFs contain numerical and date-time data, and I require high accuracy and well-formatted results. I’ve tried using Table-Transformer and Pytesseract, but they didn’t work well for me.
+
+Can anyone suggest effective methods or tools for extracting and formatting data from these PDFs accurately?
+
+Here is a screenshot of a page from one of the PDFs:
+
+https://preview.redd.it/dms3ca4fmsed1.png?width=795&amp;format=png&amp;auto=webp&amp;s=1890b35134e30aa73983852d93db331f9aefffc5
+
+Thanks for Your help
+
+
+
+Top 6 comments:
+Comment 1:
+  Author: dwyrm
+  Comment: Farm it out on fiverr or MTurk or something. Send each page out to several people, and compare the results to confirm accuracy.
+  Score: 5
+  Created UTC: 2024-07-26 05:03:29
+
+Comment 2:
+  Author: Psychological_Try559
+  Comment: No idea, never tried anything like this so I'm very curious to see what you find that works for you.
+
+That said you might have better luck doing this in two pieces -- first piece is OCR, second piece is converting to proper tables.
+  Score: 1
+  Created UTC: 2024-07-26 05:20:31
+
+Comment 3:
+  Author: dennislwm
+  Comment: Worth a shot [https://github.com/getomni-ai/zerox](https://github.com/getomni-ai/zerox)
+  Score: 1
+  Created UTC: 2024-07-26 05:25:51
+
+Comment 4:
+  Author: QuinsZouls
+  Comment: From my experience, using Claude Opus can make awesome results, but you have to be more specific with the prompts.  
+Claude has a great OCR
+  Score: 1
+  Created UTC: 2024-07-26 05:36:30
+
+Comment 5:
+  Author: lesigh
+  Comment: Chargpt?
+  Score: 0
+  Created UTC: 2024-07-26 06:05:36
+
+Comment 6:
+  Author: klankeser
+  Comment: You can use https://kensho.com/extract
+
+Edit: did not realize the sub, this is a paid application.
+  Score: 1
+  Created UTC: 2024-07-26 09:40:47
+
+Note: This post has only 6 comments at the time of scraping.

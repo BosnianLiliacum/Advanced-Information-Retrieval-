@@ -1,0 +1,70 @@
+Post Title: can somone help me with naming in jellyfin, i do not know what am doing wrong (btw i post this here because the official subreddit is in read only for long time now)
+Author: notabanneduserhere
+Score: 2
+URL: https://i.redd.it/ulvrmi7heqed1.png
+Number of comments: 11
+Created UTC: 2024-07-25 21:18:02
+
+Post Content:
+[This post has no text content]
+
+Top 6 comments:
+Comment 1:
+  Author: This-is-my-n0rp_acc
+  Comment: They opened an official forum when they closed the sub https://forum.jellyfin.org/
+
+Also if you're using tmdb follow the naming convention Series Name (2018) [tmdbid-65567]
+  Score: 5
+  Created UTC: 2024-07-25 21:50:21
+
+Comment 2:
+  Author: protocolnebula
+  Comment: Try with sonarr, it usually renames correctly the shows
+  Score: 3
+  Created UTC: 2024-07-25 22:25:48
+
+Comment 3:
+  Author: Shane75776
+  Comment: At a quick glance I think you have your folder name incorrect. Which might be why it's being problematic. Your file names look correct, Jellyfin follows the same standard as Plex for naming and my stuff shows up correctly in Plex. 
+
+You have your folder name as "Kaiju No. 8 (423075)" when it should be "Kaiju No. 8 (2024)". The number in parenthesis is the year that show came out, not the tmdb id. 
+
+That could be why its having issues.
+
+_____
+
+Or just use Plex, because it just works. Often times even if your format is slightly off, Plex still correctly finds and scans your show and episodes in. 
+
+I know Plex gets a lot of hate, but this is one of the many reasons I still use it over Jellyfin.
+  Score: 2
+  Created UTC: 2024-07-26 04:25:23
+
+Comment 4:
+  Author: stiky21
+  Comment: Whats with that jumble of letters in the parenthesis of Kaiju no. 8? That could be your issue.
+
+I run with just Kaiju no. 8 (2024) and it works fine for me. I run both Plex and Jelly.
+
+Ideally you would use something like exactly how the doc's show, &lt;tmbid-41341&gt; would be for shows that have similar names and start dates.
+
+The basic premise is: &lt;show name&gt; (&lt;year&gt;)
+  Score: 1
+  Created UTC: 2024-07-25 21:36:42
+
+Comment 5:
+  Author: pigers1986
+  Comment: SHOWNAME - (YEAR) -&gt; [https://imgur.com/Uwf5BlH](https://imgur.com/Uwf5BlH)  
+or  
+SHOWNAME - (YEAR) \[tvdbid-1234\]
+
+help yourself and start using sonarr and maybe radarr (https://trash-guides.info/Hardlinks/How-to-setup-for/), they are huge help even for stupid renaming ;)
+  Score: 1
+  Created UTC: 2024-07-26 11:44:45
+
+Comment 6:
+  Author: notabanneduserhere
+  Comment: this happens to multiple shows
+  Score: 0
+  Created UTC: 2024-07-25 21:18:43
+
+Note: This post has only 6 comments at the time of scraping.

@@ -1,0 +1,46 @@
+Post Title: Questions about Nginx Proxy Manager 
+Author: iamwhoiwasnow
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8x8go/questions_about_nginx_proxy_manager/
+Number of comments: 18
+Created UTC: 2024-07-21 21:33:29
+
+Post Content:
+If there's a better place to ask can you point me to the right direction. Thanks. 
+
+I'm currently running 2 laptops both on Ubuntu Server OS. One is running Jellyfin bare metal proxied through nginx and the second is running nextcloud bare metal proxied through apache2 but since server one is already using port 443 I have to access nextcloud by going to nextcloud.mydomain.com:8080
+
+I watched a video about nginx proxy manager and I'm not sure if I understood right hence why I'm here but it said that you should install npm thought docker but then you have to run nextcloud through docker as well and I'm assuming Jellyfin would be the same. Here's the thing I want to keep both Jellyfin and nextcloud bare metal since it's the only way I've had the most success. It's it possible? 
+
+Thanks in advance. 
+
+Top 3 comments:
+Comment 1:
+  Author: Raithmir
+  Comment: NPM points a fully qualified domain name to an IP/port. How your apps are installed makes no difference.
+  Score: 6
+  Created UTC: 2024-07-21 21:44:12
+
+Comment 2:
+  Author: PaperDoom
+  Comment: It kind of sounds like you're mixing up terms. It sounds like you're using nginx and apache2 as webservers, not proxies. The webserver is going to listen on specific ports and when it sees a connection attempt, it's going to serve the content of the app to that connection.
+
+The problem is that you can only forward a port to 1 location, so if you have two webservers both looking to serve traffic on the same port, then only 1 of them is actually going to get that connection attempt.
+
+The solution to this is a reverse proxy. The reverse proxy listens on that port that is being forwarded, say ports 80 and 443 for http and https connections, and looks for the domain name attached to the connection attempt. Depending on which domain name it gets, it's going to forward that connection to a different port or webserver, say port 11000 for nextcloud, and port 8096 for jellyfin. This allows you to host multiple services that all require http/https traffic on a single machine, or host multiple services on different machines.
+
+So, to address the last part of your question, those services don't need to installed with docker, but the webserver does need to be set up to listen on ports other than port 80 or 443, because those ports need to be used by the reverse proxy.
+
+Make sense?
+  Score: 2
+  Created UTC: 2024-07-21 21:52:56
+
+Comment 3:
+  Author: ElevenNotes
+  Comment: &gt;  It's it possible? 
+
+Sure, you can run any proxy as a container if you like and proxy to your nodes IP and port where these services run. The reason everyone is using containers, is because containers make the whole lifecycle of an application very easy to manage. Also, you can scale infinite and have advanced networking features at your fingertips. If you are serious about selfhosting, then Docker is a skill you can’t afford to miss.
+  Score: 1
+  Created UTC: 2024-07-21 21:45:37
+
+Note: This post has only 3 comments at the time of scraping.

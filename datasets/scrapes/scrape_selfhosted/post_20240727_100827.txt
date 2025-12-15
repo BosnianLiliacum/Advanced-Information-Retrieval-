@@ -1,0 +1,60 @@
+Post Title: What do you guys wish existed for self hosting?
+Author: MoonsFanboy
+Score: 140
+URL: https://www.reddit.com/r/selfhosted/comments/1e6whxe/what_do_you_guys_wish_existed_for_self_hosting/
+Number of comments: 422
+Created UTC: 2024-07-19 05:52:51
+
+Post Content:
+Hello, I am looking for ideas to make to support the self hosting community. Give me anything that comes to your mind, don't be limited. Atleast someone is going to do it in future!
+
+Top 7 comments:
+Comment 1:
+  Author: Crowley723
+  Comment: More widely supported oauth / oidc authentication. 
+
+I want to have single sign on for ALL my applications.
+
+Edit: I use authelia but not every application supports using a sso provider. I don't want two signin portals that defeats the purpose of sso.
+I just want all my applications to support oauth.
+  Score: 214
+  Created UTC: 2024-07-19 07:29:00
+
+Comment 2:
+  Author: UnkwnNam3
+  Comment: Good working calendar with a modern web interface but also the possibility to sync via caldav and stuff like this. Yes, I know Nextcloud calendar exists, but that all feels like a taped together solution
+  Score: 72
+  Created UTC: 2024-07-19 09:08:50
+
+Comment 3:
+  Author: trexxeon
+  Comment: Something better than nextcloud.
+  Score: 130
+  Created UTC: 2024-07-19 08:27:27
+
+Comment 4:
+  Author: ghoarder
+  Comment: Crowdstrike
+  Score: 58
+  Created UTC: 2024-07-19 13:31:16
+
+Comment 5:
+  Author: johngizzard
+  Comment: Workout fitness tracker that isn't either super complicated or a glorified database
+  Score: 49
+  Created UTC: 2024-07-19 07:51:35
+
+Comment 6:
+  Author: simen64
+  Comment: A good google maps alternative
+  Score: 110
+  Created UTC: 2024-07-19 07:06:18
+
+Comment 7:
+  Author: MiakiCho
+  Comment: A crowd source cloud for storage mostly. Something like, if I give 1G of space from my hard drive, I would get 800MB from the cloud (crowld 🌪️). I agree there are a lot of variables to this like bandwidth, security, guarantee, regions etc. This will be a very complex project and if succeeded, we don't need cloud hosting to store our data.
+
+This is not self hosting but crowd hosting, like torrents but for private data.
+  Score: 46
+  Created UTC: 2024-07-19 07:28:26
+

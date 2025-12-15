@@ -1,0 +1,45 @@
+Post Title: Docker application local host access it as https.
+Author: Sdouze
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea0sbb/docker_application_local_host_access_it_as_https/
+Number of comments: 9
+Created UTC: 2024-07-23 06:25:18
+
+Post Content:
+Hello,
+
+I have an application running locally on docker.I access it localhost:port when I access it from my phone using my PC's ip I cannot access camera on that application because "Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP".
+
+How can I setup my local host as HTTPS.  
+Thank you in advance.
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Add HTTPS, it’s litteraly what the error message says:
+
+&gt; Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP
+
+Add a reverse proxy in front of your web applications. I recommend Traefik and then use Lets Encrypt DNS-01 challenge to get a free wildcard certificate. All you need is to own a domain. They come as low as 4$/year if you don’t care too much about style.
+  Score: 5
+  Created UTC: 2024-07-23 06:29:11
+
+Comment 2:
+  Author: drifter775
+  Comment: Caddy &amp; PiHole
+  Score: 1
+  Created UTC: 2024-07-24 08:32:33
+
+Comment 3:
+  Author: mosswill
+  Comment: I think you have a few options available : 
+
+- Use a free service like ngrok : It will create a public URL with HTTPS under ngrok's domain, for as long as you decide to keep it open.
+
+- Define a custom domain on your phone, that points to your computer. Then, have your computer serve the app over HTTPS using a self-signed cert for the custom domain you've set before. Note that you may have to manually add the self-signed certificate on your phone for it to work.
+
+- Send the camera's stream to a remote service (a stream aggregator of yours, or something that's Dropbox-alike), then read that stream from your phone.
+  Score: 1
+  Created UTC: 2024-07-23 06:37:14
+
+Note: This post has only 3 comments at the time of scraping.

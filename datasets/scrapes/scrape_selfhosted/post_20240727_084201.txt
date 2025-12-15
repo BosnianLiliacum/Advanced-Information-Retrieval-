@@ -1,0 +1,56 @@
+Post Title: Only getting 300Mbps on a 2.5Gbps link between my laptop and server.
+Author: Certain-Proposal-575
+Score: 16
+URL: https://www.reddit.com/r/selfhosted/comments/1ebxm4g/only_getting_300mbps_on_a_25gbps_link_between_my/
+Number of comments: 12
+Created UTC: 2024-07-25 15:23:21
+
+Post Content:
+I have an old Framework Laptop i5 1135G7 board I use as my proxmox server. As such the only IO it has are 4xUSB C so I use an external USB 2.5Gbps Ethernet adapter to connect it to the network. It connects directly to a 2.5Gbps switch which also has my desktop PC, NAS, and another socket wired into it, all 2.5Gbps capable.
+
+Proxmox reports a 2.5Gbps link, however I installed OpenSpeedTest in Docker on a Debian VM and when I connect to it with my PC or laptop (which also has a 2.5Gbe port), the max upload/download speed I can get is 300Mbps.
+
+I also installed OpenSpeedTest in Docker on my NAS and can easily sustain 2.5Gbps upload/download from the desktop and laptop. I have tried using a different network adapter and Cat6 patch cable to the server, but still the same issue.
+
+Is there a setting I have to configure in Proxmox to pass down full speed ethernet to the VMs?
+
+Or any other ideas? Cheers
+
+EDIT: On further investigation it seems only a 1Gbps link is being negotiated between the switch and adapter. Both ethtool and the switch LEDs indicate a 1Gbps link, but Proxmox does recognise it as a 2.5Gbe capable port. Not sure why only 1Gbps is being negotiated. And this doesn't explain why I get 300Mbps actual speed instead of 1Gbps.
+
+Double Edit: It appears to have been from a faulty USB port on the mainboard, and/or a faulty network adapter. Using another USB port with another Network adapter I can now get full 2.5Gbps up and down :)
+
+Top 5 comments:
+Comment 1:
+  Author: opssum
+  Comment: First things first: you sure we Talking about bits in Both cases?
+  Score: 10
+  Created UTC: 2024-07-25 15:38:23
+
+Comment 2:
+  Author: joost00719
+  Comment: Check if it's actually 300Mbps, and not 300MB/s. Because 300MB/s is about 2400Mbps. (small b = bit, big b = byte/8bits)
+
+edit: nvm, My lazy ass didn't read the whole thing before commenting.
+  Score: 5
+  Created UTC: 2024-07-25 16:27:13
+
+Comment 3:
+  Author: NotASauce
+  Comment: I had a similar issue with a USB to 2.5g ethernet adapter. It turns out that something wrong happened and the chip "died". it was still advertising 2.5g on both ends. My speeds were around 330mbps and I have verified this by plugging it on multiple PCs and changing cables. It just died, so I strongly suspect that is the same for you.
+  Score: 2
+  Created UTC: 2024-07-25 16:16:21
+
+Comment 4:
+  Author: Neomee
+  Comment: Try another cable.
+  Score: 2
+  Created UTC: 2024-07-25 16:30:11
+
+Comment 5:
+  Author: autogyrophilia
+  Comment: I recommend switching to a proper tool like iperf3.
+  Score: -1
+  Created UTC: 2024-07-25 16:28:10
+
+Note: This post has only 5 comments at the time of scraping.

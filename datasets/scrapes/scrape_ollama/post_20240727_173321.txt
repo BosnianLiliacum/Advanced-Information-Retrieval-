@@ -1,0 +1,55 @@
+Post Title: Not locally this time
+Author: ikiikiyedimi
+Score: 1
+URL: https://www.reddit.com/r/ollama/comments/1ebejoo/not_locally_this_time/
+Number of comments: 9
+Created UTC: 2024-07-24 22:27:11
+
+Post Content:
+There are a lot of tutorials on the internet on how to run the models locally. But, if I want to remotely access and talk to a model that I have running on my 1st system with my 2nd system, how can I do that? Does using LMStudio make it easier? 
+
+
+Top 4 comments:
+Comment 1:
+  Author: godev123
+  Comment: It’s in the docs.  
+
+“Pull” the model you want.  - Not same as “Run” command.   
+
+Set OLLAMA_HOST=0.0.0.0 
+
+Restart the Ollama service.  
+
+Done.   
+
+Got it set up just like that on an Ubuntu machine.    
+
+It’s still running it locally… but this exposes it from the outside.  
+
+Remember to open the firewall port 11434, or whatever port is configured via env vars.    https://github.com/ollama/ollama/blob/main/docs/faq.md
+
+Now there are 2 sets of endpoints running. Ollama and OpenAI-compliant (minus functions). The base url (/) is Ollama and I think the /v1 one is OpenAI. 
+  Score: 2
+  Created UTC: 2024-07-25 02:08:22
+
+Comment 2:
+  Author: SAPPHIR3ROS3
+  Comment: If you mean by terminal, the best option is ssh, if you want an interface oogabooga web ui it’s good, it allow to set a remote ollama server endpoint, after all ollama is a server type service so you just need to know what ip has that machine
+  Score: 1
+  Created UTC: 2024-07-24 23:13:06
+
+Comment 3:
+  Author: godev123
+  Comment: LM studio won’t make it any “easier”. It’s just different. 
+  Score: 1
+  Created UTC: 2024-07-25 02:14:57
+
+Comment 4:
+  Author: sassanix
+  Comment: Setup SSH and then use tailscale for security to connect to it.
+
+No need for port forwarding
+  Score: 1
+  Created UTC: 2024-07-25 13:24:57
+
+Note: This post has only 4 comments at the time of scraping.

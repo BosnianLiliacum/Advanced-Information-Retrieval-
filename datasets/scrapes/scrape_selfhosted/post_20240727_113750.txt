@@ -1,0 +1,71 @@
+Post Title: Need suggestions self hosted TV app platform 
+Author: ChmodPlusEx
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1ebl4nc/need_suggestions_self_hosted_tv_app_platform/
+Number of comments: 9
+Created UTC: 2024-07-25 03:39:31
+
+Post Content:
+I’ve got a smart TV which I had bought a couple of years ago for my parents. 
+
+I don’t use it much. Only my parents use it. 
+
+
+The issue is, besides Netflix Prime and YouTube, there are no other apps available. 
+
+I have subscriptions to multiple other streaming platforms such as Disney plus,HBO max etc which I would like my parents to have access to as well. 
+
+The tv has access to an App Store however the App Store is pretty outdated with no apps as well.
+
+Which is kinda of a waste
+
+Occasionally I’d purchase movies online as well for them which i transfer to a usb and plug it into the tv for the them to watch. 
+
+
+Any one has any suggestions where i can host a server locally which has all the apps preloaded, and where i can host purchased movies as well ?
+
+
+
+Ps: my parents are very non tech savvy 
+
+
+
+Top 5 comments:
+Comment 1:
+  Author: Historical_Pen_5178
+  Comment: Roku or chromecast?  
+
+I host a jellyfin server to serve the media. Roku has a jellyfin app.
+  Score: 5
+  Created UTC: 2024-07-25 04:18:39
+
+Comment 2:
+  Author: LavaCreeperBOSSB
+  Comment: Jellyfin
+  Score: 3
+  Created UTC: 2024-07-25 05:20:06
+
+Comment 3:
+  Author: Jackson_drake
+  Comment: Can you sideload apps? If you can u can checkout streamio, cloudstream, jellyfin/emby/plex or any iptv apps. Is there any app there for network share? Or is vlc available? If vlc is there then you can connect a windows/samba share via vlc ro play content.
+  Score: 1
+  Created UTC: 2024-07-25 19:28:13
+
+Comment 4:
+  Author: LeaderTrue7774
+  Comment: You say you want a local, but your needs say different.  
+As u/Historical_Pen_5178 suggests, a Chromecast, Roku, Firestick or similar is what you need.  
+This will plug into your TV and turn your "Outdated Smart TV" into an "Old but Updated Smart TV" with all he apps you will ever need.       
+If you really want a self hosted TV Platform, then you are looking for Plex or JellyFin.  
+You should note that these will not give you al, the Disney Plus, HBO Max, Netflix platforms etc.  
+These will create your own streaming app where you provide the content, via either legitimate or nefarious means.
+  Score: 1
+  Created UTC: 2024-07-26 04:02:45
+
+Comment 5:
+  Author: konspiracy
+  Comment: I havent tried jellyfin and use Plex for this. The only thing I dont like is how the user is forced to see Plexs free crap first, instead of my library.
+  Score: 1
+  Created UTC: 2024-07-25 04:28:25
+
+Note: This post has only 5 comments at the time of scraping.

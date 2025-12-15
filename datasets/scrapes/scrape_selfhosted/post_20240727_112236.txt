@@ -1,0 +1,34 @@
+Post Title: Home security/cctv on a (semi) budget?
+Author: M1ghty_boy
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ecjx8v/home_securitycctv_on_a_semi_budget/
+Number of comments: 5
+Created UTC: 2024-07-26 09:34:41
+
+Post Content:
+Hi all, There’s been a load of motorbike thefts in my area lately so everyone’s kinda alert, I’ve proposed the idea of putting together a self hosted cctv system for the garage and got the thumbs up. Any advice on how I could tackle this gracefully and on somewhat of a budget?
+
+Hardware wise, would a pi 4/5 suffice? Or would I be better off with a used nuc/tiny thinkcentre? 
+
+I’ve seen some neat deals for PoE cameras but I’ve never dealt with PoE before and it seems it could become a money pit..
+
+Software wise I thought something like frigate would be ideal but I’m not entirely certain if it’s the best option.
+
+One preference I was told is it’d be handy if it could be hooked up to a keypad, and a timed alarm if the code isn’t entered but I suggested that maybe it’d be better off to have that be integrated as a separate system, although if anyone knows whether this comes bundled with any alternative tools it’d be greatly appreciated 
+
+Many thanks
+
+Top 2 comments:
+Comment 1:
+  Author: leetnewb2
+  Comment: Do you already have a pi? Also, how many cameras do you plan to use?
+  Score: 1
+  Created UTC: 2024-07-26 17:00:21
+
+Comment 2:
+  Author: acbadam42
+  Comment: I use a mini PC with an i5 8500T to run Blue Iris on an instance of Windows 11. It has 16 GB of RAM and a 256 GB SSD with a 4 TB external 2 and 1/2-in drive for the footage. It is recording 4 reolink poe cameras along with a wyze cam v3 Wi-Fi camera. I bought the reolinks off of their refurbished eBay store for $33 each. I have them running through a 5 port POE switch.
+  Score: 1
+  Created UTC: 2024-07-26 21:25:35
+
+Note: This post has only 2 comments at the time of scraping.

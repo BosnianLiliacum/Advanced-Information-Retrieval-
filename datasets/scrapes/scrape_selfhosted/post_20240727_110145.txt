@@ -1,0 +1,42 @@
+Post Title: does number number of concurrent req can handle grows with CPU scaling vertically?
+Author: ScienceThink5060
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ndyg/does_number_number_of_concurrent_req_can_handle/
+Number of comments: 4
+Created UTC: 2024-07-15 05:55:45
+
+Post Content:
+does number number of concurrent req can handle grows with CPU scaling vertically?  
+I want to deploy my nodejs into production, I will be using pm2 and a 12 CPU VPS my question is is there any max concurrency limit on a VM or it grows with the CPU count, should I get smaller 1CPU ones or 12 CPU with pm2 is good?  
+Thanks
+
+Top 4 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: How much concurrency your system can handle depends on a lot of factors, the CPU is one of them, but not **the only one**. You also need to fine tune the host OS TCP or UDP settings to accomplish maximum concurrency. As well as it depends on your nodejs application and the entire network stack in between.
+  Score: 3
+  Created UTC: 2024-07-15 06:24:32
+
+Comment 2:
+  Author: Nice_Discussion_2408
+  Comment: https://github.com/denji/awesome-http-benchmark
+
+generally speaking, vertical for performance, horizontal for availability but you should rent by the hour and test it yourself.
+  Score: 1
+  Created UTC: 2024-07-15 06:09:29
+
+Comment 3:
+  Author: vermyx
+  Comment: There’s no way to tell without code. You need to know what your bottleneck will be. If your application for example is talking to a database, the number of requests may be irrelevant because record locking is your bottleneck.
+  Score: 1
+  Created UTC: 2024-07-15 07:46:43
+
+Comment 4:
+  Author: sparcv9
+  Comment: Extremely application-specific. Some things thread up well and will gain performance consuming all cores, some have single-threaded bottlenecks. Then you get to look into all the other supporting components and hardware interactions.
+
+Performance characterisation and tuning is a world unto itself.
+  Score: 1
+  Created UTC: 2024-07-15 13:08:02
+
+Note: This post has only 4 comments at the time of scraping.

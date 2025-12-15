@@ -1,0 +1,59 @@
+Post Title: Jellyfin Client Device for TrueNAS deployed Instance, NO ADS 
+Author: 97cweb
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e55h2y/jellyfin_client_device_for_truenas_deployed/
+Number of comments: 6
+Created UTC: 2024-07-17 01:13:53
+
+Post Content:
+Hello all
+
+I am looking for a device that I can plug into the back of a projector (or is a projector, am flexible) that can run some form of streaming frontend (like Jellyfin Media Player) and be run as a smart TV, but ONLY for Jellyfin. I do not want other apps easily available, nor do I want the initial loading screen that the Android TV and Amazon FireStick have.
+
+Short list of desires
+
+* On wake, be on Jellyfin screen
+* Sleep cuts to black preferred
+* No ads, no junk
+* Good performance, I have old DVDs and VHS in this, nothing 8k UHD with SuperSound TM technology. :) 
+* Not costing an arm and a leg. Let's say under $250 CAD as a soft limit
+* Able to stay in sleep mode for most of its life. 
+
+Please let me know if you need any more information. I am thinking this may be a NUC of some form, but I have not bought anything like that in over 5 years. TrueNas Server was the latest tech purchase, and the Jellyfin Server lives in it. I just need the client part now so I can throw the image at a wall, and have some speakers scattered/use projector audio to start
+
+THank you
+
+Top 4 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Definitely sounds like the job of any PC. Does your jellyfin server do transcoding?
+
+If not, then a NUC/ mini PC/ SFF PC with at least Intel 7-8th with Intel quick sync will do. 
+
+You want to ensure the iGPU can play whatever media format you have. 
+
+Hope that helps
+  Score: 3
+  Created UTC: 2024-07-17 01:32:22
+
+Comment 2:
+  Author: cyt0kinetic
+  Comment: There really are a fair number of options and it'll come down to taste and nitty gritty of the use case. To seed your search might want to look into ways people install Kodi. It has a more well traveled history and specs and performance are going to be fairly similar, if anything more intensive on the Kodi side. Jellyfin similarly has had app releases on a very large number of platforms.
+
+Another comment gets into the more technical bits. If there's transcoding, requirements for the projector, etc. I also agree some type of computer is best, if you have an old laptop or PC even start there, get a sense of the power you need, features you're looking for. I actually have the main server connected to our TV. The official Jellyfin forums also likely have suggestions and posts with different solutions people have tried.
+  Score: 1
+  Created UTC: 2024-07-17 06:06:12
+
+Comment 3:
+  Author: Square_Lawfulness_33
+  Comment: Kodi os jellyfin plugins
+  Score: 1
+  Created UTC: 2024-07-17 08:40:15
+
+Comment 4:
+  Author: pigers1986
+  Comment: have some NUC serve data  - but to HDMI on projector I'd put Amazon's Fire TV Stick 4K Max (2nd gen) connected via Wifi (tfu).
+  Score: 1
+  Created UTC: 2024-07-17 11:47:46
+
+Note: This post has only 4 comments at the time of scraping.

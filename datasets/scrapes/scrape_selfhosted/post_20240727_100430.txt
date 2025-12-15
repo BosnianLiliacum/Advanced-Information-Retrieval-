@@ -1,0 +1,21 @@
+Post Title: Any sort of Selfhosted 'trip advisor'/'google map restaurant review' app?
+Author: XxNerdAtHeartxX
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e73mmw/any_sort_of_selfhosted_trip_advisorgoogle_map/
+Number of comments: 1
+Created UTC: 2024-07-19 13:22:31
+
+Post Content:
+I've got a couple trips coming up in the future, and I want to start keeping track of where I go/what I do on those trips, and tie photos to each place we go to based on location data. While that second part I know Ill have to do manually, Id love to find some kind of app that uses OpenStreetMap to let me pin locations Ive been on a map and write small notes on each place and rate them
+
+Top 1 comments:
+Comment 1:
+  Author: Conscious-Fault-8800
+  Comment: Many photo Organisation softwares have a map view (because today, most Photos have embedded Position data) and let you add custom tags aswell as rating. 
+
+So you cpukd take a photo at each POI, and add the tag "Restaurants" and rate the Foto.
+Lateron you can filter for All Fotos with the Tag "Restaurants" and Display them on a map.
+  Score: 3
+  Created UTC: 2024-07-19 14:03:04
+
+Note: This post has only 1 comments at the time of scraping.

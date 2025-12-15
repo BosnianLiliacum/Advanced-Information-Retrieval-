@@ -1,0 +1,50 @@
+Post Title: Slow WireGuard speeds?
+Author: [deleted]
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e4jugc/slow_wireguard_speeds/
+Number of comments: 19
+Created UTC: 2024-07-16 08:56:00
+
+Post Content:
+I have just set up a Wireguard VPN on my home network and VPS cloud server as my home network is behind CGNAT and thus doesn't have a public IP. 
+
+I used [these](https://github.com/smbm/wireguard-cgnat-bypass?tab=readme-ov-file) configs, tweaked slightly for my usage.
+
+The VPS is 1 core, 1GB RAM, 1000/1000Mbps internet. My home wireguard client (the equivalent of the Pi in the above configs) is a Virtual Machine with 2GB RAM. My home internet is 500/30Mbps. 
+
+I realise my slow upload speed and the fact that all traffic goes through my home internet means I can never get more than 30Mbps when connected to Wireguard, but in reality I'm seeing much lower than that. When my phone is connected over 4G, I get 1Mbps (the 4G is much faster than that).
+
+I'm not sure what's slowing it down so much? Neither the VPS nor local VM are getting close to resource limits.
+
+Top 5 comments:
+Comment 1:
+  Author: Apprehensive_Can1098
+  Comment: Make sure your MTU is correct 
+  Score: 5
+  Created UTC: 2024-07-16 09:16:53
+
+Comment 2:
+  Author: Background-Piano-665
+  Comment: Try it using a laptop or desktop. I read before that phones, particularly Androids, have a limit to VPN speed since the Wireguard app does not have support from the kernel.
+  Score: 2
+  Created UTC: 2024-07-16 09:07:08
+
+Comment 3:
+  Author: flodes80
+  Comment: I had the same problem and no solution unfortunately, maybe a vps limitation: [https://www.reddit.com/r/selfhosted/comments/1895hc1/80\_lower\_bandwidth\_with\_wireguard/](https://www.reddit.com/r/selfhosted/comments/1895hc1/80_lower_bandwidth_with_wireguard/)
+  Score: 1
+  Created UTC: 2024-07-16 09:23:53
+
+Comment 4:
+  Author: pigers1986
+  Comment: I installed Tailscale on homeserver and VPS , told VPS to reverse proxy (caddy) connections to home via tailscale IP address. Smooth experience!
+  Score: 1
+  Created UTC: 2024-07-17 07:25:28
+
+Comment 5:
+  Author: bufandatl
+  Comment: 4G in theory maybe much faster than 1Mbps but that theory in reality it all depends on current clients connected to the cell and their traffic too so if you didn’t test during various times of the day you may have had a congested cell.
+  Score: -1
+  Created UTC: 2024-07-16 09:25:16
+
+Note: This post has only 5 comments at the time of scraping.

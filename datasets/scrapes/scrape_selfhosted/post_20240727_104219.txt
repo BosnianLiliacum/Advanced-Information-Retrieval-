@@ -1,0 +1,54 @@
+Post Title: NEW UPDATE: OneUptime - Open Source Datadog Alternative. 
+Author: OuPeaNut
+Score: 16
+URL: https://www.reddit.com/r/selfhosted/comments/1e4r4ma/new_update_oneuptime_open_source_datadog/
+Number of comments: 2
+Created UTC: 2024-07-16 15:11:38
+
+Post Content:
+**ABOUT ONEUPTIME:** OneUptime ([https://github.com/oneuptime/oneuptime](https://github.com/oneuptime/oneuptime)) is the open-source alternative to DataDog + [StausPage.io](http://StausPage.io) + UptimeRobot + Loggly + PagerDuty. It's 100% free and you can self-host it on your VM / server.
+
+OneUptime has Uptime Monitoring, Logs Management, Status Pages, Tracing, On Call Software, Incident Management and more all under one platform.
+
+**New Update - Reliability Copilot:** 
+
+OneUptime Copilot (currently PoC) is a tool that helps you improve your codebase automatically. Copilot can fix following issues automatically by scanning your codebase for issues and sending PR's automatically:
+
+* **Performance Issues**: Improve database queries, optimize code, reduce memory usage, decrease API response time, etc.
+* **Security Issues**: Fix security vulnerabilities, prevent SQL injection, XSS, CSRF, etc.
+* **Code Quality Issues**: Improve code readability, maintainability, and scalability. Improve comments, naming conventions, refactor code, etc.
+* **Error Handling Issues**: Improve error handling, exception handling, logging, etc.
+* **Testing Issues**: Improve test coverage, test quality, test performance, etc.
+* **Documentation Issues**: Improve documentation quality, comments, README, etc.
+
+You can set this up by using an LLM Model of your choice. Here are the docs to read more: 
+
+[https://oneuptime.com/docs/copilot/introduction](https://oneuptime.com/docs/copilot/introduction)
+
+This integrates in your CI/CD pipeline and no code is sent to us. 
+
+**Coming Soon  (end of August, 2024):** 
+
+**Better Error Tracking Product:** 
+
+You can track errors through traces, but we're working on a seperate error tracking view (something like Sentry), so you can replace senty. 
+
+**Log Monitors, Metric Monitors:**
+
+We're working on Log / Metric monitors, so you can set up alerts and create incidents for logs, metrics or traces. 
+
+**OPEN SOURCE COMMITMENT:** OneUptime is open source and free under Apache 2 license and always will be.
+
+  
+**REQUEST FOR FEEDBACK &amp; FEATURES:** This community has been kind to us. Thank you so much for all the feedback you've given us. This has helped make the softrware better. We're looking for more feedback as always. If you do have something in mind, please feel free to comment, talk to us, contribute. All of this goes a long way to make this software better for all of us to use.
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: LeonidaByrum60
+  Comment: This sounds like an incredible tool. For documentation issues, making "how-to" videos and visual guides can be insanely helpful. I use Guidde for creating quick, informative videos that my team can refer to anytime. It saves us time and ensures everyone is on the same page. Keep up the great work with OneUptime!
+  Score: 2
+  Created UTC: 2024-07-17 09:20:48
+
+Note: This post has only 1 comments at the time of scraping.

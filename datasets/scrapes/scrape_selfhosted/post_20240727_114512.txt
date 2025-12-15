@@ -1,0 +1,47 @@
+Post Title: Fully open source, selfhostable &amp; cookie-free alternative to Google Analytics (and Fathom, Plausible, Simple Analytics and others)
+Author: Sensiduct
+Score: 15
+URL: https://swetrix.com
+Number of comments: 3
+Created UTC: 2024-07-24 16:07:45
+
+Post Content:
+[This post has no text content]
+
+Top 2 comments:
+Comment 1:
+  Author: Sensiduct
+  Comment: Hello everyone,
+
+I posted here [a year ago](https://www.reddit.com/r/selfhosted/comments/11gayuz/fully_opensource_cookiefree_and_privacy_focused/) about Swetrix, which is a self-hostable, fully open source and privacy-focused Google Analytics alternative.
+
+Since then we have been working a lot on Swetrix version 3 and are happy to present it to you! As well as many killer features such as site speed monitoring, it now includes:
+
+* Individual session analysis &amp; page flows.
+* Marketing funnel support.
+* Client-side error tracking.
+* Custom dimensions for custom events.
+* Advanced website performance monitoring with load time distribution metrics and the ability to select aggregation functions.
+* arm64 support and much more, full changelog is available here: [https://swetrix.com/blog/selfhosted-v3](https://swetrix.com/blog/selfhosted-v3)
+
+I've also implemented your feedback from the previous post (many people complained that it was hard to spin up an instance of Swetrix), so this time it's much more polished and usable!
+
+I'm very happy to be able to make an impact on the open source community with this project and to see this product being used by both the self-hosting community as well as some cloud users.
+
+So any feedback, criticism or feature requests will be greatly appreciated!
+
+The source code is available at [https://github.com/swetrix/swetrix-api](https://github.com/swetrix/swetrix-api) (contributions are welcome 🙂).
+
+The selfhosting instructions can be found at [https://docs.swetrix.com/selfhosting/how-to](https://docs.swetrix.com/selfhosting/how-to)
+  Score: 6
+  Created UTC: 2024-07-24 16:08:45
+
+Comment 2:
+  Author: Ok_Prune_2003
+  Comment: Hey You can considered trying out Simple Analytics , a great alternative to google analytics . It’s pretty lit. Its free and Simple.   
+  
+Check it out yourself: [https://www.simpleanalytics.com/](https://www.simpleanalytics.com/)
+  Score: 1
+  Created UTC: 2024-07-26 12:51:49
+
+Note: This post has only 2 comments at the time of scraping.

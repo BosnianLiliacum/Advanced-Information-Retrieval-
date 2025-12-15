@@ -1,0 +1,40 @@
+Post Title: I made a chess opening explorer site in Flask which shows you pages from the wiki for each opening
+Author: haddock420
+Score: 19
+URL: https://www.reddit.com/r/Python/comments/1ealzuv/i_made_a_chess_opening_explorer_site_in_flask/
+Number of comments: 1
+Created UTC: 2024-07-23 23:06:47
+
+Post Content:
+Hi everyone,
+
+You can play it here: https://jimmyrustles.com/chessopeningtheory
+
+Github: https://github.com/sgriffin53/openingexplorer_app
+
+**What My Project Does**
+
+This is a hobby project I made based on an old python GUI desktop script I made a few years ago. The idea is you can play openings on the board, and it'll update with the wiki article and some other stats (winning percentages, engine analysis, historical games) as you play through the openings.
+
+It's intended to be a tool to improve your opening knowledge at chess.
+
+**Target Audience (e.g., Is it meant for production, just a toy project, etc.**
+
+This is aimed at any chess enthusiasts who are interested in studying openings. I'm hoping it can be a useful tool for improvement.
+
+**Comparison (A brief comparison explaining how it differs from existing alternatives.)**
+
+The main comparison to this is the Lichess opening explorer, which is similar in many ways. The Lichess opening explorer gives you a page from the wiki (though a shortened version compared to mine) and gives the responses based on winning percentages.
+
+Mine is different in that it shows you the full wiki page complete with diagrams and annotations, compared to the shortened versions offered by Lichess. Mine also gives you short wiki descriptions for each popular response instead of listing them by winning chances.
+
+Let me know what you think of this project. It's just a small project I made for my website, but I'm hoping it can be a useful chess tool.
+
+Top 1 comments:
+Comment 1:
+  Author: HelpfulFriendlyOne
+  Comment: Doesn't work on phone.
+  Score: 3
+  Created UTC: 2024-07-24 03:42:34
+
+Note: This post has only 1 comments at the time of scraping.

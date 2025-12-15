@@ -1,0 +1,78 @@
+Post Title: Need help about vaultwarden
+Author: Lurchi87
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb39j9/need_help_about_vaultwarden/
+Number of comments: 10
+Created UTC: 2024-07-24 14:45:45
+
+Post Content:
+Dear community,
+
+I am trying to selfhost vaultwarden on my server in my local network (only ip-based, no domain). Vaultwarden is running together with nginx proxy manager (npm) in a docker stack. 
+I am unable to access vaultwarden using SSL. I created self signed certificates and uploaded them to npm but there is no ssl connection possible. 
+Did anyone here manage to run vaultwarden in the constellation described above?
+
+Thanks for any help!
+
+Top 3 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: Why avoid using domains? It would greatly simplify this.
+  Score: 3
+  Created UTC: 2024-07-24 14:56:56
+
+Comment 2:
+  Author: No-Aspect-273
+  Comment: Can you provide the output of docker inspect for vaultwarden?
+  Score: 2
+  Created UTC: 2024-07-24 14:52:08
+
+Comment 3:
+  Author: meegosgift
+  Comment: you can use npm to require the SSL cert. Then put these in the custom config.
+
+location / {
+
+proxy\_pass http://\[IP\]:\[port\];
+
+proxy\_set\_header Host $host;
+
+proxy\_set\_header X-Real-IP $remote\_addr;
+
+proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for;
+
+proxy\_set\_header X-Forwarded-Proto $scheme;
+
+  }
+
+  
+
+  location /notifications/hub {
+
+proxy\_pass http://\[IP\]:\[port\];
+
+proxy\_set\_header Upgrade $http\_upgrade;
+
+proxy\_set\_header Connection "upgrade";
+
+  }
+
+  
+
+  location /notifications/hub/negotiate {
+
+proxy\_set\_header Host $host;
+
+proxy\_set\_header X-Real-IP $remote\_addr;
+
+proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for;
+
+proxy\_set\_header X-Forwarded-Proto $scheme;
+
+proxy\_pass http://\[IP\]:\[port\];
+
+  }
+  Score: 1
+  Created UTC: 2024-07-25 06:44:43
+
+Note: This post has only 3 comments at the time of scraping.

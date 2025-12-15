@@ -1,0 +1,20 @@
+Post Title: Docker behind reverse proxy slow and with server errors 502
+Author: Salty_Pirate_3358
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebsrh7/docker_behind_reverse_proxy_slow_and_with_server/
+Number of comments: 6
+Created UTC: 2024-07-25 11:42:27
+
+Post Content:
+Got some problems and don't know where. I tested local distribution speedy and without problems. Tried SWAG and NGINX still same problem. Cloudflare setting still same problem. Cloudflare tunel all without problems. When I load the site in console I got 522 errors that something cannot load because server send 522. When I load site and hit 2 or 3 refresh I am able to work with site but got still some errors. Don't know what to try. Is it possible to have problem in router? I setup only port forward for  reverse proxy. I got Asus router. Or maybe ISP? I have also static IP. And also I am on Unraid server. Thanks for help guys.
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: AsleepOnTheTrain
+  Comment: I'm having the same issues on Proxmox. It's very hit or miss!
+  Score: 1
+  Created UTC: 2024-07-25 23:18:43
+
+Note: This post has only 1 comments at the time of scraping.

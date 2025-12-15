@@ -1,0 +1,38 @@
+Post Title: Using Authentik as reverse proxy?
+Author: Spaceman_Splff
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eacm4y/using_authentik_as_reverse_proxy/
+Number of comments: 5
+Created UTC: 2024-07-23 16:45:17
+
+Post Content:
+Hello,
+
+Currently I use adguard, nginx proxy manager, and authentik to provide authentication for my internal apps. It works great for the most part. DNS in adguard points to the nginxPM, which then has custom configuration to point to authentik. Authentik then has applications set up for proxy which send its down to the app itself. 
+
+  
+The issue im trying to solve (or create), is nginx proxy manager is taking about 20-30 minutes to completely spin up now. I have about 30 entries. Its persisted like this through multiple updates. I would like to use zoraxy but it doesnt support the custom configurations to send to authentik. 
+
+  
+It got me thinking if i could bypass nginxpm and send the traffic directly to authentik to act as the reverse proxy. Is that a function authentik can provide? It seems like it should but I havent been able to find anything explicitly showing that set up. If so, how would cert update through letsencrypt work? I imagine it would be the cert in Advanced protocol settings for the provider.
+
+Top 3 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 4
+  Created UTC: 2024-07-23 17:09:13
+
+Comment 2:
+  Author: elh0mbre
+  Comment: I would dig into why NPM is taking 20-30 minutes to spin up before switching.
+  Score: 1
+  Created UTC: 2024-07-24 00:43:33
+
+Comment 3:
+  Author: Innocent__Rain
+  Comment: NPM taking that long is absolutly not normal, i have about the same entries and my docker container takes about 20 seconds
+  Score: 1
+  Created UTC: 2024-07-24 09:06:53
+
+Note: This post has only 3 comments at the time of scraping.

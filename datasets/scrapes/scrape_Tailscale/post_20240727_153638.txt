@@ -1,0 +1,22 @@
+Post Title: Has anyone paid by Apple Pay?
+Author: chaplin2
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1eb8sz3/has_anyone_paid_by_apple_pay/
+Number of comments: 1
+Created UTC: 2024-07-24 18:30:52
+
+Post Content:
+On iOS or iPadOS, is it possible to subscribe to mullvad VPN with Apple Pay?
+
+With Mullvad app itself, it’s one click via Apple Pay. 
+
+Top 1 comments:
+Comment 1:
+  Author: tycoonlover1359
+  Comment: No, there's no function to pay for any Tailscale subscription or add-on through the iOS (or Android, for that matter) app.
+
+Moreover, all billing is handled in the "Billing" tab under settings within the admin page.
+  Score: 1
+  Created UTC: 2024-07-24 21:52:02
+
+Note: This post has only 1 comments at the time of scraping.

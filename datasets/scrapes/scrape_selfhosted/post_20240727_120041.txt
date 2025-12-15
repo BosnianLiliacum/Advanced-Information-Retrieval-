@@ -1,0 +1,41 @@
+Post Title: Seeking recommendations
+Author: Ohayemin
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eabzvw/seeking_recommendations/
+Number of comments: 4
+Created UTC: 2024-07-23 16:20:19
+
+Post Content:
+I have a seemingly simple problem, but the best way forward totally eludes me!
+
+At work, we use Survey Monkey as a method of having contractors agree terms. there are a number of pages with images and text, first page asks their name and the name of their contact at the company, all each person has to do at the bottom, is click "I agree" and it moves to the next section. At the end, they get a thank you message and it's done. While it sounds an elongated process, and a single document with an agreement sign off sounds easier, given the information they are agreeing too, the company wants to make sure people actually read and understand the agreement. 
+
+The issue with this is that Survey Monkey has restricted numbers of users and it's not great at outputting the replies the way the staff need it to. 
+
+  
+So I had 2 trains of thought, as a hobbyist "developer" I'd setup something like LimeSurvey to handle it instead. I'll host it on my development server and all will be rosy. However it turns out LimeSurvey hasn't aged very well and it's missing some handy features. So I looked at other survey packages, there are heaps! However they all seem to use Docker and the likes to publish the site, while I LOVE that idea, I don't have the time to invest to set it up. I installed Docker on my VPS and have spent the entire day getting several of these applications to try and work, to no avail. 
+
+So I moved away from the idea of survey software, lets look at some Docusign style open source project, like above though, there are some amazing projects out there, but they all seem to use Docker. 
+
+In a bid to go a little old school, I decided to look at Wordpress plugins instead, much more comfortable in this arena. :D However all the form builders, survey plugins etc are great, but don't really allow for large bodies of text to precede an agreement radio button, instead opting for short descriptive question style text. 
+
+So, what I had hoped would be a simple play session on my dev server this afternoon, ended up with me realising that I should have kept up with current development trends and jumped on the Docker band wagon sooner!
+
+Besides me finding the time to level up, does anyone have any ideas, or alternative approaches? 
+
+Top 2 comments:
+Comment 1:
+  Author: KillerTic
+  Comment: No but I can share my Docker guide I wrote: [https://nerdyarticles.com/docker-101/](https://nerdyarticles.com/docker-101/)
+
+Maybe that makes your level up process a little easier
+  Score: 2
+  Created UTC: 2024-07-23 17:52:57
+
+Comment 2:
+  Author: opinionsnotmine
+  Comment: [https://docassemble.org/](https://docassemble.org/)
+  Score: 2
+  Created UTC: 2024-07-24 02:00:30
+
+Note: This post has only 2 comments at the time of scraping.

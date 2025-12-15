@@ -1,0 +1,78 @@
+Post Title: Seeking Self-Hosted Solution for WhatsApp to Safely Store Notes, Images, Videos, and Documents – Any Suggestions?
+Author: boosterhq
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e5iqwv/seeking_selfhosted_solution_for_whatsapp_to/
+Number of comments: 15
+Created UTC: 2024-07-17 13:52:46
+
+Post Content:
+Currently, I rely heavily on WhatsApp to store my notes, images, videos, and documents. I'm looking for a solution that is easy to access, search, and share with others.
+
+Top 7 comments:
+Comment 1:
+  Author: flicman
+  Comment: You use a chat program to store video? How does that work?
+  Score: 16
+  Created UTC: 2024-07-17 13:59:00
+
+Comment 2:
+  Author: ItsPwn
+  Comment: Well if you got a spare computer you can repurpose it
+
+Go with Synology DSM for your needs it's a NAS os
+All in app store (package center)
+
+Has chat server
+Has media storage
+Has note station along with phone apps for all of em
+
+
+Go to releases for USB image,download the zip unpack ,flash the .img to a flashdrive ~4 GB using etcher and boot it 
+-i would build around rs3622 for most hardware 
+
+- and after you do the initial next next next it's a headless server which you can manage via webpage that the url be displayed ok the monitor once successfully booted
+
+https://github.com/AuxXxilium/arc
+
+/r/xpenology
+  Score: 4
+  Created UTC: 2024-07-17 14:15:27
+
+Comment 3:
+  Author: tonym128
+  Comment: I saw NextCloud mentioned, which is a good all in one choice. 
+
+Personally I use Immich for photos and videos and OwnCloud for files. 
+
+SeaFile is an alternative for file storage, but I migrated to OwnCloud after using it for a while. 
+
+You can setup any of those to expose the service over the internet and they have built in sharing capabilities, if you're more tech savvy you could expose the share url via a proxy like Traefik, Nginx or Caddy (my preference in order)
+  Score: 3
+  Created UTC: 2024-07-17 15:33:00
+
+Comment 4:
+  Author: fuuman1
+  Comment: Nextcloud.
+  Score: 6
+  Created UTC: 2024-07-17 14:31:51
+
+Comment 5:
+  Author: MarianaPetrey71
+  Comment: For a self-hosted solution, you might want to try using Nextcloud. It's great for storing and managing notes, images, videos, and documents and offers solid sharing and search functionalities. I also create visual documentation and how-to videos quickly using Guidde, which might be helpful if you need to show someone how to use any part of your new setup.
+  Score: 2
+  Created UTC: 2024-07-18 02:01:44
+
+Comment 6:
+  Author: Self_toasted
+  Comment: I don't know if this'll work on Apple devices but on Android, all that WhatsApp data is saved to folders on the phone. I sync those folders with my Nextcloud instance and Nextcloud is itself backed up in two places. It works really well!
+
+I do the same with pretty much any app that saves shit to folders on my phone.
+  Score: 1
+  Created UTC: 2024-07-17 16:47:55
+
+Comment 7:
+  Author: ghoarder
+  Comment: FTP, or since you said safely maybe sFTP.
+  Score: 0
+  Created UTC: 2024-07-17 14:38:53
+

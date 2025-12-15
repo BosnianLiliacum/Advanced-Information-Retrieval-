@@ -1,0 +1,30 @@
+Post Title: Any self hosted bookmark solutions?
+Author: glizzygravy
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebm9q1/any_self_hosted_bookmark_solutions/
+Number of comments: 6
+Created UTC: 2024-07-25 04:44:11
+
+Post Content:
+I switched browsers the other day and imported my bookmarks, thought about how valuable they are and was wondering if anyone had any kind of automated backup solution for theirs?
+
+Top 3 comments:
+Comment 1:
+  Author: Fresh_Feesh
+  Comment: Something [like these](https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#bookmarks-and-link-sharing), maybe?
+  Score: 3
+  Created UTC: 2024-07-25 04:56:09
+
+Comment 2:
+  Author: jondonessa
+  Comment: I am not sure whether this is what you want but you can try raindrop for bookmark management. It is fully open source at github. I am using hosted version by the company, however you can host yourself [https://github.com/raindropio](https://github.com/raindropio)
+  Score: 1
+  Created UTC: 2024-07-25 21:53:05
+
+Comment 3:
+  Author: trs_80
+  Comment: I stopped thinking in terms of "bookmarks" and instead started keeping URLs directly in my notes, where they have relevant context.  Personally I use Orgmode (because I think it is superior) but there is also Markdown, or other options.
+  Score: 1
+  Created UTC: 2024-07-26 02:20:55
+
+Note: This post has only 3 comments at the time of scraping.

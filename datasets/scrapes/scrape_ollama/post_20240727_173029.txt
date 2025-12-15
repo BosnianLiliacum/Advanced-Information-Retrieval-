@@ -1,0 +1,120 @@
+Post Title: Introducing Belullama: An All-in-One AI Application Bundle for Local Deployment
+Author: RIP26770
+Score: 41
+URL: https://www.reddit.com/r/ollama/comments/1ec5nho/introducing_belullama_an_allinone_ai_application/
+Number of comments: 18
+Created UTC: 2024-07-25 20:50:55
+
+Post Content:
+# 
+
+Hey Reddit!
+
+[Belullama](https://preview.redd.it/9bojumwc9qed1.jpg?width=1344&amp;format=pjpg&amp;auto=webp&amp;s=6aa80641dddbdec96acbf8218168484bb76bacf8)
+
+I'm excited to announce the release of Belullama, a comprehensive AI application that bundles the latest versions of Ollama, Open WebUI, and Automatic1111 (Stable Diffusion WebUI) into a single, easy-to-use package.
+
+🔗 Website: [https://belullama.vercel.app/](https://belullama.vercel.app/)
+
+🔗 GitHub Repository: [https://github.com/ai-joe-git/Belullama](https://github.com/ai-joe-git/Belullama)
+
+🚀 Key Features:
+
+* All-in-One AI Platform: Integrates Ollama, Open WebUI, and Automatic1111
+* Easy Setup: Simple installer script for quick deployment
+* Conversational AI: Create and manage chatbots with ease
+* Image Generation: Use Stable Diffusion models through Automatic1111 WebUI
+* User-Friendly Interface: Intuitive interaction with language models
+* Offline Operation: Run entirely on your local machine for privacy and security
+* Extensibility: Customize to meet your specific needs
+
+💻 Installation:
+
+Stand-alone installation is as simple as running:
+
+\`\`\`
+
+curl -s [https://raw.githubusercontent.com/ai-joe-git/Belullama/main/belullama\_installer.sh](https://raw.githubusercontent.com/ai-joe-git/Belullama/main/belullama_installer.sh) | sudo bash
+
+\`\`\`
+
+We also offer an optional installation for CasaOS users.
+
+🤔 Why Belullama?
+
+Belullama aims to simplify the process of setting up and using powerful AI tools locally. Whether you're a developer, researcher, or AI enthusiast, Belullama provides a streamlined way to experiment with large language models and image generation.
+
+We welcome contributions, feedback, and feature requests. Check out our GitHub repository for more details and to get started!
+
+Let me know if you have any questions. I'm excited to see what the community builds with Belullama!Introducing Belullama: An All-in-One AI Application Bundle for Local Deployment
+
+Top 7 comments:
+Comment 1:
+  Author: AdHominemMeansULost
+  Comment: This looks great!
+
+no windows support only through wsl?
+  Score: 5
+  Created UTC: 2024-07-25 21:05:01
+
+Comment 2:
+  Author: tabletuser_blogspot
+  Comment: Thanks,
+
+Just installed. Here are some notes: 
+
+Ollama issue:
+
+Can't complete install if you have ollama already installed. This should be enough to complete install [https://github.com/ollama/ollama/blob/main/docs/linux.md](https://github.com/ollama/ollama/blob/main/docs/linux.md)
+
+    sudo systemctl stop ollama
+    sudo systemctl disable ollama
+
+Install went fine and I ended up with v0.2.7 then I ran ollama install/update script
+
+`curl -fsSL` [`https://ollama.com/install.sh`](https://ollama.com/install.sh) `| sh`
+
+That got me to the latest version v0.3.0 
+
+Either way I did lose connection to all downloaded models. Later I'll figure out how to link the ollama Docker install to my models (usr/share/ollama/.ollama/models) so I don't have to re-download each model.
+
+WebUI issue:
+
+Didn't recognize my login, so I just created using same info:
+
+Stable Diffusion issue:
+
+My system is running GTX 1070 8gb Vram but SD not utilizing when I ran first test. Regular Automatic1111 SD install works great with my GTX 1070 so I'm guessing the Docker just isn't talking with my OS to find the GPU. I'll figure that out later also. I didn't have SD already install on this system (Kubuntu 24.04). Maybe I'll wipe and try a fresh clean install if someone comments that they had everything working first install. Either way, love it !!!!
+  Score: 4
+  Created UTC: 2024-07-26 02:37:38
+
+Comment 3:
+  Author: sanitarypth
+  Comment: Do you have a docker container build?
+  Score: 2
+  Created UTC: 2024-07-25 22:14:29
+
+Comment 4:
+  Author: anujagg
+  Comment: How does it different from ollama + open-webui? I have been using the same for quite some time and would like to explore this if there are extra benefits. Thanks.
+  Score: 2
+  Created UTC: 2024-07-26 02:08:42
+
+Comment 5:
+  Author: geringonco
+  Comment: No ROCm?
+  Score: 2
+  Created UTC: 2024-07-26 02:38:14
+
+Comment 6:
+  Author: zanaharibe
+  Comment: Wonderful!
+  Score: 2
+  Created UTC: 2024-07-26 13:50:47
+
+Comment 7:
+  Author: Jamb9876
+  Comment: Wish it would work on my m2 Mac but such is life.
+  Score: 1
+  Created UTC: 2024-07-26 03:38:22
+

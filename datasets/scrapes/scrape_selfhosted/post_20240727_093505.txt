@@ -1,0 +1,48 @@
+Post Title: Email Proxy Recommendations
+Author: Successful_Ad7206
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8sjnb/email_proxy_recommendations/
+Number of comments: 9
+Created UTC: 2024-07-21 18:09:59
+
+Post Content:
+Hi. I’m looking for a self hosted solution for offloading a paid email account. I only have 50Mb of space, and unfortunately I cannot change that, but I really need to keep the address. 
+Could someone recommend me a solution where my homelab server would download all emails from an IMAP account and delete them from there? And maybe forward all emails I send, to have a complete utility and only use one address? 
+
+Thanks a lot! 
+
+Top 5 comments:
+Comment 1:
+  Author: TechnophileDude
+  Comment: If you use something like POP on thunderbird or a similar client it should download and delete by default and you can use it to send emails too.
+  Score: 3
+  Created UTC: 2024-07-21 18:24:48
+
+Comment 2:
+  Author: 399ddf95
+  Comment: The old-school answer is [fetchmail](https://www.fetchmail.info/)
+  Score: 3
+  Created UTC: 2024-07-21 20:48:46
+
+Comment 3:
+  Author: FangLeone2526
+  Comment: Do you own the domain the email is on? If so, you could just switch email providers and give the new one the domain. If not, that's rough, and I hope you do find a proxying service.
+  Score: 2
+  Created UTC: 2024-07-21 18:19:51
+
+Comment 4:
+  Author: dapperwhippersnapper
+  Comment: This is what you want:  
+[https://thehelpfulidiot.com/making-an-automatic-email-backup](https://thehelpfulidiot.com/making-an-automatic-email-backup)
+  Score: 2
+  Created UTC: 2024-07-21 19:15:30
+
+Comment 5:
+  Author: adamshand
+  Comment: Setup an imap server (dovecot, stalwart etc) and then run one the imap sync tools (offlineimap, imapsync) to copy mail from the public server to your imap server every x minutes.  
+
+ Setup your mail client to use your imap server to read mail, but to send email via your old hosts smtp (if you want to continue to use the old email). 
+  Score: 1
+  Created UTC: 2024-07-21 22:24:49
+
+Note: This post has only 5 comments at the time of scraping.

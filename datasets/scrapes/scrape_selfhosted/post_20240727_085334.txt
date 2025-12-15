@@ -1,0 +1,46 @@
+Post Title: Hardware recommendations for home-server
+Author: Canyon9055
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eb7ztn/hardware_recommendations_for_homeserver/
+Number of comments: 4
+Created UTC: 2024-07-24 17:57:59
+
+Post Content:
+I currently own a raspberry pi 4, but since I found it to be too limited for my selfhosting needs, I'm looking into upgrading to better hardware.
+
+This is what I'm planning on hosting:
+
+- File storage with raid 1 (two drives)
+- Nextcloud (barely usable on rpi4)
+- Jellyfin mediaserver (working on rpi4 with no transcoding)
+- tvheadend (working on rpi4 with no transcoding)
+- paperless-ngx for document management (with OCR)
+- Immich for photo management (with local ai features for subject detection, and so on)
+
+I'm planning on connecting to my home network via wireguard (supported by router) and to not expose anything publically. I was thinking about upgrading to an RPI5, but the h264 hardware decoder seems to have been removed, and I'm not sure if the performance difference is as significant as I want it to be. 
+I was also thinking about going with a more high powered arm device like a banana pie or something like an Intel Nuc or synology, but I can't decide on what would suit me best. I don't mind a technical challenge and am not necessarily looking for something that "just works".
+
+Unfortunately, electricity is quite expensive where I live, so a low idle power draw is important to me. I'd appreciate any suggestions!
+
+Top 2 comments:
+Comment 1:
+  Author: aetherspoon
+  Comment: What about something like the Aoostar N100 PC? https://aoostar.com/products/aoostar-r1-2bay-nas-intel-n100-mini-pc-with-w11-pro-lpddr4-16gb-ram-512gb-ssd
+
+Might be a bit pricey, but it sounds almost exactly like what you're looking for.
+  Score: 2
+  Created UTC: 2024-07-24 18:01:01
+
+Comment 2:
+  Author: the_matrix_hyena
+  Comment: I switched from Pi 4 to Lenovo ThinkCentre M920 SFF. I felt it's kinda overkill for me. My rent covers electricity, so I really never bothered. Just got the PC for CA$200 and bought 2x 8GB DDR4 from the marketplace. 
+
+
+I switched to proxmox and I'm in love. 
+
+
+On my Pi 4, I was running arr stack including jellyfin with transcoding, worked like a charm. I was running Ubuntu Server with Docker for all the services.
+  Score: 2
+  Created UTC: 2024-07-24 18:10:24
+
+Note: This post has only 2 comments at the time of scraping.

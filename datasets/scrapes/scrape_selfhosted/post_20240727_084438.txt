@@ -1,0 +1,34 @@
+Post Title: anyone running a NAS on debian testing?
+Author: paranoid-alkaloid
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebsbsy/anyone_running_a_nas_on_debian_testing/
+Number of comments: 2
+Created UTC: 2024-07-25 11:17:28
+
+Post Content:
+Hi,
+
+I use Debian stable on my NAS. I'm thinking of moving to testing (either in the coming months, or during the next stable upgrade) so that I'll be done with major version upgrades once and for all.
+
+I don't serve any "customer" traffic, only my own services, mostly within docker containers.
+
+I'm wondering if using testing on a NAS is a bad idea? I use testing on my desktop and laptop and it's 99% fine, with the (very) occasional broken package or bug.
+
+Thanks.
+
+Top 2 comments:
+Comment 1:
+  Author: Bubble-be
+  Comment: I have been running testing since forever - first as a VM with passthrough on ESXi and then on bare metal with dockers and mergerfs.
+
+Recently I had some unexplained lock ups, which could as well have been something hardware related. I never really found out and they are no longer occuring so that's good.
+  Score: 1
+  Created UTC: 2024-07-25 11:31:56
+
+Comment 2:
+  Author: userInvadil
+  Comment: The question is, what are you in need that stable is not enough?
+  Score: 1
+  Created UTC: 2024-07-25 18:54:50
+
+Note: This post has only 2 comments at the time of scraping.

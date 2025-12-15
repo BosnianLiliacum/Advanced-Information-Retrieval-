@@ -1,0 +1,80 @@
+Post Title: Synology vs NextCloud?
+Author: LunarAlias17
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e7356j/synology_vs_nextcloud/
+Number of comments: 12
+Created UTC: 2024-07-19 12:59:24
+
+Post Content:
+Hi all, I'm looking to host my own private cloud storage and deGoogle. I care a lot about privacy and so don't want to pay a company to host my files, but I'm also too busy to frequently maintain things if they break. I don't need a ton of space (maybe 1TB max). I've heard of Synology and NextCloud as the two best options for self-hosting.
+
+Anyone work with either? Do you know which is more maintenance free? Thanks!
+
+Top 7 comments:
+Comment 1:
+  Author: Luppiz
+  Comment: I would say synology is more plug and play while nextcloud will require you to have some server knowledge to set it up.
+
+If you are less tech savvy and just want your own private cloud I would say go for synology otherwise NextCloud is a fine choice.
+  Score: 7
+  Created UTC: 2024-07-19 13:22:23
+
+Comment 2:
+  Author: Weigang_Music
+  Comment: My nextcloud is on my synology...
+  Score: 3
+  Created UTC: 2024-07-19 13:28:45
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: Just want to clarify something 
+
+Synology is a company that offers products such as machines that have storage management, NAS and selfhosting service capabilities. 
+
+With their products/machines they offer free of charge applications. Such as a Synology Photos which allows you to backup/ transfer your photos to their product/machine (that you will buy)
+
+
+Nextcloud is a FOSS (free open source software) that you can install on any machine. 
+
+Both are good options for yourself but the clarification that I wanted to provide is, Synology you need to purchase their product/machine before you can use their applications (as their application is closed source)
+
+Nextcloud can be run on any hardware you currently have available. This also includes Synology hardware/ their product if you decide to purchase it. As in you aren't tied to Synology applications if you purchase a Synology device but most people use it because it comes free of change with their products and provides and all in one solution/ plug and play experience. 
+
+&gt;Do you know which is more maintenance free?
+
+Synology is more maintenance free if you decide to purchase their product. But of course this comes at a premium cost. Not saying that is a bad thing, just stating the fact of what you are paying for which is a plug and play experience with good support. 
+
+I personally like to build my own machine/ purchase cheaper hardware but that is because I like to maintain my own systems. And understand I'm saving money but with the trade off of my time. 
+
+Hope that helps.
+  Score: 3
+  Created UTC: 2024-07-19 13:31:52
+
+Comment 4:
+  Author: Vegetable_Contract94
+  Comment: I setup nextcloud, owncloud and finally bought Synology. Because data is very important and even I work in tech, I dont really have much effort to maintain the updates, the security things, even connection and setups... So I decided to released my brain with a Synology device. It's not measured but I believe it also reduce electricity cost compare to a PC running 24/7.
+  Score: 2
+  Created UTC: 2024-07-19 16:33:17
+
+Comment 5:
+  Author: bufandatl
+  Comment: Synology is a NAS manufacturer they run DSM on their NAS and you can run docker containers like Nextcloud on it. So there is not really a versus.
+  Score: 2
+  Created UTC: 2024-07-19 20:10:00
+
+Comment 6:
+  Author: rorykoehler
+  Comment: Huge Synology fan here. I don’t want to spend my free time maintaining the system so it is worth the price premium to me. Also it has great inbuilt support for hosting docker containers so you can basically run anything on it in a few steps. So far my experience (half a year) has been perfect.
+  Score: 2
+  Created UTC: 2024-07-20 02:45:39
+
+Comment 7:
+  Author: transconductor
+  Comment: Imo the maintenance-intensive part of a nextcloud is not the nextcloud itself, but the server its running on (unless youre using something like unraid).
+
+I'm running my nextcloud in my local network and haven't maintained it for a while. The app is now showing the end of life warning. I'd for me, it just works(tm) after the initial setup.
+
+But if your main priority is time, go for a Synology Nas if you can afford it. Imo it's also totally fine. And you don't have to worry about setting up a RAID or buying a server (if you don't already have one).
+  Score: 2
+  Created UTC: 2024-07-20 11:27:50
+

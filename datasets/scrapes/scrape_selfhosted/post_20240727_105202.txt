@@ -1,0 +1,60 @@
+Post Title: New to Self Hosting, Where should I start?
+Author: MrXewrath
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e43is6/new_to_self_hosting_where_should_i_start/
+Number of comments: 25
+Created UTC: 2024-07-15 19:20:12
+
+Post Content:
+Hello all, I’m looking to self-host a server for media storage and programs. I want to be able to access the server remotely, and the media will consist of things like music, videos, pictures, memes, anime, manga, etc. I’d like to be able to use the server to run programs like Suwayomi-Server, a server version of the manga reader Tachiyomi. I’m open to using either a physical or virtual server, but I would prefer virtual as my budget is pretty limited.
+
+I think I’d need around 256GB to 500GB of storage to start, but I’d like the option to expand in the future. I’m having a hard time finding the right setup because there are so many options available, and I’m not even sure where to begin. I’m confident that once I have the right hardware and software, I can set everything up myself. I’m just not sure what to get/look for. If you have any experience with this kind of thing, I would greatly appreciate any advice you could offer.
+
+*This is a better worded/titled repost of my original post (now deleted)*
+
+Edit: I have, and am currently, doing my own independent research. I do not want step by step guide, tho its appreciated if there are any, I do not need the usual (go check xyz, cause this question is asked all the time, your lazy). I just want someone to point me in the right direction for the type of virtual server that can accomplish my goals. I can figure out how to setup everything after I know what I am looking for, I cant find something I don't know exists.
+
+Edit 2: I now roughly understand what dockers are, I can use something like Kasm Workspaces to run multiple apps/programs...
+
+Top 4 comments:
+Comment 1:
+  Author: EndlessHiway
+  Comment: Try reading the information provided in the sidebar or a google search.
+  Score: 20
+  Created UTC: 2024-07-15 19:27:29
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;I’m open to using either a physical or virtual server, but I would prefer virtual as my budget is pretty limited.
+
+[Wolf gang just did a video on virtual hosting.](https://youtu.be/37eh6D-XDvQ?si=zL93SxdAEEiim4E7)
+
+If you decide to go physical. Then you would need to start researching a lot. But luckily this question does get asked alot on this form so hopefully it's not to hard to find more detailed answer 
+
+Hardware for physical 
+
+- people start with Dell Optiplex or HP eiltedesk desks. Check how many HHD you can put into them
+- run some NAS OS (trueNAS/ unRAID/ open media vault)
+  - or run plain Linux 
+- docker for your containers 
+
+[Example is hardware haven videos](https://youtu.be/WCDmHljsinY?si=mWfJLOPcjOZt71TR)
+
+Hope that helps.
+  Score: 4
+  Created UTC: 2024-07-15 19:43:24
+
+Comment 3:
+  Author: PolentaColda
+  Comment: You bedd a Device. After that you can chose an OS.
+At the beginning I used TrueNas, I recommend the Scale version. Or if you know a little about Linux you can jump into Linux server operating systems. I use ubnut server and I am fine with it. After that you can install plex or jellyfin or other service. On TrueNas Scale is very Simple, the re is a storie whit this apps
+  Score: 1
+  Created UTC: 2024-07-15 20:21:16
+
+Comment 4:
+  Author: mahehro
+  Comment: Hetzner Cloud (vServer) with Storage Box
+  Score: 1
+  Created UTC: 2024-07-15 19:29:21
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,21 @@
+Post Title: Looking for self hosted replacement for services like : bannerbear
+Author: umen
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e97huz/looking_for_self_hosted_replacement_for_services/
+Number of comments: 1
+Created UTC: 2024-07-22 06:36:22
+
+Post Content:
+Hello all ,   
+As the title says , i like to find such tool so i can use it locally in my home server . 
+
+Thanks 
+
+Top 1 comments:
+Comment 1:
+  Author: mosswill
+  Comment: If it's not too confidential, what's your use case? If I'm not mistaken, BannerBear is a glorified HTML/CSS to JPG/PNG/PDF service, no? That's something one can achieve "easily" with Gotenberg / Headless Browsers / HTML2Canvas, for example. If your use case isn't too complicated, and if none of the mentioned technologies would fit, I think I could code something for you when I have the time for it.
+  Score: 1
+  Created UTC: 2024-07-22 15:43:07
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,38 @@
+Post Title: Tailscale w/ Mullvad Exit Node to Bypass Youtube Ads
+Author: EndlessBreadsticks
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1ebegzl/tailscale_w_mullvad_exit_node_to_bypass_youtube/
+Number of comments: 11
+Created UTC: 2024-07-24 22:23:13
+
+Post Content:
+I hope it is okay to post this here. I use tailscale for my home devices and I subscribe for the mullvad exit nodes. One of my use cases is to set my exit note to a different country to bypass ads with the youtube application on my iPad. For my iPad, it works flawlessly and I never have troubles. With my wife's iPad, it is terribly inconsistent. She will randomly begin getting ads in a different language (I believe the ads are coming from Belgium while we use the Albanian exit node). I check the ip address and it is most definitely an Albanian IP address. 
+
+I don't understand why it would work flawlessly for me with no hiccups, but work intermittently for my wife. Any thoughts? 
+
+Top 4 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 1
+  Created UTC: 2024-07-24 22:35:22
+
+Comment 2:
+  Author: OkSir1011
+  Comment: check dns settings
+  Score: 1
+  Created UTC: 2024-07-25 07:34:09
+
+Comment 3:
+  Author: davernow
+  Comment: Not sure why it works for you at all. YouTube has ads everywhere. Might get lucky in a small market, and sometimes there is fewer ads than traffic, but it’s just luck.
+  Score: 1
+  Created UTC: 2024-07-25 07:46:22
+
+Comment 4:
+  Author: gellenburg
+  Comment: Dude just use Ublock Origin on Firefox and enabled ALL of the block lists and keep them updated. Done.
+  Score: 0
+  Created UTC: 2024-07-25 01:24:19
+
+Note: This post has only 4 comments at the time of scraping.

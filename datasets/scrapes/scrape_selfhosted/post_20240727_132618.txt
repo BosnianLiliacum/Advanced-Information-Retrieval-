@@ -1,0 +1,30 @@
+Post Title: Am I doing this right?
+Author: Sidewyz1
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e50n9t/am_i_doing_this_right/
+Number of comments: 5
+Created UTC: 2024-07-16 21:37:07
+
+Post Content:
+I have recently started using Starlink as a backup ISP but self hosting doesn't work too well with a CGnat style provider.  To work around this issue I started an instance on AWS and am running Haproxy to redirect traffic down a Wireguard tunnel to a Nginx reverse proxy at the house.  SSL is being terminated at Haproxy.  Advantage is my home IP isn't known.  Major disadvantage is getting everything to work properly.  I have a few issues that I haven't figured out and to save time if I'm going down the wrong path I thought I'd ask if this is a worthy setup??  
+
+Top 3 comments:
+Comment 1:
+  Author: PhilipLGriffiths88
+  Comment: Its a worthy setup. If you want something different, there are a whole bunch of alternatives - [https://github.com/anderspitman/awesome-tunneling](https://github.com/anderspitman/awesome-tunneling). I will advocate for [zrok.io](https://zrok.io) as I work on its parent project, OpenZiti. zrok is open source and has a free SaaS. It also has Caddy built in if that's useful - [https://blog.openziti.io/zrok-with-the-power-of-caddy](https://blog.openziti.io/zrok-with-the-power-of-caddy)
+  Score: 2
+  Created UTC: 2024-07-17 08:35:31
+
+Comment 2:
+  Author: persiusone
+  Comment: Cloudflare tunnels work well for this
+  Score: 0
+  Created UTC: 2024-07-17 03:30:59
+
+Comment 3:
+  Author: Deventerz
+  Comment: Traverse cgnat with tailscale/twingate/netbird etc
+  Score: -2
+  Created UTC: 2024-07-16 22:05:41
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,38 @@
+Post Title: Is it worth it to hook up all nic’s ?
+Author: kaaiman12
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e75e4i/is_it_worth_it_to_hook_up_all_nics/
+Number of comments: 7
+Created UTC: 2024-07-19 14:41:36
+
+Post Content:
+So i have a hpe server running proxmox that has 4 nic’s and a ilo port, i want to run the following: truenas, docker, ubuntu cli. Is it worth it to buy a switch and hook up 4 nic’s and the ilo port or should the 1 nic be sufficient for al vm’s?
+
+Top 4 comments:
+Comment 1:
+  Author: Ariquitaun
+  Comment: You could set link aggregation up. You'd quadruple your bandwidth, sort of (eg 4x1GB gives you a 4gbps bandwidth, but on 4 pipes of 1gbps max). My NAS is set up like this - has 2x1gbps NICs on the motherboard.
+
+It's not complicated but it is a complication, so if you don't need it there's no point.
+  Score: 3
+  Created UTC: 2024-07-19 15:51:31
+
+Comment 2:
+  Author: Plane_Resolution7133
+  Comment: I like spreading multiple VMs over multiple NICs, or dedicate NICs to certain VMs.
+  Score: 3
+  Created UTC: 2024-07-19 15:03:09
+
+Comment 3:
+  Author: JohnDoeMan79
+  Comment: I use one NIC for VMs in my internal LAN and one for DMZ..my router also has several NICs so the networks are physically seperated
+  Score: 1
+  Created UTC: 2024-07-19 15:36:20
+
+Comment 4:
+  Author: opensrcdev
+  Comment: I highly doubt you will even saturate a single interface. Don't worry about it.
+  Score: 0
+  Created UTC: 2024-07-19 14:50:54
+
+Note: This post has only 4 comments at the time of scraping.

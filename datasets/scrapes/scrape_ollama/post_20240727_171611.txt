@@ -1,0 +1,78 @@
+Post Title: How do I prompt for Ollama Lama 3? (Beginner)
+Author: LlamaChatbotHelp
+Score: 5
+URL: https://www.reddit.com/r/ollama/comments/1ebwhxl/how_do_i_prompt_for_ollama_lama_3_beginner/
+Number of comments: 10
+Created UTC: 2024-07-25 14:37:38
+
+Post Content:
+I can't find a tutorial on how to prompt for llama 3 with Ollama. So far I have tried various different prompt writings as well as different prompt approaches.
+
+Here are a few examples:
+
+(It got more complicated as the llm did not want to do what I asked it to do)
+
+    PromptTemplate(
+        template="""
+        Hier ist der Chatverlauf. Die letzte Nachricht ist immer die Aktuellste:
+        \n
+        {chat_history}
+        \n
+        Du bist ein hilfreicher Assistent der anhand des gegebenen Chatverlaufs prüft, ob sich die aktuelle Nutzereingabe auf vorherige Nachrichten aus dem Chatverlauf bezieht.
+        Wenn das der Fall ist, formulierst du die Usereingabe so um, dass sie auch ohne den Chatverlauf zu kennen verstanden werden kann. 
+        Beantworte die Usereingabe NICHT.
+        Gib die Frage oder Aussage immer auf deutsch zurück.
+        Formuliere die Usereingabe NUR um, wenn sie sich auf den vorherige Nachrichten bezieht.
+        Gib sie ansonsten so zurück wie sie ist. 
+        Wenn du die Frage oder Aussage umformuliert hast gib sie mit 2 '-' vorne und hinten zurück. 
+        Wenn du nichts umformuliert hast, gib die originale Frage oder Aussage mit '--' vorne und hinten zurück.
+        Gebe nicht an was du tust.
+        \n
+        Nutzereingabe: {input}""",
+        input_variables=["chat_history","input"]
+    )
+    
+    PromptTemplate(
+            input_variables=["chat_history", "input"],
+           template= """
+            Hier ist der Chatverlauf. Die letzte Nachricht ist immer die Aktuellste:
+            \n
+            {chat_history}
+            \n
+            Du bist ein hilfreicher Assistent der anhand des gegebenen Chatverlausf prüft, ob sich die aktuelle Nutzereingabe auf vorherige Nachrichten aus dem Chatverlauf bezieht.
+            Wenn das der Fall ist, formulierst du die Usereingabe so um, dass sie auch ohne den Chatverlauf zu kennen verstanden werden kann. 
+            Gib die Frage oder Aussage immer mit 2 '-' vorne und hinten zurück. 
+            Beantworte die Usereingabe NICHT.
+            Gib die Frage oder Aussage immer auf deutsch zurück.
+            Formuliere die Usereingabe NUR bei Bedarf um. 
+            Gib sie ansonsten so zurück wie sie ist. 
+            &lt;|eot_id|&gt;
+            &lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+            {input} \n 
+            &lt;|eot_id|&gt;
+            &lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+            """
+        )
+
+I have also tried ChatPromptTemplate.from\_messages() but it also didn't help.   
+The llm does answer me but it does not want to do what I ordered it to do. 
+
+I want it to check if the most recent user input is related to previous messages and if that is the case it should add the context to the message and ONLY return the message. Sometimes it gets it sometimes not. What can I do to fix it?  
+
+
+Thank you!
+
+Top 2 comments:
+Comment 1:
+  Author: techguybyday
+  Comment: Now I’m also a beginner so take what I say with a grain of salt, but I started messing with the examples specifically the python-simplechat example that uses the model api. I prompted it by giving it some input text first and then I eventually decided to integrate sqlite3 to create some sort of db memory store that I prompt it in the beginning of my chats with the data I stored from its last chat into my db. Problem I am facing is since it’s a 8B model it’s not getting details from way back just more of the recent chat data. I’m looking into vector databases next!
+  Score: 1
+  Created UTC: 2024-07-25 15:17:31
+
+Comment 2:
+  Author: Expensive-Award1965
+  Comment: was this auto translated? maybe try either an English template that we can help with or post this question in German or wherever they speak the language in the template
+  Score: 1
+  Created UTC: 2024-07-25 18:08:13
+
+Note: This post has only 2 comments at the time of scraping.

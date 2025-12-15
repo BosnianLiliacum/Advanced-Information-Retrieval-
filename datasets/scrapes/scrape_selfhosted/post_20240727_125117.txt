@@ -1,0 +1,82 @@
+Post Title: Unifi ( Ubiquiti) Extra unnecessary data collection and for sure the profit from vou data.
+Author: jvmo12
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e78sbq/unifi_ubiquiti_extra_unnecessary_data_collection/
+Number of comments: 13
+Created UTC: 2024-07-19 17:04:32
+
+Post Content:
+This is how they define Usage Data:
+
+We may collect certain information about your devices, your network, your system and third party devices connected to your network or system when you use the Services ("Usage Data"), including but not limited to device data, performance data, sensor data, motion data, temperature data, power usage data, device signals, device parameters, device identifiers that may uniquely identify the devices, including mobile devices, web request, Internet Protocol address, location information including latitude and longitude), browser type, browser language, referring/exit pages and URLs, platform type, the date and time of your request, and one or more cookies, web beacons and JavaScript that may uniquely identify your devices or browser.
+They can then use any of that incredibly wide data set to "operate, maintain, improve, customize and provide the features and functionality of any Service and for related business purposes", in other words for any purpose at all.
+
+They can also share all of that data with your ISP or wireless service provider for some unexplained reason, simply saying they can share it with "your Internet service provider who may access and use this information for their purposes under their agreeme with you". In fact that isn't limited to your ISP either but any business they have a relationship with:
+
+We may provide Usage Data to our customers in connection with the Services which those customers use. For example, our customers may include your network providers or operators and we may disclose Usage Data to these customers in connection with the products and devices that are deployed over these customers' networks. The treatment of Usage Data by these third-parties is subject to their own privacy policies, and not this one. We are not responsible for the content or privacy and security practices and policies of those third parties.
+
+Crazy I never bother to read this. So basically they making money Not just from the equipment also from your data. So I guess more people need to be aware.
+
+Extra collection of data from users. Come Jack. Not bueno. 
+
+Until a lawsuit or government intervention this will stop because many unnecessary data collection.
+
+I can’t believe that European government Collation that is giving so much hard time on privacy to companies and they don’t notice this Ubiquiti Internet equipment company data collection. 
+
+So it’s time to speak up and complain. Because definitely this can be resolved.
+
+Top 7 comments:
+Comment 1:
+  Author: Lower_Range_4228
+  Comment: I'm a big advocate of privacy, but I have yet to see an alternative. You'll find the same verbiage used among most or possibly all providers of network equipment.
+
+I'm not a lawyer, but I feel that what they might be saying is: your ISP can access this data and we can't stop them because they're your ISP and are the actual providers of the service while we are the ones managing/routing the service they provide. For the equipment to work properly, the equipment needs to know these things, however your ISP, who also happens to be our customer because they buy equipment from us too, can access the data. If we withhold this information and prevent your ISP from communicating with the equipment, then it wouldn't work properly. 
+
+I don't think they're collecting the data and selling it to your ISP for profit. Why? They don't need to. Your ISP can and already does this. They don't need ubiquity permission, they only need your permission. If you didn't give them permission to access this data, then you wouldn't be their customer.
+  Score: 11
+  Created UTC: 2024-07-19 21:02:11
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: *sigh* check [my unifi image](https://hub.docker.com/r/11notes/unifi) (read ^1 about privacy settings).
+  Score: 8
+  Created UTC: 2024-07-19 18:34:28
+
+Comment 3:
+  Author: Fluffer_Wuffer
+  Comment: &gt;They can also share all of that data with your ISP or wireless service provider for some unexplained reason
+
+I'm usually a fan of T&amp;C bashing, but I think this is applying a liberal amount of selective copy and pasting, and missed out a key part, that helps provide wider context:
+
+    Services for Wireless Network Providers. Some of the Usage Data that we may collect may be on behalf of your Internet service provider who may access and use this information for their purposes under their agreement with you. Use of this Usage Data by these third-parties is not subject to this Policy.
+
+**Note** this only mentions "Service for Wireless Network Providers", there is no broader "ISP and Wireless ..". When liberally adding "with your ISP and wireless.." it completely changes the intent.
+
+This policy applicable to **all** Ubiquiti product ranges, not just Unifi, but also the WISP products, that ISP's use to provide the AP's needed for last-mile wireless connectivity, where the ISP is actually the paying customer, so they would be expected to provide that information!
+  Score: 4
+  Created UTC: 2024-07-19 21:37:16
+
+Comment 4:
+  Author: CortaCircuit
+  Comment: I hate shit bag companies like this. Block all their devices from making outbound network requests.
+  Score: 9
+  Created UTC: 2024-07-19 17:27:18
+
+Comment 5:
+  Author: Reasonable-Papaya843
+  Comment: How to I block my router from accessing their trace url where I assume they hardcore their own dns to get there?
+  Score: 2
+  Created UTC: 2024-07-20 11:42:16
+
+Comment 6:
+  Author: preference
+  Comment: I saw this post in homelab, isn't it possible to just turn off analytics? or am i misunderstanding the setting?
+  Score: 3
+  Created UTC: 2024-07-19 17:47:16
+
+Comment 7:
+  Author: NotesFromYourElf
+  Comment: I'm fairly sure I didn't agree to this during signup. I'm wondering if this is GDPR  complient.
+  Score: -3
+  Created UTC: 2024-07-19 19:10:33
+

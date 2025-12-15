@@ -1,0 +1,18 @@
+Post Title: A self-hostable email sending platform for developers. An alternative to Resend, Sendgrid, ...
+Author: SoftwareCitadel
+Score: 3
+URL: https://github.com/valyentdev/ferdinand.git
+Number of comments: 1
+Created UTC: 2024-07-26 13:49:05
+
+Post Content:
+[This post has no text content]
+
+Top 1 comments:
+Comment 1:
+  Author: Mullayam
+  Comment: thats awesome shalll we connect?
+  Score: -1
+  Created UTC: 2024-07-26 23:13:49
+
+Note: This post has only 1 comments at the time of scraping.

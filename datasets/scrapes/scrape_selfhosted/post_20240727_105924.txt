@@ -1,0 +1,60 @@
+Post Title: [Proxmox + Adguard Home + Tailscale + Caddy] How do I reverse proxy with SSL certificate?
+Author: leonheartx1988
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3rr1u/proxmox_adguard_home_tailscale_caddy_how_do_i/
+Number of comments: 7
+Created UTC: 2024-07-15 10:47:53
+
+Post Content:
+Hello!
+
+I have a VM with Adguard Home + Tailscale + Caddy on a VM.
+
+My configuration is:
+
+* Machine Names: `network`, `laptop`
+* Tailnet name: [example.ts.net](http://example.ts.net)
+* Adguard IP Address: [`10.10.10.254`](http://10.10.10.254) whcih runs on machine [network.example.ts.net](http://network.example.ts.net)
+
+I have configured Tailscale to use `Global nameservers` with `Override local DNS` set to `true.`
+
+I know for sure that when a machine joins the Tailscale Network, that it uses Adguard as a Nameserver because the `Ads` are blocked and I can access Adguards web-interface with [https://network.example.ts.net:4443](https://network.example.ts.net:4443) (with Custom HTTPs port with an SSL certficate which I obtained manually)
+
+I have added a `DNS rewrite` (CName Record):
+
+`*.network.example.ts.net` [`network.example.ts.net`](http://network.example.ts.net)
+
+And I run the following Caddy configuration
+
+    {
+      debug
+    }
+    
+     adguard.network.example.ts.net {
+      reverse_proxy   10.10.10.254:4443
+    } 
+
+I flushed my dns cache, restarted my server and my laptop and unfortunately the above configuration doesn't work. IP address not found when I try to visit [https://adguard.network.example.ts.net/](https://adguard.network.example.ts.net/)
+
+If I try to visit [https://adguard.network.example.ts.net:4443/login.html](https://adguard.network.example.ts.net:4443/login.html)
+
+I can see Adguards web ui fine but I get errors in Caddy
+
+    2024/07/15 11:03:43.044 ERROR   tls.obtain      could not get certificate from issuer   {"identifier": "adguard.network.example.ts.net", "issuer": "acme-v02.api.letsencrypt.org-directory", "error": "HTTP 400 urn:ietf:params:acme:error:dns - DNS problem: NXDOMAIN looking up A for adguard.network.example.ts.net - check that a DNS record exists for this domain; DNS problem: NXDOMAIN looking up AAAA for adguard.network.saga-blues.ts.net - check that a DNS record exists for this domain"}
+
+Does anyone know how do I do the configuration properly?
+
+Additionally, is it possible for simplicity to use a CName record such as
+
+\*.example.ts.net [network.example.ts.net](http://network.example.ts.net)
+
+I think it might interfere with other Network machines. I love using FQDNs instead of IPs
+
+Top 1 comments:
+Comment 1:
+  Author: Hans_of_Death
+  Comment: Why would expect adguard.example.ts to work when you have *.network.example.ts set as the redirect?
+  Score: 1
+  Created UTC: 2024-07-15 12:58:11
+
+Note: This post has only 1 comments at the time of scraping.

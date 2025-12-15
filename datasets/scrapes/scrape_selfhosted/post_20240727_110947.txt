@@ -1,0 +1,30 @@
+Post Title: Windows 10 hosting : Are you using a logged in admin session?
+Author: Grimzkunk
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1edd6f9/windows_10_hosting_are_you_using_a_logged_in/
+Number of comments: 1
+Created UTC: 2024-07-27 10:23:50
+
+Post Content:
+Hi selfhosters peers!
+
+Here's my context. I have a Win10 HTPC that i'm also using for Plex and PRTG (both local installation).  
+I wanted to get out of GooglePhoto and try NextCloud, so I installed DockerDesktop.  
+Up to now, I was able to keep my local session opened under a non-admin user, for security best practices.  
+But now with DockerDesktop, being on a non-admin sessions is causing problems.  
+I'm starting thinking about running this win10 HTPC under a local-admin user session with some kindof firewall hardening.
+
+Anyone running an admin session under a Win10 hosting machine ? Can you share your experience? :)
+
+Oh and yes I know, running Docker under a linux would resolve the problem but my big storage HDD are on this Win10 computer soooo ;)
+
+Top 1 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: &gt; but my big storage HDD are on this Win10 computer soooo ;) 
+
+Any what's the problem there? Simply access that storage via your Plex container. CIFS and NFS are a thing 😉.
+  Score: 2
+  Created UTC: 2024-07-27 10:53:21
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,80 @@
+Post Title: How to caluculate server specs needed based on softwares
+Author: Difficult4664
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e3qp4a/how_to_caluculate_server_specs_needed_based_on/
+Number of comments: 9
+Created UTC: 2024-07-15 09:39:07
+
+Post Content:
+I'm planning to run multiple services on a VPS, but I'm having trouble figuring out how to calculate the server specs needed to run all of them concurrently. This is making it difficult to decide which VPS plan to choose.
+
+The services I'm planning to run are all relatively small-scale, with around 10 users expected for each. I'm looking to use Vultr VPS with their Japan region.
+
+Here's the software I plan to use:
+
+Mail: Stalwart
+
+Password manager: Vaultwarden
+
+Blog: WordPress
+
+VPN: Wireguard
+
+Storage: NextCloud
+
+Wiki: wiki.js
+
+Any advice on how to determine the appropriate server specs or suggestions for a suitable Vultr VPS plan would be greatly appreciated!
+
+Top 5 comments:
+Comment 1:
+  Author: Pesoen
+  Comment: i would say, get something within your budget..
+
+speccing out a server based on the software is incredibly difficult, as some software does more in the background than others, and some do a ton during startup, but are basically idle during runtime. and some depends on how many users are actively using it at any one time.
+
+overspeccing a server is always better than underspeccing it. so i would go for something that is at least dual core, ideally quad core or more, with 4gb ram minimum and 8gb ram recommended, or more. with most VPS services, you can upgrade down the line, so if you get a dual core with 4gb of ram now, and it turns out not to be enough for your use, you can usually upgrade it for a small fee, and a slightly higher monthly price.
+
+how you run things can also change how much server you need. i run practically all my stuff in docker, and a few things bare-metal(directly in the host OS) which can use slightly more cpu power and ram to do, but might be more secure, depending on your use.
+
+i know NextCloud can take a good chunk of a system when actively used. i only really used the file sync stuff, and never really used the UI, so i changed that to syncthing instead, and have been very happy with performance and stability.
+
+most of my server stuff runs on various raspberry pi's, but i have considered consolidating them all into a single pi, and using one for dedicated pi-hole and vpn entry point(currently also runs the bulk of my home server stuff)
+  Score: 3
+  Created UTC: 2024-07-15 10:19:13
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: Any VPS with 4GB RAM will do.
+  Score: 2
+  Created UTC: 2024-07-15 10:03:43
+
+Comment 3:
+  Author: sparcv9
+  Comment: + database
+
++ proxy
+
++ redis
+
++ webserver &amp; php footprint
+
++ elasticsearch (potentially, for nextcloud and wiki.js)
+
+You really want to make sure you line up all your dependant parts before starting a sizing exercise.
+  Score: 1
+  Created UTC: 2024-07-15 11:37:46
+
+Comment 4:
+  Author: corny_horse
+  Comment: I would go at least 4gb to start. Maybe 8… mySQL is a memory hog at the low end and I think some of your apps need it. (Meaning that it’s hard to put MySQL on something with very little ram, I’ve never ran a huge MySQL instance but the ones I run seem to take a minimum of like 1G which doesn’t leave much for other things running. I know my Nextcloud instance is a little memory hungry too and I’ve heard the same about vaultwarden. At least relative to other server software. Not saying either are bad by any stretch, they’re doing a lot of work to do the things they do.
+  Score: 1
+  Created UTC: 2024-07-15 12:33:23
+
+Comment 5:
+  Author: thiagobg
+  Comment: Locust the hell out of the application using idfrivitrd load testing. Whenever you DDoS yourself is time to stop and set the specs
+  Score: 1
+  Created UTC: 2024-07-19 02:35:13
+
+Note: This post has only 5 comments at the time of scraping.

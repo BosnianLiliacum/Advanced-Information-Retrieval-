@@ -1,0 +1,57 @@
+Post Title: Homepage Dashboard in Docker is not displaying stats of other docker containers
+Author: AppleFan1010
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eccuan/homepage_dashboard_in_docker_is_not_displaying/
+Number of comments: 6
+Created UTC: 2024-07-26 02:18:58
+
+Post Content:
+Hi All,
+
+Stuck in setting up Homepage Dashboard.
+
+Currently, I have 4 docker containers running Adguard Home, Portainer, Home Assistant and Homepage.
+
+In Homepage Services with Widgets, I am following following configuration:
+
+    - Group A:
+        - Adguard:
+            href: http://192.1681.1.110/
+            description: Adguard
+            container: adguard
+            widget:
+              type: adguard
+              url: http://192.1681.1.110
+              username: adguard username
+              password: adguard password
+
+  
+But, it never loads the stats.
+
+Tried for Portainer as well but same issue.
+
+  
+Any ideas what could be wrong here?
+
+Top 2 comments:
+Comment 1:
+  Author: MrBurtUK
+  Comment: First things first, open the dev tools in your browser (F12 or Ctrl+Shift+I) and check the console for any errors. Visit the URL showing the error for more details.
+
+The YAML format looks correct, so it’s likely one of three things: the URL/port combination is incorrect, the container can’t access the URL due to a network permission issue, or the username/password combo is wrong.
+
+Make sure the URL and port are right, check that the container has the necessary network permissions, and verify the credentials. Also, try pinging the services, checking the Docker logs, accessing the URLs directly from a browser, inspecting your Docker network settings, and manually logging in with the provided credentials to pinpoint and resolve the issue.
+
+If you can provide more information i might be able to help you.
+
+For more reference refer to this: [https://gethomepage.dev/latest/troubleshooting/#general-troubleshooting-tips](https://gethomepage.dev/latest/troubleshooting/#general-troubleshooting-tips)
+  Score: 3
+  Created UTC: 2024-07-26 03:07:12
+
+Comment 2:
+  Author: thekrautboy
+  Comment: How about you rftm?
+  Score: -7
+  Created UTC: 2024-07-26 04:52:13
+
+Note: This post has only 2 comments at the time of scraping.

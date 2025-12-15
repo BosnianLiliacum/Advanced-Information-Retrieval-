@@ -1,0 +1,26 @@
+Post Title: ProjectSend questions
+Author: Legitimate-Visit3258
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7ccrz/projectsend_questions/
+Number of comments: 2
+Created UTC: 2024-07-19 19:35:30
+
+Post Content:
+Hey everyone,
+
+A friend managed to get hold of a rack server and a netapp appliance for me to use for our agency. I’m stoked to use it, especially for archiving footage from the production team. I was curious about using projectsend for client portal access to files though.
+
+Currently, we host all client files on Google shared drives, as well as use that for internal files. Ideally, I would like to move that storage to our server, and then use ProjectSend to deliver files to clients for approval.
+
+I was also wondering how difficult it would be to add an approval workflow similar to transfer portals, where clients can mark a file as approved or denied with some feedback.
+
+The approval workflow isn’t super necessary, but would be a fantastic tool. Really, just looking for advice on how to get started, and if ProjectSend would be a good way to handle what I’m talking about. I appreciate everyone’s feedback!
+
+Top 1 comments:
+Comment 1:
+  Author: EdelmiraMunz97
+  Comment: ProjectSend is a solid choice for client file delivery and approvals. It's feature-rich and customizable, so you should be able to set up workflows with some tweaking. For tutorials and setup guides, you might find using a tool like Guidde super helpfulit lets you create how-to videos for your team in seconds. Best of luck with your new server!
+  Score: 2
+  Created UTC: 2024-07-20 17:31:44
+
+Note: This post has only 1 comments at the time of scraping.

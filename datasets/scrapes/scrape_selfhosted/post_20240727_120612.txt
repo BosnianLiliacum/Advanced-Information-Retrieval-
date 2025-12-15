@@ -1,0 +1,35 @@
+Post Title: Paperless-ngx on Docker Desktop with Cloudflare Tunnel - CSRF Verification Failed (Error 403) and Email Pull Issues
+Author: bigfootdoexist
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ea2cc5/paperlessngx_on_docker_desktop_with_cloudflare/
+Number of comments: 3
+Created UTC: 2024-07-23 08:08:13
+
+Post Content:
+Hi everyone,
+
+I'm currently running Paperless-ngx on Docker Desktop installed on Windows, using the WSL2 engine. I've set up Paperless-ngx to run behind a Cloudflare tunnel. While I can access the website, I'm encountering a couple of issues:
+
+1. When I enter the username and password, I get an error 403 with a message saying "CSRF verification failed."
+2. The email pull functionality is not working. Everything is set up but it's not pulling docs from my email.
+
+I've tried searching for solutions, but haven't had any luck so far. Has anyone encountered similar issues or have any suggestions on how to resolve these problems? Any help would be greatly appreciated!
+
+Thanks in advance!
+
+Top 1 comments:
+Comment 1:
+  Author: neerbos
+  Comment: [https://docs.paperless-ngx.com/configuration/#PAPERLESS\_URL](https://docs.paperless-ngx.com/configuration/#PAPERLESS_URL)
+
+you need to set the currect public URL (cloudflare tunnel)
+
+[https://docs.paperless-ngx.com/usage/](https://docs.paperless-ngx.com/usage/) (scroll to emails section)
+
+thing to remember is that paperless-ngx only consumes new emails (unread ones). that got me too. I believe you can modify this, but supposedly it works best with an mailbox that is specifically used for archiving.
+
+so not your regular inbox where you already marked messages as read.
+  Score: 2
+  Created UTC: 2024-07-23 13:28:24
+
+Note: This post has only 1 comments at the time of scraping.

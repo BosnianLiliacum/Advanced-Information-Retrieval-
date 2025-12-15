@@ -1,0 +1,62 @@
+Post Title: I just replaced Calibre and Calibre-Web with AudioBookShelf
+Author: OnlyNotMatt
+Score: 27
+URL: https://www.reddit.com/r/selfhosted/comments/1eb9wym/i_just_replaced_calibre_and_calibreweb_with/
+Number of comments: 20
+Created UTC: 2024-07-24 19:15:46
+
+Post Content:
+I thinks ABS has everything I need, but what am I missing out on by not having Calibre or Calibre-web?
+
+Edit:  
+I have a kindle and my library files are all .EPUB  
+I use ABS to send to kindle.    
+
+
+Top 7 comments:
+Comment 1:
+  Author: ChiefMedicalOfficer
+  Comment: I use both and I agree Audiobookshelf is amazing but I like to keep audio and e separate.
+  Score: 20
+  Created UTC: 2024-07-24 19:17:03
+
+Comment 2:
+  Author: -Promethium
+  Comment: Personally I LOVE the calibre-web sync plugin for kobo, but you specifically said kindle so don't think you will need anything else.
+  Score: 4
+  Created UTC: 2024-07-25 00:44:12
+
+Comment 3:
+  Author: cyt0kinetic
+  Comment: I'm listening on audiobookshelf right now 😂 it's a great app.
+  Score: 3
+  Created UTC: 2024-07-25 06:01:26
+
+Comment 4:
+  Author: HaliFan
+  Comment: I also love AudioBookShelf. Works very well. My only annoyance is that for some reason my install won't identify Chromecast streaming.
+  Score: 2
+  Created UTC: 2024-07-24 23:55:51
+
+Comment 5:
+  Author: EsEnZeT
+  Comment: Thanks for recommendation
+  Score: 2
+  Created UTC: 2024-07-25 01:25:07
+
+Comment 6:
+  Author: qksv
+  Comment: Here is how I do things...
+
+1. Calibre locally installed on my laptop. The whole docker image thing where there is a VM that I can access through a web browser is just clunky and slow for me. This is how I transfer books to my e-reader too.
+2. Syncthing one-way syncs my books library from my laptop to the server
+3. Calibre-web has read only access to that same directory. Displays it in a nice web GUI and is useful for sharing books with friends/family or accessing books while out of the house.
+  Score: 2
+  Created UTC: 2024-07-25 07:48:57
+
+Comment 7:
+  Author: shrimp_master303
+  Comment: You’re missing out on daily unnecessary updates
+  Score: 3
+  Created UTC: 2024-07-25 07:53:32
+

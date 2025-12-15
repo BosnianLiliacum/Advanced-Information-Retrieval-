@@ -1,0 +1,58 @@
+Post Title: I've got a problem...
+Author: pheitman
+Score: 21
+URL: https://www.reddit.com/r/selfhosted/comments/1e6dvd7/ive_got_a_problem/
+Number of comments: 29
+Created UTC: 2024-07-18 15:12:30
+
+Post Content:
+I think that if there is an AA-style group for people who are addicted to setting up and configuring their home lab, I might be a candidate. I've just had an incredibly fun journey (re)setting up my home lab and have just realized that I'm not sure what to do next. I've completed much more than I really expected - portainer, tailscale, traefik, pi-hole, vaultwarden, plex, immich, homepage and so on. I actually started thinking about starting over with casaos just to have something to do but I realized that is a sign I have problems :)
+
+Top 7 comments:
+Comment 1:
+  Author: yakuzas-47
+  Comment: I actually have much more fun setting up services on my server and solving problems than actually using the services
+  Score: 49
+  Created UTC: 2024-07-18 16:48:31
+
+Comment 2:
+  Author: rigeek
+  Comment: lol admitting you have a problem is the first step… but if you’re looking for help getting out.. you’ve come to the wrong place 🤣
+  Score: 11
+  Created UTC: 2024-07-18 17:32:22
+
+Comment 3:
+  Author: FunkMunki
+  Comment: Nobody likes a quitter! Seriously though, this is a healthier hobby than the alternatives.
+  Score: 6
+  Created UTC: 2024-07-18 16:37:27
+
+Comment 4:
+  Author: daedric
+  Comment: Addicted to Deployment.
+
+We meet here on reddit every single day.
+
+Don't feel alone.
+  Score: 2
+  Created UTC: 2024-07-18 18:15:08
+
+Comment 5:
+  Author: elementjj
+  Comment: I did this, then i set it all up on k3s cluster.
+  Score: 2
+  Created UTC: 2024-07-18 18:41:38
+
+Comment 6:
+  Author: RoughlyFuture
+  Comment: Next up; delete everything and start over applying the info you learned the first go around. It's thrilling!
+  Score: 2
+  Created UTC: 2024-07-19 00:07:46
+
+Comment 7:
+  Author: necrossis1
+  Comment: No matter what we do, wives are going to complain. So, I'm not sure this is better than the alternative of....drinking? 
+Although, Why not do both!
+  Score: 1
+  Created UTC: 2024-07-18 17:38:03
+

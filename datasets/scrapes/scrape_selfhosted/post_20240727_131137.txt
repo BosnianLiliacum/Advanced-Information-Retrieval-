@@ -1,0 +1,171 @@
+Post Title: Problem getting Authentik (SSO) to work with Portainer
+Author: DavethegraveHunter
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e66jwg/problem_getting_authentik_sso_to_work_with/
+Number of comments: 4
+Created UTC: 2024-07-18 08:41:22
+
+Post Content:
+I've been following Jim's Garage on YouTube, and specifically his videos about setting up Authentik and getting it to work with Portainer ([video 1](https://youtu.be/enwFWELCYJo), [video 2](https://youtu.be/1bTSOdYiIOQ)). I have also previously installed Traefik, following [this video](https://youtu.be/XH9XgiVM_z4), and [Pi-Hole](https://youtu.be/8EpnaccHajo) (for DNS). I also have a domain name registered with Cloudflare, and have managed to set up FQDNs based on this domain using Pi-Hole. So far, so good.
+
+I was able to get Authentik to log me into my Portainer instance by the end of the first video (with just IP:port for Authentik). However, in the second video, Authentik was configured to use Traefik and an FQDN. I followed all of the steps as shown in the video, but at the end, when I go to log into Portainer, if I click the "OAuth" button, all I get is an "Unauthorized" error. I tried logging out of both Portainer and Authentik, and then logging back in, but that didn't help. I also tried a complete reboot of the Docker host, but again, that didn't help.
+
+The only difference I can see is that in video 1, Jim was using an older version of Authentik (fair enough: the video is nine months old), and instead, I opted to use the latest (i.e. 2024.6.1) images for the Authentik server and worker, and Postgresql 16. That is, the docker-compose looks like this:
+
+    services:
+      postgresql:
+        image: docker.io/library/postgres:16-alpine
+        restart: unless-stopped
+        healthcheck:
+          test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+          start_period: 20s
+          interval: 30s
+          retries: 5
+          timeout: 5s
+        volumes:
+          - database:/var/lib/postgresql/data
+        environment:
+          POSTGRES_PASSWORD: ${PG_PASS:?database password required}
+          POSTGRES_USER: ${PG_USER:-authentik}
+          POSTGRES_DB: ${PG_DB:-authentik}
+        env_file:
+          - .env
+        networks:
+          proxy:
+      redis:
+        image: docker.io/library/redis:alpine
+        command: --save 60 1 --loglevel warning
+        restart: unless-stopped
+        healthcheck:
+          test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+          start_period: 20s
+          interval: 30s
+          retries: 5
+          timeout: 3s
+        volumes:
+          - redis:/data
+        networks:
+          proxy:
+      server:
+        image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.6.1}
+        container_name: authentik_server
+        restart: unless-stopped
+        command: server
+        environment:
+          AUTHENTIK_REDIS__HOST: redis
+          AUTHENTIK_POSTGRESQL__HOST: postgresql
+          AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
+          AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
+          AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
+        volumes:
+          - ./media:/media
+          - ./custom-templates:/templates
+        env_file:
+          - .env
+        networks:
+          proxy:
+        depends_on:
+          - postgresql
+          - redis
+        labels:
+          - homepage.group=Docker admin
+          - homepage.name=Authentik SSO
+          - homepage.icon=authentik
+          - homepage.href=https://authentik.mydomain.com/
+          - homepage.description=Single sign-on
+          - homepage.statusStyle=dot
+          - homepage.showStats=true
+          - "traefik.enable=true"
+          - "traefik.http.routers.authentik.entrypoints=http"
+          - "traefik.http.routers.authentik.rule=Host(`authentik.mydomain.com`)"
+          - "traefik.http.middlewares.authentik-https-redirect.redirectscheme.scheme=https"
+          - "traefik.http.routers.authentik.middlewares=authentik-https-redirect"
+          - "traefik.http.routers.authentik-secure.entrypoints=https"
+          - "traefik.http.routers.authentik-secure.rule=Host(`authentik.mydomain.com`)"
+          - "traefik.http.routers.authentik-secure.tls=true"
+          - "traefik.http.routers.authentik-secure.service=authentik"
+          - "traefik.http.services.authentik.loadbalancer.server.port=9000"
+          - "traefik.docker.network=proxy"
+      worker:
+        image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.6.1}
+        restart: unless-stopped
+        command: worker
+        environment:
+          AUTHENTIK_REDIS__HOST: redis
+          AUTHENTIK_POSTGRESQL__HOST: postgresql
+          AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
+          AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
+          AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
+        # `user: root` and the docker socket volume are optional.
+        # See more for the docker socket integration here:
+        # https://goauthentik.io/docs/outposts/integrations/docker
+        # Removing `user: root` also prevents the worker from fixing the permissions
+        # on the mounted folders, so when removing this make sure the folders have the correct UID/GID
+        # (1000:1000 by default)
+        user: root
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+          - ./media:/media
+          - ./certs:/certs
+          - ./custom-templates:/templates
+        env_file:
+          - .env
+        depends_on:
+          - postgresql
+          - redis
+        networks:
+          proxy:
+    
+    volumes:
+      database:
+        driver: local
+      redis:
+        driver: local
+    
+    networks:
+      proxy:
+        external: true
+
+Authentik loads just fine. There are some differences in the interface, but nothing major, so I was able to follow Jim's videos ok. 
+
+In Authentik, I have two applications:
+
+1. Domain Forward Auth Provider
+2. Portainer
+
+I have two providers:
+
+1. Domain Forward Auth Provider (type: proxy provider)
+2. Provider for Portainer (type: OAuth2/OpenID provider)
+
+The Applications list has the correct provider listed for each application, and the providers list shows each provider is assigned to the correct application, with a green tick for each.
+
+  
+Finally, I have two outposts. I don't know why this is. Jim's video shows the creation of only one outpost, "Domain Forward Auth Provider", and I created that as per the video, with the provider for that outpost being "domain forward auth provider". This outpost has a green tick with "logging in via https://authentik.mydomain.com/." However, for some reason, I also have another provider, which has created itself somehow (I know I did not create it). This second outpost is called "authentik Embedded Outpost". It has an orange label: "Warning: authentik Domain is not configured, authentication will not work."
+
+I've Googled extensively for "authentik Domain is not configured" and found nothing.
+
+In any case, I then configured Portainer via Settings &gt; Authentication, using the updated URLs from Authentik, but I was still unable to use Authentik to log into Portainer.
+
+Does anyone know why this isn't working, and how to get Authentik to log me into my Portainer instance please?
+
+Thanks.
+
+Top 2 comments:
+Comment 1:
+  Author: sebt3
+  Comment: https://docs.goauthentik.io/integrations/services/portainer/
+
+Don't know about the video you've looked at. But this works 😅
+  Score: 1
+  Created UTC: 2024-07-18 09:42:06
+
+Comment 2:
+  Author: SalvationTanker
+  Comment: I'm not sure about all the integration with Portainer, but I just rewrote my guide for the 2024 authentik version.  I use the embedded outpost, so please take a look and see if it helps some of the configuration.  Scroll down last the traefik setup and move into Authentik itself. 
+
+https://github.com/brokenscripts/authentik_traefik
+  Score: 1
+  Created UTC: 2024-07-18 11:15:26
+
+Note: This post has only 2 comments at the time of scraping.

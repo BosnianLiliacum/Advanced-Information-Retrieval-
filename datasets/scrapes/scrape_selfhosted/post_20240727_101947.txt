@@ -1,0 +1,21 @@
+Post Title: Gaming pc with supermicro MB
+Author: Tiny_Personality_868
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e68zha/gaming_pc_with_supermicro_mb/
+Number of comments: 1
+Created UTC: 2024-07-18 11:22:38
+
+Post Content:
+I have a Supermicro x12stl-if sitting around and I can't get rid of it on eBay etc. I'm selling it for 250€.
+I'm planning on building a consumer grade/gaming pc in itx format. Should I use this Supermicro MB or is it a bad idea? 
+
+Top 1 comments:
+Comment 1:
+  Author: marc45ca
+  Comment: would be solid and stable though the Xeon 2300 probably won't be as fast as the Core equivalents but no reason you couldn't game on it.
+
+Guess it would come down to what games you want to play, what GPU you're going to add and the detail level you plan to run at.
+  Score: 1
+  Created UTC: 2024-07-18 12:45:34
+
+Note: This post has only 1 comments at the time of scraping.

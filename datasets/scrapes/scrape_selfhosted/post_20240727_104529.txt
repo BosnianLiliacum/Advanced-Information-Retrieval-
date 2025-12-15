@@ -1,0 +1,88 @@
+Post Title: What do you set up first?
+Author: Remon520
+Score: 45
+URL: https://www.reddit.com/r/selfhosted/comments/1e4mrka/what_do_you_set_up_first/
+Number of comments: 44
+Created UTC: 2024-07-16 11:57:20
+
+Post Content:
+I'm setting up a new server and planning to use Traefik, Authentik, Pi-hole, and Portainer. I've got a couple of questions:
+
+Which one should I install first to avoid any issues later on?
+
+What is usually the first service you set up on your server? 
+
+Top 7 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: Vanilla docker first, then reverse proxy is usually next for me, that way I can set up local domains and access stuff that way instead of trying to get around with ip/ports which is a pita.
+  Score: 53
+  Created UTC: 2024-07-16 12:01:33
+
+Comment 2:
+  Author: trisanachandler
+  Comment: My setup is really simple if I were to deploy a new server: 
+
+Scripted steps:
+
+* SSH Keys
+* Firewall rules (if needed)
+* cron jobs
+* updates+packages (docker)
+* timezone
+* Data folder structure
+* Portainer
+* custom rsync script
+* nas mount folders
+* custom motd
+* nas mounts to fstab
+
+Manual steps:
+
+* copy data manually from backup (this should include portainer+all container data
+* update single ip in cloudflare with new local ip that will redirect all local CNAME's (all cloudflare exposed services will use internal DNS and need no updates)
+  Score: 19
+  Created UTC: 2024-07-16 12:59:32
+
+Comment 3:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 17
+  Created UTC: 2024-07-16 12:01:42
+
+Comment 4:
+  Author: MiakiCho
+  Comment: - Ansible and ssh keys
+
+Then everything is done by Ansible.
+
+- upgrade. 
+- install docker through Ansible. 
+- one Ansible role per docker stack.
+  Score: 7
+  Created UTC: 2024-07-16 17:09:14
+
+Comment 5:
+  Author: EducationNeverStops
+  Comment: F I R E W A L L
+  Score: 3
+  Created UTC: 2024-07-16 16:10:50
+
+Comment 6:
+  Author: foofoo300
+  Comment: * encryption
+* dropbear
+* ssh hardening
+* wireguard
+* containerd/nerdctl
+* mount points internal or external
+* stuff that i want to run
+  Score: 2
+  Created UTC: 2024-07-16 14:43:11
+
+Comment 7:
+  Author: PeruvianNet
+  Comment: Skip portainer, install lazydocker instead, thank me later.
+  Score: 2
+  Created UTC: 2024-07-16 18:19:14
+

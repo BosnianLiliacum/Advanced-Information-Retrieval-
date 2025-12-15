@@ -1,0 +1,37 @@
+Post Title: CalDAV data migration Baikal to Davis?
+Author: Morgennebel
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3qftp/caldav_data_migration_baikal_to_davis/
+Number of comments: 4
+Created UTC: 2024-07-15 09:21:06
+
+Post Content:
+Hej,
+
+
+I have a working Baikal installation with sqlite holding 500-ish calenders and 100ish contacts in CalDAV and CardDAV.
+
+For reasons I want to switch to Davis (Sabre/DAV with frontend) with MariaDB and after some struggles have a working environment.
+
+I have DAV5x available on my cell phone - is there a solid path to move the data from the client side? Or a solid tool to export and reimport?
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: https://caldavsynchronizer.org/, setup both and then sync. Any maybe consider Radicale vs sabre/dav.
+  Score: 2
+  Created UTC: 2024-07-15 09:29:56
+
+Comment 2:
+  Author: [deleted]
+  Comment: When I moved from Nextcloud to Baikal I just exported my calendar from the calendar app on the phone, and exported the contacts the same way. Then just changed my backend in DAV5x and imported them again, which then synced to Baikal. Seems to have worked fine.
+  Score: 1
+  Created UTC: 2024-07-15 09:27:29
+
+Comment 3:
+  Author: -eschguy-
+  Comment: When I moved my calendar, I exported from Thunderbird and then imported during setup.
+  Score: 1
+  Created UTC: 2024-07-15 13:52:56
+
+Note: This post has only 3 comments at the time of scraping.

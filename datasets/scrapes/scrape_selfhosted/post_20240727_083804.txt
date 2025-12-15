@@ -1,0 +1,25 @@
+Post Title: Configuration &amp; IaC
+Author: HurricanKai
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ec30vu/configuration_iac/
+Number of comments: 2
+Created UTC: 2024-07-25 19:04:13
+
+Post Content:
+Hey, currently thinking about making things more automated and reproducible.
+Seems like a configuration management system like Puppet, Pulumi, Salt, Terraform (OpenTofu) etc. Would be very useful.
+Has anyone compared these? Especially the open-source only versions.
+I quite like Puppet by the looks of it, any experiences?
+
+Top 1 comments:
+Comment 1:
+  Author: opensrcdev
+  Comment: I haven't used OpenTofu myself, but I have heard it's pretty much a drop-in replacement for Terraform. Over time, these two projects will drift apart though, so be prepared for that. 
+
+I would recommend using a combination of OpenTofu for resource provisioning, and Ansible for configuring systems via SSH (install / update packages, etc.).
+
+I would stay away from Puppet. Salt might be a good alternative to Ansible, although I've never used it. Pulumi probably makes sense for major cloud vendors and Kubernetes, but not much else.
+  Score: 3
+  Created UTC: 2024-07-25 19:25:35
+
+Note: This post has only 1 comments at the time of scraping.

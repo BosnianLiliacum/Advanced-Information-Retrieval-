@@ -1,0 +1,37 @@
+Post Title: 2 Factor VPN with Unifi
+Author: Such_Mention4106
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e9y6rf/2_factor_vpn_with_unifi/
+Number of comments: 2
+Created UTC: 2024-07-23 03:47:23
+
+Post Content:
+Hello,
+
+  
+I asked this questions over at r/Ubiquiti and never got any response. Hoping someone here might be able to help out? As with all my research i have still come up at a brick wall here.
+
+I have setup a Unifi Cloud Gateway Ultra with a Self-hosted Radius server and OpenVPN. The Open VPN is using the Radius Server users for connection and have a few questions which I have at this stage failed to find any answers to.
+
+All these questions are in context of using the Unifi Radius Server and VPN Host.
+
+Can you set up Wiregaurd to use the Radius server like OpenVPN?
+
+Is there a way to set up 2 Factor Authentication with the Radius server and or OpenVPN?
+
+At the moment it seems that when a user accesses the OpenVPN route it doesn't use the Radius Servers assignment rules to assign them to a V-lan.  
+Some of my Radius user get assigned to a V-Lan which have restricted access to other devices on the Network but have full access when using the VPN. Is there a way to exclude these user logins rights to use the VPN through the unifi system? Or otherwise write specific traffic rules/firewall rules to target these usernames in particular and restrict there access?
+
+If the Above isn't possible/practical within just the Unifi System what is my best alternative route? I have a Synology NAS on the network which I could host FreeRadius? would this give me better options?  
+Otherwise is there a Low-cost Cloud based Authenticator I could utilise with the Unifi setup?
+
+Cheers for any help/guidance you guys can provide.
+
+Top 1 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Why are you using OpenVPN when Wireguard exists? I use Wireguard with 2FA.
+  Score: 1
+  Created UTC: 2024-07-23 05:17:26
+
+Note: This post has only 1 comments at the time of scraping.

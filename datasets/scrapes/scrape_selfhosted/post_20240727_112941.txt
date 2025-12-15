@@ -1,0 +1,82 @@
+Post Title: New to Self Hosting, advice to start for a beginner. 
+Author: watermalonecat
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ec0fm2/new_to_self_hosting_advice_to_start_for_a_beginner/
+Number of comments: 8
+Created UTC: 2024-07-25 17:19:11
+
+Post Content:
+Please delete this post if it does not comply with the rules, I am new.  
+I recently got my old gaming computer up and running again, and would like to start home labbing with it. I'm completely new to self hosting, so I was hoping you guys could give me advice with what to start with, or what's best for a beginner. I've started with basic stuff such as various game servers for me and my friends, however I'd like to start branching out more and do more things. I've always liked the idea of self hosting and now is the time I'd like to start learning more. I want to learn how to run a NAS, but I'm not very experienced with anything other than Windows.
+
+I don't know if this matters or not, but here are the specs of the computer
+
+i7 975
+
+28gb of ram
+
+GTX 960
+
+1TB SSD
+
+These specs are fairly outdated but it actually seems to do great in daily tasks and running servers, even light gaming.  
+Thanks in advance.
+
+  
+Edit: Thank you for all the suggestions, this means alot. I had no idea where to start and now I've got a good idea where to start, and start messing with stuff and learning. Thanks. 
+
+Top 5 comments:
+Comment 1:
+  Author: Ok-Flounder-9205
+  Comment: Install proxmox on your System as your hypervisor. This is a good point to start, because you can setup your VMs or LXC container to Play around. Doing snapshots, backup, restore, Build a NAS VM with i.e. TrueNAS Scale or open media vault.
+Pi-hole or Adguard Container for DNS.
+Or you setup a Vm with ubuntu Server and install docker and do with that funny things.
+
+Youtube is here a very good resource for tutorials.
+  Score: 7
+  Created UTC: 2024-07-25 17:44:38
+
+Comment 2:
+  Author: jusepal
+  Comment: Start learning linux. Not that selfhosting on windows aren't possible but for ease of finding tools, docs and general help, linux is the goto.
+
+Pick a virtual machine software, install it on your windows host, create a vm and install a linux distro on it. For the vm software something like virtualbox or vmware could work.
+
+For the linux distro itself, you could either start with gui distro or their cli no gui counterparts but I'd go straight cli since thats the goto for linux low level stuff. Theres too little to learn on gui linux since its basically 90% similar to windows and you'll eventually open terminal too so just go cold turkey cli. For the linux distro itself, again, for ease of finding documentation pick debian or debian based distro. Personally I'd start with ubuntu server.
+
+Basically you install the linux distro on the vm, clone the vm for backup, play around and fck things up, restore again using the backup'ed vm image, repeat.
+
+Learn about linux permission, networking in the vm. Howto manage permissions, howto manage users, howto manage firewall, howto manual/auto update system, that kind of stuff. Learn commands for either vi or nano too.
+
+Then proceed to learn hosting basic stuff; bind9, nginx etc. Then maybe proceed to learn container; docker, podman, kubernetes etc.
+
+Don't be scared, create vm image backup before doing anything substantial. If you bork things up, restore and continue.
+  Score: 5
+  Created UTC: 2024-07-25 17:51:50
+
+Comment 3:
+  Author: jokerface18
+  Comment: Backups. And with Backups: Restore
+
+If you Never restored your Application/Data Guess its Not working in the worst case. Applications are set up quite easy, but updating, maintaining and working out a Backup solution might be a Little harder. 
+
+Besides that: just try, break, fix stuff and have fun learning sonething new. On one point updating it changing stuff gets fun and routine.
+
+Maybe Nextcloud is something you could try as private Cloudsolution.
+  Score: 2
+  Created UTC: 2024-07-25 20:10:54
+
+Comment 4:
+  Author: Interesting-Pop-8128
+  Comment: As somebody mentioned, you should pick a Linux distribution. I suggest debian, its stable and reliable. If you're completely new, you should start with basic Linux apps as bind9, apache2/nginx, isc dhcp server
+ These basic apps would give you a base idea how to start.Than you can check out what you want. For example jellyfin for media server, adguardhome for dns and dns blocking. Also check out the HTTPS with SS and domains. Also the basic networking. If you dont know something, try to google it. If you cant find the answer ask chatgpt. Maybe it won't be right, but can help you sometime.
+  Score: 1
+  Created UTC: 2024-07-25 20:46:08
+
+Comment 5:
+  Author: LucasRey
+  Comment: Save yourself from a lot of headaches and switch off your server 😅
+  Score: 1
+  Created UTC: 2024-07-25 19:29:19
+
+Note: This post has only 5 comments at the time of scraping.

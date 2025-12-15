@@ -1,0 +1,50 @@
+Post Title: New zrok Office Hours + Abuse Brainstorming
+Author: michael_quigley
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e6d724/new_zrok_office_hours_abuse_brainstorming/
+Number of comments: 2
+Created UTC: 2024-07-18 14:44:53
+
+Post Content:
+Hello!
+
+Back with another zrok Office Hours video. This time I'm walking through what's involved in creating a "personalized frontend" for your zrok shares.
+
+If you're not familiar with zrok, it's a platform for sharing network and file resources. You can learn more about it at: https://github.com/openziti/zrok and https://docs.zrok.io and https://zrok.io
+
+Part of what is provoking the office hours video on this specific topic are some changes that are coming to zrok fairly soon. As zrok has grown, we're starting to experience issues with abuse (users hosting phishing sites, etc.). zrok will remain fully free, but we're going to be instituting a credit card verification step (that does not charge anything) in order to let users access the public frontend (`zrok share public`, essentially). All of the private sharing features (`zrok share private`) are going to remain fully available without a credit card. It's just the public sharing feature that will require the additional verification step.
+
+(This verification does not impact users who self-host the entire open source zrok stack)
+
+This office hours video shows you how you can self-host your own public frontend aggregating multiple shares with custom DNS, TLS, and even your own `tcpTunnel` shares using a dirt-cheap VPS. This means you can continue to share securely and publicly using zrok by hosting your own frontend components. The video also includes additional discussion about the abuse-related changes that are coming.
+
+https://www.youtube.com/watch?v=LrD8OeZivRY
+
+I also would love to open this discussion up to the community... If you were running zrok.io, and had abuse issues with the public sharing feature, what would you do to mitigate the abuse? We're very open to steering zrok in a direction that makes sense.
+
+Also, keep in mind that we plan on "grandfathering" in any users that are signed up on zrok.io. If you sign up for a zrok account before the credit card verification goes into effect, you'll be granted access to the public frontend without a credit card. We plan on rolling this out in the next week or so...
+
+Always happy to answer any questions or discuss any ideas you might have!
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: michael_quigley
+  Comment: Update... a new idea presented itself today. Instead of requiring a no-charge credit card number to utilize the public frontend, we're starting to lean towards a different idea of introducing an "interstitial page" that shows up when a user first accesses a public zrok share, announcing that the share is made available for free through the zrok service.
+
+Paid accounts would remove this interstitial page. All private sharing would remain as it currently is.
+
+For folks who self-host the entire zrok stack, we would make this interstitial page configurable. If you don't want it, you could turn it off.
+  Score: 2
+  Created UTC: 2024-07-19 00:36:14
+
+Comment 2:
+  Author: michael_quigley
+  Comment: https://github.com/openziti/zrok/issues/704
+
+Will likely be putting togerther a follow-on office hours video next week talking about this change, instead of the credit card gate we had been heading towards.
+  Score: 1
+  Created UTC: 2024-07-19 15:07:21
+
+Note: This post has only 2 comments at the time of scraping.

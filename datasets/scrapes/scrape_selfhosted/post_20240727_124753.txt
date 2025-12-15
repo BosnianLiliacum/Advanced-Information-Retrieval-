@@ -1,0 +1,66 @@
+Post Title: Nginx proxy manager certificate to another network
+Author: Klaush61
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7ctzw/nginx_proxy_manager_certificate_to_another_network/
+Number of comments: 12
+Created UTC: 2024-07-19 19:56:09
+
+Post Content:
+npm docker ssl certificate to another network
+
+Hello,
+
+I don't know if I have some configuration wrong (or even if possible), but I would like to put certificates to other devices that I have in another network in my lab.
+
+  
+The network where the NPM is 172.16.61.x/24 and the other network is 172.16.60.x/24.
+
+from the docker server that is on 172.16.61.209, I can ping 172.16.60.209
+
+![img](llfgonyu0jdd1)
+
+I have created the same proxy host as another one I have that works on the .61 network.
+
+Config that works:
+
+![img](ohqwx5ja1jdd1)
+
+![img](b0la234c1jdd1)
+
+Config that dosen't work:
+
+![img](niu7kkrf1jdd1)
+
+![img](86sk097h1jdd1)
+
+My docker-compose.yml:
+
+![img](u4dbwlan1jdd1)
+
+  
+
+
+Top 1 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Will try to help.
+
+&gt;I would like to put certificates to other devices that I have in another network in my lab.
+
+Can you clarify the situation a bit more. 
+
+- you have two networks 
+- what are the other devices? Are they services that you want network A to communicate to network B?
+- can you draw a flow of what you want
+
+Example:
+
+Client -&gt; DNS (local or external) -&gt; reverse proxy A -&gt; network A -&gt; service on machine A
+
+Client -&gt; DNS (local or external) -&gt; reverse proxy B -&gt; network B-&gt; service on machine B
+
+Etc
+  Score: 2
+  Created UTC: 2024-07-19 20:40:48
+
+Note: This post has only 1 comments at the time of scraping.

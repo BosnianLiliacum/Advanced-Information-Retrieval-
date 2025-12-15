@@ -1,0 +1,31 @@
+Post Title: is it safe to expose my services through azure ?
+Author: Homelanderr420
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ed0scj/is_it_safe_to_expose_my_services_through_azure/
+Number of comments: 2
+Created UTC: 2024-07-26 22:26:10
+
+Post Content:
+I've been using cloudflare tunnel for a long time now, but now i want to self host vaultwarden and afraid from CF bec, they can see all the traffic and all the data in any service im hosting (in this case my passwords)
+
+so, i got a vps from Microsoft Azure and tried an open source alternative "BoringProxy" and it's working great, but my concern here is that now my data goes through the vps first without any encryption and i assume they can see all the data if they want to
+
+so, i thought about learning how to create multiple vlans from my only router at home and expose one of them directly to the internet
+
+  
+my question here is: What is the safest for the (1. My data inside the services) (2. my network security)
+
+is it the vps or multiple vlans ?
+
+Top 1 comments:
+Comment 1:
+  Author: ericesev
+  Comment: If we're only talking about Vaultwarden data, then it is safe, neither Cloudflare nor Azure can see the content of your vault. The Bitwarden app &amp; extension have a separate layer of encryption on the vault that cannot be decrypted by Cloudflare or Azure.
+
+It's true that Cloudflare or Azure could see the (hashed) password used to retrieve your vault. But that password is not the same as the one that unlocks your vault, so they cannot see the passwords or any data inside.
+
+ETA: I'm assuming you're using the Bitwarden app or extension in combination with Vaultwarden.
+  Score: 5
+  Created UTC: 2024-07-26 22:38:50
+
+Note: This post has only 1 comments at the time of scraping.

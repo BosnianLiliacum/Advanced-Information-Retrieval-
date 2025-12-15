@@ -1,0 +1,79 @@
+Post Title: I am creating "My Own Web Services" to make self-hosting reliable cloud systems as well as applications installation and app development easier for everybody.
+Author: MyOwnWebServices
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8qrjh/i_am_creating_my_own_web_services_to_make/
+Number of comments: 10
+Created UTC: 2024-07-21 16:52:49
+
+Post Content:
+Hi everyone!
+
+I am creating an open-source project that aims to fix many of the difficulties of self-hosting, making it easier for everyone to reliably self-host their online presence, E-Mail, website, password manager, media library and much more.
+
+There are many projects that have similar goals, but none of them do fit my requirements for various reasons.
+
+  
+One of the reasons is that most of these projects rely on docker-compose running on a single machine that can break at any time. Even if you like to put your Sysadmin hat on and love to troubleshoot boot drive failures and other stuff in your free time, the day will come that you are on vacation or otherwise busy and your system breaks, shutting down your whole IT infrastructure that you and others may rely on, if you are treating your self-hosted system as anything other than an experimental home-lab. 
+
+Inspired by [u/geerlingguy](), [u/Techno-Tim](), dreamsofautonomy, WolfgangsChannel and many others, as well as through my years of experience in software development and self-hosting everything, I came up with my ideal Idea of what could be the solution to this and many other related problems that I face with self-hosting and app development every day.
+
+The project is built around the awesome, ever-growing, Kubernetes ecosystem. For many problems, there are ready-made solutions from other Open Source contributors that just need to be brought together to create a more desirable software/sovereign cloud ecosystem.
+
+To find out more, check out [mows.cloud](https://mows.cloud) and consider leaving a Star on [GitHub](https://github.com/my-own-web-services/mows) if you like the vision, to keep the motivation going. If you want to do even more, spread the word and consider contributing to the project in whatever way.
+
+Have a good one!
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Never read and seen so much generative AI garbage in a while. I quote:
+
+&gt; Wifi everywhere!
+Ditch the ISP's router and run your own, with better security, more features, and less spying. Use your cluster nodes as wifi access points, and roam freely without losing connection or buying another device. Provide free wifi to everyone around and profit from everyone else when you're out and about. Everything secured, encrypted and private, of course.
+
+It's like all the WiFi equipment providers like Ubiquiti Unifi don't exist anymore 😉. I hope you know how to develop your own access points OP, because that's what you are promising here.
+  Score: 18
+  Created UTC: 2024-07-21 19:07:02
+
+Comment 2:
+  Author: PeeApe
+  Comment: Sounds like absolute garbage. Why aren’t you supporting one of the significantly more mature projects?
+
+We don’t need the 100th version of this. Especially not with a terrible AI generated blurb about it. 
+  Score: 9
+  Created UTC: 2024-07-21 20:34:51
+
+Comment 3:
+  Author: mrkesu
+  Comment: 🥴
+  Score: 6
+  Created UTC: 2024-07-21 20:34:01
+
+Comment 4:
+  Author: Virtual_Laserdisk
+  Comment: you think you can shortcut your way into this stuff with AI? back to the drawing board, kiddo.
+  Score: 3
+  Created UTC: 2024-07-22 14:16:10
+
+Comment 5:
+  Author: EndlessHiway
+  Comment: I used AI to generate my reply, "Piss off".
+  Score: 2
+  Created UTC: 2024-07-21 22:49:16
+
+Comment 6:
+  Author: Divxtr
+  Comment: Looks interesting as I have no Kubernetes experience so far but it would be a good start. I have a good amount of docker experience though. I hope that makes things easier. 
+
+One question though. I have seven servers and I get where you’re coming from but most of ordinary folks have one server? So boot drive crashes etc can happen but we simply can’t afford three or four cloud servers. That is of course except using a solution like proxmox on your home server. Again in that case it depends on how many different disks you are using or your raid setup etc. To be honest with you I think this is the reason most projects stick to docker. And also it is possible to separate your media using dockers (again with proxmox) but I think it is more like a server admin issue. We usually take those risks or not, during the server setup process. In my world that equates to having backups using 3-2-1 rule. This last really long bit could not turn into a question but hopefully you understand what I mean.
+  Score: -1
+  Created UTC: 2024-07-21 19:07:27
+
+Comment 7:
+  Author: lprell
+  Comment: This is promising.
+  Score: -12
+  Created UTC: 2024-07-21 18:55:13
+

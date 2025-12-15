@@ -1,0 +1,58 @@
+Post Title: Just Launched My Blog!! Tips, Guides and Custom Applications
+Author: TheWicklowWolf
+Score: 32
+URL: https://www.reddit.com/r/selfhosted/comments/1ebqkhb/just_launched_my_blog_tips_guides_and_custom/
+Number of comments: 7
+Created UTC: 2024-07-25 09:26:08
+
+Post Content:
+https://preview.redd.it/jdvrpe0wfped1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=74690db441bff6b62cdbd51ef3c6aa72ffd292f7
+
+
+
+
+
+I recently started a blog detailing my self-hosted setup, primarily focused on media servers.
+
+If you're running an ebook or music server, you might find some useful tips or even some new ideas to enhance your setup.
+
+In the blog, I plan to cover:
+
+* How to set up and manage ebook and music servers.
+* Tips for organizing and optimizing your digital library.
+* Custom applications I created to improve server functionality and management.
+
+[https://thewicklowwolf.github.io/](https://thewicklowwolf.github.io/)
+
+Top 5 comments:
+Comment 1:
+  Author: nashosted
+  Comment: Love your apps. Simple install and easy to use. Thank you for your contributions!
+  Score: 4
+  Created UTC: 2024-07-25 16:58:39
+
+Comment 2:
+  Author: Jackson_drake
+  Comment: Nice I will check them out 😁, btw what are you using for making the blog? I have heard of ghost, are you using something similar?
+  Score: 2
+  Created UTC: 2024-07-25 19:00:28
+
+Comment 3:
+  Author: zfa
+  Comment: I'll defo check it it now and when, always loved your github stuff. Thanks for sharing.
+  Score: 2
+  Created UTC: 2024-07-25 21:49:29
+
+Comment 4:
+  Author: edgelesscube
+  Comment: Go raibh mile maith agat. 🇮🇪
+  Score: 1
+  Created UTC: 2024-07-26 23:34:59
+
+Comment 5:
+  Author: fornceets
+  Comment: That's awesome, congrats on launching your blog! For creating clear how-to guides for setting up and managing ebook and music servers, you might find Guidde really useful. It's helped me a lot in creating quick, easy-to-follow video documentation. Looking forward to your posts!
+  Score: 1
+  Created UTC: 2024-07-27 02:04:06
+
+Note: This post has only 5 comments at the time of scraping.

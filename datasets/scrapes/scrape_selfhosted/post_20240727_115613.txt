@@ -1,0 +1,87 @@
+Post Title: I'm looking for backup solutions instead of BackupPC
+Author: josemcornynetoperek
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eakkoy/im_looking_for_backup_solutions_instead_of/
+Number of comments: 12
+Created UTC: 2024-07-23 22:06:17
+
+Post Content:
+Hello.
+
+I am looking for a selhosted solution for backup of linux servers (mail and www).
+
+Assumptions:
+
+- compression
+
+- incremental and full backups
+
+- web interface
+
+- possibility to backup more than one machine on one server
+
+
+
+
+
+So far I have been using BackupPC and this solution worked great. However, I have been having problems with it for some time:
+
+- it does not free up space after deleting old backups
+
+- sometimes it only makes copies of directories skipping files
+
+ 
+
+I would appreciate if you could recommend me reasonable solutions that meet the objectives.
+
+Top 7 comments:
+Comment 1:
+  Author: Mention-One
+  Comment: So I'd say restic: it touches all the points but no web interface AFAIK.
+  Score: 2
+  Created UTC: 2024-07-23 22:13:22
+
+Comment 2:
+  Author: Dante_Avalon
+  Comment: Veeam agent or Veeam CE, but no web interface (at least legally)
+  Score: 2
+  Created UTC: 2024-07-23 22:21:28
+
+Comment 3:
+  Author: RexNebular518
+  Comment: Veeam
+  Score: 2
+  Created UTC: 2024-07-23 22:57:26
+
+Comment 4:
+  Author: notsosilentassassin
+  Comment: UrBackup seems like it might be an option, little bit of a pain to setup, but works.
+  Score: 1
+  Created UTC: 2024-07-23 22:34:58
+
+Comment 5:
+  Author: JedBurke
+  Comment: +1 for restic. Fast and has deduplication. There's an out-of-memory issue being reported, so you might want to give it a test before committing. There is [Backrest](https://github.com/garethgeorge/backrest) for a Web UI. Seems nice, but haven't used it myself.
+
+I'm using Borg backup on Linux. Runs well. Feature-filled and slightly complicated, but well documented. Opted for it over restic because of memory concerns. There's a sample script on the documentation site which performs a backup and~ prunes old backups. Restic has that feature as well.
+
+Previous one I used was Duplicati, it has a web UI. Nice, but much slower than restic for the same files. Ran into issues when running backups for the same drive on a different Window sinstallation (7 -&gt; 10) .
+
+Kopia is based on Go, looks promising, but haven't used it. Has a UI, make sure to get the correct variant. Like restic, there's a report of a memory issue. A while back they addressed it in a release.
+
+Hope this helps.
+  Score: 2
+  Created UTC: 2024-07-23 23:01:15
+
+Comment 6:
+  Author: monistaa
+  Comment: I recommend using Veeam as well. The Free Agent should fit well. The Community Edition can be also a good choice if you have a hypervisor. In case you need to push backups to the cloud, consider using StarWinds VTL, which works well with Veeam to enable cloud replication.
+  Score: 3
+  Created UTC: 2024-07-24 04:35:28
+
+Comment 7:
+  Author: xkcd__386
+  Comment: restic is awesome, but I have never tried backrest so YMMV
+  Score: 1
+  Created UTC: 2024-07-24 07:11:54
+

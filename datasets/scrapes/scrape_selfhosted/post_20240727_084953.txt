@@ -1,0 +1,30 @@
+Post Title: Services on Ubuntu server 
+Author: Demonheart_
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebfkqq/services_on_ubuntu_server/
+Number of comments: 3
+Created UTC: 2024-07-24 23:11:21
+
+Post Content:
+So there's something confusing me, i wonder how it works with users and services on an Ubuntu server 
+
+I was looking into different ways to set up valheim server, found a guide on how to set one up as a service. Guide said to create a user called valheim and run it under there.
+
+Now to my questions: can i make another user for example called valheim2 and run another server simultaneously? And even make a third user called vrise and run a third server for v rising at the same time?
+
+And if i delete the user valheim2, does it remove everything affiliated with that server? And the others stay up and running?
+
+And yeah, im aware of docker and all that. I just cant figure out the deal with users correctly 
+
+Top 1 comments:
+Comment 1:
+  Author: lesigh
+  Comment: The reason why they have you create another user is because it's best practice to not run services as root.
+
+You can create as.many servers as you want as lony as you have the resources. 
+
+What changes is the directory and port number. Youll still need to kill the server process and directory if you want to remove a server
+  Score: 3
+  Created UTC: 2024-07-24 23:27:00
+
+Note: This post has only 1 comments at the time of scraping.

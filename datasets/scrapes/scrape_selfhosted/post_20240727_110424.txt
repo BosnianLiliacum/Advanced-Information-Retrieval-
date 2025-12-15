@@ -1,0 +1,73 @@
+Post Title: Linux Endpoint Management
+Author: bcredeur97
+Score: 10
+URL: https://www.reddit.com/r/selfhosted/comments/1e3edti/linux_endpoint_management/
+Number of comments: 14
+Created UTC: 2024-07-14 22:10:22
+
+Post Content:
+Not sure if this is the best place to ask, but I love the idea of driving Linux adoption on endpoints.
+
+However one of the biggest stumbles I’ve come across in the business world is you really really need some sort of policy-based management system for endpoints.
+
+Active Directory handles this super well on Windows endpoints (most of the time). It’s the tried-and-true method. 
+
+Is there anything remotely like it for Linux endpoints? Someway to create policies and “standardize” your endpoints or even put them into groups to give them “roles”. 
+
+I understand ansible may be able to achieve something like that, but it’s certainly not as straightforward as something like an active directory. 
+
+Just curious what is out there! 
+
+Top 7 comments:
+Comment 1:
+  Author: revgriddler
+  Comment: I do endpoint management and haven’t seen anything that compelling for Linux in the MDM/AD vein yet. 
+
+We manage our endpoints with SaltStack + MDM, and have a trial for managing Linux endpoints, but security doesn’t love that it’s relatively easy to circumvent management on Linux with the tools we have. Add that to the stereotype that Linux users are allergic to management and it’s hard to make a business case.
+  Score: 6
+  Created UTC: 2024-07-15 03:48:53
+
+Comment 2:
+  Author: TheFluffiestRedditor
+  Comment: Redhat Satellite is the closest commercial thing you’ll find, and it’s similar to SCCM. It has Ansible (and maybe puppet still?) integration.  The parent/free product is The Foreman.
+
+ There is another fleet management product I’ve been meaning to have a look at but can’t remember its name. It’s in a tab stash somewhere 😞. Advantage is it’ll look after other OS too, Forman/Satellite are for rpm based systems only.
+
+You might get more answers over on /r/sysadmin.
+
+There is no Linux equivalent to Group Policy.
+  Score: 4
+  Created UTC: 2024-07-15 04:21:19
+
+Comment 3:
+  Author: RedSquirrelFtw
+  Comment: I think this is one of the major drawbacks to Linux in the enterprise.  It's kind of crazy that nothing really exists that's not half baked and require tons of research and reading docs etc.  Something as easy as AD, but fully native to Linux.   I'm sure something might exist, but the keyword is easy. Nothing is going to be easy.  Windows on the other hand is pretty turn key and easy to setup a full AD environment.
+  Score: 3
+  Created UTC: 2024-07-15 07:22:44
+
+Comment 4:
+  Author: willharwell
+  Comment: Intune supports Linux now, although the flavors are limited. [https://learn.microsoft.com/en-us/mem/intune/user-help/enroll-device-linux](https://learn.microsoft.com/en-us/mem/intune/user-help/enroll-device-linux)
+  Score: 3
+  Created UTC: 2024-07-15 11:03:33
+
+Comment 5:
+  Author: lmm7425
+  Comment: Ubuntu supports some AD GPO integration
+
+https://ubuntu.com/blog/new-active-directory-integration-features-in-ubuntu-22-04-part-2-group-policy-objects
+  Score: 3
+  Created UTC: 2024-07-14 23:38:51
+
+Comment 6:
+  Author: Believer-of_Karma
+  Comment: [SureMDM](https://www.42gears.com/products/mobile-device-management/linux-device-management/) supports Linux device management. You can try the 30-day free trial to explore its Linux endpoint management capabilities
+  Score: 2
+  Created UTC: 2024-07-15 12:12:23
+
+Comment 7:
+  Author: Thin_Pie8081
+  Comment: Have you looked into using Landscape or Puppet? Both offer robust management and policy-setting for Linux endpoints. For making it easier to onboard your team, Ive found creating quick how-to videos with Guidde super helpful. Its great for visual documentations and trainings!
+  Score: 1
+  Created UTC: 2024-07-15 19:14:07
+

@@ -1,0 +1,32 @@
+Post Title: What are the best ways to share file between local, VPSs?
+Author: hades20122
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ecdr4z/what_are_the_best_ways_to_share_file_between/
+Number of comments: 7
+Created UTC: 2024-07-26 03:05:13
+
+Post Content:
+My server has 1Gbit and 10Gbit network and my local has 1Gbit network. When using Iperf with argument -P 10, it max out my speed at local (about 800Mbit/s). However, when sync file using FTP/SFTP, even I use CuteFTP and set threads/stream to 8-10, the speed is capped about 4-50Mb/s (4-5MB/s). Is there other option that I can try?
+
+Top 3 comments:
+Comment 1:
+  Author: jusepal
+  Comment: Syncthing?
+  Score: 4
+  Created UTC: 2024-07-26 03:50:21
+
+Comment 2:
+  Author: blackstar2043
+  Comment: rsync/rclone for large or multiple transfers. 
+
+[croc](https://github.com/schollz/croc) for small or singular transfers.
+  Score: 3
+  Created UTC: 2024-07-26 10:07:54
+
+Comment 3:
+  Author: mickael-kerjean
+  Comment: rsync for 1 way sync and unison if you need 2 way sync
+  Score: 2
+  Created UTC: 2024-07-26 04:57:15
+
+Note: This post has only 3 comments at the time of scraping.

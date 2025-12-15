@@ -1,0 +1,32 @@
+Post Title: [HW] where to get GPU power from in a server - what to look out for, how to approach?
+Author: SciPiTie
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eazv5h/hw_where_to_get_gpu_power_from_in_a_server_what/
+Number of comments: 2
+Created UTC: 2024-07-24 12:10:11
+
+Post Content:
+hello friends,
+
+Context: I'm very fit on the software side of things but hardware is something I'm only used to the consumer side of things. 
+
+Now I have a quite unique challenge: I want to throw a GPU into my server to play around with some local LLM stuff. This needs a 8pin GPU power connector.
+
+But I don't have a classical power supply, instead it's two redundant hot-swappable power supply with a common breakout board in a Intel P4304XXMUXX case. (The server itself is a WORTMANN TERRA 7420 G2).
+
+There are a few 2x2 slots free on the board and there are adapters of two molex to PCIe - but do those work for a graphics card? 
+
+What I'm looking for are any tips, hints and insights into how to get a graphics card into that machine without replacing the power supply / case / whole server.
+
+I already thought about buying a 500w 12v DC supply and crimp a cable to purely supply the graphics card with power ...
+
+Top 1 comments:
+Comment 1:
+  Author: Hairy_Elk_5313
+  Comment: I'd be worried about using those molex adapters, but it depends on what video card you're planning to use and the specific power supplies you're using.  My first concern is the quality of the molex adapters, and second would be the the power supplies themselves(really the wire thickness).  GPU's can draw a lot of power and if the wiring is insufficient, or the adapters don't make a solid connection it can be a fire risk.  
+
+In theory it could work, though.  Those adapters were commonly used before the 8 pin plugs were provided on every power supply.  Nvidia 10 series gpu's came with those adapters in the box.  There's surely a data sheet for your power supply that will tell you the max current draw for those connectors.  Check that against the power draw of the gpu and find some quality adapters.  Or use a second power supply, but I wouldn't try to make my own cable, just buy a regular pc power supply that already has the right connector and use a jumper to force it to work without being plugged into a PC(https://bit-tech.net/guides/modding/how-to-jump-a-psu/1/)
+  Score: 2
+  Created UTC: 2024-07-24 23:06:17
+
+Note: This post has only 1 comments at the time of scraping.

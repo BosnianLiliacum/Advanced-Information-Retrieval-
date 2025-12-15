@@ -1,0 +1,28 @@
+Post Title: New Self Hosted Dashboard Ideas
+Author: lowercase-raging
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e87k4k/new_self_hosted_dashboard_ideas/
+Number of comments: 6
+Created UTC: 2024-07-20 22:37:57
+
+Post Content:
+I am designing a self hosted dashboard named mDash that can automatically discover other services you have running on your network. It will scan all IPs on your local network for ports that other self hosted services run. For example, Home Assistant’s port is 8123, so it will try to connect to all IPs on your local network with the port 8123 and see if it exists or not, then add it to your dashboard. I was wondering if there were any services you would like me to add and what default ports they have so I can add it to the array to scan for. Also, if there is any other features you would like added to the dashboard, feel free to comment.
+
+Top 2 comments:
+Comment 1:
+  Author: ChrisSlash0
+  Comment: There are many services which use a special port but what do you do with a software that uses a standard port shared with other software (port 80, 8080…)
+
+My services are all behind a reverse proxy so no software can scan all my services - theres only port 80 and 443.
+
+Maybe get into reverse proxys and deploy one for your services (NPM, traefik, …) rather than building an port scanner that scans everybodys whole network.
+  Score: 3
+  Created UTC: 2024-07-20 23:05:18
+
+Comment 2:
+  Author: trisanachandler
+  Comment: So I use swag for my proxy, and what I do is have a php page that scans anything in the proxy-conf folder and add it onto my homepage as a link.  Makes it really convenient to find anything I'm proxying.
+  Score: 2
+  Created UTC: 2024-07-21 04:36:47
+
+Note: This post has only 2 comments at the time of scraping.

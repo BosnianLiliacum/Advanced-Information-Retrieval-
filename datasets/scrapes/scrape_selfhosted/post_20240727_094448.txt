@@ -1,0 +1,47 @@
+Post Title: Repurpose old gaming PC to NAS/Home-Server
+Author: Kill3rAce
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8bdfl/repurpose_old_gaming_pc_to_nashomeserver/
+Number of comments: 12
+Created UTC: 2024-07-21 01:50:08
+
+Post Content:
+I currently have a AsRock X570 Taichi MB. 8 sata ports, 3 nvme slots, 3 pci-e 
+
+So it seems to be loaded with options I can use to upgrade. Better Ethernet 2.5/10gb and so on.
+
+My issue is currently running a 3800X + 5700xt
+
+My idle is around 100~ even with power savings mode(windows)and p-state = 2 high setting on my board.
+
+I was thinking of grabbing a 5700G w/ on board gpu. No quick sync but still 8c/16t be plenty for my starting home-server/NAS needs(JellyFin/HA/etc)Goal is just to be more power efficient.
+
+Does this sound like good plan? Any suggestions?
+
+Think I'm gonna get a dedicated nas case gotta be a ATX (any suggestions be nice) 
+
+keep meshify C case for next gaming PC upgrade(since no room for HDD drives). Most likely take 5700xt with it for now.
+
+Top 1 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Hello, have a couple of sugguestions
+
+&gt; My idle is around 100~ even with power savings mode(windows)and p-state = 2 high setting on my board. 
+
+How comfortable are you with linux? It will use a lot less resources than windows which should result in lower power consumption 
+
+&gt;My issue is currently running a 3800X + 5700xt 
+
+Does your motherboard support no video signal? You can install linux in headless mode (no GUI) and use just your CPU. 
+
+- You will need to have the GPU in while you install linux, then pull it out after the fact
+  - Ensure you enable SSH on the linux install to allow you to connect
+- ~~This of course measn no transcoding for jellyfin.~~
+  - edit: transcoding works for jellyfin with just a CPU. Confirmed lower in the thread.
+
+Hope that helps
+  Score: 2
+  Created UTC: 2024-07-21 02:37:30
+
+Note: This post has only 1 comments at the time of scraping.

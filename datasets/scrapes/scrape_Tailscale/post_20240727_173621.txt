@@ -1,0 +1,40 @@
+Post Title: New device connectivity troubleshooting doc
+Author: jaxxstorm
+Score: 11
+URL: https://www.reddit.com/r/Tailscale/comments/1eafnek/new_device_connectivity_troubleshooting_doc/
+Number of comments: 7
+Created UTC: 2024-07-23 18:48:02
+
+Post Content:
+Hello there Tailscale users! 
+
+I work on our solutions engineering team, and we commonly get asked why devices don't have direct connections. I've worked with some of our engineering team and docs team to author a new doc to help understand the different types of NAT, the results of these, and how to decipher your NAT situation. You can see the results here: https://tailscale.com/kb/1411/device-connectivity
+
+We'd love to get your feedback, and I'd like to get your thoughts on whether a webinar in September on this topic would be useful for the community
+
+Top 3 comments:
+Comment 1:
+  Author: caolle
+  Comment: This document is good. It does bring up a question about netcheck and the table under connectivity types. 
+
+Is there a way for netcheck to spit out what it thinks what type of NAT a user is behind? Rather than have to remember all the jargon and what types refer to what sort of NAT, it might be better for the end user for netcheck to spit it out. 
+
+I realize that this is more of a feature request, but the document did bring the question out to the front of mind.
+  Score: 2
+  Created UTC: 2024-07-23 19:07:43
+
+Comment 2:
+  Author: mindracer
+  Comment: Is there a way to check on iOS app?
+  Score: 1
+  Created UTC: 2024-07-23 21:04:52
+
+Comment 3:
+  Author: Lightbringer527
+  Comment: Very informative doc. 
+
+When I run `tailscale netcheck` there’s also a option called HairPinning which isn’t mentioned in this doc.
+  Score: 1
+  Created UTC: 2024-07-24 00:32:32
+
+Note: This post has only 3 comments at the time of scraping.

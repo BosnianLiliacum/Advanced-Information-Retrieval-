@@ -1,0 +1,52 @@
+Post Title: PG Back Web: A self-hosted PostgreSQL backup solution - Looking for early adopters
+Author: EduardoDevop
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1ebh29m/pg_back_web_a_selfhosted_postgresql_backup/
+Number of comments: 8
+Created UTC: 2024-07-25 00:17:55
+
+Post Content:
+Hello self-hosters!
+
+I wanted to share a project I've been working on that might interest you. It's called PG Back Web, a self-hosted solution for managing PostgreSQL backups.
+
+Key points:
+
+* Easy to set up and use
+* Web interface for backup management
+* Supports PostgreSQL 13-16
+* Scheduled backups
+* S3 compatible storage
+
+I'm looking for early adopters who might want to give it a spin. Your insights would be invaluable in shaping the project's future.
+
+[https://github.com/eduardolat/pgbackweb](https://github.com/eduardolat/pgbackweb)
+
+What features would you like to see in a self-hosted backup solution? I'm eager to hear your thoughts!
+
+Top 4 comments:
+Comment 1:
+  Author: ResearchCrafty1804
+  Comment: Looks great, prioritize restoration from the web ui and it will be very handy
+  Score: 5
+  Created UTC: 2024-07-25 04:08:58
+
+Comment 2:
+  Author: camilian2600
+  Comment: It looks interesting; I'll give it an install this weekend.
+  Score: 2
+  Created UTC: 2024-07-25 03:46:33
+
+Comment 3:
+  Author: rursache
+  Comment: looks amazing, will give it a try asap!
+  Score: 2
+  Created UTC: 2024-07-25 20:48:30
+
+Comment 4:
+  Author: kzshantonu
+  Comment: The compose example have no volumes aka no persistence
+  Score: 1
+  Created UTC: 2024-07-25 23:04:47
+
+Note: This post has only 4 comments at the time of scraping.

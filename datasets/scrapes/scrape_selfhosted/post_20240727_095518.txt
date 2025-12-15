@@ -1,0 +1,113 @@
+Post Title: Yet another noob asking for help with VPS VPN for a game server
+Author: iNonEntity
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7l3rl/yet_another_noob_asking_for_help_with_vps_vpn_for/
+Number of comments: 11
+Created UTC: 2024-07-20 02:23:07
+
+Post Content:
+I tried my best to avoid making another thread about this, but I've tried everything I can. I run game servers from my Windows PC, but cannot anymore because I moved and am now stuck with Zito's CGN IP address. I purchased an Ubuntu VPS from Ionos as a public "gateway" (Reddit told me it's better than paying for a static IP), and installed Wireguard on it and my PC. I've tried DOZENS of guides including with Tailscale (closest I got to working), but haven't got any of them to work. The following steps are my latest (ChatGPT assisted) attempt at making it work, some commands are probably redundant because I don't fully understand what all they do. Pings between the two do not work, and the Ark (game) server launches LAN only, though it still can access the internet, and still shows its own CGN IP online.
+
+1. apt-update/upgrade
+2. ufw allow OpenSSH
+3. ufw enable
+4. /etc/ssh/sshd\_config
+   * LoginGraceTime 2m
+   * PermitRootLogin no
+   * MaxAuthTries 3
+   * MaxSessions 2
+   * ChallengeResponseAuthentication no
+   * PermitEmptyPasswords no
+   * KerberosAuthentication no
+   * GSSAPIAuthentication no
+   * AllowAgentForwarding yes
+   * AllowTcpForwarding yes
+   * X11Forwarding no
+   * PermitUserEnvironment no
+5. sudo service sshd reload
+6. /etc/sysctl.conf
+   * net.ipv4.ip\_forward=1
+7. sudo sysctl -p
+8. sudo sysctl -w net.ipv4.ip\_forward=1
+9. echo "net.ipv4.ip\_forward=1" | sudo tee -a /etc/sysctl.conf
+10. **Install Nginx on VPS** (I was using it for reverse proxy but GPT said I can use iptables instead and keep Nginx just because)
+
+* sudo apt install nginx
+* sudo systemctl start nginx
+* sudo systemctl enable nginx
+* sudo ufw allow 'Nginx HTTP'
+* sudo ln -s /etc/nginx/sites-available/your\_domain /etc/nginx/sites-enabled/
+* sudo systemctl reload nginx
+
+1. **Install Wireguard on VPS**
+
+* sudo apt install wireguard
+* umask 077 &amp;&amp; printf "\[Interface\]\\nPrivateKey = " | sudo tee /etc/wireguard/wg0.conf &gt; /dev/null
+* sudo wg genkey | sudo tee -a /etc/wireguard/wg0.conf | wg pubkey | sudo tee /etc/wireguard/publickey
+* sudo nano /etc/wireguard/wg0.conf    (VPS)
+   * \[Interface\]
+   * PrivateKey = `(VPS's private key)`
+   * Address = [10.0.0.1/24](http://10.0.0.1/24)
+   * ListenPort = 51820
+   * \[Peer\]
+   * PublicKey = `(PC's public key)`
+   * AllowedIPs = [10.0.0.2/32](http://10.0.0.2/32)
+   * Endpoint = `(VPS's public IP)`:51820
+   * PersistentKeepalive = 25
+
+1. **Install Wireguard on PC**
+
+* Add Empty Tunnel
+   * \[Interface\]
+   * PrivateKey = `(PC's private key)`
+   * ListenPort = 51820
+   * Address = [10.0.0.2/24](http://10.0.0.2/24)
+   * \[Peer\]
+   * PublicKey = `(VPS's public key)`
+   * AllowedIPs = [10.0.0.1/32](http://10.0.0.1/32)
+   * Endpoint = `(VPS's public IP)`:51820
+   * PersistentKeepalive = 25
+
+1. **VPS iptables:** (forwarded all but 22 because it is my personal computer)
+
+* sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j ACCEPT
+* sudo iptables -t nat -A PREROUTING -p tcp -j DNAT --to-destination [10.0.0.2](http://10.0.0.2)
+* sudo iptables -A FORWARD -p tcp -d [10.0.0.2](http://10.0.0.2) -j ACCEPT
+* sudo iptables -t nat -A PREROUTING -p udp -j DNAT --to-destination [10.0.0.2](http://10.0.0.2)
+* sudo iptables -A FORWARD -p udp -d [10.0.0.2](http://10.0.0.2) -j ACCEPT
+* sudo apt install iptables-persistent
+* sudo netfilter-persistent save
+
+1. sudo wg-quick up wg0
+2. sudo sysctl -w net.ipv4.ip\_forward=1
+3. echo "net.ipv4.ip\_forward=1" | sudo tee -a /etc/sysctl.conf
+4. Activate VPS interface on PC
+
+Please tell me if there's something I'm missing or doing wrong, but also please don't tell me I have to spend more money on something else, I really want this to work. My brain is fried and I just want to play Ark with my friends again.
+
+Top 3 comments:
+Comment 1:
+  Author: FanClubof5
+  Comment: This may not be super helpful but you need to break this down and figure out each part.
+
+1. How are you talking from the VPS to the local server. If its wireguard then validate the connection works. Can your hosts ping each other? what about ssh?
+
+2. Reverse proxy on the VPS. Im not familiar with a method to use iptables as a reverse proxy but SWAG is a nifty docker container with ngix and a whole bunch of pre-configured proxy profiles.
+
+You may also want to check out https://pterodactyl.io/ as it can run your ARK server in docker and has a proxy config in SWAG already. https://github.com/linuxserver/reverse-proxy-confs/blob/master/pterodactyl.subdomain.conf.sample
+  Score: 2
+  Created UTC: 2024-07-20 02:56:32
+
+Comment 2:
+  Author: Kaleodis
+  Comment: not exactly answering your question, but have you had a look at playit.gg? works quite well for my enshrouded server rn.
+  Score: 2
+  Created UTC: 2024-07-20 03:26:51
+
+Comment 3:
+  Author: Lower_Range_4228
+  Comment: Why are you trying to vpn from your computer to your VPS to host the game instead of hosting the game directly on your VPS?
+  Score: 1
+  Created UTC: 2024-07-22 05:55:16
+
+Note: This post has only 3 comments at the time of scraping.

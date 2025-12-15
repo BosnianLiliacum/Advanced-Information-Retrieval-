@@ -1,0 +1,27 @@
+Post Title: Scan/index documents 
+Author: firsway
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8oxsx/scanindex_documents/
+Number of comments: 7
+Created UTC: 2024-07-21 15:31:43
+
+Post Content:
+Hi, I'm looking for something to host that can enable documents (probably PDFs) held in a CIFS share, to be ingested, then OCR or similar to be used to detect keywords and other metadata that could be then used to store the PDF permanently with the ability to search/display in categories. An example would be that I might store my electricity bills and bank statements in pdf format, hand side want the application to provide a way to store each in their own specific electricity bill and bank statements folder with the ability to search by date for instance. 
+Has anybody got any suggestions please, based on experience? I've looked in the past things like paperless-ngx. For some reason I couldn't figure out how to properly get it up and running.
+For info in case this affects any suggestions, I currently run a multi-node Proxmox VM environment on HP DLP360p hardware with NFS to 2x custom storage servers (TrueNAS Scale) with plenty of space. I already have various Windows, Linux environments, some running standalone apps, and others using Docker, Portainer etc. so should have some flexibility here..
+Ideas greatly appreciated please? Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: paperless-ngx. I use it since a few months and it does everything you want. I use it with Active Directory as IdP and I have multiple CIFS mounted including the folder of the network scanner (HP MFP).
+  Score: 4
+  Created UTC: 2024-07-21 15:56:52
+
+Comment 2:
+  Author: hereisjames
+  Comment: The answer to this requirement here is always going to be Paperless NGX. As you describe it you run a fairly complex environment already, I can't see how setting up the Paperless Docker containers defeated you. What happened?
+  Score: 2
+  Created UTC: 2024-07-22 08:08:43
+
+Note: This post has only 2 comments at the time of scraping.

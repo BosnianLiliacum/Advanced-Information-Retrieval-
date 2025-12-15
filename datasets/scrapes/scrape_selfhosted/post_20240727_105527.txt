@@ -1,0 +1,108 @@
+Post Title: What services are you hosted that you have second thoughts on ?
+Author: danz0l
+Score: 48
+URL: https://www.reddit.com/r/selfhosted/comments/1e3xt3b/what_services_are_you_hosted_that_you_have_second/
+Number of comments: 66
+Created UTC: 2024-07-15 15:35:43
+
+Post Content:
+OK so I've been enjoying my self-host journey but I'm starting to doubt some decisions on what I'm hosting or have tried things that, although they appear maybe safer or more convenient, sometimes, depending on your work methods, maybe are not.
+
+Here are a few I am having some real issues with deciding whether to continue self-hosting.
+
+&gt;**Vaultwarden** - Yes I understand the security side of things and I DO like the way I can organise my passwords into meaningful groups but I'm finding the experience pretty clunky at times. Android being the worst part of the intergration, where filling in passwords becomes cumbersome at times, especially if you have the fingerprint authentication enabled. Also adding passwords from a browser to a secondary app in Android also causes more steps than using the web browser alone with its own inbuilt sync method. Couple that with the fingerprint security and it often seems to loose focus on those new passwords, having me manually having to type all the details in even after vaultwarden had asked to save it.  
+  
+Add to that the responsibility of my own upkeep of security (regular backups etc) and i'm starting to doubt the decision and am seriously thinking of moving back to in browser password management.  
+  
+I'm torn on this one as i understand the security benefits, cross browser ease of password management etc. So havent decided to ditch it just yet. 
+
+
+
+&gt;**Linkwarden** - Oh boy i loved this when i first started but after adding several groups, adding new ones from the browser extension and trying to assign them to groups is proving quite annoying.  
+  
+When i took a closer look back at my edge browser favourites i could assign groups and sub groups much easier and of course it syncs again across devices.  
+The decision that maybe vaultwarden wasnt for me was when i went to export my bookmarks to find it only does JSON, which edge doesn't import. Not sure if i'll continue using this long term :(
+
+
+
+&gt;**Office Intergration In Owncloud / Seafile** - After having spent ages getting that installed and integrated (I'm new to self hosting), I was left really disappointed. Having used googles own integration (google sheers, inbuilt pdf viewer etc) the experience just wasn't as fluid and frankly left me disappointed. I still see the use factor of say seafile or owncloud for my larger file backups, but will likely continue to host my spreadsheets etc on google drive for ease of use. 
+
+  
+There are various containers I've run up that sound amazing, and certainly do some amazing things, that I enjoyed getting running more. They are there now, just taking up space, running away, barely used. That's not because they aren't good, just that I found I didn't need them as much as maybe I thought I did.   
+  
+A classic example of that is Ollama with Open UI. I loved it so much when I got it running, but this server it's hosted on doesn't have a dedicated GPU, so it can be quite slow at giving responses. I then added an iframe of huggingface chat to my glances desktop and found I'm using that much more, now mostly leaving my Ollama instance just sitting there taking up resources. 
+
+I sometimes think it's more a case of should I run a service "because I can", rather than "if I should" at times, and the challenge that can often happen to get say a container to work equates more than the actual use of the container or service when running, at least for me.
+
+So I'm very curious. Are there services you have run up and maybe switched to, that you're now regretting or doubt long-term use? 
+
+Would love to hear people's responses. 
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: cn8fly
+  Comment: I had a similar experience with Vaultwarden. Having used 1password, I decided their service was worth paying for. More recently I looked into self hosting simple login and decided $30/year was worth not having to hassle with self hosting even though I'm capable of doing so. 
+It's a case by case basis but generally, if a product is important to my day to day life, like a password manager, it's worth it to me to pay for it. If it's just a nice addition or something to play with then self hosting makes sense. PaperlessNG is an example of something that I feel is robust enough to store important documents and self host rather than a paid solution.
+
+Many folks cite security concerns with companies such as ... well all of them .. and that's smart, but at some point you're putting trust in somebody, that may be either a single author or group maintaining their GitHub code, or a company your paying $$ to. Some amount of trust and faith in someone to maintain security on your behalf is inevitable.
+  Score: 29
+  Created UTC: 2024-07-15 16:30:00
+
+Comment 2:
+  Author: Zakmaf
+  Comment: Nextcloud. To be accurate: nextcloud aio. It's too much.
+  Score: 24
+  Created UTC: 2024-07-15 17:11:05
+
+Comment 3:
+  Author: 8fingerlouie
+  Comment: All of them, with the exception of the *arr stack.
+
+I self hosted for decades, and services as well as hardware just kept growing. From a single server running RAIDZ to redundant proxmox machines with a NAS for primary data storage and a NAS for backup as well.
+
+Around 4 years ago I was checking how much money I actually spent on self hosting, and it turned out that I spent more money on electricity to self host, than what the equivalent cloud offerings cost, so I more or less turned everything off overnight. Keep in mind it was only electricity cost. Hardware comes on top.
+
+I should mention that I gave as much care to my self hosted services as the servers at work, and patching happened on time daily, and not as an afterthought.
+
+I went for standard cloud offerings for most stuff, so Google Drive/OneDrive/iCloud, etc. I use Cryptomator to encrypt sensitive data. 1Password, NextDNS, and a small VPS along with some B2 storage.
+
+What’s left at home is a small ARM based server that has a couple of 8TB SSDs, and it’s primary task is to mirror my cloud data locally, and make backups of the mirror locally as well as to another cloud. It also runs the *arr stack, as well as Plex.
+
+In the years since, I’ve enjoyed a lot more free time. I can go on vacation for 2 weeks and not give a damn if my server is running. I’ve gotten around to reading more books that I’ve always wanted to read, but server maintenance/patching/configuration always got in the way, or I was simply fiddling around with setting up yet another service.
+  Score: 9
+  Created UTC: 2024-07-15 21:46:41
+
+Comment 4:
+  Author: waeking
+  Comment: I started a Mastodon instance because I thought it would be cool to use my personal domain name. I added a relay, first one was a lot of xxx (didn't know). Then I added a second relay all was good until it went down. Now on another relay, and hope things will be great again. I thought others on my domain would adopt Mastodon. I am a believer of federation/activitypub and Mastodon. 
+
+Without the adoption of others on my domain there is no need to selfhost. But now I have been building a following and I don't want to start all over again on a different instance. So I continue to selfhost.... My instance has been up for around 4 months now. I have had to tweak things a bit. I have a 99% uptime. I have automated almost all the maintenance.
+
+I wish there was a way to use my domain on another Mastodon instance. Just like my email domain can be hosted on another server.
+  Score: 7
+  Created UTC: 2024-07-15 16:47:25
+
+Comment 5:
+  Author: Neon_44
+  Comment: None. Because the Moment I "regret" them I turn them off.
+
+  
+That said I did replace Pihole with the openwrt adblock package.
+  Score: 9
+  Created UTC: 2024-07-15 21:28:20
+
+Comment 6:
+  Author: gwild0r
+  Comment: Immich…. It’s awesome!  Really awesome!!  But sooooooo many updates!  I feel like I’m reading update notes all the time.
+  Score: 6
+  Created UTC: 2024-07-15 23:11:31
+
+Comment 7:
+  Author: naxhh
+  Comment: wager. maybe I'm dumb but their ui is horrible.
+takes too much to log exercises, to find where that button actually is and so on
+  Score: 3
+  Created UTC: 2024-07-15 17:00:47
+

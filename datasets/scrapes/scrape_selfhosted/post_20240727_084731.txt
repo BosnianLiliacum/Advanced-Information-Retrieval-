@@ -1,0 +1,76 @@
+Post Title: Seeking Advice on Budget-Friendly NAS and Low-Power Server Setup for Home Media and Docker Containers
+Author: Frankenstien456
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eblxov/seeking_advice_on_budgetfriendly_nas_and_lowpower/
+Number of comments: 2
+Created UTC: 2024-07-25 04:24:22
+
+Post Content:
+Hi everyone,
+
+I'm currently using a Raspberry Pi 4 (2GB RAM) with an external HDD, primarily running Jellyfin without transcoding. The Pi is directly connected to my Bell Wi-Fi router via Ethernet. While this setup has served me well due to its low resource and power usage, I'm now facing storage limitations and considering an upgrade.
+
+# Current Setup:
+
+* **Device:** Raspberry Pi 4 (2GB RAM)
+* **Storage:** External HDD
+* **Primary Use:** Jellyfin (no transcoding)
+* **Connection:** Ethernet to Bell Wi-Fi router
+
+# Upgrade Considerations:
+
+I have an old gaming laptop (16GB RAM, i7 9th Gen, GTX 1060) that works well with Jellyfin and transcoding, but due to its high power consumption, I primarily use it as a gaming station, turning it on only when needed.
+
+# Goals:
+
+1. **Increase Storage:**
+   * Considering a NAS to hold around 5 HDDs (initially using only a few drives, adding more as needed).
+   * Looking for a NAS that is power-efficient and budget-friendly (200 CAD max, lower would be appreciated).
+2. **Improved Server Performance:**
+   * Exploring options for a mini PC, like an Intel NUC, that uses less power but offers good performance.
+   * Aim to run multiple Docker containers (30-40) for various self-hosted tools.
+   * Current Raspberry Pi setup runs 5-10 containers, but many are unsupported due to the 32-bit OS and limited RAM.
+   * Budget for mini PC is 300 CAD max, lower would be appreciated.
+
+# Requirements:
+
+* **NAS:**
+   * Holds around 5 HDDs.
+   * Low power consumption.
+   * Budget-friendly (200 CAD max, lower would be appreciated).
+   * Upgradable for future storage expansion.
+* **Mini PC:**
+   * Low power consumption.
+   * Capable of running several Docker containers efficiently.
+   * Budget-friendly (300 CAD max, lower would be appreciated).
+   * Upgradable for future RAM and storage enhancements.
+
+# Upgrade Plan:
+
+* I plan to buy and upgrade slowly, starting with the NAS and later adding a mini PC if the gaming laptop proves unsuitable due to high power usage.
+
+# Additional Info:
+
+* **Location:** Canada
+* **Current Issues with Pi:**
+   * Limited storage capacity.
+   * Limited by 32-bit OS and low RAM for additional containers.
+
+I'd greatly appreciate any suggestions or advice on budget-friendly NAS options and a suitable mini PC for my needs. Thanks in advance!
+
+Top 2 comments:
+Comment 1:
+  Author: Real_Form_7415
+  Comment: Look at the WD My Cloud Home or the Synology DiskStation DS220j if you're on a tight budget. 
+
+If you need a good small PC, the Intel NUC or the ASUS VivoMini are both good choices. They can handle extra containers and have a lot of storage space.
+  Score: 2
+  Created UTC: 2024-07-25 05:00:33
+
+Comment 2:
+  Author: LuposX
+  Comment: I can recommend getting a used "prodesk 600 g4" you can get it for under 200€, has a power conumption of 20 watts and I think at least 4 sata connections.
+  Score: 2
+  Created UTC: 2024-07-25 13:08:16
+
+Note: This post has only 2 comments at the time of scraping.

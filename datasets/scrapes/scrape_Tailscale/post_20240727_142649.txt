@@ -1,0 +1,39 @@
+Post Title: Connecting to homenetwork, remotely from laptop
+Author: Thelvesa
+Score: 3
+URL: https://www.reddit.com/r/Tailscale/comments/1ea249i/connecting_to_homenetwork_remotely_from_laptop/
+Number of comments: 6
+Created UTC: 2024-07-23 07:53:09
+
+Post Content:
+Is is possible to connect to a homenetwork running tailscale, via a remote Laptop without TS client ( not possible to install) running through a andriod phone with TS installed?  
+
+
+Top 3 comments:
+Comment 1:
+  Author: iura_boss
+  Comment: In this situation, your only hope could be a special router on which you can configure TS. Any device connected to it, can access your home network.
+
+I recommend a router from GL-iNET, like [Beryl AX](https://www.gl-inet.com/products/gl-mt3000/)
+
+You can connect this router to an existing WiFi, LAN; give Internet from a HotSpot or through USB Tethering.
+  Score: 4
+  Created UTC: 2024-07-23 09:38:22
+
+Comment 2:
+  Author: junktrunk909
+  Comment: I doubt the 100.x.x.x route is going to be advertised to the hotspot -connected device, and the encryption would likely not work that way, so I'm betting it won't work unfortunately. Cool idea though.
+  Score: 1
+  Created UTC: 2024-07-23 08:25:33
+
+Comment 3:
+  Author: rebzera
+  Comment: I don't know if this is limited to the ROM I'm using (JaguarOS on OnePlus 8), but I can share my VPN through hotspot and access my home network through tailscale on a PC. Wireless does not work, but USB tethering does.
+
+There is also some sort of way by using a proxy with hotspot, but I didn't look enough into it.
+
+https://preview.redd.it/xy45a2nu8eed1.png?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=a89b6bace8e02bdd7d419a53911d882a0a789921
+  Score: 1
+  Created UTC: 2024-07-24 04:25:06
+
+Note: This post has only 3 comments at the time of scraping.

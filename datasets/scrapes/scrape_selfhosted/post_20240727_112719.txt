@@ -1,0 +1,26 @@
+Post Title: Energy-saving addition to my Synology DS1621+
+Author: d3k1ds
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ec5ke0/energysaving_addition_to_my_synology_ds1621/
+Number of comments: 1
+Created UTC: 2024-07-25 20:47:24
+
+Post Content:
+I'm looking for some pre-built small boxes which can serve me well with my selfhosted services (almost all of them being docker based), besides Home Assistant which runs right now in it's own VM.  
+  
+I'm running all my selfhosted needs right now on the Synology which works just fine. Nevertheless running this machine 24/7 is a bit pricy and it's also an AMD cpu which is not ideal for Plex transcoding. Therefor I'm looking for an additional low-energy (intel based) system which I can run (mostly) all services on. The synology definitely stays in the house as a storage monster. The idea is to run Home Assistant and other services which are 24/7 relevant on the low energy system and only boot up the Synology box at daytime.
+
+I'm not sure if it's possible to achieve some kind of energy saving with this strategy but let's find out...
+
+Thanks for some recommendations folks.
+
+Top 1 comments:
+Comment 1:
+  Author: Fluffer_Wuffer
+  Comment: The most recommended boxes I see at the moment are running Intel N100's.
+
+If your impatient, there are dozens of different boxes on Amazon, though if you can wait, you can pick-up a bare-bones box from Ali Express for (i.e. add your own RAM and storage) for half the price.
+  Score: 1
+  Created UTC: 2024-07-25 23:25:53
+
+Note: This post has only 1 comments at the time of scraping.

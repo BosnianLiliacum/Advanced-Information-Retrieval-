@@ -1,0 +1,69 @@
+Post Title: Exposing my Services to the Internet
+Author: PranavVermaa
+Score: 146
+URL: https://www.reddit.com/r/selfhosted/comments/1e96xn1/exposing_my_services_to_the_internet/
+Number of comments: 128
+Created UTC: 2024-07-22 05:58:58
+
+Post Content:
+Hey Self-hosters!
+
+I just had a quick question, about exposing my services to the whole Internet.
+
+I currently have exposed my services to the internet, such as VaultWarden, Immich, Plex, Own-cloud, and more, using Cloudflare Tunnels, and, I was wondering, weather it was safe to do this?
+
+I have seen online people talking about VPN and Wireguard and all, and, I really don’t wanna setup all of these, and, I can’t just run on LAN, because I travel a lot.
+
+So, is it safe to just expose these behind HTTPS and Cloudflare Tunnels?
+
+Edit: Thank you all for your responses.
+I have switched to tailscale VPN from all of your comments, and it works fantastic!
+But, for a few services, like immich and owncloud, i have still kept the cf tunnel, because I need to share albums/files with friends and family, but, that is strictly for sharing. I will be using tailscale for access to the dashboard (homer).
+
+Thanks again!
+
+Top 7 comments:
+Comment 1:
+  Author: virginity-dongle
+  Comment: Careful. You don't need to be a target to get hacked. If you've exposed ports, you'll become a target when some bot decides to test your IP. And very soon after you expose your services, you will start receiving brute force attacks on your ports from bots. Make sure all of your passwords are strong. I had one weak password on a service, and a single exposed port to that service (didn't even think the exposed port could be used with a login) and just a week ago I noticed someone has been mining crypto on my machine. Thank God for containers and isolated environments.
+  Score: 113
+  Created UTC: 2024-07-22 09:21:41
+
+Comment 2:
+  Author: ButchyGra
+  Comment: Wireguard isn't all that hard to set up and it's free/secure, If you're gonna self host - do it right IMO
+  Score: 90
+  Created UTC: 2024-07-22 07:54:45
+
+Comment 3:
+  Author: tycoonlover1359
+  Comment: CloudFlare Tunnels should be fine, if you're ok with the caveats that comes with.
+
+With that said, [Tailscale](https://tailscale.com) is an incredibly easy VPN to set up, if you're still willing to use one. I've also heard good things about [ZeroTier](https://www.zerotier.com/), but haven't I haven't used it myself.
+  Score: 63
+  Created UTC: 2024-07-22 06:15:41
+
+Comment 4:
+  Author: Fabio53443
+  Comment: I'm currently running Cloudflare Tunnels and zero trust for some more sensitive applications. Also running authentik as sso.
+  Score: 8
+  Created UTC: 2024-07-22 10:42:23
+
+Comment 5:
+  Author: Joris7813
+  Comment: I was in the same situation. Now I have decided to just expose my r/selfhosted services with authelia authentication, because for some services (like jellyfin) I am not sure if the security is good enough to be exposed.
+  Score: 18
+  Created UTC: 2024-07-22 08:00:07
+
+Comment 6:
+  Author: rorykoehler
+  Comment: Tailscale works great
+  Score: 8
+  Created UTC: 2024-07-22 07:28:58
+
+Comment 7:
+  Author: h878787h
+  Comment: Cloud flare proxy, set rules on your firewall to only allow HTTPS inbound from the published cloud flare address list. Consider bolstering access to your services through a 2fa app like authentik. Even then, becareful what you expose.
+  Score: 3
+  Created UTC: 2024-07-22 11:40:16
+

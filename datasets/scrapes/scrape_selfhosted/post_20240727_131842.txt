@@ -1,0 +1,47 @@
+Post Title: Need help with proxmox bind mounts and lxc user permissions
+Author: IAMA_Coffee_Addict
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5od7i/need_help_with_proxmox_bind_mounts_and_lxc_user/
+Number of comments: 7
+Created UTC: 2024-07-17 17:41:56
+
+Post Content:
+Hi, I need help to understand what I am doing wrong with my setup.   
+
+I am running a proxmox node (pve) where I have mounted my nfs storage (containing backups from my old server) on the host and assigning them to containers using    
+
+    pct set
+
+command.     
+
+[On Host:](https://ibb.co/xHsgq6n) : I am setting the user permissions to the mounted folder so that the user from lxc can rw to it and the sub-folders(or atleast I thought it would be possible).     
+
+[On LXC:](https://ibb.co/hLc2RmC)The mount is recognized and is accessible with the correct user permissions to rw    
+
+The docker container created inside the lxc is unable to read/write to this storage even though they are assigned to [the correct user id](https://ibb.co/r7WMgM1) 1000. The docker setup is [logging errors](https://ibb.co/gy5zCxf) and won't start up.
+
+Appreciate the help!
+
+Top 3 comments:
+Comment 1:
+  Author: iWQRLC590apOCyt59Xza
+  Comment: Might be this:  
+[https://pve.proxmox.com/wiki/Unprivileged\_LXC\_containers](https://pve.proxmox.com/wiki/Unprivileged_LXC_containers)
+  Score: 3
+  Created UTC: 2024-07-17 17:46:47
+
+Comment 2:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 1
+  Created UTC: 2024-07-17 18:34:20
+
+Comment 3:
+  Author: SymbioticHat
+  Comment: I remember having some issues with this and I believe I remember restoring the LXC container from backup as priviledged and just adding a mount point to the /etc/pve/nodes/\*servername\*/lxc/XXX.conf to the tune of.
+
+&gt;mp0: /mount/point/on/pve,mp=/mount/point/on/lxc
+  Score: 1
+  Created UTC: 2024-07-17 19:49:48
+
+Note: This post has only 3 comments at the time of scraping.

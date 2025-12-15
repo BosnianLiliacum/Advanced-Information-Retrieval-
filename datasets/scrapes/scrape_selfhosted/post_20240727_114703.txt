@@ -1,0 +1,71 @@
+Post Title: Docker network security and Cloudflare Tunnel
+Author: ShintaroBRL
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eb3l2j/docker_network_security_and_cloudflare_tunnel/
+Number of comments: 4
+Created UTC: 2024-07-24 14:59:10
+
+Post Content:
+i'm setting up some containers and split them across some networks
+
+what i have now:  
+just nginx that will act as a proxy between cloudflare tunnel and tomcat  
+all networks are bridge type
+
+what is the problem:  
+tomcat can see other services that is in the mariadb network that shoud be only available on the local network  
+Discord bots can access the internet but cannot see/access each others
+
+what i want to do:  
+Only tomcat should be available to cloudflare tunnel and only throuth nginx proxy.  
+Tomcat should be able to only see mariadb and be unable to see other services.  
+Keep discord bots in one network but in a way that they cant see each other
+
+what should i do?  
+should i give a shoot at iptables and set it up by hand?  
+should i create another network to connect mariadb to tomcat and another for nodered and mariadb and so on?  
+or should leave it like that?
+
+how can i better protect my network so I can sleep in peace?
+
+i'm still a learning and testing docker network  
+OBS: Cloudflare Tunnel not setup yet
+
+https://preview.redd.it/ezyhjgi1ahed1.png?width=1013&amp;format=png&amp;auto=webp&amp;s=54da38ce9eed8e05bb40f730e52ccc6948b5599f
+
+Top 3 comments:
+Comment 1:
+  Author: ericesev
+  Comment: It seems you're trying to have a single instance of MariaDB for separate services. And you don't want the services to communicate with one another. One alternative could be to have separate MariaDB instances per service. Another alternative is to add the MariaDB instance to each of the individual service networks.
+
+If you need to keep the existing networks the way they currently are, try disabling [Inter Container Connectivity](https://docs.docker.com/reference/cli/docker/network/create/#bridge-driver-options) on the MiriaDB network. This will also prevent MariaDB from initiating connections to your services as well. Then use iptables (DOCKER-USER) to enable only the connectivity that you want. You can disable ICC for the Discord bot network to prevent them from communicating with one another too.
+
+Personally I'd try to solve this all within Docker, using a separate network per service and adding MariaDB to each of them. That keeps all the configuration in a single place, within Docker.
+  Score: 3
+  Created UTC: 2024-07-24 15:45:30
+
+Comment 2:
+  Author: PaperDoom
+  Comment: Couldn't you just separate the MariaDB &lt;&gt; Tomcat connection into it's own network?
+
+I'm not a docker network expert by any means, but anything placed on the same network can communicate, so separate them into their own bucket.
+  Score: 1
+  Created UTC: 2024-07-24 15:40:55
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: You should really have a mariadb per application (unless the applications rely on the data placed in the DB by another application)
+
+By combining the DB you will come into upgrade issues. What happened when another application requires a higher mariadb version or functionality? This might break other applications 
+
+Some of docker's useful features is easy scalability and isolation. With your diagram, most services are relying on a since DB. If it goes down, now all application will not work. 
+
+Definitely recommend creating an instance per application and keep things isolated
+
+Nice diagram btw
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-25 02:38:53
+
+Note: This post has only 3 comments at the time of scraping.

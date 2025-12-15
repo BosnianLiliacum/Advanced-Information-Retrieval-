@@ -1,0 +1,37 @@
+Post Title: Web service with configurable button to run commands?
+Author: DavethegraveHunter
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e6wuhu/web_service_with_configurable_button_to_run/
+Number of comments: 7
+Created UTC: 2024-07-19 06:15:11
+
+Post Content:
+Maybe I imagined it, but I thought a few months or so ago I saw someone mention a service that allows you to create a single button on a webpage that can run a command on the host machine. e.g. so I could create a button that just runs “sudo shutdown now”, for example. That way when I need to turn off my Docker host remotely, I can do so just using my phone, rather than having to go to my computer, turn that on, log into my Docker host via SSH, and then shut it down. 
+
+Is this a thing?
+
+Top 3 comments:
+Comment 1:
+  Author: steveiliop56
+  Comment: Definitely olivetin lol it's the best
+  Score: 4
+  Created UTC: 2024-07-19 09:22:11
+
+Comment 2:
+  Author: root_switch
+  Comment: There are SSH apps for iPhone and android so you dont necessarily need to use your computer. But to answer your question, something like Olivetin ? 
+
+https://github.com/OliveTin/OliveTin
+
+
+Edit: you could also make your own app, would take very minimal knowledge in something like python and html. ChatGPT could code that up in a single prompt.
+  Score: 1
+  Created UTC: 2024-07-19 06:46:12
+
+Comment 3:
+  Author: Chemical-Cap-3982
+  Comment: webmin, it's and older web based linux management server that run s on a host. you can make custom command that'll do exactly that. but be careful
+  Score: 2
+  Created UTC: 2024-07-21 00:43:03
+
+Note: This post has only 3 comments at the time of scraping.

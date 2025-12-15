@@ -1,0 +1,26 @@
+Post Title: Upload to Stock Image Sites
+Author: nemofish3
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e7ug8q/upload_to_stock_image_sites/
+Number of comments: 2
+Created UTC: 2024-07-20 12:24:33
+
+Post Content:
+Is there a self hosted app that streamlines the uploading of images to Stock Image sites and allows you to upload in bulk to multiple sites at once? 
+
+Top 2 comments:
+Comment 1:
+  Author: alicethefemme
+  Comment: There probably isn’t, but you could use the website’a api with python to traverse a local directory and upload them
+  Score: 1
+  Created UTC: 2024-07-20 14:19:53
+
+Comment 2:
+  Author: Red_Redditor_Reddit
+  Comment: &gt;self hosted app... uploading of images to Stock Image sites
+
+### 🧐
+  Score: 1
+  Created UTC: 2024-07-20 19:09:57
+
+Note: This post has only 2 comments at the time of scraping.

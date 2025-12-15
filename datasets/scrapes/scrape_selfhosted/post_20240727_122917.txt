@@ -1,0 +1,68 @@
+Post Title: Started Self Hosted setup (NAS+docker) - suggestions for remote access use cases?
+Author: garoboldy
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8nftw/started_self_hosted_setup_nasdocker_suggestions/
+Number of comments: 6
+Created UTC: 2024-07-21 14:23:20
+
+Post Content:
+I am just getting started with Self Hosting my development / internal tooling. I have a few specific use cases that I'm currently road blocked on for making this work 100% for me. What does everyone use for being able to access Data / Remote Desktop / SSH / internal web apps , that is self hosted and usable from laptop / phone (if possible)
+
+Setup:  
+NAS:
+
+- vaultwarden  
+- portainer (runs all my containers)  
+- AdGuard  
+- Overseer  
+- radarr / sonarr / etc  
+- watchtower  
+- nzbget  
+- cloudflared (CF tunnel client to serve Overseer for friends and family)
+
+- postgresql  
+- mongodb  
+- 37 ish custom containers (development project work)
+
+Public Exposure:  
+- Overseer - CF Tunnel  
+- Portainer - CF Tunnel ( this scares me but needed to try and test remotely)
+
+Use Case 1:
+
+I am not home and have my laptop and need to access Portainer to spin up something or fix an issue with a container. so being able to access the "webpage" for the system. Currently testing this using CF Tunnels and it does work, but very concerned about having a public url pointing through the tunnel to my internal Portainer system.
+
+Use Case 2:
+
+Currently using Jump Desktop to access my windows system or mac system but it's hosted. When I'm not home I may need to remote into my Win11 machine to check on apps running or to fix something. I really don't like this tool and would prefer a better solution that works
+
+Use Case 3:
+
+Secure data access to my NAS data from outside the network. Without using a hosted solution that would have access to either my data or information
+
+Use Case 4:
+
+As a web api developer I have a lot of DBs internally that I access when developing / testing. I need to be able to reach those remotely so if a breaking change needs to go out I can test it using my internal systems before pushing to production.
+
+  
+I'm assuming a VPN would work for all of these, however I really don't want to use a hosted system like Tailscale that I found being mentioned a lot.
+
+Top 2 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: Just a vanilla wireguard server would work fine for all of these for remote access. It would require you to open a port in your router, but it's relatively low risk because of the way wireguard runs silently.
+
+What's wrong with tailscale though? That the turn server is outside your control? That's why headscale exists. There are alternatives to tailscale too that all accomplish more or less the same thing.
+
+For me at least, if I'm the only person who needs to access my network I sure as hell am not using a cloudflare tunnel to expose anything, it's going to be a simple wireguard server.
+  Score: 2
+  Created UTC: 2024-07-21 14:39:24
+
+Comment 2:
+  Author: ddingd
+  Comment: [https://docs.zerotier.com/route-between-phys-and-virt/](https://docs.zerotier.com/route-between-phys-and-virt/)  
+i use zerotier
+  Score: 1
+  Created UTC: 2024-07-22 08:00:31
+
+Note: This post has only 2 comments at the time of scraping.

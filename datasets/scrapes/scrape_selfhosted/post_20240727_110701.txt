@@ -1,0 +1,105 @@
+Post Title: Keeping your Docker Containers and Stacks Up To Date Via Linux Bash Script
+Author: j0nny55555
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e397n9/keeping_your_docker_containers_and_stacks_up_to/
+Number of comments: 6
+Created UTC: 2024-07-14 18:23:29
+
+Post Content:
+It is thankfully a slightly "simple" task to update a 'docker-compose' deployed resources - just re-run the docker-compose command, right? That will pull the latest images, but, no matter what (new or same images) stop/restart your stack. For those of us that have experience with public/corp services you realize... it should not go down unless it needs to, right?
+
+In this, I generated and fixed up a Linux Bash script automation that will use docker-compose and docker to get the Containers, Images, and the Image Hashes in use, and then pull each Docker Image in use, compare, and if any of the recently pulled Images Hashes are different, trigger the whole 'docker-compose ...' command to redeploy that stack at the end of the script.
+
+There is a [whole post ](https://www.nova-labs.net/automation-to-check-and-update-docker-stack-images/)on my web page about it, but I will share just the script here for brevity. If you have questions, please check out the 'whole post' link and then if your question persists - please feel free to comment here or on my page. Would be very interested if anyone has ideas to improve this - hope this helps!!
+
+    #!/bin/bash
+    set -eo pipefail
+    # Get the name of the current folder (stack)
+    STACK_NAME=$(basename "$(pwd)")
+    echo "Starting image update check for stack ${STACK_NAME}..."
+    
+    # Create an array of all container ids for this stack and get their image names and hashes
+    declare -a IMAGE_NAMES
+    declare -a IMAGE_HASHES
+    declare -a CONTAINER_IDS
+    mapfile -t CONTAINER_IDS &lt; &lt;(docker-compose ps -q -a)
+    for CONTAINER_ID in "${CONTAINER_IDS[@]}"; do
+        echo "Getting image hash for container ${CONTAINER_ID}"
+        IMAGE_NAME=$(docker inspect --format '{{ .Config.Image }}' "$CONTAINER_ID")
+        IMAGE_NAMES+=("$IMAGE_NAME")
+        IMAGE_HASH=$(docker inspect --format '{{ .Image }}' "$CONTAINER_ID")
+        IMAGE_HASHES+=("$IMAGE_HASH")
+    done
+    echo "At stage 01 - Image names and hashes retrieved."
+    
+    # Get the list of latest images from Docker Hub and compare their hashes with current container image hashes
+    declare -a LATEST_HASHES
+    for (( i = 0; i &lt; ${#CONTAINER_IDS[@]}; ++i )); do
+        #DOCKER_NAME=$(echo "$IMAGE" | awk -F: '{print $1":"$2}')
+        IMAGE_NAME=${IMAGE_NAMES[$i]}
+        echo "Checking image ${IMAGE_NAME}"
+        
+        # Pull the latest version of the image if needed, suppress output to avoid clutter in logs
+        if ! docker pull "$IMAGE_NAME" &gt; /dev/null 2&gt;&amp;1; then
+            echo "Failed to pull image ${IMAGE_NAME}"
+            continue
+        fi
+        
+        # Get the latest hash of the image
+        LATEST_HASH=$(docker image inspect "$IMAGE_NAME" --format '{{ .Id }}')
+        LATEST_HASHES+=("$LATEST_HASH")
+    done
+    echo "At stage 02 - Latest image hashes retrieved."
+    
+    # Compare the current and latest image hashes, set a value to re-run docker compose if any images are newer
+    UPDATE_PRESENT=0
+    for (( i = 0; i &lt; ${#CONTAINER_IDS[@]}; ++i )); do
+        CURRENT=${IMAGE_HASHES[$i]}
+        LATEST=${LATEST_HASHES[$i]}
+        
+        # Check if current image is up-to-date, otherwise set update present flag
+        if [[ $CURRENT != "$LATEST" ]]; then
+            echo "Image ${IMAGE} has been updated!"
+            UPDATE_PRESENT=1
+        fi
+    
+        # Output no update
+        if [[ $CURRENT == "$LATEST" ]]; then
+            echo "Container ${CONTAINER_IDS[$i]} with Image ${IMAGE_NAMES[$i]} check:"
+            echo "Current: ${CURRENT}"
+            echo "Lastest: ${LATEST}"
+        fi
+    done
+    echo "At stage 03 - Image updates checked."
+    
+    # Restart the stack to use the updated images if there were any updates
+    if [ $UPDATE_PRESENT -eq 1 ]; then
+        echo "Updated images for stack: $STACK_NAME - redeploying..."
+        docker-compose up -d --force-recreate --always-recreate-deps --build --remove-orphans
+    else
+        echo "Images and Containers are up to date."
+    fi
+    echo "Image update check completed."
+
+Top 3 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: https://github.com/mag37/dockcheck
+  Score: 6
+  Created UTC: 2024-07-14 18:35:11
+
+Comment 2:
+  Author: Jelly_292
+  Comment: Unless I am reading this wrong, this will not keep your images up to date if you explicitly tag your images... for example ``docker/image:1.2.3`` will not be updated to ``docker/image:1.2.4`` when an image is updated.
+
+This script will simply always pull the tag that is currently configured. Which I guess this works fine when you use ``:latest`` for everything
+  Score: 4
+  Created UTC: 2024-07-14 21:56:52
+
+Comment 3:
+  Author: Lemimouth
+  Comment: Why are you still using docker-compose ? This command was deprecated years ago
+  Score: 1
+  Created UTC: 2024-07-17 04:01:01
+
+Note: This post has only 3 comments at the time of scraping.

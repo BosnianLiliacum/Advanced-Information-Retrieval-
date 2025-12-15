@@ -1,0 +1,58 @@
+Post Title: How to completely migrate Jellyfin?
+Author: kaaiman12
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5kxt2/how_to_completely_migrate_jellyfin/
+Number of comments: 16
+Created UTC: 2024-07-17 15:23:37
+
+Post Content:
+I am currently running Jellyfin on a old laptop using ubuntu server cli, but i recently bought a old used hpe proliant server thats running proxmox and i want to put jellyfin on that, is there a way to completely migrate jellyfin? (Meta data, subtitles, created collections, watchtime etc.) Or atleast migrate my old ubuntu server into a vm?
+
+Top 6 comments:
+Comment 1:
+  Author: NOCmancer
+  Comment: [https://jellyfin.org/docs/general/administration/migrate/](https://jellyfin.org/docs/general/administration/migrate/)
+  Score: 19
+  Created UTC: 2024-07-17 15:51:41
+
+Comment 2:
+  Author: Ariquitaun
+  Comment: 
+
+If only there was a way to search the internet for "migrate jellyfin to another computer"
+  Score: 13
+  Created UTC: 2024-07-17 16:19:24
+
+Comment 3:
+  Author: nmkd
+  Comment: Are you currently running it with Docker?
+
+Simply copy jellyfin's data volume to your new install.
+  Score: 3
+  Created UTC: 2024-07-17 18:49:15
+
+Comment 4:
+  Author: ZamBunny
+  Comment: Migrating Jellyfin can be a real pain. Here are my two cents:
+
+- First, **make sure to back up your data before doing anything**. You can't migrate a broken installation.
+- Read the docs about [migrating to a new instance](https://jellyfin.org/docs/general/administration/migrate/) if you haven't already. It might work for you, but I haven't been able to make it work myself.
+- Do you *really* need to migrate your data? Have you changed any metadata manually? I'm pretty sure most people just use what Jellyfin automatically finds in TMDB. If that's your case, just let your new installation rescan your media, and you're done. Sure, you'll lose your configuration, but between that and many hours of troubleshooting the migration, my choice is clear.
+- Have you considered asking Jellyfin to output `nfo` files alongside your existing media? I haven't tried it myself, but Jellyfin should use those files before trying to fetch any metadata from TMDB and similar sources.
+- Last thing : use the official docker container for your next installation. It's easier to migrate, since the configuration/data is mounted inside the container.
+  Score: 1
+  Created UTC: 2024-07-17 20:22:08
+
+Comment 5:
+  Author: atomheartother
+  Comment: You just copy the data/config directories from the old install to the new one.
+  Score: 1
+  Created UTC: 2024-07-18 12:30:47
+
+Comment 6:
+  Author: ThisIsntAThrowaway29
+  Comment: Make a VM file of the Laptop HDD/SSD and virtualize it in Proxmox.
+  Score: 1
+  Created UTC: 2024-07-17 17:52:12
+
+Note: This post has only 6 comments at the time of scraping.

@@ -1,0 +1,75 @@
+Post Title: One of my gameservers are giving me grief .. and I'm now seeking help
+Author: Sgt_Morrigahn
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebygcd/one_of_my_gameservers_are_giving_me_grief_and_im/
+Number of comments: 8
+Created UTC: 2024-07-25 15:58:08
+
+Post Content:
+I've set up an Ubuntu Server and added an Pterodactyl panel. It's set up with SSL active.  
+At the moment I've installed 5 servers:  
+7 Days to Die  
+Conan Exiles  
+Space Engineers  
+Minecraft Paper  
+Ark: Survival Evolved
+
+Ports are all forwarded according that what ports are needed per server.  
+My problem is this: I can connect to all the gameservers via internal IP AND via the external IP except I can't connect to my ARK server. No matter what I try, I can't seem to connect. I keep getting timed out while trying to connect.  
+All the servers except Ark have mods installed on them, and there's no issues with that.  
+Ports that I've allocated to Ark is atm is 27015,27016,7777,7778 and more will be added once I get this working. Plan is to run a cluster of 2-3 maps.
+
+I've even tried to disable ufw on Ubuntu to see .. but to no avail.  
+I've tested other Ark servers to exclude the possibility that it was my own game doing something funky .. and I can connect to all other Ark servers I tried.
+
+I was hoping someone could please help me and guide me through troubleshooting this thing. I'm new to Linux .. it took me a few days to understand and get Pterodactyl to work, and a few more to set up SSL and get my green heart on the wings .. but slowly getting better.  
+I use Parkervcp egg for pterodactyl ( I don't even know if I can use Pelican egg for this )
+
+Top 4 comments:
+Comment 1:
+  Author: Eldiabolo18
+  Comment: Logs, logs, logs. 
+
+Instead of starting a wild guessing game, we (and mostly you) need more info on what potentially goes wrong. 
+
+Check the logs of the gameserver. See how if you can set the verbosity to max to get even more info. see if the OS-Logs tell you something. 
+
+I'm assuming the server is at your home where also your desktop is with which you connect to the server. For try only connecting via lan, this should keep it simpler. 
+
+
+Go through the install manual again see if you missed something. Checkout other manuals, to see if they do things differently. 
+
+If you have more concrete problems we can help better :) 
+
+Good luck!
+  Score: 3
+  Created UTC: 2024-07-25 18:00:50
+
+Comment 2:
+  Author: AnimeAi
+  Comment: Two possibilities that I can think of: 
+
+1. The Ark server is not running properly, so while all the ports are open etc you are trying to connect to thin air and naturally getting no response. 
+2. One of the ports you're trying to use is already in use by another server. This may prevent just that port from working, or may prevent the whole server starting.
+
+I've not used Pterodactyl so I don't know how it handles either of these instances. Hopefully someone who has used it and knows more can help!
+  Score: 2
+  Created UTC: 2024-07-25 16:31:21
+
+Comment 3:
+  Author: EmeryxWildfire
+  Comment: I've found that ARK requires NAT reflection to be turned on for you to be able to join the server using your own public address (what the server browser will connects you to).
+
+Obviously that only applies if you're hosting the server on the same public ip that you'd be joining it from though.
+  Score: 1
+  Created UTC: 2024-07-25 18:58:48
+
+Comment 4:
+  Author: Sgt_Morrigahn
+  Comment: Update ... somehow I found an old thread from 2020 having the same issue ... changed one little argument in the eggs start-up command .. and I got the server working :D
+
+This thread can be closed ... Thank you all for your inputs &lt;3
+  Score: 1
+  Created UTC: 2024-07-26 15:27:25
+
+Note: This post has only 4 comments at the time of scraping.

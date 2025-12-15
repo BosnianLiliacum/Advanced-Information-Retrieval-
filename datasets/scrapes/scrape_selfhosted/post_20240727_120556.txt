@@ -1,0 +1,28 @@
+Post Title: Photo evaluator / rate my photo?
+Author: brupgmding
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ea379k/photo_evaluator_rate_my_photo/
+Number of comments: 4
+Created UTC: 2024-07-23 09:06:27
+
+Post Content:
+I am looking for a self hosted solution to rate my large photo library by AI. I currently use synology photos on my NAS, have checked out imich as an option (if it comes out of beta) and a few others.
+
+What I am looking for is a way to automate the star rating in photos by having a process running which evaluates photo quality using ai (lighting, focus, people with closed eyes, etc). I would use it's results to update the photos star rating and use that in my photo DAM tool of choice (currently synology photos). I know of cloud tools that rate photos, but I would prefer to host this myself.
+
+Ideas on what to use?
+
+Top 2 comments:
+Comment 1:
+  Author: cartuun
+  Comment: Excire Foto does that. It is not for free but impressive accurate
+  Score: 2
+  Created UTC: 2024-07-23 09:15:14
+
+Comment 2:
+  Author: BobcatAnnual5713
+  Comment: Have you looked into PhotoPrism? It's an AI-driven photo management tool you can self-host, and it might be able to automate star ratings based on quality. I use it alongside Guidde to create quick tutorial videos for my team, which saves me tons of time.
+  Score: 2
+  Created UTC: 2024-07-24 23:57:33
+
+Note: This post has only 2 comments at the time of scraping.

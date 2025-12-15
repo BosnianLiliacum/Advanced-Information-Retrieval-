@@ -1,0 +1,65 @@
+Post Title: CGnat nightmare, what to do to make my local network reachable?
+Author: MIN-CUT-MAX-FLOW
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1ecv6bx/cgnat_nightmare_what_to_do_to_make_my_local/
+Number of comments: 12
+Created UTC: 2024-07-26 18:23:45
+
+Post Content:
+So I have an LTE router as my primary internet connection for various reasons (the wired internet access only offering 5 mbit/s). I wanted to make my network reachable from outside somehow, for my Synology NAS and just devices in general, like a Docker server or what I'm up to.
+
+At first, I tried setting up DynDNS as I am used to. IPv4 didn't work. But IPv6 didn't work either. Hold on. Aren't IPv6 adresses supposed to be routable from the interrnet? Apparently not.
+
+Then I learned about CGnat, which means that the IPv4 (and in my case, IPv6, too) adresses are not reachable from the internet. This seems to be for (justified) security reasons in mobile internet. Someone using an LTE router is already very, very rare. Someone trying to set up a way to reach their Synology/whatever server from the internet with DynDNS is probably even rarer.
+
+The only thing working is Quickconnect of my Synology NAS (propably via a relay server which then establishes a peer to peer network from my client device to the NAS via holepunching. Very complicated). Which is great. But I would like to do some more stuff like reaching other devices in my home network besides my Synology NAS. And this is only possible with some kind of VPN or dyndns/port forwarding.
+
+So I need a way to access my home network behind CGnat. VPN or directly accessible from the internet with a domain doesn't really matter (the first being more secure).
+
+Side to side VPN is not really an option since I don' really have another "side" I regularily am+which allows me to customize the IP config. The best idea is probably something Quickconnect like with a relay server. But most relay services who offer something like that do it in a worse way, meaning the last hop between local network and service node is not encrypted. That's very bad. Quickconnect hole punching which establishes a \*direct\* connection between my client and my local network is ten times more secure.
+
+How to approach making my local network accessible to access something like a docker server, my Synology nas, or just my local network in general behind CGnat (other than Quickconnect) ? I have read about setting up a VPS server with some VPN service, but I have very few experience with setting up a VPN server. IP routing is the problem, but setting up a VPN server seems really complicated.
+
+Top 7 comments:
+Comment 1:
+  Author: LavaCreeperBOSSB
+  Comment: Try Tailscale?
+  Score: 15
+  Created UTC: 2024-07-26 18:37:48
+
+Comment 2:
+  Author: Jackson_drake
+  Comment: Tailscale, cloudflared tunnel, zerotier
+  Score: 5
+  Created UTC: 2024-07-26 18:59:22
+
+Comment 3:
+  Author: djec
+  Comment: Cloudflare tunnel
+  Score: 6
+  Created UTC: 2024-07-26 22:42:07
+
+Comment 4:
+  Author: opensrcdev
+  Comment: ZeroTier is easy to set up and free. Cloudflare tunnels for exposing services publicly.
+  Score: 2
+  Created UTC: 2024-07-26 19:23:54
+
+Comment 5:
+  Author: HeligKo
+  Comment: You need a tunnel that originates on your network and terminates somewhere you can reach publicly. I use Autossh for this with a linode server. Tailscale can do it. Some VPN services can do this.
+  Score: 1
+  Created UTC: 2024-07-26 20:46:04
+
+Comment 6:
+  Author: benjiro3000
+  Comment: As somebody with the same issue, time wasted trying to get wireguard to a VPS or my fritzbox to a VPS, the solution was like other posted here: Tailscale!
+  Score: 1
+  Created UTC: 2024-07-26 23:43:43
+
+Comment 7:
+  Author: 0ka__
+  Comment: Go to your LTE provider website and look if they have "open ipv6" or something, my ipv6 access was partially blocked (only some ports allowed and no icmp) until I turned that on
+  Score: 1
+  Created UTC: 2024-07-26 22:39:36
+

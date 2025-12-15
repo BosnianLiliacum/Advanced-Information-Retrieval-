@@ -1,0 +1,35 @@
+Post Title: All Systems Down
+Author: vkapadia
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9w5wz/all_systems_down/
+Number of comments: 6
+Created UTC: 2024-07-23 02:03:25
+
+Post Content:
+I've been halfway around the world from my servers. They ran fine for 11 days. Went offline last night. I don't get back for another 9 days. I feel so lost and disconnected. Help me.
+
+Top 3 comments:
+Comment 1:
+  Author: dsahai
+  Comment: Happened to me a few times. Since then, I've been using smart plugs on my servers which I can turn on and off remotely. 99% of the times, turning it off and on again solves my problems :D
+  Score: 4
+  Created UTC: 2024-07-23 03:59:59
+
+Comment 2:
+  Author: Studly_Spud
+  Comment: I've been there.... been half a planet away when the stakeholder (the wife) calls "hey, internet no worky!"  Oh no.  Worst case scenario.  Not to worry, I have VPN.... no wait I don't.  
+Return home some days later to find the opnsense router crashed because I hadn't capped my adguard and firewall logs, and it finally ran out of disk space.... facepalm and lesson learnt!  
+
+Don't worry, you'll return home eventually and find some silly cause.
+  Score: 2
+  Created UTC: 2024-07-23 02:29:43
+
+Comment 3:
+  Author: Ok-Average1731
+  Comment: Had the same issue I used my home servers to work on remotely for a Linux environment. But one day I couldn't reach it with SSH so couldn't work for half the day and had to drive home and find out my ISP changed my IP so my DNS didn't work. 
+
+Now I use a dedicated server instead a bit more expensive vs the electricity bill for one server but feels more reliable for work as it hosts all my projects and I have support and information when something goes down.
+  Score: 1
+  Created UTC: 2024-07-23 16:12:37
+
+Note: This post has only 3 comments at the time of scraping.

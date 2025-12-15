@@ -1,0 +1,36 @@
+Post Title: Logitech Media Server is now known as Lyrion?
+Author: LDerJim
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e8b4v4/logitech_media_server_is_now_known_as_lyrion/
+Number of comments: 4
+Created UTC: 2024-07-21 01:36:43
+
+Post Content:
+Did I miss the announcement? I use this on a regular basis and at first glance it looks like nothing more then a name change. I'm just curious if anyone caught anything I may have missed.
+
+[https://lyrion.org/](https://lyrion.org/)
+
+Top 3 comments:
+Comment 1:
+  Author: Optimal-Procedure885
+  Comment: It’s now no longer owned and maintained by Logitech.  Fully handed over to community hence renamed, and also lots of good development going on.
+  Score: 10
+  Created UTC: 2024-07-21 06:59:52
+
+Comment 2:
+  Author: purgedreality
+  Comment: The only kinda official link I could find;
+
+[https://forums.slimdevices.com/forum/user-forums/general-discussion/1691649-please-welcome-lyrion-music-server-request-for-artwork-contributions#post1692433F](https://forums.slimdevices.com/forum/user-forums/general-discussion/1691649-please-welcome-lyrion-music-server-request-for-artwork-contributions#post1692433F)
+
+Funny that on the Wikipedia page there is no "this project was renamed", just a bunch of replaced text strings from \[Logitech\] to \[Lyrion (formerly Logitech Media Server)\].
+  Score: 2
+  Created UTC: 2024-07-21 03:31:03
+
+Comment 3:
+  Author: flicman
+  Comment: How does a mouse company have a media server? Who do they think they are, RealPlayer?
+  Score: 1
+  Created UTC: 2024-07-21 03:14:21
+
+Note: This post has only 3 comments at the time of scraping.

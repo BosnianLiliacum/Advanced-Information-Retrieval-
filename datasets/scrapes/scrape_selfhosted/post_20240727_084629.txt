@@ -1,0 +1,49 @@
+Post Title: Newby wanting to do all the advanced fun stuff, website host, unraid NAS sharing plex/gameservers. How do I do this safely?
+Author: Ragnar0kkk
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebmx6c/newby_wanting_to_do_all_the_advanced_fun_stuff/
+Number of comments: 1
+Created UTC: 2024-07-25 05:21:59
+
+Post Content:
+Hello all, I know basically nothing about Linux or programming or networking outside of some youtube videos. But I know I will have to learn a ton in order to do what I want to for the future: running a small business website, securely, in my house along with personal computers/servers. Sorry for the rambling, just throwing out ideas until I get a plan figured out. I figure this will take about a year of learning/tinkering.
+
+Right now I have an ISP modem/router going into an Eero router providing mesh wifi (and my internal network) which is wired into my unmanaged switch. On this switch I have a RaspPi running pihole/unbound which handles some blocking for everything in the Eero network. I also have my gaming computer and an unraid server on this switch, which is my NAS and providing nextcloud plex and a gaming server to a couple friends/family.
+
+I am running these through swag with https using duckdns pointing from my proxied cloudflare DNS'd website (not tunnel). I don't really want to give anyone VPN level access to my network, just using the dockers. I have twingate VPN zero-trust for my personal access if needed. I may not really understand any intricacies of VPN's (twingate vs cloudflare tunnel vs tailscale), I chose based on reddit threads and youtube videos.. I didn't like the 3 user limit for tailscale if I want to go over that, and I dont want cloudflare looking at my data.
+
+I want to add the functionality of running a self hosted website that needs dockers that my partner wrote in order to process data (think LLM's). But I don't know anything about security (or programming).
+
+I think I want a DMZ between a couple routers? Without creating whatever a double NAT is.
+
+I know I want all my wifi traffic separated from my computer/servers because I dont trust smart TV's or IoT/cameras, ect.
+
+I did get lucky on facebook and scored a 24u rack that came with a few level2 (really old) managed cisco switches that I haven't gone through the hell of figuring out how to use.
+
+My questions for this sub are: What should I look at purchasing to make this happen, and any suggestions or terms to research to help me run a website securely and separated from my internal networks.  
+I am thinking of getting a Router/Firewall/Server featured on ServeTheHome link below:  
+[https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/](https://www.servethehome.com/everything-homelab-node-goes-1u-rackmount-qotom-intel-review/) and using this to act as a Router/Firewall and potentially VM/Docker/whatever to host the web server on. Just dont know if its safe to do that and also be able to somehow separate my internal NAS while keeping access to Plex/gameservers/ect. I would plug Eero into this router.
+
+Should I get that, and a router from another MFR? Figure out (or buy new) my managed switches for VLans? I do have worries about buying a Qotom router for use as a firewall as I doubt any bios security updates will be coming in the future. Is this really anything to worry about, or should I get something from a more well known source. I hear people saying to buy an old dell server, but doesn't that have the same problem, or do the bios's not really matter and updating the software (I would prefer OPNsense) is what matters?
+
+Reading the post from u/Staalburger1973 [https://www.reddit.com/r/selfhosted/comments/16auu6d/is\_hosting\_some\_personal\_sites\_on\_my\_home\_network/](https://www.reddit.com/r/selfhosted/comments/16auu6d/is_hosting_some_personal_sites_on_my_home_network/) gave me alot of ideas for setting up alerts. I figured out how to get cloudflare's DNS proxy working, forcing https (think my certs are coming from swag), heard about crowdsec but havent set it up yet, same with wazuh. Don't yet know about his other tips like TLS decryption as I'm still new..
+
+Willing to spend some money to do it right, and willing to learn. But I don't have unlimited time or money lol.
+
+I am going overboard with this right now for personal use as a way to learn for later when I have a business that actually needs all this stuff. Basically a homelab, but with some remote employees (I hope), and some offsite backups in the future.  
+Appreciate any help!
+
+Top 1 comments:
+Comment 1:
+  Author: NikStalwart
+  Comment: I appreciate the long post but I am going to lock this thread because it is not *quite* on topic for the sub.
+
+Having said that, here are some rules of thumb:
+
+ * Don't rely on YouTube videos for education. People only ever make YouTube videos for ad revenue and sponsorships. Both of those require clicks. Most YouTube "tutorials" are inaccurate, dangerous or long-winded. You will learn far more by reading the manual (install the `man-db` package or just google `man &lt;program&gt;`), stack overflow, and forums.
+ * Hosting business software (even small business software) from home networks is a bad idea.
+ * Hosting business software while you're still learning what a CLI is and how hard to press the return key is also a bad idea.
+  Score: 1
+  Created UTC: 2024-07-25 09:07:06
+
+Note: This post has only 1 comments at the time of scraping.

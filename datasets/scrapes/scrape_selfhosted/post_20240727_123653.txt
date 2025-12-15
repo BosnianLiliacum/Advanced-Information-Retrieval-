@@ -1,0 +1,67 @@
+Post Title: Discussion about travel servers
+Author: lapiuslt
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e85on3/discussion_about_travel_servers/
+Number of comments: 19
+Created UTC: 2024-07-20 21:08:14
+
+Post Content:
+What do you think about server, like raspberry pi, that is always with you when you travel?
+
+I heard people use such thing to connect their home network in more secure way. But for example I don't need to connect with my home.
+
+I was thinking maybe some kind of sensors? Maybe home assistant with temperature, humidity and other sensors? Of course no lights will be smart in hotels, but for example if you have smart socket and air purifier or diffuser to repel mosquitoes to turn on and off in the middle of the night. 
+
+What else could have this kind of server? Maybe you have such thing as travel server?
+Let's discuss about it
+
+Top 5 comments:
+Comment 1:
+  Author: waltamason
+  Comment: No actual server here, but I travel quite a bit for work. I keep a Gl.inet SlateAX in my backpack. It serves as a travel router, allowing me to connect it to hotel wifi and funnel all traffic through my home fiber circuit via tailscale.  It runs OpenWRT and can provide a variety of functions. I have several profiles that allow me to connect it to network switches in remote areas at our manufacturing facilities and provide wifi connectivity for my laptop and devices. 
+
+I use a Roku express 4k connected to the hotel room TV for plex/streaming access. It connects to the SlateAX wifi rather than hotel.
+  Score: 4
+  Created UTC: 2024-07-21 06:54:38
+
+Comment 2:
+  Author: ttkciar
+  Comment: Traditionally I've made my travel laptop as beefy as possible, so it can double as a server.  My current P73 Thinkpad does pretty well in this regard, though it runs a bit hot.
+
+In the future, I've been thinking of going with a sort of split system, so that I can have a power-sipping, low-temperature laptop for doing most things, and also keep a NUC or similar compact computer in my backpack, for when I need something with more hardware oomph and have a place to plug it in.
+
+I would configure the laptop and the NUC so that when the laptop detected its ethernet was plugged in, it would probe the NUC's static private IP to see if it was on the other end.  If it was, then the laptop would "ssh -Y" over the network to start browser and terminal windows running on the NUC but displaying on the laptop.
+
+Each would also mount the other's filesystem over the ethernet, using GlusterFS.
+
+From my perspective it should seem like I was using a much more powerful laptop, though it wouldn't be particularly transparent, and would be dependent on the NUC staying plugged into the wall power.
+
+A friend recently pointed out this to me, which would serve the NUC role nicely (despite being technically not a NUC): https://www.bee-link.com/products/beelink-ser8-8845hs
+
+As long as I had that, it could also fill the portable server role.  SSH, GlusterFS, and Apache-HTTPD fill most of my server needs.
+  Score: 2
+  Created UTC: 2024-07-20 21:34:42
+
+Comment 3:
+  Author: isleepbad
+  Comment: I just use mine as a portable Jellyfin. I transfer some of our favourite shows on to it and take it with us so we can watch our shows on the plane.
+  Score: 2
+  Created UTC: 2024-07-21 04:03:07
+
+Comment 4:
+  Author: steveiliop56
+  Comment: Some times I do have to turn off my main server so that's why I take my pi5 with it's hyperpixel screen together everywhere, I run runtipi and Adguard for adblocking, uptime kuma for monitoring my main server (when it's on obviously), code server for a simple code editor, portainer to manage my containers, semaphore for my playbooks and daily Ansible tasks and freshrss to get the news lol
+  Score: 1
+  Created UTC: 2024-07-20 23:00:04
+
+Comment 5:
+  Author: universal_boi
+  Comment: Some time ago I posted my travel server here and I am using it on vacation right now.
+
+I got the most use of downloaded audiobooks for a really long drive (8+8+10+10hours).
+
+I also have a VPN connection to home with a hardware switch on my router and few VMs for my research from college.
+  Score: 1
+  Created UTC: 2024-07-21 09:15:32
+
+Note: This post has only 5 comments at the time of scraping.

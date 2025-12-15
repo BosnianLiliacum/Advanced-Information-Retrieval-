@@ -1,0 +1,58 @@
+Post Title: exposing external services sanity check
+Author: Caeciliuss
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e4yoju/exposing_external_services_sanity_check/
+Number of comments: 5
+Created UTC: 2024-07-16 20:16:51
+
+Post Content:
+Hi
+
+I've been working on setting up a home server with a plex stack (amongst other services) over the past couple of months, and i'm finally at a point i'm getting ready to expose things publicly
+
+  
+Currently, I can access my services both on my local network, and externally via tailscale.
+
+  
+I've got this working by pointing my routers dns at my piholes local ip, &amp; pointing my tailscale dns servers at the pihole too. all dns records point towards a machine running traefik which routes traffic to the relevant port/ machine. It's working smoothly in both cases w/ ssl
+
+  
+I'm looking to expose plex/ overseerr publicly, my current plan is to forward port 443 externally to 444 internally, and move the services I want publicly exposed to a new traefik entrypoint on port 444.
+
+As I understand, this would break the services internally, as they'd now be on 444, how do I get around this?
+
+I've read into traefik allow-lists, but i don't like the idea of manually whitelisting each and every service I want access to (&amp; I think i'd have to move everything to port 443 doing this?)
+
+  
+Any suggestions/ materials to read would be greatly appreciated
+
+Top 2 comments:
+Comment 1:
+  Author: Zavation
+  Comment: Hey! Why do you need to change traefik internally to use 444? Why can't it stay at 443 externally, and forward 443 internally? I have limited / no experience with Tailscale so maybe it's a limitation there, however 443 externally to 443 internally in a normal network should work fine.
+  Score: 1
+  Created UTC: 2024-07-16 20:56:32
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;As I understand, this would break the services internally, as they'd now be on 444, how do I get around this?
+
+You don't want to get around this. In fact it is better to have a reverse proxy for external traffic only and an internal reverse proxy for internal traffic only
+
+This way you can control each reverse proxy without it affecting the other. 
+
+There are also good security implications to this.[ Reference Jim's Garage video](https://youtu.be/IBlZgrwc1T8?si=-CVhPzPgwB6aG3f4)
+
+Flow
+
+Client -&gt; external DNS -&gt; router (443) -&gt;  external reverse proxy (444) -&gt; service 
+
+Client -&gt; internal DNS -&gt;  internal reverse proxy (443) -&gt; service
+
+Note: there will be duplication of services that are both internal and external but there will be no internal services in the external reverse proxy (which is what you want since you won't be using 1 reverse proxy with whitelist)
+
+Hope that helps
+  Score: 2
+  Created UTC: 2024-07-16 21:04:38
+
+Note: This post has only 2 comments at the time of scraping.

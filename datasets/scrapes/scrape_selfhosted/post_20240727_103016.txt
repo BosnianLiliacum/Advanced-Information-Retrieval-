@@ -1,0 +1,69 @@
+Post Title: Dedicated server, VMs or run containers directly
+Author: Bassetts
+Score: 24
+URL: https://www.reddit.com/r/selfhosted/comments/1e5krhd/dedicated_server_vms_or_run_containers_directly/
+Number of comments: 48
+Created UTC: 2024-07-17 15:16:38
+
+Post Content:
+I have a dedicated server and am wondering what the best way to set it up would be. Should I setup multiple VMs and then host individual applications/containers inside those, or should I run all my containers directly on the host OS?
+
+I have tried to search for what might be better but haven't come up with much. My gut tells me containers directly on the host is better as I will have to manage less OS updates and just keep the containers updated. (If this is the way then would people recommend something like dockge/portainer/proxmox is used?)
+
+One other consideration I had is if I run into any applications that don't provide or can't be run in a container, though I haven't encountered any yet. I guess in that case I could still create a VM just for that to keep it contained and avoid issues with multiple versions of dependencies if I have more than one application that required this?
+
+What is everyone's preference on this? Thanks :)
+
+Top 7 comments:
+Comment 1:
+  Author: CrappyTan69
+  Comment: Just run containers on the host.
+I do on a public server and my home servers.
+
+Lose a server, it's a 30 minute rebuild
+  Score: 27
+  Created UTC: 2024-07-17 15:37:30
+
+Comment 2:
+  Author: cookies_are_awesome
+  Comment: My preference is to run Docker containers on a Debian host. (But any flavor of Linux will do, just use your preferred distro.) I use Portainer myself, but Dockge is a good alternative, or you can just use docker compose on the terminal.
+
+I have a separate Proxmox host for running test VMs, but I don't use it for "production" (just means I don't actually run anything important on it) since I don't have a need to run permanent VMs. I barely use it.
+  Score: 18
+  Created UTC: 2024-07-17 16:02:50
+
+Comment 3:
+  Author: AnimeAi
+  Comment: Run everything you can on the host with docker compose. Back up both the mapped data folders and the compose files. If you need to rebuild it is a really quick thing to do. Only use a VM if you actually need a VM (I.E. you need an extra layer of separation for high risk containers like public facing websites) otherwise you're wasting resources. You can optionally use an assistant tool like Portainer (there isn't much love for it, but I like it!) to manage everything in the same way as docker compose - same rule applies, keep backups!
+  Score: 7
+  Created UTC: 2024-07-17 16:08:57
+
+Comment 4:
+  Author: s3r3ng
+  Comment: I can't claim to have a definitive answer but my sense of it is that multiple VMs is good if you want to experiment with Docker Swarm or Kubernetes.  Otherwise save your machine capacity to stuff more containers on it directly.  VMs are more heavyweight and should only be used if you have a real need.
+  Score: 3
+  Created UTC: 2024-07-17 21:06:20
+
+Comment 5:
+  Author: daronhudson
+  Comment: It depends on what you have to run. Some things only run in a vm, some only run in a docker container, some only run on kubernetes. Some are only available on Linux, others only on windows. There’s never 1 shoe fits all. Run a hypervisor and deploy things the way they’re supposed to.
+  Score: 2
+  Created UTC: 2024-07-18 03:22:54
+
+Comment 6:
+  Author: TheRealSeeThruHead
+  Comment: I run docker containers in a vm on proxmox. 
+Using a vm on proxmox simplifies backup of my host and migration to another machine in the cluster. Docker is what I’m comfortable with and where all the prebuilt images are.
+  Score: 2
+  Created UTC: 2024-07-18 09:20:05
+
+Comment 7:
+  Author: johnsturgeon
+  Comment: use Proxmox as your OS, then you can go with VM's / LXCs or Docker Containers in a VM / or create multiple LXC's to group your docker containers.  
+
+There are a lot of advantages to Proxmox over running a bunch of Dockers on one host.  Great backup solutions with PBS, Snapshots / rollbacks of your VM's or LXC's, easier resource sharing...
+
+r/proxmox
+  Score: 2
+  Created UTC: 2024-07-18 13:14:40
+

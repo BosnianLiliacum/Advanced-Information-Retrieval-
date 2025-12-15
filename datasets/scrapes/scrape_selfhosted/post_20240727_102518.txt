@@ -1,0 +1,67 @@
+Post Title: NAS OS Recommendations
+Author: geniuscube
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5wk8n/nas_os_recommendations/
+Number of comments: 54
+Created UTC: 2024-07-17 23:20:06
+
+Post Content:
+I’m looking at building a new NAS box and I’m wondering what OS people are using these days for that purpose. It’s not going to be running containers or anything like that, just handling storage.
+
+Top 7 comments:
+Comment 1:
+  Author: snowysysadmin59
+  Comment: Truenas scale. If all you're looking for is storage and not doing anything else, truenas scale.
+  Score: 6
+  Created UTC: 2024-07-18 00:47:26
+
+Comment 2:
+  Author: forwardslashroot
+  Comment: I am using a plain Debian and installed the packages I needed.
+  Score: 16
+  Created UTC: 2024-07-17 23:46:46
+
+Comment 3:
+  Author: Kltpzyxmm
+  Comment: Have you searched at all? There’s 3 options mainly….
+
+Truenas
+Unraid
+OMV
+  Score: 26
+  Created UTC: 2024-07-17 23:42:09
+
+Comment 4:
+  Author: fezmid
+  Comment: Synology or QNAP if you want turnkey.
+  Score: 3
+  Created UTC: 2024-07-18 00:47:11
+
+Comment 5:
+  Author: ItsPwn
+  Comment: Synology DSM for nas 100%
+
+Best UI and feature
+
+Native phone apps for iOS and android
+
+Go to releases for USB image
+
+https://github.com/AuxXxilium/arc
+
+/r/xpenology
+  Score: 3
+  Created UTC: 2024-07-18 07:16:49
+
+Comment 6:
+  Author: Arklelinuke
+  Comment: I've been using OMV since 2021 and it's been rock solid for me, once I figured out how to set it up for what I was trying to do
+  Score: 2
+  Created UTC: 2024-07-18 01:28:52
+
+Comment 7:
+  Author: PeeApe
+  Comment: Unraid. It has some solid container management and it's the best out there for pure storage.
+  Score: 2
+  Created UTC: 2024-07-18 02:17:03
+

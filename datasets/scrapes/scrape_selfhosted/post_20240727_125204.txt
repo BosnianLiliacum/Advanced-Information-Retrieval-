@@ -1,0 +1,47 @@
+Post Title: Backup Approach 
+Author: OldFatBlokeRuns
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7732c/backup_approach/
+Number of comments: 6
+Created UTC: 2024-07-19 15:53:09
+
+Post Content:
+What is your approach to getting 3:2:1 for your backups?
+
+I’m thinking about Syncthing to my Samba shares then Duplicati from the server to S3. My rational is to save clients being hit twice with load. 
+
+Or would you run a backup/sync from the client to local samba/NAS and to offsite so loading the client twice??
+
+Top 3 comments:
+Comment 1:
+  Author: anyma6
+  Comment: I don’t know if it can help, but I completely rely on rsync (which is enough for 99% of use cases).
+
+custom scripts start rsync on the server, which synchronizes the data on my home NAS (rsync in push mode), a script on the NAS creates a backup archive once a day and stores them both on the NAS and sends a copy to a third cloud server. in this way the server is queried only once for the first sync, the NAS takes care of everything else (archiving and sending the backup copies wherever I want).
+
+plus, I backup the entire servers daily via the Hetzner backup system (but I don’t trust it)
+
+I wrote a guide some time ago on how to create a script with rsync, it’s in Italian but... I’ll leave the link below if it helps you:
+
+https://italianerd.com/resources/come-fare-un-backup-del-tuo-vps-linux.13/
+  Score: 5
+  Created UTC: 2024-07-19 16:05:27
+
+Comment 2:
+  Author: MarcSN311
+  Comment: The Problem with your plan is: if syncthing breaks and writes broken data all your backups fail.
+And it fails silently.
+  Score: 3
+  Created UTC: 2024-07-19 19:08:42
+
+Comment 3:
+  Author: suicidaleggroll
+  Comment: My backup server uses rsync with —link-dest to pull daily incremental backups from each of the other systems in the network to itself.  Weekly it uses rsync to do a full backup of a select set of those incremental backups to an external HDD.  Roughly once a month I swap out that external HDD with an identical one that sits in my desk at work so the off-site one is never more than a month or so out of date.  The backup server also uses borg to send a small encrypted subset of these backups to rsync.net for cloud storage every night.
+
+So it’s not 3-2-1, more like 5-3-2, but the backups are not all equivalent.  While I *could* restore everything from the rsync.net backup alone, it would be painful and would take a lot of time to rebuild all the VMs from scratch so that I could restore the backed up databases onto them to get back to where I was.  Conversely, the external HDD at work would let me get 100% operational very quickly, but could be as much as a month out of date.  A real world restoration would likely see a combination of a couple different backups to get up quickly and with no data loss (grab the VM image from the external HDD in my office, then restore the database at rsync.net to pick up any changes in the last month).  Theoretically I could just push everything to rsync.net and not worry about that, but I have neither the upload bandwidth or budget to host ~50 TB there, so instead I only use it for the most critical parts.
+
+And of course each of these backup scripts monitors exit codes and will notify me if anything goes wrong.
+  Score: 1
+  Created UTC: 2024-07-20 14:29:38
+
+Note: This post has only 3 comments at the time of scraping.

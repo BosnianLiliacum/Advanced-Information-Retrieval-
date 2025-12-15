@@ -1,0 +1,46 @@
+Post Title: Need help finding a free tool to monitor specific website changes - any recommendations?
+Author: AintShocked999
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eclgyy/need_help_finding_a_free_tool_to_monitor_specific/
+Number of comments: 6
+Created UTC: 2024-07-26 11:13:56
+
+Post Content:
+I'm looking for a free tool to keep an eye on website changes. Basically, I want something that can watch specific parts of a website and let me know when things change. 
+
+I've been looking around at some threads, and these three were probably the ones that were the most recommended:
+
+[changedetection.io](http://changedetection.io) - From what I heard, it's free, but this was months ago and the free version had some limits. I think it's one of the most recommended back then, but I'm not sure if there are others that are just as good.
+
+[Visualping.io](http://Visualping.io) - Same with changedetection, it also has a free version and it even keeps tabs on the website updates and sends alerts. I wonder if changedetection also has alerts as well.
+
+Feedropolis - From what I heard, this turns the site updates into RSS feeds. They say it's pretty easy to use, but I'll probably be the judge of that once I actually use it.
+
+These 3 seem to be the ones being recommended here, but I'd like to know what other things are being recommended as well. Has anyone tried these out? Or know of any other good options? Let me know what you think.
+
+Top 3 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: I use [changedetection.io](http://changedetection.io) a lot. I don't think there is a limited "free version". They have their paid version, but it's the same software, just SaaS. The free versions is just the same software that you host yourself.
+
+There is A LOT of functionality there. The things you can do range from watching css selectors to playwright navigation steps through a headless browser window to reach things that can't be directly accessed from single page apps.
+  Score: 2
+  Created UTC: 2024-07-26 11:31:54
+
+Comment 2:
+  Author: LessieMackey48
+  Comment: Visualping and [changedetection.io](http://changedetection.io) are solid choices! I'd give Visualping a slight edge for the alerts feature. Feedropolis turning updates into RSS feeds sounds cool too. While you're exploring tools, if you ever think of sending out newsletters about your findings, beehiiv is a fantastic platform for that. Just a thought!
+  Score: 2
+  Created UTC: 2024-07-26 19:39:02
+
+Comment 3:
+  Author: Imafikus
+  Comment: Not sure what's your use case, but you can give me [notify-me.rs](http://notify-me.rs) a try if you want. It has a free plan available. 
+
+If you give it a try, let me know what you think, since I'm one of the founders. 
+
+Cheers!
+  Score: 1
+  Created UTC: 2024-07-26 18:15:39
+
+Note: This post has only 3 comments at the time of scraping.

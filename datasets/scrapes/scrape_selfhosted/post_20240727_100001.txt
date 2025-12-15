@@ -1,0 +1,18 @@
+Post Title: Accidentally downloaded files using YoutubeDL-Material into the docker.img. How can I retrieve them?
+Author: sexpusa
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e7axym/accidentally_downloaded_files_using/
+Number of comments: 4
+Created UTC: 2024-07-19 18:35:30
+
+Post Content:
+I had setup users without realizing I didn't map them. Once I realized this I mapped the path and then lost access to those files. I tried deleting the path and leaving it unmapped but still could not go back to having access to them.
+
+Top 1 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 8
+  Created UTC: 2024-07-19 18:38:22
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,112 @@
+Post Title: Bad Gateway when setting up NGINX Proxy Manager with PI hole
+Author: penisauras-rex
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e39ta1/bad_gateway_when_setting_up_nginx_proxy_manager/
+Number of comments: 3
+Created UTC: 2024-07-14 18:48:26
+
+Post Content:
+I have been testing out setting up SSL certs with NPM. My records are setup in cloudflare and the dns challenge has been working. The only issues has been that the domain for PI hole is not working. I am able to reach pi hole on my localhost but when going to [pihole.domain.com/admin](http://pihole.domain.com/admin) it just says 502 Bad Gateway.
+
+This is the docker compose file I have been using.
+
+    services:
+      app:
+        container_name: nginxproxymanager
+        image: "jc21/nginx-proxy-manager:latest"
+        restart: unless-stopped
+        ports:
+          
+    # These ports are in format &lt;host-port&gt;:&lt;container-port&gt;
+          - "80:80" 
+    # Public HTTP Port
+          - "443:443" 
+    # Public HTTPS Port
+          - "81:81" 
+    # Admin Web Port
+    
+        volumes:
+          - ./data:/data
+          - ./letsencrypt:/etc/letsencrypt
+    
+      pihole:
+        container_name: pihole
+        image: pihole/pihole:latest
+    
+        ports:
+          - "533:53/tcp"
+          - "533:53/udp"
+          
+    #      - "67:67/udp"
+          - "82:80/tcp"
+        environment:
+          TZ: "America/Chicago"
+        
+    # Volumes store your data between container upgrades
+        volumes:
+          - "./etc-pihole:/etc/pihole"
+          - "./etc-dnsmasq.d:/etc/dnsmasq.d"
+    
+        restart: unless-stopped 
+    # Recommended but not required (DHCP needs NET_ADMIN)
+      jellyfin:
+        image: lscr.io/linuxserver/jellyfin:latest
+        container_name: jellyfin
+        environment:
+          - PUID=1000
+          - PGID=1000
+          - TZ="America/Chicago"
+        volumes:
+          - /path/to/library:/config
+          - /path/to/tvseries:/data/tvshows
+          - /path/to/movies:/data/movies
+        ports:
+          - 8096:8096
+          - 8920:8920 
+    #optional
+          - 7359:7359/udp 
+    #optional
+          - 1900:1900/udp 
+    #optional
+        restart: unless-stopped
+
+The domains I setup for NPM itself and jellyfin are working. I can access them from my other devices on my network as well. 
+
+I have read over [https://github.com/pi-hole/docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) and tried to set the VIRTUAL\_HOST to the domain I am using among some of the other variables listed without success. Additionally, I also tested permitting access to all origins in pihole.
+
+This is what the nginx logs mostly say
+
+    2024/07/14 
+    15:17:56
+     [error] 345#345: *125 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: hole.weedcat.dev, request: "GET / HTTP/2.0", upstream: "http://127.0.0.1:82/admin/", host: "pihole.domain.com", referrer: "https://proxy.domain.com/"
+    
+
+Here is my NPM Dashboard
+
+https://preview.redd.it/zyx9p8ab5jcd1.png?width=1383&amp;format=png&amp;auto=webp&amp;s=ca215348b45c9a1ec6e6cdc2511d7f221ed6c280
+
+  
+Thank you in advance if anyone has any guidance or advice.
+
+Top 2 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: &gt;     ports:
+      - "533:53/tcp"
+      - "533:53/udp"
+
+This is not going to work, plain DNS needs to run on port 53, otherwise your DNS clients will not be able to connect to that Pihole at all.
+
+&gt; http://127.0.0.1:82/admin/
+
+You are proxying to the wrong port. You need to use the actual internal port of the target container, which in this case is 80. The mapping you are doing with 82:80 only applies to the Docker host machine, not when NPM is connecting through the internal Docker network.
+  Score: 1
+  Created UTC: 2024-07-14 19:37:09
+
+Comment 2:
+  Author: crezy
+  Comment: For future searchers, I had a similar issue but my problem wasn't with the ports, it was that my PiHole installation wouldn't load the admin interface at .../admin/ -- instead, I had to specify .../admin/index.php
+  Score: 1
+  Created UTC: 2024-07-15 10:46:30
+
+Note: This post has only 2 comments at the time of scraping.

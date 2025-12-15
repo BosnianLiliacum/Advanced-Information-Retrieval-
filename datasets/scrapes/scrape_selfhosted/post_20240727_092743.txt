@@ -1,0 +1,77 @@
+Post Title: ChannelTube: Automated YT Channel Content Downloader and Manager
+Author: TheWicklowWolf
+Score: 127
+URL: https://www.reddit.com/r/selfhosted/comments/1e9chib/channeltube_automated_yt_channel_content/
+Number of comments: 34
+Created UTC: 2024-07-22 12:00:15
+
+Post Content:
+I was using Metube to download videos and manually delete them once I was done, but I wanted to automate this process. So, I created ChannelTube, which I’ve been using for almost a year now and seems to work OK.
+
+This is a fairly niche service and I know there are more feature-rich options out there like tubearchivist, tubesync, ytdl-sub etc...
+
+  
+What ChannelTube does is simple: it downloads the latest videos from your selected channels, keeps them for a set period, and then automatically deletes them.
+
+It doesn’t archive videos or offer manual selection or one-off downloads—it’s designed to manage a rolling window of content that you want to watch once rather than capturing full channels.
+
+ 
+
+ 
+[https://github.com/TheWicklowWolf/ChannelTube](https://github.com/TheWicklowWolf/ChannelTube)
+
+https://preview.redd.it/4xdr0l0i72ed1.png?width=1366&amp;format=png&amp;auto=webp&amp;s=9783f6ad5de33940d17f64bc458c2e7118b15dea
+
+  
+
+
+Top 7 comments:
+Comment 1:
+  Author: VFansss
+  Comment: I'm following a fuckton of channels on YouTube and I'm having the issue that you basically can't group them somehow.
+
+"Retrogaming", "Philosophy", "IT" and so on. I found very silly that isn't possible to truly categorize channels, so I can quickly check new content on these topics and maybe review all content creator of different topics at once.
+
+This could solve my issue somehow, even WITHOUT downloading them (just for truly organizing them in an meaningful matter).
+
+Will keep an eye on it, thanks for your work :)
+  Score: 16
+  Created UTC: 2024-07-22 16:52:23
+
+Comment 2:
+  Author: I_IblackI_I
+  Comment: Is it also possible to filter the video's it will download based on title? E.g. I want to only download new episodes of a certain series of a channel.
+  Score: 6
+  Created UTC: 2024-07-22 17:07:29
+
+Comment 3:
+  Author: re_marks
+  Comment: I've been wanting something like this for years! Thanks for the hard work
+  Score: 4
+  Created UTC: 2024-07-22 19:10:54
+
+Comment 4:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 4
+  Created UTC: 2024-07-23 02:06:10
+
+Comment 5:
+  Author: ModernSimian
+  Comment: Installed to try it out, it looks like there is some plex / jellyfin integration. Do I need to do anything other than put in Plex: &lt;server_token&gt; or is this a feature in progress?
+  Score: 3
+  Created UTC: 2024-07-23 02:54:14
+
+Comment 6:
+  Author: MF319
+  Comment: You might want to try this:
+https://github.com/kieraneglin/pinchflat
+  Score: 7
+  Created UTC: 2024-07-22 19:29:34
+
+Comment 7:
+  Author: sampdoria_supporter
+  Comment: Fantastic work. Will be checking it out.
+  Score: 3
+  Created UTC: 2024-07-22 15:34:46
+

@@ -1,0 +1,60 @@
+Post Title: How to transfer an existing instance of firefly III to another computer 
+Author: FragoulisNaval
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e80n6x/how_to_transfer_an_existing_instance_of_firefly/
+Number of comments: 5
+Created UTC: 2024-07-20 17:17:43
+
+Post Content:
+Hello everyone,
+
+I am migrating from a barebone installation to proxmox and I use fireflyIII (through docker) to monitor my financial condition.
+
+I want to transfer the existing installation from my old server to the new one. How it will be best to do it?
+
+I tried exporting all the transactions in CSV and tried to use firefly importer but it keeps throwing import errors.
+
+Any ideas? 
+
+Top 4 comments:
+Comment 1:
+  Author: Kuken500
+  Comment: Can’t you just copy the docker firefly volume?
+  Score: 3
+  Created UTC: 2024-07-20 17:56:29
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;I am migrating from a barebone installation to proxmox and I use fireflyIII (through docker) to monitor my financial condition.
+
+&gt;I want to transfer the existing installation from my old server to the new one. How it will be best to do it?
+
+Can you clarify your situation. Is the current working instance installed on bare metal? Or is the current working instance utilizing docker?
+
+If the current working instance is utilizing docker on the old machine, you should be able to copy all volumes that are associated with the docker compose/ docker image and migrate that to the new server (ensure it is in the exact location that is defined in the docker compose/ docker command and has the exact same permissions)
+
+This is why people utilize docker, for easy migration 
+
+Hope that helps
+  Score: 2
+  Created UTC: 2024-07-20 19:21:41
+
+Comment 3:
+  Author: linxbro5000
+  Comment: stop the container, use tar to make an archive of the old container incl all the folders for config, data etc.
+
+copy the archive to the new computer/vm and untar it.
+
+start the container (new computer)
+  Score: 1
+  Created UTC: 2024-07-21 12:36:10
+
+Comment 4:
+  Author: FragoulisNaval
+  Comment: Thank you all for commenting.
+
+I deleted the folder and copies anew all the contents from the old server to the new one. This time, everything was there. 🙏🏻
+  Score: 1
+  Created UTC: 2024-07-22 09:33:50
+
+Note: This post has only 4 comments at the time of scraping.

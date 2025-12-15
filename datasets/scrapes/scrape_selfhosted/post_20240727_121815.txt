@@ -1,0 +1,72 @@
+Post Title: Does TLD really matter for custom domain email addresses?
+
+Author: Darth-Vader64
+Score: 30
+URL: https://www.reddit.com/r/selfhosted/comments/1e9bgm5/does_tld_really_matter_for_custom_domain_email/
+Number of comments: 47
+Created UTC: 2024-07-22 11:02:40
+
+Post Content:
+I don't know if this the right sub, but I figured I'd ask.
+
+I'm looking for opinions on non-traditional TLDs.  At this point and time, its near impossible to get a decent, and short domain name with .com/,.net/,org.
+
+I'm looking to use an email provider and my own custom domain.  There's availability with .bot, .ai, .gg, .io and .xyz. TLDs
+
+This is for my personal email, not business - thoughts and opinions?  Does TLD really matter in this day and age?
+
+Top 7 comments:
+Comment 1:
+  Author: Formal_Departure5388
+  Comment: I run an email server with a bunch of TLDs - .com, .radio, .co, .us, .xyz, and some others I can’t think of offhand. 
+
+Officially by the checkers, they all score the same in spam rejection, because I have SPF / DKIM / DMARC etc set up correctly. By the logs, the TLDs that are not .com/org are rejected by spam filters much more often. 
+
+From a practicality standpoint, handing out anything that isn’t “@gmail.com” is all equally painful. I can’t count how many times I’ve been given the full address and heard back, “ok, that’s at Gmail, right?”  No. I gave you a full address with a domain; where are you putting the Gmail part?
+  Score: 56
+  Created UTC: 2024-07-22 15:18:06
+
+Comment 2:
+  Author: MichaelMKKelly
+  Comment: depends how often you want to deal with people not understanding and even when you tell them they still dont get it and you dont get emails because they put in example@example.xyz.com instead of example@example.xyz when it comes to things that you might have to rely on an idiot at the other end of the phone to get right then go as simple as possible. also there are still some old forms and stuff that dont accept anything thats not the usual options.
+
+for 95% of stuff you will be fine going with whatever but the more non-traditional you go the more issues you come across. theres also a few tlds that will be less trusted by spam filters etc...
+  Score: 40
+  Created UTC: 2024-07-22 11:15:09
+
+Comment 3:
+  Author: Winter_Sweet5023
+  Comment: Using a .co had a few awkward experiences when reading the address over the phone.  Guess they hadn’t seen that TLD before and were convinced I’d either forgot to add the .uk to the end of it or that it should have been a .com that I’d misread
+  Score: 12
+  Created UTC: 2024-07-22 12:16:12
+
+Comment 4:
+  Author: flaming_m0e
+  Comment: I have a .ninja domain that gets flagged every so often by shitty web site validation tools that insist it's not a real email address, but for the most part, I've not had issues with it in 8+ years.
+  Score: 9
+  Created UTC: 2024-07-22 13:18:04
+
+Comment 5:
+  Author: Temporary_Delay9456
+  Comment: Don't recommend .XYZ for email. Apparently, being one of the cheapest, they are very popular with spammers and spam filters know it. I got one for fun and even though SPF, DKIM, DMARC etc are properly set up I cannot get a single email past Gmail's or O365's spam filters.
+  Score: 8
+  Created UTC: 2024-07-22 17:11:35
+
+Comment 6:
+  Author: i8i0
+  Comment: Some TLDs may be expected to be less predictable and stable in the long term. You probably want your domain to be stable on the 10+ year timescale. 
+
+For example, a country may want to impose some restrictions on TLDs that are controlled by its government. Who knows what dumb government might run any country 10 years from now. 
+
+An uncommon TLD could also become associated with something particular in the future, which you do not want. For example, the private for-profit entity that is the registrar for .XYZ has marketed it as being associated with "generations x y and z". I don't think this association matters now, but it could in the future. 
+
+On the other hand, COM is so well-established and generic that I think it will remain recognized, and without any particular cultural associations, for the long-term.
+  Score: 5
+  Created UTC: 2024-07-22 12:49:18
+
+Comment 7:
+  Author: MentionSensitive8593
+  Comment: I have a .online and every so often I come across a form that won't accept it as a real email address
+  Score: 4
+  Created UTC: 2024-07-22 13:55:26
+

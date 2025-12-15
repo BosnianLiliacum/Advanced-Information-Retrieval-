@@ -1,0 +1,52 @@
+Post Title: Interested in locally installed AI text-to-image generators with the ability to feed a custom library of visual data to generate from that remains solely my property
+Author: twistedtragedies
+Score: 15
+URL: https://www.reddit.com/r/selfhosted/comments/1eaesf9/interested_in_locally_installed_ai_texttoimage/
+Number of comments: 13
+Created UTC: 2024-07-23 18:13:03
+
+Post Content:
+I was wondering if there's a free-for-commercial-use AI text-to-image generator that can be installed locally and/or operate offline that allows one to customize the AI's generations by uploading their own personal stock of photos and illustrations but that said user uploaded content is not added to the rest of the AI's data for everyone else to generate from? 
+
+Let me know if thi is the wrong subreddit for this, I'm still a total noob to Reddit.
+
+More info that may elaborate on my question or may just be TL;DR: 
+
+I'm an artist and I have a lot of my own hand-drawn and digitally drawn illustrations as well as my own (extensively large) stock of photographic images that I'd like to be able to upload as part of an AI Generator's library of visual information to draw from and generate unique images with, but I don't want what I upload to an AI to be stored in some cloud data bank and accessible for everyone else to generate content from. 
+
+I'm primarily interested in an AI image generator that uses content that is acceptable for commercial use so that I don't have to worry about restrictions and that I can create marketable content from it. I figure if it's working from my own work, obviously there won't be a question of, "Is this visual data bank okay for me to use commercially?" because I'm authorizing the use of the visual data to generate images. (Although I know my stuff is not all encompassing, so I still want this AI to have a base visual data bank that's free for commercial use.) It'd be an added bonus that, although AI generated, it'd have the potential of a more made-by-me feel to it. However, that authorization is really limited just to me to create commercial work from, not the rest of society, so my concern is being able to keep my own visual data from being accessed by everyone else that uses the same AI generator. 
+
+I have an [HP Envy 32-A1054](https://support.hp.com/in-en/document/c07046674), and I'm pretty sure this computer will be able to handle a big program. (But, let me know if I'm wrong...) I'd just really like to explore a personalized experience with AI without my work being spliced and tossed into the sea of data that's used in everyone else's generations. 
+
+Bonus points if you explain it to me like I'm a six year old. LOL.
+
+Top 3 comments:
+Comment 1:
+  Author: JunkKnight
+  Comment: It sounds like what you want is to run Stable Diffusion with a LoRA. 
+
+The easiest way to do this would be to setup a program like Automatic 1111 or SD.Next which should be a fairly simple 1-click (ish) install. There are different models available trained on different types of images so you'd have to experiment to find the one that best matches your particular needs. I can't tell you if these models are acceptable for commercial use or not, they're trained on a lot of data so I couldn't say for sure, you'd have to look into that yourself.
+
+For customizing it with your own art, that's where a LoRA would come in. I've never used one myself but it's a similar process to fine-tuning that help modulate the output to fit the style of the art used in the LoRA, you could even have more then one for different types of art (landscape, comics, black and white, etc.). Like I said, I've never used one, but my understanding is they aren't to hard to setup and there are guides out there.
+
+You could also ask on /r/StableDiffusion and /r/LocalLLaMA 
+
+As for a GPU, 1650 is definitely going to be on the slow side and you *will* run into VRAM limitations with it. It's fine to get started with but if you wanted to use AI image generation more professionally, I'd recommend a beefier card with more VRAM.
+  Score: 9
+  Created UTC: 2024-07-23 21:39:26
+
+Comment 2:
+  Author: jkirkcaldy
+  Comment: Any AI is going to be really slow on your system. AI requires a GPU which your system does not have and it requires a lot of VRam too. 
+
+It might work, but it will be super slow.
+  Score: 6
+  Created UTC: 2024-07-23 20:54:20
+
+Comment 3:
+  Author: [deleted]
+  Comment: [removed]
+  Score: -2
+  Created UTC: 2024-07-23 18:36:38
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,64 @@
+Post Title: NAS - Home build | First timer | Beginner
+Author: FunCrafty8152
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eczyrr/nas_home_build_first_timer_beginner/
+Number of comments: 1
+Created UTC: 2024-07-26 21:50:05
+
+Post Content:
+Hi guys, I'm really looking for your help.
+
+Currently, I have an old PC which I'm thinking to update to NAS, I'm really looking forward to build my own server however, I'm fairly new and looking for some help and suggestions.
+
+**Current PC (windows) specs are:**
+
+1. 16GB Corsair ram 1333 MHz
+2. 500 GB (mechanical HDD)
+3. NIC - need to check the speed
+4. 4 SATA on motherboard - **ASUM H61M-K.**
+5. i3 -3rd Gen CPU(which i will be upgrading to i7 3rd later)
+
+**5) GeForce 210  - Graphic card**
+
+**Goal:**
+
+I want to configure, a RAID setup (mainly mirroring) where I can put all my files, media (movies, songs) etc.
+
+also use it as a PLEX media server, so that I can access the media from anywhere, as I travel a lot.
+
+**Questions:**
+
+1. Do I need to purchase the specific RAID NAS HDD? 1TB each (as 1TB will suffice for my work), so 2 TB (1TB each) for mirroring, or I can purchase a normal 7200rpm Mechanical HDD, so I will have 2 HDD (for RAID) and one already installed HDD 500 GB where I can install, TRUE NAS OS and can configure.
+
+*I'm really confused, how does a NAS HDD differ from normal HDD which we often use ? (maybe the RAID can be achieved on the former, i don't know, please help me)*
+
+2) Regarding the NIC (Network interface card) - What will you suggest? Shall I upgrade it to 100 GBPS or the existing one with RJ45 port shall be fine for a home server?
+
+3) What about the power supply? I guess, it is using the old PSU (I'm really not aware of the watts) this I need to check.
+
+4) Any other suggestion or missing parts which I'm not aware of ? Please let me know, so that I can make the necessary purchases.
+
+5) Any other OS, like TRUE NAS, which you will suggest apart from this for the RAID configuration?
+
+6) Things to be careful and be mindful about.
+
+My PC case is decent but, in the future, I will upgrade it a box rectangular one, if it fits the budget.
+
+Thanks in Advance.
+
+Top 1 comments:
+Comment 1:
+  Author: hxck
+  Comment: 1. You can set up RAID with any hard drives, doesn't have to be a specific make or model.
+2. 100G NIC would be nice if it's in your budget, otherwise a standard mobo port works just fine.
+3. Power supplies are pretty cheap these days, it just depends on how much you plan on plugging into it. I run my server on an old HP desktop that has a 180w PSU and it's not an issue for me with ~5 or 6 drives plugged into it.
+4. A couple of flash drives are always good to have around for installing OSes or running live Linux environments, etc. Stuff for cable management.
+5. If you're very new, probably stick to TN or maybe something like Synology.
+6. Keep in mind:
+    1. Develop a good backup strategy and test it often.
+    2. Don't use a single software/container/drive/whatever to store important things.
+    3. Install something like Docmost/BookShelf/Memos to save notes/scripts/etc as you go along.
+  Score: 1
+  Created UTC: 2024-07-26 23:15:20
+
+Note: This post has only 1 comments at the time of scraping.

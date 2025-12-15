@@ -1,0 +1,70 @@
+Post Title: What's your naming scheme for your servers?
+Author: [deleted]
+Score: 203
+URL: https://www.reddit.com/r/selfhosted/comments/1e3rs1i/whats_your_naming_scheme_for_your_servers/
+Number of comments: 465
+Created UTC: 2024-07-15 10:49:40
+
+Post Content:
+Interested to hear what everyone else's naming scheme is. I'm into 90s hip hop so my NAS is called Biggie and my proxmox server is called Willie (Will Smith)
+
+Top 7 comments:
+Comment 1:
+  Author: pywkt
+  Comment: if the overall theme is 90s hiphop, it seems like the obvious name for the NAS would be based around, well, Nas?
+  Score: 169
+  Created UTC: 2024-07-15 10:57:45
+
+Comment 2:
+  Author: herzversagen
+  Comment: Nordic Mythology.  
+Proxmox Nodes are called Helheim, Niflheim and Vanaheim, Cluster is called Yggdrasil.  
+The NVR is called Hugin (sees all) and the NAS is called Munin (knows all).  
+Firewall is called Heimdall because it is in control who's allowed in and who's not.  
+VPN Instance is called Bifrost.  
+
+
+Although the naming is not 100% consistent, I had a lot of fun thinking about it. :D
+  Score: 95
+  Created UTC: 2024-07-15 12:01:51
+
+Comment 3:
+  Author: talkincyber
+  Comment: I have 2 nucs, named sugmanucs-1 and sugmanucs-2
+  Score: 68
+  Created UTC: 2024-07-15 12:06:14
+
+Comment 4:
+  Author: linuxfit
+  Comment: Nice try, social engineering phisherman!
+  Score: 66
+  Created UTC: 2024-07-15 13:27:23
+
+Comment 5:
+  Author: No-Pudding7846
+  Comment: I'm from Belgium and I use Belgian beer names as server / computer names. Duvel, ChimayBlauw, ...
+  Score: 77
+  Created UTC: 2024-07-15 10:59:18
+
+Comment 6:
+  Author: snowysysadmin59
+  Comment: UTSCP-TN-01 (&lt;Utah&gt;&lt;Company name&gt;&lt;physical server&gt;-&lt;truenas&gt;-&lt;01&gt;)
+
+UTSCV-UBSRV-01 (&lt;Utah&gt;&lt;company name&gt;&lt;virtualserver&gt;-&lt;Ubuntu server&gt;-&lt;01&gt;)
+
+edit: link for what I base my naming scheme off of: https://virtualizationreview.com/blogs/virtual-insider/2011/10/how-to-design-an-effective-naming-convention.aspx
+
+edit edit: I dont actually have a real "company". Its a fake one based off of me, but I selfhost alot of stuff for family so it was easier to just make up a company and kind of run things in a "professional" environment to keep things organized.
+
+I used to name my servers after different galaxies or star clusters and what not but it got too confusing. Andromeda did what again? oh thats the proxmox because its "big" (has alot of VMs that could be name individual stars). 
+
+So having a generic naming convention is so much easier to manage in my opinion. Its less fun, which I totally understand but hey, what can you do.
+  Score: 81
+  Created UTC: 2024-07-15 11:10:49
+
+Comment 7:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 22
+  Created UTC: 2024-07-15 10:59:03
+

@@ -1,0 +1,287 @@
+Post Title: Stuggling with GPU Passthrough of GTX 1080 from Proxmox to Ubuntu. nvidia-smi fails
+Author: TuhanaPF
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1ec92if/stuggling_with_gpu_passthrough_of_gtx_1080_from/
+Number of comments: 20
+Created UTC: 2024-07-25 23:17:11
+
+Post Content:
+I'm wanting to get into AI, and I've got an old PC I've converted into a server.
+
+I've sort of done a hodgepodge of guides to get as far as I have. Different guides have suggested adding different things, and I've followed them, so perhaps that's the wrong approach. However my primary guide was [The Ultimate Beginner's Guide to GPU Passthrough](https://old.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/).
+
+Here's the steps I've taken:
+
+**Hardware**
+
+As mentioned, it's a GTX 1080, an Intel i7-7700 $ 3.6GHz, 4 cores, 2 threads per core, so "8 cores", 16gb ram. It's a headless server, nothing plugged in other than power and ethernet.
+
+**Fresh install of Proxmox**
+
+I've freshly installed Proxmox 8.0.3 on this PC, it's had no VMs other than this AIServer I made.
+
+**Setting up Proxmox for GPU Passthrough**
+
+Step 1: Update /etc/default/grub
+
+My GRUB_CMDLINE_LINUX_DEFAULT looks like this:
+
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet initcall_blacklist=sysfb_init intel_iommu=on iommu=pt pcie_acs_override=downstream,multifunction nofb nomodeset video=vesafb:off,efifb:off"
+
+Step 2: Run update-grub
+
+Step 3: Update VFIO modules. /etc/modules
+
+    vfio
+    vfio_iommu_type1
+    vfio_pci
+    vfio_virqfd
+
+Step 4: IOMMU interrupt remapping
+
+Ran these commands:
+
+    echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" &gt; /etc/modprobe.d/iommu_unsafe_interrupts.conf
+    echo "options kvm ignore_msrs=1" &gt; /etc/modprobe.d/kvm.conf
+
+Step 5: Blacklisting drivers:
+
+/etc/modprobe.d/blacklist.conf
+
+    blacklist radeon
+    blacklist nouveau
+    blacklist nvidia
+    blacklist nvidiafb
+
+Step 6: Add GPU to VFIO
+
+/etc/modprobe.d/vfio.conf
+
+    options vfio-pci ids=(10de:1b80,10de:10f0) disable_vga=1
+
+ID's taken from lspci -v output
+
+Run this:
+
+    update-initramfs -u
+
+And restart Proxmox.
+
+**Configuring VM**
+
+VM ID: 109
+Name: AIServer
+
+ISO Image: Ubuntu-24.04-live-server-amd64.iso
+
+Machine: q35
+BIOS: OVMF (UEFI)
+
+Disk size (GiB): 852
+
+CPU Cores: 8
+
+Memory (MiB): 15000
+
+---
+
+Everything else is default.
+
+Next is installing Ubuntu, everything is default, standard setup.
+
+Then once set up, shut down the VM, go to hardware, add PCI device.
+
+Raw Device: 0000:01:00.0 (GP104 [GeForce GTX 1080])
+Primary GPU: Ticked
+All Functions: Ticked
+PCI-Express: Ticked
+
+Start VM. From now on ssh on instead of proxmox console.
+
+**Installing NVIDIA Drivers**
+
+Step 1: Connect PPA:
+
+    sudo add-apt-repository ppa:graphics-drivers/ppa
+    sudo apt-get update
+
+Step 2: Install NVIDIA Driver:
+
+    sudo apt install -y nvidia-driver-470
+    sudo reboot
+
+Step 3: Verify NVIDIA Driver Installation:
+
+    nvidia-smi
+
+***This is where it fails.***
+
+    NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+So to troubleshoot, I've checked that the VM actually sees the GPU.
+
+    user@aiserver:~$ lspci | grep -i nvidia
+    01:00.0 VGA compatible controller: NVIDIA Corporation GP104 [GeForce GTX 1080] (rev a1)
+    01:00.1 Audio device: NVIDIA Corporation GP104 High Definition Audio Controller (rev a1)
+    user@aiserver:~$
+
+It appears to.
+
+I decided to ignore this issue and crack on. And followed [this guide](https://hub.docker.com/r/ollama/ollama) to try and get ollama going.
+
+**Installing Docker and Ollama**
+
+Step 1: Install docker
+
+    sudo apt install docker.io
+
+That installs successfully.
+
+Step 2: Install NVIDIA Container Toolkit
+
+Configure repository:
+
+    curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
+        | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+    curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list \
+        | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
+        | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+    sudo apt-get update
+
+Install Toolkit:
+
+    sudo apt-get install -y nvidia-container-toolkit
+
+Step 3: Configure docker to use the nvidia driver.
+
+    user@aiserver:~$ sudo nvidia-ctk runtime configure --runtime=docker
+    WARN[0000] Ignoring runtime-config-override flag for docker
+    INFO[0000] Config file does not exist; using empty config
+    INFO[0000] Wrote updated config to /etc/docker/daemon.json
+    INFO[0000] It is recommended that docker daemon be restarted.
+    user@aiserver:~$
+
+This gives out some warnings, I'm not sure if that's expected.
+
+Restart docker:
+
+    sudo systemctl restart docker
+
+Step 4: Install ollama container
+
+    sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+
+This is the output.
+
+    user@aiserver:~$ sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+    Unable to find image 'ollama/ollama:latest' locally
+    latest: Pulling from ollama/ollama
+    3713021b0277: Pull complete
+    4318e2a18092: Pull complete
+    5173e475bc3a: Pull complete
+    Digest: sha256:217f0de100f62f5bcdbf73699856a4c0155695de7944854e7c84af87e2a6e2c0
+    Status: Downloaded newer image for ollama/ollama:latest
+    f4b305fb82d58209c5a3363c022baa905cc1a680b48b3018214e5fc95675ff46
+    docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error running hook #0: error running hook: exit status 1, stdout: , stderr: Auto-detected mode as 'legacy'
+    nvidia-container-cli: initialization error: nvml error: driver not loaded: unknown.
+    user@aiserver:~$
+
+This one fails due to nvidia issues too.
+
+Step 5:
+
+Finally... running a model fails due to what's already errored.
+
+    user@aiserver:~$ sudo docker exec -it ollama ollama run llama3
+    Error response from daemon: Container f4b305fb82d58209c5a3363c022baa905cc1a680b48b3018214e5fc95675ff46 is not running
+    user@aiserver:~$
+
+---
+
+Phew, I hope my steps have been thorough enough to help troubleshoot. If anyone has any ideas of anything I've missed or done wrong, I'd greatly appreciate the help.
+
+Top 7 comments:
+Comment 1:
+  Author: marc45ca
+  Comment: not sure it's worth the effort - you really need a card with at least 8GB vram to load LLM and tensor cores to make the AI system work it's best - both of which your card lack.
+
+Also ignore the ultimate beginners guide - it's way to too out of date - it was written for Proxmox v6 and it's now at  8.2.4 and before nVIDIA got with the 2020s and allowed consumer cards to be used in virtualisd environments.
+
+If you want some good instructions you can find them with a search on the Proxmox forum.
+
+Also turn off the vga option - you're not using the card for the video.
+  Score: 2
+  Created UTC: 2024-07-26 01:32:14
+
+Comment 2:
+  Author: Xenkath
+  Comment: Do you have a monitor or hdmi dummy plug connected to the gpu? Consumer cards won’t initialize without one or the other. 
+
+If not, attach a monitor and give the server a full reboot and try again.
+  Score: 1
+  Created UTC: 2024-07-26 04:43:50
+
+Comment 3:
+  Author: AdventurousYoghurt8
+  Comment: You need to confirm if the nvidia driver is actually loaded within the VM.
+
+The output of `lspci` only confirms that your passthrough succeeded, not that the driver you installed is loaded in the VM.
+
+Check the output of `lsmod` and `dmesg` for mentions of nvidia.
+```
+$ lsmod  |grep -i nvidia
+nvidia_drm             77824  9
+drm_kms_helper        212992  1 nvidia_drm
+nvidia_modeset       1314816  22 nvidia_drm
+video                  65536  1 nvidia_modeset
+nvidia              56778752  1831 nvidia_modeset
+drm                   614400  13 drm_kms_helper,nvidia,nvidia_drm
+```
+
+```
+$ sudo dmesg |grep -i nvidia
+[   26.525524] nvidia: module license 'NVIDIA' taints kernel.
+[   26.654344] nvidia-nvlink: Nvlink Core is being initialized, major device number 243
+---snipped a dozen or so other lines--
+```
+
+Edit: Bah formatting sucks on old reddit because it only supports indented code blocks. Too lazy to fix.
+  Score: 1
+  Created UTC: 2024-07-26 05:11:27
+
+Comment 4:
+  Author: daveyap__
+  Comment: Not sure if this is helpful but maybe try commenting out `blacklist nvidia` so that nvidia kernel can be loaded? For me, when I do `lspci -k` I see 
+```
+01:00.0 VGA compatible controller: NVIDIA Corporation TU116 [GeForce GTX 1660 Ti] (rev a1)
+        Subsystem: NVIDIA Corporation TU116 [GeForce GTX 1660 Ti]
+        Kernel driver in use: nvidia
+        Kernel modules: nvidiafb, nouveau, nvidia_drm, nvidia
+```
+
+EDIT: I think I read it all wrong lol. For my Windows VM to see my GPU in the past, I had to blacklist nvidia, nvidiafb and nvidia_drm but leave nouveau loaded so it can get passthroughed. Not sure if it's any different for your use case tho!
+  Score: 1
+  Created UTC: 2024-07-26 06:18:00
+
+Comment 5:
+  Author: rzarobbie
+  Comment: Been there.  Do you know that Pop-OS is built on an Ubuntu base but made to work with key drivers, including nvidia.
+
+I just finished moving all my Ubuntu VMs to Pop.  It was a life changer. Took pass through from gymnastics to simple.
+  Score: 1
+  Created UTC: 2024-07-26 07:50:03
+
+Comment 6:
+  Author: DarkKnyt
+  Comment: The only thing I might recommend is to download the Nvidia driver directly from Nvidia and install it that way. I know the Ubuntu/Debian documentation say to use nvidia-driver but that has screwed it up for me (and I use lxc pass through anyways so I need to make sure the exact same driver is installed).
+  Score: 1
+  Created UTC: 2024-07-26 11:55:29
+
+Comment 7:
+  Author: morningreis
+  Comment: Here is my personal guide that I made for myself. I uploaded it to Github for you. I run a GTX 1050 on the latest version of Proxmox. I think you may be missing some steps as far as the container setup
+
+https://gist.github.com/morningreis/c917e7614aa34ee4b31931dfce0171de
+  Score: 1
+  Created UTC: 2024-07-26 13:31:59
+

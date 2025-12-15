@@ -1,0 +1,80 @@
+Post Title: Follow up on supporting Immich announcement - change of wording
+Author: altran1502
+Score: 524
+URL: https://www.reddit.com/r/selfhosted/comments/1e7awij/follow_up_on_supporting_immich_announcement/
+Number of comments: 133
+Created UTC: 2024-07-19 18:33:45
+
+Post Content:
+
+Hello everybody,
+
+Alex from Immich here. What a controversy that we caused with the choice of wording, right? My personal apology to you all.
+
+On behalf of the team, we would like everyone to know that we hear your concerns and we appreciate the love and care that you all have expressed for the project. At the end of the day, what we want most is to make sure you are all happy using the app.
+
+With that said, we are working on a change to the word `license`: we will not call it `licensed` or `unlicensed` anymore. What will it be called?
+
+We are still thinking of different options to make the wording less confusing. The new wording will hopefully showcase our intentions properly going forward.
+
+We’re also working on updating the FAQ with more information to clarify those intentions. We just want to provide good software that people will want to pay for whilst not limiting your usage in any way if you can’t.
+
+So expect these changes over the next week. We’re pushing this out now to let you know our appreciation for the feedback you’ve given us.
+
+The amount of purchases in the first 24 hours has been overwhelming. Thanks everyone for the great support!
+
+Have a great weekend!
+
+Immich team.
+
+Top 7 comments:
+Comment 1:
+  Author: TheKizza77
+  Comment: Supported / Supporter!
+
+Not just a random donation, and we all know now not a license. ;) But those of us who want to support you and this amazing software can do so with a sense of belonging and *mutual* support.
+  Score: 407
+  Created UTC: 2024-07-19 18:41:46
+
+Comment 2:
+  Author: compulsivelycoffeed
+  Comment: How's about "Sponsored", "Donated", "Supported" (my personal fav)
+  Score: 181
+  Created UTC: 2024-07-19 18:38:54
+
+Comment 3:
+  Author: ReachingForVega
+  Comment: Forever free and Supported Badge. There should be nothing if it's not paid and just something cute to show your support is acknowledged.
+  Score: 45
+  Created UTC: 2024-07-19 22:14:39
+
+Comment 4:
+  Author: mbecks
+  Comment: If the features are the same, why make any “distinction” on the software itself? Everybody just runs Immich, no “licensed” or “Community version”. And feel free to feature donation buttons prominently on the Immich homepage and smaller button in the web/mobile app UI. I think it would be clear how it works, no one scared of missing features, and everyone happy.
+  Score: 80
+  Created UTC: 2024-07-19 20:30:59
+
+Comment 5:
+  Author: jacob-shuman
+  Comment: This definitely wouldn’t stop me from using Immich but i understand the confusion. This is my best idea:
+
+- Remove the licensed/unlicensed card and instead only show a “Thanks for supporting Immich” card if the user has donated or claimed they have donated. (that can be optionally disabled both in the ui or through an env variable) that is shown in the same spot as the licensed/unlicensed card.
+- Add an option in settings (not sure if this is already there) to open a donation link.to put a supporter badge with an option to donate multiple times.
+- I can’t speak for everyone but I wouldn’t be opposed to showing a single modal mentioning supporting the project one time when the app is opened after running for some period (maybe a week or a month? whatever you think is long enough to see/understand/test the value of immich).
+
+Regardless i really appreciate there won’t be any paywalled features. I’m not crazy about having a permanent unlicensed badge in the global sidebar ui but i know it is possible to hide with custom css.
+  Score: 13
+  Created UTC: 2024-07-20 00:20:35
+
+Comment 6:
+  Author: knaak
+  Comment: I've been supporting your project thru Github, does that go away now or are we "supported' as well?
+  Score: 13
+  Created UTC: 2024-07-19 19:49:49
+
+Comment 7:
+  Author: itsmesid
+  Comment: Supporter edition / community edition
+  Score: 13
+  Created UTC: 2024-07-20 03:44:52
+

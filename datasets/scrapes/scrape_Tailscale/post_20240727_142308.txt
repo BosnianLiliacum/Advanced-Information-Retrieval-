@@ -1,0 +1,64 @@
+Post Title: Tailscale vs Personal VPN server
+Author: ReformedBanana
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1eb39as/tailscale_vs_personal_vpn_server/
+Number of comments: 50
+Created UTC: 2024-07-24 14:45:30
+
+Post Content:
+I’m struggling to understand how exactly tail scale (and wireguard) is different than a consumer-directed VPN. I had thought that using it with a PiKVM would amount to creating your own “personal” in-house vpn server but it seems I’m wrong on that (I think).
+
+I’m very new to networking, and I’d love if someone could give me a run down on these basics!
+
+Top 7 comments:
+Comment 1:
+  Author: ClintE1956
+  Comment: Tailscale has a lot going for it; extremely easy VPN, subnet routing within the VPN, funnelling everything through the VPN, very granular access controls. Could probably do everything that Tailscale does with Wireguard, but it would take some effort. Tailscale is closest to VPN magic.
+  Score: 8
+  Created UTC: 2024-07-24 15:16:24
+
+Comment 2:
+  Author: Podalirius
+  Comment: The main point of tailscale is to just be able to connect securely to any other machines with tailscale authenticated into your tailnet.
+
+There are features like exit nodes that allow you to utilize one or more of your machines like a VPN service. I personally have a tailscale exit node on a hetzner cloud vps, and I use that as a static IP for services I host out of my home. 
+
+You can do all this with just any VPN tunnel protocol like OpenVPN or wiregaurd but tailscale basically acts as a control server that authenticates and keeps track of all your tailscale machines.
+
+Headscale is just the same as tailscale, but you have to set up your own control server, but the advantage is you aren't limited by the restrictions tailscale has, and you're not dependent on their infrastructure.
+  Score: 4
+  Created UTC: 2024-07-24 15:28:19
+
+Comment 3:
+  Author: make_a_picture
+  Comment: Are you speaking about a secure proxy or VPN? It would be difficult to have a VPN that reduces your footprint given that you’d have to create an infrastructure of servers to prevent it being obvious what traffic is yours (even then I’ve heard you can’t prevent your footprint from being a strong predictor of pseudonymity on the internet). A secure proxy is useful for data loss prevention together if a trusted self-signed or third-party signed cert is used to examine encrypted traffic.
+  Score: 2
+  Created UTC: 2024-07-24 15:23:32
+
+Comment 4:
+  Author: Ddes_
+  Comment: Well in essence every Tailscale agent is a wireguard server managed by tailscale control plane. so yes, but the installation is very simple, compared to any other VPN.
+
+ https://tailscale.com/kb/1292/pikvm
+  Score: 1
+  Created UTC: 2024-07-24 17:21:08
+
+Comment 5:
+  Author: NationalOwl9561
+  Comment: Is [this](https://thewirednomad.com/vpn) what you're trying to do?
+  Score: 1
+  Created UTC: 2024-07-24 17:41:03
+
+Comment 6:
+  Author: MrMotofy
+  Comment: Regular VPN requires port management and DDNS and doesn't work with CGNAT which many providers use and rumor is more will in the future. 
+Tailscale eliminates all that and just makes it easy
+  Score: 1
+  Created UTC: 2024-07-24 22:21:16
+
+Comment 7:
+  Author: fajar79
+  Comment: i set upnmy own tailscale implementation using headscale controller. at least i can control my own vpn and not depends on tailscale network, i just hope oracle free tier keep alive for a long time
+  Score: 1
+  Created UTC: 2024-07-25 04:17:54
+

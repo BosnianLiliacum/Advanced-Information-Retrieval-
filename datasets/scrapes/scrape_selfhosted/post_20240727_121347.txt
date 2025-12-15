@@ -1,0 +1,78 @@
+Post Title: Self hosted Medical Alert (eg. lifeline)??
+Author: JThornton0
+Score: 10
+URL: https://www.reddit.com/r/selfhosted/comments/1e9kvkr/self_hosted_medical_alert_eg_lifeline/
+Number of comments: 16
+Created UTC: 2024-07-22 18:02:37
+
+Post Content:
+Are there any systems that anyone knows about that I can use to provide a medical alert or lifeline pendant that will alert me if my grandmother falls?
+
+I'm hoping to find an open source solution.
+
+Top 7 comments:
+Comment 1:
+  Author: elliottmarter
+  Comment: I think the general consensus is to not muck about with these kind of things.
+
+Literally a life and death matter here, pay for the proper service.
+  Score: 81
+  Created UTC: 2024-07-22 18:26:08
+
+Comment 2:
+  Author: CortaCircuit
+  Comment: Your grandma will have to trade some privacy for safety. There are many reputable companies that provide this service. I would look into them.
+
+However, I believe both the new Apple watches and Samsung Galaxy watches have fall detection and can also make a call automatically to a specified number or to 911. That may be something to look into.
+  Score: 21
+  Created UTC: 2024-07-22 18:54:59
+
+Comment 3:
+  Author: PoogieLA
+  Comment: I have no knowledge of a self-hosted solution, but the Apple Watch has [fall detection.](https://support.apple.com/en-us/108896) If a fall is detected, it sends notifications to the person's emergency contacts. Depending on your grandmother's state and the cost, it might not be doable, but it's worth looking into.
+  Score: 2
+  Created UTC: 2024-07-22 21:16:40
+
+Comment 4:
+  Author: Door_Vegetable
+  Comment: I would go for an Apple Watch for fall detection or maybe you can use the Fitbit api and track heart rate and movement for the day and create a program that will send you an alert if no movement has been done for x amount of hours or minutes.
+  Score: 2
+  Created UTC: 2024-07-23 11:49:32
+
+Comment 5:
+  Author: Psychological_Try559
+  Comment: I wouldn't put anything life or death in self hosted, you don't want someone's death (or suffering) on the line because you had a DNS issue or something broke &amp; you didn't happen to check for a few hours.
+
+That said, I've seen DIY projects that are for "emotional connection/support" like a bear you can hug and it lets the person know!  Super cute, but not a lofe saving device.
+  Score: 2
+  Created UTC: 2024-07-22 20:06:44
+
+Comment 6:
+  Author: Scavenger53
+  Comment: i was thinking about life alert and how falling and not getting up is a completely western problem. my partner is from SE asia and they squat, all the time, they can always get up even the old ones, its wild to think about
+  Score: 1
+  Created UTC: 2024-07-23 01:14:54
+
+Comment 7:
+  Author: PovilasID
+  Comment: Like any security you will need multiple overlapping layers and have some proprietary service.
+
+1st check with your local social services if they do not provide such service. Where I am at they do you just have to call them to install it.
+
+Now there are multiple overlapping things:
+
+Indoor security cameras are grate to have to verify what is happening and you can use an old smartphone or designed HW. Some of those bost "AI" features for recognizing falls is BS. You can get some of the IR/ultra sound fall detectors but you will need to test how much BS they are.
+
+"Call rails" or call buttons or... basically go to nursing home/hospital shower you will see hardware level or that is usually accessible from the floor. You can visits and see what I mean. 
+
+Presence monitoring. in hospital nurses do pay attention how long a patient is in there/water is running, so you can emulate that to some extent using presence sensors (they are usually used in home automation to turn bathroom air evacuation ) or leak detector home sensors
+
+Audio sensors... or alexa/google home... can be can be a challenge but dose not always is. This one is trial and error. There are specialized ones but it depends device.
+
+Wearables... try it but do not presume it will work. a) If it needs charging... do not expect to be charged b) If it is ugly or gets in way or is not something they already wear like a watch do not expect to be worn.   
+There specialized and not specialized tools and it really depends on what you can make work.
+
+Good luck but first of all.. call/visit you grandmother I bet you will notice her fall down faster than any tech.
+  Score: 0
+  Created UTC: 2024-07-22 19:51:27
+

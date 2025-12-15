@@ -1,0 +1,54 @@
+Post Title: Ollama Cuda Error when running Llama 70b (2x P40, 1x P102-100)
+Author: l33t-Mt
+Score: 2
+URL: https://www.reddit.com/r/ollama/comments/1ec8j4w/ollama_cuda_error_when_running_llama_70b_2x_p40/
+Number of comments: 1
+Created UTC: 2024-07-25 22:54:01
+
+Post Content:
+Im running into an issue when trying to load LLama3.1:70b (40GB), Continually get CUDA error: out of memory.  Is this because Ollama is trying to split the 40GB 3 ways so it wont fit on the 10GB card?  
+
+If anyone has any idea help would be appreciated.  Thanks for looking.
+
+Ollama server log:
+
+ggml\_cuda\_init: found 3 CUDA devices:
+
+  Device 0: Tesla P40, compute capability 6.1, VMM: no
+
+  Device 1: Tesla P40, compute capability 6.1, VMM: no
+
+  Device 2: NVIDIA P102-100, compute capability 6.1, VMM: yes
+
+llm\_load\_tensors: ggml ctx size =    1.35 MiB
+
+ggml\_backend\_cuda\_buffer\_type\_alloc\_buffer: allocating 4590.62 MiB on device 2: cudaMalloc failed: out of memory
+
+llama\_model\_load: error loading model: unable to allocate backend buffer
+
+llama\_load\_model\_from\_file: exception loading model
+
+CUDA error: out of memory
+
+  current device: 2, in function ggml\_backend\_cuda\_host\_buffer\_free\_buffer at C:\\a\\ollama\\ollama\\llm\\llama.cpp\\ggml\\src\\ggml-cuda.cu:974
+
+  cudaFreeHost(buffer-&gt;context)
+
+GGML\_ASSERT: C:\\a\\ollama\\ollama\\llm\\llama.cpp\\ggml\\src\\ggml-cuda.cu:101: !"CUDA error"
+
+time=2024-07-25T16:42:52.258-06:00 level=INFO source=server.go:617 msg="waiting for server to become available" status="llm server not responding"
+
+time=2024-07-25T16:42:52.511-06:00 level=INFO source=server.go:617 msg="waiting for server to become available" status="llm server error"
+
+time=2024-07-25T16:42:53.274-06:00 level=ERROR source=sched.go:443 msg="error loading llama server" error="llama runner process has terminated: CUDA error\\""
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: lazyc97
+  Comment: try setting `CUDA_VISIBLE_DEVICES` to the P40 cards to see if it works
+  Score: 1
+  Created UTC: 2024-07-26 01:43:44
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,62 @@
+Post Title: Free domain name suggestions
+Author: BeardedBearUk
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e864p8/free_domain_name_suggestions/
+Number of comments: 14
+Created UTC: 2024-07-20 21:29:37
+
+Post Content:
+I am looking to move to free domains for my services that are proxied through nginx-proxy-manager and duckdns keeps showing up.
+What is everyones opinion on duckdns and what do you recommend if not duckdns? 
+
+Top 7 comments:
+Comment 1:
+  Author: jedi00331188
+  Comment: I have no complaints about DuckDNS! I use it for my Minecraft servers so that I'm not directly giving out my public IP (and even though the real IP can still he found through certain tools, its the best I can think of right now). It is limited to 5 domains, and the extensions are a touch long, but again, no real complaints for basic uses.
+  Score: 5
+  Created UTC: 2024-07-20 22:17:29
+
+Comment 2:
+  Author: fuahnd
+  Comment: Assuming you're ok with DDNS because you talked about duckdns, [freemyip.com](http://www.freemyip.com) is as simple as it can get, just get yours and create a cron that updates the IP automatically. Check the docs for explanation.
+  Score: 3
+  Created UTC: 2024-07-20 21:37:19
+
+Comment 3:
+  Author: LyraLycan
+  Comment: I have been using DDNS for a while, solid enough but it went down for hours recently so I switched to Cloudflare. Simple, fast and full of features.
+  Score: 3
+  Created UTC: 2024-07-20 22:16:56
+
+Comment 4:
+  Author: mc-doubleyou
+  Comment: I prefer to use subdomajn of my own TLD as DDNS.
+Preciously I use ClouDNS but there I have problems with LE domain challenge so I switched over to deSEC
+  Score: 1
+  Created UTC: 2024-07-21 00:42:34
+
+Comment 5:
+  Author: rigeek
+  Comment: I bought a .xyz domain for like 2 bucks and use that for most of my stuff. Stuff exposed to the internet goes thru Cloudflare. Works great and no need for DDNS.
+  Score: 1
+  Created UTC: 2024-07-21 02:49:44
+
+Comment 6:
+  Author: 1WeekNotice
+  Comment: Free domains are fine but keep in mind since they are free, they may have outages without notice. 
+
+I don't think it happens too often but don't be surprised if it does and what you setup stops working for a period of time. You can look up the outrage on this form or somewhere on the Internet. Posts do get created when it happens. 
+
+
+If you don't want to risk an outage because your services are mission critical, then pay for a cheap domain. Porkbun is a good domain registrar. 
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-21 06:09:52
+
+Comment 7:
+  Author: whiteh4cker
+  Comment: .pp.ua is free but it doesn't have WHOIS protection.
+  Score: 0
+  Created UTC: 2024-07-20 23:55:01
+

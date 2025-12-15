@@ -1,0 +1,38 @@
+Post Title: Sms gateway
+Author: brad2388
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8cp9n/sms_gateway/
+Number of comments: 9
+Created UTC: 2024-07-21 03:03:51
+
+Post Content:
+Im trying to setup a sms gateway that has smpp. Im using a service that sends alerts via sms. But i need a provider for this. But id rather setup my own gateway for the provider to connect to me.
+
+Ive looked around and see a few. But im unsure if what im wanting to do can be done?
+
+Looks like i can get a modem and a sim card to proceed?
+
+Top 3 comments:
+Comment 1:
+  Author: LotusTileMaster
+  Comment: Unless you are sending thousands of messages per day, the cost of having your own gateway will be far greater than paying a third party. 
+
+Even major corporations do it. Ever see a OTP come from the same number as another company? That is because they are using the same third party.
+  Score: 1
+  Created UTC: 2024-07-21 03:22:24
+
+Comment 2:
+  Author: brad2388
+  Comment: I have looked into ozeki the sms gateway they offer. But its pricey.
+  Score: 1
+  Created UTC: 2024-07-21 14:01:40
+
+Comment 3:
+  Author: fruitytootiebootie
+  Comment: https://wiki.voip.ms/article/SMS-MMS#SMS_using_a_SMPP_Server
+
+VoIP.ms seems to offer support for it. 
+  Score: 1
+  Created UTC: 2024-07-22 04:32:40
+
+Note: This post has only 3 comments at the time of scraping.

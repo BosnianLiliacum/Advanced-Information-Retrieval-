@@ -1,0 +1,47 @@
+Post Title: Is there a list of open source software without limitations?
+Author: dandydev
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea86zp/is_there_a_list_of_open_source_software_without/
+Number of comments: 13
+Created UTC: 2024-07-23 13:44:15
+
+Post Content:
+I know there are lists such as [awesome self-hosted](https://github.com/awesome-selfhosted/awesome-selfhosted) of software you can self-host and which is open source.
+
+However, many of those tools are in practice **open core** and place limits on the open-source/free variants.
+
+Edit to clarify:  I'm looking for a list that only contains tools of which full functionality is available in the free open source self-hosted version. So no features are locked behind a paywall
+
+Are there any lists of open source, self-hostable tools which do not impose *any* limits on self-hosting for free?
+
+Edit 2: This post is being downvoted. I don't understand what it so "wrong" about my post? Please explain to me the hidden rules and ethics of this community so I can understand what I can and cannot do within this community.
+
+Top 4 comments:
+Comment 1:
+  Author: FrescoT
+  Comment: Did you try [https://selfh.st/apps/?](https://selfh.st/apps/)  
+You can filter out open and/or closed source apps, and they have a nice weekly newsletter with interesting news...
+  Score: 2
+  Created UTC: 2024-07-24 10:53:19
+
+Comment 2:
+  Author: MastodonFarm
+  Comment: Why do you care?  If a tool provides everything you want in terms of free features, why does it matter if it also has paid features that you don't want/need?
+  Score: 5
+  Created UTC: 2024-07-23 21:39:31
+
+Comment 3:
+  Author: martinjh99
+  Comment: Try this list - There is also a non-free list as well...
+
+[https://github.com/awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+  Score: 3
+  Created UTC: 2024-07-23 14:17:41
+
+Comment 4:
+  Author: Plaane
+  Comment: no
+  Score: 0
+  Created UTC: 2024-07-24 12:38:58
+
+Note: This post has only 4 comments at the time of scraping.

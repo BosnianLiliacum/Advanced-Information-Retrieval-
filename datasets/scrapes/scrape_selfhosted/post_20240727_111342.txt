@@ -1,0 +1,56 @@
+Post Title: Vpn to home from a unknown network 
+Author: Miserable-Stranger99
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed3rm3/vpn_to_home_from_a_unknown_network/
+Number of comments: 2
+Created UTC: 2024-07-27 00:45:59
+
+Post Content:
+Hey guys a quick question and maybe discussion about it.
+
+
+If I take my own laptop with me to a place like company or open network place and I plugin the network cable there.
+
+I open as example OpenVPN and do connect action to access my home server. 
+
+What risks I have here?
+Can the operator of the network log all packets? And rebuild or instantiate a new connection to my vpn server like clone the connection?
+
+Does OpenVPN packets are encrypted using a private key or public key from my laptop device that a sniffing party will never see or have using this method?
+
+Or can they have advantage or abuse my vpn connection and or server? By acting they are me?
+
+Or is a vpn connection checked using more then keys and ips rules? Like a device identifier as header on packets or special crc. Check based on timestamp and device id?
+
+Or is it not secure at all?
+
+As example maybe better use tailscale or Wireguard for this?
+
+Or will gumola a remote tool works better and safer for this?
+
+I have read that most experts pledge to use tailscale? 
+
+Cause then you connect to a external cloud server that has a. Connection to your home network.
+
+ But in a way that it's outbound from your home network to tailscale? And tailscale server is access from my device at the place I am then?
+
+So you don't open any ports or need forwards right?
+
+But what I don't like you are then depending on tailscale server and what if they got compromised somehow and the attacker logs just all ? But not is detected for a long time?
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: zfa
+  Comment: The traffic inside a VPN is private, so if you've not leaked you private keys then your data is secure and inscrutable; and no one can pretend they're you.
+
+Not sure experts would 'pledge' to use Tailscale, it's not something I've ever heard. Tailscale is pretty much just WireGuard but with a thirdparty controlling your keys (boo) and some very clever quality-of-life stuff like automated NAT traversal and DNS (yay). Depending on how expert 'the experts' are and their own personal feelings wrt privacy they may or may not use it over alternatives.
+
+Stuff like Guacamole is also secure but not a VPN. That just uses SSL as its browser based and if its good enough for your banking website then its good enough for you.
+
+Me? I just WireGuard. Its great. I own the keys. I know I'm secure.
+  Score: 2
+  Created UTC: 2024-07-27 03:08:58
+
+Note: This post has only 1 comments at the time of scraping.

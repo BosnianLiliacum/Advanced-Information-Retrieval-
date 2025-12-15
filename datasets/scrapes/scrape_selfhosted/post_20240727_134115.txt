@@ -1,0 +1,85 @@
+Post Title: Kubernetes:  What are your use cases?
+Author: rigeek
+Score: 33
+URL: https://www.reddit.com/r/selfhosted/comments/1e45c2c/kubernetes_what_are_your_use_cases/
+Number of comments: 29
+Created UTC: 2024-07-15 20:30:46
+
+Post Content:
+So after many many years working in technology, I just recently learned the value of Docker and what it can do.  Along that learning path, I kept seeing references to Kubernetes and K8s, and I was under the (very incorrect) assumption that Kubernetes was an alternative to Docker; I just found out how wrong that was.  I can see sort of what it can do on top of Docker, and it’s very cool, however the first video I watched was just building a cluster of web servers with a load balancer.  
+
+That’s great if that’s what you need; but what do you use it for in your home lab?  Beyond running several of the same container for HA, tell me your real world use cases for a K8s cluster.  I’m curious what you’re all doing with it at home or in your lab, as it may give me the motivation to start messing around with it some more.  I will eventually be replacing the Pi 5 with a couple of NUC type mini PC’s, so I’m wondering if K8s makes sense at that point.  The Pi 5 will be relieved of the ~30 containers she’s running today but she’ll still do something, so she could be the main K8s controller if need be.  I plan on running a bunch of Debian VM’s in Proxmox to balance out those 30’ish services / containers across more VM’s etc.  Give me some inspiration!
+
+Top 7 comments:
+Comment 1:
+  Author: caffeineneededtolive
+  Comment: TBH, the only reason im using k8s in my homelab is because i use it in work and i like to keep my homelab relevant to help me learn. Thus why all my services have been deployed with docker, docker compose, ansible, terraform, and now pulumi. 
+
+The biggest advantage for me in using k8s is that i can start a service or install a helm chart, and it automatically comes with the proxy configuration, SSL certs, DNS pushed to PI-hole, monitoring and logging, all without me having to configure everything for each service. 
+
+If your interested in the progression i would reccomend starting with docker compose as your next step, and getting used to volume and managing services that way. You could then convert to a docker swarm and solving the pitfalls of having services shift accross nodes. And then do K8s if you want the challenge. Especially an HA k8s setup, it can be a bit of a headache to setup first time around. 
+
+I would also recommend building your new nodes with something like proxmox or truenas and use virtual machines for your homelab. This allows you rebuild and learn without having to affect anything you have running at the moment.
+  Score: 24
+  Created UTC: 2024-07-15 20:55:49
+
+Comment 2:
+  Author: IdiocracyToday
+  Comment: I use K3s as a dumping ground for unused Pis, SBCs, and old laptops. Basically any old computer power sitting around doing nothing? Add it to the cluster. That way I can make use of it without having to actively manage what runs on it.
+  Score: 8
+  Created UTC: 2024-07-15 21:18:45
+
+Comment 3:
+  Author: NinjaFragrant7710
+  Comment: Learning new and exciting technologies is a very addictive drug, and I admit I fell victim of it many moons ago. Now in my early 40s, my advice to you is KISS. At some point, you want it to just work with minimum effort and time spent. And you want it to be fun, not troubleshooting!
+
+In case you are interested my setup is a NUC with i5 10th gen, 40GB RAM and 4TB SSD. I run a total of 53 containers and I can easily double them with room to spare. I can provide more details if you like.
+  Score: 7
+  Created UTC: 2024-07-15 21:02:06
+
+Comment 4:
+  Author: niceman1212
+  Comment: Such a hard one to answer. I work with k8s so it makes a lot of sense for me personally. 
+
+I know to manage my expectations and what to look out for when deploying something new or troubleshooting it.
+
+Kubernetes is not a magic patch to run home-assistant with the fancy redundancy associated with it. 
+For those kind of workloads you just get failover, and even that has to be configured correctly in order for it to work like you would think. 
+
+But it has certainly made my self hosting life a lot easier. Gitops, centralized logging and declarative connections/integrations are big helps when your self hosting environment becomes more complex.
+
+Pair that with distributed storage like longhorn and you get a fairly robust/flexible setup. 
+
+I’ve had multiple “DevOopsies” (clusters that were rekt by my own fault, and would take at least a day to troubleshoot and repair) but had them completely back up again in 1-2 hours from scratch
+
+But you gotta be willing to really understand the “basics” and apply it when deploying and troubleshooting. 
+
+I really hope kubernetes will become so mature that you won’t really care about it. 
+Handling all possible kubernetes/container related errors and relaying that back to you in a simple and understandable manner, if intervention is needed.
+  Score: 4
+  Created UTC: 2024-07-15 22:20:22
+
+Comment 5:
+  Author: Sterbn
+  Comment: You could have 3x Mini PCs. They can be control plane and worker nodes at the same time. Setup shared storage like longhorn or ceph. Very important that you use enterprise SSDs (needs to have PLP). For services that use postgres, setup each node with a partition or drive for local only storage (topolvm) and use CNPG to deploy highly available DBs.
+
+My work cluster, running RKE2, is 3x 1u nodes with 10gbe and NVME backing a ceph cluster. At home I have a single HP 1L PC running k3s and topolvm for storage.
+  Score: 2
+  Created UTC: 2024-07-15 21:01:16
+
+Comment 6:
+  Author: xXAzazelXx1
+  Comment: I like the self-healing part.  
+Say you are running an NGINX Proxy Manager, if that container DB were to die, or the host was to die, all your bookmarks stop working.  
+If you are running Kubernetes (or docker swarm i suppose)  it will failover and you have no outage.
+  Score: 1
+  Created UTC: 2024-07-15 22:12:14
+
+Comment 7:
+  Author: isleepbad
+  Comment: I just got my 3 mini pc nodes set up and I'm using k8s at home to learn in order to progress my career. I also love a challenge.
+
+I'm tired of plain docker. Networking properly is a pain and keeping your containers up to date is also a pain. I'm thinking with proper GitOps and networking principles I could solve them with kubernetes. Just deployed k3d (k3s in docker ) and I'm happy with it so far.
+  Score: 1
+  Created UTC: 2024-07-15 22:15:01
+

@@ -1,0 +1,63 @@
+Post Title: Alternative for Raspberry Pi
+Author: willifailornot
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e97l49/alternative_for_raspberry_pi/
+Number of comments: 19
+Created UTC: 2024-07-22 06:42:33
+
+Post Content:
+Hello, what alternative for Raspberry Pi do you use and why?
+ps.
+
+Top 7 comments:
+Comment 1:
+  Author: Tresillo_Crack
+  Comment: Minipc, small, powerfull and you can upgrade them
+  Score: 23
+  Created UTC: 2024-07-22 06:50:36
+
+Comment 2:
+  Author: john_m4trix
+  Comment: Hello,
+
+Any J4125/N5095/N100 chinese NUC should be way powerfull and some times cheaper than Rpi.
+
+You can check on Beelink, Trigkey, Chatreey and other brands that are based on the same hardware but with different stickers.
+  Score: 5
+  Created UTC: 2024-07-22 06:51:54
+
+Comment 3:
+  Author: MalafideBE
+  Comment: N100 mini PCs with good specs and low price. (new)  
+And semi-recent thin clients, like HP T540/T640. (used)
+
+Oh, and I've got an Odroid H4+ (N97) on the way with the 3.5" enclosure to replace my janky Asrock N100-DC ITX NAS setup.
+  Score: 6
+  Created UTC: 2024-07-22 08:19:14
+
+Comment 4:
+  Author: snoo-moo
+  Comment: I just saw that radxa is about to release/ did release the radxa x4. It's a pi sized SBC that has an n100 on it. Similar price to a pi. I want one.
+  Score: 4
+  Created UTC: 2024-07-22 07:41:15
+
+Comment 5:
+  Author: arriej
+  Comment: I've switched mainly to Intel (Asus) NUCs. Only run pihole and homeassistant on my 2 pi's. Have 2 NUCs running, one as a development/playground with proxmox and a  "production" machine running Ubuntu with most of my applications
+  Score: 3
+  Created UTC: 2024-07-22 07:48:03
+
+Comment 6:
+  Author: Cleftbutt
+  Comment: I have used Libre Le Potato for about a year. It runs pihole, tailscale, some backup space and some other stuff. The big bottleneck is 100mbit ethernet. I plan to get the Renegade with 1Gbit ethernet at some point. 2GB version is \~30 USD + 10USD for 16GB eMMC storage.
+
+[https://libre.computer/products/roc-rk3328-cc/#](https://libre.computer/products/roc-rk3328-cc/#)
+  Score: 3
+  Created UTC: 2024-07-22 09:31:55
+
+Comment 7:
+  Author: redeuxx
+  Comment: With the price of Pis now, they really don't make sense when you can get a micro/mini PC second hand on eBay and it is upgradeable, it is x86, and more powerful.
+  Score: 9
+  Created UTC: 2024-07-22 07:22:05
+

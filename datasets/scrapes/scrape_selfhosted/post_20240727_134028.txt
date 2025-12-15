@@ -1,0 +1,57 @@
+Post Title: How safe am I using tailscale?
+Author: SrFodonis
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e47xez/how_safe_am_i_using_tailscale/
+Number of comments: 7
+Created UTC: 2024-07-15 22:15:03
+
+Post Content:
+Hi everyone! I've just started my selfhosting journey no longer than a month ago, so far I've set up my own Minecraft server and I'm looking to do some more projects to hopefully share with family and friends!
+
+Ideally I would like to use my own custom domain, but I still don't feel confident enough in my knowledge to expose anything to the internet, so I'm using Tailscale for now.  
+  
+Question is, how safe is this? Could someone potentially still pwn my server? Am I good to continue like this (ofc helping said friends and family to set up their Tailnet stuff)?
+
+Top 5 comments:
+Comment 1:
+  Author: Accomplished-Moose50
+  Comment: I think it's more likely that the computers connected to tailscale get compromised instead of your server and the vpn connection. 
+
+
+
+
+There are cases when a zero day bug is found in some library used by tailscale, that could be an issue but not that likely.
+  Score: 5
+  Created UTC: 2024-07-15 22:30:27
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: &gt; Question is, how safe is this?
+
+Okayish safe, you do rely on a third party for STUN.
+
+&gt; Could someone potentially still pwn my server?
+
+Unlikely via Tailscale, more via misconfiguration of your infrastructure.
+  Score: 5
+  Created UTC: 2024-07-15 22:22:12
+
+Comment 3:
+  Author: thekrautboy
+  Comment: About 3 meters and 7.32 kilograms of safe.
+  Score: 9
+  Created UTC: 2024-07-15 22:46:37
+
+Comment 4:
+  Author: steveiliop56
+  Comment: It's really damn secure. Since it's wireguard under the hood nobody can hack it except if you terribly misconfigure it somehow. Furthermore the core server is open source and I trust it even more because Alex from self hosted show works there and I believe if something shady was going on there he would have left.
+  Score: 2
+  Created UTC: 2024-07-15 23:44:57
+
+Comment 5:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 3
+  Created UTC: 2024-07-15 22:21:49
+
+Note: This post has only 5 comments at the time of scraping.

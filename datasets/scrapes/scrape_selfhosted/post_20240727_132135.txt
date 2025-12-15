@@ -1,0 +1,32 @@
+Post Title: Any experience with Wren:DS?
+Author: Universe789
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e5hhlz/any_experience_with_wrends/
+Number of comments: 3
+Created UTC: 2024-07-17 12:54:57
+
+Post Content:
+I'm setting up an Ubuntu server and looking for a simple, but fully featured LDAP solution, preferably with a web portal/gui. If not, it's not the end of the world as I can connect with ApacheDS Studio.
+
+I'd strongly prefer to do the installation as a docker container vs installing directly on the server, but I'm not ruling that path out if it's required for the solution.
+
+Plan A) I've tried Zentyal, and plain and simple, the install script works(I installed directly to the server, not through docker), but the web portal is broken, and they have almost no documentation to troubleshoot the issue. The little info I've been able to find came from forum posts, and the advice seen didn't fix the issue.
+
+Plan B) Next I found Univention Corporate Server. I haven't tried a direct install yet, but I'm having issues with it staying on and maintaining a connection to the docker network after installation. More troubleshooting is being performed.
+
+Plan C) Setup Docker-Mailserver (currently troubleshooting and learning the environment variables to troubleshoot the reboot loop it's stuck in). If I can kill 2 birds with 1 stone by getting LDAP and a mail server, that would be great.
+
+Plan C: Looking through AlternativeToDOTnet, I came across Wren:DS which I'd never heard of and didn't find any previous posts in this thread, or anywhere else on reddit. So it seems somewhat new, but they have multiple products that would also include support for SSO, which could be helpful.
+
+Top 1 comments:
+Comment 1:
+  Author: arcoast
+  Comment: I've not used Wren:DS but for LDAP with a webgui look at LLDAP.
+
+https://github.com/lldap/lldap
+
+I used to use OpenLDAP with phpLDAPadmin but migrated to LLDAP a couple of years back, it's great.
+  Score: 1
+  Created UTC: 2024-07-17 15:34:27
+
+Note: This post has only 1 comments at the time of scraping.

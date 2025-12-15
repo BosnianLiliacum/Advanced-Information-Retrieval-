@@ -1,0 +1,22 @@
+Post Title: Nextcloud replacement 
+Author: Squanchy2112
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e9q80l/nextcloud_replacement/
+Number of comments: 13
+Created UTC: 2024-07-22 21:37:03
+
+Post Content:
+I know this is asked constantly but I want to ensure I'm on the bleeding edge, I have been using nextcloud aio quite successfully for a while now and it's been great I only use it for storing files and as a Google drive replacement with a good windows client. Something happened and my install is all broken right now and I have had this happen in the past with non aio nextcloud and I think I'm ready to start looking for something better, or at least better for what I use it for I know people like owncloud and seafile but what's everyone's go to as of today. I need to have a good client for windows, the ability to send links to files with permission restrictions, the ability to white label would be great. Thank you all for your continued awesomeness and ideas
+
+Top 1 comments:
+Comment 1:
+  Author: sardine_lake
+  Comment: Have a look at owncloud's OWIC. It syncs files from windows, Linux and mobile. Sharing is standard part of it.
+
+Another option is seafile. Same stuff as OWIC but been in industry for years. Again sharing is there, even expiry dates on shared file access.
+
+Load either one on docker and you'll be ok. Next cloud is too heavy if you're just syncing-sharing files.
+  Score: 2
+  Created UTC: 2024-07-22 21:50:04
+
+Note: This post has only 1 comments at the time of scraping.

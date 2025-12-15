@@ -1,0 +1,29 @@
+Post Title: Linux NAS (zfs/btrfs) "Snapshot" aware file manager (easy file restore) to replace DSM?
+Author: Intelg
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7na96/linux_nas_zfsbtrfs_snapshot_aware_file_manager/
+Number of comments: 2
+Created UTC: 2024-07-20 04:25:13
+
+Post Content:
+Has anyone found an open source CasaOS like NAS software that has built-in support for btrfs/zfs snapshots? 
+
+I'm basically looking to have the capability to restore files from snapshots and have an easy way to manage the file restores, snapshot browsing. Synology makes this very easy.
+
+* CasaOS | ZimaOS doesn't support snapshots. It does offer a nice web UI file browser which would be ideal...   
+* TrueNAS scale offers capabilities to enable automatic zfs snapshots but I don't think it offers a web based file browser OR a macOS integration like in windows SMB that allows you to view `Restore previous versions` (pls lmk if i am wrong?)
+
+Making my proxmox server become my NAS seems to be straightforward and easy enough but I am missing a solution for how to have easy ways to recover my data if I do something stupid... Hopefully someone here may have figure out a clever way to fix this gap?
+
+Top 1 comments:
+Comment 1:
+  Author: peterAtheist
+  Comment: Something like this?
+
+[https://crates.io/crates/httm](https://crates.io/crates/httm)
+
+[https://github.com/atheriel/snapshot-explorer](https://github.com/atheriel/snapshot-explorer)
+  Score: 2
+  Created UTC: 2024-07-20 04:42:16
+
+Note: This post has only 1 comments at the time of scraping.

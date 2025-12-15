@@ -1,0 +1,66 @@
+Post Title: Which HDDs should I get for my NAS?
+Author: Best_Conclusion3289
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6jmy7/which_hdds_should_i_get_for_my_nas/
+Number of comments: 14
+Created UTC: 2024-07-18 19:20:28
+
+Post Content:
+Today at work I've been lightly researching 'building' a NAS. I'm currently pricing out a QNAP Turbo NAS TS-262-4G that can store 2x drives. I'm aiming for 2x10TB drives and cannot decide between IronWolf, IronWolf PRO, IronWolf PRO (helium), and WD gold. I also took a look at serverpartdeals and found a couple seagate 10tb EXOs which were somehow cheaper than the rest despite boasting almost 5Gb/s speed increase. 
+My server would ideally run 24/7, however I only plan to use Plex right now. I'm the only user 95% of the time and also usually watching locally 1080p, rarely utilize remote streaming and don't have a 4k TV to stream to. Are my choices for NAS and NAS storage good for this use case? I think I'm leaning towards the helium PROs right now. I was looking at a Synology but some posts talked about having issues with those, listing QNAP as a solid alternative. My research has been a cursory 7 hours so please feel free to correct any mistakes or misunderstanding. My budget for this project started at $700 but it seems like I might be a little low in my estimation there. Apologies for the ADHD riddled post.
+
+Top 7 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: You can check out backblaze reports on drive stats
+
+[Backblaze reports](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data)
+
+This will include failure rates of drives. 
+
+If you don't know backblaze, they are a company that specializes in backing up people data. They generate these reports and release them to the public. It's very nice. 
+
+Edit: for your usecae any NAS rated drive will do. 
+
+Hope that helps.
+  Score: 4
+  Created UTC: 2024-07-18 20:54:08
+
+Comment 2:
+  Author: Best_Conclusion3289
+  Comment: I've also read some posts warning of buying HDDs off of amazon. The  Ironwolfs I am looking at are sold on amazon through Maestro Technology LLC which has 58% positive reviews on amazon, a number seemingly low to me. Does anyone have any experience with this seller/recommendations of places to buy? Not located near microcenter unfortunately, very jealous of every post I see.
+  Score: 3
+  Created UTC: 2024-07-18 19:25:54
+
+Comment 3:
+  Author: lupin-san
+  Comment: Get the biggest ones you can afford. Drives will fail regardless of brand or condition. Make sure you have backups.
+  Score: 2
+  Created UTC: 2024-07-19 01:41:10
+
+Comment 4:
+  Author: sohailoo
+  Comment: WD Red, i'd personally stay away from seagate, over the lifetime of my server, i had 2 hard drives failures and both of them were seagates, for some reason seagate drives run way hotter and noisier than WD. The difference is 7-8 degrees
+  Score: 2
+  Created UTC: 2024-07-19 03:53:37
+
+Comment 5:
+  Author: Nintenuendo_
+  Comment: WD Red's like the rest of us do, it's what they're made for
+  Score: 3
+  Created UTC: 2024-07-18 20:14:56
+
+Comment 6:
+  Author: RedKomrad
+  Comment: “Which HDDs should I get for my NAS?”
+
+Big ones! Personally, I like the Seagate EXOS HDD’s  with an LSI SAS control in IT mode.
+  Score: 1
+  Created UTC: 2024-07-18 23:17:44
+
+Comment 7:
+  Author: VVaterTrooper
+  Comment: I have WD White Label drives and I haven't had any issues. I have a high failure rate with Seagate.
+  Score: 1
+  Created UTC: 2024-07-19 13:14:41
+

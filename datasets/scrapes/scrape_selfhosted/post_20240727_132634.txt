@@ -1,0 +1,73 @@
+Post Title: Should I use Docker or Podman?
+Author: ThatBlockyPenguin
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4zunv/should_i_use_docker_or_podman/
+Number of comments: 13
+Created UTC: 2024-07-16 21:04:18
+
+Post Content:
+I'm about to revamp my home server, was wondering what you're all using to containerise your services (or are you not?) - and what would be the recommendation for someone just starting out.  
+Thanks :)
+
+EDIT: I see there's a bunch of votes but no comments, if you wouldn't mind telling me \*why\* you suggest what you suggest, that'd be grand
+
+[View Poll](https://www.reddit.com/poll/1e4zunv)
+
+Top 7 comments:
+Comment 1:
+  Author: opensrcdev
+  Comment: If you're new, use Docker. Podman doesn't have a daemon, so it won't automatically restart your containers after a reboot, without some special configuration.
+  Score: 3
+  Created UTC: 2024-07-16 21:16:22
+
+Comment 2:
+  Author: abrtn00101
+  Comment: I voted Docker, but my comprehensive answer is: "Choose whichever you feel most up to using and maintaining."
+
+I personally use Docker for these reasons.
+
+* compose
+* With or without compose, Docker seems much more usable and approachable than Podman.
+* I prefer to run my containers with a daemon. In a homelab/home server setting, the user isolation of running daemonless isn't as compelling, since you likely won't use more than one user to run containers.
+* The additional setup required to make Docker run rootless doesn't require much effort, and it's a one-time thing.
+* There's way more community support for Docker.
+  Score: 2
+  Created UTC: 2024-07-16 22:23:05
+
+Comment 3:
+  Author: natermer
+  Comment: I like podman nowadays because podman-quadlet allows integration container integration into systemd. 
+
+That way it can handle restarting services, automatically updating, and stuff like that.
+
+If you use podman make sure it is a very new version.
+  Score: 2
+  Created UTC: 2024-07-17 00:18:58
+
+Comment 4:
+  Author: illithkid
+  Comment: I like Podman, but Docker is by far easier to get into. Docker has more resources online to help.
+  Score: 1
+  Created UTC: 2024-07-17 16:00:20
+
+Comment 5:
+  Author: mrkesu
+  Comment: Try everything, man. Stop trying to be perfect from the jump (spoiler: perfect for you is not perfect for me or the next guy)
+
+
+You don't have customers, you don't have to worry about SLA agreements. Try it all.
+  Score: 1
+  Created UTC: 2024-07-17 19:27:46
+
+Comment 6:
+  Author: grogi81
+  Comment: Docker. Documentation is much better, stack/compose support and 1st class Portainer.io support.
+  Score: 1
+  Created UTC: 2024-07-16 21:27:12
+
+Comment 7:
+  Author: Self_toasted
+  Comment: no kubernetes?
+  Score: 0
+  Created UTC: 2024-07-16 22:34:39
+

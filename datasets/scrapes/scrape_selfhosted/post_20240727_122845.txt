@@ -1,0 +1,32 @@
+Post Title: "Smart Money" Idle Tapping Game Alpha Version
+Author: Cryptoniter78
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8nyuz/smart_money_idle_tapping_game_alpha_version/
+Number of comments: 2
+Created UTC: 2024-07-21 14:48:11
+
+Post Content:
+Hey!
+
+I currently help out some friends with their just released selfhosted Alpha version of their Idle game. I hope it´s ok to post it here. It´s somewhat similar to Hamster Kombat, only with far less budget but with a real human designer and a really cool, motivating story and a lot of features planed for the Beta, e.g. blockchain connection, AI-based business incidents that make the game experience unique to each single player and some other blockchain related feats. The current version is just a first playable "Hello" to the world. It´s build with Unity and Firebase database in the back. Would be fantastic to get some feedback. Atm, it´s just for Android users but as far as I know, iOS should follow in September. 
+
+The link to a little more explanation and in case you wanna give it a try to download the APK: [https://www.smartmoney-game.io/alpha/](https://www.smartmoney-game.io/alpha/) 
+
+How the start screen looks like: 
+
+https://preview.redd.it/1gk8qpkswvdd1.jpg?width=360&amp;format=pjpg&amp;auto=webp&amp;s=411e93a5f240edc615d96aea0e2a2c19957edc5c
+
+Top 2 comments:
+Comment 1:
+  Author: EndlessHiway
+  Comment: lol
+  Score: 1
+  Created UTC: 2024-07-21 22:50:27
+
+Comment 2:
+  Author: tyros
+  Comment: Crypto scam, reported, Mods please delete
+  Score: 0
+  Created UTC: 2024-07-22 15:55:43
+
+Note: This post has only 2 comments at the time of scraping.

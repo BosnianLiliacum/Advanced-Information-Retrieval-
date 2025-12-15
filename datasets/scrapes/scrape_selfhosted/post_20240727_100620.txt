@@ -1,0 +1,26 @@
+Post Title: Good Music Solution
+Author: Hackatoa
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e71p3q/good_music_solution/
+Number of comments: 2
+Created UTC: 2024-07-19 11:43:38
+
+Post Content:
+Hey all, Im looking to work on my own music sever. I was wondering how you all solve the problems I am having though. 
+
+im using nextcloud aio with the music app and power Apache on my phone to listen. This works great and I like it. but am willing to try other services this was just quick. 
+
+the thing i would like to do though is automate songs being added to the library. Of course i wouldnt have everything but i would probably want it to at least download all the songs i have on a youtube playlist / albulm automated and Mabey download all songs from select artists.
+
+btw im pretty willing to move to any server or client so just give what you think works well or you like. 
+
+Top 1 comments:
+Comment 1:
+  Author: MoonAndDott
+  Comment: 3 self hosted app, Navidrome as music server, TubeSync to download your YT playlist and artists, MeTube for YT single music or YT Music. 
+
+As client any Subsonic client will do.
+  Score: 4
+  Created UTC: 2024-07-19 11:52:02
+
+Note: This post has only 1 comments at the time of scraping.

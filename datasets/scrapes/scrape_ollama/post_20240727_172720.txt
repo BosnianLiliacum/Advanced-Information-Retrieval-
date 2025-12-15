@@ -1,0 +1,76 @@
+Post Title: How does an LLM retain conversation memory
+Author: Treant1414
+Score: 4
+URL: https://www.reddit.com/r/ollama/comments/1edan5c/how_does_an_llm_retain_conversation_memory/
+Number of comments: 32
+Created UTC: 2024-07-27 07:25:06
+
+Post Content:
+Hello everyone, I'm having a little trouble understanding how an LLM works locally.  If I'm using Ollama and I'm talking with, let say gemma2, I have a conversation.  I first give my name to the LLM. Get the response, then ask a bunch more questions.  If I then say what's my name, it will tell me my name.  I come from a programming background and the conversation data must live somewhere.  How is the model storing the information?  
+
+Top 7 comments:
+Comment 1:
+  Author: OkQuietGuys
+  Comment: The whole interaction is submitted every time.
+  Score: 16
+  Created UTC: 2024-07-27 07:42:13
+
+Comment 2:
+  Author: PolityAgent
+  Comment: There are 3 components in a chatbot:
+
+1. The transformer. The transformer is stateless, and stores absolutely nothing about a chat. In fact, the transformer completely looses all context after outputting a single token.
+
+2. The generator function. A Large Language Model consists of a transformer and a generator function. The generator function takes a prompt, converts it to tokens, and stores those tokens in a buffer. It then sends the buffer to the transformer, receives an output token, and appends the output token to the buffer. It continues this cycle until the transformer generates an EndOfText token. Output tokens are detokenized and sent back to the chatbot UI, so that the user can see the output. Once the EndOfText token is received, the generator buffer is lost.
+
+3. The chatbot UI. This may be in a web browser, or a standalone client application. The chatbot UI will contain a conversation window. This is the only place that the contents of the entire conversation is stored. If the user closes the browser tab, or the standalone client application, the conversation is lost. Different chatbots may handle this differently, so that you may gain access to old chat history, but that history is part of the chatbot UI, not a part of the LLM. If you give your name to the LLM via a chatbot UI, then that statement is part of your conversational history only - there is no function that stores interesting pieces of information learned during the conversation. The entire conversational history is forwarded to the LLM on every query, until you exceed the context window size, at which point the LLM only receives the last n tokens.
+
+In Ollama there are two methods to get to the LLM. The first is the ollama client, for instance when you execute: ollama run modelname. In this case the conversational history is stored in the ollama client executable (the LLM is running in the ollama server instance). The second is the python interface, which does not record any conversational history at all. If you give your name in a query through the python interface, the LLM does not know your name on a second query. It's up to the python writer to create a conversational history scheme. 
+
+If you are on linux or mac, the ollama client stores user input in $HOME/.ollama/history. This only contains user input strings across all sessions, and does not contain the output from the LLM.
+  Score: 4
+  Created UTC: 2024-07-27 12:59:26
+
+Comment 3:
+  Author: schlammsuhler
+  Comment: The chat history is stored in the client, then the history up to the context limit is sent to the ollama backend each time. The history is cached to make tokenisation faster. From that the model will create a new answer message.
+
+To learn that i employ you to try using the ollama python or typescript api. Also read the modelfile to understand the abstraction above llama.cpp better.
+  Score: 2
+  Created UTC: 2024-07-27 12:03:02
+
+Comment 4:
+  Author: Porespellar
+  Comment: Your typical LLM has no long term memory, it has a context window. That context window might be 4K, 32k, 128k. It all depends on the capacity of the particular model, available memory, and what it’s set to in your chat client.
+
+Imagine your chat as a very long webpage. Imagine the LLM context window as the monitor you’re viewing the webpage on. As you scroll down the page, you can only see what will fit in the monitor’s screen. Now pretend that your mouse’s scroll wheel will only let you scroll down the page and not back up. This is how an LLM context window works. As you chat more and more with it. It starts to forget the beginning of your conversation because it slides out of the context window. Essentially, it cant scroll back up to read the previous part of the conversation. So it only “remembers” what it has access to in the current context. Some models like ChatGPT can have massive context windows and they can store conversation history on a per user basis to simulate memory. This is a very simplified explanation but it’s how I understand it. 
+
+Bottom line is, short conversations are no problem for most models but long conversations require longer context windows, and when that fills up, it’s going to forget the beginning of the conversation as that window keeps sliding.
+  Score: 2
+  Created UTC: 2024-07-27 13:22:45
+
+Comment 5:
+  Author: BoeJonDaker
+  Comment: Check this out https://github.com/ollama/ollama/blob/main/docs/api.md#response  
+It's about the JSON interface, but the regular interface probably works in a similar way. The important part is
+
+&gt; • context: an encoding of the conversation used in this response, this can be sent in the next request to keep a conversational memory
+
+So every time you receive a response, it contains all of the previous conversation plus the current one, stored in this 'context' field. And every time you send another prompt, all of the context is sent along with it.
+
+Edit: for clarity
+  Score: 2
+  Created UTC: 2024-07-27 14:55:50
+
+Comment 6:
+  Author: laurentbourrelly
+  Comment: ~/.ollama/history
+  Score: 1
+  Created UTC: 2024-07-27 11:37:42
+
+Comment 7:
+  Author: InternationalPlan325
+  Comment: I was using a local model with Ollama.
+  Score: 1
+  Created UTC: 2024-07-27 11:45:19
+

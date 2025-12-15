@@ -1,0 +1,44 @@
+Post Title: Forward SMS to email
+Author: Philthyzz
+Score: 12
+URL: https://www.reddit.com/r/selfhosted/comments/1e38hxy/forward_sms_to_email/
+Number of comments: 13
+Created UTC: 2024-07-14 17:53:34
+
+Post Content:
+I am out of cell service for weeks at a time (out at sea) and was curious if anyone knew of a way to forward my messages to my email? The tricky part is because my phone will be with me, the service wouldn't be able to run on my phone. Kind of a weird situation, not sure if its possible. I appreciate any help!
+
+Top 5 comments:
+Comment 1:
+  Author: drahcirm
+  Comment: You want to port your number to a VoIP service, one with SMS to Email functionality, and ideally a decent mobile app, which supports MMS. Abstracting your cellular service from your phone number or any one singular provider has other benefits to consider, also.
+
+I have been a paying customer of the VoIP.ms service for over a decade, worth considering (not a shill/endorsement). A third party has published a decent Android app for messaging for their service also.
+  Score: 5
+  Created UTC: 2024-07-14 17:59:40
+
+Comment 2:
+  Author: Elegond1998
+  Comment: I use a second sim in a Teltonika TRB140 LTE gateway and let the gateway receive the sms which then sends the sms via email
+  Score: 6
+  Created UTC: 2024-07-14 21:19:05
+
+Comment 3:
+  Author: bobbysteel
+  Comment: I got a cheap Huawei usb modem and setup a cron to forward to email or another phone every few minutes. I'll find the docker image tomorrow if you're interested.
+  Score: 5
+  Created UTC: 2024-07-14 21:56:05
+
+Comment 4:
+  Author: kyle_roth
+  Comment: I've heard great things about jmp.chat. It gives you a phone number that you can use to text/call from any XMPP client. You can even self-host the XMPP server itself, if you like.
+  Score: 2
+  Created UTC: 2024-07-14 19:11:44
+
+Comment 5:
+  Author: theIuser
+  Comment: You might want to check if your cell provider supports wifi calling. Some let you receive and send sms over wifi as well.
+  Score: 2
+  Created UTC: 2024-07-14 19:43:44
+
+Note: This post has only 5 comments at the time of scraping.

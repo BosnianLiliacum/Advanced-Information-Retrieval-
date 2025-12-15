@@ -1,0 +1,28 @@
+Post Title: One specific port cannot be opened
+Author: stoppingcart
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eadhm0/one_specific_port_cannot_be_opened/
+Number of comments: 2
+Created UTC: 2024-07-23 17:20:17
+
+Post Content:
+I'm trying to host a server with voice chat on port 24454, 
+
+I could open 25565 to the server and 25560 to a remote panel, 
+
+but 24454 just refuses to open no matter what, double checked local IP and everything.
+
+Top 2 comments:
+Comment 1:
+  Author: stoppingcart
+  Comment: I tried switching the VC port to 25566, I can't open that either :(
+  Score: 0
+  Created UTC: 2024-07-23 17:25:58
+
+Comment 2:
+  Author: stoppingcart
+  Comment: oh. it just took a restart
+  Score: 1
+  Created UTC: 2024-07-23 18:05:30
+
+Note: This post has only 2 comments at the time of scraping.

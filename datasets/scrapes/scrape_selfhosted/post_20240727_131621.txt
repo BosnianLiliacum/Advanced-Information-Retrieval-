@@ -1,0 +1,43 @@
+Post Title: Help!! What have I done wrong LOL? setting up wireguard via ER605 router
+Author: 1michaelbrown
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5sk1g/help_what_have_i_done_wrong_lol_setting_up/
+Number of comments: 7
+Created UTC: 2024-07-17 20:32:13
+
+Post Content:
+I am setting up wireguard on my TP-link ER605 (2.2.5 Build 20240522 Rel.75860)router for the first time. I have access to internet but not local resources on subnet \`192.168.1.0\` Here is a pictures of my setup. Only thing blacked out is my public ip that I got using whatismyip .com. I have not forward any ports only because in tp-link doc it says nothing about that. I presume because wireguard is something you enable on this router via the vpn section. 
+
+\* is there other settings I need to change to gain access to the local vlan network?
+
+  
+&gt; This is also posted in wireguard sub. But given there are more people here I thought I could get more troubleshooting help. 
+
+https://preview.redd.it/02pqkf1r15dd1.png?width=1106&amp;format=png&amp;auto=webp&amp;s=bef61ca2536bb718637aa2224fac5ef096645758
+
+https://preview.redd.it/5gdvqkas15dd1.png?width=1097&amp;format=png&amp;auto=webp&amp;s=1ecc31462a3ac1434903727df36701b74593e307
+
+https://preview.redd.it/gx4lkke325dd1.jpg?width=1178&amp;format=pjpg&amp;auto=webp&amp;s=1610bbec20dafd2e5460f19b2376b60c701e2417
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: I know nothing about this router so not sure if this comment will help 
+
+Does this router have any firewall rules between subnets/VLANs?
+
+You may need to allow the wireguard instance access to the subnet/VLAN that you want to access. 
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-17 20:40:48
+
+Comment 2:
+  Author: 1michaelbrown
+  Comment: After posting this I changed router allowed address \`10.12.24.12/32\` STILL no access to the local network
+  Score: 1
+  Created UTC: 2024-07-17 21:33:04
+
+Note: This post has only 2 comments at the time of scraping.

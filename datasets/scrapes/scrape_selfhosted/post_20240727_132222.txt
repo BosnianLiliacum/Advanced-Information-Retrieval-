@@ -1,0 +1,64 @@
+Post Title: Immich maturity/backup?
+Author: alyflex
+Score: 14
+URL: https://www.reddit.com/r/selfhosted/comments/1e5fyc2/immich_maturitybackup/
+Number of comments: 26
+Created UTC: 2024-07-17 11:35:23
+
+Post Content:
+I would love to setup Immich, and have that be my primary picture program, but from what I can gather the software isn't quite mature enough yet for it to be trusted with all my pictures. As also evidenced by the message at the top:
+https://immich.app/docs/administration/backup-and-restore/ 
+
+My main concern is that the database gets corrupted and even if I correctly back it up I will just have a backup of a corrupted database and will have lost all my photos. So should I maintain a separate instance of all my photos (not ingested in the postgreSQL database) or how do you all use immich?
+
+My secondary concern is if I do go with immich, then I would like to expose immich online, such that I can share with friends and family, and also create albums for them to upload photos from shared trips to, but is the app stable enough for this to be reasonably secure?
+
+So what are your experiences with Immich? Do you feel like it is mature enough to be trusted? Or when would you feel it is mature enough?
+
+Top 7 comments:
+Comment 1:
+  Author: kring1
+  Comment: Photos aren't saved in the database, they are saved on the file system as normal pictures.
+  Score: 34
+  Created UTC: 2024-07-17 11:43:46
+
+Comment 2:
+  Author: altran1502
+  Comment: Regardless of any app that you are hosting yourself, you should always have backup of that data because there are many things that could go wrong, such as natural disasters, power loss lead to corrupted data, fail disks…etc
+
+If you want to expose you instance over the internet, consider using an Oauth provider such as Authentik for better security measures https://immich.app/docs/administration/system-settings#oauth-authentication
+  Score: 14
+  Created UTC: 2024-07-17 12:21:06
+
+Comment 3:
+  Author: Acid14
+  Comment: Immich stores photos in a folder, as a photo...? Yeah they have numbers for names but your photos aren't lost. If you use incremental backups (restic, borg) you wont have a problem with backing up a corrupted database. Just rollback further. 
+
+The main thing to worry about is during upgrades, dont use automatic updates and read the update notes to see if you need to do anything special before upgrading.
+  Score: 8
+  Created UTC: 2024-07-17 11:45:48
+
+Comment 4:
+  Author: rambostabana
+  Comment: Its not a stable release yet, but I found it super super stable. Such a great app
+  Score: 6
+  Created UTC: 2024-07-17 12:29:28
+
+Comment 5:
+  Author: peveleigh
+  Comment: I store all my pictures in both Nextcloud and Immich. Nextcloud is backed up. Immich isn't.
+  Score: 3
+  Created UTC: 2024-07-17 12:21:58
+
+Comment 6:
+  Author: insdog
+  Comment: Just point it to your photos folder and make it read only, the entire install could shit itself and your pictures would be untouched
+  Score: 3
+  Created UTC: 2024-07-17 21:21:03
+
+Comment 7:
+  Author: Big_Draft123
+  Comment: I've been following Immich for some time now and they don't put images themselves to a database - they store them in folders. So I back up those folders with restic and that way I'm confident that if something goes wrong I can start again but import all those already backed up photos that each user had. Also, i've never had to do it yet. And I've been using it for over a year now. True, they release often and sometimes it takes more effort to update than for some other projects i'm using but it's well worth it so far
+  Score: 2
+  Created UTC: 2024-07-17 19:06:43
+

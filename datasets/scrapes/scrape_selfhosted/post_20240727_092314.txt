@@ -1,0 +1,24 @@
+Post Title: SmoothMQ: Self-hosted AWS Simple Queue Service (SQS)
+Author: php_guy123
+Score: 18
+URL: https://www.reddit.com/r/selfhosted/comments/1e9m8hy/smoothmq_selfhosted_aws_simple_queue_service_sqs/
+Number of comments: 1
+Created UTC: 2024-07-22 18:57:03
+
+Post Content:
+Hi! I wanted to share something I've been working on for the past few months: a drop-in replacement for AWS SQS. If you already have code that uses SQS for message queuing and background jobs, you can run this and just change the connection string.
+
+It deploys as a single go binary and uses SQLite as the underlying store. On my local machine it can handle thousands of requests per second and I'm doing a lot of work to improve this.
+
+[https://github.com/poundifdef/smoothmq](https://github.com/poundifdef/smoothmq)
+
+Would love any and all feedback!
+
+Top 1 comments:
+Comment 1:
+  Author: CharkDocolate
+  Comment: I use SQS for a lot for work. I’ll check this out for personal projects. Thanks for posting!
+  Score: 2
+  Created UTC: 2024-07-22 19:12:14
+
+Note: This post has only 1 comments at the time of scraping.

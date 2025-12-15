@@ -1,0 +1,80 @@
+Post Title: Self hosting DNS server.
+Author: theforextrd
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1e49fm2/self_hosting_dns_server/
+Number of comments: 9
+Created UTC: 2024-07-15 23:20:08
+
+Post Content:
+I read some posts about self hosting DNS server. It's really very confusing. Such posts only use DNS word again and again and do not specify which DNS server?
+
+First, there are two types of DNS server we can selfhost- 
+Recursive DNS (client computer uses it to translate domain name to IP. It gets IP from Authoritative DNS)
+
+Authoritative DNS (storing DNS records, with an exception of NS records maintained at registrar website).
+
+...................................
+
+Now there are two recursive DNS IP are stored in network settings of operating system of client computer.
+
+For domain name, there are also two Authoritative DNS.
+
+
+For selfhosting, what are the requirements-
+Will I need two IP?
+Will I need two static IP? Or dynamic IP will work.
+
+If dynamic IP will work, then how it will change automatically in my network settings of client computer OS.
+
+
+
+1.
+Should I self host Recursive DNS? Or jus use one that ISP aasigns by default to device. Or use Cloudflare 1.1.1.1 plus 1.0.0.1 for speed.
+
+If I should self host Recursive DNS, then how and which one?
+
+
+2.
+Should I self host Authoritative DNS? Or just keep using one that registrar provide by default in their dashboard. Or just use Cloudflare Authoritative DNS for speed?
+
+If I should self host Authoritative DNS, then how and which one?
+
+
+Top 5 comments:
+Comment 1:
+  Author: ericesev
+  Comment: &gt;Should I self host Recursive DNS?  
+Should I self host Authoritative DNS?
+
+  
+Self hosting is a solution. What is wrong with the defaults that you have today? What is your goal? What problem are you trying to solve?
+  Score: 8
+  Created UTC: 2024-07-15 23:28:10
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: &gt; which DNS server? 
+
+Use bind.
+  Score: 6
+  Created UTC: 2024-07-16 05:39:29
+
+Comment 3:
+  Author: piersonjarvis
+  Comment: I use technitium dns server as both recursive and authoritative. I use the authoritative internally so my clients can hit internal IP's of servers instead of hairpining at the router. And recursive so I can use dns filtering for ad blocking. I only host a single dns server at the moment with plans for a paired one on a raspberry pi for redundancy. But every gets Google as a secondary dns server in case mind fails for whatever reason the wife can still use the internet.
+  Score: 6
+  Created UTC: 2024-07-16 00:45:11
+
+Comment 4:
+  Author: MrDaGree
+  Comment: I specifically use PowerDNS (authoritative and recursor) cuz I like to have my internal DNS records \*actually\* internal
+  Score: 3
+  Created UTC: 2024-07-16 00:30:41
+
+Comment 5:
+  Author: SirMasterLordinc
+  Comment: Trust No One
+  Score: 1
+  Created UTC: 2024-07-16 05:03:18
+
+Note: This post has only 5 comments at the time of scraping.

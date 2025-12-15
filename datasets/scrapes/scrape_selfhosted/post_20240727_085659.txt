@@ -1,0 +1,32 @@
+Post Title: Authentik - bypass URL slug without authentication
+Author: sirisaacnewtown
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eb3w32/authentik_bypass_url_slug_without_authentication/
+Number of comments: 1
+Created UTC: 2024-07-24 15:11:23
+
+Post Content:
+Hey everyone!
+
+I have the following problem: I am using the Authentik oAuth provider to log into HedgeDoc. I already tried to implement a policy in Authentik to bypass specific URLs during the authentik-default-authentification-flow. 
+
+Authentik is running on a VPS behind Traefik and a cloudflared tunnel. Hedgedoc is running on a different VPS, no problems with the authentication process so far.
+
+I only want to able to share publicly available document links with HedgeDoc without anyone seeing the login page of Authentik.
+
+Do you guys have any idea how to solve that problem?
+
+Thanks!
+
+Top 1 comments:
+Comment 1:
+  Author: Leaderbot_X400
+  Comment: If using Proxy Provider or Forward Auth:
+
+[https://docs.goauthentik.io/docs/providers/proxy/#allowing-unauthenticated-requests](https://docs.goauthentik.io/docs/providers/proxy/#allowing-unauthenticated-requests)
+
+Admin Interface &gt; Providers &gt; {HEDGEDOC PROVIDER} &gt; Advanced Protocol Settings &gt; Add the paths you want to ignore auth (regex works)
+  Score: 1
+  Created UTC: 2024-07-24 22:40:03
+
+Note: This post has only 1 comments at the time of scraping.

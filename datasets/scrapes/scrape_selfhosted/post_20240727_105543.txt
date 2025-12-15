@@ -1,0 +1,80 @@
+Post Title: I built a free, open source, locally hosted search engine for all your memes
+Author: neonwatty
+Score: 514
+URL: https://www.reddit.com/r/selfhosted/comments/1e3x6l0/i_built_a_free_open_source_locally_hosted_search/
+Number of comments: 78
+Created UTC: 2024-07-15 15:10:25
+
+Post Content:
+The open source engine indexes your memes by their visual content and text, making them easily searchable. Drag and drop recovered memes into any messager.
+
+See the app and walkthrough here 👉 [https://github.com/neonwatty/meme\_search](https://github.com/neonwatty/meme_search)
+
+The backend is built using these great open source components:
+
+* moondream: a tiny, kickass vision language model
+* all-MiniLM-L6-v2: a popular text embedding model
+* faiss: a fast and efficient vector db
+* sqlite: the swiss army knife of dbs
+
+EDIT: lovely responses here!   please let me know about your experiences with the app and any new features you'd like in the future - either here or on github.
+
+tracking feature requests in the repo issues -https://github.com/neonwatty/meme\_search/issues
+
+EDIT 2:  now Docker run-able!  once pulled you can now start the app via docker-compose via
+
+`docker compose up`
+
+at the terminal or by using any container manager (e.g., Dockge, Portainer, etc.,)
+
+EDIT 3:  just merged our first pull request from a contributer!
+
+EDIT 4:  A new "refresh index" button to update the index when images are added or removed from the data/input image directory, affecting only the newly added or removed images.  See \[the gif in the updated README.md\](https://github.com/neonwatty/meme\_search?tab=readme-ov-file#index-your-own-memes).
+
+Top 7 comments:
+Comment 1:
+  Author: Typhon_ragewind
+  Comment: While this is brilliant for memes, I could see this being extremely useful for searching large collections of DnD assets (maps, tokens, monsters, etc)
+  Score: 119
+  Created UTC: 2024-07-15 17:08:39
+
+Comment 2:
+  Author: muh_cloud
+  Comment: Great start! I hope GIFs and videos are on your roadmap, I could really use something to organize the dumb stuff I download from discord. I get that it's a huge step from images, but I figured it's worth throwing out here.
+  Score: 42
+  Created UTC: 2024-07-15 18:26:47
+
+Comment 3:
+  Author: steveiliop56
+  Comment: AINT NO WAY THATS AWESOME!!!! (please add docker support tho)
+  Score: 34
+  Created UTC: 2024-07-15 21:39:01
+
+Comment 4:
+  Author: Destroyer-of-Waffles
+  Comment: Pinnacle of my lifetime, thank you.
+
+I will start answering each and everything with a meme now.
+  Score: 19
+  Created UTC: 2024-07-15 18:45:09
+
+Comment 5:
+  Author: Crushinsnakes
+  Comment: &gt;Drag and drop recovered memes into any messager.
+
+I love it! Can I install this on my recliner?
+  Score: 17
+  Created UTC: 2024-07-15 20:47:13
+
+Comment 6:
+  Author: haaiiychii
+  Comment: Is there a docker build of this?
+  Score: 21
+  Created UTC: 2024-07-15 16:17:25
+
+Comment 7:
+  Author: Meanee
+  Comment: What a time to be alive!
+  Score: 10
+  Created UTC: 2024-07-15 19:07:57
+

@@ -1,0 +1,79 @@
+Post Title: Why is DokuWiki so popular?
+Author: lakimens
+Score: 35
+URL: https://www.reddit.com/r/selfhosted/comments/1e912vu/why_is_dokuwiki_so_popular/
+Number of comments: 54
+Created UTC: 2024-07-22 00:32:04
+
+Post Content:
+I was searching for a great knowledge management tool which I can self host, and most people recommend DokuWiki.
+
+Now, granted, it's a huge benefit to have the pages as files, but the user experience is horrible. 
+
+Where are the buttons? The menus? The navigation? 
+
+There's no button to create a page? No way to choose the hierarchy where that page is placed? No option to move pages?
+
+It just screams outdated to me, and there are many others which have a much better interface. 
+
+So why is this one so popular?
+
+Edit: Not sure if I can respond to all of you but I've settled for MediaWiki. Many of the people who were going to use this had experience with it so it was the most seamless. I've set it up with SQLITE to avoid having a database.
+
+Top 7 comments:
+Comment 1:
+  Author: GourmetWordSalad
+  Comment: Because when your Postgres/MySQL database dies, Doku will be the only survivor.
+  Score: 61
+  Created UTC: 2024-07-22 02:52:46
+
+Comment 2:
+  Author: Psychological_Try559
+  Comment: As others have said, it's generally seen as easy to setup and simple to use.
+
+Couldn't tell you why dokuwiki became popular and mediawiki did not, but that's the way popular works.
+  Score: 25
+  Created UTC: 2024-07-22 01:35:03
+
+Comment 3:
+  Author: upofadown
+  Comment: &gt;There's no button to create a page?
+
+You mean an unlinked wiki page? What would you use that for? Normally on a wiki you create the link first in an existing page, click on that link, and create the page from there. Pretty much the most intuitive way to deal with the otherwise awkward usability issue of linking.
+
+Added: Does this Dokuwiki plugin do what you want to do?
+
+* https://www.dokuwiki.org/plugin:pagebuttons
+
+I guess that is one answer to the question. Dokuwiki has a lot of really useful plugins.
+  Score: 12
+  Created UTC: 2024-07-22 11:24:25
+
+Comment 4:
+  Author: dapperwhippersnapper
+  Comment: I love it because it is easy to use. It just makes sense the way it is setup.
+
+Also being able to use markdown so I don't have to use any buttons is incredible.
+
+I bet if you were to just start using it and get used to it, you'd also fall in love eventually.
+  Score: 12
+  Created UTC: 2024-07-22 00:52:54
+
+Comment 5:
+  Author: adamshand
+  Comment: Its been around 15 years, thats a lot of time for people to give it a shot.
+  Score: 5
+  Created UTC: 2024-07-22 02:14:54
+
+Comment 6:
+  Author: [deleted]
+  Comment: [removed]
+  Score: 6
+  Created UTC: 2024-07-22 02:51:32
+
+Comment 7:
+  Author: lemeow125
+  Comment: Managed to run it on an OpenWRT router once with very minimal hardware. I don't think I could have done that with WikiJS so I suppose that's one angle to the story.
+  Score: 7
+  Created UTC: 2024-07-22 04:43:46
+

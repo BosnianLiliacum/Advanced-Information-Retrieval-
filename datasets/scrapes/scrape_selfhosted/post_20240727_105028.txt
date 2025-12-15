@@ -1,0 +1,46 @@
+Post Title: Self-hosted crypto wallet
+Author: Gapple_MagicaVoxel
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e484tf/selfhosted_crypto_wallet/
+Number of comments: 9
+Created UTC: 2024-07-15 22:23:48
+
+Post Content:
+Not long ago I needed a crypto wallet to store usdt and monero.  With frequent news about exchanges and popular hot wallets being hacked, I don't really want to store money there given the existence of cold wallets.  But I don’t have a strong desire to constantly synchronize the blockchain on my main computer, given the existence of my home server.  Is there a convenient program (preferably docker container) that will allow you to deploy a wallet on a server and with access from other devices within the local network?  All I could find was monero-cli, but it’s not much of what I’m looking for.
+
+Top 5 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: I don’t think you understand how crypto wallets work, because a wallet is nothing more than an encryption key. You don’t host a wallet in that sense. As long as you have the key, you can access your wallet from anywhere, no need to run a node.
+  Score: 9
+  Created UTC: 2024-07-15 22:30:44
+
+Comment 2:
+  Author: null-count
+  Comment: Have a look at https://umbrel.com
+  Score: 2
+  Created UTC: 2024-07-16 00:04:17
+
+Comment 3:
+  Author: NikStalwart
+  Comment: So you're worried about exchanges getting hacked. Good worry to have. But how certain are you that you can keep your internal network secure? You'd *hope* a crypto exchange has a 24x7 security team diligently looking at the IDS console. Do you?
+  Score: 2
+  Created UTC: 2024-07-16 03:23:31
+
+Comment 4:
+  Author: sogdianus
+  Comment: You are mixing up running a blockchain node with having a wallet. You do not have to run any blockchain node to transact on any blockchain necessarily.
+
+There are many so called HD wallets out there, making it possible to manage crypto on multiple blockchains in one wallet, all derived from one seed phrase. E.g. Trust Wallet https://trustwallet.com
+
+Wallets only hold private keys so there is no "self-hosting" for them, only the distinction between custodial (like Trust Wallet and really anything you can use with your seed phrase) and non-custodial (like Coinbase, Binance, etc.).
+  Score: 2
+  Created UTC: 2024-07-16 14:34:56
+
+Comment 5:
+  Author: suicidaleggroll
+  Comment: As others have said, you seem confused about the difference between a node and a cold wallet.  A node is an actual program that runs on your computer and it needs to be run continuously or you have to re-sync.  A cold wallet has no such requirement, it's just a key which will let you view your balances and sign transactions, and can run through a simple browser plugin.  It sounds like all you're looking for is a cold wallet.
+  Score: 1
+  Created UTC: 2024-07-16 16:12:16
+
+Note: This post has only 5 comments at the time of scraping.

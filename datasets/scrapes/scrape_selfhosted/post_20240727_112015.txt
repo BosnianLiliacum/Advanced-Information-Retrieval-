@@ -1,0 +1,104 @@
+Post Title: Balancing Family Life and Self-Hosting: Seeking Advice
+Author: Frequent_Rate9918
+Score: 24
+URL: https://www.reddit.com/r/selfhosted/comments/1eco1b8/balancing_family_life_and_selfhosting_seeking/
+Number of comments: 39
+Created UTC: 2024-07-26 13:25:38
+
+Post Content:
+Hi everyone,
+
+I'm a father of an almost 2-year-old boy, and my wife and I are expecting a baby girl in a few weeks. I've been self-hosting with old laptops and Docker in my spare time since graduating college and getting married. Now, as a systems engineer, I find it much harder to design and plan my home environment compared to work projects. 
+
+My services are scattered across different hosts and platforms, making management a headache. I want to streamline everything for minimal maintenance, but I struggle to find the time. Family is my priority, and I don't want to miss out on precious moments with my kids.
+
+Any advice for a new father on managing time with family while organizing a home server setup? How can I balance my hobby without compromising family time?
+
+Thanks in advance!
+
+Top 7 comments:
+Comment 1:
+  Author: rickyb15
+  Comment: I'm in the same situation and the conclusion I came to is that I have to stop being cheap. It sounds silly, but cutting corners along the years put me in the position where everything is scattered across mini PCs, servers, etc. I have switches everywhere, there are UPS devices everywhere, etc. If I just paid the money in the first place and configured it properly, I wouldn't have to change anything, but here we are. 
+
+So my suggestion? Determine which hardware you need and consolidate if required, then spend the time you actually *do* have configuring it. If it's done properly, maintenance will be easy and the time you *do* have available will be spent configuring a long-term solution., which will indirectly give you more time along the months/years to spend with your family.
+  Score: 19
+  Created UTC: 2024-07-26 14:03:15
+
+Comment 2:
+  Author: aetherspoon
+  Comment: I'm not a parent myself, but I can certainly understand the "I have other priorities than maintaining a home server" and have lots of parent friends.
+
+My recommendations are three fold:
+
+1. Don't self-host anything complex and fiddly. Email is a great example of this - I don't even want to self-host that and my barrier on "too much; don't wanna" is far higher than I'd presume a tired parent of two young kids. Where the line in the sand is for you is probably going to depend a bit, but it *is* something you should think about and draw. Draw it conservatively, because it is a lot easier to redraw that line forward six months later to add the new whatzit to your home hosted software stack than it is to admit defeat and kill a project.
+
+2. Make things simple and don't host on unstable / unproven hardware. I'm not saying "go buy a rackmount or a workstation server", I'm saying don't run this on hardware that has some weird hack to make certain things work (I'm side-eyeing some laptop/servers with respect to this) and consolidate everything down to one or two boxes for simplicity sake. Maybe now is a good time to hunt eBay for a single off-lease PC that will work for hosting all of your disparate services for cheap and just run it forever, maybe you have a single laptop much more powerful than the rest that can do it. And yes, that means you might need to spend a bit of money.
+
+3. Automate as much as possible. As a parent, you will absolutely have short bursts of "free" time (which is totally not free, I know) that might let you set something new up, but not maintain it. So take the maintenance overhead away from yourself. This means automating backups (including automating testing of backups!), automating updates for at least anything public-facing (maybe one of those docker containers that run to update other docker containers on a host), just take the brain out of anything critical that you can. The last thing you want to do is depend on 2:00a you after having a cranky kid keep you up all night finding out about a major security vulnerability, patching, and nuking your photo database from your kid's first steps walking. Use your limited time for important/fun tasks, not basic maintenance.
+  Score: 6
+  Created UTC: 2024-07-26 15:04:45
+
+Comment 3:
+  Author: nerkho_
+  Comment: There are essentially two things that I apply to myself as to not loose too much time on my homelab.
+
+1. I try to keep it as simple as possible by using tools that I know well. E.g I manage K8s cluster in my daily job so it's a natural pick for my homelab.
+2. I avoid self-hosting anything that I consider critical. E.g. Password manager, photo backup, etc.. I prefer paying another company to do it for me.
+  Score: 18
+  Created UTC: 2024-07-26 13:47:22
+
+Comment 4:
+  Author: laxweasel
+  Comment: Between FT work that isn't in IT, being a parent and husband I can sympathize and I struggle with similar issues.
+
+First, make yourself a production and testing environment. Give the production environment some structure/uniformity (deploy everything via Docker or Ansible or Nix). Move the services that are essential and that you use to the production environment and then don't fucking touch it except to update. 
+
+Automate maintenance as much as possible (cron, Ansible, unattended-upgrades, scheduled backups, etc). Make things easy for yourself to do from a variety of devices (OliveTin + Ansible = you can do your updates from your phone at 2AM while getting the baby back to sleep).
+
+Once you have things stable for what you actually use, you can see if you have the time to play (ideally on another host/environment) with stuff and work out the kinks before you deploy it to "production". This reduces the chances you accidentally bork your media setup at the exact moment your sleep deprived wife finally has a minute to unwind, wiping out any and all spousal approval of your projects.
+  Score: 4
+  Created UTC: 2024-07-26 14:03:10
+
+Comment 5:
+  Author: alvinxx
+  Comment: What are you self-hosting?
+Do you really need all this stuff or every new feature?
+
+Trim it down to your bare essentials.
+Consolidate to one or few machines.
+Automate whatever possible.
+Monitor for errors that really need attention.
+  Score: 5
+  Created UTC: 2024-07-26 15:14:23
+
+Comment 6:
+  Author: BitterSparklingChees
+  Comment: I'm in the exact same scenario (my second is due in October) as you but I can't say I put any significant thought into it except in the rare opportunities of free time. My only advice would be to put critical services (networking, DNS, firewall, media, etc) on your most reliable hardware.
+
+Consolidate down to as few hosts as possible and run everything in a docker container. Unless you're doing something compute heavy there's probably no reason you couldn't consolidate down to a single host, conceivably.
+
+Really there's no reason this stuff should ever take priority over family stuff. Who cares if a random service is down? You can get to it in the evening after everyone is asleep. Keep your critical stuff on solid hardware so you can avoid meaningful downtime for the rest of the family. 
+
+I run everything on a NUC and I haven't even needed to reboot it in over a year.
+  Score: 3
+  Created UTC: 2024-07-26 17:58:04
+
+Comment 7:
+  Author: mjh2901
+  Comment: Everything required for the home to operate is on its own server, backed up with a battery to keep it all spinning during short power blips.
+
+Hobby and other stuff lives on its own hardware and VLAN.  If the wife starts using soemthing then it moves to home server.
+
+The big reliability change is the core switch (POE), router and home services server have a big UPS, which gets new batteries on a regular basis.  The small switches (behind the TV etc.. are POE powered so again unless the power is off for more than 20 minutes nothings stops.
+
+I would recomend looking at everthing and marking them
+
+Level 1.  Family and Home Required to Operate  
+Level 2. Nice to have but when its off no one is upset (Jellyfin is in the category if that box goes down yes there is no media but netflix still works)  
+Level 3. When its off no one else is affected.
+
+Level 1, you need to have basically one piece of reliable hardware and have a the ability to replace and restore on a moments notice.
+  Score: 2
+  Created UTC: 2024-07-26 17:58:38
+

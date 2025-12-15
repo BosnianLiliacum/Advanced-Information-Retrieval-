@@ -1,0 +1,61 @@
+Post Title: Not even sure if this is the right sub, but I need to setup a one-way video intercom, can't think of a solution.
+Author: Ryanzudo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5kj9q/not_even_sure_if_this_is_the_right_sub_but_i_need/
+Number of comments: 8
+Created UTC: 2024-07-17 15:07:26
+
+Post Content:
+The worst part is that it can't be wired, it's an old office building.  
+I thought about using ESP32's or Raspberry Pi Zero 2W's (specifically these, as they are the only one's affordable in my country Brasil), so I'm asking for a general guidance, not like a tutorial, but more like ideas, I don't feel like using off the shelf solutions, mostly because of their monthly subscriptions and shady "spy" apps.
+
+The final product should resemble [this](https://www.amazon.com/-/pt/dp/B0CSXVFLTR/ref=sr_1_3?dib=eyJ2IjoiMSJ9.PyotMQpV-JEel_-LZoKQJIULn4Sygp1pTMGBmi9kqSTqB5hB1iijoHvudcBEZoRijLFMAVq1pPB5o2ZydhyYC3r_tt65E97-JzeiWKd0aZOlRkYpraCzc8E1Fb11QL9fzGlH7sG1QGsEoKV9ui7P_eie7YH_cr6rmi-pWaoqcIM4zJAQsWe6BBDjkO5TG18JmezHpHmgylGWCXqKRdfqSDvEr2QAh5w8pKWw1d_0DZM.ZbAFS5qk_lnQWFpvYIH7t9id3-p7HyhMNvqwUOpxs0I&amp;dib_tag=se&amp;keywords=Video+Intercom+System&amp;qid=1721228541&amp;sr=8-3) thing, without the phone app, of course.
+
+Is it possible? Am I asking to be spoonfed?
+
+Top 7 comments:
+Comment 1:
+  Author: flicman
+  Comment: Why not just a wireless pet monitor?
+  Score: 5
+  Created UTC: 2024-07-17 15:21:17
+
+Comment 2:
+  Author: mitchsurp
+  Comment: Could you just use a baby monitor?
+  Score: 2
+  Created UTC: 2024-07-17 19:07:28
+
+Comment 3:
+  Author: Conscious-Fault-8800
+  Comment: You could probably achieve something with home assistant.
+Theres plenty of "esp32 camera doorbell with home-assistant Integration" project /tutorials that neatly integrate with phone app notofications etc.
+
+Have not done any of them myself, but sounds like a good place to start
+  Score: 1
+  Created UTC: 2024-07-17 15:16:14
+
+Comment 4:
+  Author: LazyTech8315
+  Comment: There are plenty of good suggestions here. Another alternative if it fits your use case is to get a Reolink wireless doorbell and a tablet with a web browser to view the feed.
+  Score: 1
+  Created UTC: 2024-07-17 15:44:43
+
+Comment 5:
+  Author: Historical_Pen_5178
+  Comment: Reolink wireless or wired doorbell
+  Score: 1
+  Created UTC: 2024-07-17 17:34:38
+
+Comment 6:
+  Author: johnsturgeon
+  Comment: r/homeassistant
+  Score: 1
+  Created UTC: 2024-07-18 13:06:57
+
+Comment 7:
+  Author: ostroia
+  Comment: The rpizero2 will def not be able to handle video and voice, it will barely be able to handle voice 2way, might work better for 1way.
+  Score: -1
+  Created UTC: 2024-07-17 15:15:22
+

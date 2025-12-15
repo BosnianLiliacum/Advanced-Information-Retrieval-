@@ -1,0 +1,69 @@
+Post Title: Essential apps for Home Server but for Windows
+Author: SpliitBTW
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e95j38/essential_apps_for_home_server_but_for_windows/
+Number of comments: 19
+Created UTC: 2024-07-22 04:29:51
+
+Post Content:
+Long Story Short, i bought a Mini PC that its kind of OS-locked (I tried everything so don't suggest anything) and I was asking you guys if you knew any alternatives for these apps but for Windows 11
+
+Preferably that I can access through http, and I don't mind if they are Docker or not
+
+* Game Server Management. ex: Pterodactyl / Pufferpanel
+* Server Dashboard. ex: Homarr / CasaOS
+* Torrent client. ex: qBittorrent
+* Home DNS. ex: Pi-Hole, AdGuard
+
+  
+If you have any questions just ask and i'll kindly answer
+
+Top 7 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Servers can be CPU locked, but I’ve never heard of an OS locked device, since that seems impossible from a technical point of view. What’s the device in question?
+  Score: 17
+  Created UTC: 2024-07-22 05:03:00
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;Long Story Short, i bought a Mini PC that its kind of OS-locked (I tried everything so don't suggest anything)
+
+Can you mention and or link what machine/ company this was so people are aware?
+
+Sounds like a horrible experience to buy a machine to be OS locked after I imagine long hours of trying to troubleshoot to come to the realization that there is nothing you can do.
+  Score: 9
+  Created UTC: 2024-07-22 05:05:03
+
+Comment 3:
+  Author: TarPitGil
+  Comment: OS locked to me sounds like you are locked out of the bios, why would that be
+  Score: 7
+  Created UTC: 2024-07-22 05:13:48
+
+Comment 4:
+  Author: flicman
+  Comment: Just run whatever services you want in a virtual machine. It's dead simple, and even though it's not THE most efficient process, modern computers are so stupidly powerful that the waste is irrelevant.
+  Score: 6
+  Created UTC: 2024-07-22 04:41:20
+
+Comment 5:
+  Author: udonyaki
+  Comment: VMware Workstation Pro is free now. It has a nice GUI to let you configure virtual subnets and port mapping etc. If your minic pc is encrypted with BitLocker + TPM PIN, you probably also want to configure group policy to disable automatic update and restart. There's a group policy to set the grace period before restart too.
+  Score: 3
+  Created UTC: 2024-07-22 05:12:45
+
+Comment 6:
+  Author: LavaCreeperBOSSB
+  Comment: For me all of this runs in docker: MC docker, no dashboard (don't use CasaOS it's anightmare), qbittorrent, radarr, sonarr, jellyfin, jellyseerr, prowlarr, adguardhome
+  Score: 1
+  Created UTC: 2024-07-22 05:39:05
+
+Comment 7:
+  Author: sylsylsylsylsylsyl
+  Comment: Last time I had trouble it was because the PC was set to RAID (fake RAID) in BIOS, which was stopping me install Proxmox (it couldn’t see the disk). Changing that opened everything up.
+
+But in answer to your question, use Windows 11 Pro, install Hyper-V, run an Ubuntu VM and run Docker on it. Then you can run all those apps rather than look for alternatives.
+  Score: 1
+  Created UTC: 2024-07-22 09:29:56
+

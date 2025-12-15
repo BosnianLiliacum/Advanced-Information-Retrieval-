@@ -1,0 +1,46 @@
+Post Title: Cloud Backup
+Author: Hefty-While-9995
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebr1gk/cloud_backup/
+Number of comments: 6
+Created UTC: 2024-07-25 09:58:25
+
+Post Content:
+We are a small company that has everything stored on Google Drive Workspace. I am now looking for a cloud for a backup. Essentially, we want to store the same data that is on Google Drive on another cloud. In case something happens, it is important to have our data safely backed up with another provider. Which provider can you recommend?
+
+Thank you.
+
+Top 5 comments:
+Comment 1:
+  Author: suicidaleggroll
+  Comment: I use and like rsync.net
+
+It’s a little more expensive, but you get your own private host that you can ssh into, allowing you to configure and run your backups using whatever tool in whatever way you see fit.  It includes 7 free daily read-only snapshots to protect against malware wiping out your backup system, and there are no up or down bandwidth restrictions so you can copy anything onto or off of it whenever you want without additional charges.
+  Score: 2
+  Created UTC: 2024-07-25 13:45:03
+
+Comment 2:
+  Author: Apprehensive_Can1098
+  Comment: I prefer rsync.net
+  Score: 2
+  Created UTC: 2024-07-25 15:10:55
+
+Comment 3:
+  Author: Positive_Question404
+  Comment: AWS S3 is always a good bet (rclone can do it easily for you).
+  Score: 1
+  Created UTC: 2024-07-25 10:23:22
+
+Comment 4:
+  Author: pigers1986
+  Comment: [https://www.backblaze.com/cloud-storage/pricing](https://www.backblaze.com/cloud-storage/pricing)
+  Score: 1
+  Created UTC: 2024-07-25 11:06:09
+
+Comment 5:
+  Author: _FroZar_
+  Comment: [https://wasabi.com/](https://wasabi.com/) works for me.
+  Score: 1
+  Created UTC: 2024-07-25 16:12:28
+
+Note: This post has only 5 comments at the time of scraping.

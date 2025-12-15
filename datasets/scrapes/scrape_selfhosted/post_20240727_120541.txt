@@ -1,0 +1,48 @@
+Post Title: Best secure choice to start a self-hosting server on RaspberryPi5 easily
+Author: iordev
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea37zb/best_secure_choice_to_start_a_selfhosting_server/
+Number of comments: 12
+Created UTC: 2024-07-23 09:07:52
+
+Post Content:
+Hi guys, first post here. I have bought a Raspberry Pi 5 intended to be used as a self-hosting server for many things/services. And I'm kinda new to this all. I have read this past week for several resources, forums and subreddits about many options (you all probably know about): [UmbrelOS](https://umbrel.com/umbrelos), [CasaOS](https://casaos.io/), [RunTiPi](https://runtipi.io/), [Cosmos](https://cosmos-cloud.io/)... all based on docker apps.
+
+I am not too concerned about security within the local network, but it is true that the more secure the better. My concern is mainly to have access outside the local network.
+
+I intend to have some services for local use (media servers, web stacks for web development, etc) and to have others that although I usually use them locally (nextcloud, owncloud, etc) from time to time are used outside my local network to share a link or a folder with friends or family...
+
+I have read about cloudflare tunnels, Tailscale, Nginx reverse proxy, etc... but im not an expert on networking/security so... **anyone have had experience on this with those OS? what u think is the best options to have a nice UI, nice local services, and a secure way to share outside LAN?**
+
+Any advice would be appreciated.
+
+Thank you so much!
+
+Top 4 comments:
+Comment 1:
+  Author: FoodvibesMY
+  Comment: debian OS and wireguard ( nice GUI) wg-easy that's all you need
+  Score: 7
+  Created UTC: 2024-07-23 10:03:19
+
+Comment 2:
+  Author: d0ms3n
+  Comment: And use an SSD rather than SD card. Any server type workload that has some sort of logging for what it does will eventually break the SD card. SD cards are not built for that type of operation.
+  Score: 3
+  Created UTC: 2024-07-23 10:19:09
+
+Comment 3:
+  Author: pragmasoft
+  Comment: I use raspberry pi os, podman for containers, cloudflared for tunnel, everything works well so far.
+  Score: 1
+  Created UTC: 2024-07-23 10:43:21
+
+Comment 4:
+  Author: NormalTax4519
+  Comment: 1. I think any base OS is ok, but i prefer debian with uefi
+
+2. you can use docker to manage the application you want
+  Score: 1
+  Created UTC: 2024-07-24 01:16:06
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,20 @@
+Post Title: Help to refind an awesome tool
+Author: Business_Hospital972
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4x1uv/help_to_refind_an_awesome_tool/
+Number of comments: 5
+Created UTC: 2024-07-16 19:10:11
+
+Post Content:
+In this reddit accidentally I found an awesome tool self hosted and open source very beautiful about a tool that can allow query search into a database to retrieve a data visualization very pretty and even export to excel and csv so easily. This tool is Most specialized in select query but you can also import and modify data. 
+
+The more near that I was capable to found out it was ByteBase that looks awesome, and I think do the same bit I know that that's not the software I am looking for.
+
+Top 1 comments:
+Comment 1:
+  Author: AnnabelleSchindler12
+  Comment: Have you tried looking into Metabase? It's open-source and pretty good for data visualization with query capabilities. If you need to create how-to guides or visual documentation for your team, Guidde has been super helpful for me. Makes everything look so professional!
+  Score: 3
+  Created UTC: 2024-07-18 01:13:01
+
+Note: This post has only 1 comments at the time of scraping.

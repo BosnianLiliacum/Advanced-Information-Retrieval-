@@ -1,0 +1,48 @@
+Post Title: Subsonic client for very old iPhone (iOS 7)
+Author: AppropriateOnion0815
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eclhwr/subsonic_client_for_very_old_iphone_ios_7/
+Number of comments: 8
+Created UTC: 2024-07-26 11:15:24
+
+Post Content:
+\[UPDATE\]  
+Substreamer is now working. I have reinstalled it (twice, after the App Store didn't let me at first) and then set it up again (server, credentials) and waited for it to build the local library. Now it shows all albums etc.
+
+Thanks for your support, though!  
+
+
+Hello fellow selfhosters,
+
+I got my hands on an old iPod/iPhone dock with 30-pin connector and reactivated a spare iPhone 4 that I had lying around, planning to use it as a client for my music server (Lightweight Music Server, which exposes a Subsonic API). But, unfortunately it won't load the webinterface of the LMS and the last iOS 7 compatible version of Substreamer (what I am using on my other devices without any issues) won't work as it should (login is possible, it loads all the albums etc, but doesn't display anything).
+
+Does anyone have a recommendation for another app, alternatively a Subsonic web frontend that runs on the old iOS 7 Safari?
+
+thanks!
+
+Top 4 comments:
+Comment 1:
+  Author: -SHINSTER007
+  Comment: if you used Navidrome you could just go to its site in the browser on your phone
+  Score: 2
+  Created UTC: 2024-07-26 11:22:29
+
+Comment 2:
+  Author: whowasonCRACK2
+  Comment: Might be possible to jailbreak the phone, but I haven’t messed with that stuff in years
+  Score: 2
+  Created UTC: 2024-07-26 11:39:31
+
+Comment 3:
+  Author: itmfr
+  Comment: Why do you say the phone won't load the lms web interface? Could you describe the issue?
+  Score: 1
+  Created UTC: 2024-07-26 11:27:59
+
+Comment 4:
+  Author: Old-Radio9022
+  Comment: Have you tried installing Firefox?
+  Score: 1
+  Created UTC: 2024-07-26 12:21:03
+
+Note: This post has only 4 comments at the time of scraping.

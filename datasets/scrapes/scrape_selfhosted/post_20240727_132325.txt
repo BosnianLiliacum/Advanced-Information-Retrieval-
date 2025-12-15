@@ -1,0 +1,76 @@
+Post Title: Hello! I would like to know, I just got a VPS Server and wanted to know what I could host with it.
+Author: GamingCorporation
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5dhn7/hello_i_would_like_to_know_i_just_got_a_vps/
+Number of comments: 12
+Created UTC: 2024-07-17 09:00:38
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Lazy.
+  Score: 19
+  Created UTC: 2024-07-17 09:54:00
+
+Comment 2:
+  Author: Famku
+  Comment: check [https://www.reddit.com/r/selfhosted](https://www.reddit.com/r/selfhosted)
+  Score: 17
+  Created UTC: 2024-07-17 10:12:50
+
+Comment 3:
+  Author: msanangelo
+  Comment: not to sound mean but why rent a "box" and not know what to do with it? that'd be like me buying a race car and never racing it. lol
+
+look at the awesome links in the sidebar. there's tons of things to try.
+
+the most simplest of things is hosting websites. just nginx pointing to a directory full of html. only you can decide what to do on it.
+  Score: 8
+  Created UTC: 2024-07-17 11:16:05
+
+Comment 4:
+  Author: lordjinesh
+  Comment: Here you go, list of popular self hosted apps
+
+https://awesome-selfhosted.net/
+  Score: 4
+  Created UTC: 2024-07-17 13:32:50
+
+Comment 5:
+  Author: IgnisDa
+  Comment: Depends on what you like to do. 
+
+If you want to go down the security rabbithole, then start with Vaultwarden for password saving.
+
+I like tracking my coding time so I self host wakapi as well.
+
+If you're a movies guy, then Jellyfin along with an arr* stack will go a long way. 
+
+You can also throw in Ryot (https://github.com/ignisda/ryot) there if you consume a lot of media or are into fitness.
+
+You can tie all of this up with an uptime monitor. I use UptimeKuma.
+  Score: 2
+  Created UTC: 2024-07-17 09:20:19
+
+Comment 6:
+  Author: pigers1986
+  Comment: 1. harden the server : [https://www.reddit.com/r/selfhosted/comments/mihcl2/comment/gt4mhu5/](https://www.reddit.com/r/selfhosted/comments/mihcl2/comment/gt4mhu5/) &lt;good example  
+[https://contabo.com/blog/best-practices-to-secure-your-vps-hardening/](https://contabo.com/blog/best-practices-to-secure-your-vps-hardening/) 
+
+2. remember to  patch it regularly , maybe automate it with unattended system patching ?
+
+3. Look at [https://github.com/awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) , maybe something will catch the eye ?
+
+4. If you are using docker .. remember to only expose to localhost .. not to whole public internet (unless you really need to !) example of such [https://pastebin.com/W8B1ccft](https://pastebin.com/W8B1ccft)
+  Score: 2
+  Created UTC: 2024-07-17 09:29:00
+
+Comment 7:
+  Author: shadoodled
+  Comment: That's a question that's up to you to answer. But look for ideas here - https://awesome-selfhosted.net
+  Score: 2
+  Created UTC: 2024-07-17 09:19:34
+

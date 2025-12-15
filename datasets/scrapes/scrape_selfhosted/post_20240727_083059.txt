@@ -1,0 +1,63 @@
+Post Title: Looking for advice on how to improve my network diagram. 
+Author: I_Ulted_JFK
+Score: 23
+URL: https://i.redd.it/7qigj7fetued1.png
+Number of comments: 21
+Created UTC: 2024-07-26 12:10:30
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: cl0wnsec000
+  Comment: I dont’t see any issues with this other than the connectivity from your laptop to the docker container IP. That IP is a bridge IP and will not be accessible outside the host where docker is running unless you do port forwarding or publish the port. So you might want to clarify that part of the diagram that it is accessing the host and not the container IP.
+  Score: 10
+  Created UTC: 2024-07-26 12:37:24
+
+Comment 2:
+  Author: Kind-Ad4790
+  Comment: I love how clean this looks ... Nerd shit
+  Score: 3
+  Created UTC: 2024-07-26 16:48:18
+
+Comment 3:
+  Author: Fresh_Feesh
+  Comment: IMO, you don't need all the various connections. You could, for instance, have a single connection/callout for your docker containers pointing to the Raspberry Pi rather than each service having its own. I think it's much cleaner having different line types to represent physical versus logical networking as well.
+
+You include the 172.x IPs for several containers, but don't specify what your local network IP range (subnet, et cetera) includes.
+
+When I think of network documentation, I want someone who sees it to easily and clearly understand the whole scope and scale of my network, if for instance I was hit by a bus and couldn't explain it to them.
+  Score: 3
+  Created UTC: 2024-07-26 18:56:11
+
+Comment 4:
+  Author: Yann39
+  Comment: I personally use [Mermaid](https://mermaid.js.org/) to draw my diagrams so that they can be included directly in my README files and do not require any tool to be modified.
+
+Mermaid has its limitations of course, but most of the times that's enough, it even helps in not making overcomplicated diagrams and maintain a certain consistency.
+
+Here is an example of my network diagram rendered in one of my GitHub README : [Screenshot](https://img.super-h.fr/images/2024/07/26/c2590edd999056def43db85821d0c2d0.png)
+
+As I use quite the same tools as you in my homelab, feel free to pick up ideas from [my readme](https://github.com/Yann39/self-hosted/tree/master?tab=readme-ov-file#with-vpn) (I welcome any criticism too :)).
+  Score: 2
+  Created UTC: 2024-07-26 20:46:19
+
+Comment 5:
+  Author: escaracolau
+  Comment: Off topic: what did you use to draw this?
+  Score: 1
+  Created UTC: 2024-07-26 15:56:07
+
+Comment 6:
+  Author: isleepbad
+  Comment: How has your experience with unbound been so far? I literally stumbled across it earlier today.
+  Score: 1
+  Created UTC: 2024-07-26 22:06:07
+
+Comment 7:
+  Author: Zakmaf
+  Comment: Seriously nobody needs portainer
+  Score: -4
+  Created UTC: 2024-07-26 19:51:16
+

@@ -1,0 +1,87 @@
+Post Title: How to backup my docker containers properly?
+Author: Azsde
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e41l64/how_to_backup_my_docker_containers_properly/
+Number of comments: 18
+Created UTC: 2024-07-15 18:04:06
+
+Post Content:
+Hello,
+
+I used to have all of my docker containers on my Synology NAS with a dedicated ''docker'' folder which was automatically included in the daily HyperBackup.
+
+To be more specific, I had the following architecture:
+
+/volume1/docker/nginx/docker-compose.yml
+/volume1/docker/nginx/data
+
+Data folder usually is mounted inside the container accordingly.
+
+Now I have moved almost all of my containers to a debian VM on a proxmox server, the performances are awesome compared to my NAS and I'm very happy with it.
+
+But I don't know what would be the best approach to backup my containers like I was doing with HyperBackup.
+
+I currently have proxmox backuping snapshots of my VM, but this seems way overkill.
+
+Is there a better solution?
+
+I thank you in advance for your help!
+
+Regards,
+
+Azsde.
+
+
+
+Top 5 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: * [Search this sub for "docker backup"](https://old.reddit.com/r/selfhosted/search?q=docker+backup&amp;restrict_sr=on&amp;include_over_18=on&amp;sort=relevance&amp;t=all)
+
+* [Search this sub for "container backup"](https://old.reddit.com/r/selfhosted/search?q=container+backup&amp;restrict_sr=on&amp;include_over_18=on&amp;sort=relevance&amp;t=all)
+
+* Look at the sidebar of this sub for the "awesome" lists for backup software
+  Score: 12
+  Created UTC: 2024-07-15 19:05:30
+
+Comment 2:
+  Author: [deleted]
+  Comment: I did exactly the same except I kept the /volume1/docker folder on my NAS and mounted it as an NFS share on my debian VM on proxmox, so all my containers run on the VM but the data is still stored in the NAS where I then use hyper backup to back it up to backblaze.
+
+My Compose files are stored in Debian and committed to git
+  Score: 3
+  Created UTC: 2024-07-16 08:54:27
+
+Comment 3:
+  Author: rambostabana
+  Comment: 1. If there is no database: stop container, backup volumes, start container
+2. If there is datbase: stop container, dump database, backup volumes and dump, start container
+
+Every service should have a guide how to backup. I use Kopia and daily cron job.
+  Score: 4
+  Created UTC: 2024-07-15 18:57:23
+
+Comment 4:
+  Author: mtetrode
+  Comment: Containers should have volumes mounted to it. These volumes need to be backed up. This depends on the type of container.
+
+The container itself is a running instance of an image, which itself can be considered as an executable.
+
+So, in short you should
+* Be able to reconstruct the image
+* Backup the compose file
+* Backup the container specific volumes
+
+And test your backups by doing a restore every x days. Put effort in automating this and reporting when errors occur, then you can do this test daily.
+  Score: 2
+  Created UTC: 2024-07-15 20:47:32
+
+Comment 5:
+  Author: eddyizm
+  Comment: Another thing to add to the excellent recommendations is to try and restore your data and containers somewhere else, I'd recommend monthly but at least quarterly so you know you can recover if your system dies.
+
+Backups are useless if they are bad and don't actually restore your setup.
+  Score: 3
+  Created UTC: 2024-07-15 19:27:00
+
+Note: This post has only 5 comments at the time of scraping.

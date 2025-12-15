@@ -1,0 +1,47 @@
+Post Title: Self-hosted text expansion tool
+Author: Descripteur
+Score: 10
+URL: https://www.reddit.com/r/selfhosted/comments/1eaq6he/selfhosted_text_expansion_tool/
+Number of comments: 7
+Created UTC: 2024-07-24 02:22:48
+
+Post Content:
+Hey all—
+
+I was looking for a free, self-hosted alternative to TextExpander/TextBlaze etc. Ideal features:
+
+* Multi-platform: iOS, Windows, Mac
+* Chromium extension
+* Support Rich Text
+* Support advanced fields (date, time, forms, etc)
+
+My Google searches haven't turned up anything and couldn't find anything similar on [Awesome-Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted). 
+
+Appreciate y'all's help!
+
+Top 3 comments:
+Comment 1:
+  Author: FangLeone2526
+  Comment: What is a server needed for ? Syncing your saved expressions between clients ? Couldn't you do this keepass style and use something FOSS and purely clientside to do the expanding, and sync the file of expansions out to each client with syncthing ?
+  Score: 2
+  Created UTC: 2024-07-24 03:58:57
+
+Comment 2:
+  Author: underlineGLS
+  Comment: !RemindMe 3 days
+  Score: 1
+  Created UTC: 2024-07-24 04:00:04
+
+Comment 3:
+  Author: e38383
+  Comment: I don't think this is possible on iOS, for basic needs you can use the included text replacement.
+
+For macOS (and Windows IIRC) I know espanso -- already mentioned in another comment.
+
+I've never looked into browser extensions, why would you need that if it's available system wide?
+
+AND: there is nothing to host for this type of application, if you want to have the replacements available everywhere, just sync them like every other config.
+  Score: 1
+  Created UTC: 2024-07-24 14:19:52
+
+Note: This post has only 3 comments at the time of scraping.

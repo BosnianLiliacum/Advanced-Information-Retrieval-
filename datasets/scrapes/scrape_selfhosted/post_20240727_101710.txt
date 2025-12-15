@@ -1,0 +1,111 @@
+Post Title: Docker unable to access content inside bind volumes after moving to a new HDD
+Author: vitusg
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e6bybb/docker_unable_to_access_content_inside_bind/
+Number of comments: 9
+Created UTC: 2024-07-18 13:51:05
+
+Post Content:
+Hey guys,
+
+  
+Have been pulling my hair out about this over the past couple of days. It's happening across all containers but just for this I'll focus on Plex.   
+I'm running an Ubuntu server an recently added a new 2TB HDD that I'm using for storage. When on the host I can go into the new HDD no problem and can see all the files I want to access. The only problem is when attempting to access them through Docker  
+Before I added it, I was using an external HDD no problem for accessing media and things like that. 
+
+  
+Weirdly enough, I created a docker-compose file on the new hdd, and attempted a docker compose up and get the following error:
+
+    name@server:data/plex$ docker compose up
+    no configuration file provided: not found
+    
+    name@server:/data/plex$ ls
+    docker-compose.yml
+
+  
+When I copy that compose file above to the drive where Linux itself boots from and where I guess Docker is installed, it will start no problem. 
+
+I've tried restarting the containers, restarting docker, changed all permissions on the new hdd but no luck. My guess is it's to do with how I mounted the new hard drive? The server had been running for a couple of weeks before I added it. I've never mounted a drive before so not sure if I did anything wrong. Looking through my history, I think these are the commands I ran..
+
+      dmesg
+      fdisk /dev/sdb
+      sudo fdisk /dev/sdb
+      sudo mkfs.ext4 /dev/sdb
+      sudo mount /dev/sdb /data/
+
+  
+The compose file then for Plex (which I manage through Portainer) looks like this:
+
+    version: '3.7'
+    services:
+      plex:
+        image: plexinc/pms-docker
+        restart: unless-stopped
+        container_name: plexms
+        ports:
+          - "32400:32400/tcp"
+          - "3005:3005/tcp"
+          - "8324:8324/tcp"
+          - "32469:32469/tcp"
+          - "1900:1900/udp"
+          - "32410:32410/udp"
+          - "32412:32412/udp"
+          - "32413:32413/udp"
+          - "32414:32414/udp"
+        environment:
+          - PLEX_UID=${PUID}
+          - PLEX_GID=${PGID}
+          - TZ=Europe/London
+          - PLEX_CLAIM=${CLAIM}
+          - HOSTNAME=PlexServer
+          - ADVERTISE_IP=${IP}
+        volumes:
+          - /data/plex/config:/config
+          - /data/plex/transcodes:/transcode
+          - /data/media/plex_media:/media
+
+  
+In /data/media/plex\_media on the hdd will be two folders - Movies &amp; TV Shows. Within them, I have some media that I can see and access while on the host
+
+When I exec into the above container, I can see the Movies and TV Shows directory but there is nothing inside them. 
+
+  
+Any and all help would be appreciated. Have been digging but can't find anything. Cheers! 
+
+  
+
+
+Top 4 comments:
+Comment 1:
+  Author: pheitman
+  Comment: What are the permissions and owner for /data and /data/plex?
+
+ls -ld /data
+
+ls -ld /data/plex
+  Score: 2
+  Created UTC: 2024-07-18 14:53:11
+
+Comment 2:
+  Author: JSouthGB
+  Comment: How are you getting the Plex container running if your docker compose command isn't working? Try specifying your file:
+
+    docker compose -f docker-compose.yml up -d
+
+Oh, I see you said Portainer. Based on the information you've shared, your bind mounts look correct.
+  Score: 2
+  Created UTC: 2024-07-18 18:36:07
+
+Comment 3:
+  Author: b1be05
+  Comment: add user /name to docker group , reboot
+  Score: 1
+  Created UTC: 2024-07-18 16:22:59
+
+Comment 4:
+  Author: planeturban
+  Comment: My guess is apparmour. 
+  Score: 1
+  Created UTC: 2024-07-19 00:05:46
+
+Note: This post has only 4 comments at the time of scraping.

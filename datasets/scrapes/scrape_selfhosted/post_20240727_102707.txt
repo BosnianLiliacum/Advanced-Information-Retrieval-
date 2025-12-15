@@ -1,0 +1,64 @@
+Post Title: What should I learn? (Self-taught)
+Author: 4AdamThirty
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e5rc2w/what_should_i_learn_selftaught/
+Number of comments: 8
+Created UTC: 2024-07-17 19:42:13
+
+Post Content:
+Hi! I’m self-taught in hosting Moodle and Resourcespace for work. I used Bitnami to start both on AWS. I literally knew nothing going in and have learned alot by trial and error and Google searches.
+
+I’m looking for advice for what to actually learn to better host and administrate apps such as these. Should I study PHP? I don’t really want to create my own app, but learning how to better configure a config.php file and actually know what I’m doing would be great. Possibly eventually writing a plugin.
+
+I have no formal coding education. Back in the day I taught myself basic AS, then JS, HTML and CSS. Am I in over my head?
+
+Thanks!
+
+Top 4 comments:
+Comment 1:
+  Author: cyt0kinetic
+  Comment: I think the biggest thing is docker. We have somewhat similar backgrounds.
+
+Docker is essentially a container environment, kinda like mini virtual machines, though only engaging the frameworks needed for the service being run. It allows for self contained environments where things like dependencies are being controlled for. It's used a lot for testing and development and also for hosting applications. 
+
+The main thing used typically is docker compose, which is essentially a configuration file for the container. It lists the program images, ports, and data volumes. 
+
+The other big thing is a webserver so many are out there now, I'm old school and use Apache. To make containers easier to access they are typically reversed proxied to a subdomain.
+
+The other big things are understanding networking, DNS, ports, port forwards, certs, SSL. Additionally an understanding of tunnels, VPNs, particularly wireguard. Since security wise it's often better to create a private intranet than being publicly accessible and exposed to the internet.
+
+Language wise there are so many main one I'd say is python and learning to write shell scripts is also useful.
+  Score: 6
+  Created UTC: 2024-07-17 20:15:16
+
+Comment 2:
+  Author: adamshand
+  Comment: The unhelpful (but true) short answer is: learn what you're interested in.  
+
+Pick a fun project and learn whatever you have to to get it done (just like you did with Moodle).
+
+Knowing how to program makes everything better.  If you're mostly interested in sysadmin type things start with Bash and then move onto Python/Ruby/Javascript. You don't have to be a wizard, just good enough that it starts to be the easiest way for you to solve problems.  Once you're at that point, you'll slowly get better forever.
+
+Learning Docker makes things much easier in the long run, but it's a pretty steep learning curve so be patient.  Ansible (or similar) is another great tool, but I wouldn't recommend trying to make sense of it until you have some basic coding chops.
+  Score: 2
+  Created UTC: 2024-07-17 23:54:10
+
+Comment 3:
+  Author: opensrcdev
+  Comment: I would avoid PHP, as it's not really a mainstream language anymore. Any experience you get with JavaScript will be extremely valuable in the software industry. Other useful languages include Python and Rust.
+
+Since you're hosting on AWS, you might also want to explore the AWS SDKs for JavaScript and learn how to automate various actions in your AWS account.
+
+You should also learn about Docker. Knowing how to launch containers, build custom container images, and debug running containers, is extremely valuable industry knowledge.
+
+Another topic worth learning about is monitoring tools. Look into things like Uptime Kuma, which can help monitor service availability.
+  Score: 1
+  Created UTC: 2024-07-18 07:25:13
+
+Comment 4:
+  Author: AmIBeingObtuse-
+  Comment: I have ever expanding guides on my yt channel. I learnt a lot from this community and still do. Feel free to check it out. It's about time I gave back to this community. 🖖 www.youtube.com/@kltechvideos/videos 🖖
+  Score: 1
+  Created UTC: 2024-07-17 21:05:22
+
+Note: This post has only 4 comments at the time of scraping.

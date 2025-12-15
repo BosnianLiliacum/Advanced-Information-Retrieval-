@@ -1,0 +1,50 @@
+Post Title: I want to move 4 domains to cloudflare. Should I use separate account for each one of them?
+Author: ShapeCurious465
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e64d6b/i_want_to_move_4_domains_to_cloudflare_should_i/
+Number of comments: 4
+Created UTC: 2024-07-18 06:10:02
+
+Post Content:
+Apparently, cloudflare doesn't allow moving domains from one cf account to another.
+
+Would it cause any issues if I would transfer all of them to same cf account?
+
+Thank you!
+
+Top 4 comments:
+Comment 1:
+  Author: dadarkgtprince
+  Comment: No issues. When you log into your account, each domain will show and have their own configuration/DNS/etc
+  Score: 8
+  Created UTC: 2024-07-18 06:50:54
+
+Comment 2:
+  Author: CaffeinatedTech
+  Comment: I've got 7 domains on my free account so far, with six or seven sites hosted on pages.
+  Score: 3
+  Created UTC: 2024-07-18 07:06:19
+
+Comment 3:
+  Author: Weareborg72
+  Comment: I wonder if it is domain host or just name host you are looking for
+
+If it is name host you are looking for, you can add it, you will get 2 addresses that you must add to your domain host. then the domain points to cloudflare and they take care of the dns requests.
+
+there are no restrictions, there are some functions that do not work on the free option, but as a selective user, just add as many domains as you want.
+
+[https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/)
+
+But I don't think having cloudflare as a domain host works if you don't buy the domain from them.
+  Score: 1
+  Created UTC: 2024-07-18 09:10:00
+
+Comment 4:
+  Author: TCOOfficiall
+  Comment: [https://developers.cloudflare.com/fundamentals/setup/manage-domains/move-domain/#:\~:text=To%20transfer%20a%20domain%20from,Registrar%20domains%20between%20Cloudflare%20accounts](https://developers.cloudflare.com/fundamentals/setup/manage-domains/move-domain/#:~:text=To%20transfer%20a%20domain%20from,Registrar%20domains%20between%20Cloudflare%20accounts)
+
+It shoudn't be an issue, if the domain is hosted **by another registar**, you should be fine. You can always change the nameservers for the domain, and because your nameservers are unique to you and the domain. It'll bind to the correct account. However, if you try to move domains between cloudflare accounts. It won't work, Cloudflare is **still** working on this (sice 2019 mind you)
+  Score: 1
+  Created UTC: 2024-07-19 21:04:53
+
+Note: This post has only 4 comments at the time of scraping.

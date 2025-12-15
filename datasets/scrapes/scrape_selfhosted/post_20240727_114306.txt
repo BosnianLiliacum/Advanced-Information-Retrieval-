@@ -1,0 +1,52 @@
+Post Title: SWEKIT v0.1 - an open source library to build software engineering agents (DEVIN) in a agentic framework agnostic manner!
+Author: redditforgets
+Score: 69
+URL: https://www.reddit.com/r/selfhosted/comments/1eb86lf/swekit_v01_an_open_source_library_to_build/
+Number of comments: 1
+Created UTC: 2024-07-24 18:05:20
+
+Post Content:
+Hey there,
+
+I am a contributor to this repository, Composio. It is an open-source platform that offers production-ready tools and integrations for building AI agents in python and JS.
+
+And we just released the v0.1 of SWEKit, a simple and extensible framework for building Devin like agents.
+
+So, here are the key features of [SWEKit v0.1](http://git.new/swekit)
+
+* **Customizable**: Simple yet highly customizable, allowing you to use your preferred LLM providers, including open-source models and tailor prompts to your specific needs.
+* **Framework Agnostic**: Compatible with all popular agentic frameworks like LangChain, LlamaIndex, Autogen, CrewAI, and more.
+* **Extensible**: You can extend the capabilities of SWE agents by integrating tools from the Composio ecosystem, such as Tavily, Jira, Notion, Linear, and even your applications.
+* **Simple**: The framework is very simple, and you can start easily.
+* **Agent Evaluation:** Evaluate the effectiveness of your agents by running them against the `SWE Bench`.
+
+https://preview.redd.it/471v9azzaied1.png?width=2000&amp;format=png&amp;auto=webp&amp;s=fdef2af79409969916d3a664ed6080569dfce74c
+
+Here is an example of an SWE agent built with SWEKit that resolves GitHub issues automatically.  
+
+
+A brief overview of the workflow
+
+* **Issue Creation on GitHub**: The process begins when an issue is created on GitHub. This could be a bug report, a feature request, or any other matter that requires attention.
+* **Webhook Trigger**: When the issue is created, a webhook is triggered. Webhooks are user-defined HTTP callbacks activated by specific events. In this case, the event is the creation of a GitHub issue. The webhook sends issue-related data to SWEKit.
+* **SWEKit Activation**: SWEKit is activated upon receiving the webhook notification.
+* **Interaction with Agentic Framework**: SWEKit uses an agentic framework to coordinate interactions with LLMs.
+* **Utilization of LLMs**: The agentic framework employs LLMs for reasoning, decision-making, and tool calling.
+* **Ready-to-Use Toolset**: SWEKit utilizes a ready-to-use custom or Composio toolset to accomplish tasks.
+
+You can add a GitHub integration via Composio or use your own GitHub access token. Checkout the complete example here: [GitHub Issue Resolver](https://github.com/ComposioHQ/composio/tree/master/python/swe/examples)
+
+The framework is open-source; feel free to fork, use, fix, and enhance it as you see fit.
+
+Needless to say, you can self-host SWEKit. It uses Docker by default for sandboxing code execution; you can use your own or Composio tools at your convenience.
+
+[Read Complete Docs](https://docs.composio.dev/swekit/introduction)
+
+Top 1 comments:
+Comment 1:
+  Author: DaniellCowger
+  Comment: This seems amazing and I see that you also have support for local code indexing.
+  Score: 20
+  Created UTC: 2024-07-24 18:57:06
+
+Note: This post has only 1 comments at the time of scraping.

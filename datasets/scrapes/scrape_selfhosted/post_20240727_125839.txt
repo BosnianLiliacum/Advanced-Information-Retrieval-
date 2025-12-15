@@ -1,0 +1,18 @@
+Post Title: Immich for Android Question
+Author: Randyd718
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6u9gn/immich_for_android_question/
+Number of comments: 4
+Created UTC: 2024-07-19 03:38:42
+
+Post Content:
+I've got Immich running on my server and imported some photos that were on there. I added the app to my phone and everything from the server appears there, but I can't see any of the photos that are already on my phone. If i take new pictures, they do not appear in Immich. I was expecting it to basically be a 1:1 replacement for Google Photos, am i mistaken? Why is nothing visible? And yes i gave it photo/video permissions in Android.
+
+Top 1 comments:
+Comment 1:
+  Author: lawyerz88
+  Comment: It works for me, on android. Uninstall the app and reinstall the app?
+  Score: 1
+  Created UTC: 2024-07-19 03:47:10
+
+Note: This post has only 1 comments at the time of scraping.

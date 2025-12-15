@@ -1,0 +1,152 @@
+Post Title: How to feed a novel into Ollama?
+Author: Pravles
+Score: 13
+URL: https://www.reddit.com/r/ollama/comments/1eb3p5n/how_to_feed_a_novel_into_ollama/
+Number of comments: 16
+Created UTC: 2024-07-24 15:03:37
+
+Post Content:
+Hi!
+
+I want to run the following experiment:
+
+1. Take a long text (e. g. "War and Peace" by L. Tolstoi).
+2. Feed it to Ollama.
+3. Ask Ollama to generate a list of all characters, locations, and events.
+
+Questions:
+
+1. What are some good starting points to learn how to do this?
+2. What kind hardware (which graphics card) do I need to in order to run such experiments?
+
+Note re item 2: I tried to run Ollama on my Macbook once. It worked, but it was slow and I could not use the computer while Ollama calculatd the answers. Therefore I want to either buy a physical machine with a graphics card or rent one in the cloud.
+
+Thanks in advance
+
+Pravles
+
+
+Top 7 comments:
+Comment 1:
+  Author: swehner
+  Comment: The book you mention likely will not fit in the context window of your model. One approach to deal with this limitation is called RAG.
+
+But you coud experiment with shorter texts, like here is Macbeth, coming in at 110KB: [https://gutenberg.org/files/1533/1533-0.txt](https://gutenberg.org/files/1533/1533-0.txt)
+  Score: 3
+  Created UTC: 2024-07-24 15:19:00
+
+Comment 2:
+  Author: RidesFlysAndVibes
+  Comment: My first instinct would be to batch feed pages in and have it create a small list for you of the people/places/events based solely on the text you supplied. It should then continuously append the list based on new pages. You’d then be left with a fully compiled list. I don’t think rag is the way to go because of how large it is. Rag only really works well in snippets, and that might be inaccurate.
+  Score: 4
+  Created UTC: 2024-07-24 16:33:35
+
+Comment 3:
+  Author: SithLordRising
+  Comment: I'm a big fan of llama parse. It retains context well, can output markdown format as well as vectored data you can rag with txtai
+  Score: 3
+  Created UTC: 2024-07-24 22:44:23
+
+Comment 4:
+  Author: RidesFlysAndVibes
+  Comment: My first instinct would be to batch feed pages in and have it create a small list for you of the people/places/events based solely on the text you supplied. It should then continuously append the list based on new pages. You’d then be left with a fully compiled list. I don’t think rag is the way to go because of how large it is. Rag only really works well in snippets, and that might be inaccurate.
+  Score: 1
+  Created UTC: 2024-07-24 16:33:41
+
+Comment 5:
+  Author: rnlagos
+  Comment: You can try with AnythingLLM + LMStudio
+  Score: 1
+  Created UTC: 2024-07-24 18:19:00
+
+Comment 6:
+  Author: shamitv
+  Comment: War and Peace has about Half a Million Words. 
+
+Using Ollama to process this amount of text is possible, but will require too much work. E.g. : break text into chunks of \~20 thousand words, process the chunks and aggregate (and dedupe) the results.
+
+Using Gemini can be a far easier (and probably cheaper) option. It can process \~1 Million words\* at a time.   
+
+Two ways : 
+
+* [one.google.com/explore-plan/gemini-advanced](http://one.google.com/explore-plan/gemini-advanced)
+* [https://ai.google.dev/gemini-api](https://ai.google.dev/gemini-api)
+
+
+
+\*Words are not exactly tokens, but this can be a starting point of approximation.
+  Score: 0
+  Created UTC: 2024-07-24 16:06:46
+
+Comment 7:
+  Author: e4aZ7aXT63u6PmRgiRYT
+  Comment: I wouldn't bother... just ask ChatGPT
+
+"War and Peace" by Leo Tolstoy is a complex novel with a vast array of characters, locations, and events. Here’s a structured list of the primary elements:
+
+### Characters:
+#### Main Characters:
+1. **Pierre Bezukhov** - The central character, an awkward but kind-hearted nobleman.
+2. **Andrei Bolkonsky** - A disillusioned war hero seeking meaning in life.
+3. **Natasha Rostova** - A young, charming, and naive countess.
+4. **Nikolai Rostov** - Natasha’s brother, a passionate and impulsive young man.
+5. **Maria Bolkonskaya** - Andrei’s deeply religious and dutiful sister.
+
+#### Rostov Family:
+1. **Count Ilya Rostov** - The father, a kind but imprudent nobleman.
+2. **Countess Rostova** - The mother, concerned with social status.
+3. **Petya Rostov** - The youngest Rostov child, eager and patriotic.
+4. **Sonya** - The Rostovs' poor but loyal cousin, in love with Nikolai.
+
+#### Bezukhov Family:
+1. **Count Kirill Bezukhov** - Pierre’s wealthy but estranged father.
+
+#### Bolkonsky Family:
+1. **Prince Nikolai Bolkonsky** - Andrei’s strict and eccentric father.
+2. **Princess Liza Bolkonskaya** - Andrei’s first wife, who dies in childbirth.
+
+#### Kuragin Family:
+1. **Anatole Kuragin** - A charming but unscrupulous young man.
+2. **Helene Kuragin** - Anatole’s sister, Pierre’s unfaithful wife.
+3. **Prince Vassily Kuragin** - Their manipulative father.
+
+#### Other Notable Characters:
+1. **Prince Andrei’s Sister** - Princess Maria Bolkonskaya.
+2. **Boris Drubetskoy** - A young, ambitious officer.
+3. **Princess Anna Mikhailovna Drubetskaya** - Boris’s mother, a social climber.
+4. **Fedor Dolokhov** - A ruthless officer and gambler.
+5. **Platon Karataev** - A peasant soldier who influences Pierre.
+6. **General Kutuzov** - The Russian commander in chief.
+7. **Tsar Alexander I** - The emperor of Russia.
+8. **Napoleon Bonaparte** - The French emperor and antagonist.
+
+### Locations:
+1. **Moscow** - The social and cultural heart of Russia.
+2. **Saint Petersburg** - The political capital and location of the royal court.
+3. **Bolkonsky Estate (Bald Hills)** - Andrei Bolkonsky’s family home.
+4. **Rostov Estate (Otradnoe)** - The country estate of the Rostov family.
+5. **Smolensk** - A battleground city.
+6. **Borodino** - The site of the significant battle between Russian and French forces.
+7. **Brunn** - A location of a major battle.
+8. **Austerlitz** - The site of the Battle of Austerlitz.
+9. **Borodino Field** - The battlefield near Moscow.
+10. **Various Military Camps** - Locations across Europe where Russian and French troops encamp.
+
+### Key Events:
+1. **Pierre’s Inheritance** - Pierre Bezukhov becomes the richest man in Russia.
+2. **Andrei Bolkonsky’s Disillusionment** - Andrei grows disillusioned with his life.
+3. **The Battle of Austerlitz** - A significant battle where Russia faces defeat.
+4. **Natasha and Andrei’s Engagement** - Natasha becomes engaged to Andrei.
+5. **Natasha’s Infatuation with Anatole** - Natasha falls for Anatole, leading to a scandal.
+6. **Pierre’s Duels** - Pierre duels Dolokhov over his wife Helene’s infidelity.
+7. **The Battle of Borodino** - A major and bloody battle between Russian and French forces.
+8. **The French Invasion of Moscow** - Napoleon’s forces occupy and later retreat from Moscow.
+9. **Pierre’s Captivity** - Pierre is taken prisoner by the French.
+10. **Death of Prince Andrei** - Andrei is wounded and later dies.
+11. **Natasha and Pierre’s Marriage** - The novel concludes with their union.
+12. **Nikolai Rostov’s Military Service** - Various battles and military experiences.
+13. **Death of Petya Rostov** - Petya dies in the war.
+14. **Kutuzov’s Leadership** - His strategic retreats and ultimate success against Napoleon.
+  Score: -8
+  Created UTC: 2024-07-24 16:30:12
+

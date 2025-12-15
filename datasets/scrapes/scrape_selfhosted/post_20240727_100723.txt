@@ -1,0 +1,26 @@
+Post Title: Anything better than CHANGEDETECTION.IO
+Author: danz0l
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6z1tr/anything_better_than_changedetectionio/
+Number of comments: 14
+Created UTC: 2024-07-19 08:49:50
+
+Post Content:
+I've really tried to love that service but it fails on so many websites and personally is over complex, and the benefits don't seem to outweigh the cumbersome user interface on how you can monitor websites etc. 
+
+Is there anything better or easier to self host ? I want to monitor some websites for changes in events etc and be notified via discord, text or email. 
+
+Top 2 comments:
+Comment 1:
+  Author: Furki1907
+  Comment: This sounds like user error. Mind explaining what your issues are?
+  Score: 8
+  Created UTC: 2024-07-19 09:17:44
+
+Comment 2:
+  Author: YesGoodBuddy
+  Comment: User error 100%
+  Score: 4
+  Created UTC: 2024-07-19 10:39:37
+
+Note: This post has only 2 comments at the time of scraping.

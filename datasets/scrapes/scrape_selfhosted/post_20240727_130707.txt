@@ -1,0 +1,68 @@
+Post Title: Folder Structure Immich TrueNAS
+Author: SCHansmann
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e6bwhk/folder_structure_immich_truenas/
+Number of comments: 4
+Created UTC: 2024-07-18 13:48:50
+
+Post Content:
+New to the whole selfhosted/NAS world so apologies if this is an absolute newbie question. Also if this has been answered I'd be happy if someone could point me to that thread.
+
+So here goes my question:
+
+Can someone explain what the Immich folder structure in Truenas is exactly. The reason being is I have one HDD pool with currently 44TB usable space (which will be expanded as necessary) and an SSD (nvme) pool with 1.5TB usable space. My goal with Immich is to have a decent performing solution to catalogue my photos and videos and I want the NAS to be as silent as possible. Therefore, I want whatever is very frequently accessed (and small in size, I assume sth like thumbnails) to be on the SSD pool and the bulk storage to be on the HDD pool. Can someone point out what folders go where?
+
+Also is there an option for subfolders in the Immich folders? E.g. "Holiday 1 2020" "Holiday 2 2020" etc. or should this be a single file dump?
+
+A last thing: I've heard a lot of people storing their images outside of Immich as well as in the dedicated folders. Is there a particular reason for this? Will a corruption of the Immich app also potentially destroy the data contained in the folders? (Would deduplication be sensible here?)
+
+Thanks a lot in advance!!
+
+Cheers
+
+Top 3 comments:
+Comment 1:
+  Author: mochman
+  Comment: I don't know about the subfolders question, but I'm using the TrueNAS image of immich, and in the configuration settings, you can set the specific mount points for:
+
+* Uploads
+* Images
+* Thumbnails
+* Profiles
+* Videos
+* Database Info
+
+all separately if you need.  So you can put your database and thumbnails on your SSD pool, and the rest on the HDD if you want.
+
+&amp;#x200B;
+
+I also do a separate backup of my photos because of what is said on [immich's github page](https://github.com/immich-app/immich?tab=readme-ov-file#disclaimer).
+
+    ⚠️ The project is under very active development.
+    ⚠️ Expect bugs and breaking changes.
+    ⚠️ Do not use the app as the only way to store your photos and videos.
+    ⚠️ Always follow 3-2-1 backup plan for your precious photos and videos!
+  Score: 2
+  Created UTC: 2024-07-18 14:51:34
+
+Comment 2:
+  Author: Wojojojo90
+  Comment: I don't have true nas but I'm assuming it's still a docker based install, in which case true nas won't have a unique folder structure. Starting at whatever root folder you mount into Immich as the `upload_location` the default folder structure is:
+* encoded_video
+* library
+* thumbs
+* upload
+
+Substructure of `library` will be determined by your storage template, the others use some kind of sharing based on a hash it looks like? Naively you could probably just mount the thumbs directory into the docker container using a different host directory that corresponds to your SSD pool, I've never tried it though
+
+Overall I'd recommend reading the Immich documentation, several of your questions are answered in the post install steps and information about external libraries.
+  Score: 2
+  Created UTC: 2024-07-18 15:28:06
+
+Comment 3:
+  Author: pheitman
+  Comment: I for one keep my source photos separate from immich. I set up an External Library pointing to my top level photo folder and let immich create the thumbnails, etc from it. For me this is ideal because while I love immich I don't want to trust decades of photos to a new app. It might go away or I might find a better one next year. By keeping my data separate from immich's I think that I have the best of both worlds. So my advice is to put your photos on the hdd and configure your immich configuration so that it's mount points are on the ssd.
+  Score: 1
+  Created UTC: 2024-07-18 15:16:20
+
+Note: This post has only 3 comments at the time of scraping.

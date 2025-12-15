@@ -1,0 +1,63 @@
+Post Title: should I expose my wireguard port to the internet,if no how do I do it?
+Author: Civil_Illustrator630
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3miu1/should_i_expose_my_wireguard_port_to_the/
+Number of comments: 8
+Created UTC: 2024-07-15 05:01:51
+
+Post Content:
+how do I expose my wireguard ports to the internet.
+
+Top 7 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: If you want to access your Wireguard from anywhere: Yes. It’s called port forwarding. Check your routers manual on how to do it.
+  Score: 8
+  Created UTC: 2024-07-15 05:11:59
+
+Comment 2:
+  Author: Pesoen
+  Comment: IIRC only one port is really needed to be forwarded(51820) but make sure you have a public ip, and make sure to only open ports you actually need to open(no reason to open a port to the internet if it is not needed)
+  Score: 5
+  Created UTC: 2024-07-15 06:23:03
+
+Comment 3:
+  Author: Enigma_0001
+  Comment: You have to yes, I have currently done it for three devices. My phone, laptop and work devices. So far I haven't had any issues and no sort of security breaches.
+
+Keep in mind that I do observe my network overall and might act abit paranoid since I don't want people breaching my personal space.
+
+A little sidenote, when connecting from another network into yours that sometimes the port of your current network might not allow it. This has happened to me at work before and I had to talk to my internal IT to allow the port.
+  Score: 2
+  Created UTC: 2024-07-15 07:14:47
+
+Comment 4:
+  Author: StockerRumbles
+  Comment: Yes you need to if you want people to correct from elsewhere
+
+It's only the UDP port, not TCP. 51820 is the default iirc
+
+How you would do it would depend on your network setup
+  Score: 2
+  Created UTC: 2024-07-15 06:48:44
+
+Comment 5:
+  Author: K3CAN
+  Comment: Yes. If it is on the router itself, then you just need to open the port for upd. If it's on a different system, then you'll need to forward the appropriate port from the router to that system.
+  Score: 2
+  Created UTC: 2024-07-15 10:24:00
+
+Comment 6:
+  Author: Slow_Wafer3174
+  Comment: One nice feature is that it will silently discard packets that don't have the MAC header too.
+  Score: 1
+  Created UTC: 2024-07-15 10:43:31
+
+Comment 7:
+  Author: mar_floof
+  Comment: Should you?  Only if you want your VPN to work.
+
+How to?  Look in your router/firewalls manual. Your looking for “port forwarding”
+  Score: 2
+  Created UTC: 2024-07-15 11:21:51
+

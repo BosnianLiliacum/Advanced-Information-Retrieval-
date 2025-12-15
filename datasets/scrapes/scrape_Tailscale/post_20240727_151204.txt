@@ -1,0 +1,47 @@
+Post Title: DNS issues when using an exit node
+Author: MadMic1314
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1eckz5i/dns_issues_when_using_an_exit_node/
+Number of comments: 1
+Created UTC: 2024-07-26 10:43:50
+
+Post Content:
+Looking for some help here, hopefully someone can help me figure this out.
+
+Tl;dr: When using home server as exit node, TS client doesn't use the home DNS server.
+
+  
+My setup:
+
+* TS in Docker in Ubuntu
+* TS console configured to use home AdGuard service (running on another physical device) for DNS
+* AdGuard has hostnames for services on the LAN for example [sonarr.home.com](http://sonarr.home.com) \[example domain\] points to [192.168.1.20](http://192.168.1.20)
+* External DNS has [sonarr.home.com](http://sonarr.home.com) to a CNAME to my Dynamic IP service (this is used for LetsEncrypt)
+* Sonarr is configured to point to the url of the service for HTTPS use
+
+  
+The issue:
+
+* Open TS + connect, don't use an exit node then DNS (100.100.100.100 TS Magic DNS) resolves to the internal 192.168 address with no issue
+* Turn on exit node, DNS (100.100.100.100 TS Magic DNS) server which points to the external IP. My firewall doesn't like this and blocks it
+
+  
+What I've tried
+
+* Docker container configured with "TS\_ACCEPT\_DNS=true"
+* Tested on both my windows laptop and Android phone &amp; tablet
+* TS admin - Magic DNS turned on and off (not off)
+* TS admin - DNS server set to the IP of AdGuard, then router (which also does split DNS for internal services)
+* TS admin - used split DNS for [home.com](http://home.com) domain, removed this as well
+
+  
+Does anyone have any ideas on this? It's not a major on as I can simply turn exit node on and off, but it's a pain and bugging me.
+
+Top 1 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 1
+  Created UTC: 2024-07-26 11:36:02
+
+Note: This post has only 1 comments at the time of scraping.

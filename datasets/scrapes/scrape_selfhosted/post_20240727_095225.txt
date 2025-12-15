@@ -1,0 +1,20 @@
+Post Title: Introducing GeniusUI: Build beautiful UI designs from simple text prompts.
+Author: Infinite-Report-5959
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7qi06/introducing_geniusui_build_beautiful_ui_designs/
+Number of comments: 2
+Created UTC: 2024-07-20 07:58:15
+
+Post Content:
+GeniusUI is live here at: [geniusui.carrd.co](http://geniusui.carrd.co)
+
+Check it out guys and let me know what you think. Also suggest me some features and improvement. And if someone is interested in building this project.. you're free to DM me.
+
+Top 1 comments:
+Comment 1:
+  Author: autisticit
+  Comment: Footer says 2023 but we are in 2024
+  Score: 5
+  Created UTC: 2024-07-20 10:15:41
+
+Note: This post has only 1 comments at the time of scraping.

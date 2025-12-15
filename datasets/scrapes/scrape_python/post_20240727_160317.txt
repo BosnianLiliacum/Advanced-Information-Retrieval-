@@ -1,0 +1,83 @@
+Post Title: Is the damage psf/Black has done to the community reversible?
+Author: Training_Parking6543
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1econ4s/is_the_damage_psfblack_has_done_to_the_community/
+Number of comments: 134
+Created UTC: 2024-07-26 13:52:41
+
+Post Content:
+I really don't understand why the Python Black formatter seems to be so popular. What is the point of a non-configurable and highly biased code formatter? I see no benefit in making all the code in the world look the same. They claim they are ending discussions about code formatting, but in reality they have sparked the biggest debate ever in the Python community with their subjective and often contradictory methods that have evolved over decades of established practices without the ability to configure the formatter. \[1\]\[2\] The single/double quote disaster is just the most prominent example.
+
+There are people out there who put readability above consistency with every other code base in the world that they will never come into contact with.
+
+What bothers me most is the detachment of the Black developers, who dismiss all objections to their style choices as if they were opinions, and end every discussion by saying, you are just expressing an opinion and we prefer ours. But that is not true, there were many reasons, objectively measurable reasons, why this or that decision is better. Someone else might weigh these reasons differently and therefore come to a different conclusion. But the arguments used to enforce Black's decisions have never stood the test of time in a factual discussion.
+
+I also notice that younger developers (&lt; 35 years) are more likely to accept this approach than the more experienced ones.
+
+
+
+\[1\] [https://github.com/psf/black/issues/1252](https://github.com/psf/black/issues/1252)
+
+\[2\] [https://github.com/psf/black/issues/373](https://github.com/psf/black/issues/373)
+
+Top 7 comments:
+Comment 1:
+  Author: CombatClaire
+  Comment: Unsolicited epistemological advice: whenever you catch yourself saying "what's the point of X??", convert it from a cynical and dismissive rhetorical question into a genuine "hmm, I don't know, what _is_ the point of X?" and go learn something.
+  Score: 213
+  Created UTC: 2024-07-26 14:26:52
+
+Comment 2:
+  Author: kenflingnor
+  Comment: &gt; What is the point of a non-configurable and highly biased code formatter?
+
+It's spelled out in their README and countless other places
+
+&gt; but in reality they have sparked the biggest debate ever in the Python community with their subjective and often contradictory methods that have evolved over decades of established practices without the ability to configure the formatter
+
+I'm not sure two issues with only a couple of handfuls of comments qualify as "the biggest debate ever in the Python community".  Also, in the issue regarding quoting style you can see that there is an option to override this if you feel strong enough about it (most people don't)
+
+The standard library is full of inconsistencies around styles and conventions.  Have you seen logging?
+
+&gt; I also notice that younger developers (&lt; 35 years) are more likely to accept this approach than the more experienced ones.
+
+You can spin this argument in the other direction: I've worked with plenty of older devs who are set in stone with their ways, often writing Python like it's C or Java.  Also, not sure how why have to be &gt; 35 years to be considered "experienced" based on your phrasing
+  Score: 90
+  Created UTC: 2024-07-26 14:14:22
+
+Comment 3:
+  Author: GXWT
+  Comment: What is the reason you see no benefit in making all code look the same/formatted in a similar way?
+
+I’m not arguing for or against - I honestly couldn’t care less. But I’m struggling to come up with a reason why you wouldn’t want all code consistent?
+  Score: 87
+  Created UTC: 2024-07-26 14:06:01
+
+Comment 4:
+  Author: dametsumari
+  Comment: Any project that has more than one developer needs code style policy. Easiest way to do it is by auto formatting based on configuration and validating commits are formatted in CI. Ruff is the sane tool for this - faster more configurable and does a lot more stuff than black.
+  Score: 67
+  Created UTC: 2024-07-26 14:13:58
+
+Comment 5:
+  Author: wyldstallionesquire
+  Comment: I’m happy to ignore the few corner cases where readability suffers to never think about formatting or discuss it in a PR. We tweaked our line length a bit to get results we liked, then left it. 
+
+Not sure what you’re so upset about, to be honest. I haven’t seen the “damage” you’re referring to
+  Score: 50
+  Created UTC: 2024-07-26 14:08:03
+
+Comment 6:
+  Author: DeprecationWarning
+  Comment: I’ve been writing Python for 25 years. I use Black precisely because it doesn’t require thinking and doesn’t allow debate. It does not give any space for teams to quibble over the minutiae. I dislike some of its output, but when you have a lot of devs in one code base (either teams in a company or contributors on an open project) it is way easier to work together if you simply never, ever have to debate styleguide. 
+
+People who are choosing Black today over anything else are imho largely doing it for convenience. If you don’t like its output you’re still entirely capable of writing your own yapf configuration, advocating for it within your team, and making it your standard. That’s just not something most professional devs want to spend their time and energy on.
+  Score: 16
+  Created UTC: 2024-07-26 15:15:53
+
+Comment 7:
+  Author: 19c766e1-22b1-40ce
+  Comment: You know that you don't have to use Black, right? You can go ahead and use any other formatter that suits your needs and configure it how you wish. While you that, I'll be coding away, not thinking about formatting.
+  Score: 43
+  Created UTC: 2024-07-26 14:17:14
+

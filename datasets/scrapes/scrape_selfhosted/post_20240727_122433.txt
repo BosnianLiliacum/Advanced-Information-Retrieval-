@@ -1,0 +1,22 @@
+Post Title: Manage LDAP
+Author: Psychological_Try559
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8tgnj/manage_ldap/
+Number of comments: 1
+Created UTC: 2024-07-21 18:49:02
+
+Post Content:
+I've seen a new rash of "should I use an individual database per service or a single database per network" &amp; personally I tried the shared database and prefer one per service.  But all this got me thinking about LDAP.
+
+The whole idea with LDAP is that it's unified, so the one per service doesn't work the same way it does for databases....unless they can be kept in sync.
+
+I'm curious how those of you who use LDAP handle this aspect of it.  Is it firewalled off on a VLAN? Do you gave a local instance?
+
+Top 1 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Everything is sitting in their own VLAN/VXLAN and everything has ACL. No need to give full access on all ports from your printers subnet to your LDAP servers. I personally only use AD as IdP, and just like with any other service stack, everything is fully isolated from each other. You can use 4000 VLANs, better make use of them 😉.
+  Score: 2
+  Created UTC: 2024-07-21 19:11:43
+
+Note: This post has only 1 comments at the time of scraping.

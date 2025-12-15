@@ -1,0 +1,30 @@
+Post Title: Is it possible to use tailscale along with prowlarr? 
+Author: North-Cat2877
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ecqaf0/is_it_possible_to_use_tailscale_along_with/
+Number of comments: 12
+Created UTC: 2024-07-26 15:02:11
+
+Post Content:
+Trying to get an automation setup with an old pc as server 
+
+Top 3 comments:
+Comment 1:
+  Author: ScoobyDoo27
+  Comment: What are you trying to do? Access prowlarr outside of your network?
+  Score: 1
+  Created UTC: 2024-07-26 16:20:58
+
+Comment 2:
+  Author: willjasen
+  Comment: i access my *arr instances via their web interface via tailscale, the other actions they perform are outside of that
+  Score: 1
+  Created UTC: 2024-07-27 04:22:58
+
+Comment 3:
+  Author: WetFishing
+  Comment: What are you trying to do? Access Prowlarr outside of your network or send prowlarr through a vpn connection that your isp can’t detect? You’re contradicting yourself in previous comments.
+  Score: 1
+  Created UTC: 2024-07-27 05:25:44
+
+Note: This post has only 3 comments at the time of scraping.

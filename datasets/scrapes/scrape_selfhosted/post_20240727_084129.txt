@@ -1,0 +1,106 @@
+Post Title: Introducing Belullama: An All-in-One AI Application Bundle for Local Deployment
+Author: RIP26770
+Score: 31
+URL: https://www.reddit.com/r/selfhosted/comments/1ebyger/introducing_belullama_an_allinone_ai_application/
+Number of comments: 19
+Created UTC: 2024-07-25 15:58:12
+
+Post Content:
+Hey Reddit!
+
+[Belullama](https://preview.redd.it/o82v6farsoed1.png?width=192&amp;format=png&amp;auto=webp&amp;s=5f370b277a3e389dc834e1a46df2423a92408f3d)
+
+I'm excited to announce the release of Belullama, a comprehensive AI application that bundles the latest versions of Ollama, Open WebUI, and Automatic1111 (Stable Diffusion WebUI) into a single, easy-to-use package.
+
+
+
+🔗 GitHub Repository: [https://github.com/ai-joe-git/Belullama](https://github.com/ai-joe-git/Belullama)
+
+
+
+🚀 Key Features:
+
+- All-in-One AI Platform: Integrates Ollama, Open WebUI, and Automatic1111
+
+- Easy Setup: Simple installer script for quick deployment
+
+- Conversational AI: Create and manage chatbots with ease
+
+- Image Generation: Use Stable Diffusion models through Automatic1111 WebUI
+
+- User-Friendly Interface: Intuitive interaction with language models
+
+- Offline Operation: Run entirely on your local machine for privacy and security
+
+- Extensibility: Customize to meet your specific needs
+
+
+
+💻 Installation:
+
+Stand-alone installation is as simple as running:
+
+\`\`\`
+
+curl -s [https://raw.githubusercontent.com/ai-joe-git/Belullama/main/belullama\_installer.sh](https://raw.githubusercontent.com/ai-joe-git/Belullama/main/belullama_installer.sh) | sudo bash
+
+\`\`\`
+
+We also offer an optional installation for CasaOS users.
+
+
+
+🤔 Why Belullama?
+
+Belullama aims to simplify the process of setting up and using powerful AI tools locally. Whether you're a developer, researcher, or AI enthusiast, Belullama provides a streamlined way to experiment with large language models and image generation.
+
+
+
+We welcome contributions, feedback, and feature requests. Check out our GitHub repository for more details and to get started!
+
+
+
+Let me know if you have any questions. I'm excited to see what the community builds with Belullama!
+
+
+
+Top 6 comments:
+Comment 1:
+  Author: nashosted
+  Comment: Is this using Open WebUI interface? Looks very similar. Nice work.
+  Score: 5
+  Created UTC: 2024-07-25 17:00:52
+
+Comment 2:
+  Author: awfulcitizen
+  Comment: \`We also offer an optional installation for CasaOS users.\` --- Where is the installer for this?
+  Score: 2
+  Created UTC: 2024-07-25 21:31:50
+
+Comment 3:
+  Author: Ok_Fix9727
+  Comment: I know you mentioned at one time doing one that uses Nvidia GPUs.. Is this the one or are you still working on another release? If so I give you so much credit for putting so much effort and time into these. Thank you.
+  Score: 2
+  Created UTC: 2024-07-26 00:00:25
+
+Comment 4:
+  Author: KingPinX
+  Comment: this seems pretty cool, thanks for sharing! I will definitely check it out once the nvidia support makes it into the system.
+  Score: 2
+  Created UTC: 2024-07-26 13:17:07
+
+Comment 5:
+  Author: tomatoinaction
+  Comment: Docker? Anyone? Or too complex?
+  Score: 1
+  Created UTC: 2024-07-26 17:13:51
+
+Comment 6:
+  Author: Nyxiereal
+  Comment: &gt; AI images in repo
+
+Will not download
+  Score: 0
+  Created UTC: 2024-07-26 08:18:17
+
+Note: This post has only 6 comments at the time of scraping.

@@ -1,0 +1,20 @@
+Post Title: Concept2/ErgData Locally
+Author: ExaminationSerious67
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1ecp5bv/concept2ergdata_locally/
+Number of comments: 1
+Created UTC: 2024-07-26 14:14:35
+
+Post Content:
+Just wondering if there is any local self hosted versions of a logbook for this?  Most apps that I can see will pull from Strava, which I can setup an integration from Concept2 logbook, but, that is then 2 places that have all my data.  
+
+Is there some self hosted version that will not have any of my data leave the house?
+
+Top 1 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: I would be interested in this too actually. I don't particularly like the concept2 log site.
+  Score: 3
+  Created UTC: 2024-07-26 14:28:48
+
+Note: This post has only 1 comments at the time of scraping.

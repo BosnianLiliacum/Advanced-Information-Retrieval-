@@ -1,0 +1,27 @@
+Post Title: Headscale not using local DNS
+Author: Headless0305
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3e59p/headscale_not_using_local_dns/
+Number of comments: 3
+Created UTC: 2024-07-14 22:00:54
+
+Post Content:
+I have headscale and Adguard on a VPS, and I'm trying to make headscale use adguard as a dns resolver.
+
+[Headscale config](https://hastebin.com/share/haqonotama.yaml)
+
+[Adguard config](https://hastebin.com/share/gexivasaja.yaml)
+
+[Hetzner firewall Settings](https://imgur.com/a/bFTizVN)  
+For the life of me, I can't seem to get this thing to work. It connects to the vpn, but it doesn't use the dns resolver. What am I doing wrong?
+
+Top 1 comments:
+Comment 1:
+  Author: Chucks_Punch
+  Comment: Not super familiar with adguard, does it happen to have a setting that permits DNS queries from all origins?
+
+PiHole has that as an option. It had to be enabled for my DNS server to accept queries from an IP range that was different than the one the DNS server was on.
+  Score: 1
+  Created UTC: 2024-07-15 01:58:55
+
+Note: This post has only 1 comments at the time of scraping.

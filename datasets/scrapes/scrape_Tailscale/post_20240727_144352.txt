@@ -1,0 +1,26 @@
+Post Title: Is an Elastic IP Necessary for NAT to SSH in ec2?
+Author: Slow-Marionberry-341
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ec637g/is_an_elastic_ip_necessary_for_nat_to_ssh_in_ec2/
+Number of comments: 3
+Created UTC: 2024-07-25 21:09:03
+
+Post Content:
+I configured my EC2 instance to use SSH, and it worked. However, I later discovered that the VPC I created has a NAT using an Elastic IP address, which incurs charges on AWS. Is it necessary to use an Elastic IP for this setup? 
+
+
+
+Ideally, I want a zero-cost setup without incurring such expenses.
+
+Top 1 comments:
+Comment 1:
+  Author: pri11er
+  Comment: Not if you go IPv6 only.   There is no charge for IPv6 addresses.
+
+If you want IPv4, you have to pay for the Elastic IP address.
+
+Side Note:  If you are using the free t4g.small instance, you will also pay for the disk you attach.  There is no such thing as zero-cost.
+  Score: 1
+  Created UTC: 2024-07-26 18:31:38
+
+Note: This post has only 1 comments at the time of scraping.

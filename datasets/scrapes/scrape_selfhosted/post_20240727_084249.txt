@@ -1,0 +1,80 @@
+Post Title: How often are we updating docker containers?
+Author: ChoiceAssociation987
+Score: 35
+URL: https://www.reddit.com/r/selfhosted/comments/1ebvxa1/how_often_are_we_updating_docker_containers/
+Number of comments: 68
+Created UTC: 2024-07-25 14:13:21
+
+Post Content:
+I run a few docker containers like audiobookshelf, uptime-kuma, and traefik. Just wanted get a general idea on how often do you update your containers. Also, do you update for all minor and patch versions like from 2.10.0 to 2.11.0 in case of abs?  
+Also, I am using renovate to keep my compose files updated. 
+
+Top 7 comments:
+Comment 1:
+  Author: TentacleSenpai69
+  Comment: Every couple weeks a thought crosses my mind: "I didn't update my homeserver with all the containers for quite a while" and then I do a docker compose pull and docker compose up -d and pray there were no breaking changes to the compose file or anything else. Most of the time it works out fine
+  Score: 100
+  Created UTC: 2024-07-25 14:55:29
+
+Comment 2:
+  Author: Tillermain
+  Comment: I use watchtower for a majority of my containers and schedule it to update containers in my off-hours, usually earlier in the morning when I assume no one is using any services. 
+
+As for other more "mission critical" containers, such as pi-hole, I update those manually usually around once a month - or whenever I think of it. 
+
+The last thing I want is watchtower to pull in updates and for my DNS server to blow up, makes for an unhappy wife.
+  Score: 35
+  Created UTC: 2024-07-25 14:43:05
+
+Comment 3:
+  Author: FeehMt
+  Comment: I use watchtower to automatically update them.
+
+Not a smart move tbh. Sometimes they break.
+
+But so far so good.
+
+Edit: sometimes it update nodered/home assistant and I may get some weird behavior with my home automation until it settle down. 
+
+I’m too lazy to do the proper maintenance; things are in the set’n’forget scheme
+  Score: 35
+  Created UTC: 2024-07-25 14:21:08
+
+Comment 4:
+  Author: MrDaGree
+  Comment: My renovatebot config edits my ansible playbook versions for my containers daily if there’s an update then auto merges the PRs between 1am and 5am which deploys the new updates for minor and patch updates that way i have git history for it
+  Score: 8
+  Created UTC: 2024-07-25 16:41:58
+
+Comment 5:
+  Author: Old-Resolve-6619
+  Comment: None of mine are public so very rarely. Supply chain attacks are a thing (I’m in cyber security) so I recommend only updating when you’ve checked the changes and verified no shenanigans are afoot. 
+
+I also use a local repo instead of remote, and after I approve the changes they go into the local repo.
+
+When I used to have public ones, if a vulnerability popped up they’d auto shut down pending me updating them. 
+
+I’m simply and so it all via docked-compose and scripts.
+  Score: 5
+  Created UTC: 2024-07-25 16:52:08
+
+Comment 6:
+  Author: rgmelkor
+  Comment: I automatically:
+
+- Backup all my VMs in proxmox every Monday and Tuesday at 3AM
+- Update all my containers at 5AM every Monday 
+- Backup my proxmox backups to a NAS every Monday at 5AM
+
+This way I have all updated and if im in a rush and something broke I can just use the recent created backup of the VM so I can keep going just before the update.
+  Score: 4
+  Created UTC: 2024-07-25 16:37:13
+
+Comment 7:
+  Author: fuuman1
+  Comment: My critical containers are updated manually (read changelog, update, test). These are for example HA, Paperless and Vaultwarden.
+
+Non-critical stuff is updated automatically by Watchtower once every week. One hour after my backup. That's for example my wiki, IT-Tools, Stirling, Code-Server and Grafana.
+  Score: 5
+  Created UTC: 2024-07-25 16:29:19
+

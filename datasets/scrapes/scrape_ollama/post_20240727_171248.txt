@@ -1,0 +1,18 @@
+Post Title: How to install Ollama on replit
+Author: Zealousideal_Lion_12
+Score: 2
+URL: https://www.reddit.com/r/ollama/comments/1ecpu6m/how_to_install_ollama_on_replit/
+Number of comments: 1
+Created UTC: 2024-07-26 14:43:48
+
+Post Content:
+Basically the title. I'm a beginner to coding and AI. I'm trying to make a discord chat bot and I want to host in on a cloud platform. So I wanted to know how it can be done (if it can be done)? Is ollama designed to run run only locally?
+
+Top 1 comments:
+Comment 1:
+  Author: SAPPHIR3ROS3
+  Comment: Ollama is a server bu default but i wouldn’t use replit, while it’s amazing to code small projects i would suggest something like aws, linode, azure or digital ocean (these are the first that came to my mind) or you could do it the “hard” way and take a mini pc of sort to act as a server, this obviously depends on what model you are planning to run, because you  will need a much more powerful pc tu run llama 3.1 70b than llama 3.1 8b OR any pc if you use api like groq (fast and free) as long that it’s always on
+  Score: 1
+  Created UTC: 2024-07-26 15:14:27
+
+Note: This post has only 1 comments at the time of scraping.

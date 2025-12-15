@@ -1,0 +1,24 @@
+Post Title: Selfhosted Services not accessible with Cloudflare nor Duckdns
+Author: gingerb3ard_man
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e77m9w/selfhosted_services_not_accessible_with/
+Number of comments: 2
+Created UTC: 2024-07-19 16:14:51
+
+Post Content:
+Has anyone else had issues connecting to their services in the last 24 hours? Could it be connected to the Microsoft outages across the USA? I cannot access my services locally with duckdns nor outside with cloudflare anymore.
+
+Top 2 comments:
+Comment 1:
+  Author: ConstantGlobal3961
+  Comment: I also noticed the same thing. I came across this site that mentioned scheduled maintenance. I strongly suspect that it has to do with the outage
+  Score: 1
+  Created UTC: 2024-07-19 17:48:11
+
+Comment 2:
+  Author: anyma6
+  Comment: https://www.cloudflarestatus.com/
+  Score: 1
+  Created UTC: 2024-07-19 18:22:48
+
+Note: This post has only 2 comments at the time of scraping.

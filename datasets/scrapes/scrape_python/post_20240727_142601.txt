@@ -1,0 +1,65 @@
+Post Title: Introducing textscope: A Python Library for Text Analysis 🔍📚💡🛠️
+Author: usc-ur
+Score: 25
+URL: https://www.reddit.com/r/Python/comments/1eaanlr/introducing_textscope_a_python_library_for_text/
+Number of comments: 7
+Created UTC: 2024-07-23 15:26:45
+
+Post Content:
+Hi everyone! 👋
+
+I'm excited to share my new project, **textscope**, a Python library for relevance and subtheme detection in text.
+
+# Key Features:
+
+* **🔍 Relevance Analysis:** Determines if a text is relevant to predefined profiles.
+* **📚 Subtheme Detection:** Identifies specific subthemes within texts.
+* **💡 Flexible Configuration:** Configure via c`onfig.py.`
+* **🛠️ Multilingual and Versatile:** Supports multiple languages and adaptable to various scenarios.
+
+# Installation:
+
+    pip install textscope
+    
+
+# Usage Example:
+
+    from textscope.relevance_analyzer import RelevanceAnalyzer
+    
+    model_name = 'intfloat/multilingual-e5-large-instruct'
+    text = "This article discusses the latest advancements in AI and machine learning."
+    analyzer = RelevanceAnalyzer(model_name)
+    rel_score = analyzer.analyze(text)
+    print(rel_score)  # Returns a high relevance score for the topics.
+    
+
+Check out the GitHub repository here: [textscope](https://github.com/MarcosFP97/textscope)
+
+Looking forward to your feedback and suggestions. Thanks for your time!
+
+Top 3 comments:
+Comment 1:
+  Author: marr75
+  Comment: I can't see where this adds value over the transformers library it very thinly wraps.
+
+Also, it does have a file called config.py but you're expecting people who install it to customize that file? That's... atypical and suboptimal for most use cases. Are you really expecting someone will pip install this library then go directly edit `&lt;site packages&gt;/textscope/config.py`?
+
+I would not recommend this library in its current state.
+  Score: 11
+  Created UTC: 2024-07-23 21:58:49
+
+Comment 2:
+  Author: denehoffman
+  Comment: So it’s a wrapper for a transformer?
+  Score: 14
+  Created UTC: 2024-07-23 16:23:29
+
+Comment 3:
+  Author: Think-Memory6430
+  Comment: I’m curious what’s going on with all these “library announcements” that have been posted recently. They all look similar in how they announce.
+
+OP, independent of the library itself, are you doing this as part of a coding school or something? Just wondering about the pattern of library announcements here.
+  Score: 1
+  Created UTC: 2024-07-24 10:18:22
+
+Note: This post has only 3 comments at the time of scraping.

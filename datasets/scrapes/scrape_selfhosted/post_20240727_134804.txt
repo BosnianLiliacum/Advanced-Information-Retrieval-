@@ -1,0 +1,31 @@
+Post Title: How to automate magazines
+Author: ahjaok
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e3t9u9/how_to_automate_magazines/
+Number of comments: 2
+Created UTC: 2024-07-15 12:13:43
+
+Post Content:
+I’m curious if anyone has automized monthly/weekly/daily magazines (or newspapers) from download to organized in folders and make it available on some client with a reading app?
+
+For tv shows, movies, ebooks and songs everything is more or less straight forward. But for magazines somehow it’s not that easy.
+
+Currently I have configured sabnzbd to pull the magazines via a filtered rss feed. But where to go from here? What to use to move and organize the magazines and what to use to read them?
+
+(I have tried Readarr and LazyLibrarian. They don’t support magazines)
+
+Top 2 comments:
+Comment 1:
+  Author: Odd-Let9042
+  Comment: I do something similar with Calibre and Kindle. I have a Calibre recipe that downloads a bunch of rss feeds and create an ebook, then it sends the ebook to my Kindle account using email and I can read it from my Kindle or from my iPhone with the Kindle app. I don’t have it scheduled but I launch it using a shortcut from iOS sending an ssh command to my homeland. 
+The subscribed rss feed is actually the starred feed of my TTRSS instance. So I daily scroll through my feeds, I star what I want to read later and when I’m ready I launch the shortcut.
+  Score: 2
+  Created UTC: 2024-07-15 12:28:51
+
+Comment 2:
+  Author: AssociateNo3312
+  Comment: Rss Feeds in Sabnzbd.   Doesn't do the organisiation, but I just load to nextcloud and view/delete
+  Score: 1
+  Created UTC: 2024-07-15 23:26:41
+
+Note: This post has only 2 comments at the time of scraping.

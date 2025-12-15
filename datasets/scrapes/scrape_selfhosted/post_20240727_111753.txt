@@ -1,0 +1,58 @@
+Post Title: Messed Up: Got a .US domain on Cloudflare, and now I am on WHOIS. I am willing to ditch the domain. What can I do to protect myself from spam?
+Author: RestInThee
+Score: 98
+URL: https://www.reddit.com/r/selfhosted/comments/1ecv403/messed_up_got_a_us_domain_on_cloudflare_and_now_i/
+Number of comments: 74
+Created UTC: 2024-07-26 18:21:05
+
+Post Content:
+What it says in the title. I got a domain name, and now I am receiving a lot of spam. I would like to stop that if I can. If I delete my domain, will people still hound me?
+
+Top 7 comments:
+Comment 1:
+  Author: Penetal
+  Comment: When u get spam / scam calls I always use my attempt at time waste ratio investment. I simply say something like "let me get &lt;the guy&gt;" for whatever they want and just mute my phone mic and put it away letting them hold for however long they care to before hanging up. Best ratio for my wasted time to theirs.
+  Score: 158
+  Created UTC: 2024-07-26 22:06:07
+
+Comment 2:
+  Author: dontevendrivethatfar
+  Comment: I had the exact same mistake. I ditched the domain the next day and cloudflare CS took me off the whois and even refunded me but I still get calls from people who want to build a website for my "business".  
+
+
+It slowed down after a few months but I do get 3-4 calls a week still. The spam blocking settings in the OneUI phone app are clutch
+  Score: 131
+  Created UTC: 2024-07-26 19:05:09
+
+Comment 3:
+  Author: Xenthys
+  Comment: I am still occasionally receiving spam about a domain name I let expire at least 5 years ago.
+
+Add your own domain name to your spam filter to trash every email talking about it once it has expired, in the meantime try to put another email address in the WHOIS information, no idea if Cloudflare lets you do that though.
+  Score: 44
+  Created UTC: 2024-07-26 18:33:10
+
+Comment 4:
+  Author: Butthurtz23
+  Comment: I use burner phone numbers and P.O. Box address for Whois.
+  Score: 21
+  Created UTC: 2024-07-26 19:14:26
+
+Comment 5:
+  Author: VVaterTrooper
+  Comment: RIP your inbox.
+  Score: 7
+  Created UTC: 2024-07-26 18:37:25
+
+Comment 6:
+  Author: ArgoPanoptes
+  Comment: The issue is that there are a lot of bots farming these info and cache them for spam campaigns. Even if CF removes everything, those bots will still have your info and keep spamming you. Get an app to filter the call spam. For the email, get a client like FairMail which by default blocks any tracker. This is important because with normal email clients, if you open the email, the sender will know it and keep spamming you.
+  Score: 7
+  Created UTC: 2024-07-26 21:49:40
+
+Comment 7:
+  Author: brad9991
+  Comment: Doesn't Cloudflare registration privacy protection? ...I mean I know it does cause I have several domains through them and none of my information shows up on WHOIS
+  Score: 7
+  Created UTC: 2024-07-27 00:58:59
+

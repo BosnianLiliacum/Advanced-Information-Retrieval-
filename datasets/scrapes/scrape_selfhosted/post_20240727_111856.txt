@@ -1,0 +1,27 @@
+Post Title: Specific Homarr Question
+Author: StryderXGaming
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ecsgx8/specific_homarr_question/
+Number of comments: 3
+Created UTC: 2024-07-26 16:31:25
+
+Post Content:
+Looking at this image:
+
+https://noted.lol/content/images/size/w1600/2023/09/homarr-self-hosted-dashboard-2-noted.lol-1.png
+
+How do you get the tracker for Memory / Cpu Temps / Storage
+
+Specifically in unraid? I see the system health monitoring under the widgets which I assumed would be what I need, but just keeps giving me 'Unable to find your system'. Which I'm sure has to do with it running in a docker container, just not sure how to fix or if I can.
+
+Top 1 comments:
+Comment 1:
+  Author: Jackson_drake
+  Comment: If i remember correctly it was done using [dashdot](https://getdashdot.com/) integration.
+
+Edit:
+Check [Homarr Hardware Integrations](https://homarr.dev/docs/integrations/hardware) out.
+  Score: 2
+  Created UTC: 2024-07-26 19:06:31
+
+Note: This post has only 1 comments at the time of scraping.

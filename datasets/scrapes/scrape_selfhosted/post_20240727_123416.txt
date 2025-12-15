@@ -1,0 +1,27 @@
+Post Title: I purchased a new VPS with Ubuntu 24.04, can I use YUNOHOST and another self hosting service like Cloudron or Easypanel?
+Author: xkingxkaosx
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8bu4r/i_purchased_a_new_vps_with_ubuntu_2404_can_i_use/
+Number of comments: 2
+Created UTC: 2024-07-21 02:15:49
+
+Post Content:
+Hello everyone!
+
+  
+I have 1 VPS already I been using for a year using just YUNOHOST but I purchased another separate VPS with just a Ubuntu server currently self hosting with Easypanel.
+
+  
+Since the new VPS has Ubuntu server on it, can I install YUNOHOST along side of Easypanel? 
+
+  
+Easypanel is like a docker type container while YUNOHOST is completely different, not sure if they will conflict or possibly use the same resources. Anybody done this or currently doing this please share with me your experience's, do's and dont's or it can not simply be done.
+
+Top 1 comments:
+Comment 1:
+  Author: Vessel_ST
+  Comment: Yunohost only runs on Debian.
+  Score: 4
+  Created UTC: 2024-07-21 02:24:03
+
+Note: This post has only 1 comments at the time of scraping.

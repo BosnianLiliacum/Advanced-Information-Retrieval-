@@ -1,0 +1,36 @@
+Post Title: Looking for a Self Hosted Tripit like clone
+Author: danz0l
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1eb35i1/looking_for_a_self_hosted_tripit_like_clone/
+Number of comments: 5
+Created UTC: 2024-07-24 14:41:07
+
+Post Content:
+Basically something to help me with my vaction plans for myself and my family. Would be great to have flight automations etc as well but currently using a spreadsheet for location ideas, costs etc so anything better than that is a bonus. 
+
+Top 3 comments:
+Comment 1:
+  Author: Losconquistadores
+  Comment: Some suggestions here (can please provide some feedback if you happen to try any of them?): 
+
+
+https://www.reddit.com/r/selfhosted/comments/10uzhmt/selfhosted_travel_planning_facilitation_tool/
+  Score: 1
+  Created UTC: 2024-07-24 17:35:14
+
+Comment 2:
+  Author: LoreneMcauley81
+  Comment: Have you tried using Notion or Trello for organizing your vacation plans? They offer great templates and integrations that might suit your needs. If you need to create quick how-to videos for family members on how to use these tools, Ive found Guidde super helpful for making those instructional clips.
+  Score: 1
+  Created UTC: 2024-07-26 00:05:01
+
+Comment 3:
+  Author: mattsteg43
+  Comment: How do you use tripit and for what features?
+
+
+I use it, but don't see how I'd use it for location ideas or costs...so not really clear what you want.
+  Score: 1
+  Created UTC: 2024-07-24 18:33:18
+
+Note: This post has only 3 comments at the time of scraping.

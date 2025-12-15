@@ -1,0 +1,52 @@
+Post Title: Jellyfin DLNA
+Author: Dangerous-1234
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e5qiox/jellyfin_dlna/
+Number of comments: 11
+Created UTC: 2024-07-17 19:08:43
+
+Post Content:
+I have a Jellyfin 10.9.7 server running on Docker in Ubuntu. Despite exposing port 1900 (UDP) and installing the DLNA plugin, Jellyfin doesn’t detect my Samsung Smart TV with Tizen 2.3. However, using Web Video Cast from my mobile successfully connects to the TV over DLNA, and my Windows PC also recognizes it. Could there be a configuration missing or another reason causing this issue? Additionally, I’ve set up a reverse proxy using Cosmos and exposing port 8096 for local usage.
+
+Top 4 comments:
+Comment 1:
+  Author: lordpayder
+  Comment: [https://jellyfin.org/docs/general/networking/dlna/](https://jellyfin.org/docs/general/networking/dlna/)
+
+DLNA is based on uPnP. DLNA will send a broadcast signal from Jellyfin. This broadcast is limited to Jellyfin's current subnet. If you are using docker, the network should use Host Mode, otherwise the broadcast signal will only be sent in the bridged network inside of docker.
+
+How did you start the Jellyfin container? Is it running with --net=host? I guess not, because you're talking about exposing ports..
+  Score: 10
+  Created UTC: 2024-07-17 19:31:28
+
+Comment 2:
+  Author: vthokies96
+  Comment: How timely. I just sent this up on my Synology and was wondering how this works.
+
+So is there absolutely no way to do this without host mode? Seems like something on the host to rebroadcast from the container subnet ought to work.
+  Score: 1
+  Created UTC: 2024-07-17 23:42:13
+
+Comment 3:
+  Author: Kir-01
+  Comment: Unrelated, but maybe useful: there is a tizen Jellyfin app and works really well.
+You have to activate developer mode and install it using a pc. There is a docker allinone somewhere on GitHub.
+  Score: 1
+  Created UTC: 2024-07-21 22:54:52
+
+Comment 4:
+  Author: squirrel_crosswalk
+  Comment: So anything dlna or mdns based works via local IP broadcast, which does not (usually) traverse subnets.
+
+
+
+
+If you are using anything except for host network binding then you are in a completely different local network.  This is by design, to isolate your Docker containers.
+
+
+
+Igmp proxy might work, but I've never had luck with it apart from multicast relaying.
+  Score: 0
+  Created UTC: 2024-07-18 10:59:57
+
+Note: This post has only 4 comments at the time of scraping.

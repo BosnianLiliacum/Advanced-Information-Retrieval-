@@ -1,0 +1,64 @@
+Post Title: Really liking Dockge over Portainer
+Author: [deleted]
+Score: 78
+URL: https://www.reddit.com/r/selfhosted/comments/1e3a4su/really_liking_dockge_over_portainer/
+Number of comments: 52
+Created UTC: 2024-07-14 19:02:14
+
+Post Content:
+I'm migrating my services onto a new server and decided to try Dockge instead of Portainer as I've previously been using. I wasn't really using any of the features of Portainer except starting stacks from a compose file so YMMV if you do, but I'm really pleased with the simplicity of Dockge in this respect.
+
+I found portainer really slow at deploying, restarting, stopping etc containers/stacks and it didn't give feedback on what was happening just spinning a throbber icon.
+
+Dockge responds instantly and brings up the terminal and container logs for easy debugging.
+
+Makes managing services so much easier. It's also nice it stores the compose.yaml files in the file structure on the system so I can commit them to git.
+
+Top 7 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Dockge is a neat project for sure, but it still lacks a few features i would really want to use it daily, and sadly it seems development has slowed down a lot, last release was in january.
+  Score: 48
+  Created UTC: 2024-07-14 19:33:07
+
+Comment 2:
+  Author: raphh
+  Comment: Been using Dockge until a a week ago where I started using Visual Studio Code's Docker plugin, so basically editing my files, restarting containers and committing to git from the same app. Really happy with this, the only thing missing are the docker logs (got the terminal logs when starting containers but not the docker logs for each container)
+  Score: 13
+  Created UTC: 2024-07-14 19:10:25
+
+Comment 3:
+  Author: Lopsided-Painter5216
+  Comment: I'm in a love hate relationship with Portainer atm. It's very helpful to deploy agents on a couple of pis and have the control all funnelled into one UI, that I can access on my phone with Harbour. It can show me outdated images right from the UI, I can see networks and volumes.
+
+But on the other hand, it's forcing my hand by having my stacks outside my docker folder and I don't like it. I have no idea how to migrate them or even if it's worth the time.
+  Score: 8
+  Created UTC: 2024-07-14 21:28:30
+
+Comment 4:
+  Author: Haliphone
+  Comment: Looks like they recently added agents for multiple servers.
+Might give it a go.
+  Score: 3
+  Created UTC: 2024-07-14 21:11:53
+
+Comment 5:
+  Author: atika
+  Comment: I was a big fan of Portainer, but after the second time it lost control over the stacks deployed from it, I went for Dockge and never looked back.
+  Score: 3
+  Created UTC: 2024-07-15 07:30:07
+
+Comment 6:
+  Author: JimmyRecard
+  Comment: As much as Dockge is a bit unfinished, for me, the ability to keep my compose and all its data in a subfolder per stack and them being able to dump that folder into backups daily with fairly basic tooling is pretty killer.
+
+I couldn't do that with Portainer.
+  Score: 2
+  Created UTC: 2024-07-15 02:30:08
+
+Comment 7:
+  Author: louislamlam
+  Comment: Thank you for your appreciation and for loving my ideas. I can't promise anything at the moment, but I will come back and update the project when I have more free time.
+  Score: 3
+  Created UTC: 2024-07-15 18:12:51
+

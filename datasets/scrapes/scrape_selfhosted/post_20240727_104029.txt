@@ -1,0 +1,26 @@
+Post Title: Prowlarr indexers error with Pihole DNS
+Author: Severe-Owl11
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e4tmgy/prowlarr_indexers_error_with_pihole_dns/
+Number of comments: 1
+Created UTC: 2024-07-16 16:51:43
+
+Post Content:
+Hi guys, first post here :)
+
+So basically I just set up my pihole as a recursive DNS and my router correctly goes to the pihole IP, but now most of my prowlarr indexes fail with this error: "Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. Resource temporarily unavailable".
+
+On my Pihole DNS settings i've disabled all my "Upstream DNS Servers" and enabled only one custom that goes to [127.0.0.1#5335](http://127.0.0.1#5335) (unbound guide on pihole). 
+
+I haven't found anything that solves my problem, does somebody know how can i solve? 
+
+Thanks! 
+
+Top 1 comments:
+Comment 1:
+  Author: byte_my_bit
+  Comment: So what is DNS server is pihole forwarding it's requests to for external sites? If you have no upstream DNS servers, you'll only be able to resolve locally configured records.
+  Score: 1
+  Created UTC: 2024-07-16 17:59:25
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,34 @@
+Post Title: Use Rasberry Pi 400 to run reverse proxy from 2 diffrernt networks?
+Author: vykana
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e9lk33/use_rasberry_pi_400_to_run_reverse_proxy_from_2/
+Number of comments: 3
+Created UTC: 2024-07-22 18:29:49
+
+Post Content:
+Hello Reddit
+
+I want to use a rasberry pi 400 to act as a reverse proxy (i think) so that when anyone connects to it via Zero Teir's IP they will see the a local webserver hosted on another device locally connected to the Pi. Would something like this be possible?
+
+And if so, how would i go about it?
+
+Using some google-fu i found Caddy, but im not sure if this is it or not.
+
+https://preview.redd.it/wkdgd6ba54ed1.png?width=1226&amp;format=png&amp;auto=webp&amp;s=3abc2f60626021166dccf6b94a2c25c86488382e
+
+I am very new to networking and this is very much a learning experience for me. Feel free to ask me for more info and i will get back to you as soon as i can. 
+
+Top 2 comments:
+Comment 1:
+  Author: virginity-dongle
+  Comment: Don't need a reverse proxy for that. Just configure zerotier to route traffic to the subnet 192.168.1.0/24 through 10.X.X.X
+  Score: 1
+  Created UTC: 2024-07-22 21:37:27
+
+Comment 2:
+  Author: virginity-dongle
+  Comment: Don't need a reverse proxy for that. Just configure zerotier to route traffic to the subnet 192.168.1.0/24 through 10.0.0.X
+  Score: 0
+  Created UTC: 2024-07-22 21:36:47
+
+Note: This post has only 2 comments at the time of scraping.

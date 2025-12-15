@@ -1,0 +1,34 @@
+Post Title: NexDNS alternatives 
+Author: AsherGC
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebjzu5/nexdns_alternatives/
+Number of comments: 2
+Created UTC: 2024-07-25 02:40:52
+
+Post Content:
+NexDNS was easy to setup. But lately they are acting weird. I'm consistently over 500k dns queries in a month and lots of drops and legitimate sites stops working. I'm leaning towards pihole. Any other alternatives worth considering?.
+
+Top 2 comments:
+Comment 1:
+  Author: jusepal
+  Comment: If you're considering pihole, look into adguardhome and technitium dns too.
+
+Both can do more than pihole, can act as native doh and dot server. Technitium can even be 100% self reliant dns server, having a copy of icann root zone locally.
+
+Adguardhome is more modern looking and simple though, vs technitium old school ui with boatloads of different setting.
+
+Just try both and decide for yourself.
+  Score: 6
+  Created UTC: 2024-07-25 02:52:11
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: I setup AdGuard as main company DNS for a few thousand devices and its great. Highly recommend.
+
+Client &gt; AdGuard &gt; bind authorative &gt; bind resolver
+
+Works perfect. bind authorative are also the slaves of all ADs so that AD works too of course.
+  Score: 4
+  Created UTC: 2024-07-25 03:30:21
+
+Note: This post has only 2 comments at the time of scraping.

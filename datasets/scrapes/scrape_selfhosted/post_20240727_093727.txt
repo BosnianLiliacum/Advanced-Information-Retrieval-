@@ -1,0 +1,22 @@
+Post Title: XMPP transport
+Author: Eirikr700
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e8pc01/xmpp_transport/
+Number of comments: 2
+Created UTC: 2024-07-21 15:49:31
+
+Post Content:
+Hello, for privacy reasons I am quite reluctant to using such instant messaging apps as Whatsapp. So I have set up my own XMPP/Jabber server to communicate with my family. Now I am considering opening myself (a little) to the outside world with the help of XMPP transport Slidge.
+
+Has anyone of you any experience with it, setting it up, using it ? I have given a look at the documentation but it is quite minimal and I hardly understand how to have it to work. I would set it up with Docker, on the same Docker network as my Jabber install. I am interested in Telegram and Whatsapp transports.
+
+Any one of you might be of help ?
+
+Top 1 comments:
+Comment 1:
+  Author: AideBusy1306
+  Comment: Curious why you went with an old protocol like XMPP when there is Matrix?
+  Score: 1
+  Created UTC: 2024-07-22 16:44:56
+
+Note: This post has only 1 comments at the time of scraping.

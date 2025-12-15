@@ -1,0 +1,80 @@
+Post Title: Level of security on my homelab
+Author: Nevoreko
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e74eqy/level_of_security_on_my_homelab/
+Number of comments: 14
+Created UTC: 2024-07-19 13:58:48
+
+Post Content:
+Hello, homelab hobbyist here,
+
+I wanted to know if what I'm doing regarding my homelab networking made some sense, and if it was relatively secure enough, and if not, what could I do to improve it.
+
+I currently have a domain, and multiple subdomains resolving to my home IP and proxied via cloudflare DNS records, for this I port forwarded 80, 81 and 443 to an nginx proxmox container, this nginx is receiving each subdomain and rooting them to a proxy host with an SSL certificate.   
+Examples of container i'm hosting are jellyfin paperless, and whatever fun application I'm testing at the time.
+
+  
+I'm also hosting a small home minecraft server where I use one of these subdomain in a SRV record which I understood wasn't proxied so that could be a vulnerability point? The server has 25565 port forwarded directly to the server proxmox container.
+
+Would there be anything of importance I missed in this setup? I'm looking into having a somewhat good security base without going extreme.
+
+Thanks for the help.
+
+Top 4 comments:
+Comment 1:
+  Author: Niceygy
+  Comment: If you're using SSH, look up how to set up key base authentication and maybe change the port to a non-default one. 
+
+
+Fail2Ban can help with NGINX, and Minecraft in a container should be ok. (Although having a whitelist always helps)
+  Score: 7
+  Created UTC: 2024-07-19 15:08:24
+
+Comment 2:
+  Author: Innocent__Rain
+  Comment: I would look into setting up a vpn to access your services
+  Score: 4
+  Created UTC: 2024-07-19 14:11:56
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: &gt;Would there be anything of importance I missed in this setup? I'm looking into having a somewhat good security base without going extreme.
+
+What is your definition of extreme?
+
+I would suggest 
+
+- install CrowdSec to stop malicious known IPs from trying to access your services (maybe cloudflare provides this for you?)
+
+- more important (as is probably what you mean by extreme) creating a DMZ for your game servers and services. 
+  - if you get compromised then the attacker is in your home network but if you create a DMZ, you can isolate them to just a single network that your services are running on
+  - you need a custom firewall and a managed switch to create VLANs/LANs for a DMZ
+
+&gt;I'm also hosting a small home minecraft server where I use one of these subdomain in a SRV record which I understood wasn't proxied so that could be a vulnerability point? 
+
+Minecraft Java edition does have community reverse proxies such as[ infrared](https://infrared.dev/)
+
+But note, reverse proxies only provide security if you enable SSL encryption/HTTPS (man/people in the middle attacks) which you have for your other services but for Minecraft that uses UDP (if I'm not mistaken) this doesn't add security.
+
+Other than that all your certifications are public if you are using let's encrypt (for your https services) Anyone can search up the certificates and access your services (where if there is a vulnerability they can gain access to your network). This is why a DMZ is important and is one of the better security practices
+
+You also want to ensure your URLs aren't jellyfin.domain.com  because low level bots will try to hit that endpoint. Use random names but this isn't really adding security, its just stopping low level bots from easily finding a service (which typically is the use case because why would a person spend time a resources guessing every subdomain name, it's a risk but typically a low risk)
+
+
+&gt;proxied via cloudflare DNS records
+
+Just as clarification are you using cloudflare tunnels? Or just using cloudflare as a DNS provider?
+
+Just because this is selfhosted where this community does care about privacy (doesn't mean you do but just putting the fact here and also  it sure if you are using cloudflare tunnels)
+
+Cloudflare reads all your data if you are using their tunnels. [Reference video](https://youtu.be/oqy3krzmSMA?si=_oFsUSXaPTjr--fE)
+  Score: 1
+  Created UTC: 2024-07-19 16:08:45
+
+Comment 4:
+  Author: ideal2545
+  Comment: The onething I do is I only allow conections from cloudflare to my reverse proxy (ha-proxy) and thats it. From cloudflare I have additonal rules to block all non-us traffic plus all their spam/bot detection.
+  Score: 1
+  Created UTC: 2024-07-19 19:40:26
+
+Note: This post has only 4 comments at the time of scraping.

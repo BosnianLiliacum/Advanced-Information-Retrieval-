@@ -1,0 +1,32 @@
+Post Title: What steps do I need to do this?
+Author: unheardhc
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed364o/what_steps_do_i_need_to_do_this/
+Number of comments: 5
+Created UTC: 2024-07-27 00:16:19
+
+Post Content:
+Networking noob here, be gentle
+
+I have a domain that I have purchased and the registrar included it in EasyDNS.
+
+I have a local Ubuntu box running on my home network (Verizon FIOS) and in that I want to run an nginx instance to serve content, such that when somebody outside my network types in my domain, this box handles the request.
+
+I think I understand some it, mainly that in my registrars UI I need to add a record to my domain that points to my IP, but the issue is Verizon FIOS does not allow static IPs on residential accounts.
+
+What steps, if any, do I need to undertake to achieve the desired result?
+
+For additional context, I’m a SWE but I never play in the hosting/networking world, so I’m looking to beef up my understanding of deployments a bit here; so feel free to assume I can work through whatever technical steps you might need to include.
+
+Cheers!
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: EasyDNS has an API that you can use to update the IP address attached to the domain. You would use something like DDNS Updater on the host system to periodically check the IP address, then when it changes push the update to the EasyDNS DNS record.
+  Score: 1
+  Created UTC: 2024-07-27 00:44:46
+
+Note: This post has only 1 comments at the time of scraping.

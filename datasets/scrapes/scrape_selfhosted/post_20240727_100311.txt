@@ -1,0 +1,71 @@
+Post Title: I built a free, open source, locally hosted YouTube mp4 downloader
+Author: neonwatty
+Score: 155
+URL: https://www.reddit.com/r/selfhosted/comments/1e74mt1/i_built_a_free_open_source_locally_hosted_youtube/
+Number of comments: 42
+Created UTC: 2024-07-19 14:08:23
+
+Post Content:
+I was tired of visiting unreliable third-party sites for YouTube video files, so I made a local app that lets you download them directly to your home machine.
+
+With the app you can download the mp4 files from nearly any YouTube video or YouTube Short, except for age-restricted content (login required, not supported yet in the app).
+
+Some highlights:
+
+* **Python** and **Docker** versions available.
+* Choose your video resolution
+* Apache 2.0 open source license.
+* Try it now in browser  --&gt; [https://huggingface.co/spaces/neonwatty/youtube\_downloader](https://huggingface.co/spaces/neonwatty/youtube_downloader)
+* Visit the repo --&gt; [https://github.com/neonwatty/youtube\_downloader](https://github.com/neonwatty/youtube_downloader)
+
+**Notice: Material downloaded via the app is intended for personal use only.  This app should not be used for distributing copyrighted content.**
+
+Top 7 comments:
+Comment 1:
+  Author: crysisnotaverted
+  Comment: Some people are poopooing OP for making something that doesn't fit their use case, it's okay not everything is for everyone, but at least be constructive.
+
+OP, I think you may want to change somethings to market your project better to the community. You are calling it a "locally hosted YouTube MP4 downloader" which is true, but people already have that. I think you should be a little more forward with how it is to be used, I think you should tell people that it is something like "A simple browser based frontend for yt-dlp". 
+
+Personally, I think it is neat. I also think you could get a lot of traction if you made it so you could create 'download presets' where you could use simple checkboxes/menus so you could visually set the arguments for yt-dlp, and arrange what quality and format you want to download the video in in order of most to least preferred. I find the man page daunting and it's a pain in the ass to craft commands that are 2000 characters long that do what I want, I've been thinking of making something similar to what you have with this functionality for a long time!
+  Score: 118
+  Created UTC: 2024-07-20 04:06:17
+
+Comment 2:
+  Author: tyros
+  Comment: What advantage does this have over yt-dlp? https://github.com/yt-dlp/yt-dlp
+  Score: 60
+  Created UTC: 2024-07-19 14:38:48
+
+Comment 3:
+  Author: tcfjr
+  Comment: I use [Metube ](https://github.com/alexta69/metube)for this, and it works well for me.  What is the advantage of this over Metube?
+  Score: 26
+  Created UTC: 2024-07-19 20:01:33
+
+Comment 4:
+  Author: joost00719
+  Comment: Can it monitor Playlists and download when new ones are added?
+Otherwise I'll stick to metube.
+Might check it out this weekend tho.
+  Score: 6
+  Created UTC: 2024-07-19 16:24:58
+
+Comment 5:
+  Author: KeyObjective8745
+  Comment: Is it possible to download a video with its multiple audio tracks when it has more than one language? Could I also download its transcript and description page?
+  Score: 3
+  Created UTC: 2024-07-19 16:08:00
+
+Comment 6:
+  Author: XMRoot
+  Comment: Your huggingface instance is at 100% CPU at 3 AM EST.
+  Score: 5
+  Created UTC: 2024-07-20 07:10:11
+
+Comment 7:
+  Author: gsmitheidw1
+  Comment: This looks very promising, I was looking for a solution like Invidious but would run on an old pi. Invidious doesn't run on Arm and is quite heavy on resources.
+  Score: 2
+  Created UTC: 2024-07-20 10:19:51
+

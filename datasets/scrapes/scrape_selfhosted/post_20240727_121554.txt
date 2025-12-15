@@ -1,0 +1,64 @@
+Post Title: How do you keep track of when an OS, kernel etc.. update is available?
+Author: Zestyclose_Car1088
+Score: 83
+URL: https://www.reddit.com/r/selfhosted/comments/1e9dm8u/how_do_you_keep_track_of_when_an_os_kernel_etc/
+Number of comments: 71
+Created UTC: 2024-07-22 12:56:11
+
+Post Content:
+I'm running Debian stable, and I would like to be able to check if there is a:
+
+1. new kernel version 
+2. new Debian update
+3. new Docker CE version
+
+Where can I check and read the release notes prior to updating?
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: suicidaleggroll
+  Comment: apt update &amp;&amp; apt list —upgradable
+  Score: 132
+  Created UTC: 2024-07-22 13:34:24
+
+Comment 2:
+  Author: mrkesu
+  Comment: I don't. Ansible or https://wiki.debian.org/UnattendedUpgrades
+  Score: 36
+  Created UTC: 2024-07-22 14:26:15
+
+Comment 3:
+  Author: alt_psymon
+  Comment: I don't.
+
+I'll be sitting around and at some point I'll be like "hmmm I should probably do some updates." Then I'll so some updates.
+  Score: 33
+  Created UTC: 2024-07-22 20:37:36
+
+Comment 4:
+  Author: ThorstenDoernbach
+  Comment: Try apticron. I will receive an e-mail if an updated system package is available.
+  Score: 14
+  Created UTC: 2024-07-22 13:46:25
+
+Comment 5:
+  Author: Exzellius2
+  Comment: CheckMK
+  Score: 9
+  Created UTC: 2024-07-22 16:45:25
+
+Comment 6:
+  Author: Acrobatic_Idea_3358
+  Comment: Unattended-upgrades
+  Score: 15
+  Created UTC: 2024-07-22 13:42:48
+
+Comment 7:
+  Author: bshell_
+  Comment: I made a simple script to notify me via telegram when new updates are available : https://github.com/ElouanFiore/pLUM
+There isn’t any documentation but it’s quite simple and I tried to simplify the deployment with Deb packages and ansible playbook
+  Score: 5
+  Created UTC: 2024-07-22 13:17:05
+

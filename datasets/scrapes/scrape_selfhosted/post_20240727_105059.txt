@@ -1,0 +1,62 @@
+Post Title: Emulators
+Author: EnumeratedArray
+Score: 22
+URL: https://www.reddit.com/r/selfhosted/comments/1e47hgp/emulators/
+Number of comments: 12
+Created UTC: 2024-07-15 21:56:54
+
+Post Content:
+Hi, I enjoy playing old video games through emulators, but struggle to maintain all of the emulators and files across different devices.
+
+I have an old Raspberry Pi, and wondered if there is any selfhosted software I could set up to assist with this? I would like to
+
+- store and organise game and save files
+- emulate a variety of machines 
+- stream to various devices
+
+Does a solution for this exist? It doesn't need to be all in one
+
+Thanks!!
+
+Top 6 comments:
+Comment 1:
+  Author: LCZ_
+  Comment: Surprised nobody mentioned [RomM](https://github.com/rommapp/romm), it’s pretty much exactly what you’re looking for. It acts as a web-based ROM manager for all your systems, and even PC games. You can also use the built-in EmulatorJS functionality to play games on whatever devices can load up the page.
+
+Really awesome for management, and it’s currently what I’m using to organize my collection.
+  Score: 11
+  Created UTC: 2024-07-16 01:29:22
+
+Comment 2:
+  Author: weesteev
+  Comment: Everything up to the last point, there’s nothing that exists that self hosts and then streams to other devices. Your best bet is check out Launchbox, I have used it for years as a single device emulator and it covers virtually every platform known to man!
+  Score: 3
+  Created UTC: 2024-07-15 22:16:06
+
+Comment 3:
+  Author: mattypea
+  Comment: Surprised no one mentioned https://github.com/linuxserver/emulatorjs yet
+  Score: 3
+  Created UTC: 2024-07-16 04:46:28
+
+Comment 4:
+  Author: Red_Redditor_Reddit
+  Comment: Emulation station is probably what your looking for.
+  Score: 2
+  Created UTC: 2024-07-16 00:14:26
+
+Comment 5:
+  Author: guigouz
+  Comment: I run https://batocera.org in my pi
+  Score: 2
+  Created UTC: 2024-07-16 01:34:42
+
+Comment 6:
+  Author: Shabbypenguin
+  Comment: you can self host [webrcade](https://github.com/webrcade/webrcade) and it plays n64/ps1 and older via a web browser. your gamesaves are stored to the device you connect to, however you can login to dropbox and sync gamesaves between devices.
+
+the local device's web browser runs the emulator, but you grab the emulator/rom from the server. it was my go to web based emulator for a while, play on my phone while mobile, hop on my xbox and load up edge, jump over to my desktop and my gamesaves were all shared. i never selfhosted it so all i needed to do was just load in the feed url and login to dropbox.
+  Score: 1
+  Created UTC: 2024-07-15 22:24:25
+
+Note: This post has only 6 comments at the time of scraping.

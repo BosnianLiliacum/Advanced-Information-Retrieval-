@@ -1,0 +1,106 @@
+Post Title: Wording change and clarification for purchasing Immich
+Author: altran1502
+Score: 487
+URL: https://www.reddit.com/r/selfhosted/comments/1ea8iim/wording_change_and_clarification_for_purchasing/
+Number of comments: 138
+Created UTC: 2024-07-23 13:58:21
+
+Post Content:
+Announcement Thread [https://github.com/immich-app/immich/discussions/11313](https://github.com/immich-app/immich/discussions/11313)
+
+Hello everybody,
+
+Alex here! After the last announcement on a wording change in response to our mishap of using the words `licensed` and `unlicensed`, the team and I gave it a long hard thought over the weekend.
+
+I thought about it when I went to bed, I thought about it in my dream, I thought about it while doing the dishes. Taking into consideration all of your feedback and suggestions, and on behalf of the team, I am happy to show you what we came up with.
+
+* There will be no `license` or `unlicensed`.
+* We will change `License Key` to `Product Key`.
+* We will show a "Buy Immich" button as the call to action. The button will only be shown if the account age is older than 14 days.
+* We will give you options to hide the button for 30 days or indefinitely.
+
+https://preview.redd.it/qsrbqrn3y9ed1.png?width=886&amp;format=png&amp;auto=webp&amp;s=ce958f44efd25718bb0438f1bdb12e57c8ab0166
+
+* We will change the price to a whole number `$100` and `$25`. So get your product key now and you can save `$0.01` 😄
+* We will add text to make our mission and intentions clear.
+* We will refine the text about each option to clarify the content.
+
+https://preview.redd.it/qbkhzb43y9ed1.png?width=1053&amp;format=png&amp;auto=webp&amp;s=cd3bb965088009ebefedd90b05536c031b4bdf2a
+
+Last but not least, we will add a fancy `Supporter Badge` to recognize those who purchase the product. If you have any ideas for making it "shinier," let us know!
+
+[https://github.com/user-attachments/assets/ff1edb43-1838-45b9-85ed-1944645291f8](https://github.com/user-attachments/assets/ff1edb43-1838-45b9-85ed-1944645291f8)
+
+Thank you again for your support and feedback. We are working on these changes and will roll out in the next release in a few days.
+
+Have a good week!
+
+Cheers, Immich Team
+
+Top 7 comments:
+Comment 1:
+  Author: PaintDrinkingPete
+  Comment: I was never confused (and purchased a user license), but do feel that the new description and wording is much better.
+
+For many of us, even those that completely understood what your intention and message was, we've also been burned too many times by software that claims it will "always be free", only to have features eventually locked behind a paid "license".
+
+I know it can't be easy to balance a desire to provide an open source solution, while managing the time and effort it takes to develop and maintain without compensation...and yes, some of us do require a bit of a "nudge" to donate or contribute to projects we use, so I don't mind that...but do prefer to see it referred to as support contribution vs a "license" to use the product.
+  Score: 232
+  Created UTC: 2024-07-23 15:02:36
+
+Comment 2:
+  Author: SpongederpSquarefap
+  Comment: For what it's worth Alex, I knew when you first announced "licensed or unlicensed" that this didn't mean you're driving the product into the toilet
+
+I agree that the wording didn't sound good and it gave off the wrong implication, but I think this new approach works well
+
+There's a FOSS CCTV app I used a few years ago called Shinobi and that has a weekly popup that basically says "hey, if you like this software, please consider supporting it"
+
+I think a lot of people would like to pay once for Immich and I'm sure there's other people who would be happy paying $5 a month forever for it too
+
+Value is in the eye of the beholder and I understand the mission you guys have set out with Immich
+
+I still believe in this mission and I firmly believe that FUTO are only here to help
+
+I know that because Louis has a long track record of being trustworthy, and like he says himself, I don't trust him and I don't trust you guys because I don't need to
+
+I see your actions and they speak for themselves
+
+Thanks for getting this project off the ground
+  Score: 16
+  Created UTC: 2024-07-23 15:57:58
+
+Comment 3:
+  Author: gnarlysnowleopard
+  Comment: thank you for clarifying. I was one of the few people that misunderstood the change initially and I am very happy how clearly communicated it is now!
+  Score: 79
+  Created UTC: 2024-07-23 14:39:57
+
+Comment 4:
+  Author: PlannedObsolescence_
+  Comment: This is the right change, thanks.
+
+I don't mind paid FOSS software (to clarify: free as in freedom / libre, not free as in no-cost).  
+But most paid FOSS projects were paid from the start. If you transition an existing project into 'please pay us' (even if you can just not pay - and even if the software license is unchanged), you can expect backlash.  
+Putting the word 'unlicensed' anywhere in it guarantees issues, so I'm glad these changes were made, and that it's possible to 'Never show again' for those who do not have the means to pay or don't want to.
+  Score: 64
+  Created UTC: 2024-07-23 15:25:31
+
+Comment 5:
+  Author: therealpapeorpope
+  Comment: really cool to see you took the feedback, immich is a great software
+  Score: 13
+  Created UTC: 2024-07-23 15:25:48
+
+Comment 6:
+  Author: RedditNotFreeSpeech
+  Comment: How can I donate more? Or should I just buy a bunch of licenses?
+  Score: 44
+  Created UTC: 2024-07-23 14:31:38
+
+Comment 7:
+  Author: Flicked_Up
+  Comment: Why not ask to Support/Donate instead of buy?
+  Score: 24
+  Created UTC: 2024-07-23 15:48:57
+

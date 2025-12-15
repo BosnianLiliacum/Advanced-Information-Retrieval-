@@ -1,0 +1,66 @@
+Post Title: I've made some big improvements to my chess openings explorer (Python+Flask)
+Author: haddock420
+Score: 9
+URL: https://www.reddit.com/r/Python/comments/1ed2gy3/ive_made_some_big_improvements_to_my_chess/
+Number of comments: 3
+Created UTC: 2024-07-26 23:43:18
+
+Post Content:
+Hi everyone,
+
+I posted a few days ago about my opening explorer website I'd made. I've made some big updates to it so I wanted to share my progress.
+
+Play here: https://www.jimmyrustles.com/chessopeningtheory
+
+Github: https://github.com/sgriffin53/openingexplorer_app
+
+**What My Project Does**
+
+You play an opening on the board and it shows you wiki articles for each move in the opening as you play through it. It shows the most popular responses in the wiki for each opening with an explanation of each response. It also shows stats from lichess such as winning chances, engine analysis, and historical games. It's intended to be a tool for opening analysis and study.
+
+**Target Audience (e.g., Is it meant for production, just a toy project, etc.**
+
+My audience is chess players and enthusiasts who are interested in studying openings. I think this could be a valuable tool for studying openings for chess players of all levels.
+
+**Comparison (A brief comparison explaining how it differs from existing alternatives.**
+
+The main comparison to this is the Lichess opening explorer, which is similar in many ways. The Lichess opening explorer gives you a page from the wiki (though a shortened version compared to mine) and gives the responses based on winning percentages.
+
+Mine is different in that it shows you the full wiki page complete with diagrams and annotations, compared to the shortened versions offered by Lichess. Mine also gives you short wiki descriptions for each popular response instead of listing them by winning chances.
+
+Since the new updates, it also now shows moves which have articles in green on the board, which Lichess doesn't do.
+
+---
+
+I've since made the following improvements:
+
+**Move highlighting on the board**
+
+When you hover over a piece on the board now, it will highlight the moves that have wiki articles in green and other legal moves in grey. This makes it a lot easier to see which openings are viable when you're playing through the openings.
+
+I've also added a "Highlight Wiki Moves" checkbox which will automatically highlight every move that has a wiki article, this makes it good to see what responses are available for the current opening.
+
+**Page navigation**
+
+There are now links on the left of the page to different sections of the wiki page (winning chances, main article, sections within the article, engine analysis, etc.). This makes it a lot easier to navigate the pages, as a lot of the pages are quite lengthy.
+
+**Correct game counts for popular responses**
+
+When I originally made this, I used a lichess scraper to scrape the number of games for each opening's response so I could order the popular responses by the number of games so the most popular would be at the top. Unfortunately, I was rate limited by lichess when scraping and quite a few of the responses showed as 0 games which put them to the bottom of the popular responses list. For example, after 1. e4, 1...e5 showed as 0 games, meaning it didn't show up in the popular responses list at all.
+
+This has been fixed now, all openings have the correct number of games for their responses, and the responses are ordered correctly by popularity.
+
+**Improved opening names**
+
+A lot of the openings in the database were labelled blank or as 'Unnamed', I've since added code that makes it check for the opening's parent opening's name and parent's parent's opening name etc, until it finds an opening name. This means if you play 1. e4 e5 2. f4 and then a long continuation that isn't in the database, the opening will still be labelled King's Gambit.
+
+I'm planning a few more improvements over the coming days, but I just wanted to share my progress. Please let me know what you think of the openings explorer and if you have any feedback or suggestions. Hope you enjoy.
+
+Top 1 comments:
+Comment 1:
+  Author: Siddhartha_77
+  Comment: I don't know much about chess openings but when I shuffle through the starting position and flipping the perspective, the full page refeshes and changes my scroll position, you can use htmx to just replace the board it can improve Ux a little
+  Score: 2
+  Created UTC: 2024-07-27 01:18:12
+
+Note: This post has only 1 comments at the time of scraping.

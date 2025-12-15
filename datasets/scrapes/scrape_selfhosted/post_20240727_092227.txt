@@ -1,0 +1,26 @@
+Post Title: Automating Container Storage Backups
+Author: zackwag
+Score: 0
+URL: https://blog.zackwag.com/posts/automated-docker-container-backups
+Number of comments: 2
+Created UTC: 2024-07-22 20:44:52
+
+Post Content:
+[This post has no text content]
+
+Top 2 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 3
+  Created UTC: 2024-07-22 20:56:12
+
+Comment 2:
+  Author: zackwag
+  Comment: I run a handful of containers in my LAN and I wanted a way to backup the configuration data so I wrote a little python and made a container to handle requests.
+
+This is by no means a professional level solution, but it was basically free, only costing my hobby time.
+  Score: 2
+  Created UTC: 2024-07-22 20:46:22
+
+Note: This post has only 2 comments at the time of scraping.

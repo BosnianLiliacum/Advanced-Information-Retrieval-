@@ -1,0 +1,38 @@
+Post Title: Need Help for Building a Home Server
+Author: NoDragonfruit9217
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e6b86r/need_help_for_building_a_home_server/
+Number of comments: 2
+Created UTC: 2024-07-18 13:18:31
+
+Post Content:
+I am from India. I need help in building a home server. My old server just died because of some issues with motherboard and cpu. I have thought of choosing i5-12400f, since that is currently the cheapest one available here. I am open for suggestions on the CPU. I am not abe to decide on the motherboard. I would like some suggestions on the motherboard and RAM. I dont want visually esthetic build. As the cabinet i have chosen is something sort of a Black Box
+
+Use case of home server which will be built on ProxMox
+
+* NAS - Xpenology
+* Virtualization - (Jellyfin, Home Assistant, NVR, Realtime - ML, etc)
+* Encoding and stuff
+
+Here is the list of what all I have:
+
+1. GPU: Nvidia 3060
+2. OS (Nvme): Crucial P3 Nvme 1 TB - with proxmox, xpenology already setup
+3. Storage (SSD's): 6 \* 1 TB each (this is what i had started with)
+4. Storage (HDD's): 2 \* 4 TB NAS HDD's (will be adding more)
+5. PSU: Silverstone 850w
+6. PCIE Cards: Dual Gigabit Ethernet card (PCIE x4)
+
+As I have said, I have for now thought of intel i5-12400f, but I am open for suggestions  
+
+
+Top 1 comments:
+Comment 1:
+  Author: Hamza9575
+  Comment: servers run 24x7 so their power efficiency matters a lot at both idle and load. Amd cpus are excellent server cpus like 5600g and 8600g, the g models. So i recommend either a 5600g/b550 motherboard, or b650 motherboard/8600g.
+
+You should be fine with even 4600g instead of 5600g.
+  Score: 2
+  Created UTC: 2024-07-18 14:32:05
+
+Note: This post has only 1 comments at the time of scraping.

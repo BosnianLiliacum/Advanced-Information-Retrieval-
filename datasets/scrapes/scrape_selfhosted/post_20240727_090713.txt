@@ -1,0 +1,41 @@
+Post Title: Scanner for paperless-ng 
+Author: chaplin2
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1eaingi/scanner_for_paperlessng/
+Number of comments: 11
+Created UTC: 2024-07-23 20:48:03
+
+Post Content:
+I am looking for a scanner, to scan tons of paperwork. It will have a good automatic feed tray that doesn’t easily jam, and in automatic mode will scan both sides. It will save the scans on NAS using samba share or similar, and could do OCR or let that for paperless-ng. No forced cloud storage. 
+
+Can you suggest a scanner for this use case? 
+
+So far I have seen Brother ADS 1700W, ADS 1200, 940DW and Fujitsu ScanSnap iX1300. 
+
+By the way, these scanners are as expensive as MFPs that do all 4 functions: scan, copy, print and fax.  How come?
+
+Perhaps it’s better to get a multi function printer?
+
+
+Top 3 comments:
+Comment 1:
+  Author: Data___Viz
+  Comment: Epson Fast Photo. I use it for family photos and documents. It's super fast, 1 sec per document on both sides.
+  Score: 3
+  Created UTC: 2024-07-23 21:39:19
+
+Comment 2:
+  Author: that_one_wierd_guy
+  Comment: mfps are selling an idea. they perform none of their functions particularly well and are prone to breakage/have short lifetimes considering the price
+  Score: 3
+  Created UTC: 2024-07-24 00:49:00
+
+Comment 3:
+  Author: DonkeeeyKong
+  Comment: The ScanSnap ix1300 can only scan to network shares via the Fujitsu software and while a computer is running. And I believe it's necessary to use the Fujitsu cloud for this. 
+
+I just ordered an Epson ES-C380W instead which can scan to network shares directly without involving another device or a third party cloud. It hasn't arrived yet though. It has similar small size as the ix1300. :)
+  Score: 2
+  Created UTC: 2024-07-23 21:09:04
+
+Note: This post has only 3 comments at the time of scraping.

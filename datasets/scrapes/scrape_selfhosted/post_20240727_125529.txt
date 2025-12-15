@@ -1,0 +1,145 @@
+Post Title: DuckDNS IP updater updates wrong IP
+Author: Diaxpel
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e71wvf/duckdns_ip_updater_updates_wrong_ip/
+Number of comments: 6
+Created UTC: 2024-07-19 11:56:05
+
+Post Content:
+I'm currently hosting Jellyfin and Nextcloud and using DuckDNS for DNS and Nginx Proxy Manager, all on a single Proxmox machine. Because my ISP uses dynamic IP, I run [this IP updater container](https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbWtJaFFQeGp4Y1VnbUtCM2NsTkt5WHg3dEpWd3xBQ3Jtc0trTDNTbHFha2FrOGpTeUNvZmZESUpOTnF1cEZsTGNLa2lOQ0Ixc19nV0pSRFlTQkd2RkZGcm9BbzFJU2VoTllTeXV5bHVkVzB0aVI5OURZTDVWX21NU1dZT2dDNmpWcDgtUy1uMWpsSWNvX3d4MHdjRQ&amp;q=https%3A%2F%2Fbit.ly%2Fbbtw-duck-dns-docker-compose&amp;v=NuQhx32UcKE) in Docker Compose. Everything seems fine for the last couple of months until this week.
+
+For some inexplicable reasons, it updates the wrong IP at irregular intervals. Have a look at the log here, please note that the correct IP at the time was 42.x.x.x.
+
+    [migrations] no migrations found
+    ───────────────────────────────────────
+          ██╗     ███████╗██╗ ██████╗
+          ██║     ██╔════╝██║██╔═══██╗
+          ██║     ███████╗██║██║   ██║
+          ██║     ╚════██║██║██║   ██║
+          ███████╗███████║██║╚██████╔╝
+          ╚══════╝╚══════╝╚═╝ ╚═════╝
+       Brought to you by linuxserver.io
+    ───────────────────────────────────────
+    To support the app dev(s) visit:
+    DuckDNS: https://www.patreon.com/user?u=3209735
+    To support LSIO projects visit:
+    https://www.linuxserver.io/donate/
+    ───────────────────────────────────────
+    GID/UID
+    ───────────────────────────────────────
+    User UID:    1000
+    User GID:    1000
+    ───────────────────────────────────────
+    Linuxserver.io version: 245f78ab-ls26
+    Build-date: 2024-07-15T04:01:42+00:00
+    ───────────────────────────────────────
+        
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 16:57:32 UTC 2024 to IPv4: 42.x.x.x
+    [custom-init] No custom files found, skipping...
+    [ls.io-init] done.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:01:16 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 17:08:51 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 17:12:20 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 17:18:51 UTC 2024 to IPv4: 58.187.68.165
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 17:21:10 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:26:50 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:34:12 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:36:15 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:41:24 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:48:41 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 17:54:37 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 17:56:21 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:01:23 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 18:09:32 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 18:11:18 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 18:18:48 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:23:40 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:28:13 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:32:59 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:38:02 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 18:42:01 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:47:10 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 18:53:52 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 18:56:10 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 19:03:09 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 19:08:20 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    DuckDNS request at Thu Jul 18 19:11:06 UTC 2024 successful. IP(s) unchanged.
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:17:06 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:23:39 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:29:21 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:33:30 UTC 2024 to IPv4: 42.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:36:01 UTC 2024 to IPv4: 58.x.x.x
+    Detecting IPv4 via DuckDNS
+    Your IP was updated at Thu Jul 18 19:42:42 UTC 2024 to IPv4: 42.x.x.x
+    
+
+My network setup is a little bit unorthodox due to certain circumstances. What I've done is putting the server behind two sets of routers, 1 from the ISP and 1 pair of mesh routers. This setup has worked flawlessly in the past but not now, so I doubt it is the culprit.
+
+Dowloading another IP updater (the GUI one from DuckDNS) on my Windows machine with similar network setup failed to replicate the result. It've worked fine for the past hour as I'm writting this post.
+
+    wget -q -O - ipinfo.io/ip
+
+Using this command on the PVE itself (and other LXCs, including the one running Docker) when the IP changes to 58.x.x.x returns the correct IP 42.x.x.x.  
+
+
+Top 3 comments:
+Comment 1:
+  Author: d4nm3d
+  Comment: Take a look at the code it's running (duck.sh)
+
+https://github.com/linuxserver/docker-duckdns/blob/master/root/app/duck.sh
+
+You an see the methods it's using to detect your IP's... Try running those commands yourself to see what results you get (from the docker host)
+
+To be honest, i very much doubt it has anything to do with the docker container or the updater and is fully down to your network config..
+
+Having said that, duckdns has gone down hill a lot recently.. If you can, i'd buy a cheap domain from cloudflare and use that in combination with cloudflare ddns : https://github.com/oznu/docker-cloudflare-ddns
+  Score: 3
+  Created UTC: 2024-07-19 12:13:30
+
+Comment 2:
+  Author: Diaxpel
+  Comment: Forgot to mention this but I tested using cron job in the PVE to auto update IP by following the guide on DuckDNS. Regardless, the result is still the same. The wrong IP still get used from time to time.
+  Score: 1
+  Created UTC: 2024-07-19 12:05:21
+
+Comment 3:
+  Author: thekrautboy
+  Comment: https://www.linuxserver.io/support
+  Score: 1
+  Created UTC: 2024-07-19 12:19:02
+
+Note: This post has only 3 comments at the time of scraping.

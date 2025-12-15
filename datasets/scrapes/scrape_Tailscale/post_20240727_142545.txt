@@ -1,0 +1,34 @@
+Post Title: Expose a container port via tailscale funnel
+Author: Nice-Information5473
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ea7pu6/expose_a_container_port_via_tailscale_funnel/
+Number of comments: 10
+Created UTC: 2024-07-23 13:22:14
+
+Post Content:
+Hey everyone,
+
+I need some help with exposing a port from a docker container to the internet through tailscale, from what I understand using the funnel option is the best way to do this.
+
+I have tailscale running in a docker container and I can ssh into the host machine just fine, I've setup the funnel option on the host machine but now I'm stuck trying to expose the Ator project container. I'm trying to port forward port 9001 in the Ator container.
+
+Cheers,
+
+Top 2 comments:
+Comment 1:
+  Author: caolle
+  Comment: Are you exposing the Ator Port out of the container?  What commands have you used with funnel?
+
+Also, this might be of some use to directly use sidecar and use funnel directly in the Ator container: [https://tailscale.com/blog/docker-tailscale-guide](https://tailscale.com/blog/docker-tailscale-guide)
+  Score: 1
+  Created UTC: 2024-07-23 15:11:07
+
+Comment 2:
+  Author: Nice-Information5473
+  Comment: Yes I would like to expose the Ator container right out to the internet, so far the ORport inside the Ator container is set to 9001, I then used the "tailscale funnel 9001" command in the tailscale container console. It came back with a successful message 
+
+Would it work if I changed the network env value to host instead of the ator-default?
+  Score: 1
+  Created UTC: 2024-07-23 18:06:57
+
+Note: This post has only 2 comments at the time of scraping.

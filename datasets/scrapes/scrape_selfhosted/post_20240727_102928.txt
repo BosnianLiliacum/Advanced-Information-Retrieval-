@@ -1,0 +1,43 @@
+Post Title: Self-hostable bookmark manager intended for sharing bookmark collections publicly?
+Author: danielrosehill
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e5md32/selfhostable_bookmark_manager_intended_for/
+Number of comments: 3
+Created UTC: 2024-07-17 16:21:29
+
+Post Content:
+Are there any bookmark managers which can be self-hosted and are primarily intended not for storing private bookmark collections but rather for curating collections of bookmarks which are intended to be shared with the world at large?
+
+Use-case is something like building up a repository of interesting tech tools which I would like to open-source for anybody else that's into the same tech interests. 
+
+I could create a sprawling network of "Awesome" pages of Gitub, but I'm thinking about ways to do this that don't involve building on somebody else's castle and which I can manage and backup myself.
+
+TIA for any ideas!
+
+Top 3 comments:
+Comment 1:
+  Author: DeltaEchoEchoZulu
+  Comment: Linkwarden might be a good choice too: https://github.com/linkwarden/linkwarden
+
+I haven't used it myself but have been considering playing around with it.
+  Score: 5
+  Created UTC: 2024-07-17 21:54:31
+
+Comment 2:
+  Author: renegat0x0
+  Comment: There is https://github.com/goniszewski/grimoire
+
+
+I am using my own project https://github.com/rumca-js/Django-link-archive
+  Score: 4
+  Created UTC: 2024-07-17 16:43:58
+
+Comment 3:
+  Author: Secure_Pomegranate10
+  Comment: As others have mentioned: https://github.com/linkwarden/linkwarden
+
+There are also alternatives but Linkwarden is hands down the best one out there…
+  Score: 2
+  Created UTC: 2024-07-18 05:01:46
+
+Note: This post has only 3 comments at the time of scraping.

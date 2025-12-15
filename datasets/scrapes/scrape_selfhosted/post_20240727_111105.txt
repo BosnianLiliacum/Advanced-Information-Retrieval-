@@ -1,0 +1,77 @@
+Post Title: I created a simple website that helps you generate working docker-compose files...
+Author: techrayz
+Score: 18
+URL: https://www.reddit.com/r/selfhosted/comments/1ed9moi/i_created_a_simple_website_that_helps_you/
+Number of comments: 8
+Created UTC: 2024-07-27 06:17:42
+
+Post Content:
+https://preview.redd.it/jomdbz4r11fd1.jpg?width=741&amp;format=pjpg&amp;auto=webp&amp;s=cd0181e465c0da0afe271ad78470a9b349b2d33c
+
+**For example, entering:**
+
+&gt;`docker run -d --name quakejs -e HTTP_PORT=&lt;HTTP_PORT&gt; -p &lt;HTTP_PORT&gt;:80 -p 27960:27960 treyyoder/quakejs:latest`
+
+**Will convert to:**
+
+&gt;`version: '3.7'`
+
+&gt;`services:`
+
+&gt;`quakejs:`
+
+&gt;`image: treyyoder/quakejs:latest`
+
+&gt;`container_name: quakejs`
+
+&gt;`environment:`
+
+&gt;`- HTTP_PORT=&lt;HTTP_PORT&gt;`
+
+&gt;`ports:`
+
+&gt;`- "&lt;HTTP_PORT&gt;:80"`
+
+&gt;`- "27960:27960"`
+
+&gt;`restart: always`
+
+You also have additional options such as mapping ports, volumes and custom environment variables.
+
+Check out [Docker2Compose](https://apps.techray.dev/docker2compose)
+
+Top 5 comments:
+Comment 1:
+  Author: micahs72
+  Comment: This is cool, thanks! I like the extra options beyond just converting the run cmd to compose.
+  Score: 4
+  Created UTC: 2024-07-27 06:37:02
+
+Comment 2:
+  Author: VikingSven82
+  Comment: `version` is deprecated in docker compose files, worth taking it out of the conversion.
+  Score: 4
+  Created UTC: 2024-07-27 09:58:27
+
+Comment 3:
+  Author: LotusTileMaster
+  Comment: This is better than https://composerize.com
+  Score: 2
+  Created UTC: 2024-07-27 07:25:18
+
+Comment 4:
+  Author: neotaoisttechnopagan
+  Comment: There is one already built into IT-Tools. 
+How is yours different?
+  Score: 1
+  Created UTC: 2024-07-27 09:49:03
+
+Comment 5:
+  Author: K3CAN
+  Comment: Can it go the other way? 
+
+Sometimes I find myself needing to convert compose and env files into a normal run -d command, so it'd be handy to have a script that could do it.
+  Score: 1
+  Created UTC: 2024-07-27 10:06:47
+
+Note: This post has only 5 comments at the time of scraping.

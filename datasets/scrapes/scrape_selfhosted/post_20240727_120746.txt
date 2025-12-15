@@ -1,0 +1,22 @@
+Post Title: Help Needed: Deluge Container Can't Connect to Gluetun VPN in Docker Setup
+Author: russo903
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ea0cw6/help_needed_deluge_container_cant_connect_to/
+Number of comments: 9
+Created UTC: 2024-07-23 05:57:25
+
+Post Content:
+Hey guys, im lost. I’m having trouble with my Docker setup where the deluge container cannot connect to the gluetun VPN container. I’m using Docker Compose to manage both containers, but despite being on the same network, deluge fails to communicate with gluetun and shows a “Unable to connect to daemon” error in the logs.
+
+https://preview.redd.it/55otlrock7ed1.png?width=1099&amp;format=png&amp;auto=webp&amp;s=fb09e5aa826cb5b888c63abd8c2f709e3e16a111
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: Virtual-Suggestion98
+  Comment: Did you use two different compose files or did you use one for everything
+  Score: 1
+  Created UTC: 2024-07-23 06:28:15
+
+Note: This post has only 1 comments at the time of scraping.

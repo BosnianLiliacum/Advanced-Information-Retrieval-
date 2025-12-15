@@ -1,0 +1,58 @@
+Post Title: Automatic Deployment &amp; Configuration 
+Author: brnjikurdy
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e88frx/automatic_deployment_configuration/
+Number of comments: 5
+Created UTC: 2024-07-20 23:19:09
+
+Post Content:
+Sorry if this isn't the correct sub for this question.
+
+I currently have a few services running on docker, on a contabo server and a few of them are exposed to the internet.
+
+I dud that by installing nginx and configuring everything myself from SSL, configuring reverse proxies, Https, redirects, etc..
+
+And each time I push an update, I have to go on the server, pull the changes from GitHub manually then restart the containers.
+
+Is there any easy to use service to manage all of this? Especially nginx and its configurations.
+
+I heard about Portainer but have no idea if it has any benefit for me. I was looking for something preferably with a GUI.
+
+Thanks.
+
+Top 5 comments:
+Comment 1:
+  Author: lesigh
+  Comment: I use docker compose files for each of my services with traefik tags that handle  revers proxy auto ssl renewals. Watchtower handles all the container updates.  
+
+Its worth learning so you save time manually updating . 30+ services with no needed maintenance
+  Score: 2
+  Created UTC: 2024-07-20 23:49:41
+
+Comment 2:
+  Author: AuthorYess
+  Comment: Your problem has a lot of solutions, you could go with a full CI/CD deployment, Ansible playbook, or even just a script that runs everything you need. It depends on the work you want to put into it and the level of professional legitimacy you want to give it.
+  Score: 2
+  Created UTC: 2024-07-21 05:37:40
+
+Comment 3:
+  Author: ethereal_g
+  Comment: I use a self hosted GitHub actions runner
+  Score: 2
+  Created UTC: 2024-07-21 05:45:56
+
+Comment 4:
+  Author: suicidaleggroll
+  Comment: I have all of my containers in docker compose, and manage their updates (as well as the updates for all of my physical systems and VMs) using ansible/rundeck
+
+Ansible was/is a bit of a learning curve, but there are a lot of examples out there
+  Score: 1
+  Created UTC: 2024-07-21 18:10:33
+
+Comment 5:
+  Author: bbbradddd
+  Comment: I’m using docker compose files with an Azure pipeline which has various steps such as creating and updating .env files with secret variables, so pulling images so anything on a latest tag gets updated, to then actually deploying my compose files
+  Score: 1
+  Created UTC: 2024-07-21 21:04:36
+
+Note: This post has only 5 comments at the time of scraping.

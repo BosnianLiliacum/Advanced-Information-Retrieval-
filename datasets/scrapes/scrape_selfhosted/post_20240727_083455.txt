@@ -1,0 +1,22 @@
+Post Title: Self Hosted CA for issues certs for document Signing
+Author: gt2416
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ecfhm6/self_hosted_ca_for_issues_certs_for_document/
+Number of comments: 1
+Created UTC: 2024-07-26 04:41:51
+
+Post Content:
+Anybody know any web based software which can be a CA and is used to issue certs for employees for document signing? This will only be self signed by the server but thats enough.
+
+Most other solutions seem to focus on certs for SSL which is not what I need. Also document signing certs being a huge scam I don't want to pay anyone of those companies. Self signed is sufficient, I can just install the root CA to everyone who needs to use it in my work. 
+
+Top 1 comments:
+Comment 1:
+  Author: frylock364
+  Comment: https://www.signserver.org/
+
+https://www.docuseal.co/install
+  Score: 2
+  Created UTC: 2024-07-26 07:31:49
+
+Note: This post has only 1 comments at the time of scraping.

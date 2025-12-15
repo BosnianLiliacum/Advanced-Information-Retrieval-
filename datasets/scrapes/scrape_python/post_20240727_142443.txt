@@ -1,0 +1,24 @@
+Post Title: Extending Zero Trust Network Access to a Private S3 Bucket using Boto3 and OpenZiti (both Python) 
+Author: PhilipLGriffiths88
+Score: 12
+URL: https://www.reddit.com/r/Python/comments/1eaz71k/extending_zero_trust_network_access_to_a_private/
+Number of comments: 1
+Created UTC: 2024-07-24 11:34:15
+
+Post Content:
+* **What My Project Does:** We use Boto3 (AWS SDK for Python) and the open source OpenZiti Python SDK to enable Zero Trust Network Access to a Private S3 Bucket with no inbound firewall ports, no need for sidecars, agents, or client proxies, nor any use of AWS Private Endpoints.
+* **Target Audience**: Engineers and developers who need to connect distributed systems/apps to AWS S3 (though the technology can be used for many other use cases)
+* **Comparison**: The company for whom we developed it previously used an AWS VPN client to connect from their robot to AWS Private S3 Bucket across the internet. Now they do not need to use a VPN, the zero trust overlay network is embedded in their Python apps running on/next to the robot. Further, they can close all inbound FW ports on AWS and only need outbound ports at source (opposed to inbound ports on both sides), no need for public DNS, L4 loadbalancers, and more.
+
+[https://blog.openziti.io/extend-access-to-a-private-s3-bucket-using-python](https://blog.openziti.io/extend-access-to-a-private-s3-bucket-using-python)
+
+Source code can be found here - [https://github.com/openziti/ziti-sdk-py/tree/main/sample/s3z#readme](https://github.com/openziti/ziti-sdk-py/tree/main/sample/s3z#readme)
+
+Top 1 comments:
+Comment 1:
+  Author: airen977
+  Comment:  Lll
+  Score: 2
+  Created UTC: 2024-07-24 13:41:33
+
+Note: This post has only 1 comments at the time of scraping.

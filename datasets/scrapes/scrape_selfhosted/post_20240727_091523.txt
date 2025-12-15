@@ -1,0 +1,46 @@
+Post Title: LubeLogger Install
+Author: boogieman444
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea3dbn/lubelogger_install/
+Number of comments: 10
+Created UTC: 2024-07-23 09:17:48
+
+Post Content:
+Has someone installedl LubeLogger recently? I tried to pull the image but it gives me this error: No matching manifest for linux/arm/v7 in the manifest list entries.
+
+I've tried uploading the docker file to portainer but i get an error too.
+
+Top 4 comments:
+Comment 1:
+  Author: WiseCookie69
+  Comment: The solution to your issue is to open a PR against [https://github.com/hargata/lubelog/blob/main/.github/workflows/build-and-push-image.yml#L48](https://github.com/hargata/lubelog/blob/main/.github/workflows/build-and-push-image.yml#L48) and add a linux/arm/v7 to the list of architectures in the highlighted line. The next release would then spit out a container image that is compatible with your system.
+
+The used base images (both builder and container base) both support linux/arm/v7, so it should be fine.
+
+CC u/ChiefAoki
+  Score: 3
+  Created UTC: 2024-07-23 11:38:23
+
+Comment 2:
+  Author: ovizii
+  Comment: I have no idea about LubeLogger, nor do I have any ARM architecture in use but looking at [https://hub.docker.com/r/hargata/lubelogger/tags](https://hub.docker.com/r/hargata/lubelogger/tags) it seems the author only published images for amd64 and arm64 architectures. Your device seems to be looking for arm/v7 though.
+
+A quick search on arm64 vs arm/v7 yields the fact that arm/v7 is legacy and 32 bit only so I'd say you are out of luck unless you ask the author if he has the possibility to also compile images for your desired architecture. YOu might also use the Dockerfile and compile the iamge yourself. 
+
+P.S. When you said docker file above, I am sure you meant the docker-compose.yml file, right and not the actual Dockerfile?
+  Score: 2
+  Created UTC: 2024-07-23 10:16:08
+
+Comment 3:
+  Author: haak1979
+  Comment: Recently installed and setup on an Arch-server in Docker. No problems at all.
+  Score: 1
+  Created UTC: 2024-07-23 11:01:50
+
+Comment 4:
+  Author: suicidaleggroll
+  Comment: I just set it up a week or two ago on a Debian 12 x86 VM in docker, no issues 
+  Score: 1
+  Created UTC: 2024-07-23 13:41:36
+
+Note: This post has only 4 comments at the time of scraping.

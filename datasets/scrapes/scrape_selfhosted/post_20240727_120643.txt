@@ -1,0 +1,38 @@
+Post Title: Self-hosted Calendar with option to view statistics?
+Author: homelab2946
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ea20xr/selfhosted_calendar_with_option_to_view_statistics/
+Number of comments: 3
+Created UTC: 2024-07-23 07:46:52
+
+Post Content:
+I am currently using Synology Calendar and it works great. I made a plan now to also track my time spent. Initially, I went with Google Sheet (I know, I am not totally degoogled yet) but it becomes annoying as I needed to duplicate the events and managing in 2 places. 
+
+All I want is a chart that show how much time I spent (according to my calendar) at work, sleep, activities, etc. I found that the Calendar app is way more appropriate to manage this, but I will write what is in my head here, so I can get another solution that can work without a dedicated app (I am thinking to pulling data in to display in Grafana or writing a script).
+
+
+
+My dream workflow is:
+
+- Plan for a day with tasks. Each task has a "tag" or some way to categorize in the stat.
+
+- End of day, I will correct the calendar with all the tasks and time I actually spent.
+
+- As soon as a task is edited, the chart should adjust.
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: LessieMackey48
+  Comment: You might want to check out Nextcloud with its Calendar and Deck apps for tagging and tracking your tasks. It integrates well and can help manage and visualize your time. Also, if you're creating any how-to videos or visual guides for yourself or others, I've been using Guidde and it's made documentation super easy!
+  Score: 1
+  Created UTC: 2024-07-24 02:11:24
+
+Comment 2:
+  Author: shol-ly
+  Comment: If you're not completely tied to Synology Calendar, a time tracking app like [Traggo](https://github.com/traggo/server) could easily handle your entire workflow and desired functionality.
+  Score: 1
+  Created UTC: 2024-07-23 09:01:57
+
+Note: This post has only 2 comments at the time of scraping.

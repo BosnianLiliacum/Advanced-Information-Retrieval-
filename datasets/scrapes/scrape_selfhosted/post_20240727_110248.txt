@@ -1,0 +1,69 @@
+Post Title: On a blocklist but not my fault
+Author: New-Possession-9248
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3m3wo/on_a_blocklist_but_not_my_fault/
+Number of comments: 12
+Created UTC: 2024-07-15 04:36:52
+
+Post Content:
+Hey all,
+
+I've setup my VPS to handle email. I've gone to the trouble of making sure, SPF, DMARC and DKIM have been setup. I thought would have been the end of it all. 
+
+I got an email bounce this morning and on further investigation it turns out my IP is in a /17 block where someone has either been compromised or is just spamming. So as opposed to black listing the specific IP, now I've been affected as part of some sort 'guilt by association' punishment. According to the blacklst investigating I did anyway.
+
+Not sure what to do? I've obviously contacted my provider OVH Cloud but what's the best overall solution. I don't want to have to signup to MS/Google to handle my mail.
+
+Top 7 comments:
+Comment 1:
+  Author: parametricRegression
+  Comment: My understanding is, self hosting smtp out is a dark art. It's the one thing you're probably better off paying some large cloud company to do for you.
+
+(Note, you can keep running your mail server, you just need someone who's a 'member of the club' to relay your outgoing mails.)
+
+for example: https://www.mailgun.com/pricing/
+  Score: 11
+  Created UTC: 2024-07-15 04:52:27
+
+Comment 2:
+  Author: lolklolk
+  Comment: The solution is not to use OVH, they're one of the worst when it comes to spammer abuse.
+  Score: 4
+  Created UTC: 2024-07-15 09:53:57
+
+Comment 3:
+  Author: ekevu456
+  Comment: I was in a similar situation a few years back and did two things:
+1. I got a more reputable provider and, in the process, a different IP
+2. I am sending my emails with Postmark, but you could use any similar software
+
+Especially the latter should help reliably long-term.
+  Score: 3
+  Created UTC: 2024-07-15 05:09:48
+
+Comment 4:
+  Author: No-Reflection-869
+  Comment: Is it only uceprotect or others aswell? If its uceprotect just ignore it have had never issues even being in them
+  Score: 3
+  Created UTC: 2024-07-15 07:49:01
+
+Comment 5:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 2
+  Created UTC: 2024-07-15 05:07:19
+
+Comment 6:
+  Author: andrewderjack
+  Comment: You're not alone in this situation. It's frustrating when you've done everything right, but still get penalized.
+
+I used Unspam Email to test my email campaigns and it helped me identify some issues that might've contributed to being blocklisted. It's not a silver bullet, but it's a useful tool to have in your arsenal. As for your situation, I'd suggest working with your provider to get your IP delisted, and also consider setting up a warm-up period for your mail server to establish a good sending reputation. Additionally, you might want to look into implementing a feedback loop to help prevent future issues.
+  Score: 3
+  Created UTC: 2024-07-15 15:57:05
+
+Comment 7:
+  Author: PeeApe
+  Comment: I tried multiple times to host my own email, it's genuinely not worth the work. It's really cool when people get it working but it's a massive pain in the ass. It's the singular service I pay for instead of self host.
+  Score: 1
+  Created UTC: 2024-07-15 15:58:06
+

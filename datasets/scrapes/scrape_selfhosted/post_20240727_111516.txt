@@ -1,0 +1,24 @@
+Post Title: Tips/guides for configuring Graylog as a Netflow collector/analyzer?
+Author: Exurbain
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed1r7w/tipsguides_for_configuring_graylog_as_a_netflow/
+Number of comments: 1
+Created UTC: 2024-07-26 23:09:48
+
+Post Content:
+Hello!
+
+Finally getting around to configuring data collection for my lab network and after fusing around with Ntopng (worked great but I don't have an Nprobe license) and Akvorado (could never get it to work properly with data coming from my MikroTik gear), I've settled on Graylog for collecting IPFIX data.
+
+I've configured the data ingress so now I'm just looking for any resources on how to create a dashboard for this type of data. I've already found guides for IP geo location in Graylog's docs but I was wondering if there was an add on that emulated [the flow charts of other Netflow analyzers](https://upload.wikimedia.org/wikipedia/commons/4/4f/Ntopng.png).
+
+Any pointers or resources on this would be much appreciated.
+
+Top 1 comments:
+Comment 1:
+  Author: SuperQue
+  Comment: Check out [akvorado](https://github.com/akvorado/akvorado). It uses Clickhouse as the datastore, which is probably going to work much better than the Elastic that Graylog uses.
+  Score: 1
+  Created UTC: 2024-07-27 08:59:26
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,48 @@
+Post Title: Logging informations
+Author: _akadawa
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e4lrse/logging_informations/
+Number of comments: 2
+Created UTC: 2024-07-16 11:01:27
+
+Post Content:
+Hello,
+
+
+
+I am looking for a webapp where I can enter all the information that I can then search for again when I need it. 
+
+e.g. windshield wiper is in the basement, Chris has 39 degrees fever ibuprofen given or Tapo socket is in the chest of drawers
+
+
+
+I'm not directly looking for an inventory, rather a form in which I can enter information that I can retrieve later.
+
+
+
+I hope I have explained it so that it can be understood.
+
+in my opinion i have already seen a similar webapp here or in the selfhosted list. but i can't find it
+
+
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: ctrlaltd1337
+  Comment: I was looking for something similar recently, and came across [flatnotes](https://github.com/dullage/flatnotes). It opens up with a search bar, which seems to be what you're looking for.
+
+Here's a good list of note-taking apps that was put together by /u/Temporary_Delay9456 a few months ago: https://www.reddit.com/r/selfhosted/comments/1bs8uzh/self_hosted_note_taking_app/kxgi70l/
+
+I'll also throw in a couple other options:
+
+* [HedgeDoc](https://hedgedoc.org/)
+
+* [Note Mark](https://notemark.docs.enchantedcode.co.uk/about/)
+
+* [Meemo](https://github.com/cloudron-io/meemo)
+  Score: 3
+  Created UTC: 2024-07-16 13:16:18
+
+Note: This post has only 1 comments at the time of scraping.

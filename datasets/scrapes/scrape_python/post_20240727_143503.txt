@@ -1,0 +1,103 @@
+Post Title: A simple Python script that sorts your ~/Downloads folder by file extensions 
+Author: at-pyrix
+Score: 106
+URL: https://www.reddit.com/r/Python/comments/1ebq2b3/a_simple_python_script_that_sorts_your_downloads/
+Number of comments: 34
+Created UTC: 2024-07-25 08:50:34
+
+Post Content:
+Hey everyone!
+
+So I’ve created a very simple Python script to de-clutter your Downloads folder.
+
+[demo](https://i.redd.it/4hyeiy72pmed1.gif)
+
+# What My Project Does
+
+This Python script sorts the files into different folders such as Audio, Video, Documents etc. according to the file extension. For example, a .pdf file will be moved to Documents.
+
+# Usage
+
+* Install it through pipx
+
+&amp;#8203;
+
+    $ pipx install dlorg
+
+* Run `$ dlorg` to run the script.
+
+**Target Audience**
+
+Just a useful tool for most people.
+
+**Comparison**
+
+Supports a wide range of extensions, easily accessible through a single command, colored logging.
+
+# Links
+
+[Source Code (Github)](https://github.com/at-pyrix/dlorg)
+
+[Python package: PyPi](https://pypi.org/project/dlorg)
+
+EDIT: It is now installable through pipx.  
+EDIT 2: Added support for mimetypes, fixed some bugs (thanks u/XUtYwYzz) and now the script automatically assigns an icon to each folder category!
+
+Top 7 comments:
+Comment 1:
+  Author: Grytr1000
+  Comment: Erm. But why? Simply keep the downloads folder empty (`rm -ri ~/downloads/*`) and all will be *zen*! /s
+  Score: 91
+  Created UTC: 2024-07-25 09:53:59
+
+Comment 2:
+  Author: rahuul_sh
+  Comment: Great tool! I’d use magic numbers for file type identification, as it’s more robust and accurate than relying on extensions alone. This approach helps handle edge cases with incorrect or missing extensions, ensuring more reliable detection.
+  Score: 24
+  Created UTC: 2024-07-25 10:32:12
+
+Comment 3:
+  Author: ganjlord
+  Comment: Nice little project! Doesn't really need it, but consider adding docstrings and type hints if you want a little more polish.
+  Score: 10
+  Created UTC: 2024-07-25 13:11:44
+
+Comment 4:
+  Author: ancientweasel
+  Comment: Nice repo
+
+&gt; If you get this error: error: externally-managed-environment, run the command pip install . --break-system-packages (this may break stuff)
+
+I reccomend pipx
+
+https://github.com/pypa/pipx
+  Score: 13
+  Created UTC: 2024-07-25 11:30:50
+
+Comment 5:
+  Author: Compux72
+  Comment: ```
+for file in ~/Downloads/*
+do
+  local mime=“$(file —mime “$file”)”
+  local mime_type=“$(cut -d/ 1 &lt;&lt;&lt;$mime)”
+  local dst=“~/Downloads/$mime_type”
+  mkdir “$dst” || true
+  mv “$file” “$dst/“
+done
+```
+  Score: 15
+  Created UTC: 2024-07-25 15:01:07
+
+Comment 6:
+  Author: Chemist-Nerd
+  Comment: Nice project + nice GitHub page
+  Score: 6
+  Created UTC: 2024-07-25 09:14:16
+
+Comment 7:
+  Author: runawayasfastasucan
+  Comment: Cool project! Wonder if installing theough pipx would make more sense to use it as a standalone thing?
+  Score: 3
+  Created UTC: 2024-07-25 13:17:51
+

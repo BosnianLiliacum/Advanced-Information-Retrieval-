@@ -1,0 +1,110 @@
+Post Title: Help deciding on distro for NAS/Homeserver
+Author: Ken_Mcnutt
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6hwdb/help_deciding_on_distro_for_nashomeserver/
+Number of comments: 26
+Created UTC: 2024-07-18 18:11:23
+
+Post Content:
+I'm in the process of building an AMD based homeserver/NAS that I will use to host various services (jellyfin, *arr, nextcloud, etc.). 
+
+7900X CPU, 64GB ram, and 4x 8TB drives (to start). Using [this](https://www.amazon.com/gp/product/B09FY9FBTN?psc=1) SATA controller card for my Mobo
+
+As for the programs, I already have/know how to configure all these services through `docker` and don't anticipate too much trouble there.
+
+What I'm really struggling with, is what operating system to use as a base to best take advantage of the hardware I have.
+
+* I should probably be using a software RAID of some sort, right? 
+* What RAID setup is the best? I think the duplicative one where data loss is prevented would be the best choice?
+* Is a distro like Unraid required for a setup like this, or can I configure it on any distro?
+* I manage my home systems with NixOS, how feasible is it to manage the RAID setup through Nix as well? 
+
+The end result should be a single "drive" object that the OS sees, so downloaders/media servers don't have to be aware of multiple media directories spread over multiple drives.
+
+How can I achieve a setup like this?
+
+Top 6 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Hello. Will try to answer all your questions below
+
+&gt;I should probably be using a software RAID of some sort, right? 
+
+Correct 
+
+&gt;What RAID setup is the best? I think the duplicative one where data loss is prevented would be the best choice?
+
+There is no such thing as 100% prevention of data loss in RAID. (Not stating you were implying this, just stating the fact)
+
+Different raid types will increase redundancy and HA (high availability). So it's up to you which one you want to pick and the cost implications 
+
+Note: that RAID is not a backup. Even with RAID you can lose data as many drives can and will die at the same time. With important information try to follow the 3-2-1 backup rule 
+
+&gt;Is a distro like Unraid required for a setup like this, or can I configure it on any distro?
+
+There are many OS that provide RAID. Here are the popular ones
+
+- trueNAS (core/ scale)
+- unRAID
+- open media vault
+- Linux OS with mergeFS and SnapRaid 
+
+Each has there pros and cons. This question gets asked alot in this forum so I'm sure you can find the pros and cons online. Pick whatever you feel is best for yourself 
+
+Note: you can use proxmox if you want many VM where one is the NAS OS. You can pass in the HBA directly through to the VM
+
+&gt;I manage my home systems with NixOS, how feasible is it to manage the RAID setup through Nix as well? 
+
+Should be manageable with mergeFS and SnapRaid. 
+
+I don't know to much about NixOS
+
+Hope that helps
+  Score: 3
+  Created UTC: 2024-07-18 18:59:59
+
+Comment 2:
+  Author: benjo1989
+  Comment: I'd suggest Proxmox as the OS, but then look at ZFS for your for your storage. You can run it on the Proxmox host and present it to your VMs or containers.
+
+I'm running an Ubuntu VM under Proxmox which is specifically for Docker stuff - everything else is it's own LXC or VM.
+  Score: 3
+  Created UTC: 2024-07-18 19:02:11
+
+Comment 3:
+  Author: zyberwoof
+  Comment: &gt;What RAID setup is the best? **I think the duplicative one where data loss is prevented would be the best choice?**
+
+I have to giggle a little bit at this one.  RAID stands for "Redundant Array of Independent Disks".  They all have redundancy where they cans survive at least one drive failing.  Some can withstand 2 or more.
+
+RAID0 can NOT survive the loss of a single drive.  There is no redundancy.  For that reason, many don't consider RAID0 to actually be RAID.  It's just "AID".
+  Score: 2
+  Created UTC: 2024-07-18 21:40:24
+
+Comment 4:
+  Author: untrained9823
+  Comment: I use NixOS and Snapraid+Mergerfs instead of RAID. Can recommend.
+  Score: 1
+  Created UTC: 2024-07-18 18:58:53
+
+Comment 5:
+  Author: ItsPwn
+  Comment: Synology DSM for nas 100%
+
+Go to releases for USB image
+
+https://github.com/AuxXxilium/arc
+
+/r/xpenology
+  Score: 1
+  Created UTC: 2024-07-18 22:08:20
+
+Comment 6:
+  Author: saumyashhah
+  Comment: Yes software raid, 
+Proxmox as OS , then Truenas as VM and LXCs for individual containers (or in an Ubuntu vm)
+This is probably the best way
+  Score: 0
+  Created UTC: 2024-07-18 18:18:22
+
+Note: This post has only 6 comments at the time of scraping.

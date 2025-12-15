@@ -1,0 +1,24 @@
+Post Title: Self-hosted AI YouTube Shorts Generator
+Author: ANil1729
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3w6w4/selfhosted_ai_youtube_shorts_generator/
+Number of comments: 3
+Created UTC: 2024-07-15 14:29:25
+
+Post Content:
+I have created an open-source project which can convert a long format video into shorts using AI and it's completely open-source and available here [https://github.com/SamurAIGPT/AI-Youtube-Shorts-Generator](https://github.com/SamurAIGPT/AI-Youtube-Shorts-Generator)
+
+Top 2 comments:
+Comment 1:
+  Author: blubberland01
+  Comment: Yay, more AI generated content. Exactly what we need. Organic entities can be held responsible for whatever they produce - what a stupid concept.
+  Score: 11
+  Created UTC: 2024-07-15 15:51:06
+
+Comment 2:
+  Author: BureauOfBureaucrats
+  Comment: We don’t need more AI slop and attention spans are short enough. 
+  Score: 3
+  Created UTC: 2024-07-15 19:53:51
+
+Note: This post has only 2 comments at the time of scraping.

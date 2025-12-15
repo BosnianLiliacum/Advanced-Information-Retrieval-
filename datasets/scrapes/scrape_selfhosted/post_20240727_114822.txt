@@ -1,0 +1,164 @@
+Post Title: I'm concerned that I structured my self hosted services &amp; reverse proxies like a moron. How did you do it?
+Author: dipplersdelight
+Score: 52
+URL: https://www.reddit.com/r/selfhosted/comments/1eb2g5b/im_concerned_that_i_structured_my_self_hosted/
+Number of comments: 31
+Created UTC: 2024-07-24 14:11:04
+
+Post Content:
+(Originally posted to r/homelab)
+
+Hey everyone,
+
+My home network has been growing in complexity at a pretty rapid pace and I've been running into some issues that are making me re-consider its overall structure and my approach to reverse proxies and whatnot. I was curious if I could get some honest critique and guidance on my overall approach to things, as Google isn't much help when it comes to best practices or questions of such a general scope.
+
+Here's my setup:
+
+* I own a FQDN (`example.net`) through Cloudflare that's solely used for my local network (no public facing services whatsoever)
+* I have an OPNsense gateway (`10.10.10.1`) with [`example.net`](http://example.net) as the network/search domain, accessible at`router.example.net`
+   * In DHCPv4, [`10.10.10.1`](http://10.10.10.1) to [`10.10.10.99`](http://10.10.10.99) is the standard range for devices on the LAN interface, with [`10.10.10.100`](http://10.10.10.100) to [`10.10.10.199`](http://10.10.10.199)  reserved for virtualized services. No VLANs yet!
+   * In Unbound, I have a single host override (`caddy.example.net)` pointing towards my local reverse proxy service's IPv4 address (`10.10.10.100`)
+   * This host override then has several aliases for all of my reverse proxied services (`service.example.net -&gt; caddy.example.net`) 
+* I have a Proxmox VE server running various services, each with static IPv4 addresses whose last octet (`10.10.10.x`) corresponds with the VMID 
+   * I have a Caddy LXC (`10.10.10.100, caddy.example.net`) that acts as the reverse proxy for all of my local services, allowing me to access my services fully locally with SSL via the Cloudflare DNS provider module
+   * Authentik LXC (`10.10.10.101, auth.example.net`) for SSO, self explanatory, used alongside Caddy
+   * Various other typical homelab services, many of which with frontends accessible behind the Caddy reverse proxy (i.e [`10.10.10.101`](http://10.10.10.101) -&gt; `service.example.net`)
+* I mostly manage &amp; configure everything via a combination of Proxmox's frontend, SSH and Visual Studio Code's 'Remote - SSH' extension, although keeping tabs on so many config files and environments is pretty cumbersome &amp; error prone
+
+My main concern with this approach is the frequent overlap between reverse proxy hostnames and actual device hostnames, as [`example.net`](http://example.net) is used as my network/search domain. In many cases, [`service.example.net`](http://service.example.net) points to both a device (LXC/VM) hostname and its reverse proxied frontend. Aside from some minor issues with SSH, I saw no issue with this approach initially and even assumed it was a good practice as it (seemingly) reduced complexity.   
+  
+However, my doubts have only grown larger as my network has. The biggest pain point is managing tons of reverse proxy hosts across both Unbound and Caddy. Normally, I could simply add a single wildcard override in Unbound (`*.example.net -&gt; Caddy IPv4`) and manage everything in my Caddyfile, but opnsense's Unbound integration completely breaks if you create a wildcard override on the same subdomain level as opnsense (`router.example.net`, in my case). As a result, I have to carefully maintain a list of individual DNS aliases for each proxied service.
+
+I don't really know how to improve my setup, though. I considered splitting my network/search domain and my domain for reverse proxied services between [`home.arpa`](http://home.arpa) and [`example.net`](http://example.net), but I'm worried that's overkill. 
+
+How do you guys structure your services on your local network, especially in regards to reverse proxies and whatnot? Looking for advice towards my general approach, things you would do differently, and potential ways to simplify and streamline my overall network structure. Even beyond specific concerns with hostnames, I'm totally open to any critique here.
+
+Top 7 comments:
+Comment 1:
+  Author: jocosian
+  Comment: I have a similar setup. Here are some small things I do differently to avoid problems:
+- Manage all IPs via static DHCP reservations in OPNSense. This puts them all in one place. Note that Proxmox doesn’t really support DHCP for the hypervisor itself, so just statically set its IP to match the static reservation
+- Set your default domain in OPNSense to “internal” and not “example.net”.
+- Enable the option in OPNSense to register all DHCP leases as DNS entries. Now, every device with a DHCP lease also has a DNS name of something like joe.internal or authentik.internal
+- Use the Caddy plugin in OPNSense rather than running it in an LXC. The LXC isn’t wrong, but this is a core piece of your networking infrastructure, and having it on the same machine as DNS, etc will save you headaches in the future. The UI is pretty decent once you understand it too
+- Running Caddy on OPNSense will require changing the port for the OPNSense admin dashboard itself. You can create a Caddy reverse proxy route for that too though to get it back on 443. Follow the official guide for the Caddy plugin 
+- In Caddy, register your reverse proxy handlers for whatever you want to have a full name. This is likely your LXCs and maybe some Docker containers if you have them. Proxy from example.net to internal, like “plex.example.net:443 -&gt; plex.internal:32400”.
+- Remember to create unbound overrides for each example.net domain you proxy, with the override pointing at the firewall itself (since that’s where Caddy is running)
+  Score: 13
+  Created UTC: 2024-07-24 16:25:18
+
+Comment 2:
+  Author: Sandfish0783
+  Comment: I just subdomained everything out.
+
+For example, my proxy is at proxy.example.net. Then all services are subdomained from there:
+
+[website.proxy.example.net](http://website.proxy.example.net)
+
+[service.proxy.example.net](http://service.proxy.example.net)
+
+  
+Then I use Shlink for a shorter URL I own and just use that as a way to forward my stuff around in case I get tired of typing it out. For example
+
+[web.xmpl.net](http://web.xmpl.net)
+
+[serv.xmpl.net](http://serv.xmpl.net)
+
+This make things a bit easier. You can do this with your unbound domain too. So you could have:
+
+[host.lan.example.net](http://host.lan.example.net) - Anything assigned by DHCP on the LAN
+
+[host.proxy.example.net](http://host.proxy.example.net) - Anything behind the reverse proxy
+
+  
+I also use the following;
+
+\*.cloud.example.net - For my services in my VPS
+
+\*.ad.example.net - For my Windows Domain with Active Directory
+
+\*.dev.example.net - For things that are in the testing phase
+
+  
+This lets you do wildcard as you mentioned, you may just need a handful of them for whatever you need. But for my Windows domain for example, the DC acts as DNS for that domain, so I use a Forwarder for \*.az.example.net that forwards those requests from Unbound to the DC.
+  Score: 6
+  Created UTC: 2024-07-24 17:43:24
+
+Comment 3:
+  Author: Lopyter
+  Comment: &gt; My main concern with this approach is the frequent overlap between reverse proxy hostnames and actual device hostnames, as example.net is used as my network/search domain.
+
+I have a similar setup with a FQDN and reverse proxy on LAN.  
+What I did was to use two different subdomains.  
+
+`*.[location].example.com` is my network/search domain for the actual devices. And [location] gets replaced by the actual physical location, which separates my local devices and my cloud servers.  
+For example:  
+sequoia.hometown.example.com is my unRaid server at home.   
+sparrow.falkenstein.example.com is my Hetzner cloud server. 
+
+`*.lan.example.com` is for actual applications, which are only available on my LAN.
+  Score: 3
+  Created UTC: 2024-07-24 19:54:06
+
+Comment 4:
+  Author: shoesli_
+  Comment: I use Traefik as my reverse proxy, with Authelia authentication,  together with Cloudflare. Most of my admin GUIs are reachable externally, but only via
+
+Cloudflares WAF (geo block from only my country) &gt; My router (only from CF's proxy servers IP's &gt; Traefik with auth middlewares (Authelia) &gt; My admin GUI
+
+Some services like Portainer GUI also require google login in Cloudflare access, plus Authelia login in Traefik
+
+If I want to expose a new service/container I just add some Docker labels to it and a new CNAME record is created in Cloudflare pointing to my A record that points to my IP, and certs are created etc.
+
+Why not just use one or the other? I recommend only CF DNS to avoid DDOS and having to open DNS ports. Why can't Cloudflares DNS be the one pointing [caddy.example.net](http://caddy.example.net) to 10.10.10.100? And then you can have service1.example.net pointing to [caddy.example.net](http://caddy.example.net) with a CNAME.
+
+The problem with your current setup is that you get different results depending on which server you query. Your unbound server is not authorative for the zone [example.net](http://example.net), so it should not be answering queries for it. When it gets a query for [example.net](http://example.net) it should ask cloudflares DNS server which is authorative. Overriding it is not a good solution, since that no longer follow the rules of DNS and can lead to unpredictable results.
+
+Using CF as DNS does not mean you have to expose any services on the internet. You can have records pointing to local IPs too
+
+The DHCP searchdomain only tells clients that if I ping "printer326", it should resolve to "printer326.example.net". But what printer326.example.net means should be provided by the authorative nameserver, CF in this case. Other DNS server may then cache the result but the authorative servers are the only ones that decide what the correct result is.
+  Score: 3
+  Created UTC: 2024-07-24 23:09:50
+
+Comment 5:
+  Author: thehackeysack01
+  Comment: fun part is you can change it. bonus points if you can do it with little to no service outage like a real provider must.
+  Score: 3
+  Created UTC: 2024-07-25 12:49:18
+
+Comment 6:
+  Author: i_reddit_it
+  Comment: &gt; How do you guys structure your services on your local network
+
+I'll just wanted to share what works for me, not sure if this is useful for you or not, however zero issues for me in the last 2.5 years.
+
+- Proxmox OS
+- A number of linux VM's running Ubuntu Server (e.g NAS VM, Docker VM, Development VM, Game server VM)
+- Docker VM runs docker with Portainer frontend for easy docker config/management.
+- NGINX Proxy Manager running as a container within the Docker VM. The container exposes ports `80` and `443`.
+- Cloudflare DNS. The A record is configured to point to an INTERNAL IP (e.g `www.mydomain.com` -&gt; `192.168.7.100`) which is the INTERNAL IP of the docker VM. I also have wildcard CNAME `*.mydomain.com`. So this is a PUBLIC DNS entry with a internal IP address, I get this is kinda lazy, however it does work for me.
+- I configure all my internal network hostnames inside NGINX Proxy Manager with SSL certs for the wildcard domain. All my domains are then proxied with IP:port using full SSL/HTTP2 e.g `jellyfin.mydomain.com`, `nas.mydomain.com`, `proxmox.mydomain.com` etc).
+- Optional: I also run AdGurd Home via docker for DNS lookup (you will need expose port `53` to host) and configure your router to use the docker VM IP as the primary DNS.
+  Score: 2
+  Created UTC: 2024-07-24 22:03:13
+
+Comment 7:
+  Author: pinneapple_ghost
+  Comment: &gt; opnsense's Unbound integration completely breaks if you create a wildcard override on the same subdomain level as opnsense 
+
+I haven't used either opnsense or unbound, but I'm curious why there's an integration between them? As I understood it, opnsense acts as your router/dhcp/firewall, and unbound would be your dns server. Regardless, it sounds like the easiest fix here is use a different domain for the router, something like "router.local" or whatever, and then you can use the wildcard override to only worry about the Caddyfile.
+
+&amp;nbsp;
+&amp;nbsp; 
+
+fwiw, here's what I do to avoid worrying about domain differences between internal vs external services - it's similar to what you mentioned about managing everything in the Caddyfile:
+
+I've got a local dns server with a wildcard record to my domain that resolves to the LAN ip of my server hosting the caddy reverse proxy. The caddy reverse proxy then points each service's subdomain to the right ip/port on the network. Adding new subdomains happens entirely in the Caddyfile
+
+For the subdomains I want public, I'm using cloudflare-ddns to keep those dns records updated in cloudflare. So when I'm in my network, service.example.net resolves to a LAN ip. When I'm outside the network, the same service.example.net resolves to whatever public domain was pushed to cloudflare
+
+
+If you do the public part, just gotta make sure to add IP filters in the `reverse_proxy`directives in the Caddyfile to only allow internal traffic for whatever subdomains you want to be internal
+  Score: 2
+  Created UTC: 2024-07-24 22:15:15
+

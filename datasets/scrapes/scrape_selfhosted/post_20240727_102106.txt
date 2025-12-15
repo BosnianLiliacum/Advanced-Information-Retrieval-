@@ -1,0 +1,179 @@
+Post Title: How can I get Traefik API working with Homepage's Docker service auto-detection?
+Author: DavethegraveHunter
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e66vq3/how_can_i_get_traefik_api_working_with_homepages/
+Number of comments: 2
+Created UTC: 2024-07-18 09:04:31
+
+Post Content:
+I have successfully used [Homepage's Automatic Service Discovery](https://gethomepage.dev/v0.8.3/configs/docker/#automatic-service-discovery) mechanism with several Docker containers. However, I am having a problem getting it to work with Traefik, specifically.
+
+Screenshot of what I see in Homepage [here](https://www.dropbox.com/scl/fi/pj2lq94s20s3ib9i18bem/homepage-traefik-issue.jpg?rlkey=6eyhj4akibfab6sisaq5qujjy&amp;dl=0).
+
+As you can see, I get an API error for Traefik, specifically. I can load the URL in my browser and see the JSON from the Traefik API just fine, so I'm guessing this might be an issue where the Homepage container can't access the Traefik container... but they're both definitely on the same network in their respective docker-compose.yml files.
+
+docker-compose-homepage.yml:
+
+    services:
+      homepage:
+        # dns: 192.168.4.7
+        image: ghcr.io/gethomepage/homepage:latest
+        container_name: homepage
+        restart: unless-stopped
+        #user: 1000:1000 # uncomment if you do not want to run as root
+        #ports: # uncomment if you are not using a reverse proxy
+        #  - 3000:3000
+        volumes:
+          - ./config:/app/config # Make sure your local config directory exists
+          - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+          - /home/david/docker/homepage/images:/app/public/images # Path to background image stored on computer.
+        networks:
+          proxy:
+        labels:
+          - "traefik.enable=true"
+          - "traefik.http.routers.homepage.entrypoints=http"
+          - "traefik.http.routers.homepage.rule=Host(`homepage.mydomain.com`)"
+          - "traefik.http.routers.homepage.middlewares=default-whitelist@file"
+          - "traefik.http.middlewares.homepage-https-redirect.redirectscheme.scheme=https"
+          - "traefik.http.routers.homepage.middlewares=homepage-https-redirect"
+          - "traefik.http.routers.homepage-secure.entrypoints=https"
+          - "traefik.http.routers.homepage-secure.rule=Host(`homepage.mydomain.com`)"
+          - "traefik.http.routers.homepage-secure.tls=true"
+          - "traefik.http.routers.homepage-secure.service=homepage"
+          - "traefik.http.services.homepage.loadbalancer.server.port=3000"
+          # - "traefik.http.routers.homepage-secure.middlewares=middlewares-authentik@file"
+         # - "traefik.http.routers.homepage-secure.middlewares=default-whitelist@file" # uncomment if you want to use a Traefik whitelist to restrict access
+         # - "traefik.http.routers.homepage-secure.middlewares=authelia@docker" # uncomment if you want to use authelia
+         # - "traefik.docker.network=proxy"
+        security_opt:
+          - no-new-privileges:true
+    
+    networks:
+      proxy:
+        external: true
+
+docker-compose-traefik.yml:
+
+    services:
+      traefik:
+        image: traefik:v3.0.4
+        container_name: traefik
+        restart: unless-stopped
+        security_opt:
+          - no-new-privileges:true
+        networks:
+          - proxy
+        ports:
+          - 80:80 #For internal services
+          - 81:81 #For external services
+          - 443:443 #For internal services
+          - 444:444 #For external services
+          # - 443:443/tcp # Uncomment if you want HTTP3
+          # - 443:443/udp # Uncomment if you want HTTP3
+        environment:
+          CF_DNS_API_TOKEN_FILE: /run/secrets/cf_api_token # note using _FILE for docker secrets
+          # CF_DNS_API_TOKEN: ${CF_DNS_API_TOKEN} # if using .env
+          TRAEFIK_DASHBOARD_CREDENTIALS: ${TRAEFIK_DASHBOARD_CREDENTIALS}
+        secrets:
+          - cf_api_token
+        env_file: .env # use .env
+        volumes:
+          - /etc/localtime:/etc/localtime:ro
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+          - ./data/traefik.yml:/traefik.yml:ro
+          - ./data/acme.json:/acme.json
+          - ./data/config.yml:/config.yml:ro
+          - ./logs:/var/log/traefik
+        labels:
+          - "traefik.enable=true"
+          - "traefik.http.routers.traefik.entrypoints=http"
+          - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.mydomain.com`)"
+          - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_DASHBOARD_CREDENTIALS}"
+          - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
+          - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
+          - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
+          - "traefik.http.routers.traefik-secure.entrypoints=https"
+          - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.mydomain.com`)"
+          - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
+          - "traefik.http.routers.traefik-secure.tls=true"
+          - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
+          - "traefik.http.routers.traefik-secure.tls.domains[0].main=mydomain.com"
+          - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.mydomain.com"
+          - "traefik.http.routers.traefik-secure.service=api@internal"
+          - homepage.group=Network admin
+          - homepage.name=Traefik
+          - homepage.icon=traefik
+          - homepage.href=https://traefik-dashboard.mydomain.com
+          - homepage.description=HTTP reverse proxy and load balancer.
+          - homepage.statusStyle=dot
+          - homepage.widget.type=traefik
+          - homepage.widget.url=https://traefik-dashboard.mydomain.com
+          - homepage.widget.username:dave
+          - homepage.widget.password:passwordhere
+          - homepage.showStats=true
+    secrets:
+      cf_api_token:
+        file: ./cf_api_token.txt
+    
+    networks:
+      proxy:
+        external: true
+
+I noticed these errors in the Homepage log (as seen in Portainer):
+
+    "Listening on port 3000
+    [2024-07-16T01:59:00.284Z] error: &lt;service-helpers&gt; Error getting services from Docker server 'docker1': Error: connect EACCES /var/run/docker.sock
+        at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+      errno: -13,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '/var/run/docker.sock'
+    }
+    [2024-07-16T01:59:00.494Z] error: &lt;service-helpers&gt; Error getting services from Docker server 'docker1': Error: connect EACCES /var/run/docker.sock
+        at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+      errno: -13,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '/var/run/docker.sock'
+    }
+    [2024-07-16T01:59:00.871Z] error: &lt;dockerStatusService&gt; Error: connect EACCES /var/run/docker.sock
+        at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)
+    [2024-07-16T01:59:01.087Z] error: &lt;service-helpers&gt; Error getting services from Docker server 'docker1': Error: connect EACCES /var/run/docker.sock
+        at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
+      errno: -13,
+      code: 'EACCES',
+      syscall: 'connect',
+      address: '/var/run/docker.sock'
+    }
+    [2024-07-16T01:59:01.109Z] error: &lt;httpProxy&gt; Error calling https://traefik-dashboard.mydomain.com/api/overview...
+    [2024-07-16T01:59:01.110Z] error: &lt;httpProxy&gt; [
+      500,
+      Error: getaddrinfo ENOTFOUND traefik-dashboard.mydomain.com
+          at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26) {
+        errno: -3008,
+        code: 'ENOTFOUND',
+        syscall: 'getaddrinfo',
+        hostname: 'traefik-dashboard.mydomain.com'
+      }"
+
+  
+ noted specifically "Error: connect EACCES /var/run/docker.sock". I thought it may be because /var/run/docker.sock didn't exist on my system. I found [this](https://superuser.com/questions/1741326/how-to-connect-to-docker-daemon-if-unix-var-run-docker-sock-is-not-available) and followed the instructions in the accepted answer (indeed, I was running Docker via systemctyl and it was set to containerd.sock instead within /lib/systemd/system/docker.service (as shown in that answer), and so I changed it (again, as per the answer), so now I have /var/run/docker.sock (I also then rebooted, just in case).
+
+Despite this change, and despite restarting the Docker host entirely, I still see the same error in the Homepage log (as seen in Portainer) and also the API error in the Homepage web UI (as seen in the screenshot provided).
+
+Any ideas what I might've stuffed up, please?
+
+Top 1 comments:
+Comment 1:
+  Author: pheitman
+  Comment: You don't appear to be setting the UI port for traefik. You can check the service within traefik (mine is called traefik@docker) to see what port it thinks that the server is at. The label to set the port is
+
+  
+- traefik.http.services.traefik-secure.loadbalancer.server.port=8080
+
+  
+Note that I gave up on using https to access the traefik gui and just use http. I don't have any external access to my home lab so I consider it to be safe enough. But your use case may be different...
+  Score: 1
+  Created UTC: 2024-07-18 15:05:45
+
+Note: This post has only 1 comments at the time of scraping.

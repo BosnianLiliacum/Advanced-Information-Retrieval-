@@ -1,0 +1,57 @@
+Post Title: What do you guys self-host for?
+Author: Man-in-The-Void
+Score: 54
+URL: https://www.reddit.com/r/selfhosted/comments/1e6j55p/what_do_you_guys_selfhost_for/
+Number of comments: 156
+Created UTC: 2024-07-18 19:00:15
+
+Post Content:
+I'm really interested in having my own little network of things to maintain and work on but i realized that without any big purpose for the equipment its just going to collect dust. What do you use your systems for?
+
+Top 7 comments:
+Comment 1:
+  Author: CortaCircuit
+  Comment: Privacy and owning my own data.
+  Score: 205
+  Created UTC: 2024-07-18 19:30:00
+
+Comment 2:
+  Author: AngryDemonoid
+  Comment: I primarily self-host as a hobby. I had an old desktop that was collecting dust, so started off with Plex and progressed from there.
+
+Since then, I've upgraded, and that desktop is back to collecting dust. Lol.
+
+I'm at a point now where I self-host as much as I can. I try things out, and if they work well enough, l'll extend them to my wife, which is the real test.
+  Score: 88
+  Created UTC: 2024-07-18 19:15:03
+
+Comment 3:
+  Author: mitchsurp
+  Comment: Largely because of enshittification. Evernote, FileThis, Netflix, linktree, YouTube -- they all got progressively worse than other options I had hosting myself.
+  Score: 64
+  Created UTC: 2024-07-18 19:50:21
+
+Comment 4:
+  Author: ButchyGra
+  Comment: The chicks
+  Score: 26
+  Created UTC: 2024-07-18 20:53:22
+
+Comment 5:
+  Author: pheitman
+  Comment: I use it to store my passwords (vaultwarden}, manage my music (plex), manage my photos (immich), my minecraft games (crafty), access them all securely from anywhere without exposing anything to the internet (tailscale). But mostly it's fun to experiment with new things. As another poster mentioned, docker compose makes it really easy to try things out
+  Score: 20
+  Created UTC: 2024-07-18 19:28:43
+
+Comment 6:
+  Author: pcs3rd
+  Comment: Maybe someday I can put it on my resume and someone will think it's cute.
+  Score: 15
+  Created UTC: 2024-07-18 21:04:16
+
+Comment 7:
+  Author: AstarothSquirrel
+  Comment: plex and Jellyfin,  Davinci Resolve project server, minecraft server,  Trilium for notes, Memos for time logging/ daily journal.  Calibre and calibre Web for my ebooks.  Octoprint for 3D printer. Paperless and nextcloud and Homer. And a twingate connector.
+  Score: 8
+  Created UTC: 2024-07-18 19:35:30
+

@@ -1,0 +1,182 @@
+Post Title: Jellyfin problems
+Author: NekoLuka
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1echy9n/jellyfin_problems/
+Number of comments: 15
+Created UTC: 2024-07-26 07:16:43
+
+Post Content:
+Hi everyone,
+
+I set up my arr stack yesterday, and it works flawlessly, except for jellyfin.
+
+I configured sonarr to structure shows as described in the documentation, [described here](https://jellyfin.org/docs/general/server/media/shows/).
+
+But even so, jellyfin doesn't show all shows (currently have 2, only one shows up, which one switches with library scans), doesn't show all episodes (or non at all), can't load episodes, doesn't fetch metadata, doesn't do anything after using identify on the show (which is also incredibly slow)...
+
+I'm running it in docker with my media directory on my nas over mounted over nfs.
+
+Does anybody know what to do to fix jellyfin? I'm getting quite frustrated by it...
+
+Edit: Added compose file
+
+Edit 2: Logs might explain why metadata fetching isn't working  
+  
+\[2024-07-26 08:29:28.150 +00:00\] \[INF\] \[3\] Jellyfin.Api.Controllers.ItemLookupController: Setting provider id's to item 8fca4c3f-8126-3724-deaf-6927cec81a63-"Doctor Who (2023)": \[("Imdb": "tt31433814")\]  
+\[2024-07-26 08:30:00.028 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:30:00.028 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:30:00.030 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: AuthenticationScheme: "CustomAuthentication" was challenged.  
+\[2024-07-26 08:31:08.189 +00:00\] \[ERR\] \[23\] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request: "The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing". URL "POST" "/Items/RemoteSearch/Apply/8fca4c3f81263724deaf6927cec81a63".  
+\[2024-07-26 08:31:13.603 +00:00\] \[INF\] \[25\] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "192.168.2.224" closed  
+\[2024-07-26 08:31:13.916 +00:00\] \[INF\] \[28\] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "192.168.2.224" request  
+\[2024-07-26 08:35:00.009 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:35:00.009 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:35:00.010 +00:00\] \[INF\] \[23\] Jellyfin.Api.Auth.CustomAuthenticationHandler: AuthenticationScheme: "CustomAuthentication" was challenged.  
+\[2024-07-26 08:40:00.019 +00:00\] \[INF\] \[22\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:40:00.019 +00:00\] \[INF\] \[22\] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Invalid token."  
+\[2024-07-26 08:40:00.019 +00:00\] \[INF\] \[22\] Jellyfin.Api.Auth.CustomAuthenticationHandler: AuthenticationScheme: "CustomAuthentication" was challenged.  
+  
+Edit 3: Somehow it decided to download metadata for a single episode. When I open my show library, it only shows doctor who without any metadata or episodes in the shows tab. When going to the suggested tab, it shows Fallout (clicking on play shows invalid media source error) and when going to the episodes tab, it shows fallout ep 1 and 6, with downloaded metadata for ep 6.
+
+    version: '3.9'
+    
+    volumes:
+      jellyfin_cache:
+      jellyfin_config:
+      jellyseerr_config:
+      sonarr_config:
+      jackett_config:
+      jackett_blackhole:
+    
+    services:
+      jellyfin:
+        image: jellyfin/jellyfin
+        network_mode: 'host'
+        volumes:
+          - jellyfin_config:/config
+          - jellyfin_cache:/cache
+          - type: bind
+            source: /mnt/media-library
+            target: /media
+        restart: 'unless-stopped'
+    
+      jellyseerr:
+        image: fallenbagel/jellyseerr:latest
+        environment:
+          - LOG_LEVEL=debug
+          - TZ=Europe/Amsterdam
+        ports:
+          - 5055:5055
+        volumes:
+          - jellyseerr_config:/app/config
+        restart: unless-stopped
+    
+      sonarr:
+        image: ghcr.io/hotio/sonarr
+        ports:
+          - "8989:8989"
+        environment:
+          - UMASK=002
+          - PUID=1000
+          - PGID=1000
+          - TZ=Europe/Amsterdam
+        volumes:
+          - sonarr_config:/config
+          - /mnt/fsf-torrents:/downloads
+          - /mnt/media-library:/data
+        restart: unless-stopped
+    
+      jackett:
+        image: lscr.io/linuxserver/jackett:latest
+        environment:
+          - PUID=1000
+          - PGID=1000
+          - TZ=Europe/Amsterdam
+          - AUTO_UPDATE=true #optional
+          - RUN_OPTS= #optional
+        volumes:
+          - jackett_config:/config
+          - jackett_blackhole:/downloads
+        ports:
+          - 9117:9117
+        restart: unless-stopped
+
+Top 7 comments:
+Comment 1:
+  Author: arriej
+  Comment: Are you able to share your docker config? Om my arr stack I never spend any time configuring on how series should be named and stored. Sonarr worked out the box. Have a mounted nfs folder as well as a local. I just had to make sure I have both folders selected within jellyfin library settings
+  Score: 2
+  Created UTC: 2024-07-26 07:45:34
+
+Comment 2:
+  Author: Atlasatlastatleast
+  Comment: Wouldn’t you want your config to be read/write as opposed to read only? And then perhaps the media library is read only?
+  Score: 1
+  Created UTC: 2024-07-26 08:09:16
+
+Comment 3:
+  Author: Althyrios
+  Comment: Did you have a look at the logs?
+  Score: 1
+  Created UTC: 2024-07-26 08:48:39
+
+Comment 4:
+  Author: virginity-dongle
+  Comment: Check the file permissions on /mnt. The jellyfin user should have read permission on the filesystem. Something like sudo chmod -R 644 /mnt should do the trick.
+  Score: 2
+  Created UTC: 2024-07-26 09:06:04
+
+Comment 5:
+  Author: avh02
+  Comment: I had something like this happen to me before, one of my sqlite DBs was corrupt - but i had that mounted over NFS (which is known to cause such issues) and you don't seem to have that case.
+
+You could verify the sqlite db integrities just to be sure (something something PRAGMA integrity_check something, google it.) - there are like - 2-3 DBs i think that need that check.
+
+shut down jellyfin and back up the files before you do it.
+
+edit: oh, but my error messages were completely different, so probably not your issue.
+  Score: 1
+  Created UTC: 2024-07-26 14:13:08
+
+Comment 6:
+  Author: AuthorYess
+  Comment: Check out trash guide.
+
+Also after you've changed sonarr or radarr naming structure you have to go in and manually update the already imported items.
+
+If it's not working after all of those, you could be having issues with connecting to the metadata providers. Some countries block the default.
+  Score: 1
+  Created UTC: 2024-07-26 17:08:48
+
+Comment 7:
+  Author: ethereal_g
+  Comment: You have a lot going on in this compose file. I'd suggest following [Trash Guides](https://trash-guides.info/) for your directory organization and docker mounts for each service.
+
+To eliminate possible auth issues I'd delete the existing volumes and clear your browser cache so you can setup a new instance. This will be easier than digging into the existing database.
+
+The paths really should match too: you have Jellyfin using /media while Sonarr is using /data. I'm not sure if this issue could be caused by Jellyfin trying to interact with non-existent paths it reads from a file's metadata but I would want to rule it out.
+
+This is what the volumes and env sections in my compose file look like. I've mounted my NFS share at /nfs/jellyfin on the host system. Note that I'm also using the linuxserver images:
+
+    services:
+      jellyfin:
+        image: linuxserver/jellyfin:latest
+        container_name: jellyfin
+        restart: unless-stopped
+        volumes:
+          - jellyfin_config:/config
+          - jellyfin_cache:/cache
+          - /nfs/jellyfin/data/media:/data/media
+      sonarr:
+        image: linuxserver/sonarr:latest
+        container_name: sonarr
+        restart: unless-stopped 
+        volumes:
+          - sonarr_data:/config
+          - /nfs/jellyfin/data:/data
+        environment:
+          - UID=1000
+          - GID=1000
+  Score: 1
+  Created UTC: 2024-07-26 19:21:55
+

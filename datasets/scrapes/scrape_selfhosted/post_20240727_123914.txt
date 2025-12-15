@@ -1,0 +1,47 @@
+Post Title: Sharing letsencrypt certs with other servers?
+Author: nefarious_bumpps
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7ypsr/sharing_letsencrypt_certs_with_other_servers/
+Number of comments: 27
+Created UTC: 2024-07-20 15:50:54
+
+Post Content:
+I'm running NGINX proxy manager in a docker with a wildcard cert from letsencrypt.  Is there some way to copy the certs to other servers that don't go through NGINX?   
+
+Top 5 comments:
+Comment 1:
+  Author: ScuttleSE
+  Comment: It's fairly trival. Like someone mentioned, you need a DNS-provider with an API, and then for me, the easiest way was to use [acme.sh](https://github.com/acmesh-official/acme.sh)
+
+After [setting that up to use your DNS-providers API](https://github.com/acmesh-official/acme.sh/wiki/dnsapi), it'll download the wildcard-cert, that I then can copy to whatever machine I want. I'm using a wildcard-cert for my Synology NAS:es for example. I have a simple cronjob that automatically updates them.
+  Score: 4
+  Created UTC: 2024-07-20 17:32:45
+
+Comment 2:
+  Author: bufandatl
+  Comment: Yes. They should be available in the mounted volume for the certs unless you didn’t have that mounted then you should. I do this all the time with certs my traefik instance creates and copy them for example to mailcow so smtp and imap are ssl encrypted with valid certs.
+  Score: 2
+  Created UTC: 2024-07-20 16:57:09
+
+Comment 3:
+  Author: mlazzarotto
+  Comment: I didn’t know you could get wildcard certificates from Let’s Encrypt. 
+What do you exactly mean? Like using scp to copy the certificate and private key to other servers? Sure you can
+  Score: 6
+  Created UTC: 2024-07-20 15:59:22
+
+Comment 4:
+  Author: rstolpe
+  Comment: Here you go, you can generate wildcard certificates on any server you want without opening any ports etc.
+
+https://stolpe.io/how-to/generate-wildcard-certificate/
+  Score: 2
+  Created UTC: 2024-07-20 19:37:00
+
+Comment 5:
+  Author: whoisjessica
+  Comment: Can let’s encrypt get a certificate for a .local domain? My server is not exposed to the public just using it for local rdweb
+  Score: -2
+  Created UTC: 2024-07-20 18:01:55
+
+Note: This post has only 5 comments at the time of scraping.

@@ -1,0 +1,51 @@
+Post Title: Household server: Old-school or Kubernetes, opinions and discussion welcome
+Author: Oupa_Vlekkie
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ead7zt/household_server_oldschool_or_kubernetes_opinions/
+Number of comments: 2
+Created UTC: 2024-07-23 17:09:27
+
+Post Content:
+Not sure if it belongs here, or on r/homelab, but want some opinions. Please ignore any interspersed rants, not sure how to collapse them on Reddit, and I apologise for the wall of text.
+
+I'm redoing my home server, to add some services to it:
+
+* Plex, for the 5th(?) time
+* Photo collection manager, Immich/PhotoPrism/similar
+* Recipe manager (Still considering options)
+* Paperless-ng
+* Possibly a home budgeting app, if I can find one that can reliably pull South African bank records &lt;details&gt; &lt;summary&gt; Rant &lt;/summary&gt; SA Banks are special, they feel the international standards are fraud-prone, so only by providing your username and password to a third party app to imitate you, can you pull anything. &lt;/details&gt;
+* Resilio Sync handled backups
+* Mesh VPN / Zero Trust access
+* Ejabberd / Matrix, household communications
+* Elasticsearch and Kibana for logs, metrics, etc \[Optional\]
+* Scuttlebut Pub
+* GnuNet Reclaim:ID, if I can get it working, else Authentik/Authelia
+* One or two other items (Play around with Home Assistant, etc)
+
+What I have to play with, is 2 outdated mini servers, that have historically taken turns as the home server, some old laptops and a couple of Raspberry Pi's. This excludes any personal computers, I don't have a good couch to sleep on. I've used Open Media Vault, YunoHost and even patched together Ubuntu server, with everything configured separately by hand. My day job requires spending about 80% of my time managing Kubernetes clusters, and IMO Kubernetes is the best thing since sliced bread.
+
+Now the request for opinions concerns fit for purpose. My bias for Kubernetes taken into account, I would like to set up a small K3s cluster and run all the above on it. Reality, it seems does not agree. Most of the planned services, do not have simple container setups, and if they do, it is focused on single docker containers only - reasonable. It might be only me, but the way I visualize the interaction between some of the tools (Notably Plex, Photo Manager and Resilio Sync) will require multiple apps to access the same folders. I can use HostPath volumes, to achieve this, but that would lock the interacting apps, all to the same machine. This would almost make it a normal app installation, with extra complexity, losing out on some of the benefits gained from Kubernetes. Making use of a storage manager like Longhorn, Rook Ceph or OpenEBS, should allow me to keep all the Kubernetes perks, but having multiple pods access the same data, requires manually linking everything to the same ReadWriteMany PV. Ignoring the performance hit, this feels dirty, instead of each deployment having its own pv's and claims.
+
+Also, even if I go old-school direct installed apps, the possibility of adding k3s or microk8s on top, to test something for work, is not too rare.
+
+So, since my logic and bias conflict, I'm trying to pick other brains. Opinions or magic solutions are all welcome.
+
+Top 2 comments:
+Comment 1:
+  Author: skeneks
+  Comment: &gt; HostPath volumes, to achieve this, but that would lock the interacting apps, all to the same machine
+
+What about using hostpath on an NFS mount?
+  Score: 2
+  Created UTC: 2024-07-23 18:02:54
+
+Comment 2:
+  Author: FrederikSchack
+  Comment: I'm using many services that access the same files on SMB shares, not with kubernetes, but Docker on Alpine Linux and the SMB share on a Windows Server.
+
+I mapped the SMB shares in fstab on Alpine and it's working great. For example I have Radarr, QBittorrent and Jellyfin working in the same directories, without issue.
+  Score: 1
+  Created UTC: 2024-07-23 19:24:57
+
+Note: This post has only 2 comments at the time of scraping.

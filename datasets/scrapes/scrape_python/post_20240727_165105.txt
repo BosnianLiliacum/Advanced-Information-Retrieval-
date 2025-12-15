@@ -1,0 +1,79 @@
+Post Title: I made a tool to increment the version of Poetry projects
+Author: chaseTheBurrow
+Score: 17
+URL: https://www.reddit.com/r/Python/comments/1edffk9/i_made_a_tool_to_increment_the_version_of_poetry/
+Number of comments: 16
+Created UTC: 2024-07-27 12:38:36
+
+Post Content:
+I was tired of making dirty scripts to bump the version of my projects in CI pipelines, so i think i went a bit overkill and made a dedicated tool for it.
+
+Increasing version is a task that was surprisingly harder than i thought for what it is, as you need to parse TOML and Python files, parse versions, increase the version, update the files and push it to your repo without triggering an infinite loop of pipelines. Also since it automatically update files in your project i guess it should be somewhat reliable too.
+
+Note: this is made only for Poetry projects because it reads poetry sections in the pyproject.toml file.
+
+**What My Project Does**
+
+After it is installed, you basically use it with `poetry-incr-version --patch/minor/major .` and it updates the pyproject.toml and the \_\_init\_\_.py file(s) to increase the version, you add-commit-push all of that and you are done !
+
+**Target Audience**
+
+I am mainly targetting myself lol, but i guess it can be usefull to you if you maintain projects made with Poetry with automatic versionning in CI pipelines.
+
+**Comparison**
+
+I tried to find similar projects, but i could not, maybe no one does that, or maybe (more probably) i am bad at searching.
+
+The repository is at [https://gitlab.com/daude\_f/poetry-incr-version](https://gitlab.com/daude_f/poetry-incr-version)
+
+This is my first publicly documented package/tool, so i am looking for some feedback :)
+
+Thank you for reading !
+
+EDIT: Thanks to anyone that commented, learned a lot, and i guess the best solution to my problem was to use `importlib.metadata` with existing tooling (like poetry itself) for the `pyproject.toml`
+
+Top 6 comments:
+Comment 1:
+  Author: guyfrom7up
+  Comment: Check out poetry-dynamic-versioning.
+  Score: 7
+  Created UTC: 2024-07-27 13:06:13
+
+Comment 2:
+  Author: stratguitar577
+  Comment: Other than incrementing version in `__init__.py`, doesn’t `poetry version patch/minor/major` already increment pyproject.toml?
+https://python-poetry.org/docs/cli#version
+  Score: 6
+  Created UTC: 2024-07-27 13:23:58
+
+Comment 3:
+  Author: sweet-tom
+  Comment: Sounds a bit like bumpversion2. But that's a more general tool to bump all version strings. 
+
+Cool, I'll check it out! 👍
+  Score: 3
+  Created UTC: 2024-07-27 13:40:52
+
+Comment 4:
+  Author: SpellboundSagaDev
+  Comment: Thanks for the effort on this 😁
+  Score: 2
+  Created UTC: 2024-07-27 13:07:48
+
+Comment 5:
+  Author: SimplyJif
+  Comment: We also use commitizen for similar functionality
+  Score: 1
+  Created UTC: 2024-07-27 13:54:28
+
+Comment 6:
+  Author: BluesFiend
+  Comment: Check out bump-my-version if you want to bump semver in multiple files, or changelog-gen if you want that but with automated semver detection and changelog management based on commit logs.
+
+https://github.com/callowayproject/bump-my-version
+
+https://github.com/NRWLDev/changelog-gen
+  Score: 2
+  Created UTC: 2024-07-27 15:35:32
+
+Note: This post has only 6 comments at the time of scraping.

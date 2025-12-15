@@ -1,0 +1,32 @@
+Post Title: Open source manga website.
+Author: Outrageous-Jaguar-32
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebmm91/open_source_manga_website/
+Number of comments: 4
+Created UTC: 2024-07-25 05:04:07
+
+Post Content:
+Hey all i am trying to host manga website with own domain and logos. Is there any open source thing?
+
+Top 3 comments:
+Comment 1:
+  Author: FunkMunki
+  Comment: I believe [Kavita](https://www.kavitareader.com/) was made for exactly that. I use it for ebooks and it works really well.
+  Score: 2
+  Created UTC: 2024-07-25 14:15:58
+
+Comment 2:
+  Author: Kawawete
+  Comment: That's really interesting, I guess a boruu-style site could be what you're looking for, youcould find a way to display collections of magas. Boruus are a way of making an image hosting website (the best known is... rule34 but you absolutely can make something with a similar interface but catered towards hosting mangas)
+
+EDIT : or maybe something like a digital bookshelf : [https://libreselfhosted.com/search/?q=manga](https://libreselfhosted.com/search/?q=manga)
+  Score: 1
+  Created UTC: 2024-07-25 08:29:06
+
+Comment 3:
+  Author: Lordingard
+  Comment: [Komga ](https://komga.org/) is the perfect solution for that.
+  Score: 1
+  Created UTC: 2024-07-25 14:28:50
+
+Note: This post has only 3 comments at the time of scraping.

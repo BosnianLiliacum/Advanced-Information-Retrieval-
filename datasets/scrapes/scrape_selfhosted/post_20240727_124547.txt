@@ -1,0 +1,40 @@
+Post Title: Monitor Dynamic DNS Client Updates
+Author: hhanzo1
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e7j8i4/monitor_dynamic_dns_client_updates/
+Number of comments: 4
+Created UTC: 2024-07-20 00:45:30
+
+Post Content:
+I've got a Cloudflare Domain and am using pfsense's Dynamic DNS Service to keep my home IP updated.  It's working great.
+
+I would like to monitor the domain to make sure it's being updated correctly.
+
+I am also using Uptime Kuma.  I could use the DNS Monitor but am looking to create a check to confirm the Dynamic DNS Service is running and/or that **the IP that is really my home IP**.
+
+Maybe I need 2 checks, combine the DNS Monitor check with a Push Monitor check?
+
+Top 2 comments:
+Comment 1:
+  Author: Nice_Discussion_2408
+  Comment:     #!/bin/bash
+    
+    CURRENT_IP=$(dig @1.1.1.1 ch txt whoami.cloudflare +short | tr -d '"')
+    DDNS_IP=$(dig @1.1.1.1 my.domain.com +short)
+    
+    if [ $CURRENT_IP != $DDNS_IP ]; then
+      echo "DDNS ($DDNS_IP) does not match ($CURRENT_IP)"
+      exit 1
+    fi
+  Score: 2
+  Created UTC: 2024-07-20 01:17:26
+
+Comment 2:
+  Author: young_mummy
+  Comment: You could switch to using a different ddns updater. I use this one which has the features you require.
+
+https://github.com/favonia/cloudflare-ddns
+  Score: 2
+  Created UTC: 2024-07-20 02:06:18
+
+Note: This post has only 2 comments at the time of scraping.

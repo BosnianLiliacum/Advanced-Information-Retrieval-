@@ -1,0 +1,62 @@
+Post Title: Psono Password manager - does anyone use it? 
+Author: CrappyTan69
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3q679/psono_password_manager_does_anyone_use_it/
+Number of comments: 9
+Created UTC: 2024-07-15 09:02:52
+
+Post Content:
+I came across Psono a while ago in a work environment and never got an opportunity to try it but want to give it a go as a home-user. 
+
+  
+I currently use keepass - have done for many many years and quite happy with it except the Android / away-from-home integration. As such, am now looking at things like this and Bitwarden. 
+
+  
+I know loads of people use Bitwarden but I'm more curious in giving this a try.
+
+  
+Experiences? Thoughts? Anything else to try?
+
+  
+
+
+Top 4 comments:
+Comment 1:
+  Author: Zerebos
+  Comment: I've selfhosted every password manager I could find at some point to test them out including Psono.
+
+I think Psono is pretty good but even the selfhosted version is more geared towards enterprise or business level on-premises service. That said my experience with it as the sole user was still pretty good, and it has nearly every feature you could want in a password manager aside from identities (at least when I tried it). The UI/UX isn't as good as some of the others but it delivers a better mobile performance than some of the others as well.
+
+The UI is not just dated but fully tuned to be organizational as opposed to singular users. Not the end of the world but it can be annoying to adapt your thinking to this. It's also the most resource hungry of all the options I tried eating up around 630 Mb of ram when running with just a single user.
+
+I have some other notes on using it as a selfhosted single user I'll see if I can find them--I was meaning to publish my testing of all the selfhost-able password managers.
+  Score: 4
+  Created UTC: 2024-07-15 09:45:41
+
+Comment 2:
+  Author: mirisbowring
+  Comment: I am using Psono for years now. My Family, Friends and I are very happy with it!
+
+I found it better fitting then Vault/Bitwarden (last time I checked I had to create an organization first before being able to share passwords)
+
+Psono supports everything from passwords, passkeys, gpg, ssh, OTP, etc.
+
+The only „drawback“ I have is that you are not able to share passwords with another user via the mobile app. You can create link shares via the app but no permanent user share. But since this does not happen very often, I am fine with it.
+
+Also it is super stable. Since it does autoupdates via watchtower, it is an install and forget about it service (just make sure to have backups!)
+  Score: 1
+  Created UTC: 2024-07-15 10:38:02
+
+Comment 3:
+  Author: revereddesecration
+  Comment: It’s good. I use it for a community organisation I help run.
+  Score: 1
+  Created UTC: 2024-07-15 11:48:08
+
+Comment 4:
+  Author: Der_Arsch
+  Comment: whats your problem with keepass? synching the db by saving it to your Gdrive/OneDrive/Dropbox/whatever and opening it on Android with Keepass2android isn't a hassle
+  Score: 0
+  Created UTC: 2024-07-15 09:17:57
+
+Note: This post has only 4 comments at the time of scraping.

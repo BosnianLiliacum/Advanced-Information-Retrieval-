@@ -1,0 +1,36 @@
+Post Title: Clarification on using a static IP from a CG ISP
+Author: iNonEntity
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5t7zi/clarification_on_using_a_static_ip_from_a_cg_isp/
+Number of comments: 7
+Created UTC: 2024-07-17 21:00:05
+
+Post Content:
+I just moved apartments and now use Zito, which is an ISP that uses Carrier-Grade NAT. This made my game servers inaccessible from the internet. So I called tech support and they offered me a static IP for $10/m, which I assume would work, but he repeatedly told me that it would apply to my router and not my modem. He explained why it mattered, but I really didn't understand the difference or if it affects what I'm trying to do.
+
+So my question is: Will I be able to host servers that are accessible to my online friends if I pay for a static IP address on my router, despite having an ISP that uses CGN?
+
+Yall sent me on a path of hell recommending the VPS 😭
+
+Top 3 comments:
+Comment 1:
+  Author: IllRememberThisUser
+  Comment: I too have Zito and struggled to get these fucks to understand anything, but yes, you'll be able to host anything with that static IP. They'll need the MAC of the WAN side of your router, and once they issue you a static, you'll need to assign it to your routers WAN interface, it won't pull from DHCP.
+  Score: 6
+  Created UTC: 2024-07-18 00:45:59
+
+Comment 2:
+  Author: Swedophone
+  Comment: &gt;static IP for $10/m
+
+Would be cheaper to get a VPS. If all your services use http then you won't even need a public IPv4 address on the VPS, instead you can use a CDN such as Cloudflare. Cloudflare also supports tunnels which means you don't need a VPS at all. If your ISP supports IPv6 then you can use IPv6 with Cloudflare without any tunnel.
+  Score: 2
+  Created UTC: 2024-07-17 21:21:05
+
+Comment 3:
+  Author: No-Reflection-869
+  Comment: Well yeah. Rent a 4€ Server from ovh and make a wireguard VPN.
+  Score: 1
+  Created UTC: 2024-07-17 21:42:58
+
+Note: This post has only 3 comments at the time of scraping.

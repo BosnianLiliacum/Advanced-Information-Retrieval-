@@ -1,0 +1,48 @@
+Post Title: Jellyfin on Pi4 and HEVC
+Author: steviefaux
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e409km/jellyfin_on_pi4_and_hevc/
+Number of comments: 15
+Created UTC: 2024-07-15 17:12:07
+
+Post Content:
+Finally playing with Jellyfin on my pi4, finally using it for something. But, sadly, discovered it doesn't support HEVC so every TV show or movie that is HEVC its trying to transcode, and because of that, the show and movie buffers constantly :o(
+
+So looking to either convert all 265 HEVC back to 264 or does anyone know of a better way of dealing with it. I can't have the Pi4 transcode anything as it appears to not be able to cope.
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: &gt;But, sadly, discovered it doesn't support HEVC so every TV show or movie that is HEVC its trying to transcode 
+
+Do you require transcoding? You can disable transcoding. 
+
+Not sure if this is the "best way" but it is a method to force the direct stream. You can also ask the [jellyfin forms](https://forum.jellyfin.org/) as they are no longer on reddit
+
+One of the ways to disable transcoding per user is
+
+- go into admin panel
+- go to under users and select a user
+- in the certain user settings de-select "allow video playback that requires transcoding"
+- in the certain user settings de-select "allow audio playback that requires transcoding
+
+This will force the direct stream on your client.
+
+If your clients are using the mobile app. 
+ - [swiftfin for apple](https://apps.apple.com/ca/app/swiftfin/id1604098728)
+- android with the jellyfin app, they can go to client settings and change the video player to integrate player (not web based)
+
+Hope that helps.
+  Score: 2
+  Created UTC: 2024-07-15 18:24:58
+
+Comment 2:
+  Author: snake785
+  Comment: How are you playing the movies on your pi4? Is it through a web browser?
+
+
+Have you tried installing Kodi and using the jellyfin addon?  That might give you better results.
+  Score: 1
+  Created UTC: 2024-07-16 12:16:37
+
+Note: This post has only 2 comments at the time of scraping.

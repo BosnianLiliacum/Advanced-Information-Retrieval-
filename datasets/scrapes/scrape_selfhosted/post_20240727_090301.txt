@@ -1,0 +1,125 @@
+Post Title: So what is the best way to backup my docker image volumes?
+Author: Matvalicious
+Score: 19
+URL: https://www.reddit.com/r/selfhosted/comments/1eaw5ob/so_what_is_the_best_way_to_backup_my_docker_image/
+Number of comments: 24
+Created UTC: 2024-07-24 08:23:13
+
+Post Content:
+There is a lot of conflicting and downright dangerous information out there (including on this sub) where people just blindly spout "there's no need to backup docker because that's the whole point of it!" when someone asks how to backup their docker containers.
+
+What they obviously mean is, how do I backup the data in my docker containers. Which is the point of my question here now.
+
+I am running portainer with about 20 containers. Every relevant volume that has significant data in it (databases etc.) is on named volumes.
+
+My current backup strategy is this: I have Duplicati running in Portainer as well. The folder
+
+    /var/lib/docker/volumes
+
+On my host is linked to 
+
+    /source
+
+In Duplicati. Ever night the entire contents of /source is backed up. Pre-backup I start a script that gracefully stops all containers. Then the back-up is sent to Google Drive, and when it is completed, a Post-backup script restarts all the containers. No other fancy things going on here.
+
+I see a lot of people recommending "offen/docker-volume-backup", but that's an immediate no-go from the very first sentence in the Quickstart:
+
+&gt; Add a backup service to your compose setup and mount the volumes you would like to see backed up:
+
+Not all of my containers are setup via Compose/Stacks.
+
+The recommended way as described on docker.com:
+
+&gt; Normally, if you want to back up a data volume, you run a new container using the volume you want to back up, then execute the tar command to produce an archive of the volume content
+
+But this seems extremely convoluted. Why do I need to spin up an additional container, using the existing volume (what about data corruption if the same volume is suddenly used in two different containers?) just to tar the volume if a simple copy seems to achieve the same thing?
+
+My end goal here is pretty much a "set and forget" (obviously testing the backups every once in a while) backup of the data in my containers which for some arcane reason seems ridiculously non-trivial judging by the wildly various ways you can find on how to achieve this.
+
+So far my current Duplicati approach looks sound, but I'd be to happy to hear how wrong I am and how it *should* be done.
+
+Top 7 comments:
+Comment 1:
+  Author: MrGoosebear
+  Comment: I use the offen container, but don't have it added to my compose files. I have a script that gracefully shuts down my containers, fires up the offen container with all volumes mounted read only, moves the resulting archive to the cloud via rclone, then starts the containers.
+  Score: 9
+  Created UTC: 2024-07-24 08:52:41
+
+Comment 2:
+  Author: StraightMethod
+  Comment: I didn't like the often-used method of simply tarring the volumes - this seemed horribly inefficient to me, especially if you're retaining this data for some period.  A nightly tar of, largely, the same content, kept for a few months..?
+
+So my volumes are backed up using a script that:
+
+* Cycles through all named volumes
+* Runs a container, with that volume mounted
+* Executes [borg backup](https://www.borgbackup.org/) on the volume
+* Prunes borg's backups to my preferred retention periods
+
+Bam.  Differential backup, checksumming, compression, encryption, and a defined retention period.
+
+Better practice would probably be to shut down the running container before running borg on its volumes - but I haven't had any issues with data corruption (yet).  Even backing up mysql and sqlite databases.
+
+\[edit: script by request\]
+
+    #!/bin/bash
+    for volume in $(docker volume ls --format "{{.Name}} {{.Labels}}" |grep -v 'com.docker.volume.anonymous=' |cut -d' ' -f1)
+    do
+        echo $volume
+        docker run --rm -v ${volume}:/source -v borg_config:/config -v /home/backup/docker:/backup -e BORG_PASSPHRASE=supersecretdonttellanyone -e VOLNAME=${volume} docker-backup
+    
+    done
+
+docker-backup is a basically just a container with borgbackup from alpine linux.  The [docker-borg](https://github.com/pschiffe/docker-borg) container linked below is probably better.
+  Score: 8
+  Created UTC: 2024-07-24 10:18:01
+
+Comment 3:
+  Author: Dosk3n
+  Comment: My docker containers are all created in the same way, I have a main appdata folder with a folder for each docker-compose file and the mounted volume in that folder for persistence. 
+
+I have an rsync server set up on my NAS and I have a cron job set on my main server to rsync the appdata folder to my NAS on a schedule. My NAS then does snapshots so that I have hourly / daily / weekly / monthly back ups. 
+
+Is this the best way to do it? Im sure people will say its not but for me it is easy and quick and its just set and forget. I do have the rsync output save to a file so I can always check there has been no errors and so far its been going great.
+  Score: 6
+  Created UTC: 2024-07-24 09:14:15
+
+Comment 4:
+  Author: Simon-RedditAccount
+  Comment: I never keep any data of value 'just in docker'. It is always stored on the host machine, and is made available to the container via a bind mount. 
+
+Then I just use established workflows to backup data, running on host machine.
+
+For DBs, I'm also exporting SQL dumps.
+  Score: 6
+  Created UTC: 2024-07-24 10:12:35
+
+Comment 5:
+  Author: Ryantjeh
+  Comment: It's just the reality of the docker volume system. This is why I changed all my docker volumes to bind mounts... It's just so much easier to manage and backup.  
+I created a backup script that gets deployed to every node of mine (running docker) and gets executed every night using a cronjob.
+
+The script will loop over the directory containing all my compose stacks and do the following:
+
+1. Stop the compose stack
+2. Tar all the data per stack to my `/tmp` directory (for example: `node1_adguardhome_2024-07-23.tar`)
+3. Rsync the freshly made tar file to my destination node
+4. Remove the tar from the `/tmp` folder
+  Score: 3
+  Created UTC: 2024-07-24 12:43:21
+
+Comment 6:
+  Author: mmozzano
+  Comment: I just use a custom script which stops the container, mounts the volume onto a busybox container, runs tar to back it up to a local directory.  Once the backup completes the original container restarts.  Been using this for years and its not let me down.
+
+  
+docker run --rm --volumes-from &lt;&lt;container\_name&gt;&gt; -v &lt;&lt;backup\_target\_path&gt;&gt;:/backup busybox tar cfz /backup/&lt;&lt;container-name&gt;&gt;.tar.gz &lt;&lt;internal\_container\_path&gt;&gt;
+  Score: 2
+  Created UTC: 2024-07-24 09:23:34
+
+Comment 7:
+  Author: junialter
+  Comment: As the files are on the host just back them up with any normal backup tool like Borg or Restic
+  Score: 2
+  Created UTC: 2024-07-24 11:37:52
+

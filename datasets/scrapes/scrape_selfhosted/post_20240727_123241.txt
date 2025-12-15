@@ -1,0 +1,65 @@
+Post Title: Self hosted watch together movies
+Author: urge2reddit
+Score: 34
+URL: https://www.reddit.com/r/selfhosted/comments/1e8f3a8/self_hosted_watch_together_movies/
+Number of comments: 19
+Created UTC: 2024-07-21 05:30:53
+
+Post Content:
+My friend and I have been using Plex to 'watch together' when it comes to movies, TV show's, etc. He has all the same video files that I do (in fact I transfer them to his server) but there's no easy way to watch together. Plex has this feature and we like it because you can pause when you want to go get snacks, or there's some interruption, etc. But 'watch together' in Plex is buggy, at best. We've had to make sure we're running the same version of Plex (he's running Plex on Windows, I'm running Plex on Linux) and double check all of our settings just to get it to work. And even then it's hit or miss sometimes. He's got a connection that should allow 10mb upstream, and I've got a DSL connection that should allow the same. But we still run into issues sometimes.
+
+  
+Is there anything better? Say for example we want to stream the same 4k movie. We both have the file, we just need some way to 'sync' what we are watching. And have the ability to pause both our streams at the same time.
+
+  
+Currently we are using Plex on Xbox because we both have Xbox headsets that allow you to mix audio from the xbox and audio from the other person (we use the Xbox party feature because it seems to work well). So, we can watch the movie, hear the movie but still be able to talk to each other wile the movie is streaming. 
+
+Is there anything else out there? Thanks!
+
+Top 7 comments:
+Comment 1:
+  Author: cyt0kinetic
+  Comment: Jellyfin's works well. We've used it when I'm on the other side of the country, and I can willy nilly even switch out the devices I'm watching on. And, the other person doesn't need the file. They just need to be on some kind of Jellyfin interface, app or browser essentially.
+  Score: 35
+  Created UTC: 2024-07-21 06:24:21
+
+Comment 2:
+  Author: FunnyPocketBook
+  Comment: I also recommend Jellyfin but if you want to keep using Plex, SyncLounge worked for me really well before I switched from Plex to Jellyfin
+
+https://github.com/synclounge/synclounge
+  Score: 12
+  Created UTC: 2024-07-21 07:01:11
+
+Comment 3:
+  Author: nothingveryobvious
+  Comment: I haven’t used it but I’ve read that Jellyfin’s feature works well. However, that’s both of you watching from one server, not your own servers. You’d also probably have issues with 4K depending on your internet, too.
+  Score: 5
+  Created UTC: 2024-07-21 05:43:30
+
+Comment 4:
+  Author: andras1024
+  Comment: Syncplay
+
+https://syncplay.pl/
+  Score: 4
+  Created UTC: 2024-07-21 20:14:58
+
+Comment 5:
+  Author: carolina_balam
+  Comment: Haven't tried Synclounge.tv, but may suit your needs
+  Score: 2
+  Created UTC: 2024-07-21 09:24:20
+
+Comment 6:
+  Author: JohnDoeMan79
+  Comment: I can highly recommend Jellyfin, it's a great media server
+  Score: 2
+  Created UTC: 2024-07-21 11:42:36
+
+Comment 7:
+  Author: ChokunPlayZ
+  Comment: Jellyfin’s watch together works great for me, but there’s some issue that require restart of the jf media player to fix, other than that, works great
+  Score: 2
+  Created UTC: 2024-07-21 15:35:03
+

@@ -1,0 +1,93 @@
+Post Title: Self hosted camera 
+Author: -anonymous-username_
+Score: 20
+URL: https://www.reddit.com/r/selfhosted/comments/1e9so9s/self_hosted_camera/
+Number of comments: 23
+Created UTC: 2024-07-22 23:20:36
+
+Post Content:
+ETA: Thanks for all the suggestions and information! I think I have enough to start. 
+As far as the concern I don't know enough about self hosting... That may be.  However there's nothing in the description of the community that either explains how difficult you believe it to be, nor that it requires you to avoid anything specific.  Other posts I found, which led me here, were posts to simply avoid the fees associated with, for example, saving a cameras recordings to the cloud.  Since no one felt the need to explain how little they knew then, I assumed that any avoidance of wanting to pay a random Chinese company to host videos of my home, without knowing what is going on with my videos, was enough. 
+Seems to me that an sd card is a valid way to self host, vs the hosting in the cloud.  There's nothing that states it has to be as difficult as some of you want it to be.  
+So maybe next time someone new asks a question, and you are that bothered, simply ignore the post. I cannot control how many people before me have asked what appear to be to you, uneducated questions. So why anyone felt it necessary to put that on me.. Is wild. 
+
+Thank you to you who simply answered my question to the best of your ability. I appreciate the kindness. 
+
+Since *I don't know enough about self hosting* for some, I'll see myself out. 
+
+
+I'm hoping for advice on finding a camera I can use that has a good view distance wise, or can be zoomed. 
+I want to avoid more monthly fees... I have enough already. 
+
+I need to be able to see around 100-150 feet ish, so I can just check my camera and look at my garage in my complex. 
+I don't want notifications at all, since there's movement every moment of every day, but when I hear noises at night that should not be there, I don't want to have to walk all the way around my building to check.  (we've been robbed 4x. I'm hyper vigilant)
+
+Ideally it is something that can be affixed to the outside without screws... And battery operated or plugged in outside 24/7. 
+Thank you!! 
+
+Top 7 comments:
+Comment 1:
+  Author: sidusnare
+  Comment: [This ](https://www.amazon.com/gp/product/B08YR5PC19/) camera does native H.264 encoding and has great picture quality. I use it with a Raspberry Pi and VLC to stream. I have it looking down my driveway. Works great and since it's doing H264 encoding on-camera, the Pi doesn't even sweat.
+
+This is the command I use to host the stream:
+
+cvlc v4l2:///dev/video2 --v4l2-fps 30 --v4l2-width 1920 --v4l2-height 1080 --v4l2-chroma H264 :v4l2-standard= ':sout=#transcode:http{mux=ts,dst=:8080/stream.ts}' 
+
+Then just connect to it's IP with VLC on your cellphone, laptop, or desktop at http://my.ip.here:8080/stream.ts
+  Score: 18
+  Created UTC: 2024-07-23 01:04:43
+
+Comment 2:
+  Author: Vogete
+  Comment: Based on your comments that you don't really know a lot about self hosting, I'd personally recommend two routes.
+
+1. Get Ubiquiti Unifi cameras with their cloud key pro (or dream machine pro, or similar) and just set that up. It's gonna be expensive, but it just works, no subscription, local stuff. But it's expensive, and you can only use Ubiquiti cameras.
+
+2. Since you've been robbed 4 times, get a proper security company to install their system. It's gonna have a subscription cost, but they also offer response and insurance. Easy to set up, easy to use, it just works, and someone has your back 24/7.
+
+All the cheap DIY routes that we do here are complicated for a reason. Companies charge convenience money for a reason. Frigate is amazing but it has caveats and require quite deep knowledge on what to do. Blue Iris, is paid, windows only, but it works. If you go down the diy route, you must learn, otherwise it won't work.
+
+If you really want to do that, _(skill check disclaimer here)_ I'd start with some SFF PC (Dell, HP, etc) with Intel CPU (with QuickSync), [Frigate](https://frigate.video/), Dahua cameras, and if the CPU doesn't have OpenVINO, then a Coral TPU.
+  Score: 5
+  Created UTC: 2024-07-23 08:28:54
+
+Comment 3:
+  Author: HughWattmate9001
+  Comment: I use a Dell Wyze 5070 thin client and ZoneMinder running on Ubuntu. You can also use HomeAssistant, Scrypted or HomeBridge. My setup just has all the ONVIF cameras linked up (just really cheap generic cameras from china, I run them on a restricted network using old router with no internet access). You could do the same but use the plugins for ring doorbells or whatever. You can even with the setup use apples homekit stuff and turn none homekit devices into homekit ones.  I store the CCTV footage on a USB SSD i made using a caddy and old SSD m.2. I can pull the footage via weburl or directly from the drive. You could also setup a sync with cloud to backup files.  Does the job, totally free, can use any junk camera as long as its ONVIF or supported. Very easy setup also. Install Ubuntu, install zoneminder (has repo), follow zoneminder instructions, add storage, add cameras via URL and done. Total setup is under an hour and most of that is waiting for things to install. You could also go homeassist route or whatever.
+  Score: 3
+  Created UTC: 2024-07-23 07:25:51
+
+Comment 4:
+  Author: Oracle_at_Delphi
+  Comment: This is one of a string of post that don't seem to understand the nature of selfhosted...You don't get to "have it easy" and self host. If you want easy, buy a ring, nest, or other camera. There are many many things that are set up for you by those companies that self hosters have to do.
+
+Once you start buying and maintaining your self hosted stuff...you'll see why you pay someone else to do most of these things.
+
+As someone mentioned, Ubiquity is probably the "easiest setup" but you're going to need a minimum of $300+ dollars in equipment.  If you went with Nest, that's 37 months of subscribed time.
+
+The Reolink is a decent option, but the recordings are on the camera, on an SD card, so if it gets stolen that's gone.  
+As someone else suggested you could record to Frigate....but that a self hosted application, you're going to need to learn how to setup, will be separate from your notifications, will need to be on a computer that is on all the time and never disconnected in your home, and requires some research to setup and secure.
+  Score: 7
+  Created UTC: 2024-07-23 07:05:38
+
+Comment 5:
+  Author: Virtual-Baseball159
+  Comment: I just got some Reolink cameras and had some great deals recently. They are able to work local only if you want that or you can use the Reolink app and it does not require any subscriptions. Great camera quality and supports a lot of ways to connect your camera to other platforms if you want. They are a great price for what you get. Ubiquity cameras and security equipment are cool but expensive. I would look up some comparisons on YouTube so you can get some ideas of how you can set up your system that works best for your needs.
+  Score: 2
+  Created UTC: 2024-07-23 01:50:19
+
+Comment 6:
+  Author: mad_bison
+  Comment: I use reolink rlc811a cams and frigate for recording. 
+
+Happy to demo the zoom stuff out take a few shots at night down my street as examples of you want?
+  Score: 3
+  Created UTC: 2024-07-23 04:10:20
+
+Comment 7:
+  Author: threedaysatsea
+  Comment: Ubiquiti has a good camera system. No subscriptions, all recordings stored in your own house.
+  Score: 2
+  Created UTC: 2024-07-22 23:59:31
+

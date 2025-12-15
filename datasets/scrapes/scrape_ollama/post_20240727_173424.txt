@@ -1,0 +1,30 @@
+Post Title: AVX-512
+Author: redmera
+Score: 3
+URL: https://www.reddit.com/r/ollama/comments/1eb13u3/avx512/
+Number of comments: 2
+Created UTC: 2024-07-24 13:11:01
+
+Post Content:
+If I understood correctly CPUs with AVX-512 are better for AI inference than those without. If I had a CPU supporting AVX-512 and enough RAM to hold a model, what kind of speed difference would there be compared to GPU+VRAM, roughly?
+
+Background: That sweet llama3.1:405b interests me but even 70b is extremely slow on my 13900K+RTX4090 combination. I assume this is because the model doesn't fit into VRAM (which is 24GB) and CPU doesn't support AVX-512. I might build a dedicated server in the future, but I'm not really interested in investing into 10 GPUs...
+
+Top 2 comments:
+Comment 1:
+  Author: No_Might8226
+  Comment: at most 2x speed-up
+
+[https://www.techpowerup.com/244274/intel-cannon-lake-confirmed-to-feature-avx-512-instruction-set](https://www.techpowerup.com/244274/intel-cannon-lake-confirmed-to-feature-avx-512-instruction-set)
+  Score: 2
+  Created UTC: 2024-07-24 14:52:07
+
+Comment 2:
+  Author: rerri
+  Comment: Memory bandwidth is a big factor in LLM inference. This is why RTX 3090 and 4090 are quite close in inference speed (they have almost the same memory bw) even though in gaming performance the gap is massive.
+
+Consumer x86 systems have very limited memory bandwidth, so I'm not sure AVX512 vs AVX2 would help much if mem bw is the bottleneck. But this is just novice speculation. Benchmarks would definitely be interesting to see.
+  Score: 1
+  Created UTC: 2024-07-25 13:49:41
+
+Note: This post has only 2 comments at the time of scraping.

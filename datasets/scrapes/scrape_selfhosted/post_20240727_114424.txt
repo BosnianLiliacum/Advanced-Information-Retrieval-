@@ -1,0 +1,20 @@
+Post Title: Speed upload and download, Self hosted storage.
+Author: turtleindeed
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb5zyo/speed_upload_and_download_self_hosted_storage/
+Number of comments: 2
+Created UTC: 2024-07-24 16:37:47
+
+Post Content:
+So i have tried multiple self hosted storage solutions, from nextcloud to pydio and everything works so good except for the speed. I have symetrical fiber 1gbits so about 126 mb/s on my ***SERVER***. The pc i am downloading and uploading from is on the same network but is not connected to the router, but to wifi, about 500 mpbs so about 60 mb/s. theoreticly if i download and upload i should atleast be getting 50 mb/s. But for some wierd reason port forwarding slows stuff down so much it basicly halfs the speed and more. This happend to all services except for Filebrowser(another self hosted storage), which has so far been the only fast cloud storage i have managed to set up with a domain(or public ip). i though to myself that i might just use it. but there is not that big of a community(very small problem), no phone app(bigger problem) and there is no option to integrate anything else like collabora or even forms from nextcloud. so i decided to switch and try other stuff, which is where um stuck now. The wierd thing is that on both public ip(no reverse proxy between) its slow and on domain(with a reverse proxy) is also slow, but on local network, it is very fast. its more than 50 mb/s on local more up in the 59-64 zone, that is nice, and what i want for owncloud, nextcloud, pydio or seafile. but i just cant find out what the problem is. i use docker compose to run the contaniers, and proxmox as hypervisor. i have a Genexis router with fiber. Help?
+
+Top 1 comments:
+Comment 1:
+  Author: MBILC
+  Comment: Note 1Gb = 126MB/s
+
+Can you give us a diagram of your network, including router model and switches in place and wifi AP's being used and how they all connect? (can leave out IP's if you like and dont need device names, just something to know what they are)
+  Score: 1
+  Created UTC: 2024-07-24 18:38:06
+
+Note: This post has only 1 comments at the time of scraping.

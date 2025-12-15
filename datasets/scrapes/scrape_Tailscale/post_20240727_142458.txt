@@ -1,0 +1,52 @@
+Post Title: Video: Get started with Docker and Tailscale
+Author: thisisparker
+Score: 30
+URL: https://www.youtube.com/watch?v=YTjYXii4WzI
+Number of comments: 13
+Created UTC: 2024-07-23 16:03:15
+
+Post Content:
+[This post has no text content]
+
+Top 6 comments:
+Comment 1:
+  Author: Sc4r4mouche
+  Comment: I used this guide - works great. Having multiple docker services seamlessly available to all my nodes has changed my life (my work life - still single in spite of my technical prowess.)
+  Score: 4
+  Created UTC: 2024-07-24 00:07:42
+
+Comment 2:
+  Author: NationalOwl9561
+  Comment: Why use Docker? Genuine question. I've never used it except maybe once. Maybe I don't have a use case for it. I run exit nodes on a few Raspberry Pi's and one of them runs a custom DERP relay server. Nothing fancy.
+  Score: 2
+  Created UTC: 2024-07-23 19:00:53
+
+Comment 3:
+  Author: mikewinsdaly
+  Comment: Pretty neat!
+  Score: 1
+  Created UTC: 2024-07-23 18:18:48
+
+Comment 4:
+  Author: jasontucker
+  Comment: What’s the best process to do with when using unraid? That are using Unraid plugin as the suggested method. Are we just adding the environment variables into the docker setup screens for the container?
+  Score: 1
+  Created UTC: 2024-07-23 22:07:38
+
+Comment 5:
+  Author: Tough-Ability721
+  Comment: I could never get my Tailscale (docker or window native) to connect to my other docker containers. Which kinda defeated the purpose of what I was trying to do.
+  Score: 1
+  Created UTC: 2024-07-24 01:55:26
+
+Comment 6:
+  Author: chaplin2
+  Comment: One sidecar container for each container is not efficient. It’s a headache to manage that tailscale code in every docker-compose  yaml file and generate keys in admin console. Then each tailscale container takes RAM and CPU. 
+
+Can we use one Tailscale instance (on host or in a container) for all containers?
+
+Tailscale is already ther running as root. It should be able to access all containers accessible to a system user running as root.
+  Score: 1
+  Created UTC: 2024-07-24 07:39:57
+
+Note: This post has only 6 comments at the time of scraping.

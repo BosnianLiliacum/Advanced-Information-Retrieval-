@@ -1,0 +1,76 @@
+Post Title: Built a new package to alert you if your Python program crashes during runtime
+Author: automatonv1
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1ectin6/built_a_new_package_to_alert_you_if_your_python/
+Number of comments: 13
+Created UTC: 2024-07-26 17:14:41
+
+Post Content:
+**Source code -** [https://github.com/guardog-app/guardog-py](https://github.com/guardog-app/guardog-py)
+
+**What my project does -** Alerts you (by email for now) when your Python program crashes during runtime.
+
+**Target Audience -** Anyone running a Python app in Production and wants to be notified of runtime errors in real-time.
+
+**Comparison -** Our goal is to make the app monitoring and alerting process as easy and simple as possible. It's easy as 1 2 3. 
+
+Top 6 comments:
+Comment 1:
+  Author: fastautomation
+  Comment: While the concept of a watchdog service is a very reasonable practice, no production environment should allow routing exception notifications through an external, anonymously registered service/domain.  This is a security risk.
+  Score: 16
+  Created UTC: 2024-07-26 18:11:40
+
+Comment 2:
+  Author: InvaderToast348
+  Comment: If on Linux / macos, you can do
+
+`python3 main.py || (command to run if exit status indicates error)`
+
+For example, with my Ntfy server running I could do
+
+`python3 main.py || curl -d "Python script exited with error status" ntfy.sh/test`
+
+And I'll receive a notification on all my devices if the process exited with non-0 status. That includes python exceptions, C extension crashes, ...
+
+Anything that causes a non-0 (so an error) exit code can be caught with the double pipe, which will then run the command after the ||.
+
+It works this way because non-0 exit code is equivalent to a Boolean false, and || is the OR operator. (it's more complicated than that but I don't want this to be too long)
+
+The second command will only run if the first failed. If you want a command to only run if it was successfull then use the double-amp (&amp;&amp;).
+
+If you want both on-success and on-fail, do `(main_command &amp;&amp; on_success) || on_failure`. The brackets here are important to make sure the logic is evaluated correctly. But if it is getting this or more complicated, it would be better to look at proper error handling and process management. These are just an easy catch-all.
+
+Actually, I'm pretty sure there's a way in bash scripting to do IF statements based on the exit code of a command, so maybe look into that as well?
+  Score: 10
+  Created UTC: 2024-07-26 21:57:23
+
+Comment 3:
+  Author: david-delassus
+  Comment: https://sentry.io/
+  Score: 5
+  Created UTC: 2024-07-26 19:38:16
+
+Comment 4:
+  Author: kivicode
+  Comment: I think you didn’t consider (not sure if that’s an intended use case, but still) non-python crashes and exits. Like when a C lib dies of segfault or something like exit(1) is called
+  Score: 3
+  Created UTC: 2024-07-26 17:36:48
+
+Comment 5:
+  Author: FloxaY
+  Comment: * Can this be used for coroutines?
+* "Why is my program pausing for \~50-1000ms when I get an exception?"
+* "My program crashed but I got no alerts???"
+
+You might also want to restrict/disable the FastAPI docs endpoints in prod.
+  Score: 1
+  Created UTC: 2024-07-26 17:44:30
+
+Comment 6:
+  Author: JustPlainRude
+  Comment: What if the python runtime dies without an exception being thrown? This seems like the wrong way to do monitoring
+  Score: 1
+  Created UTC: 2024-07-27 10:56:46
+
+Note: This post has only 6 comments at the time of scraping.

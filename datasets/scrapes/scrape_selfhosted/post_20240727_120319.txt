@@ -1,0 +1,51 @@
+Post Title: Is A Celeron J1900 enough for 1080p transcodeing?
+Author: GGERIHUN
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea5z3t/is_a_celeron_j1900_enough_for_1080p_transcodeing/
+Number of comments: 3
+Created UTC: 2024-07-23 11:56:50
+
+Post Content:
+Hi everyone,
+
+I'm planning to set up a small, low-power media server and could use some advice. I'm considering a 10ZiG 5800q series thin client for this purpose due to its compact size and low power consumption (and price). It comes with a Celeron J1900 processor (4 cores, 4 threads) and 4GB of RAM, and it supports QuickSync. I intend to use Jellyfin, and I'll be the only user. My media is mostly stored on a NAS, in H.264, H.265, and some AV1.
+
+Is the Celeron J1900 enough for transcoding a single 1080p stream without stuttering?
+
+  
+[https://www.intel.com/content/www/us/en/products/sku/78867/intel-celeron-processor-j1900-2m-cache-up-to-2-42-ghz/specifications.html](https://www.intel.com/content/www/us/en/products/sku/78867/intel-celeron-processor-j1900-2m-cache-up-to-2-42-ghz/specifications.html)
+
+[https://web.archive.org/web/20201111194524/https://www.10zig.com/application/files/9015/2044/6707/Final\_5800q\_Series\_Spec\_Sheet.pdf](https://web.archive.org/web/20201111194524/https://www.10zig.com/application/files/9015/2044/6707/Final_5800q_Series_Spec_Sheet.pdf)
+
+Top 3 comments:
+Comment 1:
+  Author: 11samype
+  Comment: Ran a NAS with the J1900 for years, it will not keep up for your use case. I'd recommend an 8th gen Intel part or later.
+  Score: 4
+  Created UTC: 2024-07-23 14:46:39
+
+Comment 2:
+  Author: kearkan
+  Comment: If you look at the Wikipedia page for quick sync there is a table of what generations support what in quick sync.
+
+For AV1 you're looking at I think it's 11th gen or newer or an ARC card. H265 goes back to I think skylake?
+
+My guess on something that old is you're looking at only h264 and probably not very well.
+
+What's your budget? You can get things like used Lenovo SFF PC's that come with a 6500t for around €100-120.
+Or there are mini PCs with newer celerons, I have some trigkey with a j4125 that cost me €140 a few years ago.
+
+Unless your budget is absolutely rock bottom or you're getting it for free you might want to look at something that's not over 10 years old.
+
+Another option could be a used office desktop.
+I have a few HP elitedesks with 6500s and 7500s which don't use much power (admittedly more than the celerons, which is why the j4125 runs jellyfin) and have room for an ARC GPU if I wanted to move to AV1.
+  Score: 2
+  Created UTC: 2024-07-23 14:32:31
+
+Comment 3:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: -4
+  Created UTC: 2024-07-23 12:05:42
+
+Note: This post has only 3 comments at the time of scraping.

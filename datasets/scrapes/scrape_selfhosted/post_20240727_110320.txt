@@ -1,0 +1,46 @@
+Post Title: Server purchase advice in Hong Kong?
+Author: vkapadia
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3lfvr/server_purchase_advice_in_hong_kong/
+Number of comments: 7
+Created UTC: 2024-07-15 03:58:13
+
+Post Content:
+Hi! Maybe a long shot, but I'll ask anyway.
+
+I'm from the US, but visiting family in Hong Kong. My brother has asked about setting up a server to back up their data. Anyone in this sub live in HK and can help me with where to go and what prices are decent? 
+
+We went to the place in Sham Sui Po and got a quote from a system builder, but I'm wondering if there is a better place to go or if the guy is ripping us off. My HK family is fairly computer illiterate so they're not familiar with this stuff.
+
+(Yes I'm well aware of the pitfalls of setting up a server for family/friends and have accepted that I'll be tech support.)
+
+Edit: 
+
+Should probably add what the quote was. 
+
+CPU Intel i3-12100, mobo B760M, 16gb ddr4 ram, 512gb nvme SSD, 550w power supply, total $3080
+
+Adding 3x 16tb drives for $1900 each
+
+(Prices are in HKD)
+
+Top 3 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 1
+  Created UTC: 2024-07-15 06:46:41
+
+Comment 2:
+  Author: anikansk
+  Comment: I bought my first computer in Hong Kong in 1991! I believe it was a 286 at 8Mhz. Bought it from Kowloon whilst living in Shatin. Great times.
+  Score: 0
+  Created UTC: 2024-07-15 12:31:23
+
+Comment 3:
+  Author: Familiar_Fly_3459
+  Comment: For buying stuff in Hong Kong, you can use price.com.hk.
+  Score: 0
+  Created UTC: 2024-07-15 04:08:06
+
+Note: This post has only 3 comments at the time of scraping.

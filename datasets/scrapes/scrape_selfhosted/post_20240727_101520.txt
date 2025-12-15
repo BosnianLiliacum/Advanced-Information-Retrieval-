@@ -1,0 +1,77 @@
+Post Title: Self Hosting Alternative to Here.fm?
+Author: scsa20
+Score: 35
+URL: https://www.reddit.com/r/selfhosted/comments/1e6flz0/self_hosting_alternative_to_herefm/
+Number of comments: 40
+Created UTC: 2024-07-18 16:30:34
+
+Post Content:
+Hi all, I was wondering if anyone here happens to know if there's a self hosting alternative to Here.fm? It's like a room like site that allows you to use it as a moodboard and other collaborative style board. The here.fm site is closing their doors soon so finding an alternative to them that I can self host would be amazing. Thank you.
+
+  
+Edit: I've been seeing a lot of suggestions where it's more for watch along. I'm not looking for something like that (although nice to have) but more for the fact that you can upload images, place it wherever, put a draw box on top of it with make it transparent so you can see the image, and draw on it for that collaboration feeling, you know, like a moodboard.
+
+Right now I'm testing figma figjam but it seems so limited because of paywall, if there's an open source alternative that I can run on my servers that would probably be a lot better.
+
+Top 7 comments:
+Comment 1:
+  Author: xenhazenzen
+  Comment: IM LITERALLY SEARCHING FAR AND WIDE FOR ANOTHER SITE LIKE HERE FM because it was such an important space to me and my friends and now that its closing down we're frantically finding another alternative so BOOSTING THIS AAAAAA
+  Score: 2
+  Created UTC: 2024-07-19 04:35:56
+
+Comment 2:
+  Author: d3pthh
+  Comment: can somebody please respond to this if they find one ! me and my long distance boyfriend were using herefm for the past year up until today and now we’re stuck on what to use :CC
+  Score: 1
+  Created UTC: 2024-07-19 07:15:25
+
+Comment 3:
+  Author: Obvious_Cut_7157
+  Comment: I found a website called: [https://app.gather.town/app](https://app.gather.town/app) . It's a bit like [here.fm](http://here.fm) but different. It's a bit like a video game, but it's actually for business meetings. It's really fun so go check it out :)
+  Score: 1
+  Created UTC: 2024-07-20 18:22:46
+
+Comment 4:
+  Author: Whosefox690
+  Comment: I'm looking for the answer as well, tho, anyone know why they're closing it??
+  Score: 1
+  Created UTC: 2024-07-21 06:43:54
+
+Comment 5:
+  Author: hauxir
+  Comment: Not self hosted but just wanted to mention [kosmi.io](http://kosmi.io)
+  Score: 1
+  Created UTC: 2024-07-21 11:41:53
+
+Comment 6:
+  Author: DistorsionDt
+  Comment: check this: [https://talky.io/](https://talky.io/)
+  Score: 1
+  Created UTC: 2024-07-23 02:55:50
+
+Comment 7:
+  Author: TaraPenquinX
+  Comment: Everything I find is just audio/video calling platform. I already have Discord for that, it's superior to the rest.
+
+
+But I really want something I can decorate with tenor/giffy or uploaded gifs &amp; stickers.I enjoyed just making rooms for myself &amp; playing music in it. 
+
+
+I went searching for anything like that.
+Decorative cork board. 
+Online desktop. 
+Addons to put such on my desktop. 
+But to no avail. 
+Edit: I found "Mural". Not sure how satisfying it is, but I'll use it for other things.
+
+
+If anyone finds such a thing. Let me know.
+
+
+What sucks is I've not been on my PC in 1 week short of a month now. My physical room was getting a renovation, where we're putting up lights &amp; things. 
+I was really looking forward to getting in there, choosing a theme, color for my lights, my desktop &amp; tablet wallpapers, and of course Herefm. 
+I was super excited about creating a new herefm room to go with everything, and thinking a lot about it today. Only to find it gone when I tried to open the app.
+  Score: 1
+  Created UTC: 2024-07-23 04:31:16
+

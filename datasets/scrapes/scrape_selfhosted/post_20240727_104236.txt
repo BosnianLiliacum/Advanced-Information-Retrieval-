@@ -1,0 +1,80 @@
+Post Title: what is the safest storage space for keeping files, including sensitive and highly personal ones, ensuring both security and privacy?
+Author: iwannalookatthestars
+Score: 53
+URL: https://www.reddit.com/r/selfhosted/comments/1e4qo71/what_is_the_safest_storage_space_for_keeping/
+Number of comments: 70
+Created UTC: 2024-07-16 14:53:37
+
+Post Content:
+i've been using dropbox so far, but i've recently heard that it isn't the best option. therefore, i want to know which storage solution is the most recommended and trusted, so i don't have to worry about my files.
+
+Top 7 comments:
+Comment 1:
+  Author: ericesev
+  Comment: If you encrypt the files before storing them, then there is no need to trust the storage provider or assume they are safe. I encrypt important documents with PGP before storing them, even when storing them locally.
+
+These instructions are a bit old now, but here are the [details for how the PGP key is set up](https://esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/).
+  Score: 72
+  Created UTC: 2024-07-16 15:10:09
+
+Comment 2:
+  Author: GinDawg
+  Comment: The 3-2-1 rule is important.
+
+- 3 copies.
+- 2 different types of media.
+- 1 copy offsite.
+
+Don't put all your trust in a single cloud provider to keep your files safe, even though they have backups.
+
+As others have mentioned, use encryption for sensation data.  VeraCrypt comes to mind, but I haven't used it. 
+
+AirGap anything that can destroy lives if it's leaked.  Unless you absolutely need it online.
+  Score: 29
+  Created UTC: 2024-07-16 16:29:57
+
+Comment 3:
+  Author: idealape
+  Comment: Safe = not accessible by any other, stable, redundant, reproducible. 
+
+If you have a cloud, add cryptomator. Sync across multiple computers / servers. And have backups via  restic to an off-site. 
+ For super sensitive files (SSH keys and such) add them in a veraCrypt vault inside your cryptomator vault.
+  Score: 8
+  Created UTC: 2024-07-16 18:56:40
+
+Comment 4:
+  Author: JesusFromMexic
+  Comment: Safest as in for casual person? With support, no spying etc.? Enterprise versions of things that people normally use for free so for example Google Workspace. Contrary to popular belief it is used with highly confidential data by some international giants. And by saying highly confidential I mean to the point that google has representatives contacting you and deploying modified versions of their services just for you. But this will be costing you more than anything that you could selfhost. 
+
+For me "safest" means only accessible through VPN connection into my local network with 3-2-1 backup rule all spread out in clusters and the really really confidential stuff in air gapped systems requiring manual backups between them. (That's not a problem for me since amount of highly confidential data I have is below 100Gb). 
+
+It may help if you define your use case. There are multiple solutions to this problem both for casual and experts, it all depends on your budget and your experience.
+  Score: 5
+  Created UTC: 2024-07-16 15:17:39
+
+Comment 5:
+  Author: aetherspoon
+  Comment: I'm assuming you need it for multiple machines? Or is it just one computer and you want someplace safe in the event something happens to your computer?
+
+I'm just trying to figure out why "just save it locally" isn't an option, that's all. :)
+  Score: 4
+  Created UTC: 2024-07-16 15:06:41
+
+Comment 6:
+  Author: lev400
+  Comment: A suggest a self hosted solution… I mean this is /r/selfhosted
+
+As for safe I suggest a 4 disk RAID5, they don’t have to be huge drives (doesn’t have to break the bank). Install a NAS OS like TrueNAS and password protect the network shares. Encrypt the data if you want to go the extra mile.
+
+You will learn more building a simple NAS server than trying out different cloud providers.
+  Score: 3
+  Created UTC: 2024-07-16 15:58:15
+
+Comment 7:
+  Author: Murky-Sector
+  Comment: &gt;but i've recently heard that it isn't the best option
+
+Never make decisions on such gross generalizations. You would need to know why. At the very least.
+  Score: 3
+  Created UTC: 2024-07-16 17:15:43
+

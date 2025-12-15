@@ -1,0 +1,54 @@
+Post Title: Jellyfish not finding file parh
+Author: jpc27699
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e848sm/jellyfish_not_finding_file_parh/
+Number of comments: 16
+Created UTC: 2024-07-20 20:01:32
+
+Post Content:
+I am trying to set up a home media server/pc, running Ubuntu and using jellyfin. I added a second 2tb hard drive to contain all the media files. I used the partition manager to format the new drive as ext4 and mount to /data, but the actual file path for the drive became /media/[pc name]/_data (I didn't add the "_" to the name it happened automatically). I built subdirectories of /_data/medialibrary/movies, tv, etc. all with permissions 775.
+
+I installed jellyfin and went to [my IP]:8096 to set up jellyfin. I set up a username and password, then tried to add media libraries. I tried to add one with the file path /media/[pc name]/_data/medialibrary/movies, but I got an error message "the path could not be found. Please ensure the path is valid and try again."
+
+However this is a valid path to a directory that exists, how do I get jellyfin to recognize it?
+
+Top 4 comments:
+Comment 1:
+  Author: BuckRowdy
+  Comment: Are the drives mounted?  Try editing your fstab at /etc/fstab.  
+
+You're gonna add an entry like this:
+
+```UUID=12345678 /_data/medialibrary/movies ext4 defaults 0 2``` then save and exit.  
+
+then mount with `sudo mount -a` then check if the drive is mounted with `lsblk`.  Then go back to jellyfin and add the path in the library add window.
+
+To find your uuid, run ```sudo blkid``` then look for your drive.
+  Score: 3
+  Created UTC: 2024-07-20 21:31:34
+
+Comment 2:
+  Author: jpc27699
+  Comment: Additional info: I have Kodi on the machine to play locally, it can connect to these folders but sees them as /data/medialibrary/movies etc. I tried this path in jellyfin but it still doesn't work.
+  Score: 1
+  Created UTC: 2024-07-20 20:08:31
+
+Comment 3:
+  Author: jerwong
+  Comment: Are you using the .deb installation of jellyfin or something else like docker?
+  Score: 1
+  Created UTC: 2024-07-20 20:09:38
+
+Comment 4:
+  Author: lupin-san
+  Comment: Are you sure you have the right paths? This might just be reddit messing with the slashes.
+
+This is what partition manager mounted: `/media/[pc name]/data`
+
+This is what you created: `/_data/medialibrary/movies`
+
+This is what you configured for Jellyfin: `/media/[pc name]/_data/medialibrary/movies`
+  Score: 1
+  Created UTC: 2024-07-20 22:20:06
+
+Note: This post has only 4 comments at the time of scraping.

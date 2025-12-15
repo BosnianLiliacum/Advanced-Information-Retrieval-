@@ -1,0 +1,52 @@
+Post Title: Wednesday Daily Thread: Beginner questions
+Author: AutoModerator
+Score: 9
+URL: https://www.reddit.com/r/Python/comments/1ean7a2/wednesday_daily_thread_beginner_questions/
+Number of comments: 6
+Created UTC: 2024-07-24 00:00:08
+
+Post Content:
+# Weekly Thread: Beginner Questions 🐍
+
+Welcome to our Beginner Questions thread! Whether you're new to Python or just looking to clarify some basics, this is the thread for you.
+
+## How it Works:
+
+1. **Ask Anything**: Feel free to ask any Python-related question. There are no bad questions here!
+2. **Community Support**: Get answers and advice from the community.
+3. **Resource Sharing**: Discover tutorials, articles, and beginner-friendly resources.
+
+## Guidelines:
+
+* This thread is specifically for **beginner questions**. For more advanced queries, check out our [Advanced Questions Thread](#advanced-questions-thread-link).
+
+## Recommended Resources:
+
+* If you don't receive a response, consider exploring r/LearnPython or join the [Python Discord Server](https://discord.gg/python) for quicker assistance.
+
+## Example Questions:
+
+1. **What is the difference between a list and a tuple?**
+2. **How do I read a CSV file in Python?**
+3. **What are Python decorators and how do I use them?**
+4. **How do I install a Python package using pip?**
+5. **What is a virtual environment and why should I use one?**
+
+Let's help each other learn Python! 🌟
+
+Top 2 comments:
+Comment 1:
+  Author: ShotCalligrapher5337
+  Comment: Hi guys, I am glad to be part of this community and I look forward to my journey in python with you guys.
+
+I am a few weeks old with python and I am currently doing an online course (not sure if I am allowed to mention the name), so I was just wondering if anyone can recommend some helpful threads here for beginners
+  Score: 2
+  Created UTC: 2024-07-24 05:38:54
+
+Comment 2:
+  Author: Osteoporosis_Luke
+  Comment: When setting up a Python environment in Docker and installing dependency packages, is it better to use venv or install them into system Python? I'm interested in hearing your opinions.
+  Score: 1
+  Created UTC: 2024-07-24 06:54:24
+
+Note: This post has only 2 comments at the time of scraping.

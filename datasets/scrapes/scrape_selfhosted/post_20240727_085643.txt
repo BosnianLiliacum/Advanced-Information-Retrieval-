@@ -1,0 +1,76 @@
+Post Title: I just released Beszel, a server monitoring hub with historical data, docker stats, and alerts. It's a lighter and simpler alternative to Grafana + Prometheus or Checkmk. Any feedback is appreciated!
+Author: Hal_Incandenza
+Score: 330
+URL: https://www.reddit.com/gallery/1eb4bi5
+Number of comments: 126
+Created UTC: 2024-07-24 15:28:54
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: ctrl-brk
+  Comment: I would like to see a tiny bit of `uptime kuma` incorporated just to check if a service responds on a port, http curl responds with 200, etc.
+
+To make this my go to dashboard.
+  Score: 66
+  Created UTC: 2024-07-24 21:07:39
+
+Comment 2:
+  Author: Hal_Incandenza
+  Comment: GitHub repo: [https://github.com/henrygd/beszel](https://github.com/henrygd/beszel)
+
+More info and instructions are available at the link above. It's intended to be as simple as possible, so you should be up and running in a few minutes.
+
+As this is the first release, you may run into bugs. If you do, please let me know and I will fix them.
+
+Additional features planned:
+
+- Webhook option for alerts, so they can be hooked up to ntfy, pushover, mattermost, etc. As well as allowing users to specify a different email for alert delivery.
+
+- Charts for network and disk I/O of docker containers.
+
+Let me know if you have any other ideas.
+  Score: 42
+  Created UTC: 2024-07-24 15:31:32
+
+Comment 3:
+  Author: Muizaz88
+  Comment: There is beauty in simplicity.
+
+Very nice little application!
+  Score: 17
+  Created UTC: 2024-07-24 21:50:21
+
+Comment 4:
+  Author: Fanyang-Meng
+  Comment: Just installed on all of my servers, gorgeous project, simple but also not simple. 
+
+Enough metrics and oauth support and smtp alert, with backup can even auto generated and store in the s3 storage. 
+
+Very polished and love it so much already, even more than my grafana+prometheus+node\_exporter or Netdata. 
+
+Huge thanks to you and also starred the project already. I cannot wait to see this project to be thrived!
+  Score: 11
+  Created UTC: 2024-07-25 01:32:22
+
+Comment 5:
+  Author: MiniColossus9000
+  Comment: Love the Twin Peaks references!
+  Score: 7
+  Created UTC: 2024-07-24 18:28:51
+
+Comment 6:
+  Author: Bonamix
+  Comment: Awesome work. I think you identified a good use case for the self hosting community, a simple server monitor running as a simple service. 
+I will give it a go soon!
+  Score: 8
+  Created UTC: 2024-07-24 20:54:26
+
+Comment 7:
+  Author: makifun
+  Comment: Just installed this in my server and it looks great, way lighter than the whole prometheus/grafana/influxdb stack indeed. Great job! Thanks a lot for this.
+  Score: 13
+  Created UTC: 2024-07-24 17:18:51
+

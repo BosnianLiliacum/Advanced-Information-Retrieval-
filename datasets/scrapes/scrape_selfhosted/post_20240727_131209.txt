@@ -1,0 +1,53 @@
+Post Title: When my friend who started self-hosting is in shambles after his server broke down
+Author: Prince-of-Privacy
+Score: 764
+URL: https://i.redd.it/s3elu9z7c8dd1.png
+Number of comments: 59
+Created UTC: 2024-07-18 07:30:33
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: vinrehife
+  Comment: Unsubscribed to theBoys sub to avoid spoilers. Just finished season 1 and started season 2.
+  Score: 106
+  Created UTC: 2024-07-18 08:39:17
+
+Comment 2:
+  Author: mphycx00
+  Comment: my country's national data center doesn't even have a backup
+  Score: 47
+  Created UTC: 2024-07-18 09:03:52
+
+Comment 3:
+  Author: Prince-of-Privacy
+  Comment: The Boys, Season 4 Episode 8
+  Score: 56
+  Created UTC: 2024-07-18 07:30:54
+
+Comment 4:
+  Author: weaponizedLego
+  Comment: I've accepted that if it dies it dies. I'll just rebuild. Nothing on it right now that I would consider critical
+  Score: 33
+  Created UTC: 2024-07-18 10:19:37
+
+Comment 5:
+  Author: Hrafna55
+  Comment: The burned hand teaches best.
+  Score: 13
+  Created UTC: 2024-07-18 08:52:49
+
+Comment 6:
+  Author: Solkre
+  Comment: Backup data yes, backup hardware no.
+  Score: 4
+  Created UTC: 2024-07-18 18:11:26
+
+Comment 7:
+  Author: zidanerick
+  Comment: A single external hard drive with just the essentials will help you recover. Even something a simple as docker config directories can save you hours!
+  Score: 3
+  Created UTC: 2024-07-18 15:34:00
+

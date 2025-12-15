@@ -1,0 +1,38 @@
+Post Title: How should I host my custom file server?
+Author: ConcentrateBig9345
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebkgan/how_should_i_host_my_custom_file_server/
+Number of comments: 5
+Created UTC: 2024-07-25 03:03:46
+
+Post Content:
+Hello, I am thinking of writing my own file server in Golang and I am wondering what the best way to host it would be. Hosting it myself is not an option since I live in a university centered housing and do not have access private network. I ultimately want to be able to communicate and access this file server via a personal website. What would be a plausible course of action? 
+
+Top 4 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: You want to write your own storage protocol 😵? How will clients access it then? Do you plan to create apps for iOS and Android, PC and macOS? What do you have in mind that current protocols like CIFS, NFS do not offer?
+  Score: 7
+  Created UTC: 2024-07-25 03:23:06
+
+Comment 2:
+  Author: FangLeone2526
+  Comment: Host it yourself and expose with cloudflare tunnel if it's web based. Alternatively: VPS
+  Score: 4
+  Created UTC: 2024-07-25 03:29:21
+
+Comment 3:
+  Author: Skylarked07
+  Comment: Nextcloud, etc + Tailscale?
+
+I was gonna say if you're following a Golang guide similar to [this one](https://medium.com/the-bug-shots/create-a-simple-fileserver-in-golang-9cd54453d373), that's basically a WebDAV....so Tailscale should be an option with it. If worse comes to worse another user here mentioned Cloudflare Tunnels. Alternatively you can use ngrok tunnels.
+  Score: 1
+  Created UTC: 2024-07-25 04:44:02
+
+Comment 4:
+  Author: mbecks
+  Comment: Check out hetzner for a cloud Linux box, build and deploy on that with docker
+  Score: 0
+  Created UTC: 2024-07-25 07:23:10
+
+Note: This post has only 4 comments at the time of scraping.

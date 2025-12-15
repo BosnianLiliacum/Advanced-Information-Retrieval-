@@ -1,0 +1,76 @@
+Post Title: Cloudflare rant
+Author: Alexis_Kiara_Rose
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9p93z/cloudflare_rant/
+Number of comments: 21
+Created UTC: 2024-07-22 20:58:13
+
+Post Content:
+Cloudflare is a bit of a joke to me, every website that i’ve seen using then is always going down, being too slow to even consider using it, or just plain not working, to me it seems like it’s just there to stop bots and inconvenience people, what’s even the point of something if it’s currently crashing websites
+
+Top 5 comments:
+Comment 1:
+  Author: OverAnalyst6555
+  Comment: what makes you think its cloudflare's fault rather than the website itself or even your own internet 🤔🤔🤔
+  Score: 39
+  Created UTC: 2024-07-22 21:11:21
+
+Comment 2:
+  Author: HTTP_404_NotFound
+  Comment: I have websites I host with cloudflare.
+
+I can't really recall any outages at all in the last 5 years.
+
+I can recall MULTIPLE outages for my lab, this week alone.
+
+Cloudflare, has been honestly, rock solid. Everytime there is an issue- they do create a very informative blog post detailing exactly what happened as well.
+
+Given, that a large chunk of the public-facing internet is delivered via cloudflare, I'd check your local network/VPN/TOR/whatever you have setup.
+  Score: 5
+  Created UTC: 2024-07-22 21:57:50
+
+Comment 3:
+  Author: Althyrios
+  Comment: As others already stated, there are multiple factors which might cause those issues.
+
+In one comment you've wrote that a site you eere using recently switched to cloudflare.
+Did you consider that they still are working on things which might also be one of the reasons?
+
+&gt;being too slow to even consider using it
+
+Just stop this nonsense.
+
+All you hear nowadays is how slow anything  and everythingworks or why this and that takes so long blablabla.
+
+People are really pampered these days, that they've forgot or aren't even knowing how bad this actually is and what it's like having to wait.
+
+Now the most have 0 patience for anything, want everything being instant ready, but at the same time they're also complaining how much work they have but don't get the time to get to it.
+
+Just think about how it would be if you have to wait minutes for a simple html page to load depending on how much content it has compared to nowadays.
+This might help you to see things different without going instantly to rant about things that look as the obvious reason at front without knowing what's going on behind.
+  Score: 8
+  Created UTC: 2024-07-22 22:40:07
+
+Comment 4:
+  Author: AK1174
+  Comment: I don’t think I’ve ever had problems with cloudflare. 
+
+I host multiple sites which are proxied through cloudflare, and I monitor these with uptime kuma. It’s very rare that the time to response is high. 
+
+The rare occasion it is, it’s a cloudflare outage, which any server can have. 
+
+Considering cloudflare is used to serve a very large portion of the internet. everyone that uses cloudflare probably disagrees with your sentiment
+
+Also cloudflare is far more stable than the average web server/web app that is running in the background to fulfil your request. If anything is to blame it’s the poor performance of the edge server used in the service you’re accessing.
+  Score: 1
+  Created UTC: 2024-07-23 02:40:51
+
+Comment 5:
+  Author: clarkn0va
+  Comment: I tried transferring a domain to cloudflare today to save some money. The web site first makes you change your name servers to theirs, then it refused to accept the authorization code provided by my current registrar. I opened a support ticket with the current registrar, who confirmed the code was valid. Then I opened a ticket with Cloudflare support, who immediately closed it and told me to request a new authorization code.
+
+I then learned that Cloudflare's name servers broke DNS for my web site, so I just changed them back to my current registrar. I suppose you get what you pay for.
+  Score: -16
+  Created UTC: 2024-07-22 21:11:05
+
+Note: This post has only 5 comments at the time of scraping.

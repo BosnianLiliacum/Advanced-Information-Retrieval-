@@ -1,0 +1,34 @@
+Post Title: Full-featured email server running OpenBSD
+Author: the_solene
+Score: 17
+URL: https://dataswamp.org/~solene/2024-07-24-openbsd-email-server-setup.html
+Number of comments: 7
+Created UTC: 2024-07-26 09:01:16
+
+Post Content:
+[This post has no text content]
+
+Top 3 comments:
+Comment 1:
+  Author: walkalongtheriver
+  Comment: This is quite good documentation. More detailed than the poolp article that is usually linked.
+
+Kudos to you. Well done.
+  Score: 1
+  Created UTC: 2024-07-26 12:51:23
+
+Comment 2:
+  Author: Feral_Nerd_22
+  Comment: Fun fact, Hotmail originally ran on FreeBSD. Rumor is it did until the late 2004.
+
+https://www.theregister.com/1999/04/19/microsoftowned_email_service_runs/
+  Score: 1
+  Created UTC: 2024-07-26 22:37:54
+
+Comment 3:
+  Author: fezmid
+  Comment: Back in the day, I ran Postfix on OpenBSD with SpamAssassin and one other tool I'm forgetting... worked well.
+  Score: 1
+  Created UTC: 2024-07-26 10:53:49
+
+Note: This post has only 3 comments at the time of scraping.

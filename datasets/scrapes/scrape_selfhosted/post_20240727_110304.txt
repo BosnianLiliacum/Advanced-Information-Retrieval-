@@ -1,0 +1,18 @@
+Post Title: Authentik behind NPM connection issues
+Author: FoodvibesMY
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3m2ap/authentik_behind_npm_connection_issues/
+Number of comments: 4
+Created UTC: 2024-07-15 04:34:11
+
+Post Content:
+yesterday I was playing with authentik container and I set it up in the default port 9000, when I put in nginx proxy manager to have an ssl and so on. I was greeted with connection error on the right hand side and connecting attempt (reconnecting). I do not know if anyone encountered the same before but any help would be appreciated. 
+
+Top 1 comments:
+Comment 1:
+  Author: misternipper
+  Comment: I've never used Authentik before but it may rely on websockets. In NPM you need to explicitly enable "Websockets Support" for the proxy host for websockets to work. I do think NPM should make that option enabled by default to avoid any issues like this.
+  Score: 1
+  Created UTC: 2024-07-15 04:47:40
+
+Note: This post has only 1 comments at the time of scraping.

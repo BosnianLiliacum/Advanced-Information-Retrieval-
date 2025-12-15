@@ -1,0 +1,39 @@
+Post Title: Truenas and Nextcloud on Proxmox
+Author: rnldnkp
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e8gawy/truenas_and_nextcloud_on_proxmox/
+Number of comments: 5
+Created UTC: 2024-07-21 06:52:06
+
+Post Content:
+Currently working on replacing a dual NUC with ESX and a 8 bay QNAP NAS for one big homelab server.
+
+The new server will be running Proxmox, mainly for the lab VM's.  
+Proxmox runs from a sSATA controller. VM's will be stored on a dual NVME setup.   
+  
+Of course I still need NAS functionality, so I want to run Truenas in a VM with PCIe passthrough of the (second) builtin SATA controller (using ZFS).
+
+So far so good and quite straightforward.
+
+Next, for the userdata.  
+Mainly for easy file sync (Qsync alternative) and mobile support I want to run Nextcloud.
+
+Since Truenas stopped supporting TrueCharts (May 30, 2024) running Nextcloud inside Truenas cannot be done (and might aswell be a bad idea anyway).
+
+Installing Nextcloud in LXC is easy and works very nice.   
+But I'm struggling with the location of the userdata.  
+  
+I would like to have all data inside Truenas (using the passthrough SATA Controller with ZFS) preventing me to use separate disks and/or 'virtual disks' served from Proxmox.  
+What would be the best way to make these 2 (3 including Proxmox) work together?
+
+Truenas NFS share for Nextcloud? Or just SMB?   
+Suggestions are welcome
+
+Top 1 comments:
+Comment 1:
+  Author: downvotedbylife
+  Comment: Truecharts dropped support, but there's still the official TrueNAS Nextcloud app
+  Score: 1
+  Created UTC: 2024-07-21 12:50:04
+
+Note: This post has only 1 comments at the time of scraping.

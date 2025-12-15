@@ -1,0 +1,70 @@
+Post Title: [Project] Termatus: A TUI system informatics viewer, written in Python
+Author: Ok-Balance4649
+Score: 15
+URL: https://www.reddit.com/r/Python/comments/1eci1y2/project_termatus_a_tui_system_informatics_viewer/
+Number of comments: 12
+Created UTC: 2024-07-26 07:23:36
+
+Post Content:
+**What my project does:**
+
+Displays most of your system's informatics with a pretty TUI in your terminal.
+
+  
+**Who is this for:**
+
+Well anyone wanting to style their setup or just see how their computer's doing
+
+  
+**What's better about mine:**
+
+* Colorful (i guess)
+* Nice big banner
+* Space for ASCII art and also custom art can be added
+* Completely in the terminal
+* Can work on Windows AND Linux
+
+**What's worse about mine:**
+
+* UI would still be considered as lacking
+* Too much blank spaces that probably could be utilized in better ways
+* Some info might not be available on different OSes
+
+This is highly customizable. Although there isn't a menu for that, you can just go into the source code and look for things you would wanna customize like colors, ascii arts, banner text etc. Just make sure it fits the dimensions
+
+  
+HEAVILY INSPIRED OFF OF BPYTOP
+
+Disclaimer: This was created in windows. Although it has been tested on a WSL2 environment, still really dont expect it to work nicely on actual Linux OS
+
+  
+**Github:** [https://github.com/muaaz-ur-habibi/termatus](https://github.com/muaaz-ur-habibi/termatus)
+
+Top 4 comments:
+Comment 1:
+  Author: DarthSidiousPT
+  Comment: &gt; this is intended to be used on 1920 x 1080 screens ONLY, anything else and it is bound to break 
+
+This _limitation_ really hampers the real usage of something like this...
+  Score: 18
+  Created UTC: 2024-07-26 10:15:49
+
+Comment 2:
+  Author: parabellum_pizza
+  Comment: Nice work! Textual library can help you get a better UI
+  Score: 3
+  Created UTC: 2024-07-26 09:30:30
+
+Comment 3:
+  Author: Psychological_Egg_85
+  Comment: Nice work habibi!
+  Score: 2
+  Created UTC: 2024-07-26 10:11:44
+
+Comment 4:
+  Author: FordZodiac
+  Comment: Have you looked at Textual?  https://www.textualize.io/projects/
+  Score: 2
+  Created UTC: 2024-07-26 14:57:39
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,61 @@
+Post Title: Hosting download site for friends — ways to speed up download times?
+Author: Visual-Patient-6691
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9vtdo/hosting_download_site_for_friends_ways_to_speed/
+Number of comments: 14
+Created UTC: 2024-07-23 01:46:55
+
+Post Content:
+Hello, 
+
+I'm hosting a website so I can easily share large downloads with my friends without having to go through the trouble of signing up for services, worrying about expiring links, etc. Unfortunately, the download speeds are slow — for reference, a 1.5 GB file takes about an hour to download.
+
+I'm hosting this on an old Thinkpad T420 with a HDD. Is bad hardware the bottleneck here? Would installing an SDD make a difference (I'm a total tech dilettante, so maybe that's a dumb question)? Thank you.
+
+Top 6 comments:
+Comment 1:
+  Author: Shane75776
+  Comment: Go to somewhere like speedtest.net, what does it say your upload speed is?
+
+If your upload speed is 30Mbps, that's the maximum speed a single person can download a file from you at. If you have 2 people downloading at the same time, then they will each download at 15Mbps max.
+
+If say your friends only have a max download speed of 10Mbps because they are on a crap Internet provider, then 10 Mbps is the max they can download from you regardless of your 30Mbps upload.
+
+If your friend has 100 Mbps download speed, the max they can download from you is 30 Mbps because your upload doesn't allow for any faster.
+  Score: 8
+  Created UTC: 2024-07-23 05:46:46
+
+Comment 2:
+  Author: jerwong
+  Comment: 1.5 GB in an hour is about 3.5 Mbps which is very slow. What is your Internet service upload speed and how is your Thinkpad connected to the Internet e.g. is it wireless or wired?
+  Score: 3
+  Created UTC: 2024-07-23 02:04:00
+
+Comment 3:
+  Author: aft_punk
+  Comment: If your friends are uploading things, they are going to be under the constraint of their upload speed.
+
+That might be the bottleneck you are experiencing.
+  Score: 1
+  Created UTC: 2024-07-23 03:29:18
+
+Comment 4:
+  Author: Sweaty-Gopher
+  Comment: Sounds like you have cable internet or something similar. Honestly without a symmetrical connection like fiber there's nothing you can really do about it
+  Score: 1
+  Created UTC: 2024-07-23 04:11:58
+
+Comment 5:
+  Author: justinf210
+  Comment: Open htop (if linux) or task manager (if windows), start a download and see what the read rate on the disk is
+  Score: 1
+  Created UTC: 2024-07-23 19:36:13
+
+Comment 6:
+  Author: blind_guardian23
+  Comment: would recommend using a vserver instead, they usually are on SSD and have several hundred Mbit connection (up to Gigabit) and wont cost more than leaving your laptop in 24/7.
+Hetzner, digital ocean, OVH, ... depending on your location.
+  Score: -1
+  Created UTC: 2024-07-23 07:21:51
+
+Note: This post has only 6 comments at the time of scraping.

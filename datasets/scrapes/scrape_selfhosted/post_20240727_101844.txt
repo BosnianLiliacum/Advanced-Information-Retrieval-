@@ -1,0 +1,30 @@
+Post Title: Help! Linux Raptor Lake frequent freezes
+Author: OwO_Astolfo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6a5ac/help_linux_raptor_lake_frequent_freezes/
+Number of comments: 9
+Created UTC: 2024-07-18 12:26:09
+
+Post Content:
+I have my own home server with an i5-13600K processor on an MSI Pro B760M-P motherboard, equipped with 2x16GB 3200MHz Corsair Vengeance LPX RAM. I'm using Arch Linux (because of the repositories) and Docker to run Jellyfin. Additionally, I have an SMB share using Samba, SSH, and sometimes a Minecraft server.
+
+The problem is that after running for more than 24 hours, the server suddenly freezes completely. Jellyfin, SSH, and Minecraft (if running) become unresponsive. The system remains frozen until I turn the power supply off and on. Both the BIOS and every package in Arch are updated to the latest versions. I have only disabled secure boot and enabled XMP.
+
+Has anyone else experienced similar issues? I hope you can provide a solution to fix this problem.
+
+Top 2 comments:
+Comment 1:
+  Author: marc45ca
+  Comment: First step would be to look in the system logs for an error messages.
+
+Second step would be to find some diagnostics that you can use to test the hardware e.g memtest to check for ram errors.
+  Score: 2
+  Created UTC: 2024-07-18 12:37:16
+
+Comment 2:
+  Author: ethansky
+  Comment: Apparently Intel 13th and 14th gen have stability issues in general. Don't think there is a fix aside from RMAing.
+  Score: 1
+  Created UTC: 2024-07-18 12:38:17
+
+Note: This post has only 2 comments at the time of scraping.

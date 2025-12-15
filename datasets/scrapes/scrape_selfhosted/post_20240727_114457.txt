@@ -1,0 +1,42 @@
+Post Title: Running a website, port security
+Author: FigBrandy
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eb5f1p/running_a_website_port_security/
+Number of comments: 15
+Created UTC: 2024-07-24 16:13:50
+
+Post Content:
+Hello, I've been looking to host my own site for a while now, and finally I did it. I'm running an unmanaged VPS with Debian. The only outside ports I have open are HTTPS and SSH. I'm running NGINX as the reverse proxy, currently just serving some static stuff, overtime I hope to add an interactive app. Additionally I'm running Fail2Ban.
+
+Now my question is should I do any other security hardening for the 443 port? Unlike the SSH port I can't just ban random IPs, but it also slightly feels very exposed.
+
+Top 4 comments:
+Comment 1:
+  Author: wsoqwo
+  Comment: You can run crowdsec in order to ban IPs that exhibit certain behaviours. crowdsec also has lists and DBs of known offending IPs.  
+Banning chinese IPs will likely also reduce the total amount of attacks on your system by half.
+  Score: 3
+  Created UTC: 2024-07-24 16:30:34
+
+Comment 2:
+  Author: ericesev
+  Comment: There aren't really any security issues or hardening you can do to a port. You can allow/deny access to it.
+
+Look into securing the service listening on the port. Use AppArmor/SELinux, enable a web application firewall, switch to a server that is implemented in a memory-safe language.
+  Score: 1
+  Created UTC: 2024-07-24 20:28:59
+
+Comment 3:
+  Author: ThecaTTony
+  Comment: Fail2ban or sshguard can also ban offending IPs reading the access log of the web server and drop/reject future connections to TCP 443.
+  Score: 1
+  Created UTC: 2024-07-25 05:53:23
+
+Comment 4:
+  Author: MBILC
+  Comment: Make sure your firewall rules are protocol specific (TCP/UDP)  
+Make sure SSH access is using certificates / keys for access and restrict access to only your IP if you can.
+  Score: 1
+  Created UTC: 2024-07-24 18:42:31
+
+Note: This post has only 4 comments at the time of scraping.

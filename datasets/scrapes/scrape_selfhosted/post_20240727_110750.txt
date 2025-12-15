@@ -1,0 +1,85 @@
+Post Title: Encountered a problem setting up reverse proxies with Nginx proxy manager and adguard home
+Author: Xpirav1t
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e38cxx/encountered_a_problem_setting_up_reverse_proxies/
+Number of comments: 10
+Created UTC: 2024-07-14 17:47:30
+
+Post Content:
+Hello everyone, I just recently set up my first home server and I have run into a bit of a problem.
+
+I followed this [guide](https://harish2k01.in/installing-nginx-proxy-manager-efficient-reverse-proxy-management/) to set up reverse proxies (except for adding the SSL certificate) and what I have currently is proxy hosts for all my services set up in npm in the form of service.home.lab pointing to the server IP and according port. I also had to set up a DNS rewrite in AdGuard for the \*.home.lab wild card domain to point it to the server IP (where port 80 is AdGuard and port 81 is npm)(to avoid confusion: the DNS rewrite doesn't let me specify a port). 
+
+What happens however, whenever I try to access any service using the URL I gave it through npm (service.home.lab) I end up at AdGuard. It seems like the DNS rewrite never sends the URLs to npm to be reverse proxied and just points everything back at AdGuard, and I can't figure out why that happens or how I can change it. 
+
+I really need some help. If I need to provide any more info to provide a better understanding of the situation, I am happy to do so.
+
+Top 3 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Proxy needs to listen at port 80, very simple.
+
+And you shouldnt make up a fake domain TLD but use one that is designated for this purpose.
+  Score: 1
+  Created UTC: 2024-07-14 17:50:47
+
+Comment 2:
+  Author: MERKR1
+  Comment: There are numerous ways to do things. Since you’re new to this, I would recommend the basics, such as without  dns rewriting. I would just run npm on a dedicated ip, then run adguard on its own dedicated ip. This will allow those applications ports to be open as default.
+  Score: 1
+  Created UTC: 2024-07-14 18:27:17
+
+Comment 3:
+  Author: NeoJackOfBlades
+  Comment: My use case is to set the port host ip for nginx and set another ip for adguard. For example, if my host IP is 196.168.1.100, then 192.168.1.100:80 goes to ngixn and 192.168.1.200 goes to adguard (which runs on the host at 192.168.1.100.)
+
+    version: '3.8'
+    networks:
+      dockeripvlan:
+        driver: ipvlan
+        driver_opts:
+          parent: enp4s0 
+    #
+          
+    macvlan_mode: bridge
+        ipam:
+          config:
+            - subnet: "192.168.1.0/24"
+              ip_range: "192.168.1.200/32"
+              gateway: "192.168.1.254"
+        name: dockeripvlan
+    
+    services:
+      
+    # AdGuard Home - DNS AdBlocking
+      
+    adguardhome:
+        container_name: adguardhome
+        image: adguard/adguardhome
+        restart: unless-stopped
+        environment:
+          - PUID=${PUID}
+          - PGID=${PGID}
+          - TZ=${TZ}
+        volumes:
+          - ${DATADIR}/adguardhome/conf:/opt/adguardhome/conf
+          - ${DATADIR}/adguardhome/work:/opt/adguardhome/work
+          
+    #- ${DATADIR}/certs/example.com:/certs # optional: if you have your own SSL certs
+        
+    ports:
+          - "53:53/udp"
+          - "67:67/udp"
+          - "68:68/tcp"
+          - "68:68/udp"
+          - "80:80/tcp"
+          - "443:443/tcp"
+          - "853:853/tcp"
+          - "3000:3000/tcp"
+        networks:
+          dockeripvlan:
+            ipv4_address: 192.168.1.200
+  Score: 0
+  Created UTC: 2024-07-14 18:54:11
+
+Note: This post has only 3 comments at the time of scraping.

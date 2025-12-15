@@ -1,0 +1,26 @@
+Post Title: Tarantular monitoring
+Author: Penner4242
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb16ev/tarantular_monitoring/
+Number of comments: 3
+Created UTC: 2024-07-24 13:14:18
+
+Post Content:
+I have a tarantula and would like to know what it does in the terrarium. (These animals are usually most active at night) Problem: I need a small camera with night vision that fits in the terrarium and transmits video to my server. I would like to transmit the video stream live via my existing docker server and perhaps also run motion detection on the server.  
+What hardware and software could I use for this?  
+(The environmental parameters are already monitored and controlled via smarthome devices and a script on my server controls this)
+
+Top 2 comments:
+Comment 1:
+  Author: couquino
+  Comment: You can use Frigate (https://github.com/blakeblackshear/frigate) for this, or even Scrypted (https://github.com/koush/scrypted) that can act as NVRs
+  Score: 2
+  Created UTC: 2024-07-24 13:26:05
+
+Comment 2:
+  Author: commissar_squid
+  Comment: I run an underwater picam through mediamtx for my aquarium.  Mediamtx to restreamer then out to Owncast on a cloud vps.
+  Score: 1
+  Created UTC: 2024-07-25 02:56:37
+
+Note: This post has only 2 comments at the time of scraping.

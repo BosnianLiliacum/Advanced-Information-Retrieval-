@@ -1,0 +1,48 @@
+Post Title: Readeck is unusable due to source and docker image being region-blocked
+Author: TheQuantumPhysicist
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e4yva2/readeck_is_unusable_due_to_source_and_docker/
+Number of comments: 8
+Created UTC: 2024-07-16 20:24:33
+
+Post Content:
+[Readeck](https://readeck.org/), a bookmarking tool written in go, seems to have its docker image and source code served exclusively through [codeberg.org](https://codeberg.org/), which seems to be blocked in my region for reasons I don't understand. I was able to verify that it's a regional block by opening the website in Tor.
+
+Readeck developer(s) have no email address, and codeberg just doesn't respond. Any ideas how to tell the devs to upload to another service too? 
+
+If the devs see this... please upload another copy to docker hub.
+
+Do you guys use it?
+
+Top 3 comments:
+Comment 1:
+  Author: clxrdr
+  Comment: [Maybe try via mastodon?](https://mastodon.online/@readeck)
+  Score: 1
+  Created UTC: 2024-07-17 07:10:46
+
+Comment 2:
+  Author: foolsgold1
+  Comment: Unrelated, but saw this in the FAQ:
+
+&gt; Is there a system to store my (paywall) website credentials?
+
+&gt; There isn't, for several reasons: 
+
+&gt;- It's borderline illegal, 
+
+&gt; ... 
+
+WAT? :/
+  Score: 1
+  Created UTC: 2024-07-17 09:29:16
+
+Comment 3:
+  Author: kzshantonu
+  Comment: Use this. Run `docker load -i filename` https://send.mni.li/download/f17c79b0a9146c97/#ULGZcCySI7qxO7jchsHPsw
+
+Verify official hash after loading: https://codeberg.org/readeck/-/packages/container/readeck/0.15.0
+  Score: 1
+  Created UTC: 2024-07-18 10:53:42
+
+Note: This post has only 3 comments at the time of scraping.

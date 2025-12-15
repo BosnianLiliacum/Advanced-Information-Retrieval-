@@ -1,0 +1,44 @@
+Post Title: Need some help with storage layout
+Author: simen64
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7takw/need_some_help_with_storage_layout/
+Number of comments: 1
+Created UTC: 2024-07-20 11:15:19
+
+Post Content:
+So i have an assortment of disks i want to use in my homelab. This is where i need to locate the storage:
+
+Main proxmox server, one disk for OS, one for VM's, and rest for storage to nextcloud immich etc
+
+Raspberry pi, restic docker backups, i have a 2tb usb-c drive for this
+
+Proxmox backup server, one disk for OS, rest for backups
+
+The disks i have are these:
+
+3x 1TB M.2 NVMe SSDs
+
+3x 1TB HDDs
+
+1x 2TB USB-C SSD (for Raspberry Pi)
+
+1x 2TB HDD
+
+3x 250gb ssd's
+
+1x 525gb ssd
+
+The m.2's, and the 2tb hdd's are in pretty good conditions. And the others are in fine conditions. When it comes to using RAID, i dont think i care that much other than for the disks that are in fine condition.
+
+Anyone have any good ideas on how to sort this out?
+
+Top 1 comments:
+Comment 1:
+  Author: JSouthGB
+  Comment: I'm not 100% sure what information you're looking to receive. I'd use only SSDs for OS/VMs. Which disk size to assign for each will vary based on what type of VMs (and number of VMs) you'll be running and their disk size requirements.
+
+As far as a RAID solution, considering the varying sizes of the disks, mergerfs/snap raid may be of interest to you.
+  Score: 0
+  Created UTC: 2024-07-20 16:47:50
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,148 @@
+Post Title: Immich introduces licensing options to support the development of the software
+Author: altran1502
+Score: 57
+URL: https://www.reddit.com/r/selfhosted/comments/1e6hsn4/immich_introduces_licensing_options_to_support/
+Number of comments: 193
+Created UTC: 2024-07-18 18:04:35
+
+Post Content:
+Hello everybody,
+
+Firstly, on behalf of the Immich team, I'd like to thank everybody for your continuous support of Immich since the very first day! Your contributions, encouragement, and community engagement have helped bring Immich to its current state. The team and I are forever grateful for that.
+
+Since our [last announcement of the core team joining FUTO to work on Immich full-time](https://immich.app/blog/2024/immich-core-team-goes-fulltime), **one of the goals of our new position is to foster a healthy relationship between the developers and the users. We believe that this enables us to create great software, establish transparent policies and build trust.**
+
+We want to build a great software application that brings value to you and your loved ones' lives. We are not using you as a product, i.e., selling or tracking your data. We are not putting annoying ads into our software. We respect your privacy. We want to be compensated for the hard work we put in to build Immich.
+
+With those notes, we have enabled a way for you to financially support the continued development of Immich, ensuring the software can move forward and will be maintained, by offering a lifetime license of the software. We think if you like and use software, you should pay for it, but *we're never going to force anyone to pay or try to limit Immich for those who don't.*
+
+There are two types of licenses that you can choose to purchase: **Server License** and **Individual License**.
+
+# Server License
+
+This is a lifetime license costing **$99.99**. The license is applied to the whole server. You and all users that use your server are licensed.
+
+# Individual License
+
+This is a lifetime license costing **$24.99**. The license is applied to a single user, and can be used on any server they choose to connect to.
+
+You can purchase the license on [our page - https://buy.immich.app](https://buy.immich.app).
+
+Starting with release [`v1.109.0`](https://github.com/immich-app/immich/releases/tag/v1.109.0) you can purchase and enter your purchased license key directly in the app.
+
+# Thank you
+
+Thank you again for your support, this will help create a strong foundation and stability for the Immich team to continue developing and maintaining the project that you love to use.
+
+Cheers! 🎉
+
+Immich team
+
+# FAQ
+
+# 1. Where can I purchase a license?
+
+There are several places where you can purchase the license from [https://buy.immich.app](https://buy.immich.app) or directly in the web app.
+
+# 2. Do I need both Individual License and Server License?
+
+No,
+
+If you are the admin and the sole user, or your instance has less than a total of 4 users, you can buy the **Individual License** for each user.
+
+If your instance has more than 4 users, it is more cost-effective to buy the **Server License**, which will license all the users on your instance.
+
+# 3. What do I do if I don't pay?
+
+You can continue using Immich without any restriction
+
+# 4. Will there be any paywalled features?
+
+No, there will never be any paywalled features.
+
+# 5. Where can I get support regarding payment issues?
+
+You can email us with your `orderId` and your email address [`billing@futo.org`](mailto:billing@futo.org) or on our Discord server.
+
+Top 7 comments:
+Comment 1:
+  Author: NeaZerros
+  Comment: I have a question: why call it a "license" if it's 1) not required and 2) doesn't unlock any previously locked feature?
+
+I'm all for having a way to support the project, but the terminology seems a bit weird...
+  Score: 302
+  Created UTC: 2024-07-18 18:23:39
+
+Comment 2:
+  Author: kondorb
+  Comment: I’m kinda worried that this really sounds like they may pull the rug out in the future.
+  Score: 146
+  Created UTC: 2024-07-18 19:05:09
+
+Comment 3:
+  Author: PlannedObsolescence_
+  Comment: FUTO has that (bad IMO) terminology of having a license or not, with no change in features, and also having an option to say 'I already paid' in their own developed apps. But they don't use the AGPL, these are fresh projects built with custom licenses. There's 
+[Grayjay Core License 1.0](https://gitlab.futo.org/videostreaming/grayjay/-/blob/master/LICENSE.md) and [
+FUTO Source First License 1.0](https://gitlab.futo.org/keyboard/latinime/-/blob/master/LICENSE.md).
+
+I understand you want to move away from the term donation - but jumping straight into 'licensed' or 'unlicensed' will not end well for you. In a project that already has a community and contributors *before* FUTO acquired the assets of Immich, this is just begging for a fork.
+
+Your edit of: 
+
+&gt; You can continue using Immich for an unlimited trial period.
+
+to 
+
+&gt; You can continue using Immich without any restriction
+
+Still needs updated here:
+https://immich.app/blog/2024/immich-licensing/#3-what-do-i-do-if-i-dont-pay
+  Score: 56
+  Created UTC: 2024-07-18 21:04:09
+
+Comment 4:
+  Author: MiakiCho
+  Comment: Yes, every software developer should be able to make money. But you have a great strategy. This is where I like the strategy of Nabucasa who still keeps the product free but created an additional subscription service to fund the project. A lot of people, though they don't need the subscription and happily self-host, do get the subscription.
+
+The money I am paying that a free user doesn't should add some value to me. Here are some ways to add value. 
+
+- Support to set up immich.
+- Priority for feature requests or buy reports.
+- Name of people who contributed (in some web link). 
+- A wholesome package of Immich hosted externally (priced based on storage, like Google Photos but focused on privacy). 
+
+
+The above strategy to call users who are not paying as they are on a free trial seems a bit absurd to me. This may result in a fork.
+  Score: 71
+  Created UTC: 2024-07-18 20:39:52
+
+Comment 5:
+  Author: tyros
+  Comment: So it begins...
+
+I get you guys wanting to be compensated for your hard work, but don't call it a license if there's no difference between the free version and "licensed" version.
+
+What's wrong with just putting up a "Donate" button? People will happily donate, we generally like the product.
+  Score: 94
+  Created UTC: 2024-07-18 19:51:27
+
+Comment 6:
+  Author: ozzeruk82
+  Comment: This is a PR disaster and sad because it didn't need to be that way.
+
+The word "licence" is the root of the problem.
+
+They should have gone with 'Supporters Badge', $25 and you get your name permanently in the credits and a special tag in the discussion forum. $100 'Corporate Badge', the same but for a group/company/whatever.
+
+Same result, completely different feeling and mood.
+  Score: 26
+  Created UTC: 2024-07-19 00:28:08
+
+Comment 7:
+  Author: AnApexBread
+  Comment: cover different plant north flowery tan deranged alive enter rinse
+
+ *This post was mass deleted and anonymized with [Redact](https://redact.dev)*
+  Score: 10
+  Created UTC: 2024-07-19 01:26:39
+

@@ -1,0 +1,22 @@
+Post Title: Any self hosted apps to help with eBay listings etc?
+Author: elliottmarter
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1e9aqlp/any_self_hosted_apps_to_help_with_ebay_listings/
+Number of comments: 2
+Created UTC: 2024-07-22 10:18:00
+
+Post Content:
+I do a fair bit of ebaying and there's a plethora of apps out there to help you list in bulk and manage inventory etc.
+
+Is there anything like this that's been developed open source and self hosted?
+
+Inventory management seems kinda helpful but it isn't really targeted at buying and selling...that's more to do with simply cataloging everything you own.
+
+Top 1 comments:
+Comment 1:
+  Author: theGdoubleOdees
+  Comment: Maybe dolibarr?  Still not sure on the exact use case though
+  Score: 1
+  Created UTC: 2024-07-23 10:19:21
+
+Note: This post has only 1 comments at the time of scraping.

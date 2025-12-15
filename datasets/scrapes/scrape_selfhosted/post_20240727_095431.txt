@@ -1,0 +1,40 @@
+Post Title: Self hosting game server home danger
+Author: Business_Cow_7916
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7n9l9/self_hosting_game_server_home_danger/
+Number of comments: 4
+Created UTC: 2024-07-20 04:24:07
+
+Post Content:
+I tried some cloud VM on oracle but my game don't run on their CPU. If I want to try for fun to open ports and port forwarding my router to make a public Astroneer server with my home wifi. Is it dangerous? I don't think I would be able to start with the Vlan and advanced security things. I might just open some ports and install a server with AMP. I don't know what I am doing I might get hacked right? I don't want hackers to get into my home devices or online banking or see my personal data etc. maybe this is bad idea?
+
+Top 4 comments:
+Comment 1:
+  Author: FuriousRageSE
+  Comment: Hosting game servers over WiFi will at best lag a lot, more probably cause a lot of disconnects for the players
+  Score: 3
+  Created UTC: 2024-07-20 09:27:45
+
+Comment 2:
+  Author: Business_Cow_7916
+  Comment: Thank
+I will keep trying cloud services
+  Score: 1
+  Created UTC: 2024-07-20 16:07:16
+
+Comment 3:
+  Author: lesigh
+  Comment: I've been running game servers from home for 20 years. It's safe
+  Score: 1
+  Created UTC: 2024-07-20 04:55:13
+
+Comment 4:
+  Author: lospantaloonz
+  Comment: if your game doesn't run on their cpu, you need to use an instance type with a supported cpu.
+for example, if you're running a binary built for x64, you need an x64 cpu on the instance type.
+
+same with a binary built for aarch64, you need an arm cpu.
+  Score: 2
+  Created UTC: 2024-07-20 19:41:52
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,44 @@
+Post Title: Show-off: First setup
+Author: abhi8569
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1eb1obi/showoff_first_setup/
+Number of comments: 8
+Created UTC: 2024-07-24 13:36:49
+
+Post Content:
+Finally after almost 9 months, I have settled ( :-D ) with my setup. I am using Asustor Flashstor 6 with 4x4TB NVME SSDs in RAID 5 setup. I have  a Mikrotik router in front of my NAS where I am running wireguard VPN server to access my NAS when I am not in my home network. These are the two devices that I am using right now. I have learned A LOT during this process and will continue to do so. Thank you to community for all the help :-)
+
+ As part of next step I am planning to buy some low powered mini PCs where I'll tinker with Proxmos/Kubernetes. My goal is to use Asustor only as a NAS, and all the services will be offloaded to dedicated compute unit: Mini PC, raspberry PI or any other low energy demanding compute unit.
+
+
+
+https://preview.redd.it/cl4u30hpyged1.png?width=3030&amp;format=png&amp;auto=webp&amp;s=f75e675790736dbcd7ac09a3ec558be1185edafc
+
+https://preview.redd.it/umbhg98xyged1.png?width=3097&amp;format=png&amp;auto=webp&amp;s=2d580b35187e2a83f5ffe3c33bec8d3af51523ee
+
+https://preview.redd.it/dh9zs9j3zged1.png?width=2419&amp;format=png&amp;auto=webp&amp;s=983905d1347bdbcf6f6fcf0dcef3ada5ada162aa
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: Suspicious-Data-4084
+  Comment: I’m jealous! How are you liking what’s up docker? I’m thinking about giving it a go
+  Score: 1
+  Created UTC: 2024-07-24 14:27:43
+
+Comment 2:
+  Author: jojokispotta
+  Comment: Do you have cgNAT type of network? I need to connect my home network when I'm outside. Currently using tailscale and it works. 
+
+But since it is essentially wireguard underneath, I wanted to know if one can selfhost that and get by. I don't want to rely on someone else.
+  Score: 1
+  Created UTC: 2024-07-24 15:27:20
+
+Comment 3:
+  Author: Zerebos
+  Comment: What is your webssh tool?
+  Score: 1
+  Created UTC: 2024-07-24 18:48:23
+
+Note: This post has only 3 comments at the time of scraping.

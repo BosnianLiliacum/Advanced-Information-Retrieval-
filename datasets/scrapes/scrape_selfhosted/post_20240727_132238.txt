@@ -1,0 +1,55 @@
+Post Title: Audio streaming with Android Auto client
+Author: David-Rowley
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e5fezi/audio_streaming_with_android_auto_client/
+Number of comments: 8
+Created UTC: 2024-07-17 11:04:28
+
+Post Content:
+I previously used a USB stick in my car to hold (some of) my vast quantity of audio, which we listen to on (very) long drives through Europe.  But my new car's Android Auto disables the USB ports so I have to use my phone, one way or another.  I can't get a lot on the phone, which doesn't have an SD slot (Google Pixel).
+
+I'm looking for a combination of a hosting platform at home coupled with an Android client which works with Android Auto.  I've looked at the list of Audio Streaming solutions, but there are so many I don't know where to start in relation to the client.  I have a spare Raspberry Pi which I can connect to my router, and I have a large NAS which could also serve, although I'm nervous about allowing Internet traffic through to it.
+
+We mostly listen to recordings of BBC radio drama and comedy, which I have renamed and sorted into series order within hierarchical folders.  I just want to be able to play a drama series (for example), from a folder, in alphanumeric order of filename.  I'm not interested in MP3 tags, equalisation and other features of clients.  I'm very happy to play with various solutions but I'd be happy to get some ideas about where to start.
+
+Thanks
+
+Top 5 comments:
+Comment 1:
+  Author: Archmage_Gaming
+  Comment: I use Navidrome and Symfonium (I haven't used the Android Auto features but I know they exist).
+
+As for receiving the music over the internet, your best bet is probably Wireguard. You can create a secure VPN to connect your phone and it'll act as if it's on the same LAN as the Navidrome instance. I've been using it for years and the only time it's failed is when my free domain provider went down for a few hours.
+  Score: 7
+  Created UTC: 2024-07-17 12:35:57
+
+Comment 2:
+  Author: Conscious-Fault-8800
+  Comment: Another recommendation for Navidrome (Server side) + Symfonium (Android Client)
+
+There are lots of clients for Android that work with navidrome (Tempo, ultrasonic, dsub, youamp, substreamer etc.) but i found symfonium the best and most Feature-complete. Android auto is also implemented well.
+Well worth the one time payment for the App
+  Score: 5
+  Created UTC: 2024-07-17 15:03:03
+
+Comment 3:
+  Author: Salopridraptor
+  Comment: As others said, best combo, navidrome+symfonium , use it daily on my car and it's perfect!
+  Score: 3
+  Created UTC: 2024-07-17 15:33:27
+
+Comment 4:
+  Author: honyme
+  Comment: You can use Plex server + Plexamp for your mobile
+
+[https://www.plex.tv/en/plexamp/](https://www.plex.tv/en/plexamp/)
+  Score: 5
+  Created UTC: 2024-07-17 11:41:38
+
+Comment 5:
+  Author: FaptainCrunch7
+  Comment: Gonic + Tempo
+  Score: 0
+  Created UTC: 2024-07-17 20:20:51
+
+Note: This post has only 5 comments at the time of scraping.

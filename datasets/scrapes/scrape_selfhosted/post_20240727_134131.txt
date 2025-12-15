@@ -1,0 +1,37 @@
+Post Title: Kasm and Authentik "Internal Error"
+Author: DCvito
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e44md1/kasm_and_authentik_internal_error/
+Number of comments: 3
+Created UTC: 2024-07-15 20:02:43
+
+Post Content:
+I've been trying to get kasm to authenticate through Authentik using  oidc. I've set everything up following the docs. But when I try to log in to kasm after clicking the Authentik button all I get in an "Internal Error"message. Logs on either server don't seem to show anything either. 
+
+Has anyone sense seen or had luck with this? 
+
+Thanks! 
+
+Top 2 comments:
+Comment 1:
+  Author: Archgeus
+  Comment: Currently there's an open issue [https://github.com/goauthentik/authentik/issues/8957](https://github.com/goauthentik/authentik/issues/8957)
+
+  
+Try to set SAML following this guide, maybe you will get some luck.
+
+[https://mafyuh.com/posts/how-to-authenticate-kasm-via-authentik/](https://mafyuh.com/posts/how-to-authenticate-kasm-via-authentik/)
+  Score: 2
+  Created UTC: 2024-07-16 03:24:40
+
+Comment 2:
+  Author: thekrautboy
+  Comment: https://github.com/kasmtech/workspaces-issues/issues
+
+https://github.com/goauthentik/authentik/issues
+
+https://goauthentik.io/discord
+  Score: 1
+  Created UTC: 2024-07-15 20:32:57
+
+Note: This post has only 2 comments at the time of scraping.

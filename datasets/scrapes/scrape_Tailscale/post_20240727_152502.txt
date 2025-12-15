@@ -1,0 +1,24 @@
+Post Title: I'm going nutz!!! I can't get the Home Assistant Companion app and Tailscale to work with MagicDNS. Followed your video and still doesn't work the way it seems to show in the video
+Author: phreaknes
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1ebkax1/im_going_nutz_i_cant_get_the_home_assistant/
+Number of comments: 2
+Created UTC: 2024-07-25 02:56:20
+
+Post Content:
+Ok, I have my HA sever in a VM with the HA Tailscale addon. I followed this video https://www.youtube.com/watch?v=vDxmtRByXDY 
+
+When I start the tailscale app on my android phone, I can go to HomeAssistant.tailNNNNN.ts.net:8123 on firefox, Edge or chrome and it will open my HA servers login screen, I can go to the tailscale IPv4 with port and it works also. So I know that tailscale is able to talk to HA and it's working when the app is open and connected. 
+
+Now my understanding is that I should be able to go to my MagicDNS HomeAssistant.tailNNNNN.ts.net:8123 URL address on what ever supported browser and it should open up a connection to my HA sever without the app being on. Or am I mis-understanding the video? Because I can't get HomeAssistant.tailNNNNN.ts.net:8123 to work outside of the app. Yes I have the proxy setup in HA, no I don't have it configured as an exit node, yes I have tailscale proxy turned on and both HTTPs &amp; HTTP fail to connect (https fails when on the app, Http works), yes I have 3 tickets in for over a week and no response. In the video it's not clear if that tailscale is already running on that PC. If it is running you should show / mention that, if the tailscale app isn't running nor a tunnel already connected on the videos demo PC and the MagicDNS is working then what am I missing? 
+
+Am I thinking of this wrong and I always have to have the tailscale app running in order to get the HA companion app to work? if so I have to move on to another option because having the app on all the time is a battery killer and i'm not looking to do a bunch of Android taskers.
+
+Top 1 comments:
+Comment 1:
+  Author: Woodcat64
+  Comment: You must run the tailscale app to be able to join your tailnet and access HA when you are not on your home network.
+  Score: 6
+  Created UTC: 2024-07-25 04:08:25
+
+Note: This post has only 1 comments at the time of scraping.

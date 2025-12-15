@@ -1,0 +1,38 @@
+Post Title: Hosting Widevine L1 (DRM) Video
+Author: OriGumy
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9tkis/hosting_widevine_l1_drm_video/
+Number of comments: 3
+Created UTC: 2024-07-23 00:00:36
+
+Post Content:
+Hey there!
+
+I am now using VDOCipher and their absurd prices, I didn't know self-hosting was an option.
+
+I am not talking about strictly self-hosting, AWS is enough.
+
+1) How do I get the keys? Widevine website is super vague and doesn't point anywhere for getting started, or am I missing something?
+
+2) How how do I encrypt the video? is it a one time thing (ergo S3 sufficient), or per-view encryption? GPT points me towards Shaka Packager, is it fine?
+
+3) How can I ensure it is L1 proper and doesn't fall back to some L1 without me knowing about it?
+
+Thanks a lot.
+
+
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: noodleswind
+  Comment: 1. widevine licenses are issued by google. you can either get 1 through them or use 3rd party.
+
+2. shaka packager is fine.
+
+3. IDK about this
+  Score: 1
+  Created UTC: 2024-07-23 00:29:31
+
+Note: This post has only 1 comments at the time of scraping.

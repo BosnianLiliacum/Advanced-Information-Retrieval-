@@ -1,0 +1,48 @@
+Post Title: Random Plex Movie v1.4
+Author: Parking-Cow4107
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ebszwn/random_plex_movie_v14/
+Number of comments: 3
+Created UTC: 2024-07-25 11:55:21
+
+Post Content:
+Hello, 
+
+I released a new version of the webapp, would be happy to have some testers. Feel free to open an issue if you find any bugs, or something does not work or have any other ideas.   
+[https://github.com/sahara101/Random-Plex-Movie](https://github.com/sahara101/Random-Plex-Movie)
+
+# Functions
+
+* Fetch Random unwatched movies from Plex server
+* Filter by genre, year, and/or rating
+* See movie info
+* URLs to TMDB, Trakt and IMDB
+* Trailers on Youtube
+* Play movie on above tested players
+* Turn on Apple TV and LGTV ((webOS) directly in Plex App)
+* PWA support
+
+# Tested Players
+
+* Apple TV - with turn on function
+* Plex HTPC MacOS Client
+* iPhone
+* Plex for LGTV (WebOS) - with turn on function
+* Xiaomi MI TV Box S (Android)
+
+Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: OnlyNotMatt
+  Comment: Any Jellyfin equivalent?
+  Score: 1
+  Created UTC: 2024-07-25 15:09:21
+
+Comment 2:
+  Author: NationalAd1037
+  Comment: Jellyfin support would be amazing! And perhaps an option to do the same for tv series?
+  Score: 1
+  Created UTC: 2024-07-26 00:38:21
+
+Note: This post has only 2 comments at the time of scraping.

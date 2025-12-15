@@ -1,0 +1,58 @@
+Post Title: Media server software for videos? Not movies or tv?
+Author: hobyvh
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e5xzvd/media_server_software_for_videos_not_movies_or_tv/
+Number of comments: 10
+Created UTC: 2024-07-18 00:25:46
+
+Post Content:
+I've tried Plex and Jellyfin. I've looked at the others that appear on google searches. These seem to be all optimized for serving peoples' collections of commercial films/movies and television shows. They gather metadata of all kinds, section into genres, grab poster art... This is not what I need.
+
+I have a collection of random videos that I'd like to keep organized with tags, choose thumbnail frames, and play back across devices. Little more, no less.
+
+Is there a media server made to do this well?
+
+Top 6 comments:
+Comment 1:
+  Author: HTTP_404_NotFound
+  Comment: Sure, stashapp.
+
+Given, you didn't specify exactly what type of media you had.... going to assume, stashapp is the tool for you.
+
+That being said, you don't have to enable metadata, and tagging on jellyfin..... You can have a library full of just your stuff too.
+  Score: 16
+  Created UTC: 2024-07-18 00:33:12
+
+Comment 2:
+  Author: mitchsurp
+  Comment: I have the same issue and went with Fireshare. It’s a pretty remarkable piece of software for what it is.
+
+https://github.com/ShaneIsrael/fireshare
+  Score: 3
+  Created UTC: 2024-07-18 14:15:12
+
+Comment 3:
+  Author: bufandatl
+  Comment: Sounds more like you didn’t use those tool in the right way. They all do what you want when used correctly.
+  Score: 2
+  Created UTC: 2024-07-18 09:44:59
+
+Comment 4:
+  Author: _______o-o_______
+  Comment: Sounds like Plex Server can already do everything you need it to do. I have a bunch of random videos on my Plex server, and as long as you set your specific library as "Other Videos," it won't auto-sort it into the Movies or TV shows category. I view this library by folder, and I can add tags, select thumbnail frames or upload my own photo, and it plays videos across all of my devices.
+  Score: 2
+  Created UTC: 2024-07-18 00:57:33
+
+Comment 5:
+  Author: jared252016
+  Comment: PhotoPrism supports video and has tagging, even though it's designed for images.
+  Score: 1
+  Created UTC: 2024-07-18 02:48:16
+
+Comment 6:
+  Author: CalibroZero
+  Comment: I’m jumping into this discussion because I had a similar need, and I didn’t want to overload my instances of PLEX and Jellyfin. After some searching, I found a solution: YouTube-style MediaCMS. I hope this can be useful to you.
+  Score: 2
+  Created UTC: 2024-07-18 14:11:56
+
+Note: This post has only 6 comments at the time of scraping.

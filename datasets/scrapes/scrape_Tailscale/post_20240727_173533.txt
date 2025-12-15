@@ -1,0 +1,50 @@
+Post Title: Is there anyway to know if someone hacked or logged into your tailscale?
+Author: 2026GradTime
+Score: 8
+URL: https://www.reddit.com/r/Tailscale/comments/1eal831/is_there_anyway_to_know_if_someone_hacked_or/
+Number of comments: 13
+Created UTC: 2024-07-23 22:33:33
+
+Post Content:
+I was thinking that if someone hacked into my tailscale, then the device would be listed in the Tailscale admin, but how would I know if someone did hack into it if that is not the case?
+
+Top 6 comments:
+Comment 1:
+  Author: godch01
+  Comment: Add MFA to your login account
+  Score: 14
+  Created UTC: 2024-07-23 22:38:30
+
+Comment 2:
+  Author: im_thatoneguy
+  Comment: https://tailscale.com/kb/1226/tailnet-lock
+  Score: 9
+  Created UTC: 2024-07-24 04:24:41
+
+Comment 3:
+  Author: sachmonz
+  Comment: Check your devices page..
+  Score: 4
+  Created UTC: 2024-07-24 04:02:53
+
+Comment 4:
+  Author: bryantech
+  Comment: I solemnly swear I did not do that.
+  Score: 2
+  Created UTC: 2024-07-24 08:32:05
+
+Comment 5:
+  Author: souamtech
+  Comment: You need to use MFA on your account. But truly you are more at risk if having one of you devices compromised from misconfiguration or being exposed to the Internet. You need to monitor logs and make sure your devices are locked down between each other and only expose what's required.
+  Score: 1
+  Created UTC: 2024-07-24 14:35:12
+
+Comment 6:
+  Author: godch01
+  Comment: They could send a commando unit to your house and grab all your computers. At some point you have to decide how important your data is. 
+
+My view is that unless someone really wants MY DATA I'm safe.
+  Score: 1
+  Created UTC: 2024-07-23 23:09:55
+
+Note: This post has only 6 comments at the time of scraping.

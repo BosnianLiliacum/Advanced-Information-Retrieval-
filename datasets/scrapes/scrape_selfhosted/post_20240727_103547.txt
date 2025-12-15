@@ -1,0 +1,44 @@
+Post Title: Looking for a new Dashboard/Homepage
+Author: MeYaj1111
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e54ers/looking_for_a_new_dashboardhomepage/
+Number of comments: 13
+Created UTC: 2024-07-17 00:23:12
+
+Post Content:
+I currently use "Homepage" as my homepage/dashboard and overall I like it but I have a few gripes with it that they devs have not been willing to address so I'm looking for something else.
+
+I mostly use it for monitoring resource usage on two ubuntu servers as well as activity on two emby servers and two plex servers (dont ask, I have a lot of users and these apps have dumb/arbitrary limitations as well requiring me to have 2 of each but thats for another thread)
+
+I'm not sure if this exists, but I'd like something that is configurable and customizable using a gui/web interface as opposed to manually editing config files.
+
+Other requirements are I need to be able to see how many active streams on each of my emby/plex servers as well as cpu, memory, disk and network utilization on each of my ubuntu servers.
+
+If anyone has any suggestions on alternatives to look at that would be appreciated.
+
+Top 4 comments:
+Comment 1:
+  Author: PoProstuWitold
+  Comment: [Homarr](https://github.com/ajnart/homarr). You can add widgets from Dashdot to monitor resources usage and also widgets from Jellyfin/Plex(also Emby I guess?). Everything is configurable via WebUI and optionally password protected.
+  Score: 3
+  Created UTC: 2024-07-17 00:31:16
+
+Comment 2:
+  Author: Vyerni11
+  Comment: What are your gripes that the devs aren't willing to assist  with?
+  Score: 1
+  Created UTC: 2024-07-17 11:09:42
+
+Comment 3:
+  Author: EvelinaSpafford31
+  Comment: For monitoring, you might want to try out Grafana. It's highly customizable and has a great web interface for creating dashboards. On a different note, if you ever need an email service provider with advanced analytics and no subscription fees, I've been using beehiiv and it's been fantastic!
+  Score: 1
+  Created UTC: 2024-07-18 07:08:07
+
+Comment 4:
+  Author: lugovsky
+  Comment: If you ever decide to build something custom, you can try [self-hosted UI Bakery](https://uibakery.io/on-premise-ui-bakery). You could either set up some services on your servers that provide monitoring data via HTTP or connect to your servers using [SSH integration](https://uibakery.io/integrations/ssh) and get raw data. Afterward, you can pass this data to your UI Bakery components to present it in a needed way.
+  Score: 1
+  Created UTC: 2024-07-18 08:50:56
+
+Note: This post has only 4 comments at the time of scraping.

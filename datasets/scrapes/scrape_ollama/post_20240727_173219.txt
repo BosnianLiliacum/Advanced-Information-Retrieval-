@@ -1,0 +1,24 @@
+Post Title: Ollama not updating when installed with snap.
+Author: MeandahOOO
+Score: 0
+URL: https://www.reddit.com/r/ollama/comments/1ebr0ia/ollama_not_updating_when_installed_with_snap/
+Number of comments: 3
+Created UTC: 2024-07-25 09:56:38
+
+Post Content:
+I have ollama installed using snap on Ubuntu 22. ollama -v gives version 0.0.0. Snap info ollama shows 0.1.32, however snap refresh ollama says there is no update even though I know we are at 0.1.49.
+
+Has anyone run into this with snap? How do I get ollama to update using it? I would like to try Gemma2.
+
+thanks
+
+Top 1 comments:
+Comment 1:
+  Author: PavelPivovarov
+  Comment: We actually nearly at 0.3.0 now. I think it's snap package maintainers are not keeping up with ollama updates.
+
+Try switching to brew package - it's pretty good and currently at 0.2.8.
+  Score: 1
+  Created UTC: 2024-07-25 12:33:19
+
+Note: This post has only 1 comments at the time of scraping.

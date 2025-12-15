@@ -1,0 +1,42 @@
+Post Title: Second server build advice
+Author: 24jacz
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed81gw/second_server_build_advice/
+Number of comments: 4
+Created UTC: 2024-07-27 04:37:58
+
+Post Content:
+Hey everyone!
+
+So I’m thinking about upgrading my server or at least getting newer parts and would love to hear peoples advice on a cost effective but also obtainable build.
+
+My current server:
+- Chinese dual socket x99 motherboard(sketchy I know)
+
+- 2x Xeon E5-2680  
+
+- 6 HDDs totalling 77 TB of useable storage 
+
+- 128 GB of RAM ECC
+
+I built this at the start of COVID and didn’t know much and I’ve been happy with it but I’m wondering really if you think moving to a newer architecture would be worth while? I’ve had it running for about 3-4 years now and worried end of life is near. I got everything I wanted and more from it but it’s starting to feel like the time to move on. It was a good first build and I learned a lot! The CPUs were already used got them off EBay same with the RAM. I’m also running 6 drives in RAID0(LMAO I know!)
+
+I like EPYC a lot for no other reason really besides the clock speeds and all my CPUs are AMD in my desktops lol. But it seems like they are extremely expensive. Are they worth it? I’m fine with buying used.
+
+I just want to start fresh with newer hardware I can feel confident knowing won’t fail on me at any point. 
+
+
+What y’all recommend?
+
+Are used Xeons still the way to go?
+
+Edit: I’m using it Plex primarily, occasionally game server like Minecraft or Rust and the whole rr sweet plus dashboard. Pretty regular self hosting stuff nothing crazy
+
+Top 1 comments:
+Comment 1:
+  Author: gardenmwm
+  Comment: What are you wanting to host with it? I mean I host a ton of stuff with 3 3070 mini dell pc’s that each have 16gb of ram each and I haven’t found it to be a problem. The storage, I’d recommend having a separate dedicated storage system or nas and just get a terramaster and throw truenas on it.
+  Score: 2
+  Created UTC: 2024-07-27 05:00:00
+
+Note: This post has only 1 comments at the time of scraping.

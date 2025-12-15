@@ -1,0 +1,22 @@
+Post Title: Caddy, No-IP dyndns and normal domain
+Author: TeecoOceet123
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e7cnql/caddy_noip_dyndns_and_normal_domain/
+Number of comments: 1
+Created UTC: 2024-07-19 19:48:38
+
+Post Content:
+I want to setup a webserver with https support via caddy unfortunately i don't have static public ip. So i use No-IP for dynamic dns. Is there any way to point my normal \`www.example.com\` to my no-ip dns \`example.ddns.net\` but with working https. I tried this before but caddy threw a error that my domain needs A type record and it can't solve ACME challenge
+
+Top 1 comments:
+Comment 1:
+  Author: chrisoboe
+  Comment: If you own a domain you can skip the dyndns completely.
+
+Just update your domain ip to your current ip with your favourite tool.
+
+Dyndns is only needed if one doesn't want to buy a own domain.
+  Score: 1
+  Created UTC: 2024-07-19 21:51:41
+
+Note: This post has only 1 comments at the time of scraping.

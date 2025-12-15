@@ -1,0 +1,77 @@
+Post Title: How easily can you rebuild your selfhosted stack?
+Author: alyflex
+Score: 88
+URL: https://www.reddit.com/r/selfhosted/comments/1ebq1s8/how_easily_can_you_rebuild_your_selfhosted_stack/
+Number of comments: 105
+Created UTC: 2024-07-25 08:49:40
+
+Post Content:
+I bought a server this year, installed truenas and started the journey into selfhosting, and I am extremely happy with my journey thus far.
+However, one big point of concern is that I haven't set things up in such a way that I can easily rebuild everything.
+
+I would love to have every projects configuration file somehow stored in github or similar such that if my servers main disk were to crash tomorrow I would be able to install everything again with just a few command, but I have no idea how to actually get that set up.
+
+So how have you guys done this? and are you happy with your setups?
+I have found some advanced guides from TechnoTim on how to do it for a kubernetes cluster (using flux, gitops, ansible) but I think that is a bit overkill for my small single server, and I figured I should start with something simpler, probably using docker compose or something.
+
+Top 7 comments:
+Comment 1:
+  Author: Simon-RedditAccount
+  Comment: Ansible is what you looking for for full automation.
+
+Docker-Compose is the bare minimum setup with maybe the best results-to-time-spent ratio.
+  Score: 139
+  Created UTC: 2024-07-25 09:03:10
+
+Comment 2:
+  Author: Vyerni11
+  Comment: I can fully restore my entire operation in a few days from a complete start. My self hosted stack can be restored/rebuilt onto another machine from local backup within about 4 hours
+
+Tested every 6 months or so
+  Score: 38
+  Created UTC: 2024-07-25 09:20:55
+
+Comment 3:
+  Author: NatoBoram
+  Comment: * My router uses OpenWRT and every changed setting from the factory defaults is recorded in a script. When I need to flash the next version, I wipe the data, run the script and it's back in business in 5 minutes.
+* My entire homelab is described in a few files, such as `compose.yaml` and `Caddyfile`, available on GitHub at https://github.com/NatoBoram/docker-compose/blob/main/helion/compose.yaml
+
+So if I have to reinstall my server, I just have to install Docker, fill the env vars and it's back in business
+  Score: 19
+  Created UTC: 2024-07-25 10:13:13
+
+Comment 4:
+  Author: Developer_Akash
+  Comment: [I do it with Ansible](https://akashrajpurohit.com/blog/ansible-infrastructure-as-a-code-for-building-up-my-homelab/)
+  Score: 12
+  Created UTC: 2024-07-25 12:45:25
+
+Comment 5:
+  Author: CompetitiveYam6697
+  Comment: Mine's a nixos flake.
+
+If my house we're to burn down, I'd probably be back up and running in an hour or so.
+Assuming I have replicated the hardware setup, I can run nixos-install on all of my hosts with nixos-anywhere, then restore backups from rsync.net.
+
+Oh and restoring from backups does not count as "being back" I have a ton of stuff. Maybe like a day if backups are to be restored.
+  Score: 7
+  Created UTC: 2024-07-25 17:38:17
+
+Comment 6:
+  Author: HearthCore
+  Comment: I'd need like 3 days for everything to function properly with the same grade hardware when doing it manually. mind you not full 24 hour days, more like 3 hour days with my notes.
+
+Since its all backed up though..  
+About 20 minutes for a new ProxMox host, mounts, backups (waittime), correcting IPs and OAUTH, setup Tailscaile with subnet routing and done.
+  Score: 6
+  Created UTC: 2024-07-25 09:46:58
+
+Comment 7:
+  Author: TigerDatnoid
+  Comment: everything running on proxmox.  
+Proxmox guests are backed up to a remote machine.  
+It would be stressful day, and expensive, if my proxmox host blew up   
+but achievable
+  Score: 5
+  Created UTC: 2024-07-25 10:51:54
+

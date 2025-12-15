@@ -1,0 +1,79 @@
+Post Title: What is the standard way for deploying a java app on a server?
+Author: nathan_rye44
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e70jz7/what_is_the_standard_way_for_deploying_a_java_app/
+Number of comments: 18
+Created UTC: 2024-07-19 10:33:37
+
+Post Content:
+My questions are:
+
+* What OS is mostly used?
+* Is Tomcat used on its own or is it used with an http server like Apache 2?
+
+Thanks
+
+Top 7 comments:
+Comment 1:
+  Author: l86rj
+  Comment: There's no "standard way". If your app is really for servers (no GUI), I suggest you use docker to bundle both the app and the jvm in the same image. You can also have Tomcat and Apache inside it too. 
+Besides the benefit of having everything together, using docker images will also allow you to deploy your app in any OS with a docker installation.
+  Score: 22
+  Created UTC: 2024-07-19 11:07:06
+
+Comment 2:
+  Author: joost00719
+  Comment: I would try Docker if you have Docker knowledge. It's really useful and doesn't get your system bloated, because it's all contained in one or more containers which can be removed or updated at will.
+  Score: 7
+  Created UTC: 2024-07-19 11:15:55
+
+Comment 3:
+  Author: DMenace83
+  Comment: Modern Java servers don't really use Tomcat anymore. It's another layer where things can go wrong. I haven't worked with Java in a while, but I'm sure there are frameworks that spin up a server internally without needing Tomcat.
+
+Then, depending on if you need things like load balancing, you can put an HTTP server in front of it. Apache 2 works if you are familiar with it, but most people use something more lightweight these days, like nginx.
+  Score: 6
+  Created UTC: 2024-07-19 11:35:39
+
+Comment 4:
+  Author: blackbirdone1
+  Comment: standard? slap a jar into the file system with a apache2 on the server and embedded tomcat and ship it.
+
+you want more ?
+
+  
+if you want a perfect solution use docker or LXD to ship it as a "package" vbut thats a lot of stuff that can go wrong and you need the skills and the infrastructure around it to build it, a lot of hassle
+
+  
+if you want the premium solution with teams that managed it ship it on kubernetes with containers but thats only worth if you have teams that have the skills and money to do so.
+
+  
+mostly a spring boot with a apache works fine and is enougth, maybe a loadbalancer and two mirros if you really need thousands of user minute.
+
+if netflix could go to a 10 billion $ company with a java monolith, its enougth for most people (even if they think they need more)
+
+  
+what you can expect it runs on linux mostly ubuntu or debian, in docker environments the image base mostly temurin? or how it calls i forgott
+  Score: 4
+  Created UTC: 2024-07-19 17:16:05
+
+Comment 5:
+  Author: vikrant82
+  Comment: Depends if its a web app or a regular application. If it's a web app you need a webserver.
+  Score: 1
+  Created UTC: 2024-07-19 12:23:01
+
+Comment 6:
+  Author: TheFluffiestRedditor
+  Comment: There has unfortunately never been a standard way of deploying Java apps.  I mean never - going back to the early 2000s when Java apps were everywhere, we had no standards then either.  The Java world is a bit shitty like that.
+
+If the application(s) you're running have recommendations, use them.  Otherwise create an environment which works for you, that you understand and can diagnose when it has issues.  That can be just wrapping the java app in a systemd unit, or bundling it inside Tomcat (or other java application server).
+  Score: 1
+  Created UTC: 2024-07-19 13:41:24
+
+Comment 7:
+  Author: AutomaticDriver5882
+  Comment: I run it in docker.
+  Score: 1
+  Created UTC: 2024-07-19 19:11:32
+

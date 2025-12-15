@@ -1,0 +1,72 @@
+Post Title: Would you use an automated authelia setup gui? (Photos for mockup representation)
+Author: BelugaBilliam
+Score: 39
+URL: https://www.reddit.com/gallery/1e9vr0c
+Number of comments: 15
+Created UTC: 2024-07-23 01:43:48
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: BelugaBilliam
+  Comment: I have a script on github (https://github.com/lordzeuss/auto-authelia) where I use bash scripts to guide the user to being able to quickly spin up authelia.
+
+I personally am learning rust, and built a gui example as something that I'm looking into adding to the project. Is this all that useful, or do you all prefer just a simple script?
+
+The gui is by no means complete, as I want to add more features to it (for example - adding hashing capabilities built-in so you don't have to do it externally at a website) but it's a proof of concept, and just a small project for myself. It's also not part of the main report yet - need to complete it. 
+
+Those of you who may use my project for setting up authelia, would you use a gui, or just stick to the good 'ol bash script(s)?
+
+Thanks!
+  Score: 13
+  Created UTC: 2024-07-23 01:46:57
+
+Comment 2:
+  Author: Dante_Avalon
+  Comment: The problem is - GUI that is created by 3rd party for security app is... well. Even if you don't have any malicious intent - it doesn't mean that your app wouldn't introduce additional security vulnerabilities
+  Score: 15
+  Created UTC: 2024-07-23 08:39:07
+
+Comment 3:
+  Author: GrumpyGander
+  Comment: Authelia is on my list to add. I didn’t know about these scripts but I would absolutely use a GUI tool to help configure. For me it’s another tool to help with my learning, especially if the GUI spits out a config file of sorts that I could compare to my own or to the official docs as I attempt to build my own. I imagine it would also be useful if someone was attempting to troubleshoot. 
+
+I setup Caddy yesterday and while their docs are great I stumbled on where to put the tls line for cloud flare api for my reverse proxy (before, after, in, etc). If there were a GUI that I could have configured with those settings and compared to my own that I was working on it might have helped guide me. 
+
+As an aside, after some trial and error I did get it to work and damn it felt good seeing my site pop up on the web with a real domain.
+  Score: 9
+  Created UTC: 2024-07-23 03:49:36
+
+Comment 4:
+  Author: rrrmmmrrrmmm
+  Comment: It depends. I'd love to have something that just generates the configuration with comments so that I could review it beforehand.
+
+
+Maybe even for different IDM/OAuth solutions as I migrated from Authelia to [Kanidm](https://kanidm.com/).
+  Score: 5
+  Created UTC: 2024-07-23 10:50:55
+
+Comment 5:
+  Author: OMGItsCheezWTF
+  Comment: No, definitely not. I wouldn't trust it to get edge cases right and I would be concerned that the result wouldn't necessarily be something I could bring into my config as code pipelines which automate my stacks.
+  Score: 8
+  Created UTC: 2024-07-23 08:25:00
+
+Comment 6:
+  Author: Yellowlimes
+  Comment: Absolutely yes
+  Score: 2
+  Created UTC: 2024-07-23 07:21:36
+
+Comment 7:
+  Author: YesGoodBuddy
+  Comment: Every reply comment here saying no, as if every fucking post in here isn't low quality wanting a GUI for everything.
+
+Yes, do it and these nerds will use it and more than likely be back in here begging for features.
+
+😎
+  Score: 4
+  Created UTC: 2024-07-23 12:16:31
+

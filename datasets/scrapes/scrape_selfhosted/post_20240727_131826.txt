@@ -1,0 +1,49 @@
+Post Title: Simple Article-based webhosted calculator?!
+Author: skaramuz666
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e5ojws/simple_articlebased_webhosted_calculator/
+Number of comments: 11
+Created UTC: 2024-07-17 17:49:27
+
+Post Content:
+next weekend we have a party with our association where volunteers sell food and drinks for a good cause. they now want a calculator where they can simply count different items up and down with +/- and where the total price comes out at the end. we don't need a payment function, just the calculation function. unfortunately i don't have the search words for google. does anyone have a hot tip for a self-hosted software?
+
+Top 5 comments:
+Comment 1:
+  Author: Meganitrospeed
+  Comment: With Grocy you could create the items, assign them a price and get the total sum.
+
+
+Its not the intended usage, but It would work
+  Score: 8
+  Created UTC: 2024-07-17 21:26:44
+
+Comment 2:
+  Author: deelayman
+  Comment: I put your comment verbatim into chatgpt and it gave me a working website with what you need. The only thing missing is a reset button.
+  Score: 4
+  Created UTC: 2024-07-18 03:25:09
+
+Comment 3:
+  Author: clooy
+  Comment: What you want is a simple order form, any self hosted ecommerce platform can do this - wordpress has a million ecommerce plugins. The trick is to create a coupon that deducts 100% of the price on checkout - in some systems a couple code can be as simple as a 1.
+
+The easycart wp plugin has the +/- buttons you are asking for: [https://wordpress.org/plugins/wp-easycart/](https://wordpress.org/plugins/wp-easycart/)
+
+If this is too complicated for your liking, github has a several results for order form; this one looks super easy to modify - just need to update the order.js file with your own list of products: [https://github.com/h-yung/website-cafe](https://github.com/h-yung/website-cafe)
+  Score: 2
+  Created UTC: 2024-07-18 07:36:22
+
+Comment 4:
+  Author: uvmain
+  Comment: This is something you could knock up in Vite/Vue in just an hour or two, and dockerise to run it self hosted. I'd offer to do it myself as a bit of dev practice but I've got covid brain fog :(
+  Score: -1
+  Created UTC: 2024-07-17 18:08:47
+
+Comment 5:
+  Author: Furki1907
+  Comment: Hey, check reddit dms :)
+  Score: -9
+  Created UTC: 2024-07-17 18:12:12
+
+Note: This post has only 5 comments at the time of scraping.

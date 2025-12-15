@@ -1,0 +1,20 @@
+Post Title: How to draw a mandala art with python turtle
+Author: Link0000054
+Score: 6
+URL: https://www.reddit.com/r/Python/comments/1eb3xcz/how_to_draw_a_mandala_art_with_python_turtle/
+Number of comments: 2
+Created UTC: 2024-07-24 15:12:51
+
+Post Content:
+if someone here is interested in drawing with Python Turtle here is a short video with a code example attached:  
+[https://www.youtube.com/watch?v=geUwYyFCg6A](https://www.youtube.com/watch?v=geUwYyFCg6A)  
+
+
+Top 1 comments:
+Comment 1:
+  Author: DrinkMoreCodeMore
+  Comment: Is it really turtles all the way down?
+  Score: 1
+  Created UTC: 2024-07-26 17:36:49
+
+Note: This post has only 1 comments at the time of scraping.

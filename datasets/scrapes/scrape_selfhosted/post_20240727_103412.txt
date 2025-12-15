@@ -1,0 +1,33 @@
+Post Title: DietPi vs Swizzin
+Author: 1nchey
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e5c61h/dietpi_vs_swizzin/
+Number of comments: 2
+Created UTC: 2024-07-17 07:29:13
+
+Post Content:
+Hello,
+
+I've been running DietPi for some time now and really do enjoy it. I mainly use it for Plex and the various apps surrounding Plex using Docker to containerize them.
+
+  
+I'm about to rebuild my Pi and I'm trying to decide on whether to go with DietPi again or try an alternative such as Swizzin.
+
+  
+I was just wondering if anyone out there has used both, what are the pros/cons for Swizzin vs DietPi?
+
+  
+Any advice would be greatly appreciated.
+
+  
+Thankyou!
+
+Top 1 comments:
+Comment 1:
+  Author: ItsPwn
+  Comment: Why change if things work correctly ,don't poke the working machine unless you have a spare SD card for testing.
+Try ,test ,learn :-)
+  Score: 2
+  Created UTC: 2024-07-17 08:18:12
+
+Note: This post has only 1 comments at the time of scraping.

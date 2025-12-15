@@ -1,0 +1,27 @@
+Post Title: Question about moving immich
+Author: Beneficial_Zebra_251
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebkcco/question_about_moving_immich/
+Number of comments: 3
+Created UTC: 2024-07-25 02:58:24
+
+Post Content:
+I just started tinkering with self hosted and immich because I wanted to download all the photos of an iphone and making it work in linux with the cable was really a pain. 
+
+In fairness for the developers it was really easy to make it run, and it works like a charm. Even downloading the app and setting it up was really easy.
+
+My question now is that I only have a laptop and a raspberry pi B+ right now functional, my two questions are:
+
+* Can immich run on a raspberry pi B+ ? I really doubt it because it don't have a lot of power.
+* Can I move all the files that I have to an external disk an run it from there ? I don't want to run it all the time so setting it up don't bother, will be easier to backup it and it has more space that my laptop hard drive.
+
+Thanks in advance!
+
+Top 1 comments:
+Comment 1:
+  Author: altran1502
+  Comment: I saw many users run on Pi4 or Pi5 but I wouldn’t recommend on Pi3. Most use an external storage for storing the files. You should make sure that your storage is auto mounted whenever the Pi reboot. And remember to make backup regardless
+  Score: 1
+  Created UTC: 2024-07-25 04:23:22
+
+Note: This post has only 1 comments at the time of scraping.

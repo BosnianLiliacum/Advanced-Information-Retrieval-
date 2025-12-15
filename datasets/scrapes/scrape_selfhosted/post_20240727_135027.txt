@@ -1,0 +1,40 @@
+Post Title: How to have a private access for subdomains
+Author: Turbulent-Cow4848
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3q5od/how_to_have_a_private_access_for_subdomains/
+Number of comments: 4
+Created UTC: 2024-07-15 09:01:55
+
+Post Content:
+New to self-host here :)
+
+I am building a React/Next + Spring Boot SaaS and want to deploy them to a VPS. Let’s suppose under the domain saas.com
+
+However, I also wanna deploy some observability tools, a CD, a nexus repository and so on and so forth, example elk.saas.com
+
+I want only myself to aces the private tools, how can I achieve that?
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: MTXShift
+  Comment: The way I'm currently doing this is with Tailscale. I set it up on the VPS and my PC, and I set a DNS A Record that points to the Tailscale IP address of the VPS instead of the normal public IP address. You then configure a reverse proxy (I personally use Caddy) and use it that way. The only downside to this is everyone who wants to use the private service has to connect to Tailscale, and I'm pretty sure Tailscale's free plan is limited to only 3 users
+
+I'm pretty sure you can do this with Wireguard, but Tailscale is easy and does the job for me so I never bothered finding out how to do that
+  Score: 2
+  Created UTC: 2024-07-15 13:49:38
+
+Comment 2:
+  Author: Furki1907
+  Comment: [Authentik as Security Login.](https://goauthentik.io/)
+  Score: 1
+  Created UTC: 2024-07-15 15:34:19
+
+Comment 3:
+  Author: rsatommy
+  Comment: You could use cloudflare for dns for your domain then for the ip, just put your local IP then no one else could access it unless they’re on your network
+  Score: -2
+  Created UTC: 2024-07-15 09:37:00
+
+Note: This post has only 3 comments at the time of scraping.

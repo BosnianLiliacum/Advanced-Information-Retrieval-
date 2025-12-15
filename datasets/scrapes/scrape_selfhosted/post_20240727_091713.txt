@@ -1,0 +1,37 @@
+Post Title: Captive portal solution with social sign in
+Author: WraytheZ
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1ea1v22/captive_portal_solution_with_social_sign_in/
+Number of comments: 2
+Created UTC: 2024-07-23 07:36:08
+
+Post Content:
+Hi Guys,
+
+ I'm trying to find a package that's free/opensource that will allow me to set up a captive portal that supports social signin/vouchers/user-password logins.
+
+ Preferably something that talks WISPr, but open to traditional portals.
+
+  
+ Anyone have some leads?
+
+ This is for a favour for a friend who owns a small hotel, so looking to try save a bit of $ for him if i can - while helping sort his guest wifi situation.
+
+Top 2 comments:
+Comment 1:
+  Author: ochiltreedude
+  Comment: We used Packetfence for a while - [https://www.packetfence.org](https://www.packetfence.org)
+
+Then the marketing guys wanted more integration so moved to a paid solution. But the portal in the packetfence product is configurable and supported social signin, vouchers, passwords etc when we used it a few years back.
+  Score: 3
+  Created UTC: 2024-07-23 08:34:18
+
+Comment 2:
+  Author: Dosk3n
+  Comment: While its not free, since its for a small hotel, would it not be worth getting something like a Unifi Gateway and AP. These have the ability to create vlans to separate guest and more. Authentication methods for the built in captive portal are Facebook, Password, Payment, Vouchers and RADIUS.
+
+I dont use the captive portal myself, but this is the set up I have in my house with a gateway ultra and AP. They are not too expensive either.
+  Score: 1
+  Created UTC: 2024-07-24 09:36:26
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,32 @@
+Post Title: Best overlay VPN solution for unstable WAN + client network roaming?
+Author: labs-labs-labs
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ec4u98/best_overlay_vpn_solution_for_unstable_wan_client/
+Number of comments: 2
+Created UTC: 2024-07-25 20:17:06
+
+Post Content:
+Wondering if anyone else has spent time on this issue... anyone have any feedback?
+
+My WAN options are limited. I operate on 3 different connections, (2) 4G/5G + Starlink.  My router uses all 3 connections actively, round robin load balancing client requests. So, if my PC goes to a website, it uses "Connection A", then my server starts to download an update, it uses "Connection B", etc. - as all 3 connections are similar enough in bandwidth and latency and CGNATedness, this actually works very well. Even when any of the connections is down or has a hiccup, everything continues to work. That being said, that (WAN connection interruptions) happens plenty.
+
+Also, I live off the beaten path (hence the WAN situation). I also leave home a lot. My cell phone has dual SIMs and I use WIFI a lot. My phone bounces between these frequently (i.e. from 4G "Carrier A" to 5G "Carrier B" to WIFI from a hotspot/mobile router, etc.)
+
+I've been using Tailscale as an Overlay VPN for months. Big Picture, I'm happy with it. The issue is that I very frequently need to disconnect/reconnect my android clients (one running android, the other grapheneOS, both function about the same in this regard) when I'm connected remotely in order to get them to function. They'll say they are connected (i.e. the Tailscale app shows "connnected", but none of my "internal" DNS will resolve and my apps can't connect to internal resources until I open the app and toggle the "disconnect" / "connect" button. Then, boom... good to for a while, until it breaks again.
+
+I'm relying on this connection for notifications, etc. so I can't trust that it is up and I also am not going to open the app and toggle it every couple of minutes just to make sure.
+
+Long story to a quick question... **Does anyone have any feedback on how well the other overlay VPN solutions work on junk/complicated WAN connections compared to Tailscale?**
+
+I have a VPS that gets great ping times from all 3 of my WAN connections (&lt;50 and usually &lt;30 ms). I have Netbird up and running, am about to test that for comparison. If I stick with Tailscale, I'll be moving to headscale. I'm also open to the idea of Zerotier, Nebula, etc. - I prefer self hosted FOSS as much as possible. Definitely need something to bypass CGNAT (i.e. a coordination server or whatever each solution calls their version of that) as opposed to just using straight Wireguard.
+
+**Any thoughts on if/why something else might be more stable/reliable for my situation?**
+
+Top 1 comments:
+Comment 1:
+  Author: ben-ba
+  Comment: Maybe multipathtcp can help you, especially this project, https://www.openmptcprouter.com/
+  Score: 2
+  Created UTC: 2024-07-25 20:24:45
+
+Note: This post has only 1 comments at the time of scraping.

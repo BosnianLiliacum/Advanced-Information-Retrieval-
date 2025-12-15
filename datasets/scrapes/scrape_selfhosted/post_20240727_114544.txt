@@ -1,0 +1,45 @@
+Post Title: I'm building an open source alternative to Google Chrome Sync
+Author: __adr
+Score: 18
+URL: https://www.reddit.com/r/selfhosted/comments/1eb4sfk/im_building_an_open_source_alternative_to_google/
+Number of comments: 7
+Created UTC: 2024-07-24 15:48:12
+
+Post Content:
+I use several browsers between work and home and like to have them synced so I can find websites I've searched for in a browser when I don't have access to it or access my bookmarks.
+
+At work I have to use Google Chrome and wanted to have an alternative to Google Chrome Sync that I could self-host on my own, that would also work with any major browser and search engine (at home I use Firefox, for example).
+
+So I'm building an open source cross-browser manager for browsing activity ([Github link](https://github.com/unsearchapp/unsearch)). I would love to hear your thoughts on this concept, and if you have any questions or suggestions, please share them.
+
+Top 4 comments:
+Comment 1:
+  Author: zoontechnicon
+  Comment: Hey! I've been working on a similar thing: https://github.com/floccusaddon/floccus
+Maybe we can join forces :)
+  Score: 3
+  Created UTC: 2024-07-24 16:06:39
+
+Comment 2:
+  Author: cavilesphoto
+  Comment: This could be my little life saver, as my kids can't use chrome with their old x86 laptops and they only use chrome on their tablets, so I'm definitely going to have a look at this!
+👏👏👏👏
+  Score: 2
+  Created UTC: 2024-07-24 22:47:12
+
+Comment 3:
+  Author: Accomplished-Moose50
+  Comment: I'm not saying you should not do it, but something like this already exists 
+
+
+https://www.xbrowsersync.org/
+  Score: 2
+  Created UTC: 2024-07-25 09:23:12
+
+Comment 4:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 0
+  Created UTC: 2024-07-24 17:23:18
+
+Note: This post has only 4 comments at the time of scraping.

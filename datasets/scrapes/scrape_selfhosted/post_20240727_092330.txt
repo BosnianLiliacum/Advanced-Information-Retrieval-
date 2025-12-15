@@ -1,0 +1,53 @@
+Post Title: Alternatives to Here.fm?
+Author: Boring-Spell8585
+Score: 13
+URL: https://www.reddit.com/r/selfhosted/comments/1e9m83n/alternatives_to_herefm/
+Number of comments: 19
+Created UTC: 2024-07-22 18:56:36
+
+Post Content:
+I've been using [here.fm](http://here.fm) for the past 2 years and it's become a way to interact with my close friends when we can't go out together. Recently, the [Here.fm](http://Here.fm) team decided to shut down the herefm project for unknown reasons and it's driving me nuts. Are there any good alternatives to herefm that anyone might know of? I tried Kosmi but it sent me to a room called "18+ stroke party" upon account creation. I removed myself from the chatroom and launched the web app again only to get sent into that very same chat. I also tried gathertown, but it's too hard to navigate and personalize the workspace. Are there any other alternatives I don't  know about? Also, are there any programmers here? if so, how hard would it be to recreate the website/app? I'm just desperate to get herefm back at this point 😭 🫶
+
+Top 7 comments:
+Comment 1:
+  Author: hauxir
+  Comment: Sorry to hear about your experience with Kosmi. If you stumble into a wrong room all you need to do is hit the three dots and press leave room. Then you can easily create a new one or join another.
+  Score: 2
+  Created UTC: 2024-07-22 19:35:12
+
+Comment 2:
+  Author: Moonbinstars_
+  Comment: omg!! are u me?? my cousin and I iterally spent HOURS on here fm decorating our cute lil chat rooms, watching shows, hanging out, etc. we were so disappointed when we found out herefm shut down and started looking into alternatives. Funnily enough, the ones you mentioned were the exact ones we tried lol, but nothing was as good as herefm :((( I really wished they didn't have to shut down. It was an amazing website! Please lmk if anyone finds a better alt
+  Score: 2
+  Created UTC: 2024-07-24 10:20:07
+
+Comment 3:
+  Author: hauxir
+  Comment: For anyone reading this, feel free to reach out to us at kosmi at [https://app.kosmi.io/room/kosminauts](https://app.kosmi.io/room/kosminauts)
+  Score: 1
+  Created UTC: 2024-07-22 20:25:01
+
+Comment 4:
+  Author: huekeio
+  Comment: try Rave, it works on Android, Apple, and desktop, it also allows you to watch videos from multiple platforms
+  Score: 1
+  Created UTC: 2024-07-23 13:52:51
+
+Comment 5:
+  Author: phampyk
+  Comment: For what I can see [here](https://www.reddit.com/r/selfhosted/comments/1e6flz0/self_hosting_alternative_to_herefm/) people are happy with https://app.gather.town/app
+  Score: 1
+  Created UTC: 2024-07-24 01:05:38
+
+Comment 6:
+  Author: TRNDSTTR0
+  Comment: Man this blows I had a really old room with an ex and I used to pop by in there every so often, shame it's gone.
+  Score: 1
+  Created UTC: 2024-07-24 15:50:59
+
+Comment 7:
+  Author: Lavender_365
+  Comment: me toooo, this is the second website that gets shut down this year. So heartbroken.
+  Score: 1
+  Created UTC: 2024-07-26 11:47:49
+

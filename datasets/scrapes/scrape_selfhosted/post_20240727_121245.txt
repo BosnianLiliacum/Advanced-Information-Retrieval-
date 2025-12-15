@@ -1,0 +1,54 @@
+Post Title: Basic "take back your data" setup?
+Author: soggyGreyDuck
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e9maii/basic_take_back_your_data_setup/
+Number of comments: 16
+Created UTC: 2024-07-22 18:59:23
+
+Post Content:
+Is there some sort of basic setup that's like the official starting point? I would assume most people start with data backups and moving away from provided services. So like phone &amp; photo backups, PC backups, password managers, Gmail backups (not necessarily a mail server but only having the most recent stuff there and never worry about them trying to force you to buy space). 
+
+Maybe I'm wrong and it's more of a unique setup then I think. I may need a NAS and something like my zimaboard to do everything I want. I have a PI 4, Nvidia Jetson and now a zimaboard but I always fail to find a starting point I can build on. It's like oh I want to self host, but then I need to setup raid or risk losing stuff and I feel like my ADHD takes over and I can't settle on a starting point 
+
+Top 2 comments:
+Comment 1:
+  Author: WolpertingerRumo
+  Comment: Nextcloud, for all its faults, covers most bases. Mind you, it takes a long time to get set up (maybe AiO is better, but I haven’t gotten it to work yet).
+
+It has a good photo database with apps for android and iOS, a password manager, but not backups for Emails and PCs. But then some: to do app (deck), ai sorting for photos (recognize, I have run it on a pi), HLS video playback (memories).
+
+I’d say it’s a good starting point.
+
+I hear Immich is pretty good, too, if you‘re going for  easier set up for a starting point.
+
+In any case, if you want a password manager, go for something more durable than a pi. That data is to important to lose because of an old sd card.
+  Score: 2
+  Created UTC: 2024-07-22 19:14:27
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;Is there some sort of basic setup that's like the official starting point?
+
+Typically people start by wanting to achieve something. aka what is your goal, why do you want to self host?
+
+Once you know what you want to achieve then you can research a solution. 
+
+&gt;It's like oh I want to self host, but then I need to setup raid or risk losing stuff
+
+RAID is not a backup. It provides high availability in case a drive fails but more than one drive can and will fail in RAID near the same time which will result in data lost.
+
+So always keep a backup of your data and for important data follow 3-2-1 backup rule.
+
+&gt;I feel like my ADHD takes over and I can't settle on a starting point 
+
+It may help to write a list of what you want to achieve, then start building slowly. Remember technology is about iterations. If you try to solve the solution right from the get go then you will become overwhelmed (especially if you don't know 100% what you are doing, not saying you don't)
+
+In your example you mentioned you want to moving photos off cloud.  That requires hard drives and a system. So start there. You have the hardware, now get a hard drive and ensure you have a good backup. 
+
+Once that is done, then slowly keep moving forward. 
+
+Hope that helps.
+  Score: 2
+  Created UTC: 2024-07-22 19:21:51
+
+Note: This post has only 2 comments at the time of scraping.

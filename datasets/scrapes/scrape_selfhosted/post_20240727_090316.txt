@@ -1,0 +1,84 @@
+Post Title: Did anyone migrate from Obsidian to Outline?
+Author: burd001
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eavlu3/did_anyone_migrate_from_obsidian_to_outline/
+Number of comments: 16
+Created UTC: 2024-07-24 07:45:26
+
+Post Content:
+**I love Obsidian.**   
+It has been my notes app for years and it is simply amazing. I do not use fancy plugins or loose too much time with bells and whistles, and all my notes are saved in a Nextcloud folder.
+
+Although I am willing to change a few things:
+
+* Browser support is becoming more relevant to me
+* Being able to share notes and have other users is needed
+
+**Outline** seems to be great alternative, but I would love to hear experiences from other people that perhaps followed the same path.
+
+Alternatively, would you consider anything else besides Outline?
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: VVaterTrooper
+  Comment: This might be annoying, but I looked at everything that was required of Outline and was overwhelmed. I decided to try [Docmost](https://docmost.com/) and holy moly is it simple and awesome!
+  Score: 10
+  Created UTC: 2024-07-24 10:55:39
+
+Comment 2:
+  Author: IgnisDa
+  Comment: I checked out outline a year ago, back then it did not have username/password authentication. As a beginner I did not know how to self SSO so I ended up not using Outline.
+  Score: 3
+  Created UTC: 2024-07-24 08:01:55
+
+Comment 3:
+  Author: mArKoLeW
+  Comment: FYI: There is also logseq
+  Score: 3
+  Created UTC: 2024-07-24 10:48:31
+
+Comment 4:
+  Author: Snorzze
+  Comment: Yes, I did. I was disappointed that there wasn't a more generic way of syncing between devices with Obsidian. I set up Outline and was really pleased with it. I also used Notion before, which has lots of features that Outline doesn't have, but I am still happy with Outline because it fits all my needs and Notion isn't self-hosted (also, you need a paid subscription to use all the features). I‘ve never looked back to Obsidian or Notion, but as I said, Outline doesn’t have all the cool features other tools have.
+
+Just a quick note: I did all the migration manually because the export/import from Obsidian to Notion didn’t really work well back then (especially the links).
+  Score: 1
+  Created UTC: 2024-07-24 08:46:50
+
+Comment 5:
+  Author: jmadden912
+  Comment: Outline is fantastic. Web client was essential for me and has been perfect.
+  Score: 1
+  Created UTC: 2024-07-24 13:02:00
+
+Comment 6:
+  Author: Ephoras
+  Comment: Love hosted outline in my company, hate it selfhosted for myself.
+The compose file is a bit annoying but you can get it running if you know what to do.
+But the authentication stuff is just aggravating. 
+That is if you don’t already run your own auth. If you do I think you will love it.
+
+As someone pointed out Docmost is great. 
+I use it at the moment, but I had problems with local storage and permissions. But setting up minio was actually quite doable.
+Only downside for me is no sharable links. That’s the great boon of outline in my opinion.
+
+Also both only run in the browser and not offline, which is why I still use obsidian for notes :/ surprisingly often I have bad internet where I live so I like the assurance that I can access all my stuff
+  Score: 1
+  Created UTC: 2024-07-24 14:54:21
+
+Comment 7:
+  Author: BXDavies
+  Comment: I use both but for different reasons.
+
+Obsidian is used for quick notes i.e shipping lists, random thoughts ect
+
+Outline is used for my documentation or any project that requires some where to document stuff. 
+
+Since I only use obsidian on my phone and occasionally computer it doesn't matter that they don't have a web app. Wheres I might need to access my documentation from anywhere. 
+
+I wouldn't say Outline is easy to use for quick notes or anything like that.
+  Score: 1
+  Created UTC: 2024-07-24 19:37:57
+

@@ -1,0 +1,66 @@
+Post Title: Apache or Nginx?
+Author: ScatletDevil25
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8iv48/apache_or_nginx/
+Number of comments: 17
+Created UTC: 2024-07-21 09:58:02
+
+Post Content:
+I'm, rebuilding my homelab and have come to my webserver currently running Apache but I want opnions on which one should I go for.
+
+my main use case is serving 10 websites of which have 4 have video streams and file downloads. traffic is about 20 to 30 people. 4 sites about 10k per day. I'll also being running another instace as a reverse proxy/load balancer
+
+**UPDATE:** Thank you for the comments and suggestions, after reading the comments for the pro's and cons of both I decided to stick with Apache for my production server and test Nginx on a development environment. as so far the consensus seems that Apache is more stable and Nginx is faster but has some quirks.
+
+Top 7 comments:
+Comment 1:
+  Author: Puzzleheaded_Set_565
+  Comment: KISS. 
+If you already know Apache stick with it, unless you want to learn nginx or caddy.
+Performance wise nginx is better at handling thousands of requests per second. For home use Apache is fine. I also consider the Apache vhosts easier to set up but I never really took time to learn nginx. 
+Also I feel like Apache is a 'complete' web server whereas nginx has some functionality hidden behind paywalls iirc.
+  Score: 13
+  Created UTC: 2024-07-21 11:04:41
+
+Comment 2:
+  Author: HenryTheWireshark
+  Comment: Like others have said, if you already know Apache, then just use that. 
+
+Personally, I’ve used both. At home, I only use Apache when I want to demonstrate what traffic looks like when you break a web server. That doesn’t mean it’s bad; it just means that it takes more resources to do the same work.
+  Score: 2
+  Created UTC: 2024-07-21 11:47:54
+
+Comment 3:
+  Author: caliosso
+  Comment: nginx
+  Score: 3
+  Created UTC: 2024-07-21 12:16:19
+
+Comment 4:
+  Author: ctrl-brk
+  Comment: Caddy
+  Score: 4
+  Created UTC: 2024-07-21 12:54:14
+
+Comment 5:
+  Author: Th3vengeur
+  Comment: In terms of performance i've heard nginx is better. But my way to go is KISS (keep it simple stupid), so if you have knowledge with something that isn't deprecated and fit your needs now, stay with it
+  Score: 1
+  Created UTC: 2024-07-21 10:10:49
+
+Comment 6:
+  Author: aaronryder773
+  Comment: Well, apache offers owasp as a module which is great and can be useful.
+The owasp module on nginx is not supported anymore and deprecated. 
+
+
+I know its homelab but still..
+  Score: 1
+  Created UTC: 2024-07-21 12:32:19
+
+Comment 7:
+  Author: WolpertingerRumo
+  Comment: Nginx Proxy Manager as a reverse proxy. And whatever you already know as a backend, if needed. NPM usually is all you need, if you need something for the proxied server, it doesn’t matter.
+  Score: 1
+  Created UTC: 2024-07-21 12:58:13
+

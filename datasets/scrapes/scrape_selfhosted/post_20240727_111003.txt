@@ -1,0 +1,29 @@
+Post Title: Need help with Homepage Dashboard
+Author: SKT-Hyeon
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1edbelh/need_help_with_homepage_dashboard/
+Number of comments: 5
+Created UTC: 2024-07-27 08:19:15
+
+Post Content:
+I was installing the homepage dashboard into my portainer and went to fix the services.yaml folder with the setup the site provides. After editing that I went back to homepage but all I see is "
+
+# Application error: a client-side exception has occurred (see the browser console for more information).Application error: a client-side exception has occurred (see the browser console for more information)."
+
+  
+What could be the issue here? i made sure my services.yaml file was correct too
+
+Top 2 comments:
+Comment 1:
+  Author: shadoodled
+  Comment: "see the browser console for more information"
+  Score: 1
+  Created UTC: 2024-07-27 08:22:14
+
+Comment 2:
+  Author: thekrautboy
+  Comment: https://github.com/gethomepage/homepage/discussions
+  Score: 1
+  Created UTC: 2024-07-27 09:39:25
+
+Note: This post has only 2 comments at the time of scraping.

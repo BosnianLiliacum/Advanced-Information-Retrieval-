@@ -1,0 +1,62 @@
+Post Title: Selfhosted email
+Author: 2Satori-2
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e63ett/selfhosted_email/
+Number of comments: 15
+Created UTC: 2024-07-18 05:08:32
+
+Post Content:
+Hi all can advise with the configuration of your own mail server. I have a domain test.com and for web access there is a subdomain mail.test.com messages come from test.com I need to DKIM DMARC SPF PTR bind to test.com or to mail.test.com? MX record I made @ ip
+
+Top 7 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Your DNS settings need to fit to your MTA. You can happily serve webmail via mail.domain.com but your MTA is called smtp01.domain.com, then you need to setup the DNS records according to smtp01.domain.com. A pro tip: Use SPF macros to have the most dynamic configuration for your SPF records. The rest of the records points to your gTLD.
+
+Edit: Can the downvoters and haters of /r/selfhosted email please stop bringing emotions and false facts into this discussion. Selfhosting email is totally fine. It’s neither the maintenance nightmare that you people make it out to be nor is it complex. The only part that is important, before setting up all the correct DNS records and stuff like DANE, is the IP reputation, if that is given, you can send mail to any provider with no problems at all. **So please stop all the hate and emotions when its about email on this sub!**.
+
+
+--f: perm
+  Score: 14
+  Created UTC: 2024-07-18 06:06:01
+
+Comment 2:
+  Author: Whiplashorus
+  Comment: Give a look at stalwart mail everything you need through the gui
+  Score: 3
+  Created UTC: 2024-07-18 14:33:23
+
+Comment 3:
+  Author: Sufficient_Price_738
+  Comment: Self-hosting can be a hassle. However, there are already solutions to the technical problems, such as mail-in-a-box (https://mailinabox.email), and since you already have a domain name, you'll also need a VPS. Finding the right provider can also be a challenge, as well as costing about $5 per month to use. As well as, some future maintenance type work, such as requesting removal of your IP from multiple blacklisted lists.
+
+Going back to the question at hand, you should only care about the DNS records for the domain name following the @ symbol.
+  Score: 2
+  Created UTC: 2024-07-18 08:00:51
+
+Comment 4:
+  Author: crocowhile
+  Comment: I recommend the mailu suite. It works really well and comes with a good web interface both for admin and webmail
+  Score: 1
+  Created UTC: 2024-07-18 09:59:13
+
+Comment 5:
+  Author: e38383
+  Comment: You really need to start learning with a domain which will not get bombarded the instance you put a mx record on it. Try getting into it with something a little bit less common and get accustomed with all the ways to protect yourself from spam and the like.
+A good place to start is https://www.learndmarc.com/.
+  Score: 1
+  Created UTC: 2024-07-18 17:42:51
+
+Comment 6:
+  Author: [deleted]
+  Comment: You will have to work very hard to stop all your sent emails going into spam
+  Score: 0
+  Created UTC: 2024-07-18 06:39:15
+
+Comment 7:
+  Author: cm2003
+  Comment: That’s one of the few services I’d never host on my homeserver, because it’s just to important and you can f up at so many levels…
+Just get a good provider (like mailbox.org, what I use, or protonmail), pay those 3€/month and add your domain mx records. It’s quite easy to setup and they take care about everything. Email really isn’t worth the hassle to selfhost imho (even if that’s rather stupid to say on a selfhosted subreddit :))
+  Score: -3
+  Created UTC: 2024-07-18 07:29:21
+

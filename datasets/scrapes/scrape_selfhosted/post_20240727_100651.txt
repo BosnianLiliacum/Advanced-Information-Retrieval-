@@ -1,0 +1,36 @@
+Post Title: Is there any up to date guide on self hosting Mastodon?
+Author: [deleted]
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1e70a60/is_there_any_up_to_date_guide_on_self_hosting/
+Number of comments: 4
+Created UTC: 2024-07-19 10:15:47
+
+Post Content:
+I'm really struggling to get Mastodon to work at all. I've tried both in Docker Compose, and on "bare metal" Ubuntu/Debian VMs, and an LXC. I just want a single user instance so I can have my username be my domain.
+
+I really struggle to get the docker containers set up and talking to each other. I'm following the compose files exactly but keep getting database errors etc.
+
+The bare metal guides either seem to be outdated for old versions of Mastodon that use old versions of Ruby, Node, etc, or they have a hugely complex NGINX config file that sets up the custom domain, SSL, etc. I don't want that, I already have cloudflare tunnels and caddy reverse proxy configured on another machine, I literally just want Mastodon running on a local IP and port I can point caddy to, but none of the guides seem to be able to set that up.
+
+Top 3 comments:
+Comment 1:
+  Author: moanos
+  Comment: Do you want mastodon specifically or do you want an activitypub server? For a single user instance I'd recommend GoToSocial which is specifically built for small instances. The developers host their instance on a 1 Core machine:) I run it happily for over a year and it has a lot of neat features missing from mastodon.
+  Score: 4
+  Created UTC: 2024-07-19 13:21:01
+
+Comment 2:
+  Author: opssum
+  Comment: Will be hard to help without knowing the actual errors, Focus on 1 install method. Try again and post the step wich doesnt work with the correspinding config files and errors.
+  Score: 1
+  Created UTC: 2024-07-19 10:31:08
+
+Comment 3:
+  Author: _Scorpoon_
+  Comment: I've set up mine with yunohost, most of the things can be configured in the ui, specific settings have to be done in the terminal. I run a matrix and mastodon server this way. 
+
+It's a bit complicated/confusing to setup yunohost itself if you use it the first time, but after that it works without a problem. Installing mastodon is then just a click and a few parameters in the web ui away.
+  Score: 1
+  Created UTC: 2024-07-19 10:51:40
+
+Note: This post has only 3 comments at the time of scraping.

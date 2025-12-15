@@ -1,0 +1,63 @@
+Post Title: Minimal effort Plex self hosted local access only setup
+Author: classified_x
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7mr2p/minimal_effort_plex_self_hosted_local_access_only/
+Number of comments: 4
+Created UTC: 2024-07-20 03:54:34
+
+Post Content:
+Hi
+
+  
+I have some spare PCs here and I would like to move my media away from my main computer.
+
+  
+Ideally, I'd be able to watch it via Plex or browse through the directories of the HDs somehow and watch from my main PC.
+
+  
+Security on my main PC is a must. I don't want remote access, just local Wifi Lan Access. What is the best and most secure way to achive this?
+
+  
+Would use Ubuntu on the server and Windows on main PC
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: - Install Alpine Linux (read-only mode from USB)
+- Install Docker
+- Run Plex container
+- Profit
+  Score: 3
+  Created UTC: 2024-07-20 04:26:22
+
+Comment 2:
+  Author: bababradford
+  Comment: why do you need plex if its just local access?
+
+Plex does not allow you to browse through the directories of the HD. .If thats what you want just use VLC and access your files over your local network
+
+With Plex have to assign specific libraries to specific folders you have mapped out, and data has to be sorted a specific way to be properly recognized and added to your library
+  Score: 3
+  Created UTC: 2024-07-20 15:00:31
+
+Comment 3:
+  Author: 1WeekNotice
+  Comment: - any linux OS (Ubuntu is fine)
+- install docker
+- install Plex docker image
+
+&gt;Security on my main PC is a must
+
+Not sure what you mean by this. The Plex server will be on the Ubuntu machine, so if you are worried about a machine being unsecured, it would be the server not the client. Because the server is exposing the ports (internally in your network)
+
+If you aren't exposing ports to the Internet, then there is typically nothing to be considered about. 
+
+If you want to safe guard against MIM attacks then you can use https by adding a reverse proxy but then you would need to use an external DNS (or internal)
+
+[Reference video for external DNS](https://youtu.be/qlcVx-k-02E?si=uf6Pg8rkNCgtoVdu) but once again this is more of a concern if you have any ports open on your router. If you don't then there is no way to get inside your network. 
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-20 20:02:00
+
+Note: This post has only 3 comments at the time of scraping.

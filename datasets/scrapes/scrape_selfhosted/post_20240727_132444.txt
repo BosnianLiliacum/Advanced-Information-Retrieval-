@@ -1,0 +1,64 @@
+Post Title: Selfhosted GPS tracking
+Author: havock
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e57o3v/selfhosted_gps_tracking/
+Number of comments: 12
+Created UTC: 2024-07-17 03:01:36
+
+Post Content:
+I am looking for a way to create a gps track when I am out sailing.
+
+The tracking will need to be local as I will often be without cell service.
+
+I thoght owntracks might work but either I don’t have it setup properly or it doesn’t store the gps track locally then uploading it once a connection is restored.
+
+Top 6 comments:
+Comment 1:
+  Author: flaming_m0e
+  Comment: [Traccar](https://www.traccar.org/)
+
+&amp;#x200B;
+
+https://github.com/traccar/traccar-docker
+  Score: 5
+  Created UTC: 2024-07-17 03:30:46
+
+Comment 2:
+  Author: tcfjr
+  Comment: I use a SPOT Tracker for tracking my location on long (multi-day) motorcycle rides.  The SPOT sends your location directly to a satellite every 5-10 minutes, and doesn't rely on cell towers or any terrestrial connections.
+
+You can view your track on the SPOT website, but I use a third-party site called Spotwalla for this.  Spotwalla has a much better user interface, and allows you to configure "trips" using a start time and and end time.
+  Score: 3
+  Created UTC: 2024-07-17 03:33:21
+
+Comment 3:
+  Author: wideace99
+  Comment: We are using Traccar over 6 years with success :)
+  Score: 2
+  Created UTC: 2024-07-17 09:58:37
+
+Comment 4:
+  Author: springs87
+  Comment: Although traccar is something you could use, it's designed to be used with a cell service.
+
+Like you said you'd need to find a service that works locally.
+
+You could diy one or see if there is a phone app that will save locally
+  Score: 1
+  Created UTC: 2024-07-17 11:13:28
+
+Comment 5:
+  Author: fprof
+  Comment: gpslogger
+
+https://gpslogger.app
+  Score: 1
+  Created UTC: 2024-07-17 11:16:55
+
+Comment 6:
+  Author: jaykayenn
+  Comment: That's not what selfhosting means.
+  Score: 0
+  Created UTC: 2024-07-17 13:09:42
+
+Note: This post has only 6 comments at the time of scraping.

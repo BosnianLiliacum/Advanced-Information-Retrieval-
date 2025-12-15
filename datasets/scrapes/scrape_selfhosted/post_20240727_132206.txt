@@ -1,0 +1,53 @@
+Post Title: CasaOS. Raspberry Pi. I dont know
+Author: Zestyclose_Store_943
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e5gs8p/casaos_raspberry_pi_i_dont_know/
+Number of comments: 9
+Created UTC: 2024-07-17 12:19:23
+
+Post Content:
+About 2 years ago, I wanted to have a self hosted streaming platform and a NAS.
+
+I have been contemplating with Raspberry Pi but I opted for a Synology product specifically because I cannot see any case for a Rasp + Multiple HDD.  
+I've never been so happy with this. Been using Plex a lot and it's storage.
+
+Now, I discovered CasaOS and how nice it looks nice.
+
+I have a 5 year old PC here that I want to upgrade. So might as well use this old one to become my Home server.
+
+With this plan, I will be running CasaOS + Plex and Ollama to have my own ChatGPT like software.
+
+Will also use web servers for my sandbox websites for my business which my current PC can do already.
+
+However, it would also be nice to move my live, production, e-commerce websites from cloud VPS to local. But I am behind ISP's CGNAT. I've read about Tailscale that would be cheaper than my current VPS cost.
+
+I just wanna know if this setup is all worth it to play around. Or just save my money and continue using Synology.
+
+Top 4 comments:
+Comment 1:
+  Author: steveiliop56
+  Comment: Sorry to break it to you but so called "money generating websites" are fake af. I mean yeah they do pay you but the price per gigabyte of bandwidth you share is very low compared to what they sell it for, that's how they make money and they just give you a small percentage of that.
+  Score: 3
+  Created UTC: 2024-07-17 14:10:29
+
+Comment 2:
+  Author: Unlucky-Message8866
+  Comment: everything sounds good except self-hosting "money generating websites" on CGNAT,  unless you want to be available 24/7.
+  Score: 1
+  Created UTC: 2024-07-17 13:40:35
+
+Comment 3:
+  Author: Background-Piano-665
+  Comment: I'm not sure if Tailscale Funnel is gonna work without issues with an e-commerce site. Feels like you might have problems with the payment gateway side of things due to how Funnel works. You can try and it might work depending on your gateway, but I'm not gonna make any bets on it.
+
+Besides, do you really want residential grade internet for e-commerce sites? Your ISP must be providing you awesome uptime guarantees and CIRs.
+  Score: 1
+  Created UTC: 2024-07-17 17:10:51
+
+Comment 4:
+  Author: aaronryder773
+  Comment: CasaOS is just bloatware on top of Debian / Ubuntu. If you know what you're doing a simple linux distribution with ssh access (and ipmi if required) is all you need.  Why add additional unnecessary overhead with casaOS? I don't think moving your websites to local and using tailscale is the way to go. You're better off using vps.
+  Score: 1
+  Created UTC: 2024-07-18 03:23:10
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,72 @@
+Post Title:  PuppySignal - An open source Pet's QR Tag
+Author: godblessyerbamate
+Score: 40
+URL: https://www.reddit.com/r/Python/comments/1eb3lam/puppysignal_an_open_source_pets_qr_tag/
+Number of comments: 12
+Created UTC: 2024-07-24 14:59:26
+
+Post Content:
+Hello everyone, this is a project I've been working on from a few years for my own-use with my pets, and this year I decided to share it with the community.
+
+**Project website:** [PuppySignal.com](https://puppysignal.com/)
+
+**What my project does**
+
+The functionality is pretty simple: when you log in, you create a profile for your pet, and a QR code will be generated and linked to its profile. When someone scans this code and decides to share its location, you will receive a notification on your phone with your pet's location, and the person who scanned it will see your contact information.
+
+It consists of a few projects built with React (web and documentation), React Native (mobile), and Python for the backend (FastAPI and SQLAlchemy).
+
+**Target audience**
+
+Pet owners, but anyone could create codes and attach them to items, or whatever they want.
+
+**Comparison**
+
+Many QR pet tag alternatives already exist. The difference between them and PuppySignal is that you don't have to buy a QR tag and wait for it to be delivered. You can just clone it, self-host it, print the QR code, and attach it to your pet's collar.
+
+Documentation: [https://docs.puppysignal.com](https://docs.puppysignal.com)
+
+Repository: [https://github.com/FLiotta/PuppySignal](https://github.com/FLiotta/PuppySignal)
+
+Top 6 comments:
+Comment 1:
+  Author: DoNotFeedTheSnakes
+  Comment: Very cool. Are you looking for OS contributors for any specific tasks ?
+  Score: 7
+  Created UTC: 2024-07-25 03:15:08
+
+Comment 2:
+  Author: dellive
+  Comment: Great job!!! Love the UI too.
+  Score: 3
+  Created UTC: 2024-07-25 12:04:02
+
+Comment 3:
+  Author: Rocky__x
+  Comment: woah this is soo cool. But I do have a few doubts. like is it only for dogs if it is not the name is kind of misleading. And will it be sending your live location or a location you select. I would also like to suggest the idea of selling the tags with qr codes on them because if a person just sticks a picture of the qr code on the collar the pic will  be destroyed due to things like rain if the pet is missing for multiple days.
+  Score: 2
+  Created UTC: 2024-07-25 10:17:46
+
+Comment 4:
+  Author: Miserable_Web189
+  Comment: Amazing work!!.. your innovation and dedication really shine through, and it’s impressive to see your vision come to life.
+  Score: 1
+  Created UTC: 2024-07-26 05:32:40
+
+Comment 5:
+  Author: eh_24
+  Comment: Amazing project. I have started a subreddit to share amazing projects made with python. 
+
+r/madewithpython
+  Score: -16
+  Created UTC: 2024-07-24 15:10:02
+
+Comment 6:
+  Author: LeoCx1000
+  Comment: This sounds like a smart tag, but with extra steps: Apple AirTags, Samsung SmartTags, Tile... Tiles? which use Bluetooth Low Energy to connect to nearby phones, and use said phones to "call home" and anonymously broadcast the tag location.
+
+However the fact that you can get the full contract info is nice. Good project :)
+  Score: -10
+  Created UTC: 2024-07-24 23:22:01
+
+Note: This post has only 6 comments at the time of scraping.

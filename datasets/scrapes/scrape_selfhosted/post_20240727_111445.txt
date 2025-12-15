@@ -1,0 +1,62 @@
+Post Title: port forward not working
+Author: flafmg_
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ed216g/port_forward_not_working/
+Number of comments: 17
+Created UTC: 2024-07-26 23:22:32
+
+Post Content:
+so, title, i posted here other time but my network was on a cgnat, i talked with my ISP and now they seted an static ip for me but my port forwarding still not working
+
+[fock](https://preview.redd.it/sfr77xw22yed1.png?width=1126&amp;format=png&amp;auto=webp&amp;s=459eda400fe1832fdc2563834e775e384d256409)
+
+[ihatemylife](https://preview.redd.it/s5j40ju54yed1.png?width=760&amp;format=png&amp;auto=webp&amp;s=06166c1a0830ed5d474643cab0e9acf844787047)
+
+[it is not my \\"server\\"'s firewall](https://preview.redd.it/ejjz5tkd4yed1.png?width=521&amp;format=png&amp;auto=webp&amp;s=c1c9927796734b4d772064eab83a7f7c02fd5ac1)
+
+am i dumb?
+
+(btw, no, tailscape and others will not work since the request is comming from a website not from someone)
+
+thanks for any help, have a good day :3
+
+Edit for some clarifications:
+
+1. static ip seems to be working fine:
+
+https://preview.redd.it/rmbjo99kpyed1.png?width=855&amp;format=png&amp;auto=webp&amp;s=afd3156b9e7b5c514ad95fa2779cff713890dc34
+
+https://preview.redd.it/8qszuyrqpyed1.png?width=697&amp;format=png&amp;auto=webp&amp;s=33354d1792f3a4b79a8e571b72170312543d2a92
+
+Edit 2: the issue seems like to be in my machine, even local conections from other pcs arent working
+
+Top 3 comments:
+Comment 1:
+  Author: FaBMak
+  Comment: You're sure, you're out of CGNAT. Access ifconfig.me to check your public IP.
+
+Port forwarding only works for IPv4. Can you try use IPv6?
+
+You're firewall rules seems right. If you disable It, can you connect to It?
+  Score: 1
+  Created UTC: 2024-07-27 00:09:36
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: Couple of questions just to clarify a couple of things.
+
+- is the IP that you show on your router) firewall is the correct IP that is on the machine? Did you create a static IP for the machine on your router/ device that handles DHCP?
+- are you able to connect to the machine locally( within your network) with the exact same port?
+- can you confirm that you have a public static IP and it is working correctly?
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-27 00:10:49
+
+Comment 3:
+  Author: Rude-Gazelle-6552
+  Comment: Did you ensure you change your router configuration? If you got a static address you'd have to configure this unless they own the router, and would configure it for you.
+  Score: 1
+  Created UTC: 2024-07-27 00:48:28
+
+Note: This post has only 3 comments at the time of scraping.

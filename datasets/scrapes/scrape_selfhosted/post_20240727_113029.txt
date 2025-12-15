@@ -1,0 +1,20 @@
+Post Title: Help auto downloading artist images for music server
+Author: BigMack3000
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ec0779/help_auto_downloading_artist_images_for_music/
+Number of comments: 6
+Created UTC: 2024-07-25 17:09:38
+
+Post Content:
+Hey, i have nas for my music.  I want to use LMS aa the back end and Symfonium as the app.  All my files are organized and tagged properly.  Is there any program or way to auto download artist images fir my library to use in the app?
+
+Thanks!
+
+Top 1 comments:
+Comment 1:
+  Author: Salopridraptor
+  Comment: Silly question, but if your music is tagged properly, why don't you use navidrome as your back end? You will have the pictures for the artist.
+  Score: 1
+  Created UTC: 2024-07-25 18:59:53
+
+Note: This post has only 1 comments at the time of scraping.

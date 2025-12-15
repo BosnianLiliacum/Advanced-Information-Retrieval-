@@ -1,0 +1,33 @@
+Post Title: CopilotKit v1.0 (MIT) - an open-source react library for in-app AI (chatbots, Textareas, agents)
+Author: llathreddzg
+Score: 27
+URL: https://www.reddit.com/r/selfhosted/comments/1eay3uc/copilotkit_v10_mit_an_opensource_react_library/
+Number of comments: 2
+Created UTC: 2024-07-24 10:31:15
+
+Post Content:
+Hey everyone, I am a contributor to [CopilotKit](https://github.com/CopilotKit/CopilotKit), an open-source framework for building in-app AI copilots &amp; other features.
+
+We just launched our version 1.0 and the library is really coming together as a powerful open-source resource for AI web development
+
+Here's some of what's new in the v1.0:
+
+1. Fully customizable generative UI.
+2. React components for AI chatbots, AI textareas &amp; Agents.
+3. New GraphQL powered protocol that makes it easier to contribute &amp; extend.
+4. Cloud Beta for an easier deployment of the runtime.
+
+Here's the full [change log](https://ai88.substack.com/p/copilotkit-v1-launch).
+
+The library is fully open-sourced under MIT license and self host-able. We're still looking for more features to add, happy to hear your thoughts :)
+
+[https://github.com/CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit)
+
+Top 1 comments:
+Comment 1:
+  Author: Only-Abbreviations80
+  Comment: Do you support LangGraph?
+  Score: 2
+  Created UTC: 2024-07-24 10:55:51
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,62 @@
+Post Title: Store Product Management, SPM (My project in python)
+Author: [deleted]
+Score: 52
+URL: https://www.reddit.com/r/Python/comments/1eae015/store_product_management_spm_my_project_in_python/
+Number of comments: 16
+Created UTC: 2024-07-23 17:41:05
+
+Post Content:
+Im 15 years old and I made a project that could be used in stores to put barcodes on products and scan them. This is one of my project that im the most proud of (I dont even know why lol) but I wanted to share it here to see if you guys could recommend me few improvements on this project and if you have other projects ideas. 
+
+Thanks in advance and here is the link to the github project: [https://github.com/TuturGabao/Store-Product-Management-SPM](https://github.com/TuturGabao/Store-Product-Management-SPM)
+
+Top 6 comments:
+Comment 1:
+  Author: Oenomaus_3575
+  Comment: I Wish I started at your age, cool stuff
+  Score: 11
+  Created UTC: 2024-07-24 00:06:29
+
+Comment 2:
+  Author: BluesFiend
+  Comment: * Best to stick to python naming conventions, `snake_case` for modules/variables/functions, `PascalCase` for classes/objects.
+* Look into setup.py or pyproject.toml to make your package installable, you have dependencies but anyone cloning your code would not be able to replicate the required installs.
+* Look up .gitignore to keep the repo clean of things like generated images from when you run it locally, and things like `__pycache__` folders
+  Score: 7
+  Created UTC: 2024-07-23 19:09:02
+
+Comment 3:
+  Author: riklaunim
+  Comment: * You should avoid using globals in your code.
+* Write tests for your code and write clean and easy to maintain/test code
+* Follow pep8 and linter recommendations for code style
+* tkinter is not the best thing for UI nowadays, especially if you are looking for a commercial career
+* Don't be afraid to commit - write clear and understandable commit messages, if needed add commit comments to explain reasoning behind given commit. Don't commit big blobs of multiple changes, don't publish 1-commit projects that then get abandoned.
+
+A shop will have a database of good available and POS system will scan product barcodes and match their serial numbers with records in the database and then get the price, tax rate, update stock and whatever else.
+
+Usually products come with their own barcodes and if needed there are barcode sticker printers so either way adding a new product or updating stock will also work based on scanning the barcode and updating the data.
+
+Desktop GUI can be a thing but for smaller systems it can be something embedded or for bigger systems - web apps (which are easier to prototype). In either way it will very likely not run on local data but access some storage over the network - either local or external.
+  Score: 18
+  Created UTC: 2024-07-23 18:48:18
+
+Comment 4:
+  Author: garma87
+  Comment: Nice job man well done! 👍 I couldn’t do what you did at 15 so I think you’re well on your way!
+  Score: 5
+  Created UTC: 2024-07-23 21:21:02
+
+Comment 5:
+  Author: adventure-knorrig
+  Comment: Nice project! I agree with the comment about classes - the whole accessData file is very redundant but don’t sweat it and keep coding 🙏
+  Score: 2
+  Created UTC: 2024-07-24 18:24:30
+
+Comment 6:
+  Author: MrCloudyMan
+  Comment: You should learn about classes in python to avoid relying on globals as much.
+  Score: 1
+  Created UTC: 2024-07-24 12:46:32
+
+Note: This post has only 6 comments at the time of scraping.

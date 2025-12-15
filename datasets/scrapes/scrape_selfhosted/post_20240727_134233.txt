@@ -1,0 +1,48 @@
+Post Title: Best Docker options for self-hosted queues
+Author: rightful_vagabond
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e41s3q/best_docker_options_for_selfhosted_queues/
+Number of comments: 5
+Created UTC: 2024-07-15 18:11:45
+
+Post Content:
+I'm writing a self-hosted AI chatbot (not trying to win any awards or break the SOTA, just experimenting for a fun side project and to learn the technologies).
+
+The way its currently set up, the chatbot calls a python API I built, which directly calls an ollama API running on my machine. I wanted to add a queue to buffer between the two, though I mostly care about the fact I will need to wait on the AI if multiple messages come in before the first one is done processing/generating.
+
+I want to do the whole thing hosted locally (I have a server with a 12 gb 3060 GPU for the AI stuff), so I was wondering what sorts of queues/workers I could set up with python and/or docker to handle that use case.
+
+I don't mind if it's not the most efficient way to do it, but I would prefer it to be relatively simple to use after setting it up.
+
+If there are whole projects that handle the retrieval augmentation, queuing, and generation, I might be willing to just switch to that instead.
+
+Let me know if this isn't the right sub to put this in.
+
+Top 4 comments:
+Comment 1:
+  Author: Adonis_2115
+  Comment: https://github.com/rq/rq
+
+This should work. It will use redis very simple queue.
+  Score: 2
+  Created UTC: 2024-07-15 18:44:07
+
+Comment 2:
+  Author: Ariquitaun
+  Comment: Redis has built in queuing. It's bare bones but does work
+  Score: 2
+  Created UTC: 2024-07-15 19:03:59
+
+Comment 3:
+  Author: agiforcats
+  Comment: Try [Celery](https://docs.celeryq.dev/en/stable/index.html). You can use it with Rabbit or Redis as a broker using docker. It is fast, distributed, very flexible, docs provide examples of patterns for use with docker. I have had success with this approach and found it fairly easy to get started.
+  Score: 1
+  Created UTC: 2024-07-15 18:33:54
+
+Comment 4:
+  Author: CC-5576-05
+  Comment: What's wrong with a FIFO queue? Just use a list doesn't get simpler than that, append and pop(0).
+  Score: 1
+  Created UTC: 2024-07-16 09:34:22
+
+Note: This post has only 4 comments at the time of scraping.

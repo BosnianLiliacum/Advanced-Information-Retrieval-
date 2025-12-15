@@ -1,0 +1,62 @@
+Post Title: AskItRight: AI-Powered PDF Query App (RAG) 
+Author: underrated-squirrel
+Score: 11
+URL: https://www.reddit.com/r/ollama/comments/1eclluq/askitright_aipowered_pdf_query_app_rag/
+Number of comments: 4
+Created UTC: 2024-07-26 11:21:40
+
+Post Content:
+Hello Reddit!
+
+https://preview.redd.it/iqc39egqjued1.png?width=250&amp;format=png&amp;auto=webp&amp;s=3a94a289cd504c58194d72f27f6d15e179a67b27
+
+I’ve been tinkering with some libraries and just finished building an app I’m so excited to share with you all. I’d love for you to check it out and let me know what you think!
+
+🔗 GitHub Repository: [https://github.com/AbdArdati/PDFQueryAI](https://github.com/AbdArdati/PDFQueryAI)
+
+# Key Features 🔑
+
+1. **PDF Management**:
+   * **Upload PDFs**: 📤 Users can upload PDF files through the upload interface. These files are processed and stored in the system.
+   * **List PDFs**: 📋 Users can view a list of all uploaded PDF files through the available PDFs interface.
+   * **Delete PDFs**: 🗑️ Users can remove specific PDF files using the delete functionality available in the PDF management interface.
+   * **View PDFs**: 👁️ Users can open and view the content of PDF files in a new browser tab directly from the list of PDFs.
+2. **Query Handling**:
+   * **Ask Questions to PDF**: 🤔 Users can submit questions about the content of uploaded PDFs using the query interface. The application uses the AI model to provide answers based on the PDF contents.
+   * **AI Integration**: 🤖 The l**lama3.1 model **is used to generate answers to queries from the content of the PDFs. This functionality is accessible through the AI query interface.
+
+   * **Prompt Templates**: 📝 Users can view and select from various prompt templates to guide the AI's responses, ensuring they are tailored to specific needs. (Currently in progress, with frontend Create, Update, and Delete to be implemented.)
+
+1. **Statistics and Administration**:
+   * **Clear Chat History**: 🧹 Users can clear previous chat interactions using the clear chat history button in the query section.
+   * **Clear Database**: 🚮 Deletes all stored PDFs and related data, effectively resetting the application’s state. This action is available in the database management section.
+   * **PDF Usage Statistics**: 📈 Provides information on how frequently each PDF has been queried, viewable through the statistics dashboard.
+
+This example demonstrated below is based on the 'Essays Expert' prompt template. The screenshot highlights how the system utilises PDF content to generate comprehensive responses at the top, while the lower section shows the output generated without PDFs, illustrating the impact of including detailed content.
+
+https://preview.redd.it/hne4qmpbkued1.png?width=2880&amp;format=png&amp;auto=webp&amp;s=bba7133d1cb8006c4087195a9ff8a581f587a205
+
+  
+I’m not an expert in this domain—just a big fan of its potential who’s been reading up on it. All feedback is welcome:)
+
+Top 2 comments:
+Comment 1:
+  Author: kongnico
+  Comment: thats really nice work and let me also salute you for a great Github Repository &lt;3
+  Score: 1
+  Created UTC: 2024-07-26 15:42:43
+
+Comment 2:
+  Author: swehner
+  Comment: Thanks! I had to do **pip install hf\_transfer** to get past an error: 
+
+    Could not download model from HuggingFace: Fast download using 'hf_transfer' is enabled (HF_HUB_ENABLE_HF_TRANSFER=1) but 'hf_transfer' package is not available in your environment. Try `pip install hf_transfer`.Falling back to other sources." 
+
+Now its good and runs without errors.
+
+  
+However, and this is unlikely to be connected to your Python app, I haven't been able to get any good answers out of this, they are all similar to "It seems like you provided a block of text that appears to be a summary or abstract of various research papers related to product development, customer needs, and social media analysis. However, it doesn't seem to be a case study of Huawei phones as mentioned in the beginning." (I dont think I'm doing anything related to Huawei phones)
+  Score: 1
+  Created UTC: 2024-07-26 18:55:03
+
+Note: This post has only 2 comments at the time of scraping.

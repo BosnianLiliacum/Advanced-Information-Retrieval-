@@ -1,0 +1,26 @@
+Post Title: Any recommendations for an OpenVPN client iOS app that supports On Demand connections?
+Author: ctallc
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6ru7m/any_recommendations_for_an_openvpn_client_ios_app/
+Number of comments: 2
+Created UTC: 2024-07-19 01:30:08
+
+Post Content:
+I use OpenVPN to connect back to my house when I am away from home. I have been using the OpenVPN Connect iOS app to do this, but the VPN doesn't always connect back home when I leave my home's WiFi network. I noticed that some VPN apps support the "On Demand" feature that allows you to specify specific SSIDs and/or scenarios where the VPN does not need to connect and, sadly, OpenVPN does not.
+
+  
+I was looking at  [Passepartout](https://passepartoutvpn.app/), but want to see if there are any other clients I should try before paying $10 for the On Demand support.
+
+  
+Does anybody have any recommendations for VPN Client iOS apps that support OpenVPN and On Demand?
+
+Top 1 comments:
+Comment 1:
+  Author: what-shoe
+  Comment: Tailscale (and Headscale if you want to go 100% self-hosted) supports VPN on demand but is Wireguard based instead of OpenVPN. In terms of performance this is actually a good thing, but I’m not sure if you have OpenVPN as a hard requirement.
+
+I went to Tailscale from OpenVPN 2 years ago and haven’t looked back.
+  Score: 2
+  Created UTC: 2024-07-19 01:54:26
+
+Note: This post has only 1 comments at the time of scraping.

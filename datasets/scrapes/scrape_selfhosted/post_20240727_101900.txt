@@ -1,0 +1,49 @@
+Post Title: paperless-ngx questions
+Author: Wolfeehx
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e69pa7/paperlessngx_questions/
+Number of comments: 12
+Created UTC: 2024-07-18 12:03:03
+
+Post Content:
+Good afternoon all.
+
+Though I have dabbled with using a couple of raspberry pi's in the past and have done some little bits and bobs like running an external facing webserver and hosting a static site on it, and my own app at another time, it's been some time since I did so and I would absolutely consider myself a noob.
+
+Today I've managed to set up **docker desktop** on my PC, running **Windows 10 &amp; WSL**. I've gotten it to run a **paperless-ngx container**. With a bit of ballache and a lot of fiddling I've managed to make it use my consume directory properly and I actually really like this thing.
+
+I have however run into a couple of issues and despite abundant google searches, reading the paperless-ngx docs, reading posts on stack-overflow etc I can't seem to find a solution to a few queries I have and I'm wondering if perhaps some kind redditors can advise me on what I'm doing wrong or where the solution may lie. My queries are:
+
+1. Within the context of the above setup, how do I wipe the volume that docker is using to persist the data, i.e. how do I get a fresh-start setup as if I was running the container for the first time. Do I use *docker volume rm name\_of\_a\_volume* and individually delete all four volumes that were created when I spun up the container for the first time, and then presumably when I run *docker compose up* the volumes are re-created by docker?
+2. When I was testing document consumption I successfully imported some documents, then deleted them within the paperless-ngx web interface. Now that I have a handle on how things are work I've tried to do a bigger consume, with more documents, but I find that documents that were previously imported and deleted aren't imported and there's an error message in the log entry: **The following error occurred while storing document Appliance Insurance letter - Samsung Freezer - 20th March 2024.pdf after parsing: (1062, "Duplicate entry '5ed9a7e3757e7e04cad82cf4837868f4' for key 'documents\_document\_checksum\_75209391\_uniq'")** - How do I re-import a document successfully?
+3. So far I've been able to successfully access the web interface for paperless-ngx on the PC the container is running on by opening [*https://127.0.0.1:8000*](https://127.0.0.1:8000) in a web browser. So then I used *ipconfig /all* to discover both my machine's real IP address within my home network and another IP address that comes from *Hyper-V Virtual Ethernet adapter* - when I try to access paperless ngx in a web browser in a different machine on the network via *https://real\_ip\_address:8000* or *https://virtual\_ip\_address:8000* neither works. This is not a networking issue per se, if I spin up one of my self-written apps which uses an express.js server via node.js running on bare metal in windows I am able to access the hosted app just fine. I presume there is some manner of configuration needed to expose paperless-ngx on the home network - but I can't figure out what that configuration is or where it goes. I only want paperless-ngx accessible within the home network, not from outside the home.
+
+All assistance is gratefully appreciated, thank you in advance for your kind assistance.
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: TL;DR – I can only urge you to stop using Docker on Windows. Docker Desktop or Docker on Windows are garbage products. This is not Windows bashing, this is Docker on Windows bashing. Get a hold of any Linux you can get, bet it a VM or a dedicated machine. Paperless-ngx should replace your paper, and should therefore be run from a server with proper backup in place, because you are going to scan your most important documents. Plan for that. If you only want to try out paperless-ngx. Setup a VM on your Windows desktop via VMware Workstation (its free), install any Linux you want or like and use Docker there.
+  Score: 11
+  Created UTC: 2024-07-18 12:22:08
+
+Comment 2:
+  Author: LimDul79
+  Comment: If you wipe the Docker Volumes, that is a fresh start. The Docker Volumes are the only place a container can store persistent data. So shutdown the container, remove everything in the volumes and you have a fresh start.
+
+I don't know if docker volume rm removes also the contents of the volume or if it it is later recreated, the data is still there. So check the file explorer.
+
+Regarding the checksum error - paperless has a thrash and as long as a document is in the thrash you can't reimport it. Empty the trash and you will be fine.
+
+  
+If you have the ports forwarded in the docker-compose file, it should work with the ip adress of your local machine and port. If it's not working, I have no clue. What I usually do, I don't foreward the ports of the application and use a reverse proxy to access the application. I use nginx, but traefik is as far as I read the more common solution.
+  Score: 2
+  Created UTC: 2024-07-18 12:55:38
+
+Comment 3:
+  Author: suicidaleggroll
+  Comment: On #3 you keep mentioning https, but last I checked paperless doesn’t support https.
+  Score: 0
+  Created UTC: 2024-07-18 13:01:35
+
+Note: This post has only 3 comments at the time of scraping.

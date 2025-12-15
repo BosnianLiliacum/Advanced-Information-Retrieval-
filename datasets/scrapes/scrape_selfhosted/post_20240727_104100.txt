@@ -1,0 +1,73 @@
+Post Title: How do you prefer self-hosted applications handle authentication?
+Author: littlebeach3199
+Score: 26
+URL: https://www.reddit.com/r/selfhosted/comments/1e4t23e/how_do_you_prefer_selfhosted_applications_handle/
+Number of comments: 21
+Created UTC: 2024-07-16 16:29:36
+
+Post Content:
+Hi, I'm developing a couple of self-hosted applications that currently are only used by myself. I've built them with support for OpenID Connect for authentication. As I make progress towards eventually sharing them with others, that got me thinking, how do most people prefer authentication is handled?
+
+Do you prefer an application provides:
+
+- Local authentication (username / password only for a single application)
+- OAuth/OIDC
+- LDAP
+- Other?
+- Some combination of the options.
+
+Every new authentication method takes time to implement and maintain, especially local authentication, so I'm curious what the community actually uses.
+
+Top 7 comments:
+Comment 1:
+  Author: hereisjames
+  Comment: Modern auth via OAuth/OIDC would be preferable. Local authentication and LDAP are both dated and don't give you much scope for 2FA etc. 
+
+Kudos to you for thinking about this, many app developers don't.
+  Score: 36
+  Created UTC: 2024-07-16 16:39:43
+
+Comment 2:
+  Author: ericesev
+  Comment: I prefer if the app can integrate with a JWT stored in a header or cookie. That means the app only needs to verify the JWT and otherwise not handle authentication on its own. I've been [modifying](https://gist.github.com/esev/acdab7e5258d6cbe0d60b46b2b7c43cb) the apps that I selfhost to support this. It works great with Cloudflare Zero Trust ([docs](https://developers.cloudflare.com/cloudflare-one/identity/authorization-cookie/validating-json/)), and other reverse proxies that handle the authentication before the app is even accessible.
+
+If you can implement OIDC, and store the JWT in a cookie, then skipping the OAUTH/OIDC when a valid JWT is already provided isn't too different. The app just needs the audience/issuer info and the URL for the JWKs. There are solid libraries that implement the rest.
+  Score: 10
+  Created UTC: 2024-07-16 18:15:59
+
+Comment 3:
+  Author: Rockshoes1
+  Comment: Authentik
+  Score: 3
+  Created UTC: 2024-07-16 21:30:42
+
+Comment 4:
+  Author: ervwalter
+  Comment: I prefer the option for both local auth and for OIDC.  Sometimes I authenticate into my network with another tool and I don't want to bother setting up OIDC authentication so local auth is easier (and a password manager makes my user experience painless).  
+
+But sometimes I do setup OIDC with my external OIDC provider.
+  Score: 5
+  Created UTC: 2024-07-16 21:39:39
+
+Comment 5:
+  Author: nosyrbllewe
+  Comment: I prefer OIDC as much as possible, at least as a developer. I really don't know why anyone chooses to implement any other alternative instead in a new program. While implementing OIDC can seem more complex than creating your own local auth at first glance, it is so much easier in the long run as you don't have to deal with many of the security nuances (e.g. storing hashed+salted passwords securely, implementing 2FA, and so forth).
+
+The only real advantage local authentication has over OIDC IMO is that it puts less dependency on the user to set up a proper authentication framework (i.e. they don't need to setup an OIDC server, such as Authentik), but that might just also be encouraging bad practices in the long-run.
+
+Though, I am not saying one shouldn't add in local authentication, but I don't think it should ever come at the cost of OIDC.
+  Score: 3
+  Created UTC: 2024-07-17 06:13:26
+
+Comment 6:
+  Author: ghoarder
+  Comment: I prefer they don't and then slap a Forward Auth reverse proxy and Authentication provider in front, this however only works well in a single user environment.  Since my provider of choice is Authelia then Trusted Header SSO or  OIDC would be good for me personally.
+  Score: 2
+  Created UTC: 2024-07-17 14:47:41
+
+Comment 7:
+  Author: Furki1907
+  Comment: [Authentik](https://goauthentik.io/) with 2FA as Frontend for every Application, and then the login of the application itself.
+  Score: 4
+  Created UTC: 2024-07-16 17:22:50
+

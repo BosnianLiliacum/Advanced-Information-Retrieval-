@@ -1,0 +1,18 @@
+Post Title: Selfhosted application data backup for android?
+Author: onephn
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e7cle3/selfhosted_application_data_backup_for_android/
+Number of comments: 1
+Created UTC: 2024-07-19 19:45:53
+
+Post Content:
+Hello all! I am looking to root my phone, though I would like to not lose all of my accounts/data. What would be the easiest solution to back everything up, application data and all for easy restore? I was thinking backing everything up to an AVD and restoring it via Google if that was a possibility, though if you guys have any better solutions I am more than happy to hear them! Not exactly sure which subreddit to post on, so apologies in advance if I am in the wrong place.
+
+Top 1 comments:
+Comment 1:
+  Author: dsahai
+  Comment: I've used Swift Backup (with root permission) + Syncthing to back up all the data on my Nextcloud.
+  Score: 1
+  Created UTC: 2024-07-20 04:03:15
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,74 @@
+Post Title: My Self Hosted Setup 2024
+Author: PranavVermaa
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e7c52m/my_self_hosted_setup_2024/
+Number of comments: 7
+Created UTC: 2024-07-19 19:26:25
+
+Post Content:
+Hey Self-Hosters!
+
+I just wanted to quickly share my Self Hosted Setup for 2024, and at the same time, wanted to look for better self-hosted alternatives to my servers.
+
+  
+So, Here is my Setup:
+
+1. Dashboard: Homer (Attached Image Down Below)
+2. Files Hosting: OwnCloud
+3. Photos Backup: Immich
+4. Files Backup: Syncthing
+5. Movies: Plex
+6. Game Server (Minecraft): Puffer Panel
+7. Password Manager: VaultWarden
+8. Notes: Notion (Not Self Hosted)
+
+  
+Just to Clarify, Syncthing Created a Sync Between my Server, and my Laptop, which both combined have 2 x 2TB SSD's, and, all data works from the server, but, just as a backup solution, I keep a exact 1 to 1 sync of all my data from my server to my laptop using Syncthing, using Encrypted Transfer.
+
+I also would like to switch to Heimdall from Homer, for my server dashboard, just because I am bored 😅
+
+I also use OwnCloud, because I used to use NextCloud, but, that was too slow for my use case scenario.
+
+Also, I have wanted to know, is there any self hosted alternative to Notion (Notes App)? Because I have not been able to find any good alternative like it.
+
+Any Tips/Tricks/Alternatives would be appreciated!
+
+
+
+[Server Details](https://preview.redd.it/mr92l0im0jdd1.png?width=993&amp;format=png&amp;auto=webp&amp;s=1cfe96256dd24ea44145f3ca37722bf8a04e0a7e)
+
+[Homer Dashboard](https://preview.redd.it/myvju9ygzidd1.png?width=1856&amp;format=png&amp;auto=webp&amp;s=493bcdbd9c01cbb2d803879bb8a1f48215fd0cc3)
+
+  
+
+
+Top 3 comments:
+Comment 1:
+  Author: FuriousRageSE
+  Comment: About ownCloud, im looking into Seafile instead of oc/nc, since i dont need all that other "bloat" oc/nc offers.
+
+\--
+
+About note-stuff i currently do trello, but was only today wondering what self hosted that i could use instead, that is slimmer than trello (dont really need all the functions.. like only need the cards, checkboxes, and those "simpler" stuff)
+
+\--
+
+Boomarks, i just recently installed Floccus and syncs my bookmarks to a private github repo.. wonder if its easy(?) to have those bookmarks shown in a homepage or similar self hosted page.
+  Score: 2
+  Created UTC: 2024-07-19 19:44:22
+
+Comment 2:
+  Author: Whiplashorus
+  Comment: For notes I recommend anytype.io
+  Score: 2
+  Created UTC: 2024-07-19 22:24:09
+
+Comment 3:
+  Author: nothingveryobvious
+  Comment: The closest things I’ve found to Notion are [Docmost](https://docmost.com/), [SiYuan](https://b3log.org/siyuan/en/), and [AFFiNE](https://affine.pro/). 
+
+But honestly, I think Notion still beats them by a long shot for me. So I’ve stuck to Notion. Curious what you think.
+  Score: 2
+  Created UTC: 2024-07-19 22:26:25
+
+Note: This post has only 3 comments at the time of scraping.

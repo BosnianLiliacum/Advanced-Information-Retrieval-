@@ -1,0 +1,39 @@
+Post Title: Open source distributed Platform as a Service (PaaS). A self-hosted Vercel / Netlify / Cloudflare alternative.
+Author: web3samy
+Score: 12
+URL: https://github.com/taubyte/tau
+Number of comments: 9
+Created UTC: 2024-07-19 22:35:08
+
+Post Content:
+[This post has no text content]
+
+Top 4 comments:
+Comment 1:
+  Author: SirMasterLordinc
+  Comment: Thank you.
+  Score: 2
+  Created UTC: 2024-07-19 23:23:30
+
+Comment 2:
+  Author: Docccc
+  Comment: When i try to login at the sandbox (github) i get an error
+
+“could not connect to seer for https://seer.tau.undefined”
+  Score: 1
+  Created UTC: 2024-07-20 15:55:33
+
+Comment 3:
+  Author: Thin_Pie8081
+  Comment: Sounds like a really cool project! If you're also ever looking to grow a community around your platform with newsletters, beehiiv has been a game-changer for me. Their advanced analytics and customizability make it super easy to manage and monetize content. Keep up the great work!
+  Score: 2
+  Created UTC: 2024-07-21 04:44:56
+
+Comment 4:
+  Author: sYsguard
+  Comment: could not connect to seer for [https://seer.tau.undefined](https://seer.tau.undefined)  
+that's all for now guys
+  Score: 1
+  Created UTC: 2024-07-21 08:38:56
+
+Note: This post has only 4 comments at the time of scraping.

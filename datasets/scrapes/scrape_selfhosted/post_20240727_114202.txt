@@ -1,0 +1,35 @@
+Post Title: Assist with iventoy
+Author: fliberdygibits
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eb9ks1/assist_with_iventoy/
+Number of comments: 4
+Created UTC: 2024-07-24 19:01:54
+
+Post Content:
+I've got iventoy setup in a proxmox lxc.  DHCP settings plugged in to opnsense and everything seems to be running.  I can boot a system, arrive at the iventoy menu and see any isos I've loaded.  However when I select an iso to boot I get :
+
+&gt;  
+error: invalid magic number.
+
+&gt;error: you need to load the kernel first.
+
+&gt;  
+Press any key to continue........
+
+  
+Doesn't matter what iso I try I get this every time.  Everything up to that point of ACTUALLY booting an iso seems to work fine.  No errors or warnings in the logs tho I'm still going thru them at the moment.
+
+Top 2 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 2
+  Created UTC: 2024-07-24 19:41:06
+
+Comment 2:
+  Author: CubeRootofZero
+  Comment: As much as I like Ventoy, I had a hard time getting iVentoy to work. Ended up switching to netboot.xyz and prefer it. Give it a go, you might like it better as a PXE boot solution.
+  Score: 1
+  Created UTC: 2024-07-25 01:33:24
+
+Note: This post has only 2 comments at the time of scraping.

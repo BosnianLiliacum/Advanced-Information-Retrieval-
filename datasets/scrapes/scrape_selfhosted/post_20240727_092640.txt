@@ -1,0 +1,19 @@
+Post Title: a problem that i cant solve.
+Author: SupaSaiyan9000
+Score: 10
+URL: https://www.reddit.com/r/selfhosted/comments/1e9dkir/a_problem_that_i_cant_solve/
+Number of comments: 3
+Created UTC: 2024-07-22 12:53:45
+
+Post Content:
+so i have a lot of digital ocean credits. and i created a docker on ubuntu 22.04 and then installed Runtipi on it. and have been using and managing all apps via runtipi as its very easy. have about 20 apps or so. no the problem that i am facing is my server has only 240 gb storage and i creeated a new volume in digital ocean and mounted it to the instace via the instructions provided by digital ocean , i can access the instance via commandline but i cant access it in the runtipi server. how can i attach that instance to the runtipi server and store my media on it?
+
+Top 1 comments:
+Comment 1:
+  Author: Bonsailinse
+  Comment: You mounted the volume to your server so now it has a path. Use that path to store data on it like you would use any other path. 
+runtipi allows you to overwrite docker-compose files, change paths there.
+  Score: 4
+  Created UTC: 2024-07-22 13:04:23
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,18 @@
+Post Title: Calendar event booking system?
+Author: pretty_bastard86
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e5j84m/calendar_event_booking_system/
+Number of comments: 3
+Created UTC: 2024-07-17 14:13:28
+
+Post Content:
+So I need some sort of a calendar booking system where I can send a link to applicants (work in recruitment) and they can see available slots in my Outlook calendar and book an interview. Want to self host it. Any advice? 
+
+Top 1 comments:
+Comment 1:
+  Author: barry_flash
+  Comment: cal.com self hosted is good - https://cal.com/docs/introduction/quick-start/self-hosting/docker#requirements
+  Score: 5
+  Created UTC: 2024-07-17 23:04:04
+
+Note: This post has only 1 comments at the time of scraping.

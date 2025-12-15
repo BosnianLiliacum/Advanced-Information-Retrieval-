@@ -1,0 +1,94 @@
+Post Title: Unable to access Docker containers routed through VPN container
+Author: Ozzah
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e97ylj/unable_to_access_docker_containers_routed_through/
+Number of comments: 5
+Created UTC: 2024-07-22 07:07:14
+
+Post Content:
+I have a Docker Compose with a WireGuard container (connected to SurfShark) and some other services that route their traffic through WireGuard.
+
+For example:
+
+```yaml
+    services:
+        wireguard:
+            container_name: wireguard
+            image: lscr.io/linuxserver/wireguard
+            cap_add:
+                - NET_ADMIN
+                - SYS_MODULE
+            environment:
+                - PUID=1000
+                - PGID=1000
+                - TZ=Australia/Sydney
+            volumes:
+                - ./docker/wireguard/config:/config
+                - /lib/modules:/lib/modules
+            dns:
+                - 1.1.1.1
+                - 1.0.0.1
+                - 8.8.8.8
+                - 8.8.4.4
+            ports:
+                - 51820:51820/udp
+                - 19999:19999 # Wireguard
+            sysctls:
+                - net.ipv4.conf.all.src_valid_mark=1
+            restart: unless-stopped
+        netdata:
+            container_name: netdata
+            image: netdata/netdata
+            #ports:
+            #    - 19999:19999
+            cap_add:
+                - SYS_PTRACE
+                - SYS_ADMIN
+            environment:
+                - PUID=1000
+                - PGID=1000
+            security_opt:
+                - apparmor:unconfined
+            volumes:
+                - ./docker/netdata/config:/etc/netdata
+                - ./docker/netdata/lib:/var/lib/netdata
+                - ./docker/netdata/cache:/var/cache/netdata
+                - /:/host/root:ro,rslave
+                - /etc/passwd:/host/etc/passwd:ro
+                - /etc/group:/host/etc/group:ro
+                - /etc/localtime:/etc/localtime:ro
+                - /proc:/host/proc:ro
+                - /sys:/host/sys:ro
+                - /etc/os-release:/host/etc/os-release:ro
+                - /var/log:/host/var/log:ro
+                - /var/run/docker.sock:/var/run/docker.sock:ro
+            network_mode: "service:wireguard"
+            depends_on:
+                - wireguard
+            restart: unless-stopped
+```
+
+When I point my browser at `http://127.0.0.1:19999` it doesn't load; I get a connection timeout.
+
+When I move the `19999` port over to the `netdata` service and remove the `network_mode: "service:wireguard"`, I can access it fine.
+
+What do I need to change in the Docker Compose and/or the WireGuard connection conf to allow acess from the host?
+
+Thank you!
+
+Top 1 comments:
+Comment 1:
+  Author: cloudswithflaire
+  Comment: It’s not necessarily about changing something in the compose. 
+
+When you set that network mode, that’s the only network that container is going to be attached to. You are essentially telling container B to only use container/service A for network. 
+
+Meaning that container A itself needs to have access to the LAN.  
+
+I recommend you swap over from official Wireguard docker image to [Gluetun](https://github.com/qdm12/gluetun). The features and functions it offers greatly surpass the base WG image, and that get’s paired with some of the best documentation I’ve see for a project in this category. They should also go into more depth about how you can still access your containers locally, and why you may not want do so.
+
+Edit: added link
+  Score: 0
+  Created UTC: 2024-07-22 07:57:10
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,60 @@
+Post Title: Your yearly reminder to perform a docker system prune
+Author: nathan12581
+Score: 1183
+URL: https://i.redd.it/gefsdovrkbed1.png
+Number of comments: 161
+Created UTC: 2024-07-23 19:26:44
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: boxingdog
+  Comment: I use watchtower with WATCHTOWER_CLEANUP=true and run-once https://containrrr.dev/watchtower/arguments/#cleanup
+  Score: 267
+  Created UTC: 2024-07-23 19:40:49
+
+Comment 2:
+  Author: KoppleForce
+  Comment: What if I really need one of those images
+  Score: 48
+  Created UTC: 2024-07-23 21:05:52
+
+Comment 3:
+  Author: cavilesphoto
+  Comment: Use dockcheck [https://github.com/mag37/dockcheck](https://github.com/mag37/dockcheck) with updates... and pruning :D
+  Score: 64
+  Created UTC: 2024-07-23 20:13:28
+
+Comment 4:
+  Author: causal_friday
+  Comment: You have a disk large enough to only do this yearly?  This is a weekly chore for me ;)
+  Score: 21
+  Created UTC: 2024-07-23 21:33:00
+
+Comment 5:
+  Author: Devar0
+  Comment: RemindMe! 1 year "Docker prune"
+  Score: 29
+  Created UTC: 2024-07-23 22:27:52
+
+Comment 6:
+  Author: kupboard
+  Comment: Cron it!
+  Score: 8
+  Created UTC: 2024-07-23 21:22:23
+
+Comment 7:
+  Author: Silejonu
+  Comment: One of the many reasons I prefer Podman over Docker. A single line in my container configuration:
+
+    [Container]
+    AutoUpdate=registry
+
+And now I can have automatic updates that also automatically prune old images:
+
+    systemctl --user enable --now podman-auto-update.timer
+  Score: 31
+  Created UTC: 2024-07-23 21:28:22
+

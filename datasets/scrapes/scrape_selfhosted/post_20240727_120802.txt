@@ -1,0 +1,63 @@
+Post Title: Mass domain monitoring and management
+Author: spigandromeda
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1ea00lk/mass_domain_monitoring_and_management/
+Number of comments: 13
+Created UTC: 2024-07-23 05:35:38
+
+Post Content:
+I am searching for a domain monitoring software that allows to monitor (and maybe manage) hundreds of domains for a company. A lot of the domains are only registered/claimed to prevent fraud with them.
+
+The software is not required to do the actual work at the registrar (it would be really nice if it could do that, but it's not mandatory). Currently, multiple registars are used because not all of them support every TLD.
+
+The DNS zones of the most used domains is hosted by cloudflare. So some kind of cloudflare registration would be nice.
+
+If there is no self-hosted that can handle this, I would appreciate any suggetions for a SaaS provider.
+
+Top 5 comments:
+Comment 1:
+  Author: cspotme2
+  Comment: Monitor for what, just expiration?
+  Score: 3
+  Created UTC: 2024-07-23 06:00:28
+
+Comment 2:
+  Author: SuperQue
+  Comment: You're going about this the wrong direction. You want to manage domains, not monitor them.
+
+"Infra as code" software like [OpenTofu](https://opentofu.org/), [Pulumi](https://www.pulumi.com/), or [Terraform](https://www.terraform.io/).
+
+You positively check in your desired configuration into git and apply it to your registrar(s) and DNS server(s).
+  Score: 3
+  Created UTC: 2024-07-23 06:40:57
+
+Comment 3:
+  Author: r_hcaz
+  Comment: [https://domainmod.org/](https://domainmod.org/) may work for you? Its been a while since I have used it but I think it lets you import your domains from the registrar but it will not do any kind of registration
+  Score: 2
+  Created UTC: 2024-07-23 08:43:57
+
+Comment 4:
+  Author: NikStalwart
+  Comment: If it is DNS management you want, then I recommend [DNSControl](https://docs.dnscontrol.org/). Even has Cloudflare support.
+
+If you want to also talk to registrars to **register** domains themselves, that is more challenging. Domainmod (mentioned by someone else) has integrations for some but not all registrars. 
+
+If you want to monitor your DNS records (i.e, are they live), you can use any number of monitoring tools to do that, from something as simple as running a bash script with `dig` against a public resolver to something as complex as the same thing but reporting to a grafana dashboard and running on a lot of edge servers for multiperspective validation.
+
+If you want to monitor WHOIS information for (unauthorized) changes, the situation is even worse. There are commercial WHOIS API proviers that *try* to wrangle the data into a machine-readable state but you'd need to pay for those services and write your own apps around it. Or you could try to write your own and deal with being rate-limited and deal with trying to parse response data.
+
+HTH.
+  Score: 2
+  Created UTC: 2024-07-23 10:59:06
+
+Comment 5:
+  Author: bishopi_io
+  Comment: Feel free to try [https://bishopi.io/tools/domain-monitor](https://bishopi.io/tools/domain-monitor)   
+Monitors by far the most whois, pricing (if any), dns records and more. 
+
+Fee free to DM me if you have any questions.
+  Score: 1
+  Created UTC: 2024-07-23 11:19:38
+
+Note: This post has only 5 comments at the time of scraping.

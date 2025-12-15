@@ -1,0 +1,26 @@
+Post Title: Selfhosted phone number
+Author: fly_israel
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e438n8/selfhosted_phone_number/
+Number of comments: 3
+Created UTC: 2024-07-15 19:09:22
+
+Post Content:
+I tried to install IP telephony, installed asterisk, freexbd, the setup and connection with tellio is very complicated, is there something simpler?
+
+Top 2 comments:
+Comment 1:
+  Author: Go_F1sh
+  Comment: You should avoid this IMO. Being your own telco is not worth saving whatever Vonage will charge you.
+
+If you just want to learn check out FreePBX and related projects.
+  Score: 4
+  Created UTC: 2024-07-15 19:17:37
+
+Comment 2:
+  Author: Red_Redditor_Reddit
+  Comment: What are you trying to accomplish with this?
+  Score: 2
+  Created UTC: 2024-07-15 20:30:18
+
+Note: This post has only 2 comments at the time of scraping.

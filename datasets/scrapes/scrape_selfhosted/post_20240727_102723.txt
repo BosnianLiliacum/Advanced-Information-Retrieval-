@@ -1,0 +1,41 @@
+Post Title: How can I make a usb with filled passwords, usernames, emails
+Author: MissionImposiblue
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5rama/how_can_i_make_a_usb_with_filled_passwords/
+Number of comments: 10
+Created UTC: 2024-07-17 19:40:35
+
+Post Content:
+I want to make my own multiple usb for the maximum security on my usb and I don't know what application/program use for make it safe and more encrypted i am thinking about bitwarden but it's online and that is not help me a lot I want to do on a USB and store it offline 
+
+Top 2 comments:
+Comment 1:
+  Author: 8fingerlouie
+  Comment: Be wary of storing stuff on a USB stick.
+
+Cheap flash will start losing data after as little as 6 months unpowered. After 2 years unpowered they’re pretty much all beginning to lose some data.
+
+Your best bet for long time storage is still either optical (Blu-ray) or good old paper. You can still encrypt files on optical storage, but once it’s written it will be read only.
+
+Depending on how long you plan on storing data, I would look into different storage options.
+
+- If your storage plans are relatively short term, I would look at something like Cryptomator or KeePassXC depending on what you’re storing. KeePassXC is great for passwords and other short bits of information. Cryptomator is great for almost all file types.
+- If your storage plans are decades, I would probably use something like tar files encrypted with GnuPG, or a LUKS encrypted Ext3/4 loopback image. If you do this, create a bootable media or at least include the binaries to decrypt/unpack the files. You have no idea how the world looks in a decade, and there are strong forces working to disallow strong encryption, so you could find yourself in a decade without the ability to decrypt files.
+
+Whatever you do, make sure you leave an unencrypted text file on the media with instructions for your future self on how to decrypt the files. It may be obvious to you now, but maybe it will be not so clear in 10 years. You probably also want to include a hint as to what the passphrase may be.
+
+Personally I archive data on 100GB Blu-ray M-disc media as well as a couple of external drives. I make identical copies and store them at geographically different locations along one of the drives. I use standard file formats and avoid using archives like zip/tar, and files are also stored uncompressed and unencrypted, and instead I rely on physical security.
+
+Storing an archive could mean that if there’s a read error in the media, all the files in that archive are unreadable, where as storing the individual files would only lose the files affected by the read error.
+
+As for encryption, 10 years is a **long** time to remember a password, so there’s a high risk that you will have forgotten it in a decade, or it’s something so weak that it’s easily broken, or you will have it written down somewhere else, which kinda defeats the purpose.
+  Score: 10
+  Created UTC: 2024-07-17 20:16:01
+
+Comment 2:
+  Author: Neomee
+  Comment: KeePassXC.
+  Score: 23
+  Created UTC: 2024-07-17 19:52:57
+
+Note: This post has only 2 comments at the time of scraping.

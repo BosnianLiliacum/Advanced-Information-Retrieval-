@@ -1,0 +1,81 @@
+Post Title: Your own “icloud” backup alternative
+Author: Futurenathan
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ealy2c/your_own_icloud_backup_alternative/
+Number of comments: 47
+Created UTC: 2024-07-23 23:04:42
+
+Post Content:
+I'm curious if anyone has done or seen any good alternatives to "backup to iCloud"?
+
+I envision a super simple high quality alternative where you can have network attached harddrive/NAS for everyday people. A simple Shopify site selling a nice simple hardware you plugin to your router and you can save things to easy. It might even offer a sort of redundancy or distributed "cloud" service for a fee to have a copy off site encrypted either in their servers or other users drives.
+
+I imagine if you market that right you could do a simple business that would make boatloads of money if built for everyday apple like users.
+
+If you might want to help build it let me know.
+
+
+
+\*\*\*Edit\*\*\*
+
+I mean instead of for tech people I want a company to make these and have a website thats super simple like [https://drinkag1.com/](https://drinkag1.com/) or [https://www.eightsleep.com](https://www.eightsleep.com) do with super easy quality for people that don't want the stress and want this kind of product/service.
+
+Top 7 comments:
+Comment 1:
+  Author: The_Nimaj
+  Comment: The simplicity you keep talking about in your comments are exactly *why* things like iCloud cost money. *\*Somebody\** has to do the nerdy stuff to make it simple and beautiful and those people won't do it for free.
+  Score: 7
+  Created UTC: 2024-07-24 03:43:59
+
+Comment 2:
+  Author: flicman
+  Comment: NextCloud
+  Score: 13
+  Created UTC: 2024-07-23 23:25:52
+
+Comment 3:
+  Author: velinn
+  Comment: You buy a Synology box, you stick hard drives in it, you download the apps on your phone. Synology is extremely simple. Anything you try to build yourself is going to be more complex than a Synology NAS.
+
+If you just want a hard drive plugged into your router that's cool, but what are you going to do when that hard drive fails and your whole family photos collection disappears? Better buy a second hard drive just in case then. But what happens if there is a fire or other natural disaster and both your drives get destroyed?
+
+You might think I'm being pedantic here, but this stuff happens. All the time. Even iCloud is going to have disks that fail because disks fail. There is no getting around that. The solution to this is redundancy (raid) and off-site backups. This stuff is built into a Synology NAS by default.
+
+If you go with a JBOD system (just a bunch of disks) you better think of the future and what you're going to do when something fails.
+  Score: 6
+  Created UTC: 2024-07-24 01:31:00
+
+Comment 4:
+  Author: Vogete
+  Comment: The market for this kind of thing is really small. You basically want a product that requires zero technical expertise, it just works, all the time, but the customer wants to make sure that the bytes are physically in the house.
+
+Sounds like a reasonable product at first until you consider a few things. Most non-technical people use the cloud because "it just works", all the time, every day. Now, as soon you move it away from the cloud, the following issues need to be solved for non-technical customers:
+
+- data backup, redundancy, etc: if the NAS is knocked on the floor, got water damage, burned the house down, how can the customer not lose everything?
+- storage drives die over time. Someone needs to maintain them. Who, and how, and for what cost?
+- do non-technical people even have an Ethernet cable for that NAS? Is it gonna support WiFi then? 
+- how do they access it when they are not home? Is there a reverse proxy service customers will have to pay for, to ensure internet access? If so, how much will it be, and how is it gonna be better for the customer, knowing the data still passes through some servers? Depending on the cost, why would customers pay for that instead of icloud?
+- this ugly (or pretty) box is now sitting in the apartment/house, emitting heat, maybe noise, consuming power
+
+There's just too many variables in this for non-technical people to be worth it.
+  Score: 6
+  Created UTC: 2024-07-24 07:26:07
+
+Comment 5:
+  Author: ColorfulNerdyGoddess
+  Comment: You setup the NAS give your “people” the apps on their simple phones. It’s nit getting any simplier than that. No need to go to the synology website. If you can set it up everything else is a walk in the park. Bottomline: Everything you ask for cries Synology 😉💪
+  Score: 5
+  Created UTC: 2024-07-24 02:44:37
+
+Comment 6:
+  Author: Lazy_Sl0b
+  Comment: Synology already does this, as does a bunch of other companies. You're a little late to the party my man.
+  Score: 8
+  Created UTC: 2024-07-24 01:15:00
+
+Comment 7:
+  Author: nothingveryobvious
+  Comment: [Immich](https://immich.app/)
+  Score: 3
+  Created UTC: 2024-07-23 23:23:45
+

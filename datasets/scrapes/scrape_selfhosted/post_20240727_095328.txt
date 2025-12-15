@@ -1,0 +1,40 @@
+Post Title: Anonymous payments. Looking for advice
+Author: KingBoaz03
+Score: 12
+URL: https://www.reddit.com/r/selfhosted/comments/1e7oepm/anonymous_payments_looking_for_advice/
+Number of comments: 11
+Created UTC: 2024-07-20 05:38:01
+
+Post Content:
+Not sure whether this is the right subreddit for this question. If not, please lead me to the right one.
+
+I live in an oppressional government and I made a website where I will be writing some oppositional stuff. I also want to take donations from to reader to help and keep the website running. I'm looking at BTCpay for my payments but not sure whether its safe and anonymous. Do anyone one of you know any Safe and Anonymous payment servers or is BTC pay good enough?
+
+
+
+Top 4 comments:
+Comment 1:
+  Author: blackstar2043
+  Comment: Don't use BTC, it's easily traceable through the blockchain. Instead,                      use Monero (XMR).
+  Score: 45
+  Created UTC: 2024-07-20 05:43:19
+
+Comment 2:
+  Author: DryArmPits
+  Comment: You want XMR, not BTC. Also, head over to kycnot.me for services and businesses that don't require kyc and support/facilitate crypto payments (e.g., VPS, VPN, web hosting, sim cards, regular shopping, etc.)
+  Score: 5
+  Created UTC: 2024-07-20 20:58:49
+
+Comment 3:
+  Author: Infermon
+  Comment: you could host on nostr and accept Chaumian E-Cash
+  Score: 2
+  Created UTC: 2024-07-20 18:32:46
+
+Comment 4:
+  Author: mnrode
+  Comment: This digital opsec guide, which also includes some information about crypto, may be useful to you: https://github.com/Anon-Planet/thgtoa
+  Score: 2
+  Created UTC: 2024-07-20 23:24:43
+
+Note: This post has only 4 comments at the time of scraping.

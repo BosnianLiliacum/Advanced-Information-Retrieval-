@@ -1,0 +1,24 @@
+Post Title: tailscale is slow after power loss
+Author: Mazen_Hajoj
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1eb77lr/tailscale_is_slow_after_power_loss/
+Number of comments: 3
+Created UTC: 2024-07-24 17:26:19
+
+Post Content:
+I was using tailscale and everything was perfect until a power loss happened on the remote side, then the connections is always relayed and the ping is 130ms min.  
+what should I do?
+
+Tailscale on both devices is the latest version, also tried to reset the network on both devices, flush DNS, reinstall Tailscale.  
+Help!
+
+Top 1 comments:
+Comment 1:
+  Author: julietscause
+  Comment: Is it using a relay or direct connect?
+
+https://tailscale.com/kb/1257/connection-types
+  Score: 2
+  Created UTC: 2024-07-24 19:02:53
+
+Note: This post has only 1 comments at the time of scraping.

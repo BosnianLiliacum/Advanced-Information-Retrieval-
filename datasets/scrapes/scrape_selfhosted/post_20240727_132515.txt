@@ -1,0 +1,36 @@
+Post Title: Anyone know of any containers for downloading documents and/or setting up an OCR watch folder?
+Author: Athensz343
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e557go/anyone_know_of_any_containers_for_downloading/
+Number of comments: 10
+Created UTC: 2024-07-17 01:00:57
+
+Post Content:
+I currently have a setup with a MeTube container which is a YouTube/Internet Video Downloader, that any URL link I send to my container will get downloaded and placed in an output folder in my NAS, that output folder is also a watchlist for folder for my Handbrake container which formats/transcodes the video files and places it in another folder, so I can later place it in my Emby Server, which I mainly use for short clip videos which I find interesting. So far I love my setup.
+
+Now I am looking for something nearly identical, where I can I copy and paste a URL Link that's tied to a .PDF/doc online and have that container/app download the PDF and place it in a folder which would also serve as a watchlist for an OCR container/app.
+
+As far as PDF tools, I do have StirlingPDF and Paperless-NGX in my Homelab, although I haven't looked at them in regards to whether they support the feature of monitoring a specific watchlist folder. So if you know a good OCR that can do this, I'd love it.
+
+Also, as far as a container that can download PDFs from URL Links, I am more heavily looking for something that can do it off places like ResearchGate, Internet Archive, Scribd and Academia.Edu just to name a few.
+
+Top 3 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Why download from YT and then reencode with Handbrake? Why not download it from YT already close to your desired format/resolution etc? YT already is not great quality as a source, reencoding only makes it worse. Does MeTube lack options? I havent used it in a long time. Maybe look at ` yt-dlp`  which offers a lot and can embed metadata so things like Plex/Jellyfin/Emby can display the videos nicely without any extra steps.
+  Score: 4
+  Created UTC: 2024-07-17 01:17:18
+
+Comment 2:
+  Author: ucgo
+  Comment: I know that paperless-ngx has a watching folder. I have never used it though.
+  Score: 1
+  Created UTC: 2024-07-17 02:09:29
+
+Comment 3:
+  Author: Timely_Anteater_9330
+  Comment: Paperless-ngx - been using it for a month and it’s amazing.  Little rough around the edges but overall I love it. Also can “consume” emails. I use it for bills, invoices, manuals, and statements.
+  Score: 1
+  Created UTC: 2024-07-17 06:55:13
+
+Note: This post has only 3 comments at the time of scraping.

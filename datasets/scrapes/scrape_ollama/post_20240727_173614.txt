@@ -1,0 +1,36 @@
+Post Title: Start Running LLaMA 3.1 405B In 3 Minutes With Ollama
+Author: Internal_Brain8420
+Score: 59
+URL: https://youtu.be/-MOzLjjAITU
+Number of comments: 10
+Created UTC: 2024-07-24 00:23:20
+
+Post Content:
+[This post has no text content]
+
+Top 4 comments:
+Comment 1:
+  Author: walloutlet01
+  Comment: Takes slightly longer than 3 minutes to download 405B. Just sayin’
+  Score: 7
+  Created UTC: 2024-07-24 02:48:49
+
+Comment 2:
+  Author: this_for_loona
+  Comment: How much ram?
+  Score: 4
+  Created UTC: 2024-07-24 01:42:04
+
+Comment 3:
+  Author: un-important-human
+  Comment: how much vram does it need?
+  Score: 1
+  Created UTC: 2024-07-24 06:34:31
+
+Comment 4:
+  Author: sudo_guy
+  Comment: Are the bigger models always better?
+  Score: 1
+  Created UTC: 2024-07-24 07:31:51
+
+Note: This post has only 4 comments at the time of scraping.

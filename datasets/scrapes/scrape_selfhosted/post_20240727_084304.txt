@@ -1,0 +1,55 @@
+Post Title: How would you backup this system? 
+Author: WArmstrong
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1ebu37x/how_would_you_backup_this_system/
+Number of comments: 2
+Created UTC: 2024-07-25 12:50:58
+
+Post Content:
+Hi, I’m struggling to understand the best way to backup (to a remote location) the various aspects of my setup. Whether to backup individual services or the disk/VM as a whole. 
+
+I have a truenas scale box which run two Ubuntu VMs with NFS volumes as their data drives. The disks behind it are SSDs in a RAID mirror configuration. 
+
+On those two VMs I have a mixture of docker services (moving more in this direction) and software natively installed. A lot of the natively installed applications use a Postgres instance. 
+
+So far I’ve been pg dumping the Postgres db and uploading to backblaze. While also using duplicity for some other locations like /etc/ to capture configuration. 
+
+Since it’s all on truenas and ZFS I have snapshots there as well. 
+
+I’d love a way to backup the whole disk or VM so in the event of tragedy I can just download a historic backup of the disk, attach it to a VM, and run it. Would such a setup be possible? What would you do with such a setup?
+
+Thanks 
+
+Top 2 comments:
+Comment 1:
+  Author: suicidaleggroll
+  Comment: That’s what I do.  Every VM is backed up in two ways:
+
+1) The VM image itself and configuration are snapshotted and saved off to my backup server which keeps daily and weekly copies going back a few months
+
+2) The individual services running in those VMs are backed up in incremental backups both on the same backup server and in the cloud.
+
+It’s a great setup for a few reasons:
+
+1) the raw VM images let you get back up and running immediately if something happens to the primary
+
+2) you still have cloud backups to get things going again in the event of a catastrophic failure that knocks out both the primary and the backup system, it just takes a bit more effort to rebuild the VM so you can load the individual service backups onto it.
+
+3) you don’t have to waste a bunch of money paying for cloud storage for a bunch of ancillary data in the raw VM images.
+
+That said, I’m using KVM, so full disk snapshots can be handled with a simple call to “virsh backup-begin”.  I don’t use TrueNAS so I’m not sure how to accomplish the same on that platform.
+  Score: 2
+  Created UTC: 2024-07-25 13:32:27
+
+Comment 2:
+  Author: Pretend_Development8
+  Comment: I pretty much have the same setup in terms of a platforms and VMs, I run Kubernetes though and persistent volumes are either point to SSD pool in Mirror or HDD pool in ZFS1 (eg photos, movies go to HDDs). 
+1. VM volumes are snapshotted using TrueNAS capabilities. 
+2. Dataset that contains Kubernetes PVs is snapshotted every week and also replicated to HDD pool where it is stored for 4 weeks.
+3. PVs are backed up with borg (borgmatic) daily and also stored on the HDD pool plus Borgbase
+4. Databases are also backed with borgmatic to HDD pool and Borgbase
+5. Some data like photos from HDD pool are synced to another windows based machine which in turn dumps it to Backblaze (personal license with unlimited storage)
+  Score: 2
+  Created UTC: 2024-07-25 23:53:17
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,25 @@
+Post Title: Ollama's versions of Llama3.1
+Author: anonXMR
+Score: 2
+URL: https://www.reddit.com/r/ollama/comments/1eawnal/ollamas_versions_of_llama31/
+Number of comments: 8
+Created UTC: 2024-07-24 08:57:17
+
+Post Content:
+Am I correct in the general assumption that
+llama3.1:8b-instruct-q8_0 should yield higher quality output than the default llama3.1:latest 4-bit quantised model?
+
+I think the default is also the "instruct" variant.
+
+Also, one needs to apply for access to Llama models on hugging face, how is it possible that Ollama gives instant access?
+
+Top 1 comments:
+Comment 1:
+  Author: Past-Grapefruit488
+  Comment: Meta had been working with common model repositories like AzureAI / Groq / Ollama to be ready for distribution on day 1.
+
+You need now apply for access on HF for Ollama's version of model. You only need HF access for better quality (unquantized) version of models.
+  Score: 2
+  Created UTC: 2024-07-24 11:30:48
+
+Note: This post has only 1 comments at the time of scraping.

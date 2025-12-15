@@ -1,0 +1,32 @@
+Post Title: Who deployed crowdsec docker with traefik ?
+Author: FoodvibesMY
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebmj2a/who_deployed_crowdsec_docker_with_traefik/
+Number of comments: 10
+Created UTC: 2024-07-25 04:59:20
+
+Post Content:
+I wanted to deploy crowdsec with traefik  using docker with a visual dashboard from metabase. 
+
+Anyone ever deployed it ? need the docker-compose file please...thank you thank you 
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: ~~[Jim garage coming to the rescue](https://youtu.be/bGOANkuxRNA?si=MZrzsn-M0f7Pk6dx)~~
+
+~~[files are here and in the video description](https://github.com/JamesTurland/JimsGarage/tree/main/Crowdsec)~~
+
+Edit: outdated information. Someone should tell Jim 😁 more information below
+
+Hope that helps
+  Score: 3
+  Created UTC: 2024-07-25 06:29:15
+
+Comment 2:
+  Author: bufandatl
+  Comment: I deployed crowdsec and traefik both in docker. But I used ansible no compose file.
+  Score: 2
+  Created UTC: 2024-07-25 10:14:48
+
+Note: This post has only 2 comments at the time of scraping.

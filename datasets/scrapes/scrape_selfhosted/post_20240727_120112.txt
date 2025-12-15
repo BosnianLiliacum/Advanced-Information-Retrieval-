@@ -1,0 +1,26 @@
+Post Title: cant find my mounted folder
+Author: Icebreaker081
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eab76h/cant_find_my_mounted_folder/
+Number of comments: 1
+Created UTC: 2024-07-23 15:48:02
+
+Post Content:
+i am currently new to this, i have ubuntu server installed and i have mounted a drive with my media into /home/user/media but when i go and search that folder into jellyfin i cant find it. I have tried reinstalling jellyfin, mounting and unmounting the drive to other folders but nothing works.
+
+I would like some help
+
+Top 1 comments:
+Comment 1:
+  Author: springs87
+  Comment: Which user is running jellyfin?
+
+You are more than likely having a permissions issue
+
+The user accounts directory tend to have stricter permissions than other folders. 
+
+Ideally it would be best to mount the external folder in somewhere like the /mnt directory
+  Score: 2
+  Created UTC: 2024-07-23 16:13:22
+
+Note: This post has only 1 comments at the time of scraping.

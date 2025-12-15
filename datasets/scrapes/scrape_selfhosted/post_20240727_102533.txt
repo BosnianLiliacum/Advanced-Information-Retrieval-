@@ -1,0 +1,69 @@
+Post Title: Why Pay for Managed PocketBase When You Can Self-Host Easily?
+Author: SeifAlmotaz
+Score: 13
+URL: https://www.reddit.com/r/selfhosted/comments/1e5ukce/why_pay_for_managed_pocketbase_when_you_can/
+Number of comments: 15
+Created UTC: 2024-07-17 21:55:31
+
+Post Content:
+Why would someone pay for a managed PocketBase service? I understand that there are self-hosted BaaS options like Appwrite and Supabase, which have their own managed cloud versions with pricing. But PocketBase's main appeal is that it's a self-hosted, one-file backend solution for your next project. With services like elest.io and pockethost.io offering managed PocketBase, I'm curious why people would opt for these when it's possible to set up your own server at a lower cost, taking less than half an hour to set up. What are the benefits of paying for a managed PocketBase service that make it worth the extra expense?
+
+Top 7 comments:
+Comment 1:
+  Author: Omni__Owl
+  Comment: "Why would someone pay for a managed &lt;service instance I can host myself&gt;?"
+
+Well, like any other service you can host yourself, people have different needs and constraints. For example, I'd likely not self-host my notes. I am okay with those being on Google Keep. But some people would feel better about hosting Trillium or something else to do that.
+
+It's not that big a mystery I feel.
+  Score: 32
+  Created UTC: 2024-07-17 22:09:39
+
+Comment 2:
+  Author: mrkesu
+  Comment: Why buy a plane ticket when you can get your own pilot's license 🥴
+
+
+
+Sigh.
+  Score: 17
+  Created UTC: 2024-07-18 06:21:55
+
+Comment 3:
+  Author: kdaveid
+  Comment: Without any idea what PocketBase does - and as an extensive selfhoster myself - I consider more and more the maintenance and operation costs (updating, energy, etc.) and not just the initial half hour setup cost. With every new service I host, I (and potentially others) have a dependency on myself. This can be a burden in the long run.
+  Score: 9
+  Created UTC: 2024-07-18 04:25:06
+
+Comment 4:
+  Author: clayyclayy
+  Comment: Let’s take it one step further!
+
+Why pay for &lt;insert service&gt; when I can build one myself?!?
+  Score: 7
+  Created UTC: 2024-07-18 00:44:41
+
+Comment 5:
+  Author: Themis3000
+  Comment: It's about growth and reliability. If you're running a startup company and you need to handle big influxes of traffic, you absolutely cannot afford downtime or to lose data you want it to be managed. Even though the cost of managed databases is sort of high, it's often almost nothing compared to the revenue of a company.
+  Score: 3
+  Created UTC: 2024-07-18 06:05:43
+
+Comment 6:
+  Author: somethingclassy
+  Comment: A random solo self hosted is not their target demo. Their target demo is people who want to use it in an application they’re selling and want to offload responsibility for DevOps.
+  Score: 3
+  Created UTC: 2024-07-18 06:20:28
+
+Comment 7:
+  Author: 83736294827
+  Comment: 1) I pay for some services because I want to support the project. 
+
+2) I have more money than time at this point in my life. 
+
+I mostly self host for the control of my software and data, not the cost. Even something as simple as pocketbase can be a pain as servers need regular maintenance and updates, backups need to be tested etc. 
+
+If anything, self hosting has shown me that many reasonably priced services are well worth the cost.
+  Score: 2
+  Created UTC: 2024-07-18 09:34:42
+

@@ -1,0 +1,71 @@
+Post Title: Whats your ideal DNS / proxy / webserver  situation ? 
+Author: Firm-Barracuda-173
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed5538/whats_your_ideal_dns_proxy_webserver_situation/
+Number of comments: 2
+Created UTC: 2024-07-27 01:56:59
+
+Post Content:
+&gt;Whats your ideal  DNS / webserver / Routing situation?
+
+i was a frontend developer (react+webgl for robotics visualization) for 15 years but i want to learn backend for next few months (too many steve jobs wanna-be ceos who think they are gods gift to design)
+
+right now im using
+
+PORK BUN - dns  
+CLOUD FLARE - just dns
+
+Reverse Proxy - Caddy
+
+WebServer - echo + go + htmx + etc
+
+Will probably add sqlite and turso and some other stuff.
+
+im not really attached to cloudflare or porkbun. not sure if theres better options. i had kinda had a lot of trouble adding new endpoints and stuff.
+
+Should i move to traefik or FRP?
+
+FRP seemed to have some cool features, and maybe i could remove cloudflare.
+
+basically i was trying to make a "unified fabric" for the compute, storage and networking of 6-12 server boxes of anything from nvidia jetson or a raspberry pi, or a thinkpad with a broken screen.
+
+Eventually i want to add like 1-2 cloud servers to practice horizontal scaling or adding flash-compute for like 24 hours to process batch jobs.
+
+to accomplish this, i was gonna use a golang service on each machine, which orchestrates a bunch of VMs, containers and hardware bits like sensors, cameras, and my roomba. kinda like k8 but just for 10 servers instead of like 2000
+
+like in the past, i used vercel, or stuff like [FLY.io](http://FLY.io), heroku, digital ocean, even AWS/GCS and they all had this shit taken care of.
+
+But i want to try to roll my own devops/architecture/setup. I dont mind if it takes a long time to learn, i just want to get really good at making changes, especially the ones that would be unfeasible on cloud systems like AWS.
+
+like all the startups can use the cloud cause they dgaf and are spending other peoples money and they have to get traction in 6 months or fail basically.
+
+but i dont really have any goal or deadline.
+
+and i think there are certain things you can do with self-hosted that are like 20-30x cheaper if you do it all locally, rather than in the cloud.
+
+like at my previous job, we had services that managed like 50pb of data every day, and i did the math and itwas like 30k to do self hosted, but we were spending WAY more on aws
+
+Specifically, i wanted to make something like "apple intelligence" but cross platform, 100% self hosted, open source, easier than apple, more secure than crowdstrike (because the data is 100% local, and the code is 100% yours so everyone can verify its security, rather than just who apple approves to audit them.) and has capabilities that companies wont really care about.
+
+Also, I think robots will probably get cheaper, slowly, in the future, so i wanted to write some software to help homebrewers and hobbyists to make their own toy robots for 1000 - kinda like [http://nanosaur.ai/](http://nanosaur.ai/)
+
+but i want both these things to be 100% FOSS and not corporate driven whatsoever, and easy enough to setup that your mom can do it. but that'll probably take 10 years.
+
+Top 2 comments:
+Comment 1:
+  Author: MBILC
+  Comment: NGINX... hard to argue against it for several possible roles.
+  Score: 2
+  Created UTC: 2024-07-27 02:26:35
+
+Comment 2:
+  Author: NikStalwart
+  Comment: My *ideal* DNS / proxy / webserver setup?
+
+Well I can't say I would argue against having local edge servers in every country in the world on single-digit anycast IPs using domains registered with my own registrar.... but my name isn't Larry Page nor is it Sergei Brin so can't really do that.
+
+My current DNS setup is this: I have a 'hidden master' server (or several, for all you know) feeding data to public slaves from two different, independent anycast DNS providers. I don't use my registrars for DNS. I use manual nginx, none of that fancypants control panel stuff for all of my web servers. I sometimes use Cloudflare on websites I expect to get abused. I also have experimented with running varnish for caching. And behind my nginx is whatever stack I am experimenting with, be it nodejs, golang, crystallang, or whatever. Haven't done anything in python yet for web services, and haven't touched PHP in 9 years. But, otherwise, that's that.
+  Score: 1
+  Created UTC: 2024-07-27 03:11:51
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,28 @@
+Post Title: Automate Nginx Proxy Manager + Cloudflare setup (Reverse proxy configs)
+Author: Weekly-Offer-4172
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e3pyb0/automate_nginx_proxy_manager_cloudflare_setup/
+Number of comments: 2
+Created UTC: 2024-07-15 08:48:05
+
+Post Content:
+Hey there!
+
+As a software engineer with a passion for side projects, I've set up Nginx Proxy Manager and Cloudflare to share my apps with the world. But I realized that adding A records in Cloudflare and configuring the proxy host in Nginx Proxy Manager was taking way too long - over 10 minutes! That's why I created a tool to simplify the process, bringing it down to just 1 minute!
+
+Next - I'm planning to develop/document an API so others can integrate this tool into their own projects. I'd love to hear your thoughts on this tool and any feedback you might have. Your input means a lot to me!"
+
+[https://github.com/javimosch/proxyflare/tree/master](https://github.com/javimosch/proxyflare/tree/master)
+
+https://preview.redd.it/932ttfnn9ncd1.png?width=1875&amp;format=png&amp;auto=webp&amp;s=60912c31cff390b3c4bb1f71706474cefc0d08b3
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: Never_Get_It_Right
+  Comment: Very interesting. I just use a subdomain wildcard and direct that to my homelab. Some services that aren't proxied such as Nextcloud to respect TOS or things that require obscure ports such as Plex and game servers do get their own record with a grey cloud to use other ports so it may be helpful for that.
+  Score: 2
+  Created UTC: 2024-07-15 09:39:31
+
+Note: This post has only 1 comments at the time of scraping.

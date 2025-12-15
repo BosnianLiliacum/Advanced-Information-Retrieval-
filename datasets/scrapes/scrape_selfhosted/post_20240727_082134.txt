@@ -1,0 +1,37 @@
+Post Title: Please help: Unable to generate Navidrome token
+Author: Green_hammock
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed9fmt/please_help_unable_to_generate_navidrome_token/
+Number of comments: 1
+Created UTC: 2024-07-27 06:04:38
+
+Post Content:
+Hi all, I have been hurting my brain trying to figure out how to get the navidrome homepage widget to work. I thought that I had found the answer, I've found the subsonic-salt key via inspect in Firefox, entered my password followed by salt into md5 hash generator, and still that code does not work. 
+Please help!
+
+Top 1 comments:
+Comment 1:
+  Author: codenamek83
+  Comment: You can utilize the following procedure to generate a token:
+
+1. Salt (Random string of at least six characters) = `c19b2d`
+2. Password (Navidrome Password) = `sesame`
+3. Concatenate Password and Salt = `sesamec19b2d`
+4. Token (Generate the MD5 hash of 'Concatenated Password and Salt' at [md5hashgenerator.com](https://www.md5hashgenerator.com/)) = `26719a1196d2a940705a59634eb18eab`
+5. Widget config:
+
+`widget:`
+
+`type: navidrome`
+
+`url:` [https://navidrome.mydomain.com](https://navidrome.mydomain.com)
+
+`user: admin`
+
+`token:`26719a1196d2a940705a59634eb18eab
+
+`salt: c19b2d`
+  Score: 1
+  Created UTC: 2024-07-27 07:57:30
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,97 @@
+Post Title: SSH No Password Frustrations 
+Author: One_Scholar1355
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7kqvh/ssh_no_password_frustrations/
+Number of comments: 61
+Created UTC: 2024-07-20 02:04:13
+
+Post Content:
+I created my SSH key using key-gen; copied the contents if the id\_rsa.pub to the authorized\_keys file located in the etc/ssh folder remotely, when trying to connect to SSH without being prompt for a password; I'm prompt for a password ?
+
+Top 7 comments:
+Comment 1:
+  Author: BuckeyeMason
+  Comment: The /etc/ssh folder is not where the authorized keys file should be located. The authorized keys should be located in the .ssh folder within the users home directory that you want to log in as. (/home/username/.ssh)
+  Score: 25
+  Created UTC: 2024-07-20 02:21:30
+
+Comment 2:
+  Author: SaviorOfHunnies
+  Comment: In some instances I've found you have to enable PubKeyAuthentication in the /etc/ssh/sshdconfig file. I think by default it is commented out
+  Score: 4
+  Created UTC: 2024-07-20 02:37:28
+
+Comment 3:
+  Author: PlaneLiterature2135
+  Comment: &gt; copied the contents if the id_rsa.pub to the authorized_keys
+
+
+Just use the ssh-copy-id command for that
+  Score: 4
+  Created UTC: 2024-07-20 12:40:56
+
+Comment 4:
+  Author: adamshand
+  Comment: Don't manually copy your key to the remote server, use `ssh-copy-id` instead.  Makes it easy.
+  Score: 7
+  Created UTC: 2024-07-20 02:27:32
+
+Comment 5:
+  Author: lesstalkmorescience
+  Comment: Use `ssh -vvv` on the client end and see what `/var/log/auth.log` on the server end has to say about this.
+  Score: 4
+  Created UTC: 2024-07-20 12:36:47
+
+Comment 6:
+  Author: Mr_Kansar
+  Comment: # Multiples things to check on the remote machine:
+
+* Make sure the authorized\_keys files of your user's HOME\_DIR contains your id\_rsa.pub
+* Make sure the PubkeyAuthentication parameter is set to yes in the /etc/ssh/sshd\_conf file
+* Make sure the PasswordAuthentication parameter is set to no in the /etc/ssh/sshd\_conf file
+* IF /etc/ssh/sshd\_conf file contains Include /etc/ssh/sshd\_config.d/\*.conf, check in the sshd\_config.d folder if any .conf file contains the PasswordAuthentication parameter and set it to false
+* sudo systemctl reload sshd.service
+* BEWARE: you can loose ssh access after the sshd.service reload, double check your configuration
+
+# One your local machine, from where to want to connect from:
+
+Open your ssh config file, located in \`C:\\Users\\username\\.ssh\\conf\` and set it up like so :
+
+IdentityFile &lt;path\_to\_your\_private\_sshkey&gt;
+
+PreferredAuthentications publickey
+
+Host &lt;hostname&gt;
+
+  HostName &lt;host\_ipaddress&gt;
+
+  User &lt;username&gt;
+
+  Port &lt;portnumber&gt; (22 by default)
+
+Then connect using the command
+
+ssh &lt;hostname&gt;
+
+Of course \`&lt;string&gt;\` are placeholder and should be replace by your own settings
+
+\`&lt;username&gt;\` should match the remote machine user you are trying to log to, not your local machine user you are connected with.
+
+# Rigths
+
+* ssh private key should have 600
+* ssh public key (\*.pub) should have 644
+* I like to put 644 on authorized\_keys and 400 on my config files, as they are managed by ansible on my homelab, but that is only personnal preferences
+
+EDIT : Markdown inline code is not working as expect
+  Score: 2
+  Created UTC: 2024-07-20 10:42:35
+
+Comment 7:
+  Author: allworkisthesame
+  Comment: Did you encrypt your private key? If so, you’ll be prompted for the password you used to encrypt the private key. 
+
+It’s a good practice to encrypt your private key. If you’re using a password manager like 1Password, you can just store the public key on your disk and integrate with 1Pass to pull the private key on-demand.
+  Score: 4
+  Created UTC: 2024-07-20 02:18:48
+

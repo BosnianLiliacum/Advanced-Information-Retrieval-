@@ -1,0 +1,115 @@
+Post Title: Should I separate compose files, scripts, and volumes?
+Author: Vi__S
+Score: 20
+URL: https://www.reddit.com/r/selfhosted/comments/1e7um70/should_i_separate_compose_files_scripts_and/
+Number of comments: 8
+Created UTC: 2024-07-20 12:33:42
+
+Post Content:
+I'm trying to find a file structure which 'makes sense' for all my docker projects, and I'm still unsure what the better option is and if there is a solution or structure I haven't thought about.
+
+I came up with two options where option one seems to be the approach taken by most.
+
+
+**Option 1:**
+
+Each project/service has one directory which contains the compose.yaml, setup scripts and volumes.
+
+    * project1/
+      * compose.yaml
+      * setup.sh
+      * cronjob.sh
+      * .env
+      * scripts/
+        * migration.sh
+      * volumes/
+        * /data1/
+        * ...
+    * project2:
+      * ...
+
+
+**Option 2:**
+
+Seperated directory:
+
+    * setup/
+      * project1/
+        * compose.yaml
+        * setup.sh
+        * scripts/
+          * migration.sh
+        * templates/
+          * nginx.tmpl
+          * env.tmpl
+      * project2/
+        * ...
+    * env/
+      * project1
+        * .env
+      * global.env
+    * volumes/
+      * project1/
+        * /data1/
+        * ...
+      * sockets/
+        * ntfy/
+          * ntfy.sock
+      * www/
+        * project1_site/
+    * cronjobs/
+      * project1.sh
+      * ..
+
+
+The advantage of option one is the simplicity in the structure. To me, the disadvantages are, that it mixes the configuration, config templates and actual server specific configuration. It also makes it harder to share volumes between projects, since I have to edit the nginx compose files each time I add a project for example.
+
+The advantage of option two is the clean separation of 'states' so to speak. It makes backups and updates very easy. Also, each project can (if needed) have a subdirectory volume under *www/* while nginx gets read access to the whole *www/* directory. Nicely separated, without the need to update the nginx compose file after adding a project. The same for sockets, nginx gets access to the entire *sockets/* directory, while the projects have a subdirectory. Again no need to change the compose files after adding a project. The disadvantage is, that it makes it harder to run a pipeline outside the server since I have to basically replicate everything due to the lack of separation.
+
+To solve some problems with option one I could just use traffik and then add a nginx and database container to each project if needed and eliminate any volume sharing between projects. This would nicely separate each project but add complexity and resource usage. I don't yet have an idea how to solve the disadvantages of option two.
+
+Any ideas and recommendations are appreciated.
+
+Top 4 comments:
+Comment 1:
+  Author: Diesis73
+  Comment: Symlink to have both.
+  Score: 13
+  Created UTC: 2024-07-20 13:07:53
+
+Comment 2:
+  Author: meris608
+  Comment: One thing to consider - you will probably want to use version control for high level configuration like compose files (and maybe some env files). On the flip side, you most likely don’t want to version control the volumes since the data will change frequently. Consider which directory you would want to make into a git repo and how that would change your hierarchy.
+  Score: 11
+  Created UTC: 2024-07-20 13:35:24
+
+Comment 3:
+  Author: xphilliex
+  Comment: I run proxmox with docker VM's. I have a management VM where the git project lives for all of my docker VM compose files and they are all managed with portainer. When i do a commit I use a pipeline to push a webhook to update the deployment. On the actual docker VM I use /srv/project/ for each deployment. I have 93 containers running currently. My setup looks like this:
+
+    Management VM git project:
+    docker
+    ├─docker01
+    └─docker02
+      ├─project01_dc.yml
+      ├─project02_dc.yml
+      └─project03_dc.yml
+      
+    Docker02 VM:
+    /srv/
+    ├─/project01
+    ├─/project02
+    └─/project03/
+      ├─/mariadb
+      ├─/redis
+      └─project03-file.xyz
+  Score: 7
+  Created UTC: 2024-07-20 22:19:23
+
+Comment 4:
+  Author: ben-ba
+  Comment: Option 1, than stop using bind volumes...
+  Score: 0
+  Created UTC: 2024-07-20 13:53:49
+
+Note: This post has only 4 comments at the time of scraping.

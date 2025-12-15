@@ -1,0 +1,68 @@
+Post Title: Server Side Encrypted Cloud Storage
+Author: tgku
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e5dygl/server_side_encrypted_cloud_storage/
+Number of comments: 11
+Created UTC: 2024-07-17 09:32:31
+
+Post Content:
+Is there an alternative to Nextcloud that could do server-side encrypted cloud storage?
+
+I say alternative to Nextcloud because frankly I'm sick of their interface and the many add-ons you can throw at it to make it do what you want. - While it can do almost anything you want, I'd prefer a minimalist setup where the cloud storage just works as cloud storage that I can use for my family.
+
+I'm looking preferrably with a Desktop and Mobile client for ease of use.
+
+I've found [https://filen.io/](https://filen.io/), while it's "open source", nobody is able to self host it it seems.
+
+Do any of you have an idea what I could use?
+
+Top 7 comments:
+Comment 1:
+  Author: lastweakness
+  Comment: Seafile maybe
+  Score: 3
+  Created UTC: 2024-07-17 11:20:08
+
+Comment 2:
+  Author: krejcar25
+  Comment: A simple advice I can think of is to find a cloud file storage software that you like, and then set up disk encryption behind it. Data is encrypted at rest and it’s transparent to both your users and the software you’re running.
+I am a loyal user of Nextcloud so I can’t give much advice on other solutions out there but this is what I do with my data when the server my Nextcloud instance sits on is not physically in my control.
+  Score: 2
+  Created UTC: 2024-07-17 10:14:38
+
+Comment 3:
+  Author: guigouz
+  Comment: Can you just encrypt your disks with luks?
+  Score: 2
+  Created UTC: 2024-07-17 12:01:55
+
+Comment 4:
+  Author: guigouz
+  Comment: There's https://cryptpad.fr/
+  Score: 2
+  Created UTC: 2024-07-17 12:02:19
+
+Comment 5:
+  Author: vermyx
+  Comment: Sftp and disk encryption at its simplest. Assuming it is just for pictures and such you can then use photosync to sync pictures
+  Score: 2
+  Created UTC: 2024-07-17 15:14:45
+
+Comment 6:
+  Author: gryd3
+  Comment: Syncthing has an untrusted target now, and will push pre-encrypted files to the server.
+
+You can do full disk encryption on the server.
+
+gocrypt can also be used to either encrypt or decrypt content.
+
+\*Before syncthing had an untrusted target, I used gocrypfs in reverse to mount an encrypted volume that syncthing would then sync.  Other syncthing guests got gibberish unless you also had the keys to gocrypt's mount.
+  Score: 2
+  Created UTC: 2024-07-17 16:27:15
+
+Comment 7:
+  Author: CatOnSofa
+  Comment: I’m writing an e2ee cloud storage app thats lightweight, minimalist and open source but its not done yet. I can show you if you’re interested. Im working on a better mobile interface right now. Its web based only however.
+  Score: 2
+  Created UTC: 2024-07-21 23:21:09
+

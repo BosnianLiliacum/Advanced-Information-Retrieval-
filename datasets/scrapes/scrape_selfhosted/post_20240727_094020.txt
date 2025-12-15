@@ -1,0 +1,26 @@
+Post Title: P100 GPU - keep or not?
+Author: MsWadera
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8lkno/p100_gpu_keep_or_not/
+Number of comments: 1
+Created UTC: 2024-07-21 12:48:48
+
+Post Content:
+I've got my hand on HP Proliant Gen9 with 2x Nvidia Tesla P100 GPUs (16GB vRAM) - it will arrive within few days.
+
+Purpose is to play with using (not training) AI models (ollama + open webUI etc) 
+
+I want to play with it, maybe code automation agents, funny tools, etc. Just to learn and share with friends.
+
+Are this P100 any good? Or better to not waste my time to try to run stuff on them - sell them and buy single used RTX 4070 12GB (and maybe later next one)?
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: The_Crimson_Hawk
+  Comment: P100 is very solid as it have HBM memory instead of GDDR, and vram capacity &amp; vram speed is everything in ai
+  Score: 4
+  Created UTC: 2024-07-21 13:08:24
+
+Note: This post has only 1 comments at the time of scraping.

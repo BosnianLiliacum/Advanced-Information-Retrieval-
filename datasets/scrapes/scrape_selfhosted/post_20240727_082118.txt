@@ -1,0 +1,56 @@
+Post Title: I created a simple website that helps you generate working docker-compose files...
+Author: techrayz
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1ed9moi/i_created_a_simple_website_that_helps_you/
+Number of comments: 2
+Created UTC: 2024-07-27 06:17:42
+
+Post Content:
+**For example, entering:**
+
+`docker run -d --name quakejs -e HTTP_PORT=&lt;HTTP_PORT&gt; -p &lt;HTTP_PORT&gt;:80 -p 27960:27960 treyyoder/quakejs:latest`
+
+**Will convert to:**
+
+`version: '3.7'`
+
+
+
+`services:`
+
+  `quakejs:`
+
+`image: treyyoder/quakejs:latest`
+
+`container_name: quakejs`
+
+`environment:`
+
+`- HTTP_PORT=&lt;HTTP_PORT&gt;`
+
+`ports:`
+
+`- "&lt;HTTP_PORT&gt;:80"`
+
+`- "27960:27960"`
+
+`restart: always`
+
+You also have additional options such as mapping ports, volumes and custom environment variables.
+
+Check out [Docker2Compose](https://apps.techray.dev/docker2compose)
+
+Top 2 comments:
+Comment 1:
+  Author: micahs72
+  Comment: This is cool, thanks! I like the extra options beyond just converting the run cmd to compose.
+  Score: 3
+  Created UTC: 2024-07-27 06:37:02
+
+Comment 2:
+  Author: LotusTileMaster
+  Comment: This is better than https://composerize.com
+  Score: 2
+  Created UTC: 2024-07-27 07:25:18
+
+Note: This post has only 2 comments at the time of scraping.

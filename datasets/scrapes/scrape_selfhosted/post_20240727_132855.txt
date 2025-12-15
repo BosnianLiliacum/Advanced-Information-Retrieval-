@@ -1,0 +1,57 @@
+Post Title: Sharing Jellyfin with family
+Author: -Rogue_x-
+Score: 16
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ws90/sharing_jellyfin_with_family/
+Number of comments: 35
+Created UTC: 2024-07-16 18:59:39
+
+Post Content:
+As the title suggests, I’m currently running a Jellyfin instance via Docker on my Synology NAS. I’m using pfSense as my main firewall/VPN server to access my home services. Recently I digitized all of my family’s old VHS tapes and threw them in Jellyfin as its own library and want to give my family access. However for security reasons, I’d rather stay away from making them publicly accessible. I’d much rather set up a device on their networks to initiate a site-to-site VPN to my pfsense. I just want them to be able to download the Jellyfin app on their TVs without having to worry about teaching them about how to use the VPN. What device could I use for this? Or is there an easier method of accomplishing this?
+
+Top 7 comments:
+Comment 1:
+  Author: loopyroberts
+  Comment: I put mine behind a Caddy reverse proxy with Geo-IP blocking. Then I added the LDAP plugin to Jellyfin and used Authentik for the authentication and added 2FA via Duo push notifications. That last bit isn't self hosted but works really well. 
+
+I avoided using HTTP Basic Auth or an Authintik portal as it wouldn't work with TV apps etc. This way works regardless of the client.
+  Score: 19
+  Created UTC: 2024-07-17 02:03:01
+
+Comment 2:
+  Author: CommandLionInterface
+  Comment: I use letsencrypt+nginx (via the linuxserver swag container) to reverse proxy to it from the public net. Very easy to access and it’s secure as long as your users choose good passwords
+  Score: 17
+  Created UTC: 2024-07-16 19:11:45
+
+Comment 3:
+  Author: yarosm
+  Comment: Site to site VPN with their router and there is no need to open it to the internet.  Ldap , 2fa and what not is just not worth the risk
+  Score: 5
+  Created UTC: 2024-07-17 05:48:41
+
+Comment 4:
+  Author: sylsylsylsylsylsyl
+  Comment: Make sure their TVs have a Jellyfin app before you spend too much time doing it - 2 out of 3 of mine don’t. I was happy with Jellyfin otherwise but moved to Plex because of this.
+  Score: 2
+  Created UTC: 2024-07-17 06:56:26
+
+Comment 5:
+  Author: skunk_funk
+  Comment: I just exposed it with apache... Wasn't worth angry calls when a custom router solution broke at my parents house.
+  Score: 3
+  Created UTC: 2024-07-16 19:05:53
+
+Comment 6:
+  Author: untrained9823
+  Comment: Tailscale.
+  Score: 5
+  Created UTC: 2024-07-16 19:08:07
+
+Comment 7:
+  Author: BelugaBilliam
+  Comment: Someones comment about swag is probably your best bet.
+
+I personally just expose it, and I'm working on making a custom fail2ban Jail to ban failed attempts to login as another layer of security. Not worth the calls of it not working sometimes personally.
+  Score: 1
+  Created UTC: 2024-07-16 23:15:32
+

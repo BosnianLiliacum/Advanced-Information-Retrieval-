@@ -1,0 +1,30 @@
+Post Title: Motherboard Ethernet disconnected after removing spare PCIe adaptor
+Author: Jhean__
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e58mum/motherboard_ethernet_disconnected_after_removing/
+Number of comments: 3
+Created UTC: 2024-07-17 03:53:53
+
+Post Content:
+This server is running Proxmox, but I've found a weird issue. The server is connected to a switch through its Ethernet port on the *motherboard.* However when I removed a spare *PCIe* Ethernet adaptor card, it was disconnected from the local network, and the light on the switch went out. After that, I placed the adaptor card in again, and everything worked.  
+(I tried both ports on my motherboard and both have the same issue)
+
+Also, another interesting is that the light on the switch goes out only after the server boots, and as soon as the server shuts down, the connection automatically reformed.
+
+    Hardware Info:
+    CPU: Xeon E5-2670 (x1)
+    Motherboard: Asus P9X79 WS
+    Mentioned adaptor card: Realtek RTL8111
+
+Top 1 comments:
+Comment 1:
+  Author: Seladrelin
+  Comment: Your network interfaces will sometimes be renamed after you add or remove pcie devices.
+
+You can get the list of interfaces with a simple \`ip a\` command and then take note of your current interface names. Replace the old value with the new value in \`/etc/network/interfaces\`
+
+Then you can reboot of bring down and back up the bridge that uses that interface.
+  Score: 5
+  Created UTC: 2024-07-17 05:10:29
+
+Note: This post has only 1 comments at the time of scraping.

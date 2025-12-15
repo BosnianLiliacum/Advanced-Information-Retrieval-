@@ -1,0 +1,28 @@
+Post Title: Is there any free subdomain websites that allow connect to Google sites verification?
+Author: Far-Veterinarian-208
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8nzmr/is_there_any_free_subdomain_websites_that_allow/
+Number of comments: 4
+Created UTC: 2024-07-21 14:49:08
+
+Post Content:
+I've tried noip and duck dns and none of them allow me to input the dns that Google gives me.
+
+Top 2 comments:
+Comment 1:
+  Author: HearthCore
+  Comment: Xxxxxxx.xyz domains are 1 buck, maybe shoot for one of those?
+
+Other than that there are some domain registrars that offer free subdomains with some DNS control like you need for smth like that.
+  Score: 3
+  Created UTC: 2024-07-21 15:19:42
+
+Comment 2:
+  Author: HacerM4N
+  Comment: you can always get .TK Free domain, but i'm not sure if it will work for DNS. 
+
+Also not sure about long term TK ownership as well.
+  Score: 1
+  Created UTC: 2024-07-21 15:38:36
+
+Note: This post has only 2 comments at the time of scraping.

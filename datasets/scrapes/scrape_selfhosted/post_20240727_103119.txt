@@ -1,0 +1,33 @@
+Post Title: Self Hosted version of Talli?
+Author: user20202
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e5it2s/self_hosted_version_of_talli/
+Number of comments: 4
+Created UTC: 2024-07-17 13:55:31
+
+Post Content:
+Hello - is anyone aware of a self hosted version of Talli? Would love to have hardware that is self built and data that I can store on my own.
+
+This is the device: [https://talli.me/shop/talli-baby-tracker-event-logger](https://talli.me/shop/talli-baby-tracker-event-logger)
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: johnsturgeon
+  Comment: Ah the first child... 😊
+
+But seriously, this would probably be a great device to DIY and integrate with something like Home Assistant!
+  Score: 3
+  Created UTC: 2024-07-17 19:36:49
+
+Comment 2:
+  Author: Gpapig
+  Comment: I've seen this app but never tested (and I don't know if it's close or not from your exemple)
+
+  
+[https://github.com/babybuddy/babybuddy](https://github.com/babybuddy/babybuddy)
+  Score: 3
+  Created UTC: 2024-07-17 18:05:25
+
+Note: This post has only 2 comments at the time of scraping.

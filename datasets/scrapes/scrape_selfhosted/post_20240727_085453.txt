@@ -1,0 +1,80 @@
+Post Title: Are there any good Matrix alternatives in 2024?
+Author: seelensand
+Score: 44
+URL: https://www.reddit.com/r/selfhosted/comments/1eb5xen/are_there_any_good_matrix_alternatives_in_2024/
+Number of comments: 48
+Created UTC: 2024-07-24 16:34:54
+
+Post Content:
+Hey all,  
+I am gonna ask the ever popular question of which software to chose for hosting chatrooms for my friendgroup - aka. a discord alternative, yet one that also isn't Matrix.
+
+**Why not Matrix?**
+
+Well, we currently use Matrix and have a decent amount of issues with it. Explaining cryptography basics to tech-illiterate users, general encryption problems, not all clients supporting all features, not to mention the occasional issues with Element's UX, specifically "unread" messages, not being that pleasant - and other clients aren't that much better / lack features we like in Element.
+
+In general, the way Matrix works with rooms and stuff doesn't really fit our use case. You can't just have a view with just channels, your DMs are always mixed into your view (on mobile) and the order of rooms change as people post in them. Basically, we are looking for something which has Discord's UI but isn't Discord.
+
+**Our Requirements:**
+
+*Things that would be nice to have: SSO with Oauth2/OIDC would be very welcome, S3 support would be nice, not use a billion GBs of RAM if possible*
+
+Hard requirements: a decent mobile client, has to be FOSS (or available as FOSS) and self-hostable ofc.
+
+We also don't really *need* E2EE or federation.
+
+# So, for everyone who also doesn't fly that well with Matrix: what are you using/recommending in 2024?
+
+I'd love to hear what you are using and why that works for you. Thanks in advance.
+
+edit: thank you random person for the award \^\^
+
+Top 7 comments:
+Comment 1:
+  Author: upofadown
+  Comment: Have you seriously looked at boring old XMPP? DMs are separate by design. Rooms are pretty vanilla, but are at least straightforward.
+
+Prosody Oauth2/OIDC module:
+
+* https://modules.prosody.im/mod_http_oauth2
+  Score: 24
+  Created UTC: 2024-07-24 16:52:51
+
+Comment 2:
+  Author: Vogete
+  Comment: I heard a lot of good about Mattermost. And some good and some bad about Rocket.chat. and Zulip also looks quite interesting. I haven't tried either of them, but maybe one could work.
+  Score: 13
+  Created UTC: 2024-07-24 18:14:11
+
+Comment 3:
+  Author: Eirikr700
+  Comment: I have switched from Matrix to XMPP for similar reasons and I'm happy with Jabber/Conversations. I don't know if the design of Conversations is outdated but it's ok for me.
+  Score: 7
+  Created UTC: 2024-07-24 18:21:52
+
+Comment 4:
+  Author: revereddesecration
+  Comment: Zulip is good
+  Score: 3
+  Created UTC: 2024-07-25 02:07:22
+
+Comment 5:
+  Author: 4i768
+  Comment: Revolt chat probably
+  Score: 3
+  Created UTC: 2024-07-25 05:47:53
+
+Comment 6:
+  Author: adamshand
+  Comment: I think XMPP/Snikket is the tried and tested option, but the iOS/macOS clients are all a bit crap.
+
+If you want to head off the beaten path, you could have a look at Databag or Tinode.
+  Score: 2
+  Created UTC: 2024-07-25 08:04:19
+
+Comment 7:
+  Author: Sociedelic
+  Comment: Try John Wick.
+  Score: 11
+  Created UTC: 2024-07-24 20:49:50
+

@@ -1,0 +1,46 @@
+Post Title: Escape from ELK stack - but where?
+Author: aso824
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ebf967/escape_from_elk_stack_but_where/
+Number of comments: 2
+Created UTC: 2024-07-24 22:57:57
+
+Post Content:
+On beginning of my self-hosted adventure, I set up ELK stack + Grafana in my Proxmox's LXC to monitor all other hosts - they send data via Beats to Logstash, and then I can use Kibana to search through logs from nginx, applications etc., and Grafana for nice visualisations.
+
+I picked this stack because I was familiar with it from my previous job. Now, I think it was a mistake. 
+
+ES continuously needs attention for no reason and more time it doesn't work than it does. Not to mention how much time I already burned for fights with ILM and OOMs...
+
+So, I'm looking which elements to change in my monitoring stack, but to keep - pretty standard - abilities:
+
+* **graphs and metrics** for CPU, RAM and some more things like IO etc.
+* **alerting** when some parameters gets too high for long time
+* **visualisations** like world map of requests on my main HAProxy
+* **logs file parsing &amp; browsing** to check in nice way latest requests from nginx, or Laravel app logs
+
+Currently, points 1 &amp; 2 are fulfilled by Grafana and I very like this tool. Map that I mentioned is implemented in Kibana, but I believe that Grafana can also do this, with some GeoIP magic. For browsing logs I use Kibana, because UI for filtering and query language are very convinient.
+
+Can I change problematic Elasticsearch to, let's say, InfluxDB and use some other tool than Kibana to keep everything similar, but better? I'd like also to stay with Beats as I love how they work - but maybe I never heard about better tools! Love to hear your advices.
+
+Top 2 comments:
+Comment 1:
+  Author: r3dk0w
+  Comment: I've done all kinds of things in this area.  Currently, I just use the glances plugin for home assistant. 
+
+[https://www.home-assistant.io/integrations/glances/](https://www.home-assistant.io/integrations/glances/)
+
+  
+Pulls all of the stats into home assistant where you can do alerting, triggering, and anything else you can do normally with home assistant.
+  Score: 2
+  Created UTC: 2024-07-25 00:18:35
+
+Comment 2:
+  Author: blind_guardian23
+  Comment: Zabbix, constant development, every metric (Item) can be turned into a Graph, great ansible collection.
+
+check_mk is also fine, but i personally dislike fremium-models.
+  Score: 1
+  Created UTC: 2024-07-25 20:52:06
+
+Note: This post has only 2 comments at the time of scraping.

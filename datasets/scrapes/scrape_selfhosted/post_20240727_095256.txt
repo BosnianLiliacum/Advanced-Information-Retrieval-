@@ -1,0 +1,30 @@
+Post Title: Fullstack error monitoring tools
+Author: lowerseagate
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e7q4ua/fullstack_error_monitoring_tools/
+Number of comments: 9
+Created UTC: 2024-07-20 07:32:28
+
+Post Content:
+Is there any selfhosted monitoring tools? I imagine something like realtime debugging. Im hosting a several web application and backend service. Is there anything where i can monitoring for error for both front end and backend 
+
+Top 3 comments:
+Comment 1:
+  Author: johnsturgeon
+  Comment: zabbix would be my recommendation, you can configure agents to look through log files and alert you for matches, you can also configure 'web' agents to look for specific strings in web pages
+  Score: 2
+  Created UTC: 2024-07-20 13:56:44
+
+Comment 2:
+  Author: NikStalwart
+  Comment: Check out sentry.io. Also check out Grafana's other products  —  besides dashboards and logs they also do tracing and profiling.
+  Score: 1
+  Created UTC: 2024-07-20 11:11:45
+
+Comment 3:
+  Author: Fluffer_Wuffer
+  Comment: There are quite a few, google for Data Dog open source alternative... OpenObserve.is one, and I've come across half a dozen more on GitHub.
+  Score: 1
+  Created UTC: 2024-07-20 12:05:12
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,28 @@
+Post Title: Why ollama model and gguf has different?
+Author: ShelterTrader
+Score: 3
+URL: https://www.reddit.com/r/ollama/comments/1ecqguz/why_ollama_model_and_gguf_has_different/
+Number of comments: 2
+Created UTC: 2024-07-26 15:09:14
+
+Post Content:
+Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?
+
+Top 2 comments:
+Comment 1:
+  Author: boba-cat02
+  Comment: there is NO difference. Ollama is a tool which helps you run/provide gguf model with few clicks.
+
+even ollama provides better gguf model by understanding your cpu/gpu model. it run the best quantized model which run smoothly.
+
+if you look into ollama code then you will understand better.
+  Score: 5
+  Created UTC: 2024-07-26 16:17:55
+
+Comment 2:
+  Author: Forgot_Password_Dude
+  Comment: so which are you saying is better?
+  Score: 1
+  Created UTC: 2024-07-27 07:38:27
+
+Note: This post has only 2 comments at the time of scraping.

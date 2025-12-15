@@ -1,0 +1,56 @@
+Post Title: Pterodactyl Panel Alternative?
+Author: lucissandsoftime
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ec1a4v/pterodactyl_panel_alternative/
+Number of comments: 12
+Created UTC: 2024-07-25 17:53:42
+
+Post Content:
+So I like Pterodactyl Panel don't get me wrong but the one issue I have with it is when it comes to minecraft servers. it works perfect for individual servers with a few addons for importing modpacks and plugins.
+
+but when it comes to bungee/waterfall/velocity or any other proxy for linking servers together I can never get them working correctly. the most I have managed to get Is them joinable and connected, but Immediately after I started having issues with plugins not being able to access mysql dbs. More over there seems to be even less information for getting that to work then there is getting proxies working on Pterodactyl.
+
+for reference by server is running ubuntu 20.04 LTS
+
+  
+If someone wants to suggest a fix I'll try it. aside from that I'm just looking for a panel that can support a vast amount of games, have high support for minecraft servers with proxies modpacks and plugins, and also Id like to be able to host my own mysql dbs within the panel as well.
+
+  
+I'm planning on testing out both AMP panel and puffer panel
+
+Top 3 comments:
+Comment 1:
+  Author: awfulcitizen
+  Comment: Checkout :
+
+1. [https://jexactyl.com](https://jexactyl.com)
+2. [https://github.com/pelican-dev/panel](https://github.com/pelican-dev/panel)
+3. [https://moonlightpanel.xyz/](https://moonlightpanel.xyz/)
+
+I use Jexactyl, and I run several servers in it, of all kinds.  I also recommend both Pelican and Moonlight because they are going to be really great when they get to release status...  Pelican is being coded by the original team that developed Pterodactyl and its a huge upgrade.
+
+I also used to run AMP, but the community is super toxic and elitist and the server plugins use an archaic format which is incredibly complicated to code and improve game server deployments so I moved away from that.
+
+A while back I wrote a review of several game server managers and I posted it here: [https://www.reddit.com/r/selfhosted/comments/17ta2lx/game\_server\_managers\_2024/](https://www.reddit.com/r/selfhosted/comments/17ta2lx/game_server_managers_2024/)
+
+I'd suggest you give it a read.
+
+As for the Minecraft problem you have at hand, with Pterodactyl you can host your own MySQL server and then you can proxy it to your minecraft servers but I have never had to do that.  The folks from Jexactyl are super helpful when it comes to these type of questions so if you wanted to try something a bit different give them a try.
+
+You can ping me here if you need help with with your setup or @ me in Discord under Tempus Thales (or Tempus Thales#2600)
+  Score: 5
+  Created UTC: 2024-07-25 21:40:02
+
+Comment 2:
+  Author: VVaterTrooper
+  Comment: Did you use the Docker Container's IP Address to connect the servers?
+  Score: 1
+  Created UTC: 2024-07-25 18:22:21
+
+Comment 3:
+  Author: arriej
+  Comment: I think the devs from the pterodactyl project working on something new called pelican. Pretty much same concept. You can setup a docker mysql as well as a central database. Plugins should be able to reach that container
+  Score: 1
+  Created UTC: 2024-07-26 07:55:15
+
+Note: This post has only 3 comments at the time of scraping.

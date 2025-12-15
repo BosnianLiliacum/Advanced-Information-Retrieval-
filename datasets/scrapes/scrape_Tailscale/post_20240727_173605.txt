@@ -1,0 +1,37 @@
+Post Title: Getting SSL_ERROR_INTERNAL_ERROR_ALERT when I access the device with IPv4. Full Domain works fine though?
+Author: adamlhb
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1eak7cn/getting_ssl_error_internal_error_alert_when_i/
+Number of comments: 2
+Created UTC: 2024-07-23 21:50:38
+
+Post Content:
+Getting SSL\_ERROR\_INTERNAL\_ERROR\_ALERT when I access the device with IPv4. Full Domain works fine though? Any ideas how to deal with this?
+
+The device is an Ingress controller in Kubernetes linked to an Nginx service.
+
+Thanks
+
+UPDATE:
+
+I guess this is because of HTTPS redirection, the Ingress by Tailscale Kubernetes Operator shoud be HTTP and not HTTPS, the redirection from port 80 to 443 should be done automatically, however DNS records CNAME or A pointed to the FQDN or IP must be able to reach the HTTP version initially.
+
+  
+I would probably try the following in the ingress manifest:
+
+    status:
+      loadBalancer:
+        ingress:
+        - hostname: myfqdn.ts.net
+          ports:
+          - port: 80
+            protocol: TCP
+
+Top 1 comments:
+Comment 1:
+  Author: ra66i
+  Comment: This is normal, you don't have a TLS certificate covering the IP address as a hostname, only for the domain name.
+  Score: 1
+  Created UTC: 2024-07-23 22:06:35
+
+Note: This post has only 1 comments at the time of scraping.

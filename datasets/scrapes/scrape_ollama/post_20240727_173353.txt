@@ -1,0 +1,60 @@
+Post Title: How can I "ship" Ollama?
+Author: shouryannikam
+Score: 9
+URL: https://www.reddit.com/r/ollama/comments/1eb6eqh/how_can_i_ship_ollama/
+Number of comments: 15
+Created UTC: 2024-07-24 16:54:24
+
+Post Content:
+I want to build an offline AI app and ship it as a direct download. I don't want to expect the end user to download Ollama, and then a model. I want to ship the backend and model weights with the installer (even if it means a larger download size). How can I do this?
+
+Top 7 comments:
+Comment 1:
+  Author: schlammsuhler
+  Comment: Use llama.cpp
+  Score: 2
+  Created UTC: 2024-07-25 13:11:38
+
+Comment 2:
+  Author: boof_hats
+  Comment: Docker bro, OpenWebUI even has prebuilt docker containers with everything inside
+  Score: 12
+  Created UTC: 2024-07-24 17:37:57
+
+Comment 3:
+  Author: bmacd1
+  Comment: You can do this by packaging Ollama into your build and orchestrating it. The nice thing about this approach is that it works cross platform, allows you to ship model updates separate from your app, and also allows users to run their own instance of Ollama if they want. 
+
+I have an example Electron app that does this here:
+https://github.com/BruceMacD/chatd
+
+License is MIT, so feel free to use whatever code you want from there.
+  Score: 4
+  Created UTC: 2024-07-25 06:02:42
+
+Comment 4:
+  Author: foomatic999
+  Comment: Have a look at Alpaca. Bundles ollama with a GUI as flatpak.
+
+https://flathub.org/apps/com.jeffser.Alpaca
+  Score: 3
+  Created UTC: 2024-07-24 21:01:31
+
+Comment 5:
+  Author: JohnnyLovesData
+  Comment: Maybe Llamafile
+  Score: 2
+  Created UTC: 2024-07-24 17:04:17
+
+Comment 6:
+  Author: ieatdownvotes4food
+  Comment: llamafile ftw
+  Score: 2
+  Created UTC: 2024-07-24 22:02:20
+
+Comment 7:
+  Author: Jaded_Astronomer83
+  Comment: Ollama doesn't require much to run besides CUDA/ROCm drivers, you could try to use [InstallForge](https://installforge.net/) to create an installer that just extracts the Ollama directory and makes a shortcut to the exe for the end-user, but you'd need to write a custom script to check for and install CUDA/ROCm drivers if needed (only needed for GPU inference).
+  Score: 1
+  Created UTC: 2024-07-25 01:11:19
+

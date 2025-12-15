@@ -1,0 +1,42 @@
+Post Title: Can I "download" a local AI on a home server and make it a port to ask the chatbot?
+Author: Potato66__
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7o09l/can_i_download_a_local_ai_on_a_home_server_and/
+Number of comments: 6
+Created UTC: 2024-07-20 05:12:23
+
+Post Content:
+Moreover, is there any local chatbot that can also produce images and also answer questions at the same time that won't take a gigaton of GPU to run/train?
+
+Top 5 comments:
+Comment 1:
+  Author: terribilus
+  Comment: Yes. Look into ollama and lmstudio as a starting point. You may have some hardware requirements to meet.
+  Score: 11
+  Created UTC: 2024-07-20 05:41:51
+
+Comment 2:
+  Author: ttkciar
+  Comment: Yes, to all of the above. You should avail yourself of r/LocalLLaMa, which is all about exactly this.
+  Score: 8
+  Created UTC: 2024-07-20 05:57:50
+
+Comment 3:
+  Author: g-nice4liief
+  Comment: I have localai running on my home server in nextcloud
+  Score: 1
+  Created UTC: 2024-07-20 06:11:06
+
+Comment 4:
+  Author: ICE0124
+  Comment: I know ollama is designed for servers but that's LLM's and I don't know any for images too. But to get a system that responds fast and is kinda smart and produce images I would say you need at minimum 10GB of VRAM to run llama 3 8B at like Q4K_M and a stable diffusion 1.5 model.
+  Score: 1
+  Created UTC: 2024-07-20 07:21:03
+
+Comment 5:
+  Author: Potato66__
+  Comment: thank you to all of the comments :) have a great day y'all!
+  Score: 1
+  Created UTC: 2024-07-25 13:44:18
+
+Note: This post has only 5 comments at the time of scraping.

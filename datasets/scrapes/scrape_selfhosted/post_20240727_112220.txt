@@ -1,0 +1,75 @@
+Post Title: Endurain v0.3.0 - Fitness activity tracker that you can self host 
+Author: joaovsilva
+Score: 85
+URL: https://www.reddit.com/r/selfhosted/comments/1eckvcx/endurain_v030_fitness_activity_tracker_that_you/
+Number of comments: 22
+Created UTC: 2024-07-26 10:37:11
+
+Post Content:
+Hello its me again talking about Endurain, a fitness activity tracker that you can self host. A new version is out and here are some highlights: 
+
+* Added multi client support (web and mobile)
+* Added multi arch Docker image (arm64 and amd64)
+* Added PWA support
+* Added OAuth Scopes
+
+There is also an open issue on [runnerup repo](https://github.com/jonasoreland/runnerup/issues/1185) to enable activity auto upload in this Android app.  
+For iOS me and u/hesselbom are in talks to integrate with his app.
+
+Previous post: [https://www.reddit.com/r/selfhosted/comments/1d36y7q/endurain\_v020\_fitness\_activity\_tracker\_that\_you/](https://www.reddit.com/r/selfhosted/comments/1d36y7q/endurain_v020_fitness_activity_tracker_that_you/)
+
+v0.3.0 GitHub release: [https://github.com/joaovitoriasilva/endurain/releases/tag/v0.3.0](https://github.com/joaovitoriasilva/endurain/releases/tag/v0.3.0)
+
+Endurain Mastodon profile: [https://fosstodon.org/@endurain](https://fosstodon.org/@endurain)
+
+Thanks and any feedback is appreciated
+
+Top 7 comments:
+Comment 1:
+  Author: intellidumb
+  Comment: Very cool project! Personally I would love direct Garmin and/or Peloton integrations
+  Score: 19
+  Created UTC: 2024-07-26 11:24:56
+
+Comment 2:
+  Author: onekorama
+  Comment: Loving the name
+  Score: 5
+  Created UTC: 2024-07-26 11:10:13
+
+Comment 3:
+  Author: bleomycin
+  Comment: Super excited for the garmin and watchletic integrations! Awesome work, thanks for sharing!
+  Score: 4
+  Created UTC: 2024-07-26 16:16:45
+
+Comment 4:
+  Author: EPICDRO1D
+  Comment: Is there samsung support?
+  Score: 2
+  Created UTC: 2024-07-26 13:43:03
+
+Comment 5:
+  Author: ntilley905
+  Comment: This is awesome!
+
+Do you have any health/general fitness tracking on the roadmap? Things like HRV, sleep, training load, stuff in that realm. I’d love to have a self hosted Garmin Connect/Strava alternative but those are what I use most there rather than individual activities.
+  Score: 2
+  Created UTC: 2024-07-26 15:28:43
+
+Comment 6:
+  Author: Command-Forsaken
+  Comment: Curious. Anyway to get data from iOS into here?
+  Score: 2
+  Created UTC: 2024-07-26 17:18:02
+
+Comment 7:
+  Author: jrhbcn
+  Comment: Cool project! 
+
+Are there minimal instructions on how to deploy the docker compose file? I copied the provided "[docker-compose.yml.example](https://github.com/joaovitoriasilva/endurain/blob/master/docker-compose.yml.example)" file, modified values accordingly, but I keep getting  "It was not possible to connect to the server. Please try again later (Undefined)" error when trying to login with the admin/admin user for the first time.
+
+No values on the log (frontend or backend) but "192.168.1.137 - - \[26/Jul/2024:15:44:23 +0000\] "POST /MY\_APP\_BACKEND\_PROTOCOL://MY\_APP\_BACKEND\_HOST/token HTTP/1.1" 405 559 "http://192.168.1.20:9400/login" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_15\_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" "-"
+  Score: 1
+  Created UTC: 2024-07-26 15:52:53
+

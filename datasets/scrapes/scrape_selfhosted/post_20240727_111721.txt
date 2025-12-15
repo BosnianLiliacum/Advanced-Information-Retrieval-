@@ -1,0 +1,26 @@
+Post Title: Poste.io or mailcow
+Author: MatijaTerzic
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ecvllv/posteio_or_mailcow/
+Number of comments: 2
+Created UTC: 2024-07-26 18:41:41
+
+Post Content:
+Looking for pro's / con's on both. No discussing about why not to self-host etc.
+
+Just looking for honest reviews for both
+
+Top 2 comments:
+Comment 1:
+  Author: starbuck93
+  Comment: I use poste for self hosted services to send me emails through an SMTP relay but that's it. It's neat.
+  Score: 1
+  Created UTC: 2024-07-26 19:47:59
+
+Comment 2:
+  Author: hegels_nightmare_8
+  Comment: Mailcow. Quick and easy to setup and use. Good feature base. Makes setting up a secure system relatively trivial.
+  Score: 2
+  Created UTC: 2024-07-26 20:08:27
+
+Note: This post has only 2 comments at the time of scraping.

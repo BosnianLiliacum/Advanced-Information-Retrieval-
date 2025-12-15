@@ -1,0 +1,46 @@
+Post Title: [REQUEST] Docs/text editor that persists directly to filesystem?
+Author: hammer-head
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1eabxt3/request_docstext_editor_that_persists_directly_to/
+Number of comments: 2
+Created UTC: 2024-07-23 16:17:58
+
+Post Content:
+Basically title.
+
+USE CASE: I’d like to view/edit a directory of plain text notes (Markdown) that lives on an SSH server, from my iPhone. Ideally, I may even like to give others to access/view some subset of these files. But they have to be plain text files (not DB records) because they get synced to my laptop, where I edit them (sometimes offline) in a regular text editor.
+
+ALTERNATIVES I’VE CONSIDERED:
+
+* **an iOS text editor app with SFTP support (Textastic, GTW)**  
+  Might be fine, but I’d prefer FOSS
+* **Obsidian for iOS**  
+  Only supports sync via icloud and Obsidian Sync; I am syncing with Syncthing
+* **HedgeDoc, Etherpad**  
+  I’m under the impression these store docs as DB records; would love to be misinformed on this point
+
+Any leads would be greatly appreciated 🙇🙇🙇
+
+Top 2 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Have you checked the side bar of this Reddit? Under useful links are lists of project's that you can selfhost. There maybe one there that fits your needs.
+
+
+&gt;Obsidian for iOS
+
+&gt;Only supports sync via icloud and Obsidian Sync; I am syncing with Syncthing
+
+Why is this not a viable solution?
+
+Hope that helps.
+  Score: 2
+  Created UTC: 2024-07-23 16:27:38
+
+Comment 2:
+  Author: sassanix
+  Comment: I use Joplin but through the app, and Nextcloud WebDAV.
+  Score: 1
+  Created UTC: 2024-07-24 10:56:29
+
+Note: This post has only 2 comments at the time of scraping.

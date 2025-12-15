@@ -1,0 +1,76 @@
+Post Title: Unable to change the models install directory
+Author: Neither_Impact_4306
+Score: 2
+URL: https://www.reddit.com/r/ollama/comments/1ec20o2/unable_to_change_the_models_install_directory/
+Number of comments: 7
+Created UTC: 2024-07-25 18:23:28
+
+Post Content:
+Hello everyone,
+
+I just started testing out Ollama today and it works great minus I cannot change the models directory.
+
+I am on Linux and have edited the ollama.service file:
+
+`Environment="OLLAMA_MODELS=/media/data/ollama/models"`  
+  
+I ensured I restarted the service and also tried repeating the process with `ollama serve`but still no luck as it installs in the default directory. I even tried putting `OLLAMA_MODELS` as a system path and it does not work. I would just move the models and create a syslink but I do not have enough space in the current install path of /usr/share to install anything other than 8B.
+
+Any help would be much appreciated.
+
+Top 2 comments:
+Comment 1:
+  Author: oscarlau
+  Comment: In Windows, I did change the path with that environment variable and I tested it with the latest llama 3.1 model.
+  Score: 1
+  Created UTC: 2024-07-25 19:35:07
+
+Comment 2:
+  Author: markole
+  Comment: What do the log files say (`sudo journalctl -u ollama`)? You also need to make sure that the new path is owned by the `ollama` user.
+
+Here's my systemd unit file:
+
+&gt; # cat /etc/systemd/system/ollama.service 
+
+&gt; [Unit]
+
+&gt; Description=Ollama Service
+
+&gt; After=network-online.target
+
+&gt; 
+
+&gt; [Service]
+
+&gt; ExecStart=/usr/local/bin/ollama serve
+
+&gt; User=ollama
+
+&gt; Group=ollama
+
+&gt; Restart=always
+
+&gt; RestartSec=3
+
+&gt; Environment="HOME=/bigdrive/ollama"
+
+&gt; Environment="PATH=/root/.local/bin:/root/bin:/usr/lib64/ccache:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin"
+&gt; 
+
+&gt; [Install]
+
+&gt; WantedBy=default.target
+
+
+
+After changing it, you need to: `sudo systemctl daemon-reload &amp;&amp; sudo systemctl restart ollama`.
+
+Here are the custom HOME permissions:
+
+&gt; # ls -la /bigdrive/ | grep ollama
+&gt; drwxrwxr-x.  4 ollama           ollama  4096 &lt;timestamp&gt; ollama
+  Score: 1
+  Created UTC: 2024-07-26 04:01:41
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,30 @@
+Post Title: Custom referral links for tracking who visits my portfolio website from my resume?
+Author: nosliw_rm
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e38xyk/custom_referral_links_for_tracking_who_visits_my/
+Number of comments: 7
+Created UTC: 2024-07-14 18:12:13
+
+Post Content:
+I have a self hosted portfolio website and use plausible for self hosted analytics. How could I make custom links to my home page which I can track using plausible. I want to put a different link on the resume each time I send it out so that I can see when they visit, what pages they visit and how many people visit from that link
+
+Top 3 comments:
+Comment 1:
+  Author: waeking
+  Comment: Use shlink or a different url shorter.
+  Score: 2
+  Created UTC: 2024-07-16 17:22:11
+
+Comment 2:
+  Author: nosliw_rm
+  Comment: Asking because iv put my home page link in an email to two companies and they both clicked the link (I think) but they both show up as mail.google.com as the referral so I can’t tell for sure if they both visited
+  Score: 1
+  Created UTC: 2024-07-14 18:16:39
+
+Comment 3:
+  Author: momsi91
+  Comment: I guess the easiest option is to use unique domains/paths.
+  Score: 1
+  Created UTC: 2024-07-14 21:06:57
+
+Note: This post has only 3 comments at the time of scraping.

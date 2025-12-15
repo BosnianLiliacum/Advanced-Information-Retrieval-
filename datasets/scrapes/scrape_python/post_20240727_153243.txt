@@ -1,0 +1,71 @@
+Post Title: BitZoo: My first Python project.
+Author: AlphaNooon
+Score: 52
+URL: https://www.reddit.com/r/Python/comments/1ecwe3o/bitzoo_my_first_python_project/
+Number of comments: 6
+Created UTC: 2024-07-26 19:15:32
+
+Post Content:
+# Backstory
+
+*Skip this if you're busy. Scroll down to the main part.*
+
+Hey y'all! It's been a few years since I learnt the basics of python, and then came a brief pause in my learning journey. I have coded a lot before this, in python, but never really been serious about stuff. Anyways, I recently decided to get back to it and started working on my first ever Python project.
+
+I can't submit a GIF here somehow, so here's a sped-up [Gameplay](https://imgur.com/a/Nk7GPlK) of it.
+
+# What My Project Does
+
+This program is a terminal based (TUI) game, inspired by the common *lifesim* games all around (like *InstLife*, *Bitlife*, *AltLife*, etc), but in no way, close to them. A lot is basic in here, and a lot is missing. I've tried to use this project as an opportunity to test my programming skills.
+
+The game comes with basic *lifesim* elements like:
+
+* **Home Screen:** Where most of the gameplay takes place.
+* **Profile:** The player's profile.
+* **Activities tab:**  Where the player can choose to do something.
+* **Relations tab:** Where the player can view their relations.
+* **Career:** Where the player can look for jobs.
+* **Lifestyle:** Where the player can buy different lifestyles.
+
+
+
+# Target Audience
+
+This is a *toy project* -- hence, the audience I'm looking for, is the one that can navigate me through understanding where I stand, what things need to be done and what's quite fine in the code.  It is just for some fun and a bit of learning for me, as well. I hope it's allowed here.
+
+
+
+# Comparison
+
+Being a *toy project*, this is intended to not be of much uniqueness. It is like most of the other *lifesims* out there, maybe even a watered-down version of them, rightfully so.
+
+Although, I can count a few interesting things on the top of my head.
+
+* It's unique in the sense that it is a TUI (Terminal User Interface) program, and hence it may appeal to those who prefer that instead of a GUI.
+* The education section, the gameplay around it... I've tried to make it a bit more intuitive, although a lot is missing. 
+* In comparison to various indie projects that I've seen online, specifically about *lifesims* in Python, I think I have gone into a bit of a unique direction, albeit the project is at a very humble stage to claim all that. I do have to mention, I've yet to see a fully functional TUI events log in such Python *lifesims* as of now. Maybe there is anything like that... probably? But I am quite satisfied with what I've done with that, personally.
+
+  
+It almost feels bad talking about such a trivial project, so much, but the requirements are there. I hope my code is easy on your eyes! (HAHA).
+
+**All the necessary information, as well as the steps of installation have been described in my GitHub Repo. I would be thrilled to receive feedback from y'all.**
+
+# In case I didn't mention it already, my [GitHub Repo](https://github.com/areebnaqash/BitZoo) is here.
+
+**Thanks!**
+
+Top 2 comments:
+Comment 1:
+  Author: Voice_Educational
+  Comment: I really love the interface, how did you build it?
+  Score: 3
+  Created UTC: 2024-07-26 21:51:25
+
+Comment 2:
+  Author: RojerGS
+  Comment: The game looks really good!
+I noticed you used `rich` and its renderables and I was wondering if you had given any thought to using `textual` ([docs](https://textual.textualize.io)), which is built with `rich`?
+  Score: 3
+  Created UTC: 2024-07-26 22:57:58
+
+Note: This post has only 2 comments at the time of scraping.

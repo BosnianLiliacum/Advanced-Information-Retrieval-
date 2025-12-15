@@ -1,0 +1,46 @@
+Post Title: WireGuard + Own domain + Nginx Proxy Manager
+Author: AngelOfDeath6-9
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebzs7y/wireguard_own_domain_nginx_proxy_manager/
+Number of comments: 30
+Created UTC: 2024-07-25 16:52:53
+
+Post Content:
+I’ve set up WireGuard on my OpenWrt router. I want to access my home network from everywhere. I’ve got my own Cloudflare domain. I’ve always used Nginx Reversed Proxy to do so. Is it just enough if I change my public IP to VPNed IP in Cloudflare DNS? I mean, I just did it and it doesn’t work at all. I read that I don’t have to port forward but I’m not sure… Can you help me? 
+
+TLDR: I want to access my home network (behind WireGuard) using my own domain and I don’t know how.
+
+Top 4 comments:
+Comment 1:
+  Author: Jackson_drake
+  Comment: Idk if this is what you wanted, but if you just want to access your services running on lan.. You can use cloudflared tunnel, or tailscale. N if you are concerned about routing through tailscale relay servers.. I think you can use headscale, i haven't tried headscale yet. Im using zerotier, tailscale and cloudflared tunnel to access my services away from home. CF have some feature with which you can secure the service further.
+  Score: 3
+  Created UTC: 2024-07-25 19:21:26
+
+Comment 2:
+  Author: daveyap__
+  Comment: What I did for my setup is:
+
+NPM's each proxy hosts set to their respective IP:Port
+
+piHole local DNS's CNAME &lt;service.domain.com&gt; to NPM's IP.
+
+Set Wireguard DNS server to piHole's IP.
+
+Not sure if what I did is correct but that's the gist of what I did and it works for me.
+  Score: 2
+  Created UTC: 2024-07-25 17:41:58
+
+Comment 3:
+  Author: K3CAN
+  Comment: You'll need to point your domain to your public IP and make sure that whichever port you're using for wireguard is allowed through the firewall.
+  Score: 2
+  Created UTC: 2024-07-26 01:54:28
+
+Comment 4:
+  Author: Wojojojo90
+  Comment: Can you clarify the VPN use case? Are you trying to set this up so that all your services are publicly accessible, and you also have a VPN connection back home? If yes, are you wanting services to use local IPs when on VPN or is it okay if it still goes through the public web? If no, how do you feel about publicly accessible DNS records that show any subdomain you use on your home network (even though they'd point to local IPs and be unusable by the general public)?
+  Score: 1
+  Created UTC: 2024-07-25 22:16:30
+
+Note: This post has only 4 comments at the time of scraping.

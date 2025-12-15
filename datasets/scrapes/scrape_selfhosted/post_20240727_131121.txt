@@ -1,0 +1,47 @@
+Post Title: Any recommendations for third party licensing software?
+Author: Havenfire24
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e66t2i/any_recommendations_for_third_party_licensing/
+Number of comments: 3
+Created UTC: 2024-07-18 08:59:26
+
+Post Content:
+My project currently has a user that can make API calls, and I want it so that if the license/subscription is not renewed or paid on time, it disables the service on the part of the user. Is there any service that is reliable that does this? I found Keygen and [https://netlicensing.io/](https://netlicensing.io/), does anyone have any better recommendations?
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: ```
+if(paid){
+  next();
+}else{
+  end(403);
+}
+```
+  Score: 8
+  Created UTC: 2024-07-18 11:18:49
+
+Comment 2:
+  Author: 0x3e4
+  Comment: maybe [Snipe-IT](https://snipe-it.readme.io/openapi/6698015a38ce940010682ddf) but would be overkill i think..
+  Score: 1
+  Created UTC: 2024-07-18 09:16:54
+
+Comment 3:
+  Author: LicenseSpring
+  Comment: There's lots of vendors on the market. There are some free / open source ones as well, depending on how much effort you are looking into configuring and maintaining it yourself. 
+
+Other functionality you might want to consider may include: 
+
+* handling offline scenarios, 
+* if it needs to handle User-authentication, 
+* if you're configuring trials or other sorts of feature flags, 
+* if you're metering usage of functionality as part of the licensing mechanism), 
+* app security (how easy / difficult would it be to circumvent). 
+* Reliability / uptime is also pretty important for this sort of service, as well as how to handle situations when the server is not reachable.
+
+I put together a list of 3rd party software licensing vendors (with no comment apart from their size) [here](https://licensespring.com/blog/other/licensespring-alternatives/):
+  Score: 1
+  Created UTC: 2024-07-18 15:22:20
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,87 @@
+Post Title: Distribution of Lets encrypt SSL certificatrs to multiple hosts?
+Author: DRoyHolmes
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eam737/distribution_of_lets_encrypt_ssl_certificatrs_to/
+Number of comments: 21
+Created UTC: 2024-07-23 23:15:27
+
+Post Content:
+I'm setting up my current network to get SSL certs for services on different servers. All services are local network only, VPNs handle remote access. My problem, from my understanding, is I need a cert directly on the hardware for HomeAssistant (Zwave Smart Setup, possibly more for MQTT servers, I haven't gotten that far yet) and, at least at this point, pfSense (doesn't like reverse proxy I've heard). Creating a CA and using a self-signed cert is not feasible.  
+
+Do I need to run processes for the different machines to get a cert, or does LetsEncrypt allow only one device connection, and so I need some sort of automated distribution system?
+
+I am going to use Cloudflare for DDNS, I have my domains there already. I'm also planning to have the VPNs managed on pfSense.
+
+Additionally, I also have two geographic locations. I'm hoping to make my system work like this:
+
+[a.example.com](http://a.example.com) (public (possibly dynamic) IP of pfSense router, updated via Cloudflare ddns, for VPN connections)
+
+[pf.a.example.com](http://pf.a.example.com) (internal static IP of pfSense)
+
+[ha.a.example.com](http://ha.a.example.com) (internal static IP of home assistant)
+
+  
+[b.example.com](http://b.example.com) (public (possibly dynamic) IP of pfSense router, updated via cloud flare ddns, for VPN connections)
+
+[pf.b.example.com](http://pf.b.example.com) (internal static IP of pfSense)
+
+[ha.b.example.com](http://ha.b.example.com) (internal static IP of home assistant)
+
+Top 4 comments:
+Comment 1:
+  Author: 1WeekNotice
+  Comment: Will try to help you out. 
+
+&gt;pfSense (doesn't like reverse proxy I've heard)
+
+Can you elaborate on this? As in pfSense doesn't have native reverse proxy plugins? Or it doesn't allow port forwarding to a reverse proxy on the internal network?
+
+&gt;Do I need to run processes for the different machines to get a cert, or does LetsEncrypt allow only one device connection, and so I need some sort of automated distribution system?
+
+While I can't fully answer this question. The typical method that people use for easy cert distribution is a reverse proxy (that will use let's encrypt)
+
+Note the reverse proxy will use DNS challenge so you don't need to port forward. 
+
+Flow:
+
+Device -&gt; local or external DNS -&gt; reverse proxy -&gt; service. 
+
+The reverse proxy will handle auto generation and auto renewal of certs. 
+
+With the list of domains that you provide. The reverse proxy (per geo location) will be able to easily generate and manage the lets encrypt certs. 
+
+
+Here are some popular reverse proxies. I prefer caddy because it is a simple single configuration 
+
+- caddy
+- Nginx 
+- NPM (Nginx with a UI)
+- traefik
+
+Hope that helps.
+  Score: 3
+  Created UTC: 2024-07-23 23:48:15
+
+Comment 2:
+  Author: BMalan1
+  Comment: Are you using the multiple fqdn?
+  Score: 1
+  Created UTC: 2024-07-24 00:55:39
+
+Comment 3:
+  Author: cornellrwilliams
+  Comment: Creating your own CA and self signed certificates are two different things. When you setup your local CA you use it to sign certificates. Your certificates are then CA signed just like they would be if you generated them with Let's Encrypt. 
+
+Setting up your own CA is the easiest and most reliable method to setup SSL. I have SSL Certs for home assistant, Z-Wave JS UI, windows admin center and etc. It takes 10 minutes to set up.
+  Score: 1
+  Created UTC: 2024-07-24 11:46:31
+
+Comment 4:
+  Author: DRoyHolmes
+  Comment: Okay so I think my router is blocking this because it appears to be a rebind attack. I need an internal DNS server to resolve all the hostnames to either bare metal machines, or a proxy server to split into ports if necessary.
+
+Not sure how this impacts my public SSL plans.
+  Score: 1
+  Created UTC: 2024-07-27 00:27:06
+
+Note: This post has only 4 comments at the time of scraping.

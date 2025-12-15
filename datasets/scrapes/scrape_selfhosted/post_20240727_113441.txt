@@ -1,0 +1,71 @@
+Post Title: Which docker container to use for running a Windows app
+Author: kingmahler
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebrzz6/which_docker_container_to_use_for_running_a/
+Number of comments: 20
+Created UTC: 2024-07-25 10:58:57
+
+Post Content:
+Hello
+
+I need to run a proprietary Windows only software on a Debian host that can access my network.
+
+I have tried libvirtd but it was painfully slow at emulating a Windows 10 VM.
+
+There are 3 features that I need:
+-VNC access (preferably via browser)
+-Network access (via host)
+-Persistence. If I restart the container it will create a snapshot of where I was or automatically starts up the exe that I need to run.
+
+Top 7 comments:
+Comment 1:
+  Author: teateateateaisking
+  Comment: Why does it need to involve a container?
+You could just run a windows VM. You will probably have a better experience if you use tools designed for the job.
+  Score: 16
+  Created UTC: 2024-07-25 12:13:19
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: Don't abuse containers as VMs just because you can KVM in them. Setup a proper Windows Server for your app in a VM.
+  Score: 24
+  Created UTC: 2024-07-25 11:23:14
+
+Comment 3:
+  Author: vantasmer
+  Comment: This is a bad idea, the point of containers is to share the kernel. Windows uses a different kernel than Linux so by default you’re going to need a virtualization layer. At that point just run the app in a windows VM. Alternatively if you leverage Kubernetes you can use kubevirt 
+  Score: 3
+  Created UTC: 2024-07-25 14:14:09
+
+Comment 4:
+  Author: xenophonf
+  Comment: Windows containers cannot be used to run  applications with a GUI.
+
+https://stackoverflow.com/a/54320829
+
+https://web.archive.org/web/20180721110338/https://blogs.technet.microsoft.com/virtualization/2018/06/27/insider-preview-windows-container-image/
+
+Virtualization (if everything uses the same hardware architecture) and emulation (if different) are your only options in this case.  You might consider using Vagrant to automate virtual machine provisioning and maintenance in a manner similar to Docker.
+
+As an aside, containers don't work across platforms.  They depend completely on the host operating system's underlying application isolation features.  That means Linux can't host Windows containers.  That's also why things like Docker Desktop on macOS and on Windows run Linux containers in a Linux virtual machine.  To run a Windows container on Linux, you must host the container in a Windows virtual machine.
+  Score: 3
+  Created UTC: 2024-07-25 19:27:15
+
+Comment 5:
+  Author: d0ms3n
+  Comment: Maybe this works for you. https://kasmweb.com/
+  Score: 2
+  Created UTC: 2024-07-25 12:55:47
+
+Comment 6:
+  Author: LavaLaugh
+  Comment: I think that there is a scaled down Windows container: https://github.com/dockur/windows
+  Score: 4
+  Created UTC: 2024-07-25 11:04:54
+
+Comment 7:
+  Author: chriberg
+  Comment: You're making this way more complicated than it needs to be for no reason. Just spin up a Windows VM.
+  Score: 2
+  Created UTC: 2024-07-25 15:22:42
+

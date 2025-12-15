@@ -1,0 +1,55 @@
+Post Title: How do you secure your exit node?
+Author: razzy1319
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1ecrvac/how_do_you_secure_your_exit_node/
+Number of comments: 8
+Created UTC: 2024-07-26 16:06:19
+
+Post Content:
+My exit node is local. If vpns don’t work  with Tailscale how do you guys make sure that your ip isnt exposed?
+
+Top 7 comments:
+Comment 1:
+  Author: Leseratte10
+  Comment: The point of an exit node \*is\* to expose / use the IP / internet connection of the exit node ...
+  Score: 19
+  Created UTC: 2024-07-26 16:30:18
+
+Comment 2:
+  Author: brock_gonad
+  Comment: Assuming your exit node is your home network, that is secured by your firewall. Setting aside Tailscale, you keep your home network secured by not exposing any services you don't use and by keeping your firewall up to date.
+
+If you are sufficiently savvy (or paranoid), you can deploy a software router such as OPNsense.
+  Score: 6
+  Created UTC: 2024-07-26 16:47:57
+
+Comment 3:
+  Author: garbles0808
+  Comment: Do you know the reason why you're using an exit node?
+  Score: 2
+  Created UTC: 2024-07-26 18:37:10
+
+Comment 4:
+  Author: godch01
+  Comment: My view is it does not matter if you have no open inbound ports. Of course I don't download copyrighted material
+  Score: 1
+  Created UTC: 2024-07-26 16:33:45
+
+Comment 5:
+  Author: chigh
+  Comment: If I'm using an exit node, I don't care that the IP of that system is exposed. I'm more worried about my local device than my exit node.
+  Score: 1
+  Created UTC: 2024-07-26 19:39:17
+
+Comment 6:
+  Author: ohmer123
+  Comment: Hardening guide from the doco + hability to redeploy quickly and without service interruption so OS upgrades are never an issue (failover pair in 2 ASG since I use AWS)
+  Score: 1
+  Created UTC: 2024-07-26 19:53:40
+
+Comment 7:
+  Author: Life-Ad1547
+  Comment: Tailscale *IS* a VPN.
+  Score: 1
+  Created UTC: 2024-07-27 00:16:41
+

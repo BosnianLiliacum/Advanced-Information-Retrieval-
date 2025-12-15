@@ -1,0 +1,69 @@
+Post Title: Slow transfers between Computers, but fast Internet - Help 
+Author: Dr-COCO
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e98tyd/slow_transfers_between_computers_but_fast/
+Number of comments: 12
+Created UTC: 2024-07-22 08:07:57
+
+Post Content:
+
+I'm experiencing slow file transfer speeds between two computers (A &amp; B) located in different countries.  
+
+Computer A: 100 Mbps download, 50 Mbps upload
+Computer B: 50 Mbps download, 8 Mbps upload
+
+Observations:
+
+* **Syncthing:** Upload from A to B ~18-22 Mbps, upload from B to A ~7-8 Mbps.
+* **iperf3:** TCP speeds are similar to Syncthing, but UDP is around 1 Mbps.
+* **Virtual Network:** Tried Tailscale and OpenVPN through router interface, but speeds remained the same.
+
+
+
+What could be causing these slow speeds, especially the significant difference in upload speeds between A to B and B to A?  Any suggestions for troubleshooting?
+
+
+Edit: Set up a Syncthing client in the house of A in a Raspberry.
+I can reach 50 Mbps of upload speed on that device between the computer B
+
+Computer A and B are Windows 10
+
+[SOLVED] 
+
+I did an experiment and disable DNS (—accept-dns=false). And I can reach 50 Mbps upload now. 
+
+
+Top 4 comments:
+Comment 1:
+  Author: WolpertingerRumo
+  Comment: I dont quite understand? It seems like this is because of computer B‘s slow upload, which likely is up to the ISP, or the specific speed Package you buy.
+  Score: 3
+  Created UTC: 2024-07-22 08:29:47
+
+Comment 2:
+  Author: Meganitrospeed
+  Comment: You need to convert your ISP advertised speeds from Mbps to MBps which is what the transfer program appears to be measuring in.
+
+They seem mostly correct once you do the conversion
+  Score: 2
+  Created UTC: 2024-07-22 09:38:26
+
+Comment 3:
+  Author: any41
+  Comment: I have 2 disks, seagate 1.5tb hdd and samsung 870 ssd 2tb. One thing I have noticed over time was, when I try uploading any file to my Seagate hdd the upload speed varies between 15-25mbps (single large file) and the same file uploads at the speed of 100-110mbps to my samsung ssd.
+
+One more thing, generally single large files upload faster than folder containing numerous small sized files.
+
+Edit: The above results are from the systems located on same network.
+  Score: 1
+  Created UTC: 2024-07-22 08:52:39
+
+Comment 4:
+  Author: debian_fanatic
+  Comment: &gt;especially the significant difference in upload speeds between A to B and B to A?
+
+This is expected behavior when computer A's upload rate is 50Mbps upload and computer B's upload rate is 8Mbps.
+  Score: 1
+  Created UTC: 2024-07-23 01:45:08
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,40 @@
+Post Title: FileShare Software
+Author: CambodianJerk
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eckyh6/fileshare_software/
+Number of comments: 3
+Created UTC: 2024-07-26 10:42:35
+
+Post Content:
+Hi All,
+
+I have a fairly hefty ZFS setup across multiple pools in ProxMox currently.  I like it directly in ProxMox and don't want to move the ZFS into any VM's/Containers, just mount disks on them.
+
+I do this at the moment with TrueNas inside a VM.  When I originally set this up, it wasn't using ZFS for underlying storage, but now it is.  So whilst I have ZFS features disabled inside TrueNas, it's still ZFS on ZFS.
+
+What do I need?
+
+ - SMB Share Capability WITH LDAP Integration
+
+ - NFS Share Capability
+
+That's literally it.  OpenMediaVault looked promising until I got to LDAP which is a burning pile of failure.  Id also rather not directly share from the ProxMox host.
+
+I haven't ever setup shares just from a basic Linux VM, but I'm guessing this might be the way to go, though the thought of LDAP via it going haywire gives me cause for concern (*not because of the tech, but because I have to google almost everything Linux related)*.
+
+Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: ridah
+  Comment: I use NFS for all linux VMs, it works fine. I also run some windows hosts, and I found sshfs for windows pretty smooth that I use for those. Could probably use sshfs for linux as well, but dont know how reliable that would be and I havent tried it.
+  Score: 1
+  Created UTC: 2024-07-26 11:29:08
+
+Comment 2:
+  Author: CubeRootofZero
+  Comment: TurnKey Linux File Server template. Bind mount a folder on your ZFS pool, then create SMB/NFS shares. Works great, I replaced a TrueNAS VM with this.
+  Score: 1
+  Created UTC: 2024-07-26 11:34:15
+
+Note: This post has only 2 comments at the time of scraping.

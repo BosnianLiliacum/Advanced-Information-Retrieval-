@@ -1,0 +1,38 @@
+Post Title: Any ideas why my webserver is unreachable via its internal IP address?
+Author: psxndc
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e3821a/any_ideas_why_my_webserver_is_unreachable_via_its/
+Number of comments: 6
+Created UTC: 2024-07-14 17:35:02
+
+Post Content:
+Solved: I don't know how or why this solved it, but I just changed the server's IP to [10.0.0.178](http://10.0.0.178) and on the router set the mac address for the server to always be assigned 178. Both had been set to 60 before, so I'm not sure how it fixed it, but it seemingly did. Thanks all for trying to guess the issue.
+
+-- original post --
+
+I've got a Raspberry Pi set up and it's happily serving up webpages (80, 443) and FreshRSS (8082) to the Internet. Its internal IP address is [10.0.0.60](http://10.0.0.60), and I'm port-forwarding \[mydomain\]:80, 8082, etc., on my router to it. The problem is that it's unreachable on my local network. For some reason, [10.0.0.60](http://10.0.0.60) just can't be seen - I can't ping it, I can't see webpages on it, etc and any attempt to connect to it results in "no route to host". I can see [10.0.0.51](http://10.0.0.51) (my PlayStation), [10.0.0.201](http://10.0.0.201) (my piHole), and plenty of other devices, but for some reason the webserver at [10.0.0.60](http://10.0.0.60) is just unreachable.
+
+I have been able to ignore it for the most part by port forwarding 22 on my router and just SSHing into \[mydomain\], but I've now run into a security issue with the setup. I'm trying to set up Calibre and would love to have its KasmVNC interface accessible only on my private network. But because I can't see [10.0.0.60](http://10.0.0.60) locally, KasmVNC *has* to be open to the Internet to access it. Since I'm still getting familiar with Calibre/Kasm, I haven't figured out how to configure authentication, so until I figure that out, my Calibre setup is available for anyone in the world to muck with.
+
+While the short-term solution is "set up Calibre/Kasm authentication," that doesn't solve the more persistent issue of why I can't see this one IP address.  Any guesses?
+
+Top 3 comments:
+Comment 1:
+  Author: SpaffedTheLot
+  Comment: Netmask?
+  Score: 1
+  Created UTC: 2024-07-14 18:19:35
+
+Comment 2:
+  Author: tgm4883
+  Comment: If you remove the port forward does it work internally?
+  Score: 1
+  Created UTC: 2024-07-14 18:29:09
+
+Comment 3:
+  Author: upfreak
+  Comment: Is this on different vlan ? Looks like some isolation setup on the router
+  Score: 1
+  Created UTC: 2024-07-14 18:33:42
+
+Note: This post has only 3 comments at the time of scraping.

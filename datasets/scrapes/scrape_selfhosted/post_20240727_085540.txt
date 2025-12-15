@@ -1,0 +1,40 @@
+Post Title: Do you use Joplin with ipad or samsung tab ?
+Author: BadnamHaiKoi
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eb4ym3/do_you_use_joplin_with_ipad_or_samsung_tab/
+Number of comments: 5
+Created UTC: 2024-07-24 15:55:17
+
+Post Content:
+Hello r/selfhosted fam,
+
+I wanted to know if anyone use Joplin with Apple ipad or samsung tab or any other tab ? How is your experience and feedback ? Do pencil/pen work well with Joplin ?
+
+Thanks
+
+Top 4 comments:
+Comment 1:
+  Author: amcco1
+  Comment: You're probably better off posting on the Joplin subreddit, where you will find more people who use the app. r/joplinapp
+  Score: 3
+  Created UTC: 2024-07-24 16:13:58
+
+Comment 2:
+  Author: AngelOfDeadlifts
+  Comment: I use it on a windows computer, a macbook pro, and an ipad. I don't think it supports the apple pencil as I haven't gotten it to work.
+  Score: 1
+  Created UTC: 2024-07-24 17:24:36
+
+Comment 3:
+  Author: BoringStatus465
+  Comment: Joplin is just multiplayer notepad
+  Score: 1
+  Created UTC: 2024-07-24 18:59:52
+
+Comment 4:
+  Author: TormundGaming
+  Comment: I use it on iOS and Mac but only the text modes. The self-hosted sync server is definitely the way to go over its other sync options.
+  Score: 1
+  Created UTC: 2024-07-25 01:14:53
+
+Note: This post has only 4 comments at the time of scraping.

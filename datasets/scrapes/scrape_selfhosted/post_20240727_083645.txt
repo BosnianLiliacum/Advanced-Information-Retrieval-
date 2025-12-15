@@ -1,0 +1,61 @@
+Post Title: FUTO on immich payment methods' response 
+Author: UniqueAttourney
+Score: 104
+URL: https://www.youtube.com/watch?v=YdwG6SHeZEA
+Number of comments: 32
+Created UTC: 2024-07-25 21:38:53
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: Substantial_Age_4138
+  Comment: I think the "license or support" issue is pretty much closed now.  And that Futo has already proven that they can be trusted by keep telling to the users "don’t trust us, trust the policies".  
+
+Eagerly waiting for the new browser and I wish that they will make their products available on iOS at some point. 
+  Score: 84
+  Created UTC: 2024-07-25 22:10:35
+
+Comment 2:
+  Author: bodez95
+  Comment: Anti-enshitification! I like it!
+  Score: 38
+  Created UTC: 2024-07-26 01:38:20
+
+Comment 3:
+  Author: ThinkExtension2328
+  Comment: Eh seems to be a non asshole design
+  Score: 30
+  Created UTC: 2024-07-25 21:46:18
+
+Comment 4:
+  Author: PriorLingonberry2364
+  Comment: A one-off payment does not constitute sustainable financing. What should future financing look like? Will versions be introduced for which a new “purchase” is required? Immich 2, Immich 3, ... I think it is foreseeable that a different form of financing will follow in the long term, as this is either too short-sighted or not the whole truth. It will probably also come down to regular payment models.
+
+This is not to say that payment is wrong. It is understandable. But buying a “one-time license” now and then having to buy another license in 1-2 years feels strange. It would be better to introduce regular payments directly and transparently or to make it clear that these actions will have to be repeated.
+  Score: 30
+  Created UTC: 2024-07-26 05:00:11
+
+Comment 5:
+  Author: UniqueAttourney
+  Comment: I personally think they chose they words carefully, they hammered down teh idea that the AGPL code will not be touched and the OS community will continue to develop that but they never said that they won't put other features behind paywalls, other features like plugins, systems, that will have their own licence and are not part of immich itself.
+  Score: 16
+  Created UTC: 2024-07-25 22:13:18
+
+Comment 6:
+  Author: dot_py
+  Comment: One time donations doesn't really seems like it would support ongoing development. If the argument is that, and being paid / profiting from Immich is important - simply have a CTA every major version asking users to support ongoing development of version X and into the future.
+
+There's much easier ways to word this, get your point across without talking down to people like you're the first open source project that wants to make money from their hard work.
+
+Just a little foot in mouth issue which is kinda par for the course with techies. Marketers seems useless till you need em.
+  Score: 4
+  Created UTC: 2024-07-26 06:45:03
+
+Comment 7:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: -1
+  Created UTC: 2024-07-26 06:40:51
+

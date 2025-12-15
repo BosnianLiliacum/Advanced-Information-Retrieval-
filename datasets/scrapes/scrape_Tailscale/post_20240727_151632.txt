@@ -1,0 +1,20 @@
+Post Title: ACL Check mode?
+Author: im_thatoneguy
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1eb8aoy/acl_check_mode/
+Number of comments: 2
+Created UTC: 2024-07-24 18:10:05
+
+Post Content:
+Here's something that could be useful to us but I wonder if it make sense to exist.  Could ACLs also have a "Check" mode like SSH?  I'm thinking of exposing web services and authenticating using Tailscale Auth but like sensitive SSH connections maybe I want the user to have to run a 2FA confirmation before logging in. 
+
+Top 1 comments:
+Comment 1:
+  Author: caolle
+  Comment: You do have the option to run your own multifactor service for those sensitive web applications. 
+
+Authelia is one.
+  Score: 1
+  Created UTC: 2024-07-24 18:25:41
+
+Note: This post has only 1 comments at the time of scraping.

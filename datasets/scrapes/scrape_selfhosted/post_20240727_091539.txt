@@ -1,0 +1,19 @@
+Post Title: Self hosted Online Browser Games
+Author: marcozrules
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1ea3963/self_hosted_online_browser_games/
+Number of comments: 4
+Created UTC: 2024-07-23 09:10:06
+
+Post Content:
+I'm looking for some fun self hosted Online Browser Games to host and play with friends. 
+
+
+Top 1 comments:
+Comment 1:
+  Author: hamncheese34
+  Comment: I haven't tried myself but your post got me exploring.. freeciv-web (https://github.com/freeciv/freeciv-web) might be a good option.. I guess it also depends on your definition of fun.
+  Score: 3
+  Created UTC: 2024-07-23 10:03:05
+
+Note: This post has only 1 comments at the time of scraping.

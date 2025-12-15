@@ -1,0 +1,59 @@
+Post Title: A Simple File sharing app in Go
+Author: Khushal897
+Score: 22
+URL: https://github.com/KhushalJangid/sync.io?tab=readme-ov-file
+Number of comments: 19
+Created UTC: 2024-07-19 12:06:26
+
+Post Content:
+Presenting Syncio, an open-source tool designed for:
+
+✅ Minimal setup
+
+✅ Platform independence
+
+✅ Fast, wireless file transfers
+
+✅ File transfer over Hotspot or LAN
+
+Built with Go, HTML, and Bootstrap, Syncio aims to make on-the-go wireless file transfers as smooth as possible.
+
+The primary motivation behind building this was the lack of easy to use file sharing options in Linux-Android and Mac-Android ecosystems.
+
+✨ Any contributions and feedback are welcome. Give it a try and let me know your thoughts! 
+
+Top 4 comments:
+Comment 1:
+  Author: JSouthGB
+  Comment: Looks like a lot of effort went into this. I'll check it out this weekend. Thank you for sharing
+  Score: 5
+  Created UTC: 2024-07-19 13:38:24
+
+Comment 2:
+  Author: Tibuski
+  Comment: Thank you for your work, I'll give it a try !
+I love go and the fact it's just one executable which makes it trivial to test and/or put in container.
+
+If you want your project to grow in popularity, I think you will have to give some docker instructions even if it's just a 2 lines Dockerfile ans docker compose. If not, you will lose people only trying containers.
+
+If it's just for fun, let it like this, one exec is already really convenient.
+  Score: 4
+  Created UTC: 2024-07-20 06:39:28
+
+Comment 3:
+  Author: Chiccocarone
+  Comment: Looks good but I think you should add a docker image to run it
+  Score: 3
+  Created UTC: 2024-07-19 19:21:49
+
+Comment 4:
+  Author: Khushal897
+  Comment: Genuine question to everyone asking for a docker image, What exactly do you need a docker image for?
+
+Running the exe or building from source?
+
+Also if anyone wants to contribute by creating the docker image, you're most welcome
+  Score: 1
+  Created UTC: 2024-07-20 11:31:55
+
+Note: This post has only 4 comments at the time of scraping.

@@ -1,0 +1,61 @@
+Post Title: Self hosted service to watch videos with friends?
+Author: xHz27
+Score: 18
+URL: https://www.reddit.com/r/selfhosted/comments/1e581cj/self_hosted_service_to_watch_videos_with_friends/
+Number of comments: 27
+Created UTC: 2024-07-17 03:21:02
+
+Post Content:
+Doesn't necessarily have to be self hosted but that would be great. I'd like a service where I could watch videos with my friends, similar to Discord's YouTube watch party feature (a host that can play/pause the video, and the video is synced for everyone watching), but with any video file instead of youtube videos.
+
+Top 7 comments:
+Comment 1:
+  Author: Low-Musician-163
+  Comment: I remember Jellyfin also having a watch party feature, although I've personally never used it.
+  Score: 60
+  Created UTC: 2024-07-17 03:48:36
+
+Comment 2:
+  Author: aft_punk
+  Comment: Plex has a Watch Together feature. It works pretty well, as long as the server has fairly decent upload rate.
+  Score: 30
+  Created UTC: 2024-07-17 04:27:28
+
+Comment 3:
+  Author: fprof
+  Comment: syncplay
+
+https://syncplay.pl/
+  Score: 10
+  Created UTC: 2024-07-17 08:03:11
+
+Comment 4:
+  Author: ComputersGoBrr
+  Comment: [https://github.com/calzoneman/sync](https://github.com/calzoneman/sync)
+
+  
+Has some issues; like age restricted videos being non-embedded from youtube...
+
+Owncast is an option but it doesn't sync it quite as well.
+  Score: 3
+  Created UTC: 2024-07-17 05:06:57
+
+Comment 5:
+  Author: SirMasterLordinc
+  Comment: There is an app called “Rabbit” for that
+  Score: 2
+  Created UTC: 2024-07-17 03:34:38
+
+Comment 6:
+  Author: SymbioticHat
+  Comment: Like this?
+https://www.watchparty.me/
+  Score: 1
+  Created UTC: 2024-07-17 10:26:36
+
+Comment 7:
+  Author: bwfiq
+  Comment: Jellyfins sync is hit or miss for me, honestly I would recommend streaming your screen to a discord server (or self hosted alternative)
+  Score: 1
+  Created UTC: 2024-07-17 18:46:23
+

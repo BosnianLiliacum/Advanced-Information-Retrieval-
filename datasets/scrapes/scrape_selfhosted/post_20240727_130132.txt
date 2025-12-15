@@ -1,0 +1,62 @@
+Post Title: Does this limit Watchtower to a specific container?
+Author: hirakath
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6kvt6/does_this_limit_watchtower_to_a_specific_container/
+Number of comments: 8
+Created UTC: 2024-07-18 20:12:10
+
+Post Content:
+So I'm trying to add another Docker service to my server but their compose file includes Watchtower for keeping the service updated with their weekly releases. I've never really used Watchtower before but I am aware that it's used for automatically updating your services or just notifying you that there's an update.
+
+I generally don't like automatically updating my services and I always do them manually and I believe by default Watchtower watches all of your services. The `command` does specify the container name but I'm not sure if that limits Watchtower to just that container.
+
+As you can see in the example below, `command: --interval 30 --stop-timeout 130s --cleanup my-server` specified `my-server`. Does this make sure that Watchtower only updates the `my-org/my-image:weekly` image and leave all of my existing images alone?
+
+    services:
+      my-service:
+        image: my-org/my-image:weekly
+        stdin_open: true
+        tty: true
+        container_name: my-server
+        ports:
+          - 80:80
+        restart: on-failure:0
+        volumes:
+          - ./data:/data
+        environment:
+          - RUST_LOG=debug,common::net=info
+      watchtower:
+        image: containrrr/watchtower
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+        command: --interval 30 --stop-timeout 130s --cleanup my-server
+        restart: on-failure:0
+
+Top 4 comments:
+Comment 1:
+  Author: clintkev251
+  Comment: Yes
+
+[https://containrrr.dev/watchtower/arguments/](https://containrrr.dev/watchtower/arguments/)
+  Score: 3
+  Created UTC: 2024-07-18 20:25:56
+
+Comment 2:
+  Author: AstarothSquirrel
+  Comment: I found that watchtower totally effed my system, I'll stick to updating manually. But good luck to those that use it,  hope it works out well for you.
+  Score: 1
+  Created UTC: 2024-07-19 09:46:54
+
+Comment 3:
+  Author: pigers1986
+  Comment: "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once emby" where emby is DOCKER to UPDATE
+  Score: -5
+  Created UTC: 2024-07-18 21:41:05
+
+Comment 4:
+  Author: Deventerz
+  Comment: Just get rid of watchtower if you don't want it
+  Score: -7
+  Created UTC: 2024-07-18 20:29:02
+
+Note: This post has only 4 comments at the time of scraping.

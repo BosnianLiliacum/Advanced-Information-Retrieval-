@@ -1,0 +1,34 @@
+Post Title: Buying used server question
+Author: greyspurv
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed20jx/buying_used_server_question/
+Number of comments: 3
+Created UTC: 2024-07-26 23:21:49
+
+Post Content:
+If you had to buy a used server, where would one look and what would be a good price to performance ratio right now?
+
+Top 3 comments:
+Comment 1:
+  Author: lev400
+  Comment: eBay
+
+What do you want to do with the sever? Do you want rack mount or tower?
+  Score: 3
+  Created UTC: 2024-07-27 00:34:49
+
+Comment 2:
+  Author: msanangelo
+  Comment: I'd look on ebay with a set max budget and look for the most powerful rig I can find that wouldn't require me to buy upgrades right out of the gate.
+  Score: 1
+  Created UTC: 2024-07-27 02:09:33
+
+Comment 3:
+  Author: gryd3
+  Comment: Depends what you want to do... last time I wanted to self-host something, I bought a refurbished mini-pc. 
+
+It's not just about the horsepower for me, it's also about the energy demand.. that's what drove me to a little i5 based machine, and what later drove me to an N97 on a tiny board that sits on the corner of my desk.
+  Score: 1
+  Created UTC: 2024-07-27 04:18:54
+
+Note: This post has only 3 comments at the time of scraping.

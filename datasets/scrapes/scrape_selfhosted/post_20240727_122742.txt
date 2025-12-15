@@ -1,0 +1,30 @@
+Post Title: Sata cable connector for mini pc
+Author: turtleindeed
+Score: 1
+URL: https://i.redd.it/gi80smrv4wdd1.jpeg
+Number of comments: 4
+Created UTC: 2024-07-21 15:30:48
+
+Post Content:
+So i have a mini pc and i want to upgrade it with an ssd its the GB-BRi5H-8250 (rev. 1.0)(https://www.gigabyte.com/Mini-PcBarebone/GB-BRi5H-8250-rev-10#ov)
+
+On the site it says it can be upgrade with either a ssd or a hdd. 
+This mini pc does not have the standard sata port and will need something i think is a sata ribbon cable.
+My question is where can i Get it. I live in Europe and i find stuff like ASUS P1412CEA/X415EA HDD FFC 0,5 mm L101-kabel but it is a spare part for laptops notebook series so what cable and where should I get it?
+
+Top 2 comments:
+Comment 1:
+  Author: gts250gamer101
+  Comment: That model should have an M.2 slot, I believe? That would probably be your best bet for upgrading the SSD. There is never a guarantee that OEMs use a "standard" pinout for those types of connectors, so while it likely could be compatible with something that looks similar, it's also entirely possible that the wiring is different.
+
+The M.2 interface should be compatible with a much faster PCIe SSD, just make sure that the notches are correct and do not install a SATA interface M.2 drive.
+  Score: 1
+  Created UTC: 2024-07-21 16:27:31
+
+Comment 2:
+  Author: DULUXR1R2L1L2
+  Comment: Ask gigabyte
+  Score: 1
+  Created UTC: 2024-07-21 19:00:50
+
+Note: This post has only 2 comments at the time of scraping.

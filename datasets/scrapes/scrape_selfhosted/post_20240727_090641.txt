@@ -1,0 +1,36 @@
+Post Title: Docker Non Root Containers  
+Author: react2724
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eajqaa/docker_non_root_containers/
+Number of comments: 1
+Created UTC: 2024-07-23 21:31:21
+
+Post Content:
+Hello all,
+I want to limit containers privileges throughout my environment, I am able to specify an user ID in docker compose for Grafana. Like so:  user: “6001:6001” 
+( I adjusted the permissions on the volume mounts as well) 
+
+The container starts and runs but when I enter the container shell and run “whoami” I get unknown UID 6001. 
+
+The container is running as the grafana user on the system (6001) but will problems occur with other containers if whoami does not resolve?
+
+ Is this to be expected or additional steps needed?
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: zoredache
+  Comment: Generally, if you want to change the user id the image will runs as, you probably need to build your own image, and add a user/group add needed with the associated uid/gid you want to use.
+
+Some images like the linuxserver.io images do have an entrypoint that will read an environment variable (PUID/PGID), and create or modify a user/group to match the UID/GID provided, and fix filesystem permissions.
+
+Just passing a different uid/gid without fixing permissions might break the software, and it might not be able to store your data properly, but that would depend on how the image was built.
+
+Also, some images will assume they are root, and will try to use ports below 1024, or something else. So the services might not actually be able to run if you use a non-root uid/gid.
+
+Anyway, you probably need to build an image, or at least have a good understanding what the image is doing. Passing a uid/gid might be fine if you fix the permissions, or it might break things.
+  Score: 5
+  Created UTC: 2024-07-23 21:49:17
+
+Note: This post has only 1 comments at the time of scraping.

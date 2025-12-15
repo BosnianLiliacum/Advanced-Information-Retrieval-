@@ -1,0 +1,221 @@
+Post Title: jinja2.exceptions.TemplateNotFound: templates/Patient_View.html 
+Author: jjklnj
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1echwyc/jinja2exceptionstemplatenotfound_templatespatient/
+Number of comments: 5
+Created UTC: 2024-07-26 07:14:19
+
+Post Content:
+I'm trying to create a simple Web App, fetching data from a MySQL table and displaying it on an HTML page. However, when I try running the .py file, I get the error: **jinja2.exceptions.TemplateNotFound: templates/Patient\_View.html**  even though there is a **Patient\_View.html** file in the **templates** folder. 
+
+Here is my .py file and the code in it: 
+
+    from flask import Flask, render_template, request, redirect, url_for, flash
+    from flask_sqlalchemy import SQLAlchemy
+    from  import generate_password_hash, check_password_hash
+    from flask_login import UserMixin, LoginManager, login_user, logout_user, current_user, login_required
+    from datetime import datetime
+    import pymysql
+    import logging
+    
+    pymysql.install_as_MySQLdb()
+    
+    app = Flask(__name__)
+    app.secret_key = 'Krish'
+    
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/medical'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db = SQLAlchemy(app)
+    
+    # Set up logging
+    logging.basicConfig(level=logging.INFO)
+    
+    # Initialize Flask-Login
+    login_manager = LoginManager(app)
+    login_manager.login_view = 'home'  # when the user tries to access a page without logging in first, they are redirected to this page
+    
+    u/login_manager.user_loader
+    def load_user(user_id): 
+        return Login.query.get(int(user_id))  # Ensure user_id is used properly
+    
+    class Login(UserMixin, db.Model):
+        id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+        name = db.Column(db.String(50), nullable=False)
+        password = db.Column(db.String(255), nullable=False)
+    
+    class Patients(db.Model): 
+        Patient_Id = db.Column(db.Integer, primary_key=True, unique=True)
+        Name = db.Column(db.String(50), nullable=False)
+        Address = db.Column(db.String(50), nullable=False)
+        Phone_Number = db.Column(db.String(50), nullable=False)
+        Email = db.Column(db.String(50), nullable=False)
+        Health_Problem = db.Column(db.String(50), nullable=False)
+        Payment = db.Column(db.Integer, nullable=False)
+        Gender = db.Column(db.String(50), nullable=False)
+    
+    class Booking(db.Model): 
+        id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+        name = db.Column(db.String(50), nullable=False)
+        phone = db.Column(db.String(50), nullable=False)
+        email = db.Column(db.String(50), nullable=False)
+        health_problem = db.Column(db.String(50), nullable=False)
+        doctor = db.Column(db.String(50), nullable=False)
+        date = db.Column(db.Date, nullable=False)
+        time = db.Column(db.Time, nullable=False)
+        area = db.Column(db.String(50), nullable=False)
+        city = db.Column(db.String(50), nullable=False)
+        district = db.Column(db.String(50), nullable=False)
+        postal_code = db.Column(db.String(50), nullable=False)
+    
+    u/app.route('/', methods=['POST', 'GET'])
+    def home():
+        logout_user()
+        if request.method == 'POST':
+            name = request.form.get('name')
+            password = request.form.get('password')
+            login = Login.query.filter_by(name=name).first()
+            if login and check_password_hash(login.password, password):
+                login_user(login)
+                if name == 'admin':
+                    return redirect(url_for('admin'))
+                elif name == 'user': 
+                    return redirect(url_for('user'))
+            else:
+                flash('Login Unsuccessful!', 'danger')
+        return render_template('Login.html')
+    
+    u/app.route('/user')
+    u/login_required  # Ensure route is protected
+    def user(): 
+        return render_template('User.html')
+    
+    u/app.route('/admin')
+    u/login_required  # Ensure route is protected
+    def admin():
+        return render_template('Admin.html')
+    
+    u/app.route('/PIF', methods=['POST', 'GET'])
+    u/login_required  # Ensure route is protected
+    def PIF():
+        if request.method == 'POST': 
+            try:
+                id = int(request.form.get('id'))
+                name = request.form.get('name')
+                address = request.form.get('address')
+                email = request.form.get('email')
+                health_problem = request.form.get('health_problem')
+                payment = int(request.form.get('payment'))
+                contact = request.form.get('phone')
+                gender = request.form.get('gender') 
+                new_patient = Patients(Patient_Id=id, Name=name, Email=email, Payment=payment, Address=address, Phone_Number=contact, Gender=gender, Health_Problem=health_problem)
+                db.session.add(new_patient)
+                db.session.commit()
+                flash('New Patient Record Added', 'primary')
+            except Exception as e:
+                flash(f'Input Invalid or Error: {e}', 'danger')
+        return render_template('Patient Information.html')
+    
+    u/app.route('/PatientBooking', methods= ['POST', 'GET'])
+    u/login_required  # Ensure route is protected
+    def PatientBooking():    
+        if request.method == 'POST': 
+            try: 
+                name = request.form.get('name')
+                phone = request.form.get('phone')
+                email = request.form.get('email')
+                health_problem = request.form.get('health')
+                doctor = request.form.get('doctor')
+                date = request.form.get('date')
+                time_str = request.form.get('time')
+                time_obj = datetime.strptime(time_str, '%H:%M').time()
+                area = request.form.get('area')
+                city = request.form.get('city')
+                district = request.form.get('district')
+                postal_code = request.form.get('post-code')
+    
+                # Parse the time into a datetime.time object
+                time_mysql_format = time_obj.strftime('%H:%M:%S')
+    
+                new_booking = Booking(name=name, phone=phone, email=email, health_problem=health_problem,
+                                      doctor=doctor, date=date,
+                                      time=time_mysql_format, area=area, city=city, district=district, postal_code=postal_code)
+                db.session.add(new_booking)
+                db.session.commit()
+                flash('Booking Complete', 'primary')
+            except Exception as e: 
+                flash(f'Input Invalid or Error: {e}', 'danger')
+        
+        return render_template('Patient Booking.html')
+    
+    u/app.route('/Patient_Details')
+    u/login_required
+    def Patient_Details(): 
+        results = Patients.query.all()
+        return render_template('templates/Patient_View.html ', results = results )
+    
+    
+    if __name__ == '__main__':
+        with app.app_context():
+            db.create_all()
+        app.run(debug=True)werkzeug.security
+
+Here is the corresponding HTML file and code: 
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Patient Details&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Patient_Id&lt;/th&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Address&lt;/th&gt;
+                &lt;th&gt;Email&lt;/th&gt;
+                &lt;th&gt;Phone_Number&lt;/th&gt;
+                &lt;th&gt;Health_Problem&lt;/th&gt;
+                &lt;th&gt;Payment&lt;/th&gt;
+                &lt;th&gt;Gender&lt;/th&gt;
+            &lt;/tr&gt;
+            {% for patient in values %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ patient.Patient_Id }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Name }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Address }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Email }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Phone_Number }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Health_Problem }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Payment }}&lt;/td&gt;
+                &lt;td&gt;{{ patient.Gender }}&lt;/td&gt;
+            &lt;/tr&gt;
+            {% endfor %}
+        &lt;/table&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    
+
+Top 3 comments:
+Comment 1:
+  Author: KingsmanVince
+  Comment: r/flask 
+
+r/learnpython
+  Score: 10
+  Created UTC: 2024-07-26 07:26:36
+
+Comment 2:
+  Author: jerryberry1010
+  Comment: Try removing **templates/** from that render_template()
+  Score: 5
+  Created UTC: 2024-07-26 07:27:26
+
+Comment 3:
+  Author: h4ndshake_
+  Comment: Explicit pass the template path as parameter when you construct the Flask class
+  Score: 2
+  Created UTC: 2024-07-26 07:26:23
+
+Note: This post has only 3 comments at the time of scraping.

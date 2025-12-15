@@ -1,0 +1,80 @@
+Post Title: Dockerfile for summarizing YouTube transcription using ChatGPT
+Author: dennislwm
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed66a7/dockerfile_for_summarizing_youtube_transcription/
+Number of comments: 2
+Created UTC: 2024-07-27 02:52:31
+
+Post Content:
+hi,
+
+I'm using a Dockerfile to create an image for the above purpose. However, the size of the image is almost 2 Gb, and it takes a while to perform a docker pull. Changing the base image could decrease the size. The image utilizes the open-source application `danielmiessler/fabric` to summarize a transcript.
+
+Appreciate any suggestions to improve the Dockerfile significantly.
+
+For those who may want to try the image (an `OPENAI_API_KEY` is required), open a shell terminal in the same directory as the Dockerfile:
+
+    DOCKER_BUILDKIT=1 docker build -t &lt;image-name&gt; . 
+        
+    cat transcript.txt |docker run --rm --env OPENAI_API_KEY=$OPENAI_API_KEY -i &lt;image-name&gt; --pattern extract_article_wisdom
+
+`Dockerfile`:
+
+    FROM python:3.12.2-slim
+        
+    # Install required packages
+    RUN apt-get update \
+        &amp;&amp; apt-get install -y --no-install-recommends \
+            git \
+            build-essential \
+            ffmpeg \
+            sudo\
+        &amp;&amp; rm -rf /var/lib/apt/lists/* \
+        &amp;&amp; apt-get clean
+    
+    # Create a non-root user
+    RUN useradd --create-home appuser \
+        &amp;&amp; echo "appuser ALL=(ALL) NOPASSWD: ALL" &gt; /etc/sudoers.d/appuser \
+        &amp;&amp; chmod 0440 /etc/sudoers.d/appuser
+    
+    # Switch to the non-root user
+    USER appuser
+    
+    # Set up work directory
+    WORKDIR /home/appuser/app
+    
+    # Install pipx
+    RUN python3 -m pip install --upgrade pip \
+        &amp;&amp; python3 -m pip install --user pipx \
+        &amp;&amp; python3 -m pipx ensurepath
+        
+    # Clone the repository and install its dependencies
+    RUN git clone https://github.com/danielmiessler/fabric.git \
+        &amp;&amp; python3 -m pipx install ./fabric
+    
+    # Set file permissions for the app directory
+    RUN chmod -R 755 /home/appuser/app
+    
+    # Switch back to the non-root user
+    USER appuser
+    
+    RUN  yes "" | ~/.local/bin/fabric --setup \
+        &amp;&amp; echo DEFAULT_MODEL=gpt-4o-mini &gt;&gt; ~/.config/fabric/.env \
+        &amp;&amp; export PATH=${PATH}:~/.local/share/pipx/venvs/fabric/bin/
+    
+    # Set the entrypoint
+    ENTRYPOINT ["/home/appuser/.local/share/pipx/venvs/fabric/bin/fabric"]
+
+Top 1 comments:
+Comment 1:
+  Author: cl0wnsec000
+  Comment: Some suggestions:
+
+- Try combining multiple RUN commands into one RUN. Multiple RUN will produce multiple layers so reducing it will reduce the size also.
+- I see duplicate USER. Call it only once to reduce the layers as well.
+- after downloading the source code from git, try to delete is also when no longer needed so it won’t consume too much space.
+- Use ENV to create variables and store values you will call multiple times for easier maintenance (ie /home/appuser).
+  Score: 2
+  Created UTC: 2024-07-27 03:22:41
+
+Note: This post has only 1 comments at the time of scraping.

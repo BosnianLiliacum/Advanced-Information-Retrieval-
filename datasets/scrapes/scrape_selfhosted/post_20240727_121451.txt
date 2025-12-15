@@ -1,0 +1,136 @@
+Post Title: LocalAI 2.19 is Out! P2P, auto-discovery, Federated instances and sharded model loading!
+Author: mudler_it
+Score: 86
+URL: https://www.reddit.com/r/selfhosted/comments/1e9ihti/localai_219_is_out_p2p_autodiscovery_federated/
+Number of comments: 6
+Created UTC: 2024-07-22 16:25:43
+
+Post Content:
+https://preview.redd.it/129kn8asi3ed1.png?width=1828&amp;format=png&amp;auto=webp&amp;s=2156d1664ff2d3aee041ef559e9b76c6bd75def1
+
+Hello, r/selfhosted  community!
+
+I am excited to announce the release of LocalAI 2.19, packed with powerful new features to enhance your self-hosted AI setups... You can join now your Hardware to run more powerful models with a simple WebUI, and node auto-discovery!
+
+  
+**What is LocalAI?** LocalAI is the Free open source alternative to OpenAI, Elevenlabs, Claude that lets you run AI models locally on your own CPU and GPU! 💻 Data never leaves your machine! No need for expensive cloud services or GPUs🦙 [https://github.com/mudler/LocalAI](https://github.com/mudler/LocalAI)
+
+LocalAI can run:
+
+* **Text to speech** models
+* **Audio Transcription**
+* **Image generation**
+* **Function calling**
+* **LLM** (with llama.cpp, transformers, and many others)
+* and with a couple of click choose between hundreds of models from the community!
+
+Here's a detailed look at what's new:
+
+**TLDR; Summary Spotlight**
+
+* 🖧 F**ederated Instances via P2P:** Now supporting federated instances with P2P, offering both load-balanced and non-load-balanced options for seamless scaling ( [https://localai.io/features/distribute/](https://localai.io/features/distribute/) ).
+* 🎛️ P**2P Dashboard:** Introducing a new dashboard to guide and assist in setting up P2P instances with auto-discovery using shared tokens.
+* 🔊 T**TS Integration:** Text-to-Speech (TTS) is now included in the binary releases, adding dynamic audio response capabilities.
+* 🛠️ E**nhanced Installer:** The installer script now supports setting up federated instances, making deployment even easier.
+* 📥 M**odel Pulling:** Models can now be pulled directly via URL for quicker integration and updates.
+* 🖼️ W**ebUI Enhancements:** Visual improvements and cleanups to the WebUI and model lists for a more intuitive user experience.
+* 🧠 l**lama-cpp Backend:** The llama-cpp (grpc) backend now supports embedding, adding more functionality (https://localai.io/features/embeddings/#llamacpp-embeddings).
+* ⚙️ **Tool Support:** Minor enhancements to tools, including support for disabled grammars, for smoother operations.
+
+# 🖧 Federated Instances and sharded model loading via P2P
+
+LocalAI now supports federated instances with P2P, offering both load-balanced and non-load-balanced options. Scale your AI capabilities seamlessly across multiple nodes without complex setups. No need anymore of expensive GPUs to run big models, but you can now join GPU and CPU power at your disposal alltogether! See also [https://localai.io/features/distribute/](https://localai.io/features/distribute/) for more details!
+
+[Sharded model with llama.cpp](https://i.redd.it/1mvj50qui3ed1.gif)
+
+# 🎛️ P2P Dashboard
+
+Our new P2P dashboard guides and assists in setting up P2P instances with auto-discovery using shared tokens. Whether you're a novice or an expert, the dashboard makes it easy to connect and manage multiple instances.
+
+[Federated instances](https://i.redd.it/qoqwco9wi3ed1.gif)
+
+**How It Works**
+
+Starting LocalAI with `--p2p` generates a shared token for connecting multiple instances, eliminating the need for intricate network setups. Navigate to the "Swarm" section in the WebUI and follow the on-screen instructions to set up federated instances.
+
+For fully shared instances, initiate LocalAI with `--p2p --federated` and adhere to the Swarm section's guidance. This feature, while still experimental, offers a tech preview quality experience.
+
+# Check it Out!
+
+Launch multiple LocalAI instances, distribute weights across nodes, and watch how it all works in our demonstration videos:
+
+* Federated LocalAI: [Watch now](https://www.youtube.com/watch?v=pH8Bv__9cnA)
+* LocalAI P2P Workers: [Watch now](https://www.youtube.com/watch?v=ePH8PGqMSpo)
+
+**🔊 TTS Integration**
+
+Text-to-Speech (TTS) is now included in the binary releases. Enhance your AI interactions with dynamic audio responses, making your applications more engaging and accessible.
+
+**🛠️ Enhanced Installer**
+
+The installer script has been upgraded to support setting up federated instances. This enhancement simplifies the installation process, making it easier to deploy and configure multiple instances.
+
+**📥 Model Pulling**
+
+Models can now be pulled directly via URL. This feature streamlines the process of acquiring and deploying new models, making it quicker and more convenient.
+
+**🖼️ WebUI Enhancements**
+
+We’ve made visual improvements and cleanups to the WebUI and model lists. These enhancements provide a more polished and user-friendly interface, making it easier to navigate and manage your LocalAI setup.
+
+**🧠 llama-cpp Backend**
+
+The llama-cpp (grpc) backend now supports embedding, adding more functionality and power to your AI operations. For more details, visit [llamacpp-embeddings](https://localai.io/features/embeddings/#llamacpp-embeddings).
+
+**⚙️ Enhanced Tool Support**
+
+Small enhancements to tools, to extend support to models which are trained on function calling!
+
+**Full Changelog**
+
+For a detailed look at all the changes and enhancements in this release, check out the full changelog: [https://github.com/mudler/LocalAI/releases/tag/v2.19.1](https://github.com/mudler/LocalAI/releases/tag/v2.19.1)
+
+Cheers and happy hacking!
+
+Top 6 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 23
+  Created UTC: 2024-07-22 17:15:49
+
+Comment 2:
+  Author: lenaxia
+  Comment: Localai is my go to host for LLMs, image and voice, because it has such a comprehensive API for all in one offerings. I don't have to manage. Much prefer it to ollama and others
+  Score: 6
+  Created UTC: 2024-07-22 19:26:26
+
+Comment 3:
+  Author: grandfundaytoday
+  Comment: How does one get started using something like this?  I purchased some time with openai for my nextcloud install - does this directly replace the openai interface?  How do you integrate it? ... sorry for the noobie questions.
+  Score: 4
+  Created UTC: 2024-07-22 22:13:13
+
+Comment 4:
+  Author: hyvte
+  Comment: Are there plans to provide a WebUI? I mean for e.g. managing API Keys and providing some entry point for the user to show some stats, loaded models, the configuration and maybe a nice list of API endpoints and how to plug them into certain tools? Note: I do not mean any UI to interact with the models (like a Chat UI or something similar).
+
+That would be a killer feature in my opinion :) I see the federation manage UI is a cool step in that direction.
+  Score: 2
+  Created UTC: 2024-07-23 08:59:37
+
+Comment 5:
+  Author: Karenn_Kill_Manager
+  Comment: Thanks for your work on this, looks amazing. I am searching for minimum requeriments or something like that.... what do I need to run this. I dont have gpu for this (yet), so I would love to know which of my devices is better for the project. 
+
+Thanks again for your work!!
+  Score: 2
+  Created UTC: 2024-07-23 11:05:19
+
+Comment 6:
+  Author: chig____bungus
+  Comment: I keep getting "Out of memory" errors on my 1050ti, is it just not sufficient or have I configured something wrong?
+  Score: 1
+  Created UTC: 2024-07-25 03:02:16
+
+Note: This post has only 6 comments at the time of scraping.

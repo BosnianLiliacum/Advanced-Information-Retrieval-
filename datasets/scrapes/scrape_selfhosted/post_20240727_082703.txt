@@ -1,0 +1,21 @@
+Post Title: What Photo-Video Gallery software should I use
+Author: Any2ldo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ecwo3a/what_photovideo_gallery_software_should_i_use/
+Number of comments: 1
+Created UTC: 2024-07-26 19:27:41
+
+Post Content:
+So I'm brand new here.  I'm looking to self-host my photos.  I found the git-hub document but there are 20 different suggested packages.  There must be one or two that most people use.  Can you recommend?
+
+  
+Edit: Just found the html view of the list and saw there were votes.  Immich seems to be the top recommendation, thanks.
+
+Top 1 comments:
+Comment 1:
+  Author: alltehmemes
+  Comment: Heads up for the current kerfuffle about "licensed"/"supporter" install. There's a lot going on with it, but the short version is a poorly labeled way to create a sustainable development lab is still the same as it was ~2months ago, but now you can have a "supporter" sticker on your install.
+  Score: 1
+  Created UTC: 2024-07-26 19:58:24
+
+Note: This post has only 1 comments at the time of scraping.

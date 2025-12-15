@@ -1,0 +1,74 @@
+Post Title: Slows down terribly once context-length is reached
+Author: AssociateDeep2331
+Score: 7
+URL: https://www.reddit.com/r/ollama/comments/1eaz0jd/slows_down_terribly_once_contextlength_is_reached/
+Number of comments: 6
+Created UTC: 2024-07-24 11:23:46
+
+Post Content:
+I'm running Ollama on a CPU. With Llama3.1-8B I get about about 6 t/s.
+
+However the prompt eval slows down terribly once the conversation reaches around 2048 tokens.
+
+Here are four sequential responses, two responses before the slowdown, and two immediately after. The prompt eval goes from 3-4 seconds to over 3 minutes.
+
+    total duration:       23.1633889s
+    load duration:        24.4133ms
+    prompt eval count:    1889 token(s)
+    prompt eval duration: 3.754688s
+    prompt eval rate:     503.10 tokens/s
+    eval count:           123 token(s)
+    eval duration:        19.273934s
+    eval rate:            6.38 tokens/s
+    
+    total duration:       47.6819522s
+    load duration:        17.6158ms
+    prompt eval count:    2038 token(s)
+    prompt eval duration: 2.903722s
+    prompt eval rate:     701.86 tokens/s
+    eval count:           273 token(s)
+    eval duration:        44.629891s
+    eval rate:            6.12 tokens/s
+    
+    total duration:       3m20.0812366s
+    load duration:        16.1954ms
+    prompt eval count:    2011 token(s)
+    prompt eval duration: 3m14.606961s
+    prompt eval rate:     10.33 tokens/s
+    eval count:           34 token(s)
+    eval duration:        5.308432s
+    eval rate:            6.40 tokens/s
+    
+    total duration:       3m18.3311799s
+    load duration:        16.5298ms
+    prompt eval count:    1985 token(s)
+    prompt eval duration: 3m10.353653s
+    prompt eval rate:     10.43 tokens/s
+    eval count:           50 token(s)
+    eval duration:        7.809346s
+    eval rate:            6.40 tokens/s
+
+What's happening and is there anything I can do to prevent it?
+
+Top 3 comments:
+Comment 1:
+  Author: sammcj
+  Comment: What kind of CPU and what speed RAM? What’s your batch size?
+
+General consumer CPUs are very slow for current LLM models, I’m also not sure on the current state of FlashAttention on CPUs - I know some support for it was added to llama.cpp by means of a custom implementation but not sure if it’s available on all CPUs or how efficient it is compared to CUDA/Metal.
+  Score: 1
+  Created UTC: 2024-07-24 14:33:25
+
+Comment 2:
+  Author: Practical-Rate9734
+  Comment: i've seen this too, trimming the context helped me.
+  Score: 1
+  Created UTC: 2024-07-24 15:59:03
+
+Comment 3:
+  Author: getfitdotus
+  Comment: Have you looked at https://github.com/Mozilla-Ocho/llamafile it improves cpu inference by huge amounts. It’s made by Mozilla team
+  Score: 2
+  Created UTC: 2024-07-24 23:52:38
+
+Note: This post has only 3 comments at the time of scraping.

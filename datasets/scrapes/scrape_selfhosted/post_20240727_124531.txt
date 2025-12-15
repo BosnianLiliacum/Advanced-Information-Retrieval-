@@ -1,0 +1,61 @@
+Post Title: Need Help Improving NAS Access Speed via Various Solutions (ZeroTier, Tailscale, CloudFrame, WireGuard)
+Author: ilya_yarets
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e7k6rk/need_help_improving_nas_access_speed_via_various/
+Number of comments: 7
+Created UTC: 2024-07-20 01:34:28
+
+Post Content:
+Hello everyone,
+
+I’m looking for some advice on improving remote access speeds to my Synology NAS 220+. It’s set up at my home, and I’m trying to connect to it from outside with good speed. However, I don’t have a static IP, so direct connection isn’t an option. I’ve explored several solutions to address this, but I’m hitting some roadblocks. Here’s what I’ve tried:
+
+1. ZeroTier: This is my favorite so far. It provides decent performance and has been reliable over time. However, the speed I’m getting is quite low, around 300-600 KB/s, sometimes peaking at 1 MB/s. This is frustrating given my home connection is 100 Mbps up and down.
+2. Tailscale: Similar story here. Easy to set up, but the speed is again quite disappointing, hovering around the same 300-600 KB/s mark.
+3. CloudFlare: This one stands out. Somehow, CloudFlare manages to deliver speeds up to 10 Mbps, sometimes even hitting 18-20 Mbps, which is fantastic. The major downside, however, is a file size limit of 150 MB. Anything larger just won’t upload, as stated in their policy.
+4. WireGuard: Another solution I tried, but it also caps out at the same low speeds of 300-600 KB/s.
+
+For context, here’s a bit more about my setup:
+
+• My home internet speed is 100 Mbps both up and down.
+
+• The remote connection varies but is generally stable around 300-500 Mbps.
+
+• I measured speeds directly on the NAS and MacBook, and they check out fine individually.
+
+Despite the individual device speeds being adequate, the transfer speeds between them are abysmal, except when using CloudFrame (limited by the file size cap). I’m struggling to diagnose where the bottleneck is. I’ve exhausted most troubleshooting steps and am at a loss.
+
+Has anyone encountered similar issues? Any tips on improving the speed or alternative solutions that might work better for my setup? I’m open to suggestions and would greatly appreciate any help.
+
+**I will be very glad to help, let me know what data to attach that can help you better my situation.**
+
+Thanks in advance!
+
+Top 4 comments:
+Comment 1:
+  Author: Deventerz
+  Comment: If the VPN-based solutions are all slow then it's probably the potato CPU in the NAS that can't keep up.
+  Score: 2
+  Created UTC: 2024-07-20 08:24:15
+
+Comment 2:
+  Author: mjbulzomi
+  Comment: Your limit is the 100Mbps of your home connection. Tailscale uses the WireGuard protocol, so I would expect roughly the same performance from each. I’m not familiar with ZeroTier. For your home network edge device, is this the device hosting the ZT/TS/WG tunnel? Could that device (router) be the limiting factor due to its CPU or other hardware? What router and OS on the router?
+  Score: 1
+  Created UTC: 2024-07-20 01:52:50
+
+Comment 3:
+  Author: LostLakkris
+  Comment: Where is zerotier/tailscale/etc hosted? On the NAS directly? Or the router, another box?
+
+Continues the chain of thought about the CPU suggestion.
+  Score: 1
+  Created UTC: 2024-07-21 01:30:21
+
+Comment 4:
+  Author: trisanachandler
+  Comment: Are you running cloudflared, or opening ports to cloudflare and using it that way?  just curious as that could provide further info.
+  Score: 0
+  Created UTC: 2024-07-20 02:59:51
+
+Note: This post has only 4 comments at the time of scraping.

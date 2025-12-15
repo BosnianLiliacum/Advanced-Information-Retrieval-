@@ -1,0 +1,82 @@
+Post Title: n8n is awesome
+Author: misternipper
+Score: 246
+URL: https://www.reddit.com/r/selfhosted/comments/1e3m8fi/n8n_is_awesome/
+Number of comments: 75
+Created UTC: 2024-07-15 04:44:35
+
+Post Content:
+Making this post to spread the good word about [n8n](https://n8n.io).
+
+Today, I decided that I wanted certain files on my server backed up in Dropbox every hour. Normally, I would just write a script and set up a cronjob to call it. If I went down that route then I would have to:
+
+1. Write the code to call some APIs that are hosted on my machine
+2. Spend some hours figuring out how to authenticate and interact with the Dropbox API
+3. Spend another few hours debugging the script and making sure everything was working as intended
+
+I thought "Hey, let's try to use n8n to do this" and so I did.
+
+It took 20 minutes. 20 minutes to have a workflow which runs every hour that calls Miniflux to get my RSS feed data, Mealie to get my recipes, and then upload those files to Dropbox. I got all of the functionality that I wanted + the logging and monitoring that comes out of the box with n8n.
+
+Now, when there are new things I want to add to the workflow, I won't be thinking "Ugh, time to change that hacky script I wrote 2 years ago". I just go into n8n, add whatever else I needed, and then go about my day.
+
+I just wanted to share my excitement with you all. Are you guys using n8n or any other workflow automation tools to do anything cool?
+
+Top 7 comments:
+Comment 1:
+  Author: VFansss
+  Comment: I never tried n8n because actually seems a fantastic piece of software, but isn't truly open source.
+
+I would hate to be engaged into it and then having to accept what happened with IFTTT
+  Score: 107
+  Created UTC: 2024-07-15 06:20:28
+
+Comment 2:
+  Author: Hippostork
+  Comment: +1 for n8n.
+
+
+For the longest time, I was looking for a way to automatically wake myself up if I were to receive an email from my boss early in the morning, but let me sleep in otherwise. I'm a night owl and prefer to wake up later if nothing needs my immediate attention. No one on the internet seemed to have a solution for this. 
+
+
+By chance, I stumbled across n8n while browsing docker apps. I wasn't even thinking of that particular use case when I installed it, until I saw that it could call on the Gmail API. That really got my gears turning. I have it setup now to automatically SSH from my homelab to my main desktop and play an alarm sound over the speakers if I get an email from my boss between 8 am - 5 pm. 
+
+
+Now I get to sleep through the mornings with full peace of mind.
+  Score: 58
+  Created UTC: 2024-07-15 09:00:24
+
+Comment 3:
+  Author: kerray
+  Comment: I recently discovered windmill.dev and it's exactly what I needed to do small things and glue stuff together without having to make it a full sized project
+  Score: 38
+  Created UTC: 2024-07-15 05:01:24
+
+Comment 4:
+  Author: fuuman1
+  Comment: n8n looks very cool but I had three problems with it:
+
+* It's not really OSS.
+* Straight after installing it automatically wants to connect to n8n servers in the internet. Just gave me a bad feeling. I want everything to be as local as possible. And I cannot comprehend when and where and with what data n8n is talking home.
+* Every execution of a workflow is stored in the database. The log will grow and I have to take care of rotation.
+  Score: 29
+  Created UTC: 2024-07-15 08:07:38
+
+Comment 5:
+  Author: LightBrightLeftRight
+  Comment: Anybody have experience with this vs Node Red? That’s what I’ve used for this kind of task in the past but I see n8n coming up a lot more
+  Score: 6
+  Created UTC: 2024-07-15 06:30:18
+
+Comment 6:
+  Author: red-avtovo
+  Comment: N8n is great but not sustainable on a server since every single execution is stored in the database without any retention policy. That was quite a turnover for me, so eventually I went to JupytherLab (yeah, I know that it is not very much visual)
+  Score: 12
+  Created UTC: 2024-07-15 07:12:19
+
+Comment 7:
+  Author: ExoWire
+  Comment: In addition to the already mentioned windmill, Activepieces has also developed recently. https://github.com/activepieces/activepieces
+  Score: 6
+  Created UTC: 2024-07-15 08:21:20
+

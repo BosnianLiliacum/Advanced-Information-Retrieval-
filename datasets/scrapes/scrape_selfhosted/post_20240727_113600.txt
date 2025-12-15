@@ -1,0 +1,36 @@
+Post Title: EmulatorJS - cannot start any of the neogeo roms
+Author: seemebreakthis
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebp37l/emulatorjs_cannot_start_any_of_the_neogeo_roms/
+Number of comments: 4
+Created UTC: 2024-07-25 07:42:58
+
+Post Content:
+(Edit:  I am using the linuxserver.io's docker image - linuxserver/emulatorjs)
+
+I put the roms in the 'arcade' rom folder.  The non neogeo games run fine, but not the neogeo ones.  It always says 'required files missing' when the rom is loaded.  The retroarch interface appears along with the error message.
+
+What file am I missing?  And which folder am I supposed to put that file in?
+
+Thanks !!
+
+Top 3 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: https://www.linuxserver.io/support
+  Score: 2
+  Created UTC: 2024-07-25 08:36:33
+
+Comment 2:
+  Author: daedric
+  Comment: Might it be bios missing ?
+  Score: 1
+  Created UTC: 2024-07-25 15:52:42
+
+Comment 3:
+  Author: seemebreakthis
+  Comment: Found my answer. You just have to use the right ROMs (for linuxserver/emulatorjs anyway). No need for any extra bios files (when it comes to neo geo roms, as the zip file itself contains all necessary components). There are “Reference Set” packages out there for the different game cores available for downloading. linuxserver/emulatorjs uses the "mame 2003 plus" core for arcade games.
+  Score: 1
+  Created UTC: 2024-07-26 05:08:37
+
+Note: This post has only 3 comments at the time of scraping.

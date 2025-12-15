@@ -1,0 +1,45 @@
+Post Title: Can't log into self hosted apps on Pixel 6a
+Author: Atomfried_Fallout
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7veyl/cant_log_into_self_hosted_apps_on_pixel_6a/
+Number of comments: 2
+Created UTC: 2024-07-20 13:16:40
+
+Post Content:
+TLDR: I can connect but not log into the Jellyfin and AudioBookShelf Apps on my Pixel 6a while it works via the browser and other devices.
+
+Recently I set up AudioBookShelf on my UnRaid server and now wanted to log into the corresponding app on a Pixel 6a. Choosing the server over IP address worked fine but when entering the credentials it just didn't worked so I tried log in into the web interface which worked fine.  
+Suspecting an issue with AudioBookShelf itself, I tried another android phone which worked flawlessly with the same account.  
+Next I tried to log into the Jellyfin app which also didn't worked and now, having it basically isolated to this single device, I'm out of ideas on what could cause this issue.  
+Does anyone of you have an idea or similar issue? If so I would really appreciate some input of what to do next.
+
+Top 2 comments:
+Comment 1:
+  Author: upfreak
+  Comment: Disable private DNS if it's enabled. I believe you have local ip right
+  Score: 3
+  Created UTC: 2024-07-20 17:36:21
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: Hello will try to help. 
+
+Nice description of the problem and good troubleshooting so far. Appreciate how clear the message is. 
+
+&gt;Does anyone of you have an idea or similar issue? If so I would really appreciate some input of what to do next.
+
+Can you ensure all software/ applications are up to date. Or better, delete and reinstall the software to ensure it is up to date and cache is cleared. This would include ensuring the server applications are up to date as well 
+
+This definitely sounds like an application issue and not a device issue, especially since it works from another android phone where the android app/APK would/should be the same between all devices. (Check if the app version is the same as well)
+
+&gt;Choosing the server over IP address worked fine but when entering the credentials it just didn't worked
+
+This doesn't make sense to me. Did you ensure you entered the password correctly? Copy and paste the password to the web browser and app to ensure there was no mistype. 
+
+Lastly can you check the software GitHub page under issue section. Maybe someone has reported the same issue and the developers are aware of it. 
+
+Hope that helps.
+  Score: 3
+  Created UTC: 2024-07-20 14:32:16
+
+Note: This post has only 2 comments at the time of scraping.

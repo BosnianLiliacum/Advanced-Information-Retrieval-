@@ -1,0 +1,32 @@
+Post Title: Seeking a GUI for Postgres reporting &amp; permissioned management
+Author: agent-bagent
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e78zi6/seeking_a_gui_for_postgres_reporting_permissioned/
+Number of comments: 2
+Created UTC: 2024-07-19 17:12:52
+
+Post Content:
+Hi - I'm looking to selfhost software that lets me provide a variety of users with permissioned access to reports and tooling to view and manage a postgres instance.
+
+I've been toying with metabase and it's exactly what I need for the reporting angle, but as far as I can tell, it doesn't let me build 'applications' for business users to update data in sql through a structured form with data validation.
+
+These users cannot write sql queries. 
+
+Any recommendations?
+
+Top 2 comments:
+Comment 1:
+  Author: MisterBazz
+  Comment: If they don't already know how to use databases without a pretty GUI, why are they being tasked with managing it?  Just sayin'.
+
+The actual dbadmins should be building a backend for data input and a frontend for report generation - not end users.
+  Score: 3
+  Created UTC: 2024-07-19 19:37:15
+
+Comment 2:
+  Author: JSouthGB
+  Comment: Doesn't baserow/airtable or one of the other variants do that sort of thing? I've not used them myself, but based on the limited reading I've done on them, they may fit the bill.
+  Score: 1
+  Created UTC: 2024-07-20 16:41:23
+
+Note: This post has only 2 comments at the time of scraping.

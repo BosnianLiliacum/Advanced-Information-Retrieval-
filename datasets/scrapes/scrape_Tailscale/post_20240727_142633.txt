@@ -1,0 +1,48 @@
+Post Title: Will this work? Can device A access Device B ? Thanks 
+Author: Userp2020
+Score: 8
+URL: https://i.redd.it/z332dz6qj8ed1.jpeg
+Number of comments: 12
+Created UTC: 2024-07-23 09:15:24
+
+Post Content:
+[This post has no text content]
+
+Top 4 comments:
+Comment 1:
+  Author: julietscause
+  Comment: If you are looking to do a site to site vpn setup with tailscale Opnsense doesnt support the --snat option needed for tailscale to setup for a site to site vpn
+
+There are some work arounds listed here in this post:
+
+https://github.com/tailscale/tailscale/issues/5573
+
+But you are on your own if you run into issues. 
+
+Honestly if you have opnsense with both sides having public ip addresses I would just use an ipsec or wireguard to setup the site to site vpn
+
+https://docs.opnsense.org/manual/how-tos/wireguard-s2s.html
+  Score: 10
+  Created UTC: 2024-07-23 09:26:28
+
+Comment 2:
+  Author: freestylemaster
+  Comment: I have a simple openwrt router on both sites and have tailscale installed on both of these devices. 
+
+Devices are able to access any device by either local ip address, or the tailscale assigned IPs, on either network.
+  Score: 2
+  Created UTC: 2024-07-23 14:54:10
+
+Comment 3:
+  Author: tonioroffo
+  Comment: You don't need to run tailscale on the router even, for this.  You can run it on another device, configure subnet routing, disable snat, add the routes on both sides to your opnsense &amp; done.
+  Score: 1
+  Created UTC: 2024-07-26 09:19:20
+
+Comment 4:
+  Author: neurotic_CLERK
+  Comment: Yes.
+  Score: 0
+  Created UTC: 2024-07-23 09:18:39
+
+Note: This post has only 4 comments at the time of scraping.

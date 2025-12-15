@@ -1,0 +1,43 @@
+Post Title: M365 Backup to Selfhosted Location 
+Author: Select-Peanut549
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb7weu/m365_backup_to_selfhosted_location/
+Number of comments: 3
+Created UTC: 2024-07-24 17:54:09
+
+Post Content:
+Hello everyone, 
+
+
+
+I have a question and I'm not sure which subreddit is the right one. I am a small sole trader and would like to dissolve my Mircosoft 365 tenant for privacy reasons. Only the mails are actually important. I have now thought of something like Veeam 365 or Mailstore, but all of this is subject to a fee. Of course I could do a PST export, but I've had bad experiences with that in the past. Does anyone have another solution that costs little or no money? Thank you 
+
+
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: psychedelic-tech
+  Comment: I think you might be able to download all the emails using Thunderbird. 
+
+I haven't tried it yet but there is [Briefbox](https://github.com/bandundu/email-archiver) 
+
+&gt; Briefbox is a tool for archiving emails from multiple IMAP and POP3 accounts. It provides a user-friendly web interface for managing email accounts, searching archived emails, and viewing email details along with attachments. One of the standout features of Briefbox is its advanced search functionality, which allows users to quickly find specific emails using various criteria.
+  Score: 1
+  Created UTC: 2024-07-24 18:14:02
+
+Comment 2:
+  Author: OrdinanceB
+  Comment: The free version of Veeam 365 should cover you up to 10 users.   
+[https://www.veeam.com/products/free/backup-microsoft-office-365.html](https://www.veeam.com/products/free/backup-microsoft-office-365.html)
+  Score: 2
+  Created UTC: 2024-07-24 18:20:32
+
+Comment 3:
+  Author: LoreneMcauley81
+  Comment: Hey there! For a cost-effective solution, have you thought about using tools like Imapsync or MailStore Home for personal use? Both can help with emails without breaking the bank. By the way, if you're ever in need of a powerful email service provider for newsletters, check out beehiiv! It's been super useful for my digital content. Good luck!
+  Score: 1
+  Created UTC: 2024-07-25 23:31:37
+
+Note: This post has only 3 comments at the time of scraping.

@@ -1,0 +1,67 @@
+Post Title: My server have 32GB RAM, 10GB used, while swap is 93% Is that normal?
+Author: gett13
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ed4cvt/my_server_have_32gb_ram_10gb_used_while_swap_is/
+Number of comments: 22
+Created UTC: 2024-07-27 01:15:54
+
+Post Content:
+The title. Any ideas, please?
+
+Debian 12.
+
+Top 7 comments:
+Comment 1:
+  Author: boli99
+  Comment: without knowing how big your swap is, its impossible to know how much 93% of your swap actually is.
+
+It's normal to use a little bit of swap in any memory configuration.
+
+Also, there had previously been memory pressure on the machine since it was most recently booted - it might have swapped a bunch of stuff out at the time
+
+...and then unless there was any need to swap it back in - it would stay swapped out even when the pressure dropped.
+  Score: 14
+  Created UTC: 2024-07-27 01:42:02
+
+Comment 2:
+  Author: guigouz
+  Comment: Check swappiness https://phoenixnap.com/kb/swappiness
+  Score: 6
+  Created UTC: 2024-07-27 01:42:51
+
+Comment 3:
+  Author: _j7b
+  Comment: I’m glad that you posted this because I noticed it as well and feared I’d be laughed out of reddit for asking. Thank you
+  Score: 4
+  Created UTC: 2024-07-27 02:11:18
+
+Comment 4:
+  Author: suicidaleggroll
+  Comment: Debian is very swap-happy by default, I always set swappiness to 0 on mine so it can still swap if necessary but doesn’t just dump everything into swap as soon as it’s been idle for a few minutes.
+  Score: 3
+  Created UTC: 2024-07-27 01:52:27
+
+Comment 5:
+  Author: msanangelo
+  Comment: I would just disable swap tbh.
+  Score: 3
+  Created UTC: 2024-07-27 01:53:07
+
+Comment 6:
+  Author: Just_Maintenance
+  Comment: Something might be reading/writing files more frequently than the data some program put in memory. So the kernel decided to swap that data to make more space for caching.
+
+[https://chrisdown.name/2018/01/02/in-defence-of-swap.html](https://chrisdown.name/2018/01/02/in-defence-of-swap.html)
+
+Also, some program might at some point ballooned and use lots of memory, pushing data off to swap. 
+
+The data in swap will remain there until the program that owns it actually uses it. If its just forgotten it will remain there until the program is closed.
+  Score: 3
+  Created UTC: 2024-07-27 02:20:59
+
+Comment 7:
+  Author: huskerd0
+  Comment: Linux vm is bizarre
+  Score: -1
+  Created UTC: 2024-07-27 02:49:43
+

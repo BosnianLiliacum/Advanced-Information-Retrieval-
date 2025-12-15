@@ -1,0 +1,57 @@
+Post Title: Immich, How to hide licensed/unlicensed status
+Author: Substantial_Age_4138
+Score: 457
+URL: https://www.reddit.com/r/selfhosted/comments/1e73rb9/immich_how_to_hide_licensedunlicensed_status/
+Number of comments: 76
+Created UTC: 2024-07-19 13:28:52
+
+Post Content:
+Go to Theme settings and add
+
+`.license-status { display: none !important; }`
+
+The "Unlicensed" status is now gone.
+
+Top 7 comments:
+Comment 1:
+  Author: Kaleodis
+  Comment: omfg this is so dumb, i love it. thanks, now it won't look like i'm running trial software.
+  Score: 245
+  Created UTC: 2024-07-19 15:07:30
+
+Comment 2:
+  Author: BotanicalDumpster
+  Comment: You're awesome, I'll give this a try later
+  Score: 47
+  Created UTC: 2024-07-19 14:05:09
+
+Comment 3:
+  Author: joelnodxd
+  Comment: just tried and it works, you may just need to Ctrl+F5 to hard refresh before it disappears
+  Score: 28
+  Created UTC: 2024-07-19 14:20:27
+
+Comment 4:
+  Author: cup1d_stunt
+  Comment: Where do you put this? In the CSS Settings?
+  Score: 34
+  Created UTC: 2024-07-19 14:45:18
+
+Comment 5:
+  Author: RedditNotFreeSpeech
+  Comment: Dear Immich, I will donate $1000 USD if you'll remove this stupidity and promise it will never return and just ask for donations.
+  Score: 23
+  Created UTC: 2024-07-19 19:56:32
+
+Comment 6:
+  Author: SpoilerAvoidingAcct
+  Comment: Give it a few days. The discord is a buzz. They’ll be changing it to something less ridiculous.
+  Score: 15
+  Created UTC: 2024-07-19 19:23:09
+
+Comment 7:
+  Author: hand_in_every_pot
+  Comment: This only seems to work from internal IP access but not through my domain.....any ideas?
+  Score: 8
+  Created UTC: 2024-07-19 18:11:03
+

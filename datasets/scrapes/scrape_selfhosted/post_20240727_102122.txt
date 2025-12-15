@@ -1,0 +1,26 @@
+Post Title: Is it possible to automatically log myself out of Authentik after a time period?
+Author: DavethegraveHunter
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e66thh/is_it_possible_to_automatically_log_myself_out_of/
+Number of comments: 2
+Created UTC: 2024-07-18 09:00:14
+
+Post Content:
+ I've just installed Authentik as a Docker container two days ago and each day, I've found myself still logged into my Authentik account despite turning off my computer at the end of each day.
+
+I'd like to be automatically logged out of my Authentik account after a few hours, for example. Is this possible?
+
+I assume I need to change a session length or some such?
+
+I did a search of the documentation but couldn't see anything obvious. I found [this](https://docs.goauthentik.io/docs/flow/stages/user_login/#:~:text=Session%20duration%E2%80%8B&amp;text=You%20can%20set%20the%20session,Microseconds), but the article doesn't actually explain where to make that change. I went through the admin interface and couldn't see anything obvious either...
+
+Thanks in advance.
+
+Top 1 comments:
+Comment 1:
+  Author: HickeH
+  Comment: Yes. There is a token validity setting.
+  Score: 3
+  Created UTC: 2024-07-18 09:45:59
+
+Note: This post has only 1 comments at the time of scraping.

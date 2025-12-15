@@ -1,0 +1,51 @@
+Post Title: Looking for a self-hosted "suite" that was under developement
+Author: ymous7438
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e6j6dc/looking_for_a_selfhosted_suite_that_was_under/
+Number of comments: 8
+Created UTC: 2024-07-18 19:01:28
+
+Post Content:
+A couple of months ago, maybe a year, I came across a bundle of programs that were being under development or still not fully released. 
+
+It included a self hosted music, a video and another type of self hosted streaming app, but I completely forgot how the project was called. I found it browsing after Jellyfin alternatives and it was open source.
+
+
+
+Does someone know the name of the program I'm talking about?  
+
+
+
+Top 5 comments:
+Comment 1:
+  Author: The_4ngry_5quid
+  Comment: I don't think so, but are you talking about CasaOS?
+  Score: 3
+  Created UTC: 2024-07-18 19:33:53
+
+Comment 2:
+  Author: panjadotme
+  Comment: https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#media-streaming
+  Score: 2
+  Created UTC: 2024-07-19 01:05:29
+
+Comment 3:
+  Author: Clueguy
+  Comment: YAMS?
+https://yams.media
+  Score: 1
+  Created UTC: 2024-07-18 20:14:25
+
+Comment 4:
+  Author: Fluffer_Wuffer
+  Comment: If you recall what the GUI looks like, then use Google image search... I find this quicker than searching for the needle in a haystack.
+  Score: 1
+  Created UTC: 2024-07-18 22:37:24
+
+Comment 5:
+  Author: WeeBo-X
+  Comment: I forget the name, but I do remember the post. I didn't want to try since he mentioned it was all going to be subscription based. I noped out, but try searching for that.
+  Score: 1
+  Created UTC: 2024-07-19 21:50:44
+
+Note: This post has only 5 comments at the time of scraping.

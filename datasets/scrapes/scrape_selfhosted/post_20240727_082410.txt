@@ -1,0 +1,27 @@
+Post Title: Wanna game with a friemd
+Author: WolfDale11
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed3h4l/wanna_game_with_a_friemd/
+Number of comments: 2
+Created UTC: 2024-07-27 00:31:09
+
+Post Content:
+Hi. I'm trying to find a way where I can run 2 instances of the same game on my one computer while I play one of them and my friend remotely joins the other one but still utilizing my pcs recourses (mainly the gpu) so far ive thought abt setting up a VM like hyper-v and enabling gpu passthrough as I've heard hyper-v allows for that. Then I thought of either letting him use the VM through remote desktop connection but I'm thinking running a dedicated cloud gaming software like Parsec would probably make for a smoother experience... But then again I have no idea if this will work, in theory it should.. And thoughts that might help me out with this? 
+
+
+Top 2 comments:
+Comment 1:
+  Author: Skylarked07
+  Comment: You should take a look at this [tool](https://github.com/jamesstringerparsec/Easy-GPU-PV). On the books, consumer-grade GPUs are not eligible and can't be used as a passthrough in Hyper-V officially. The tool allows you to unlock the restriction by using the tech in WSL2 and Windows Sandbox to allow for a consumer GPU to be used as a passthrough.  It makes GPU partitioning in Hyper-V a lot easier and pre-installs Parsec on the VM.  CraftComputing did an awesome [video](https://www.youtube.com/watch?v=XLLcc29EZ_8) on it and walks you through on getting it set up. It took me less than an hour to get it up and running.
+
+Be aware that through this method however, some anti-cheat software that are kernel-based and are picky with the use of VMs such as Valorant, Apex Legends, R6, etc cannot be played and won't launch properly, if at all, on the Hyper-V VM.
+  Score: 1
+  Created UTC: 2024-07-27 00:46:59
+
+Comment 2:
+  Author: boudeh158
+  Comment: [DUO](https://github.com/DuoStream) is a possibility for this but you would have to setup the remote connection separately (suggest a VPN like [Zero-tier](https://www.zerotier.com/) if looking for ease of setup). I also saw this (on [selfh.st](http://selfh.st) ) [Games on Whales](https://games-on-whales.github.io/?ref=selfh.st)
+  Score: 1
+  Created UTC: 2024-07-27 01:41:20
+
+Note: This post has only 2 comments at the time of scraping.

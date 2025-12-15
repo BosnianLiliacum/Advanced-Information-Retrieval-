@@ -1,0 +1,24 @@
+Post Title: Cloud Storage
+Author: trevormcneal42
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e9d4w2/cloud_storage/
+Number of comments: 7
+Created UTC: 2024-07-22 12:32:31
+
+Post Content:
+I know this topic is beating a dead horse, but I don’t know if something like this exists. I want a cloud storage program that I can just sign into, kind of like Plex, and just have files there that I can view/edit. Plex is so simple and doesn’t require any custom firewall settings set up. Does something like that exist?
+
+Top 2 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: Nextcloud, Owncloud, Owncloud Infinite Scale
+  Score: 7
+  Created UTC: 2024-07-22 12:44:01
+
+Comment 2:
+  Author: Zerebos
+  Comment: There's a lot of options in this space, seafile, owncloud, nextcloud, OCIS, filebrowser, filestash, filerun, SFTPGo, spacedrive
+  Score: 2
+  Created UTC: 2024-07-22 13:44:13
+
+Note: This post has only 2 comments at the time of scraping.

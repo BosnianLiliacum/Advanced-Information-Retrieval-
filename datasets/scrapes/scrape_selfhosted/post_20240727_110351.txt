@@ -1,0 +1,61 @@
+Post Title: Any way to recover from this? I moved a drive to a different drive bay for testing and apparently it destroyed the array. HP DL380p Gen8 with an HP P420i Smart Array Controller.
+Author: Sevynz13
+Score: 17
+URL: https://i.redd.it/ykrl7uujpkcd1.jpeg
+Number of comments: 13
+Created UTC: 2024-07-15 00:01:13
+
+Post Content:
+[This post has no text content]
+
+Top 6 comments:
+Comment 1:
+  Author: Sevynz13
+  Comment: I got it all back! Here's what I did:  
+Put all drives back in their original drive bays.  
+Booted up to the HP Smart Array Utility and created a new array exactly as the old array was.  
+Rebooted and it booted up to VMWare again, but the main datastore was missing with all the VMs on it.  
+I then SSH'd into VMware and ran some commands [following the directions from here](https://sahlitech.com/mounting-vmfs-datastore-esxi/) to remount the datastore.   
+Then in VMware I went to Storage &gt; Devices &gt; Clicked "Rescan" then "Refresh" but it still didn't come up.  
+Then I refreshed my browser and there was my datastore.  
+I then booted up all the VMs so far with no problems.
+
+In case that link ever dies here are the commands:  
+esxcfg-volume -l     *Shows volume label*  
+esxcfg-volume -M volumelabel      *Mounts specified volume*
+  Score: 19
+  Created UTC: 2024-07-15 04:34:31
+
+Comment 2:
+  Author: zezimeme
+  Comment: Hope you learned the hard way not to test things with data you don’t want to lose.
+  Score: 5
+  Created UTC: 2024-07-15 06:14:50
+
+Comment 3:
+  Author: TruckeeAviator91
+  Comment: I had bad luck with the p420 in my HP 380. I replaced it with LSI card that supported "IT" mode and moved away from hardware RAID.
+
+Hopefully, you can get it back up and make a backup before anything else happens.
+  Score: 3
+  Created UTC: 2024-07-15 02:10:09
+
+Comment 4:
+  Author: mrkesu
+  Comment: This is one of the main reasons I moved away from hardware raids. Too fickle.
+  Score: 6
+  Created UTC: 2024-07-15 09:21:16
+
+Comment 5:
+  Author: Sevynz13
+  Comment: So I have sort of good news. I went ahead and recreated the array exactly like it was and it booted into VMWare again! But the datastore for VMware that had all the VMs on it is missing. Anyone know of a way to recover it?
+  Score: 2
+  Created UTC: 2024-07-15 02:10:23
+
+Comment 6:
+  Author: BinaryPatrickDev
+  Comment: Seems bad. Have you tried moving it back?
+  Score: 0
+  Created UTC: 2024-07-15 01:07:22
+
+Note: This post has only 6 comments at the time of scraping.

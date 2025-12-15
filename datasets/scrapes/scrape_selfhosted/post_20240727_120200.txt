@@ -1,0 +1,67 @@
+Post Title: Cloudflare tunnels blocked by university?
+Author: Fuergrissa_9
+Score: 18
+URL: https://www.reddit.com/r/selfhosted/comments/1ea8j75/cloudflare_tunnels_blocked_by_university/
+Number of comments: 15
+Created UTC: 2024-07-23 13:59:11
+
+Post Content:
+I just set this up recently to access nextcloud from outside my home. It works flawlessly until I arrive at work and connect to the university wifi. Nextcloud reports it cannot connect to server, and any subdomain URLs I set up with cloudflare, ie: [homeassist.domain.com](http://homeassist.domain.com) forward to an akami url with university branding which says: "The website you are trying to access either presents a security risk or is not allowed under your organization's acceptable use policy."
+
+If I use an https:// url then I get the firefox error page: 
+
+# Secure Connection Failed
+
+An error occurred during a connection to subdomain.domain.com. PR\_END\_OF\_FILE\_ERROR
+
+Error code: PR\_END\_OF\_FILE\_ERROR
+
+* The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.
+* Please contact the website owners to inform them of this problem.            Secure Connection Failed                             An error occurred during a connection to \~. PR\_END\_OF\_FILE\_ERROR         Error code: PR\_END\_OF\_FILE\_ERROR                             The page you are trying to view cannot be shown because the authenticity of the received data could not be verified. Please contact the website owners to inform them of this problem.
+
+I do have a SSL cert from cloudflare set up in TrueNAS and https:// urls typically work fine on other networks. If I connect to my home VPN then access is restored, but that kind of defeats the point of setting up the tunnel in the first place. Is there something about the way that cloudflare tunnels work that is typically blocked on enterprise networks? I would definitely not expect the university to help me or make an exception, is there a workaround outside just using a VPN?
+
+Top 6 comments:
+Comment 1:
+  Author: clintkev251
+  Comment: I doubt it’s due to the tunnel specifically, it’s more likely that your domain itself is seen by them as being untrustworthy due to being relatively new, low traffic, etc.
+  Score: 26
+  Created UTC: 2024-07-23 14:26:27
+
+Comment 2:
+  Author: bufandatl
+  Comment: I guess your university does SSL interception to scan traffic for malware or illegal content to protect their network and their liability.
+  Score: 7
+  Created UTC: 2024-07-23 19:28:17
+
+Comment 3:
+  Author: ElevenNotes
+  Comment: Their firewall does MitM that's why you get the error.
+  Score: 15
+  Created UTC: 2024-07-23 14:34:31
+
+Comment 4:
+  Author: ervwalter
+  Comment: OpenDNS probably (or something like it).  To combat malware that generates zillions of short lived hostnames, one option OpenDNS has (that my company uses) is to block "new" hostnames.  They get unblocked after 3 days.  And this functionality considers a hostname as "new" if OpenDNS hasn't seen it before.  So if it is something that basically only you ever use, OpenDNS probably won't have seen it before you used it on your corporate network.
+
+I'd wait a few days and see if it starts working.
+
+Also, hit every other subdomain you use now so that the timer starts on them :)
+
+The SSL error is probably because it's the OpenDNS web page being loaded and that web site doesn't have a certificate that matches the domain you're going to.
+  Score: 2
+  Created UTC: 2024-07-23 20:16:09
+
+Comment 5:
+  Author: maj_dick_burns
+  Comment: I have a similar issue, however, in my case the enterprise network is showing with SSL errors and untrusted connection. I’m guessing it’s something to due with not trusting the CA. I’ve even got advanced certificate management enabled on the CF side. Sites load and are properly trusted in all the ISPs I test from, but the Enterprise network shows untrusted.
+  Score: 1
+  Created UTC: 2024-07-23 20:58:00
+
+Comment 6:
+  Author: vermyx
+  Comment: Its the browser telling you that it cant establish a secure connection. Whatever cypher you set up is probably not allowed by the browser you are using
+  Score: -2
+  Created UTC: 2024-07-23 16:02:39
+
+Note: This post has only 6 comments at the time of scraping.

@@ -1,0 +1,32 @@
+Post Title: Wekan, Docker Desktop 4.31, macOS 14 :: Noob
+Author: phospholipid77
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ebbq9q/wekan_docker_desktop_431_macos_14_noob/
+Number of comments: 12
+Created UTC: 2024-07-24 20:29:31
+
+Post Content:
+I'm wondering if anybody can give me some suggestions about getting Wekan up and running. I'm having a difficult time. Specs as listed in subject. 
+
+I've tried to pull and run Wekan in Docker Desktop and it hasn't gone well. So, I followed the directions on [this page](https://github.com/wekan/wekan/wiki/Mac) and it also didn't go well. I'm certain it's me. 
+
+I changed the docker-compose.yml file to my server's local IP: 1.2.3.4. I've also changed the ports to 9014 and 9015 since I have stuff running on the default ports. The installation appears to go just fine. And Docker Desktop shows the instance of Wekan running. 
+
+However, when I try to launch WeKan, it tells me that 1.2.3.4:9014 or to localhost:9014 has dropped the connection. Any ideas why I would get this? My other web services are running and accessible (being YouTrack and NPM). 
+
+Thank you kindly. 
+
+Top 2 comments:
+Comment 1:
+  Author: primevaldark
+  Comment: Is your server IP really 1.2.3.4, that is definitely an external IP or do you use it as an example? Aside from that - the most frequent problem is people forgetting that in port mapping the order is host port : container port, and change the wrong port number.
+  Score: 2
+  Created UTC: 2024-07-25 01:02:09
+
+Comment 2:
+  Author: primevaldark
+  Comment: Maybe post your docker compose as a gist? What do you mean you do not forward any ports? There is a ‘ports’ section in docker compose. What do you have there? Also, we might get into nitty-gritty and understand what IP you actually replace by 1.2.3.4. Is it IP of your server? Is it internal? Is it external? Do you try to access it by docker container IP? Do you see anything useful when you run ‘docker logs’?
+  Score: 2
+  Created UTC: 2024-07-25 02:28:49
+
+Note: This post has only 2 comments at the time of scraping.

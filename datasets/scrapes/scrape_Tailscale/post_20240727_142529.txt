@@ -1,0 +1,18 @@
+Post Title: Is it possible to use tailscale in a side-car setup for docker containers (more than one tailscale container runs on the same host - each has access to their own tun0 interface in a separate net namespace)
+Author: Vast-Spray46
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1eaai98/is_it_possible_to_use_tailscale_in_a_sidecar/
+Number of comments: 2
+Created UTC: 2024-07-23 15:20:54
+
+Post Content:
+Good day. I'm trying to build a setup such that I have an ecs cluster in ec2 mode (its composed of ec2 instances I run), ecs scheduler runs tasks (several containers sharing the same net namespace) on the nodes. The idea is to add tailscale container as a side-car to each service to register services to the tailnet. I've also setup a separate tun interface for each task, but what I see in practice - when you join a second service, the first one looses connection to the tailnet, which must mean that both connections share some kernel-space objects and step on each other. Is there a config to make such a setup work?
+
+Top 1 comments:
+Comment 1:
+  Author: caolle
+  Comment: This might be worth a read: [https://tailscale.com/blog/docker-tailscale-guide](https://tailscale.com/blog/docker-tailscale-guide)
+  Score: 1
+  Created UTC: 2024-07-23 15:45:02
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,39 @@
+Post Title: selfhosted youth camp registration and data management software
+Author: pendenz
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8kepp/selfhosted_youth_camp_registration_and_data/
+Number of comments: 1
+Created UTC: 2024-07-21 11:41:35
+
+Post Content:
+Every year my wife organizes a camp for children through a voluntary organization. For this I am looking for a self-hosted software that can do the following:
+
+1. Registration form
+
+* individual fields and text
+
+1. Address list of parents
+2. E-mail distribution list / list of parents
+3. Participant list of children with special features
+
+* Gender
+* age
+* Allergies
+* Medication
+* Ability to swim
+* Food specialties (vegan, gluten-free, ...)
+
+It would be great if you could confirm or reject registrations manually, and if this is also visible. A todo list would also be great, as well as a task distribution of the supervisors.  It's all about registration, data management and organization.
+
+Top 1 comments:
+Comment 1:
+  Author: mosswill
+  Comment: I don't know how comfortable you'll be with a CMS (Content Management System), but I think Directus or Budibase should do the job. The idea is to define your structure (A child is represented by : Gender, Age, Allergies, Medication, Ability to Swim, etc. - - A parent is represented by : Name, Phone number -- Child and Parent have a 1-2 relationship, etc.). Once the structure is defined, you have a great administration where you can edit every field in a nice interface. Ultimately, you'll be able to set up "mechanisms" / "actions" / "triggers" to send an email / SMS when something happens (example : When you register a child in the admin, Send an email to the parents). For the "front-facing registration page", I'm not too sure. Maybe Google Forms, although not self-hosted, could do the job? Else you could probably code a small HTML + CSS + JS page that feeds Directus via the REST API exposed? I hope it helps.
+
+Also, maybe you could use an existing CRM, but in a way that was not intended by their creators? For instance, you could go with Dolibarr / Monica / Espo, and treat the children and parents like "clients", and (although not straightforward) configure your CRM in a way that makes everything work for you (send emails, manage tasks, manage deadlines, handle multi-user with different access rights, etc.)
+
+Edit : I have previously implemented a full front-end app in React to manage approval in a design company. The backend was entirely Directus with native configuration settings (I mean, Directus was untouched, only native features were used), and React would interact with Directus via the REST API. I think it's a brilliant app.
+  Score: 1
+  Created UTC: 2024-07-21 19:04:46
+
+Note: This post has only 1 comments at the time of scraping.

@@ -1,0 +1,38 @@
+Post Title: Selfhost a Single Sign-on MFA with Authentik
+Author: svenvg93
+Score: 34
+URL: https://www.reddit.com/r/selfhosted/comments/1e9b967/selfhost_a_single_signon_mfa_with_authentik/
+Number of comments: 5
+Created UTC: 2024-07-22 10:50:40
+
+Post Content:
+I wrote a quick blog on how to set up self-hosted single sign-on (SSO) using Authentic. I hope it will be helpful for other when setting it up 😁.
+
+https://medium.com/@svenvanginkel/selfhost-a-single-sign-on-mfa-with-authentik-2f0a64758be0
+
+Top 4 comments:
+Comment 1:
+  Author: smokedironmade
+  Comment: Thank you!
+  Score: 2
+  Created UTC: 2024-07-22 15:14:50
+
+Comment 2:
+  Author: Digital_Voodoo
+  Comment: Thank you for this!
+  Score: 2
+  Created UTC: 2024-07-22 18:44:26
+
+Comment 3:
+  Author: LucasRey
+  Comment: Thank you, I'll try to implement it for my services, especially for immich
+  Score: 1
+  Created UTC: 2024-07-22 19:39:24
+
+Comment 4:
+  Author: brkr1
+  Comment: Give us the full .env, please. I wanna try it
+  Score: 1
+  Created UTC: 2024-07-22 20:26:51
+
+Note: This post has only 4 comments at the time of scraping.

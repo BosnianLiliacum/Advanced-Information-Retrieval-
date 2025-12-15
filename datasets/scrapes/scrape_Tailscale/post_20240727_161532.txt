@@ -1,0 +1,26 @@
+Post Title: Tailscale Manually Stopped on Synology NAS
+Author: MrNooobieYT
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ebnz8z/tailscale_manually_stopped_on_synology_nas/
+Number of comments: 18
+Created UTC: 2024-07-25 06:29:06
+
+Post Content:
+I'm pretty annoyed at the application at this point. The tailscale app in Package center repeatedly gets "manually stopped". What is the reason for this? I've tried manually installing as well but the same problem still happens. It was working fine earlier then it just stops randomly.
+
+*Some of my Containers do that as well so idk if its a hardware thing or not.*
+
+I saw that there was someone else that had the same problem in the post from 2yrs ago [here](https://www.reddit.com/r/Tailscale/comments/v6fh5t/tailscale_synology_dsm_7_auto_manually_stopping/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button) but haven't found a fix.
+
+ATP if there's no fix, I'll probably try to just run it as a container but that's way above my knowledge level with SSH. I'll try to follow the video to the best of my ability but no promises.😞
+
+Top 1 comments:
+Comment 1:
+  Author: notboky
+  Comment: The package center version is often very out of date. Have you manually upgraded it to the latest?
+
+It's odd that things are "manully stopped" without input. Have you checked the logs?
+  Score: 1
+  Created UTC: 2024-07-25 23:35:32
+
+Note: This post has only 1 comments at the time of scraping.

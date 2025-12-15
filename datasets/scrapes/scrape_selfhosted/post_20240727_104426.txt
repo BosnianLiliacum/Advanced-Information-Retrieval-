@@ -1,0 +1,100 @@
+Post Title: Why is no one talking about other self-hosting solutions?
+Author: Deivedux
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4nw2r/why_is_no_one_talking_about_other_selfhosting/
+Number of comments: 33
+Created UTC: 2024-07-16 12:53:20
+
+Post Content:
+When someone starts a topic about self-hosting, usually storage related, the most common solutions that I always hear are TrueNAS, Nextcloud, and OpenMediaVault. I own an ARM device with a relatively specific setup requirement; I have 2 types of storage, one for archival and one for high-performance variable productivity data. TrueNAS is automatically out of the question, Nextcloud AIO makes it seem impossible to separate the 2 types of data, and OpenMediaVault is basically TrueNAS but more difficult to install and I still need stuff like calendars for my freelance.
+
+I've found out that there are other self-hosted solutions with a full suite of productivity tools, including ownCloud, Seafile, Pydio Cells, Cozy Cloud, Yunohost, etc. I haven't looked into all of them, but from those that did, really caught my eye on how promisingly modern and fully featured they looked.
+
+However, what bothered me is how I have never seen them being recommended anywhere. In fact, most of the media, including YouTube videos, are almost always filled with those 3, and close to no coverage of other solutions. There's technically an argument that nobody knows about them and that their primary market is business, but I'm still afraid of committing to one of them only to find out that it was a waste of time, something that I don't really have anymore to be able to hop around alternatives just to see what fits for me.
+
+All I want is an all-in-one with a data archive and a suite of productivity tools, with a seamless experience using it, including access to a calendar similar to any other calendar app, whether I'm on PC on LAN or on mobile on WAN. If anybody has any recommendations, I'll be truly grateful if you share them with me, as well as sharing your opinions on my initial question that started this post.
+
+Thank you all in advance!
+
+Top 7 comments:
+Comment 1:
+  Author: weiken79
+  Comment: Your last para, you want MS365. But that is not self hosted.
+  Score: 32
+  Created UTC: 2024-07-16 13:11:25
+
+Comment 2:
+  Author: andpassword
+  Comment: &gt;All I want is an all-in-one with a data archive and a suite of productivity tools, with a seamless experience using it, including access to a calendar similar to any other calendar app, whether I'm on PC on LAN or on mobile on WAN.
+
+Oh is that all?  Also free?  And sets up with a few clicks of the mouse, right?
+
+Pardon the snark, but if you don't have time, go buy some Office365 licenses and stop looking.  If that is offensive to you (like it is to me), then buckle down and try some of the things you've seen. 90% of self-hosting is experimentation and it might work, or might not.  But you gotta install it to find out.  Gotta pay to play:  Self hosting means you pay in time, not dollars; but nothing is ever truly free.  People that set this stuff up do it because they love it.  If you don't love it, don't do it.
+  Score: 33
+  Created UTC: 2024-07-16 14:04:54
+
+Comment 3:
+  Author: isleepbad
+  Comment: People here give suggestions based on what they know. It's not an all in one comprehensive guide on every self hosting topic.
+  Score: 34
+  Created UTC: 2024-07-16 13:25:38
+
+Comment 4:
+  Author: YesGoodBuddy
+  Comment: Here is how it works.
+
+YOU install it.
+
+YOU do the work.
+
+Scenario: some half brained redditor (hopefully never again but we all know it will happen 40 times today) will come and ask the same 🤬 "what should I install" post OR some sort of post that is not really a question but more of a whiny little lazy 🤬 crying about someone else lack of work.
+
+And then...
+
+You get to swoop in and say "Hey I have tried seafile and other such things and I have wasted my OWN time to tell you these great talking points.
+
+But you won't, ever, because look at your current question. 
+
+Suck city.
+  Score: 31
+  Created UTC: 2024-07-16 13:18:43
+
+Comment 5:
+  Author: Omni__Owl
+  Comment: &gt;committing to one of them only to find out that it was a waste of time, something that I don't really have anymore
+
+This is very telling. Stop self-hosting, go with proprietary solutions. You want Office 365. Save yourself the grief and go that way.
+
+Because otherwise your attitude towards self-hosting will have to change. A lot of the solutions you mention are mentioned because a lot of people use them and they work fairly well for what they were designed for.
+
+If you wish to find some unique setup, then you might have to shop around and find different services that each do a different part of what you want and then find a way to tie it all together, rather than expect an enterprise level suite to just exist.
+
+That will require time investment on your end. It will require that you try things out and see what works for your use-cases. If you don't have the time to do that, I'm sorry, but then self-hosting is not for you. It requires time.
+  Score: 21
+  Created UTC: 2024-07-16 13:55:11
+
+Comment 6:
+  Author: arthursucks
+  Comment: Probably don't see a lot of other all-in-one solutions because there aren't that many that have the same level of features. 
+
+
+I've for years used NextCloud on a Raspberry Pi as my main document and Calendar. When it came to bigger file/Long term storage I simply setup FTP/SSH. I mean, a Linux box can just have those features. 
+
+
+Currently I only have Code-Sever installed and use my SSH for file sync. Evening else is CLI apps. If I need to collaborate, just spin up a HedgeDoc instance.
+  Score: 4
+  Created UTC: 2024-07-16 13:38:18
+
+Comment 7:
+  Author: foofoo300
+  Comment: specific hardware,  
+Specific use-case and you are wondering, why there is no open source solution, tied to your use-case?  
+Buy anything other than an ARM Device and TrueNas is back in. problem solved.
+
+Otherwise just read stuff and try to hack it and see if it works for you.  
+Have not found a solution for my storage needs either, so made my own.  
+Not that hard, to come up with a working solution for you, if you have some time and curiosity  
+"Wasting" time tinkering with stuff, is how we learn and either you are in, or you are destined to ask questions like these for every scenario you encounter
+  Score: 3
+  Created UTC: 2024-07-16 14:30:05
+

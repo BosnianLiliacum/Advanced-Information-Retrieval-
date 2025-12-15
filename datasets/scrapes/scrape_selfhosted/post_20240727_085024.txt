@@ -1,0 +1,46 @@
+Post Title: How to properly pack domain services under a domain
+Author: andri1305
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebeugc/how_to_properly_pack_domain_services_under_a/
+Number of comments: 7
+Created UTC: 2024-07-24 22:40:23
+
+Post Content:
+I’ve got a small server with services ranging fron pihole and all the arr apps to grafana, prometheus, code server and more. All of them are accessible through their signed ports with no issue. I’ve got a domain and under it I have a dashy page. How would I set up the domain properly so that everything works and instead of opening all service ports to the internet I can use domain.com/plex or whatever the option could be. Is reverse proxy the right way to go or should I look at something else?
+
+Top 5 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: Please do not run a public Pihole.
+  Score: 1
+  Created UTC: 2024-07-24 23:12:06
+
+Comment 2:
+  Author: VexingRaven
+  Comment: Yes, this is what a reverse proxy is for. You can also look into Tailscale, which is not a proxy but an overlay network that will let all of your services and devices communicate no matter where they are.
+  Score: 1
+  Created UTC: 2024-07-25 00:01:54
+
+Comment 3:
+  Author: pigers1986
+  Comment: reverse proxy  like Caddy/Apache - publicly I have SSL (443 TCP) only opened  
+SSH (22 TCP) is only accessible from LAN or Tailscale connected devices (so LAN too :P)
+  Score: 1
+  Created UTC: 2024-07-25 09:55:47
+
+Comment 4:
+  Author: rj_d2
+  Comment: here is a easy to follow tutorial for [nginx proxy manager](https://www.youtube.com/watch?v=qlcVx-k-02E)
+  Score: 1
+  Created UTC: 2024-07-25 11:31:44
+
+Comment 5:
+  Author: Neomee
+  Comment: [example.com](http://example.com) with A record and public IP. [subdomain.example.com](http://subdomain.example.com) with CNAME to @ (root domain). 80/443 port forwarding in your router to your proxy server. HAProxy, Nginx (not a pure proxy server), Traefik, etc.. Configure all front-ends and back-ends in your proxy. Each front-end (sub-domain/path) goes to particular back-end IP:port.
+
+Don't expose internal services. You can use firewall (in front of proxy) to limit IP's/ranges from which some internal service can be accessed. For example, I have static IP for my mobile phone (yes, it is a thing in my area) and I can remote SSH into home network only from this IP. Same can be done for any other service.  
+You can run little internal DNS. Then you can use whatever domains you like. But that will be one more dependency to manage.
+  Score: 1
+  Created UTC: 2024-07-25 17:00:40
+
+Note: This post has only 5 comments at the time of scraping.

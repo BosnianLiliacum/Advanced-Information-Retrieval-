@@ -1,0 +1,26 @@
+Post Title: Win for the media stack
+Author: rigeek
+Score: 37
+URL: https://www.reddit.com/r/selfhosted/comments/1e7lor1/win_for_the_media_stack/
+Number of comments: 7
+Created UTC: 2024-07-20 02:55:19
+
+Post Content:
+So I have the whole Arr stack with Jellyfin, and with the exception of my wife watching a movie here and there I’m really the only user. Well my FIL was looking to watch a show on one of the only streaming services we don’t have.. the man is 82 and doesn’t have much to do besides TV. So I went to *legit places* and found the show. It’s now in Jellyfin and he will love it. Gives me an in to get him in there and see all the other totally legit media I have there too 🤣
+
+Top 2 comments:
+Comment 1:
+  Author: nothingveryobvious
+  Comment: Wait until you set up [Jellyseerr](https://github.com/Fallenbagel/jellyseerr) and get your users on it.
+
+But congrats on the win. I know the feeling.
+  Score: 32
+  Created UTC: 2024-07-20 05:49:07
+
+Comment 2:
+  Author: Shadowedcreations
+  Comment: Is legit in quotes?
+  Score: 7
+  Created UTC: 2024-07-20 05:15:43
+
+Note: This post has only 2 comments at the time of scraping.

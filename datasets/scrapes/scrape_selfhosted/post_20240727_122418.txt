@@ -1,0 +1,35 @@
+Post Title: Too many redirects
+Author: The_BeatingsContinue
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8w8gm/too_many_redirects/
+Number of comments: 2
+Created UTC: 2024-07-21 20:49:09
+
+Post Content:
+Hi,
+
+i'm having trouble running the combo nextcloud, mariaDB and the reverse-proxy SWAG as docker containers inside unraid at home. 
+
+Everything seems to work fine inside my network, so there are no technical issues with nextcloud and mariaDB, but when going live using swag, the browser quits with '**error: too many redirects**'. When checking the URL in [redirect-checker.org](http://redirect-checker.org) a quick check of my site produces a hell lot of '**301 moved permanently**'. 
+
+As [https://developers.cloudflare.com/ssl/troubleshooting/too-many-redirects/](https://developers.cloudflare.com/ssl/troubleshooting/too-many-redirects/) states, this might be caused by SSL misconfigurations. To get this off my checklist, i need to know, how to delete an SSL certificate on a swag instance running on a docker in unraid. 
+
+* Does anyone know where this file is located exactly? 
+* Is it safe to delete it and restart swag to renew the certificate?
+
+Thank you so much for helping me out!
+
+Top 2 comments:
+Comment 1:
+  Author: T0mKatt
+  Comment: on a webserver the .htaccess rewrites can also cause this.
+  Score: 2
+  Created UTC: 2024-07-21 23:04:43
+
+Comment 2:
+  Author: 1A655A9CEC05B28E04
+  Comment: I believe you can fix this by setting the Cloudclare certificate to either Flexible or Strict, one of those two, I just forget which one it is.
+  Score: 1
+  Created UTC: 2024-07-22 01:30:36
+
+Note: This post has only 2 comments at the time of scraping.

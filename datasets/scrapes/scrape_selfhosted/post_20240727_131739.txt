@@ -1,0 +1,32 @@
+Post Title: Self hosting dotnet and database (Postgres)
+Author: New_Speaker9998
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e5q6t0/self_hosting_dotnet_and_database_postgres/
+Number of comments: 2
+Created UTC: 2024-07-17 18:55:31
+
+Post Content:
+I am new to self hosting so bear with me. 
+I have an old mini pc laying aroung and I was thinking to experiment on hosting dotnet apps and a database server. After some research and asking around, I came to conclusion that Proxmox is my optimal solution, but I am hitting walls one after another. My networking skills are a bit rusty, but I managed to get an ubuntu server running, however I cannot access on my local network. 
+Can someone point me to a guide, link or article, on how to setup a server for dotnet and a db? Or what I should keep in mind?
+
+#Edit.1
+
+I know that after I get it working locally, then I will have to configure some services like no-ip, because I don't have a static IP, beside that, I will have to do something so I don't expose the port to my router for the entire internet to see. 
+2. Preferably would be nice to have some overview of the servers running with Grafana.
+3. What else is considered a must, in order for operations to run smoothly, and have a clear look on the traffic, logs etc.
+
+Top 1 comments:
+Comment 1:
+  Author: PaperDoom
+  Comment: If you've set up your VM in proxmox with the default bridge network, then the VM should have received its own IP from the router DHCP server. In your VM console, use the \`ip a s\` command and look for an entry that looks like ensXX or enp0sXX, where XX are numbers, and you should see the local network IP that was assigned by your router.
+
+You should be able to make a connection with that IP + port. The default port should be 5432
+
+If you installed postgresql using docker, then you need to make sure that you specified a port in the run command or compose file, and then the same applies.
+
+I'm pretty sure proxmox doesn't set up the firewall by default, but make sure that ubuntu isn't running default deny for incoming connections on the firewall. I can't remember if the firewall is set up by default in ubuntu or not.
+  Score: 2
+  Created UTC: 2024-07-17 19:51:06
+
+Note: This post has only 1 comments at the time of scraping.

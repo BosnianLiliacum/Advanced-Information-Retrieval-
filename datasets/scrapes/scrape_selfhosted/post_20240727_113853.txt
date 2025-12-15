@@ -1,0 +1,58 @@
+Post Title: A big thanks to all of you!
+Author: Gunfighteriv
+Score: 139
+URL: https://www.reddit.com/r/selfhosted/comments/1ebh81d/a_big_thanks_to_all_of_you/
+Number of comments: 21
+Created UTC: 2024-07-25 00:25:24
+
+Post Content:
+Without this amazing subreddit I wouldn’t have landed the position I did. I recently landed a full stack developer job with a tech stack that was out of my wheelhouse. During my time interview, I was asked what my hobbies were. Of course, I listed home labbing as one of them. This is what sealed the deal for me. Being genuinely enthused by technology is what they were looking for. 
+
+This subreddit has taught me so much (as well as trial and error) about system administration. Because of this subreddit, I have my own personal server running proxmox with 25 LXCs. Every project I find interesting I try out with a new LXC. These containers have really pushed me to learn Ansible for automating various tasks. Guess what my first assignment was. Writing an Ansible playbook to gracefully update a workflow app the company self hosts. 
+
+My experience with my home lab has allowed me to turn my hobby into a career. I honestly couldn’t have done it without the help of all the amazingly experienced people here. Thank you all!
+
+Top 7 comments:
+Comment 1:
+  Author: kintetic0036
+  Comment: nice - what are you self hosting? and how did you learn for full stack development role?
+  Score: 18
+  Created UTC: 2024-07-25 01:12:41
+
+Comment 2:
+  Author: BambiMels
+  Comment: I just joined this subreddit, but I'm glad I could help.
+Sounds like a dream come true. I'm happy to see someone thriving. Congratulations!
+  Score: 9
+  Created UTC: 2024-07-25 02:14:24
+
+Comment 3:
+  Author: classified_x
+  Comment: nice to be somehow a part of this subreddit then
+  Score: 3
+  Created UTC: 2024-07-25 02:41:29
+
+Comment 4:
+  Author: toxic_headshot132
+  Comment: Congratulations bro 👏🎉
+  Score: 2
+  Created UTC: 2024-07-25 03:16:55
+
+Comment 5:
+  Author: chigityk
+  Comment: Congratulations!
+  Score: 2
+  Created UTC: 2024-07-25 03:19:38
+
+Comment 6:
+  Author: ak127a
+  Comment: Congratulations!!
+  Score: 2
+  Created UTC: 2024-07-25 04:00:35
+
+Comment 7:
+  Author: Active-Dog6277
+  Comment: What setup/hardware are you using im interested in running the same services as you do but am a bit split about the hardware. Also how many tb of linux isos do you have
+  Score: 1
+  Created UTC: 2024-07-25 10:57:54
+

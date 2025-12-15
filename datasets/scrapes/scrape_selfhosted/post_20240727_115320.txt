@@ -1,0 +1,18 @@
+Post Title: OCIS in Unraid
+Author: Squanchy2112
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eat0hr/ocis_in_unraid/
+Number of comments: 2
+Created UTC: 2024-07-24 04:57:26
+
+Post Content:
+Anyone have some secret sauce to running OCIS in Unraid? I am struggling to get it to run under docker compose or docker, I am really close to creating a VM just for it but thats not going to work for me long term. Thanks everyone.
+
+Top 1 comments:
+Comment 1:
+  Author: Fightbackmode2005
+  Comment: It is amazing and sad that this app does not have a standard Docker file ready for installation.  People are touting it as a Nextcloud replacement, but can't really run it in a self-hosted environment.
+  Score: 1
+  Created UTC: 2024-07-25 04:01:03
+
+Note: This post has only 1 comments at the time of scraping.

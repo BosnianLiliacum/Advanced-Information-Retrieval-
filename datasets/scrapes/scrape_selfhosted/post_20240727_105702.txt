@@ -1,0 +1,31 @@
+Post Title: Cloud Storage 2024: NAS or Cloud Storage? Pros and cons.
+Author: i_love_my_job_
+Score: 0
+URL: https://filelu.com/n2855-cloud-storage-2024-the-future-of-data-management-and-collaboration.html
+Number of comments: 9
+Created UTC: 2024-07-15 14:00:10
+
+Post Content:
+For me the best way is get a NAS and backup from
+NAS to Cloud Storage.
+
+Top 3 comments:
+Comment 1:
+  Author: chaplin2
+  Comment: NAS is not just for storage. It does everything! You can run 100 containers, each costing 10$/month were you get them by subscription: office, password manager, sync, etc
+  Score: 1
+  Created UTC: 2024-07-15 17:33:29
+
+Comment 2:
+  Author: ciprian-n
+  Comment: GL storing and accessing for example a library of 20 TB of movies/shows at 10 GB/s on the cloud. I wonder how much that costs?
+  Score: 1
+  Created UTC: 2024-07-16 14:04:46
+
+Comment 3:
+  Author: Butthurtz23
+  Comment: Network Attached Storage (NAS) is usually faster than cloud storage, but the cloud isn't the best option for people without unlimited data from their ISP or a slow upload speed like mine, which is capped at 25 Mbps. It would take a really long time to back up all of my storage. The downside to NAS is how much you can afford the storage, which could easily cost you as much as $1,000 for a decent setup, and that’s where cloud storage shines because you are only charged for the amount stored.
+  Score: 1
+  Created UTC: 2024-07-15 14:15:52
+
+Note: This post has only 3 comments at the time of scraping.

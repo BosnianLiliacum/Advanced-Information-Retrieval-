@@ -1,0 +1,42 @@
+Post Title: Sync my Google Photos to my NAS?
+Author: TotalRickalll
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e7sa41/sync_my_google_photos_to_my_nas/
+Number of comments: 7
+Created UTC: 2024-07-20 10:06:55
+
+Post Content:
+Is there any way (project) to sync my photos from Google Photos periodically to my NAS?
+
+I use Photoprism and love it, but also using GPhotos in in my phone for another backup. I do manually right now (download from GPhotos and add it to my local folder)  but I would like to know if it is possible to do it automatically. 
+
+I need it to be Google Photos and no my phone folder with photos, because the galley in GPhotos is where the "final pictures" are (edited photos, added from other sources..etc). 
+
+Not sure if there is any docker-compose I can spin-up with my google credentials and have me google photos sync with my local folder. 
+
+Top 3 comments:
+Comment 1:
+  Author: seharney
+  Comment: Rclone: https://rclone.org/googlephotos/
+  Score: 3
+  Created UTC: 2024-07-21 00:18:39
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;I need it to be Google Photos and no my phone folder with photos, because the galley in GPhotos is where the "final pictures" are (edited photos, added from other sources..etc). 
+
+Can you clarify this? When you edit photos on any application (GPhotos for example) it still needs to save the file somewhere on your phone. Unless you are saying that the file is on the phone where it's automatically uploaded to the cloud and then you delete it from your phone to save space?
+
+If you aren't deleting the file afterwards then any sync app like Synthing will do
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-20 14:23:14
+
+Comment 3:
+  Author: amamoh
+  Comment: Check Synthing, you can specify which folder to synchronise with NAS
+  Score: -1
+  Created UTC: 2024-07-20 11:25:49
+
+Note: This post has only 3 comments at the time of scraping.

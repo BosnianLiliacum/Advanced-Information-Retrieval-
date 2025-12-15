@@ -1,0 +1,93 @@
+Post Title: Mail server only for self hosted services?
+Author: clxrdr
+Score: 54
+URL: https://www.reddit.com/r/selfhosted/comments/1e9impx/mail_server_only_for_self_hosted_services/
+Number of comments: 71
+Created UTC: 2024-07-22 16:31:11
+
+Post Content:
+Does this makes sense?? It is hard? Many apps still ask for email for password restore and other things. I know that hosting a real mail server is a nightmare, but what about just for internal stuff..
+
+And how hard is for example configure.gmail to receive emails for that specific server kinda whitelist that account. I would be only sending emails to me and no one else.
+
+Top 7 comments:
+Comment 1:
+  Author: autisticit
+  Comment: Yes it makes perfect sense.
+
+
+You are looking for a local mail server. Basically any mail server but you lock it with FW rules ideally to stick on your network.
+
+
+I use mailu for this, as it's very lightweight. 
+
+
+For the Google part I don't know. I connect to my mailbox only through a VPN.
+  Score: 35
+  Created UTC: 2024-07-22 16:47:25
+
+Comment 2:
+  Author: SammyDavidJuniorJr
+  Comment: If you're trying to deliver email to a server outside of your network you're going to get blocked by the big providers unless you have a static IP address with a PTR record. Depending on your internet provider, port 25 is probably blocked so you won't be able to receive email from 3rd parties which should be fine for your use case since you're only sending.
+
+To deliver to all the big providers I had to contact Apple and Microsoft admininstrators to get my static IP off a blocklist. Google/Gmail worked without contacting anyone, they just aggressively mark me as spam.
+
+My server's reputation is pretty much zero but it's fine for my needs since I only send email to a small set of addresses and I get notified of any delivery failures.
+
+I'm using Postal to deliver email which automates a bunch of the DKIM/DNS stuff. (https://docs.postalserver.io)
+  Score: 22
+  Created UTC: 2024-07-22 17:05:53
+
+Comment 3:
+  Author: goblin-socket
+  Comment: I use docker-mailserver, and if you need a client, I recommend Roundcube. When configuring Roundcube, set the outgoing and incoming addresses as ssl://&lt;yourip&gt;:&lt;port&gt; which by default should be 587 for outgoing and 993 for incoming.
+  Score: 7
+  Created UTC: 2024-07-22 17:25:35
+
+Comment 4:
+  Author: plasmasprings
+  Comment: I use a simple postfix container, this is the compose file I use
+
+    version: "3.7"
+    services:
+      postfix:
+        container_name: postfix
+        image: boky/postfix
+        restart: always
+        environment:
+          - TZ=&lt;my timezone&gt;
+          - ALLOWED_SENDER_DOMAINS=mydomain.tld
+          - POSTFIX_smtp_tls_security_level=encrypt
+          - 'RELAYHOST=[smtp.outgoingmailserver.tld]:587'
+          - RELAYHOST_USERNAME=username@mydomain.tld
+          - 'RELAYHOST_PASSWORD=hunter2'
+        ports:
+          - '127.0.0.1:587:587'
+        networks:
+          - mail
+    networks:
+      mail:
+        name: mail
+        external: true
+  Score: 6
+  Created UTC: 2024-07-22 19:21:20
+
+Comment 5:
+  Author: Pure-Extreme
+  Comment: Just setup an email server and run it in a local mather ie firewall off everything else?
+  Score: 3
+  Created UTC: 2024-07-22 17:06:51
+
+Comment 6:
+  Author: CrappyTan69
+  Comment: Dockermailserver - super easy to run.
+Just find a way to manage your spf and dkim and you're good.
+  Score: 3
+  Created UTC: 2024-07-22 17:54:35
+
+Comment 7:
+  Author: epsiblivion
+  Comment: if your app requires email to send notifications but you don't want to run an email server, you can use ntfy. it can take email as input and forward to a followed channel on your client (web browser, mobile app). the server can be selfhosted.
+  Score: 3
+  Created UTC: 2024-07-22 18:47:51
+

@@ -1,0 +1,55 @@
+Post Title: Help deciding my setup
+Author: gappuji
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ec1xmg/help_deciding_my_setup/
+Number of comments: 2
+Created UTC: 2024-07-25 18:20:08
+
+Post Content:
+I recently started playing a bit with Proxmox as a total beginner with no Linux/Debian prior experience. For now I have setup a couple of VMs, one running my main Pi-Hole and another running a few dockers. Both VM run using DietPi. However, I plan to do more on Proxmox going forward. The system I was using is an old HP ENVY 750QE DT with i7-6700 processor and 48GB (2x16+2x8 GB) DDR4 RAM. 
+
+Yesterday, [I asked a question about setting up a NAS on this PC and running TrueNAS core as a VM](https://www.reddit.com/r/selfhosted/comments/1eb7v4s/question_regarding_nas_setup/). Considering my limited knowledge I was discouraged to run NAS under Proxmox. So going forward I want to use this PC just for NAS as this has 5 SATA ports and its chassis will support 3-4 HDDs which should be sufficient for my use case where I want to run 3 HDDs in RAID5..
+
+In addition to this HP PC, I have 2 other SFF PCs.
+
+1. A Dell Optiplex 5050 (or 5060) with i5-6500 processor and 8GB (2x4 GB) DDR4 RAM. 
+
+2. A Lenovo Thinkpad P300 with i7-4790 processor and 32GB DDR3 RAM.
+
+  
+Both HP and Dell support NVMEs but Lenovo does not. I will use SATA SSD for Lenovo.
+
+Now, I have to setup another PC as Proxmox machine and one I need for turning into Pfsense. 
+
+I am inclined to go with Dell for Proxmox PC and Lenovo for Pfsense. Also, in total I have 2x16+2x8+2x4 GB DDR4 RAM. If I go with Dell as Proxmox PC, how much RAM should I use in that and how much should I use for my NAS.
+
+  
+Finally:
+
+1. I would appreciate your thoughts on what combination to use.
+
+2. Additionally, I read that it is easy to move Proxmox VMs from one machine to another but I do not understand all this Linux terminology NFS, ZFS, etc. so I was wondering if there is any easy to follow guide that I can go with. Also, I read somewhere that I can just move my NVME to another system and it should work after some tweaking (in case I go with Dell as Proxmox PC). Is this going to work?
+
+  
+Thanks in advance for your time and guidance. 
+
+Top 2 comments:
+Comment 1:
+  Author: land8844
+  Comment: I wouldn't spin up a Proxmox cluster until you have at least three somewhat equivalent machines. 7th gen Intel is getting cheap and is still plenty capable (I have a 3-node cluster, each running i7-7700T and 32+ GB RAM).
+
+Your HP and Dell are good platforms to start with on that. 
+
+As for a NAS, I would have a separate machine dedicated to just that. Doesn't have to be super powerful....but I would not run it from a laptop.
+  Score: 1
+  Created UTC: 2024-07-25 20:09:02
+
+Comment 2:
+  Author: Roulette-Adventures
+  Comment: Consider Containers rather than full VM's if you are able. Also a good resource if you are new would be [Turnkey Containers](https://www.turnkeylinux.org/all).
+
+It might help you get started.
+  Score: 2
+  Created UTC: 2024-07-26 09:12:13
+
+Note: This post has only 2 comments at the time of scraping.

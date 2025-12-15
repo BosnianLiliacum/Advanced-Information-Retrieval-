@@ -1,0 +1,63 @@
+Post Title: What are you using for centralized logging?
+Author: MidnightProgrammer
+Score: 63
+URL: https://www.reddit.com/r/selfhosted/comments/1eaeano/what_are_you_using_for_centralized_logging/
+Number of comments: 60
+Created UTC: 2024-07-23 17:53:01
+
+Post Content:
+One thing I have been behind on doing is setting up centralized logging on my network.  I originally wanted to try Grafana &amp; Loki, but I never got much further than the initial setup.  I know Splunk is super popular, but not sure how much the 500MB/day limit will be, now or in the future.
+
+I already have around 60 docker containers, as well as a few VMs and a proxmox cluster along with TrueNAS primary/backup.
+
+I was really interested in Loki due to how it claims to drastically reduce logging space despite keeping the important data.
+
+Is it even possible to get intelligent logging with alerts without paying a fortune for commercial licensing on a small setup?
+
+Top 7 comments:
+Comment 1:
+  Author: HTTP_404_NotFound
+  Comment: I use Splunk personally. But, do note, My day jobs involves architecting, maintaining, and administrating splunk... so- the skillset was already there.
+  Score: 44
+  Created UTC: 2024-07-23 18:18:44
+
+Comment 2:
+  Author: brkr1
+  Comment: Dozzle is great for containers.
+  Score: 18
+  Created UTC: 2024-07-23 21:13:48
+
+Comment 3:
+  Author: skeneks
+  Comment: The learning curve for Loki was pretty steep for me, but it was worth it. I now use prometheus/mimir/loki and it works great.
+  Score: 14
+  Created UTC: 2024-07-23 18:14:01
+
+Comment 4:
+  Author: blackbirdone1
+  Comment: graylog
+  Score: 20
+  Created UTC: 2024-07-23 20:47:21
+
+Comment 5:
+  Author: virtualadept
+  Comment: [syslog-ng](https://github.com/syslog-ng/syslog-ng).
+  Score: 9
+  Created UTC: 2024-07-23 21:21:46
+
+Comment 6:
+  Author: garbles0808
+  Comment: If you just have docker containers, and don't want to set up a whole log server, you would probably benefit from Dozzle or ctop.
+
+Dozzle can be run in a docker container, it shows you all your containers/stacks and their logs.
+
+Ctop is just a super simple terminal 'top'-like program that just shows you a clean interface to view usage and logs for each container
+  Score: 7
+  Created UTC: 2024-07-23 21:36:23
+
+Comment 7:
+  Author: mlazzarotto
+  Comment: Graylog
+  Score: 4
+  Created UTC: 2024-07-23 19:50:24
+

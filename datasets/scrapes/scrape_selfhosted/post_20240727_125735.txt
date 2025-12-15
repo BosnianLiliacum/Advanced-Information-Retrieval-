@@ -1,0 +1,24 @@
+Post Title: Book stack with math like wolfram frame or section? 
+Author: MoonAndDott
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6xg41/book_stack_with_math_like_wolfram_frame_or_section/
+Number of comments: 2
+Created UTC: 2024-07-19 06:54:34
+
+Post Content:
+Hello everyone, 
+
+I’m using BS fire a while, I really like the simplicity and the text editor. Ofc I also love the feature of making a pdf to share. 
+
+What I miss, I do a lot of calculus. It’s possible to insert a section like “Math Notepad” or similar? 
+
+Thank you. 
+
+Top 1 comments:
+Comment 1:
+  Author: Audible-Parapet6059
+  Comment: Something like this? https://www.bookstackapp.com/hacks/mathjax-tex/
+  Score: 1
+  Created UTC: 2024-07-19 07:27:21
+
+Note: This post has only 1 comments at the time of scraping.

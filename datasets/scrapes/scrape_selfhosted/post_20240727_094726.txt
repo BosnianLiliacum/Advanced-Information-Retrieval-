@@ -1,0 +1,62 @@
+Post Title: Sonos killed bonob
+Author: angrynoah
+Score: 31
+URL: https://www.reddit.com/r/selfhosted/comments/1e85f0e/sonos_killed_bonob/
+Number of comments: 12
+Created UTC: 2024-07-20 20:55:55
+
+Post Content:
+See https://github.com/simojenki/bonob/issues/205
+
+tl;dr is that with the updated Sonos app, it is no longer possible to use bonob as a bridge to a local Navidrome server. Folks are still working on it, but of course Sonos is no help and has no interest in enabling this use case.
+
+Felt I should post this as there are many old posts here recommending Navidrome+bonob for folks with Sonos speakers.
+
+Top 7 comments:
+Comment 1:
+  Author: computerjunkie7410
+  Comment: I’ll never use Sonos ever since they bought Snips and killed it
+  Score: 14
+  Created UTC: 2024-07-21 07:30:33
+
+Comment 2:
+  Author: angrynoah
+  Comment: While we're talking about it, are there any other alternatives for playing your own music on Sonos? I'm trying Plex but it's not working, looks like they want you to open it up to the Internet which is nuts.
+
+
+My Sonos system was a gift, otherwise I wouldn't even be bothering with it.
+  Score: 5
+  Created UTC: 2024-07-21 13:51:48
+
+Comment 3:
+  Author: tillybowman
+  Comment: i don’t get companies like this. you would GAIN customers if you’d just add a somewhat decent api
+  Score: 3
+  Created UTC: 2024-07-21 20:40:47
+
+Comment 4:
+  Author: user_none
+  Comment: Late to the worst party ever? The day the new app dropped I found that little FU from SONOS and put a halt to all updates. Still working on 16.1 and there I shall stay.
+  Score: 5
+  Created UTC: 2024-07-21 00:11:34
+
+Comment 5:
+  Author: xiuuuu
+  Comment: it’s a shame. 
+
+worth noting that the desktop sonos app still works with bonob. suitable workaround for me for the time being, let’s hope it survives.
+  Score: 2
+  Created UTC: 2024-07-21 00:36:27
+
+Comment 6:
+  Author: JuvenoiaAgent
+  Comment: That's horrible! I'm lucky in a way, I'm still on Sonos S1. I have two old Sonos Play:5 (gen 1) speakers so I could never switch to the new Sonos app, I guess it's finally paying off... They've served me well for 10+ years, but I will never buy another Sonos product again after everything they've pulled.
+  Score: 1
+  Created UTC: 2024-07-21 12:44:38
+
+Comment 7:
+  Author: ssssassafras
+  Comment: Thanks I was thinking of looking into this
+  Score: 1
+  Created UTC: 2024-07-20 21:54:41
+

@@ -1,0 +1,44 @@
+Post Title: Wall Rack and home storage finally done
+Author: Leather-Dealer-7074
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1eahejj/wall_rack_and_home_storage_finally_done/
+Number of comments: 3
+Created UTC: 2024-07-23 19:58:07
+
+Post Content:
+[Rack](https://preview.redd.it/o19xec2sobed1.jpg?width=1265&amp;format=pjpg&amp;auto=webp&amp;s=d41d7015eed2fa681b6c04355738df7795269bc9)
+
+Finally done, happy with this setup :
+
+* Router Omada TP-Link ER8411
+* Switch Omada TP-L-Link SG2210XMP-M2
+* 3 x AP Omada TP-Link EP615-Wall
+* ISP Router (bridged, seems to be a big ONT right now) Freebox Delta (10 Gbits / 700 Mbits)
+* NAS (not on the pic), tower Lian Li PC-A17B with Mini ITX Topton N5105, 32 GB, 5 x 8 TB HDD, 2 x 512 GB NVME and 1 x 2 TB for array cache
+
+I'm very impressed by the Q/P of the Omada products, can feel significant difference, especially with mobile Wi-Fi devices !
+
+Let me know what you will do more to achieve this setup.
+
+[NAS](https://preview.redd.it/gsfdi8h24hed1.jpg?width=2560&amp;format=pjpg&amp;auto=webp&amp;s=77979db83c32385eda2779c2f56c860309d0d676)
+
+Top 3 comments:
+Comment 1:
+  Author: sexpusa
+  Comment: show the nas
+  Score: 2
+  Created UTC: 2024-07-23 21:06:48
+
+Comment 2:
+  Author: blt_wv
+  Comment: Looks good, I’m just starting in this journey.
+  Score: 2
+  Created UTC: 2024-07-23 23:44:23
+
+Comment 3:
+  Author: janstadt
+  Comment: I wish mine looked that tidy….
+  Score: 2
+  Created UTC: 2024-07-24 03:31:32
+
+Note: This post has only 3 comments at the time of scraping.

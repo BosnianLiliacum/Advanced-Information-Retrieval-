@@ -1,0 +1,40 @@
+Post Title: Share encrypted, temporary secrets securely
+Author: opensrcdev
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1eb0jku/share_encrypted_temporary_secrets_securely/
+Number of comments: 3
+Created UTC: 2024-07-24 12:44:09
+
+Post Content:
+I was looking for a solution to share secrets that supports encryption and automatic expiration. I came across this cool project that was started about 10 years ago and is still actively being maintained today. I have absolutely no affiliation with the author or project, but figured I would share it here in case anyone else needs a similar type of solution. You can self-host it or you can just use the hosted instance. 
+
+[https://github.com/jhaals/yopass](https://github.com/jhaals/yopass)  
+[https://yopass.se/](https://yopass.se/)
+
+Top 2 comments:
+Comment 1:
+  Author: CarrotDuke
+  Comment: I follow the instruction to build the yopass but I can't get the generated link to work.
+
+This is the server:
+```
+$ ./yopass-server --address 192.168.48.90
+```
+
+This is the client
+```
+$ echo "This is a secret demo." | ./yopass --api http://192.168.48.90:1337 --url http://192.168.48.90:1337
+
+http://192.168.48.90:1337/#/s/32955368-2399-4048-a71a-93c61accee05/-UBQzYHRtvKbw09n-kmVDe
+```
+But this `http://192.168.48.90:1337/#/s/32955368-2399-4048-a71a-93c61accee05/-UBQzYHRtvKbw09n-kmVDe` give me 404 page not found.
+  Score: 1
+  Created UTC: 2024-07-24 14:58:45
+
+Comment 2:
+  Author: sk1nT7
+  Comment: PrivateBin or Send (new fork of Mozilla Send) are also great. There is also Bitwarden Send (selfhost via bitwarden-unified or better vaultwarden).
+  Score: 1
+  Created UTC: 2024-07-24 16:15:35
+
+Note: This post has only 2 comments at the time of scraping.

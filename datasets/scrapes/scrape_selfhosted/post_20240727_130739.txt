@@ -1,0 +1,61 @@
+Post Title: Papermark v0.14.0: Bulk File Upload with TUS protocol, Links in PDFs, Dataroom Updates
+Author: mfts0
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e6axo8/papermark_v0140_bulk_file_upload_with_tus/
+Number of comments: 7
+Created UTC: 2024-07-18 13:04:41
+
+Post Content:
+[Papermark](https://www.papermark.io/) is the open-source alternative to DocSend to share documents and data rooms and receive page-by-page engagement analytics. Fully branded with custom domains. Papermark can be self-hosted. [GitHub Link](https://github.com/mfts/papermark).
+
+Hello !
+
+**If you missed our previous update, we added new file support, auto-detect document orientation and** [more](https://www.reddit.com/r/selfhosted/comments/1d9foj0/papermark_v0130_new_file_support_autodetect/)**.**
+
+The latest update highlights:
+
+Setting up a datarooms with dozens (and sometimes hundreds) of documents is hard work. It shouldn't be. We are excited to make the experience of **uploading many files at once easy and practically seamless**.
+
+Papermark implements the [TUS protocol](https://tus.io/) to enable multiple and resumable uploads. TUS stands for The Upload Server and is an open protocol for **supporting resumable uploads**. The protocol allows the upload process to be resumed from where it left off, even **if the network crashes** and there are other interruptions.
+
+Just drag your files into your dataroom or documents folder to start the upload. Files will uploaded to the selected folder.
+
+[Bulk upload in a dataroom on Papermark](https://preview.redd.it/h62h289xz9dd1.png?width=3680&amp;format=png&amp;auto=webp&amp;s=655ffe5772ac9aed0e35df84eb873baa3719f717)
+
+Other noteworthy updates include:
+
+* links in PDFs are clickable *in-place*
+* add one-click agreements in link controls
+* duplicate links with link controls
+* preview links without tracking analytics
+* preview branding changes before applying them
+* create dataroom from a folder
+* add document to a dataroom
+* duplicate a dataroom with files and folder structure
+* visitor analytics panel
+* document zoom improvements
+* dataroom navigation updates
+* improvements to document processing engine
+
+These are just the highlights, folks! Our release is jam-packed with dozens of upgrades that contribute to a better user experience, improved performance, and enhanced security. If you're new to Papermark, give it a spin! For support and questions, hit us up on [GitHub](https://github.com/mfts/papermark/issues), [X (formerly Twitter)](https://x.com/papermarkio) or reply here.
+
+GitHub Repo: [https://github.com/mfts/papermark](https://github.com/mfts/papermark)
+
+Full release notes: [https://github.com/mfts/papermark/releases](https://github.com/mfts/papermark/releases)
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: ssddanbrown
+  Comment: Just as an advisory to users, the open code for this project [does require code](https://github.com/search?q=repo%3Amfts%2Fpapermark+AND+%28%22%40%2Fee%2F%22+AND+NOT+path%3A%22ee%2F%22%29&amp;type=code) from non-open parts of the project which are under a non-open-source [commercial license](https://github.com/mfts/papermark/blob/main/ee/LICENSE). I believe you'd need to remove/re-implement these references to run this using fully open source code alone (and not be subject to the commercial terms) without error. Some prior discussion and context in [last month's post in this sub](https://www.reddit.com/r/selfhosted/comments/1d9foj0/comment/l7cyjcn/).
+  Score: 3
+  Created UTC: 2024-07-18 13:29:20
+
+Comment 2:
+  Author: AnnabelleSchindler12
+  Comment: Great update! The TUS protocol integration is a game-changer for bulk uploads. I recently started using beehiiv for my newsletter and found their advanced analytics super useful for tracking reader engagement, similar to how Papermark helps with document analytics. Keep up the awesome work!
+  Score: 2
+  Created UTC: 2024-07-18 21:42:20
+
+Note: This post has only 2 comments at the time of scraping.

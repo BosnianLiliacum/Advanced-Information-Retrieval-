@@ -1,0 +1,50 @@
+Post Title: My first published FOSS | DynamicDict | Yet another dot-access dictionary wrapper.
+Author: Gebnar
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1ed8jdt/my_first_published_foss_dynamicdict_yet_another/
+Number of comments: 4
+Created UTC: 2024-07-27 05:07:04
+
+Post Content:
+Here's my first real contribution to the world of open source: [https://github.com/gebnar/PythonDynamicDict](https://github.com/gebnar/PythonDynamicDict)
+
+**What My Project Does**
+
+It's a dictionary wrapper that allows attribute access and mutation using both dot notation and dictionary-style indexing.
+
+**Target Audience**
+
+Production, with caution
+
+**Comparison**
+
+I found a couple similar serious projects out there that do the same thing. I think mine approaches the space from a slightly different philosophy. My priorities were preserving namespace, making usage feel predictable in a "pythonic" way (whatever that means), and lots of dunders for high interoperability. I also added several safety/convenience features to make usage in production a bit safer, including optional strict typing, key renaming, and a bunch of unit tests.
+
+
+
+I knew when I started this that probably a lot of someones had to have implemented something like this before me. But I wanted to learn a bit more about python internals and object behaviors, so I rolled my own version from scratch before reading any of the others.
+
+Having now reviewed some of the competition, I do think I bring some valuable ideas to the table.
+
+I realize this kind of thing is a bit silly. But I've actually found it quite useful. There are lots of ways to use dynamic objects wrong. We all know that. But it's a tool in the box, and somewhere out there is probably an application it's the right tool for...
+
+I'm new to the FOSS publishing space (if not necessarily new to coding in general). I welcome your suggestions/critiques. And I thank you for taking the time to be curious about my work.
+
+Top 2 comments:
+Comment 1:
+  Author: BluesFiend
+  Comment: You should use python conventions if you are going to create code for others to use.
+
+* Modules/functions/variables should be `snake_case` and classes `PascalCase`, you've adopted the exact opposite, `from DynamicDict import dynamic` should be `from dynamic_dict import Dynamic`
+* `Note: Parameters are also 'reserved' keys on the instance. They can be directly set and referenced.` The `_`prefix denotes a private attribute, that the code owner can move at will without impacting the public interface. Use of internals is strongly advised against when using others code for this very reason. Users should get/set non private attributes that can be stored as private internally. 
+* `+` operator on a dictionary is bizarre, better to implement the standard `.update()` . `TypeError: unsupported operand type(s) for +=: 'dict' and 'dict'` is what i would expect from a dictionary in Python.
+  Score: 13
+  Created UTC: 2024-07-27 07:04:20
+
+Comment 2:
+  Author: Ok-Frosting7364
+  Comment: Why not namedtuple?
+  Score: 1
+  Created UTC: 2024-07-27 08:23:07
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,19 @@
+Post Title: Funny Value error
+Author: NoticeAwkward1594
+Score: 0
+URL: https://www.reddit.com/r/Python/comments/1ebgeas/funny_value_error/
+Number of comments: 1
+Created UTC: 2024-07-24 23:47:30
+
+Post Content:
+I just started working and learning all the KMeans, Clustering, etc. It's been fun so far. I received this value error and had a chuckle, so I thought I would share it.   
+**ValueError: could not convert string to float: 'American Cheese (slice)'**
+
+Top 1 comments:
+Comment 1:
+  Author: GXWT
+  Comment: Would have expected a TypeError since we can’t class that fake American stuff as type: Cheese ;)
+  Score: 11
+  Created UTC: 2024-07-25 00:24:31
+
+Note: This post has only 1 comments at the time of scraping.

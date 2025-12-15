@@ -1,0 +1,56 @@
+Post Title: Apple TV disconnects when left idle, but only on ethernet
+Author: athauglas
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1ed06ta/apple_tv_disconnects_when_left_idle_but_only_on/
+Number of comments: 2
+Created UTC: 2024-07-26 21:59:49
+
+Post Content:
+Hi there, I'm dusting off my old account to ask for ideas. Tailscale support hasn't replied to me in a couple weeks, no big deal, this is low priority.
+
+I set up a small tailnet using only Apple TVs ranging from 4K 1st gen through current gen. All run tvOS 17.5.1 and tailscale 1.70, but this issue existed on 1.68 as well. We noticed that one of the apple tvs--the only one that's hardwired--will disconnect frequently when idle/asleep. I think it happens quite often because whenever I check the tailnet dashboard, the last seen time is always within an hour of checking. The dashboard occasionally reports client connectivity as "difficult NAT" but not consistently.
+
+When I disconnect the ethernet and use wifi on the one flaking out, the problem disappears. The remaining 2 apple tvs are all using wifi without problems.
+
+I could just leave it on wifi, but this one is the only apple tv with a real job to do, which is serving jellyfin to my hotel room when I travel for work. I also planned to hardwire a 4th appletv at the parents' home for remote support (minding subnet overlap of course). I don't want to use wifi there because most of their issues are wifi related.
+
+3 of the 4 networks themselves are very simple and reliable: Ubiquiti ER-X routers and single UAP-AC-LR access points, and my road kit is a netgear LM1200 LTE modem and an amplifi instant.
+
+The network with the troublesome appletv is a bit extra, a Netgate SG2100 with current pfsense, and a Linksys Velop mesh with 3 nodes (all hardwired) and running in bridge mode. However the sg2100 config is very simple; we only set a couple home servers outside the DHCP pool and turned on UPNP. Tailscale reports that network as the most permissive for client connectivity out of the whole group.
+
+It's certainly possible there's a network issue, but switching to wifi solves the issue completely, so I'm stumped.
+
+Thanks for any tips where to look next.
+
+**EDIT:** I forgot to mention there is a TPLink 8-port 2.5 gbps dumb switch between the router and the appletv with the problem. The wifi AP is also connected there along with some other equipment, no issues with those afaik. Most of the cabling is new and all of it is tested.
+
+**EDIT 2:** Both comments so far mention the home hub requirement or setting non-hubs to never sleep. The home hub setting does indeed work, but in homes with more than one appletv or a homepod, where the hub assignment can change automatically now and then, it's not all that reliable. Maybe apple will fix that this fall.
+
+Never sleep is fine but it complicates AV control. CEC might still sleep the appletv when turning the system off with the TV remote or siri remote. I'll double check that and report back.
+
+The weird part is still that using wifi appears to solve the issue for me and there's no obvious reason why that should be true.
+
+I'll play around this weekend.
+
+Top 2 comments:
+Comment 1:
+  Author: User313
+  Comment: I recently purchased an Apple TV 4K with Ethernet and don't have any other Apple devices.    Mine will shut off too I believe.
+
+I think designating it a "home hub" in Apple Home app will fix it but I don't have any device personally to use the home app.   This might change in the final TVOS 18 release.  
+
+Again I am still very new to this device so maybe this isn't helpful for you.
+  Score: 1
+  Created UTC: 2024-07-26 22:57:35
+
+Comment 2:
+  Author: news_fakeacct
+  Comment: &gt;&gt; The most common reason your Apple TV cannot be accessed is because it has gone to sleep and is not configured as a home hub, which allows it to wake up when accessed. Typically, an Apple TV is automatically set up as a home hub during its initial setup. However, this feature can become disabled if you move your Apple TV to a different physical location or make significant configuration changes to your network.
+
+&gt;&gt;Using a home hub requires configuration using an iOS device on your network.
+
+https://tailscale.com/kb/1280/appletv
+  Score: 1
+  Created UTC: 2024-07-26 23:56:29
+
+Note: This post has only 2 comments at the time of scraping.

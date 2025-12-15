@@ -1,0 +1,38 @@
+Post Title: Tips for setting up secure remote monitoring for prometheus exporters
+Author: _QuestionMark98_
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e80cnu/tips_for_setting_up_secure_remote_monitoring_for/
+Number of comments: 3
+Created UTC: 2024-07-20 17:04:41
+
+Post Content:
+Hi everyone,
+
+At home I run a homelab, and a raspberry pi running grafana+prometheus to monitor my home servers. On the servers I run exporters for prometheus, like cadvisor, mysql and node-exporter. Sercurity of those endpoints don't really matter to me since they are not exposed to the public.
+
+I also have a public VPS at Hetzner, which I want to monitor on the same grafana dashboard, but don't want to expose the exporters insecurely.
+
+I was thinking to perhaps set up a VPN connection to that VPS, so my raspberry pi can connect to it securely to access the exporters. 
+
+Would like to know if you guys have a similar setup and have suggestions.
+
+Thanks in advance
+
+
+
+Top 2 comments:
+Comment 1:
+  Author: ericesev
+  Comment: A VPN sounds like a good way to implement this.
+
+I have a few different sites I collect metrics from. I use mTLS client certificates with a reverse proxy at each site to allow Prometheus to scrape the /metrics endpoints. I do the same with Loki, allowing Promtail at each site to use a mTLS certificate to forward the logs to my home network.
+  Score: 1
+  Created UTC: 2024-07-20 17:34:15
+
+Comment 2:
+  Author: blackstar2043
+  Comment: I use Slack's [Nebula](https://github.com/slackhq/nebula) for connecting all my hosts into a unified internal mesh network. Selected services can access each other using this network.
+  Score: 1
+  Created UTC: 2024-07-20 21:00:35
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,76 @@
+Post Title: Looking for help on self hosting a office suite for myself.
+Author: kimaro
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1e9wo23/looking_for_help_on_self_hosting_a_office_suite/
+Number of comments: 14
+Created UTC: 2024-07-23 02:28:01
+
+Post Content:
+The normal first paragraph speile incoming, i'm trying to de-googling myself as much as possible.
+
+Here is my setup, running Unraid and basically only familiar with installing dockers from the apps store from there.
+
+I've tried nextcloud and it's okay, it's pretty slow and I have a bunch of issues installing it, but eventually got it working, then I realized that ... It's way to heavy for my needs, all I want is basically the google suite of apps, so something like onlyoffice so I can edit my documents and sheets, those are the primary 2 big ones that I really need working.
+
+The issue is that I have had some insane problems trying to get onlyoffice to work. Followed every single step I've found, redone and rebuilt  but I always get stuck on trying to connect the mysql-&gt;documents server-&gt;community server.
+
+So, i'm looking for alternatives OR! If someone is able to help me with this.  
+I want it to be a really simple page, basically exactly like how google has it, one page for the storage of my files, and then dropdown/buttons to create new files. Nothing sophisticated, nothing extravant, just ability to create them.
+
+Here's also my suitcase on how I use it. 45% on my main computer. 45% on my laptop and 10% on my phone.
+
+So phone isn't really important but if I can get the ability to change/look/edit docs throu a browser/app, that'd be great, but not prio. It's the ability to collaborate with others no matter if I am on my main PC or laptop.
+
+Thankful for any suggestions, even if it's to fix my onlyoffice problem or if you can point me to another program.
+
+I do want to note, I use cryptpad currently just because it's the only one I got working, but it's alittle to much privately focused rather than easy to use doc usage.
+
+Top 5 comments:
+Comment 1:
+  Author: grat_is_not_nice
+  Comment: Try **NextCloud** and **Collabora**. It is pretty fantastic working with my partner on our budget spreadsheet, both logged in via browser.
+  Score: 6
+  Created UTC: 2024-07-23 04:35:09
+
+Comment 2:
+  Author: Craftkorb
+  Comment: Haven't tried it myself yet, but Only Office looked really good
+  Score: 3
+  Created UTC: 2024-07-23 06:06:20
+
+Comment 3:
+  Author: peekeend
+  Comment: cryptpad: https://cryptpad.org/  
+Its hard to setup and mobile wont work for me, the could be a me problem tho :)
+  Score: 2
+  Created UTC: 2024-07-23 06:37:43
+
+Comment 4:
+  Author: Burkely31
+  Comment: There's a couple really decent options for self hosted google suite like replacements that I've come across recently. Not sure if they're part of the whole unraid thing (as I'm yet to use unraid) but they were all deployable in containers. I'm not home at the moment, however, when I walk through the door I can take a peak and try to figure out their names and where to find them. 
+
+ I almost feel like saying one was open office, but can't be certain.
+  Score: 2
+  Created UTC: 2024-07-23 02:42:06
+
+Comment 5:
+  Author: Oracle_at_Delphi
+  Comment: Okay, you don't want to hear this....but Nextcloud does work...and isn't that heavy. But the setup is a bitch...and the setup on Unraid is a mess and doesn't provide you the right options you need to get nextcloud running right. You need to install the docker container using docker compose on UnRaid (this is best done by installing the portainer docker container from the UnRAID store, and using that to manage all your other docker installs on unraid...DO NOT USE the UnRaid interface, it's limited and a mess, and abstracts important things away.
+
+Use the Nextcloud AOI container..or rather use something like the link below and setup guides. If you managed to get this setup using the UnRAID container then you can definitely get this done. Additionally, make sure to add in the High Performance Backend , Redis and AIO Imaginary (with your GPU or the Intel Quicksync GPU passed through.  
+[https://www.reddit.com/r/NextCloud/comments/m3emm9/nextcloud\_with\_hpb\_dockercompose\_example/](https://www.reddit.com/r/NextCloud/comments/m3emm9/nextcloud_with_hpb_dockercompose_example/)
+
+You should use postgresql for better performance though...and pin the version or you'll regret it...in fact pin all the versions and don't let it autoupdate...setup a reminder and do it yourself...and never update the database version unless nextcloud is specifically calling for it.
+
+The problem is using the UnRAID app store for these more complicated docker stacks is severely limiting and when you need to tweak things it fails hard.
+
+If you really want to give up on Nextcloud...
+
+* Synology Drive is pretty good and they have a suite of editing apps. You can install vDSM on a VM in unraid and run the server for those there. Or docker [https://www.reddit.com/r/selfhosted/comments/12blruq/virtual\_dsm\_for\_docker/](https://www.reddit.com/r/selfhosted/comments/12blruq/virtual_dsm_for_docker/)
+* Pydio - There's this, apps for iOS and android also [https://pydio.com/en/download](https://pydio.com/en/download)
+* Seafile. I remember this being a PITA due to the data structures they use...you're files aren't files...they are stored in the server as a BLOB.
+* Owncloud, the original nextcloud before nextcloud was forked....still also maintained
+  Score: 1
+  Created UTC: 2024-07-23 08:46:59
+
+Note: This post has only 5 comments at the time of scraping.

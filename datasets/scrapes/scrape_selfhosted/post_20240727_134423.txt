@@ -1,0 +1,34 @@
+Post Title: Coaching and Consulting one on one tracker?
+Author: killswitch451
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3ztjf/coaching_and_consulting_one_on_one_tracker/
+Number of comments: 4
+Created UTC: 2024-07-15 16:55:06
+
+Post Content:
+I was hired to Coach and develop various positions of a team for a business. I coach on business and personal development. Some on sales strategies and some on customer experience, and on the personal side setting goals for improving financial goals and mental health strategies. I have been using the Monica application yet I would like more of a way to track goals and progress. Something similar to CoachAccountable that I can self host on my Synology NAS. Is anyone aware of any other programs out there that could aid?
+
+Top 3 comments:
+Comment 1:
+  Author: adamshand
+  Comment: Track your own goals or the progress of clients?
+
+Maybe Nomie?  https://github.com/open-nomie
+
+If you're wanting to track clients progress, I suspect you'll be happiest if you build exactly what you want using something like Grist, NocoDB, REI2, BaseRow or BudiBase.
+  Score: 2
+  Created UTC: 2024-07-15 21:45:49
+
+Comment 2:
+  Author: LessieMackey48
+  Comment: You might want to check out SimplePractice or Notion for tracking goals and progress. Also, if your coaching involves a lot of how-to guides and visual aids, you should try Guidde. It's been a game-changer for creating quick training videos and visual documentation.
+  Score: 2
+  Created UTC: 2024-07-16 14:56:52
+
+Comment 3:
+  Author: CindieValez86
+  Comment: Check out Notion  it's highly customizable and could potentially be hosted on your Synology NAS. Also, if you're looking to grow your audience or monetize your content through newsletters, beehiiv has some fantastic tools and no fees on premium subscriptions.
+  Score: 1
+  Created UTC: 2024-07-17 04:04:31
+
+Note: This post has only 3 comments at the time of scraping.

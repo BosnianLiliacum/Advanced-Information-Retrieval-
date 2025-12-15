@@ -1,0 +1,85 @@
+Post Title: Why I canceled $150 worth of Contabo servers
+Author: Knurpel
+Score: 150
+URL: https://www.reddit.com/r/selfhosted/comments/1e6humc/why_i_canceled_150_worth_of_contabo_servers/
+Number of comments: 47
+Created UTC: 2024-07-18 18:08:11
+
+Post Content:
+Up until a few weeks ago, I sent $150 a month to Contabo for three beefy servers with Cpanel and sundry extra IPs. As of the end of this month, all servers have been canceled, due to atrocious “service” on their part.
+
+A month ago, [all my VPS at Contabo went down to a crawl.](https://www.reddit.com/r/selfhosted/comments/1d9dfgh/contabo_going_down_the_drain) Their admin panels became unusable due to lack of response. SSH sessions were EXTREMELY sluggish, a post-war teletype was faster than a SSH session with my Contabo server.
+
+Their support wasn’t interested in my plight. If they looked into the matter at all after days of waiting, they came back saying that everything was in spec.
+
+Their responses were mostly boilerplate. I can be very grating to read again  and again that they are focused on customer satisfaction when in reality, they are everything but.
+
+When I could convince them to move one server to another datacenter, they botched it, nothing was moved.
+
+When I paid them $36 to move one of the servers to a datacenter in my hometown Tokyo on my dime, they lied to me, saying that they “have successfully moved” the server to Japan, when in truth they never had done so. Days later, they told me that due to “routing issues,” the move to Japan was not possible.
+
+I have been with Contabo for more than 10 years. Most of these years, they delivered promptly, and reliably. Recently, the only thing that was prompt and reliable was Contabo charging my PayPal account.
+
+My servers now are at Hetzner and Netcup. 
+
+Hetzner is a joy to work with, support answers promptly, and they are efficient.
+
+Dealing with Netcup can be kafkaesque. To understand their English emails, it helps to speak German, so that you can translate their confused English back into something that could make sense. Their support cranks out doozies like “it is with regret that we have received your resignation. Taking into account the agreed notice periods, we will execute your termination as follows …”   They insist on answering in contorted English, even if you write to them in German. But their servers run well, and they are cheap.
+
+Whatever you do, stay away from Contabo.
+
+Top 7 comments:
+Comment 1:
+  Author: micalm
+  Comment: Hetzner support is legendary. Never failed me, never got bored with my dumb (in hindsight) questions, always polite and quick responses. I mean, they probably got bored, but are pros.
+  Score: 102
+  Created UTC: 2024-07-18 18:48:20
+
+Comment 2:
+  Author: lakimens
+  Comment: Hetzner has miles better support. 
+
+I once had an issue on a Contabo VPS where it was a host issue (nothing I did). After some back and forth, I simply asked to be moved under a different host machine, and that's how the issue got solved.
+
+It's weird that I could better understand the issue than their technical department.
+
+I have to say though, I've been using Contabo for close to 4 years now and it's generally pretty good, and the prices are unbeatable.
+  Score: 25
+  Created UTC: 2024-07-18 20:14:12
+
+Comment 3:
+  Author: __KB19__
+  Comment: &gt; They insist on answering in contorted English, even if you write to them in German.
+
+
+Just a shot in the dark: Maybe they answer with the language from your customer account? There's a field "Anzeigesprache" at CCP (located at "Stammdaten"), change it to German and try it again.
+
+
+https://ccp.netcup.net/daten_aendern.php
+  Score: 14
+  Created UTC: 2024-07-18 20:13:16
+
+Comment 4:
+  Author: Minnifutzi
+  Comment: +1 for netcup. Have some dedicated and vps there for many years and I'm very satisfied. Also Hetzner is always a good choice.
+  Score: 19
+  Created UTC: 2024-07-18 20:11:36
+
+Comment 5:
+  Author: Oujii
+  Comment: I came here to write that you could've gotten a very beefy dedicated server with Hetzner with that hefty price you were paying to Contabo. Depending on your specs, even more than one. Glad to hear you made the jump, Hetzner as you mentioned, is a joy to work with.
+  Score: 7
+  Created UTC: 2024-07-18 19:08:04
+
+Comment 6:
+  Author: Retrowinger
+  Comment: Good choice with hetzner, I’m also there since 12 years.
+  Score: 14
+  Created UTC: 2024-07-18 18:52:20
+
+Comment 7:
+  Author: rexum98
+  Comment: yeah sadly contabo is more like roulette that happens every month
+  Score: 5
+  Created UTC: 2024-07-18 18:38:51
+

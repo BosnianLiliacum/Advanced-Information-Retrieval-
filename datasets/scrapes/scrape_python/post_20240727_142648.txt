@@ -1,0 +1,30 @@
+Post Title: Explore Cassette, an automated short video generator for Instagram reels and YouTube shorts 
+Author: neptunym
+Score: 3
+URL: https://www.reddit.com/r/Python/comments/1ea5bk0/explore_cassette_an_automated_short_video/
+Number of comments: 3
+Created UTC: 2024-07-23 11:20:02
+
+Post Content:
+It's been quite some time I've been working on this as a freetime project, but feel free to [check it out](https://github.com/M3rcuryLake/Cassette) : https://github.com/M3rcuryLake/Cassette
+
+What it does:
+
+Cassette enables the creation of succinct 30-second explanatory videos directly from your terminal. It leverages python's g4f module to generation transcript. Unreal speech for voiceovers and assemblyAI for subtitle generation. Cassette offers multiple customisation options and ensures efficient video production tailored for platforms like Instagram reels or YouTube shorts.
+
+Direct comparison:
+
+[Brainrotjs](https://brainrotjs.com/) has been great inspiration for this project, but it's pretty similar to other automated video generators and similar tools, except it's terminal based.
+
+Target audience:
+
+Cassette caters to creators looking to automate video production processes efficiently from their terminal. It appeals to developers, marketers, and content creators aiming to produce engaging, short-form videos for platforms like Instagram and YouTube, without the need for extensive manual editing or external software interface.
+
+Top 1 comments:
+Comment 1:
+  Author: radiocate
+  Comment: You should probably use a different name, that one's taken by an HTTP testing suite, unfortunately: https://pypi.org/project/cassette/
+  Score: 2
+  Created UTC: 2024-07-23 14:33:07
+
+Note: This post has only 1 comments at the time of scraping.

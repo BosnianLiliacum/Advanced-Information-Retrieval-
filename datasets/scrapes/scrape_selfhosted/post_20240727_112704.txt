@@ -1,0 +1,30 @@
+Post Title: Fork into your own GitLab, track upstream
+Author: Solsmed
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1ec5vq2/fork_into_your_own_gitlab_track_upstream/
+Number of comments: 2
+Created UTC: 2024-07-25 21:00:27
+
+Post Content:
+Hi self-hosters!
+
+I just wanted to share a pipeline I made for GitLab (17.2) which I self-host. I found myself importing some public repos of self-hosted services, for example Jellyfin, because I wanted to better track my various hacky patches and fixes.
+
+In doing this, I realised I would not automatically be enjoying updates on the public main branches. To fix that, and to also have it automated and kept inside of GitLab itself, I made this pipeline which is designed to be run as a scheduled pipeline (i.e. recurring).
+
+For example, to your own GitLab instnace you could import [https://github.com/jellyfin/jellyfin](https://github.com/jellyfin/jellyfin) (importing is a GitLab option when creating a new repo). Then in the comfort of your own server, you could create your own branch and patch to your heart's content. Meanwhile, your locally hosted master branch will be kept up to date with the one on github.com. Whenever you feel like it, you can merge your local master into your local branch (or rebase, or whatever you want).
+
+I decided to put it on cloud GitLab to share with the world. Enjoy, if it sounds like something for you!
+
+Step by step instructions in the .gitlab-ci.yml file itself
+
+[https://gitlab.com/Solsmed/self-hosted-gitlab-forker](https://gitlab.com/Solsmed/self-hosted-gitlab-forker)
+
+Top 1 comments:
+Comment 1:
+  Author: LeaderTrue7774
+  Comment: I will fork this tonight and create my own branch where pulbic is spelt public
+  Score: 1
+  Created UTC: 2024-07-26 04:08:37
+
+Note: This post has only 1 comments at the time of scraping.

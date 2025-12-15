@@ -1,0 +1,69 @@
+Post Title: Looking for a self-hosted picture &amp; social media platform
+Author: vilmos_nagy
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6ypvx/looking_for_a_selfhosted_picture_social_media/
+Number of comments: 6
+Created UTC: 2024-07-19 08:24:50
+
+Post Content:
+Hi everyone,
+
+I'm expecting my first child later this year, and my partner and I are looking for a self-hosted platform where we can share pictures and stories with our friends and family. We're looking for something that functions similarly to a private Facebook group, but we want to avoid using Facebook or other major social media platforms for privacy reasons.
+
+**Our key requirements:**
+
+* **Self-hosted**: We want to have full control over our data.
+* **User-friendly**: Our friends and family members should find it easy to use.
+* **Modern mobile apps**: Good quality and modern mobile apps for both iOS and Android would be a big plus.
+* **Privacy**: Robust privacy features to ensure only invited users can access the content.
+* **Media sharing**: Should support photo and video uploads.
+* **Social features**: The ability to comment, like, and share posts would be great.
+* **Kubernetes support**: I'd prefer to host it on a Kubernetes cluster.
+
+We would appreciate any recommendations or experiences you could share with us. Thanks in advance!
+
+Top 3 comments:
+Comment 1:
+  Author: Ill-Physics1990
+  Comment: Mastodon is pretty popular for this currently, though I'm not sure if it meets your Kubernetes requirement. It will certainly check all your other boxes though. The mobile version of the site is top notch, so you may not even need to have your family download anything.
+  Score: 1
+  Created UTC: 2024-07-20 00:43:04
+
+Comment 2:
+  Author: DalekCoffee
+  Comment: Mastodon is the most robust one.. reliable.. but boring IMO  
+Check out Misskey, and misskey forks like Sharkey, iceshrimp, firefish
+
+These tend to have more fun features
+
+OR if you are looking for more of a "instagram" like experience I highly recommend you look @ pixelfed
+
+These should all be able to be configured as private and internal only if you want...but the greatest feature is the are fediverse compatible, but you should have some information as you venture into this journey
+
+For all of these, it takes time to build relationships/connections with other servers, you can look into what are called relays to help boost content on your own server until this happens but this adds some spam. I highly recommend checking out [https://relay.fedi.buzz](https://relay.fedi.buzz) for customized relays where only posts with certain hashtags are sent to your server.
+
+It can really help create a curated experience of content you and your other members might enjoy!
+
+Word of caution though, hosting a social platform means you will be handling all the moderation we take for granted on major social platforms. You might see some shit lmao
+
+Before inviting friends and family I highly recommend you spend a few months on there and performing moderation actions against servers with bad content. It won't take months to do, it takes like a couple of minutes it's just that they don't all show up at once.
+
+Something that might make this very easy is a public block list like [https://github.com/gardenfence/blocklist](https://github.com/gardenfence/blocklist)  
+I personally don't use it, I have a perfect fine stomach to just handle the servers as they become apparent. A rule of thumb is to not blindly trust block lists. You might want to check and verify if the servers are worth blocking. Many block [threads.net](http://threads.net) for example due to fear of meta's intentions on the network. Until they are an actual issue I dont plan to block
+
+A self hostable social networking platform is fantastic but also awful BECAUSE of how free it is and how ANYONE can host one lol.
+
+After a few months, I rarely see bad stuff anymore. At that point just set proper expectation with friends/family, just say hey if you see anything bad report it IN THE APP (tell them not to call/text/dm you about it, use the built in reporting tools for efficient and quick handling).
+  Score: 1
+  Created UTC: 2024-07-20 07:07:39
+
+Comment 3:
+  Author: Sworyz
+  Comment: Hello did you try Owncloud OCIS or Immich? These are the two that come to my mind first.
+There is also the eternal nextcloud or seafile.
+
+Also heard of Voltaserve but I don't know for kubernetes or the usage in general.
+  Score: 1
+  Created UTC: 2024-07-19 09:06:44
+
+Note: This post has only 3 comments at the time of scraping.

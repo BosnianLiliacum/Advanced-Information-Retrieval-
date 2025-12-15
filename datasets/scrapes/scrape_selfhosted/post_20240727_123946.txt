@@ -1,0 +1,54 @@
+Post Title: App (or apps) to share images with family for final culling
+Author: SulphaTerra
+Score: 9
+URL: https://www.reddit.com/r/selfhosted/comments/1e7y0yd/app_or_apps_to_share_images_with_family_for_final/
+Number of comments: 12
+Created UTC: 2024-07-20 15:20:08
+
+Post Content:
+Hello, I have the following need. I'm the photographer in the family and I take hundreds of pics of wife and baby during our trips. I shoot RAW and after initial culling, I end up with hundreds of JPEGs for my wife to review. Right now I have her spending a lot of time on my pc for the selection. After final culling/selection we end up with tens of photos, and I take the remaining files and upload to a shared cloud storage, which has not a lot of space available. My wish would be to be able to place the many JPEGs on some network storage on the local network, which is very fast, and let her use a mobile app or browser to review the photos on her own. I'd like for it to be snappy and of course she needs to be able to delete individual images in a slideshare fashion without too much hassle (clicking three times etc). My initial research brought me to NextCloud + Memory app, but maybe there are better alternatives. Could you help?
+
+Top 4 comments:
+Comment 1:
+  Author: what-shoe
+  Comment: Immich is meant as a photo backup solution… but honestly I mostly use it for sharing albums for collaboration. I’m sure it would fit your use case too.
+  Score: 6
+  Created UTC: 2024-07-20 15:50:04
+
+Comment 2:
+  Author: johnsturgeon
+  Comment: I'll share my opinion here even though the answer is not self hosted (apologies in advance)
+
+I have found that self hosted solutions for image management are finicky and difficult to use, but if you're the only person doing it and have the patience, great!
+
+Personally, I think that Photo Curation and Management becomes too complicated for the self hosted space when you introduce *real* collaboration.
+
+Hell, 90% of commercial solutions don't support collaboration very well (I'm looking at YOU Apple Photos and Lightroom).
+
+I've started using Mylio (yes, paid for Mylio +) and my wife reviews our photos.
+
+Mylio uses a distributed peer-to-peer file management system where you set one or (preferrably more for redundancy) device(s) as a 'vault' (or master collection).  Your files exist on the filesystem in a usable format, you can organize, etc...
+
+Most powerfully though, you can set up a device (say your wife's phone) to have access to specific collections / spaces / views with specific permissions so that she can do the review, and it will sync real time with your master collection.
+
+Once again, I'm sorry for hijacking a self-hosted thread, but personally I've gone down this road and I've landed on Mylio.
+  Score: 3
+  Created UTC: 2024-07-20 16:32:11
+
+Comment 3:
+  Author: rigeek
+  Comment: PhotoPrism will probably do it if Immich doesn’t.  I run both, for separate things.  PhotoPrism is what I use for sharing albums while Immich is my photo backup / storage and their machine language and search makes it easy as hell to find what you need.
+  Score: 2
+  Created UTC: 2024-07-20 21:05:04
+
+Comment 4:
+  Author: daedric
+  Comment: Uhm... you shoot raw.
+
+Perhaps this one: https://github.com/Webreaper/Damselfly
+
+in all cases: https://github.com/meichthys/foss_photo_libraries/tree/main
+  Score: 1
+  Created UTC: 2024-07-20 21:49:40
+
+Note: This post has only 4 comments at the time of scraping.

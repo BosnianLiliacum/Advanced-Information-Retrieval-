@@ -1,0 +1,45 @@
+Post Title: Mail archive from cloud accounts
+Author: leaflock7
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1ea51e2/mail_archive_from_cloud_accounts/
+Number of comments: 5
+Created UTC: 2024-07-23 11:03:25
+
+Post Content:
+Hello,   
+
+
+I was wondering what and how do you archive or keep a copy of your emails from cloud services eg. Gmail, Outlook etc. on your self hosting infrastructure.
+
+My thinking is to have automatically download the emails from those services while being able to access them if needed from that on-prem client/server.  
+I was trying to do so with thunderbird but sometimes the emails are not downloaded fully either images or attachments (I think for attachment s there is an option ) but this I have to have a PC open.
+
+My NAS is Sinology and I think it has some type of mail client but have not tested it yet nor have searched further since I though to check what other options there are.
+
+Thank you  
+L
+
+Top 3 comments:
+Comment 1:
+  Author: rrrmmmrrrmmm
+  Comment: - [Briefbox](https://github.com/bandundu/email-archiver?tab=readme-ov-file#briefbox)
+- [Mailpiler](https://github.com/jsuto/piler)
+- [spiderd](https://spiderd.io/)
+- [imapbackup (CLI)](https://github.com/rcarmo/imapbackup?tab=readme-ov-file#imapbackup)
+- [mbsync-dovecot (CLI)](https://github.com/jon6fingrs/mbsync-dovecot?tab=readme-ov-file#mbsync-dovecot)
+  Score: 4
+  Created UTC: 2024-07-23 11:57:17
+
+Comment 2:
+  Author: Odd-Let9042
+  Comment: I use mbsync in a docker container
+  Score: 2
+  Created UTC: 2024-07-23 12:18:00
+
+Comment 3:
+  Author: neerbos
+  Comment: I use mailcow for a local mail server and it features mail synchronisation from any IMAP capable provider [https://docs.mailcow.email/post\_installation/firststeps-sync\_jobs\_migration/](https://docs.mailcow.email/post_installation/firststeps-sync_jobs_migration/)
+  Score: 4
+  Created UTC: 2024-07-23 13:13:59
+
+Note: This post has only 3 comments at the time of scraping.

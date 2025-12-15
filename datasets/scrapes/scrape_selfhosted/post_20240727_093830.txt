@@ -1,0 +1,71 @@
+Post Title: Selfhosted Database between multiple services
+Author: frasderp
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1e8ogmp/selfhosted_database_between_multiple_services/
+Number of comments: 6
+Created UTC: 2024-07-21 15:10:22
+
+Post Content:
+I have been selfhosting a lot of stuff using Docker composes, but generally they are quite "self contained".
+
+I want to understand best practices when it comes to Databases, and how I can share a database service between other services, as an example:
+
+  
+Scrutiny, Tandoor, Mealie and Romm. 
+
+From what I can tell, both Tandoor and Mealie use Postgres, while the other two use different Database options (MariaDb and InfluxDb?).
+
+Can Tandoor and Mealie both use the same Postgres container and volume?
+
+Top 6 comments:
+Comment 1:
+  Author: Sorry_Beyond3820
+  Comment: Keeping them separate avoids you a lot of headaches (for example, incompatible database versions between services, backups, etc). Don’t overcomplicate things, a postgres container for a single app uses few resources
+  Score: 9
+  Created UTC: 2024-07-21 15:18:34
+
+Comment 2:
+  Author: Psychological_Try559
+  Comment: I used a single database for YEARS, and am actively moving away from this to individual databases.
+
+I'll start by saying that it's actually not that hard to setup a Galera Cluster (highly available MariaDB).  You can even find setups with Galera Proxies (SQL aware proxy), add keepalived with CARP and you've got a single virtual IP that truly create a "cloud" of database (as long as any single Galera Proxy &amp; Galera database are running, it works just fine).  Note that I explicitly mentioned MariaDB because I never found instructions on getting anything else working to that level of HA/failover (looking at you Postgre).
+
+I'll add that in all the years I was doing this, I never had incompatiblies with database versions (eg nothing complained about being on 9.1 vs 9.0 or whatever), everything I used worked.
+
+First of all, it's never one database as you point out, because some require Postgre &amp; others prefer MariaDB or mysql.  But even if you have those two (maybe also a time series database or things that use mongo), it's a lot more infrastructure.  You need multiple web services talking to a single database.  Do you have a firewall? VLANS? Now you have a whole network to manage!  You also have access control in the database, because webservice #1 needs to be isolated from webservice #2. And if one database gets corrupted you'll need to load that one in from backups without disturbing anything else.  Not difficult, just more work.
+
+The TL;DR: is that there's really a minimal benefit at best.  Upgrading a single database is technically easier that upgrading many.  But at the same time, every service goes down.  Whereas upgrading the database when you ALSO upgrade the webserver.... the service is down anyway so it's really no extra time.
+
+All of the above is why I stopped doing that. That said, of you're doing this to play with and learn how HA works I'm happy to walk you through the Galera side at least, but can't recommend maintaining it even in a home lab.
+  Score: 3
+  Created UTC: 2024-07-21 18:35:01
+
+Comment 3:
+  Author: Pretend_Development8
+  Comment: Using shared database server with multiple services is perfectly fine and much more convenient. I run PostgreSQL that currently serves around 15 databases without any issues. Makes it also very convenient to handle backup and restore. 
+
+Unfortunately if the service only works with Maria and you are running Postgres, there is nothing you can do about it (except for contributing to the project). You might consider switching to the service that is based on the database you already running. Or spinning up Maria alongside Postgres. Just make sure that you are regularly backing up the databases, validate the restoration procedure and make sure to read release notes when updating container versions.
+  Score: 1
+  Created UTC: 2024-07-21 16:09:20
+
+Comment 4:
+  Author: WillodeanStowell81
+  Comment: Yes, you can have Tandoor and Mealie use the same Postgres container and volume as long as you configure them correctly. Managing different databases like this helps in streamlining your setup. By the way, for email newsletters and monetization insights, Ive been using beehiiv and it's fantastic for growing digital audiences with zero fees on subscriptions.
+  Score: 1
+  Created UTC: 2024-07-21 23:36:22
+
+Comment 5:
+  Author: Skotticus
+  Comment: Yes, just make sure you make their own DBs and do regular backups.
+
+There are advantages and disadvantages to both approaches, but it all comes down to personal preference.
+  Score: 1
+  Created UTC: 2024-07-22 06:28:33
+
+Comment 6:
+  Author: virtual-systems
+  Comment: Keep them in 1 posgres while the load is low, and split them when the peak load will be high
+  Score: 1
+  Created UTC: 2024-07-23 11:19:40
+
+Note: This post has only 6 comments at the time of scraping.

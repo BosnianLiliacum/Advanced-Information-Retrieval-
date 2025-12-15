@@ -1,0 +1,107 @@
+Post Title: Fixing thousands of old photos' datetime, time zone, location… etc. How would you do it? (Using Immich and Exiftool.)
+Author: master_overthinker
+Score: 45
+URL: https://www.reddit.com/r/selfhosted/comments/1e3djhu/fixing_thousands_of_old_photos_datetime_time_zone/
+Number of comments: 13
+Created UTC: 2024-07-14 21:36:04
+
+Post Content:
+I've got one huge Google Photos takeout, plus duplicate copies of several years of photos across multiple hard disks.
+
+I've tried importing a few into Immich to see how it works. It's nice, but I see one recent date when I copied the files over to my NAS - that date holds all of the photos and videos that have no exif date time.
+
+I can bulk edit the date time &amp; time zone in Immich, which is nice. I see that sidecar xmp files are added for them, and all are moved to the right yyyy/mm folders. However, there're still A LOT of photos and videos stuck in that one recent date.
+
+I'm kinda stuck. I think what I need to do is to go through everything in that date and edit the dates, so they get sidecar files created and moved to the right folders first. Then, I want to see if I can use Exiftool to write the xmp data into the photo file's exif directly. Is that a good / reasonable way to do it?
+
+Or should I delete everything on that date in Immich, go back to the source folders and use Exiftool to fix the dates first?
+
+Sigh… either way, these old photos has been a pain in the ass for me for a long time now. I've been putting it off but I know I'll need to set aside some time to correct them permanently!
+
+Interested to hear how you would attack (or had attacked) this problem.
+
+Top 7 comments:
+Comment 1:
+  Author: LithiumFrost
+  Comment: I would suggest fixing the date in the photo metadata itself. Exif is the universal way of attaching metadata to photos. There's no guarantee that Immich will be around forever. The next photo management system may or may not be able to process those sidecar files, but it absolutely will parse Exif data. Once you've fixed the date in Exif you can re-import them into Immich and it will extract the date correctly.
+
+I recently went through the same process that you are dealing with and I used `exiv2`, it worked very well. Some of the photos contained date information in the filename or folder that I could use to automatically set the date in Exif, but many others had to be reviewed manually to estimate the date.
+  Score: 24
+  Created UTC: 2024-07-14 22:11:33
+
+Comment 2:
+  Author: kayson
+  Comment: 100% use exif tool to fix the metadata. I had essentially the same problem, and exif tool handled everything I threw at it. It may take a few different commands to process all you've got, but it'll work. The dev is also very active on the forums, so if you get stuck you can always ask for help. He's been very kind to me on more than one occasion when I've done something just totally stupid and asked for help (i.e. read the docs better moments)
+  Score: 8
+  Created UTC: 2024-07-14 22:29:29
+
+Comment 3:
+  Author: indrora
+  Comment: I wrote the inverse of this, actually: https://github.com/indrora/photomunch/blob/trunk/main.go
+
+Go's actually a pretty decent language to write this sort of oneoff stuff for; there is a very complete EXIF/XMP library for Go: https://github.com/dsoprea/go-exif?tab=readme-ov-file and a tutorial on mangling EXIF with it: https://medium.com/@kleinc./modifying-exif-metadata-with-go-268c22bf654e
+
+I would 100% start by getting them onto your NAS first, fixing the EXIF data, and then getting them into Immich.
+  Score: 3
+  Created UTC: 2024-07-15 01:18:26
+
+Comment 4:
+  Author: prime_1996
+  Comment: You need to know digikam.
+
+It's feature rich, and you can do basically everything to organise your photo library.
+
+I have been updating my pictures with geo location. It is not the easiest, but once you get used to it, you will be surprised.
+
+I have a smb share mounted on my laptop, and I work directly on my photos in my server.
+  Score: 3
+  Created UTC: 2024-07-15 09:28:11
+
+Comment 5:
+  Author: benjaminchodroff
+  Comment: For photo duplicates I highly recommend this tool:
+https://github.com/qarmin/czkawka
+  Score: 2
+  Created UTC: 2024-07-15 02:40:43
+
+Comment 6:
+  Author: FrozenLogger
+  Comment: Does it really do folders by date? How far down does that go, like year month day with a different folder for each? I have come to really, really dislike that approach.
+
+An old gnome photos app used to do that and browsing those photos suck. 
+
+Much prefer folder for different reasons, like camera type, then possibly date, while having the photo software manage a database that I can view how ever I want.
+  Score: 1
+  Created UTC: 2024-07-15 01:32:47
+
+Comment 7:
+  Author: lib20
+  Comment: For removing duplicate files I use [fim](https://evrignaud.github.io/fim/#_fim_file_integrity_manager).
+
+For the organization of photos and videos, there's a directory per year.
+
+Every file begins with a timestamp, ex: 20240715\_100350\_then\_some\_description.jpg
+
+I'm considering using BeFs under Haiku to work as a media server because that filesystem has support for extended attributes that can be [easily queried](https://www.haiku-os.org/docs/userguide/en/queries.html#adv-query).
+
+Sometimes, there are photos that have no exif info.
+
+Others, have the correct modify time in the filesystem, and I have to add the timestamp to the filename.
+
+Still others, that have the correct timestamp in the name, but the incorrect modify time in the filesystem.
+
+Some have uppercase characters or other non-ascii characters.
+
+Other cases.
+
+For all of these, I've built several Sh and Tcl scripts to normalize and correct everything.
+
+I don't use Google photos or any other cloud photo management, as I don't want """authorities""" to see my photos.
+
+  
+Edit:  
+
+For bulk rename, I use Thunar or Vidir, depending on the specific purpose of the rename.
+  Score: 1
+  Created UTC: 2024-07-15 10:35:38
+

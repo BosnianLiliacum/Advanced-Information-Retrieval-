@@ -1,0 +1,42 @@
+Post Title: Wireguard on VPS Security
+Author: xifize1
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1eanu28/wireguard_on_vps_security/
+Number of comments: 5
+Created UTC: 2024-07-24 00:28:59
+
+Post Content:
+I was looking into remote access methods for some web apps running on my home server. This would just be for myself. I'm behind CGNAT and can't do any port forwarding, so it seems like the two major options would be Cloudflare tunnels or some kind of VPN solution. It seems like with Cloudflare, they'd have access to unencrypted HTTP traffic to your home server. How does this compare to hosting a Wireguard server on a VPS? It seems like you'd have the same issue if you were running something like Nginx Proxy Manager on the VPS to point to local services. Is HAProxy better in this regard? I found a [blog post ](https://theorangeone.net/posts/wireguard-haproxy-gateway/)mentioning that it can forward traffic without modification. Also in terms of security, is there anything special you'd need to do? Would the VPS have complete access to all the ports on the home server? Appreciate any insight on this!
+
+Top 4 comments:
+Comment 1:
+  Author: Background-Piano-665
+  Comment: Tailscale or similar is your 3rd option.
+
+Yes, Cloudflare Tunnel has a part in the middle that passes data unencrypted. Also, you're restricted to using the ports they allow open. Not a problem if it's all http traffic (and some other ports they allow). Quite a big issue if you need other ports open.
+
+With keeping a VPS up, security, maintenance and cost are your concerns. CF Tunnel is free and has built in security already. Your VPS is your responsibility. But no, the VPS would not have "complete access" to your home server's ports. Why would it? It's just another machine on the network, albeit connected via VPN. And you can set up your own rules too if you really want to lock it down some more.
+  Score: 3
+  Created UTC: 2024-07-24 02:47:28
+
+Comment 2:
+  Author: PaperDoom
+  Comment: tailscale
+  Score: 4
+  Created UTC: 2024-07-24 00:36:17
+
+Comment 3:
+  Author: sylsylsylsylsylsyl
+  Comment: Cloudflare have access to the data in cloudflare. One hopes that your VPS provider does not have access to the data on your VPS!
+  Score: 1
+  Created UTC: 2024-07-24 06:51:49
+
+Comment 4:
+  Author: sylsylsylsylsylsyl
+  Comment: Cloudflare have access to the data in cloudflare. One hopes that your VPS provider does not have easy access to the live data on your VPS (though if they really wanted to, I’m sure they could manage). They could probably access the disks quite easily, but you could always encrypt.
+
+That’s the only “vulnerability” of Cloudflare tunnels (well, apart from them not allowing hosting video, which I understand). Everything else is encrypted.
+  Score: 1
+  Created UTC: 2024-07-24 06:51:58
+
+Note: This post has only 4 comments at the time of scraping.

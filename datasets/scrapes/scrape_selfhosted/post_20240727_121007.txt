@@ -1,0 +1,30 @@
+Post Title: Noted.lol down. Hoping this is temporary?
+Author: sottey
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9w0rz/notedlol_down_hoping_this_is_temporary/
+Number of comments: 11
+Created UTC: 2024-07-23 01:56:47
+
+Post Content:
+Just noticed that [noted.lol](http://noted.lol) is down. Anyone know if this is just maintenance or something more serious?
+
+Top 3 comments:
+Comment 1:
+  Author: nashosted
+  Comment: There were some breaking changes I was unaware of when updating from 5.8 to the newest version of Ghost and it causes the DB to crash. So... I am working on adding 9 posts back. Thanks to our partners at Kiwix for saving my bacon on this one. The site is back up and I'll be adding the last 9 posts back over the next couple days. You can see the archive here [https://library.kiwix.org/viewer#noted.lol\_en\_2024-07/noted.lol/](https://library.kiwix.org/viewer#noted.lol_en_2024-07/noted.lol/) but Noted is back online. Thank you for your concern.
+  Score: 8
+  Created UTC: 2024-07-23 14:32:56
+
+Comment 2:
+  Author: dlsolo
+  Comment: Hey u/nashosted, things good over there?
+  Score: 2
+  Created UTC: 2024-07-23 13:49:48
+
+Comment 3:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: -19
+  Created UTC: 2024-07-23 02:17:46
+
+Note: This post has only 3 comments at the time of scraping.

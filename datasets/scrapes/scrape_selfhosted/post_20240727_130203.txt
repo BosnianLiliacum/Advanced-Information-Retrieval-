@@ -1,0 +1,74 @@
+Post Title: Questions regarding migrating self-hosted stack to Kubernetes.
+Author: _wrpd
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e6kk8g/questions_regarding_migrating_selfhosted_stack_to/
+Number of comments: 2
+Created UTC: 2024-07-18 19:59:19
+
+Post Content:
+So for a couple of years I've been running all of my self-hosted services in Docker using docker compose spread across 3 machines.
+
+* 1x ARM based SBC
+* 2x Intel NUCs
+
+The ARM machine is serving as my authoritative DNS with Technitium and I was using it for network booting/misc things.
+
+One NUC is my recursive DNS. It isn't as powerful as my other NUC so it was relegated to just my DNS for the most part. It also had some stability issues (later turned out to be a bad/corrupted OS install).
+
+One NUC has an 8 core Xeon and hosts everything else. My services, ZFS pool, etc.
+
+Because of said instability issues I replaced the compute unit in my DNS NUC with the matching compute unit of the main NUC. So now I have equal power between the machines and...
+
+**Enter Kubernetes:**
+
+Since my machines now match in terms of power, I wanted a way to cluster their resources and give me something new to learn. Being comfortable and pretty familiar with containers I obviously stumbled on Kubernetes and it seems to meet my needs.
+
+Obviously, the learning curve is immense so I'm rolling things out slowly.
+
+I've decided on k3s and I've got my machines clustered already. My layout is:
+
+ARM SBC- master node  
+2x NUC - worker nodes
+
+I am running MetalLB --&gt; Nginx Ingress Controller and I currently have Longhorn deployed on a ZVOL on the node with my ZFS pool (using nodeSelector to ensure it's only on that machine). I just got cert-manager up and running for the Longhorn UI and that's what brings me here... some fundamental questions about how to proceed.
+
+**Questions:**
+
+My initial goal was to get everything currently running on Docker into Kubernetes. Some seems straight forward and others not so much.
+
+So my first question:
+
+If I want to migrate my DNS to kubernetes what would be the initial steps to do that? I've seen CoreDNS is used by default and it seems like it would meet my needs but I'm not finding documentation on my use case after some initial searching. Most things seem to utilize it inside the cluster. I want to be able to set IPs to two (or more) instances of CoreDNS in my router's DHCP settings and access the cluster along with things outside the cluster much like I am now with my own authoritative and recursive DNS.
+
+Second question:
+
+For my compose files with multiple containers and databases, etc would I convert (using the term loosely) those to namespaces and then run everything inside of those namespaces to delineate between services?
+
+Third question:
+
+What's the best way to ensure that I can selectively deploy services to my master node? Ideally, I only want to run very lightweight or managerial things from the ARM SBC as it only has 8GB of RAM and in my head I just like it better that way, haha. I have seen taints and tolerations but not sure if there's recommendations on implementation.
+
+Fourth question:
+
+Are there any services that wouldn't be suited to k3s? I run Plex Media Server and all of the data is stored on my ZFS pool... but it seems like it would be painful and overly complex (haha, relatively speaking...) to create a massive ZVOL -&gt; migrate my data -&gt; make it accessible over Longhorn.
+
+However, I run the \*arr stack and would want all of that in k3s... so I guess I'm unsure of how I would go about mapping everything.
+
+Fifth question:
+
+Would appreciate any advice on moving docker stack into k3s.
+
+I know it's overly complex for minimal gain but so far it has been engaging and fun... and I didn't see any other way to cluster my resources as cleanly. I'm enjoying it so far and definitely do see some benefits in terms of management and maintenance going forward... but obviously that's a ways down the line.
+
+Currently, everything is deployed alongside my other services so I can tinker without breaking. I have all of my k3s cluster on a subdomain like so - \*.k3s.example.com
+
+Anyways, appreciate any help offered. Thanks!
+
+Top 1 comments:
+Comment 1:
+  Author: hoffabear
+  Comment: Check out this, https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
+  Score: 1
+  Created UTC: 2024-07-18 20:20:32
+
+Note: This post has only 1 comments at the time of scraping.

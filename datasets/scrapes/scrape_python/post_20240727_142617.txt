@@ -1,0 +1,21 @@
+Post Title: How to isolate a Python module with Tach
+Author: the1024
+Score: 6
+URL: https://www.reddit.com/r/Python/comments/1ea9lh7/how_to_isolate_a_python_module_with_tach/
+Number of comments: 2
+Created UTC: 2024-07-23 14:44:06
+
+Post Content:
+A post detailing how to create and enforce isolation for a Python module through static analysis - useful due to Python's inability to define and enforce the dep graph!
+
+[https://www.gauge.sh/blog/how-to-isolate-a-python-module-with-tach](https://www.gauge.sh/blog/how-to-isolate-a-python-module-with-tach)  
+
+
+Top 1 comments:
+Comment 1:
+  Author: mvaliente2001
+  Comment: Very interesting, thank you very much for posting. I think Tach is an invaluable tool to try to control and split monoliths.
+  Score: 1
+  Created UTC: 2024-07-23 21:27:10
+
+Note: This post has only 1 comments at the time of scraping.

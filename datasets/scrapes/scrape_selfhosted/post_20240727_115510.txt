@@ -1,0 +1,38 @@
+Post Title: Question regarding Network UPS Tools
+Author: gappuji
+Score: 5
+URL: https://www.reddit.com/r/selfhosted/comments/1eao7wn/question_regarding_network_ups_tools/
+Number of comments: 2
+Created UTC: 2024-07-24 00:46:53
+
+Post Content:
+I do not have IT or computer background. I just like to play with computers as a hobby.
+
+I have recently started self-hosting and am trying out a few things. One of thing that I tried out today was NUT which works fine for the UPS connected via USB on my Pi. Now, I do have 2 Windows 11 PCs, one which runs plex and another my PC for personal work. Both have a UP attached to them, Cyberpower and Tripp Lite. I was wondering is there a method for having data from these 2 UPS to be communicated to the NUT server on my Pi. Both these UPS are directly connected to respective PCs vis USB and these PCs are on the same network as the Pi. 
+
+I would appreciate it if someone could please point me to a good guide.
+
+Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: Grosaprap
+  Comment: It is certainly possible. However it would require getting into the weeds a bit more than what your post suggests you might be comfortable with. 
+
+There is a version of NUT's server for Windows, you could install that set that up to be the thing monitoring the UPS's on each of the Window's PCs.
+
+You would then need to go back to your PI server and set up the upsmond (the actual program NUT uses for the monitoring portion of the whole deal) to monitor all three UPS. 
+
+I have not done this I just know that it's possible and that would be how I would first try to tackle it.
+  Score: 4
+  Created UTC: 2024-07-24 03:30:18
+
+Comment 2:
+  Author: Diesis73
+  Comment: Sure it is possible.
+You have to install nut-server on the Pi and nut Windows agent on the windoze machines.
+You must edit some config files, google for the docs.
+  Score: 1
+  Created UTC: 2024-07-24 07:22:58
+
+Note: This post has only 2 comments at the time of scraping.

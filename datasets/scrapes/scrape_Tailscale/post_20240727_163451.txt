@@ -1,0 +1,28 @@
+Post Title: Tailscale inside docker stack; how to ensure a certain exit node is used/online otherwise shutdown rest of containers in the stack?
+Author: pcmichael
+Score: 4
+URL: https://www.reddit.com/r/Tailscale/comments/1ebxfdq/tailscale_inside_docker_stack_how_to_ensure_a/
+Number of comments: 4
+Created UTC: 2024-07-25 15:15:28
+
+Post Content:
+I currently have tailscale running in a docker stack and I’ve got the other containers in the stack set to depend on the tailscale instance, but what I really want to ensure is that this stack ONLY uses a certain exit node on my tailnet AND if that exit node becomes unavailable, I need the rest of the containers to shutdown until this requirement is satisfied. Anyone know of a solution?
+
+I’ve tried messing around with healthcheck’s and that sort of thing, but even that is proving a bit cumbersome with the stock image as it doesn’t even have curl builtin. I’ll follow up and try any ideas anyone may have. 
+
+As an aside, I wish the tailscale client had a baked in “kill switch” of sorts that rendered all networking unavailable if a certain exit node wasn’t available, perhaps this already exists and I just haven’t noticed?
+
+Top 2 comments:
+Comment 1:
+  Author: Ddes_
+  Comment: Check the " grant via" syntax
+  Score: 2
+  Created UTC: 2024-07-25 15:44:41
+
+Comment 2:
+  Author: Ddes_
+  Comment: Where is your stack hosted and why do you want to use an exit node ? I'm not sure exit node is made for your kind of use case.
+  Score: 1
+  Created UTC: 2024-07-25 18:38:10
+
+Note: This post has only 2 comments at the time of scraping.

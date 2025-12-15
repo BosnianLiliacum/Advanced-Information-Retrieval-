@@ -1,0 +1,152 @@
+Post Title: Calibre-Web Automated MAJOR UPDATE - Automatic Cover &amp; Metadata Enforcement and New Super Easy Install! 📔🐋🙌
+Author: WasIstHierLos_
+Score: 90
+URL: https://www.reddit.com/r/selfhosted/comments/1eazf5c/calibreweb_automated_major_update_automatic_cover/
+Number of comments: 38
+Created UTC: 2024-07-24 11:46:53
+
+Post Content:
+[Your dream, all-in-one, digital library management solution](https://preview.redd.it/7s7bdnh79ged1.png?width=1024&amp;format=png&amp;auto=webp&amp;s=a455daafbefeea1a825f3150b0a2dceca1ee0179)
+
+**TLDR: Calibre-Web Automated now support Automatic Cover &amp; Metadata Enforcement, a super easy Docker Compose install method on top of the existing features like Auto-Import and Auto-Conversion. The project aims to add in all the core features of Calibre that are sorely lacking in stock Calibre-Web to become a one-stop, light-weight solution.**
+
+[Link to GitHub Project Page](https://github.com/crocodilestick/Calibre-Web-Automator)
+
+**New Features**
+
+* **Automatic Enforcement of Changes made to Covers &amp; Metadata through the Calibre-Web UI! 🙌📔**
+
+[Any changes made in Calibre-Web Automated are automatically applied directly to the epub files directly, meaning any changes will also now be consistent across devices](https://preview.redd.it/ufp543hg9ged1.png?width=1577&amp;format=png&amp;auto=webp&amp;s=abece62f2f864cae3a9f597800ef4259b1c907e4)
+
+* Something that's always bothered me as a Kindle user has been Calibre-Web's inability to change the Metadata and Covers stored within the `.epub` files of our books, only changing how they appear in the Web-UI, despite letting us make these changes
+* This has resulted in many people, including myself, having to run instances of both `Calibre-Web` **AND** full-fat `Calibre`, to make use of `Calibre`'s much more robust editing tools to change out those ugly covers and keep our Kindle Libraries looking  ***\~ a e s t h e t i c \~*** and our metadata correct between devices
+* Well, ***no more!***
+* Using `CWA 1.2.0`, whenever you change any **Covers** or **Metadata** using the `Calibre-Web` UI, those changes will now be automatically applied directly to the `.epub` files in your library, as well as in the Web UI itself, meaning that from now on what you see really is what you get!
+* **One Step Full Library Conversion - Any format -&gt; .epub ✏️**
+   * Calibre-Web Automated has always been designed with `.epub` libraries in mind due to many factors, the chief among which being the fact they are **Compatible with the Widest Range of Devices**, **Ubiquitous** as well as being **Easy to Manage and Work with**
+   * Previously this meant that anyone with `non-epub` eBooks in their existing Calibre Libraries was unable to take advantage of all of `Calibre-Web Automator`'s features reliably
+   * So new to Version 1.2.0 is the ability for those users to quickly and easily convert their existing eBook Libraries, no matter the size, to `.epub Version 3` format using a one step CLI Command from within the CWA Container
+   * This utility gives the user the option to either keep a copy of the original of all converted files in `/config/original-library` or to trust the process and have CWA simply convert and replace those files (not recommended)
+   * Full details can be found [here](https://github.com/crocodilestick/Calibre-Web-Automator?tab=readme-ov-file#the-convert-library-tool)
+* **Simple CLI Tools for manual fixes, conversions, enforcements, history viewing ect. 👨‍💻**
+   * Built-in command-line tools now also exist for:
+      * Viewing the Edit History of your Library files *(detailed above)*
+      * Listing all of the books currently in your Library with their current Books IDs
+      * **Manually enforcing the covers &amp; metadata for ALL BOOKS** in your library using the `cover-enforcer -all` command from within the container **(RECOMMENDED WITH FIRST TIME USE)**
+      * Manually Enforcing the Covers &amp; Metadata for any individual books by using the following command
+      * `cover-enforcer --dir &lt;path-to-folder-containing-the-books-epub-here&gt;`
+   * Full usage and documentation for all new CLI Commands can be found [here](https://github.com/crocodilestick/Calibre-Web-Automator?tab=readme-ov-file#usage-)
+* **Easy to View Change Database and Internal Automatic Logging**
+
+[CWA's New Enforcement Database Feature](https://preview.redd.it/sr8d59lh9ged1.png?width=1714&amp;format=png&amp;auto=webp&amp;s=43ccf6f9f16e4ab70055ba4fa9579b8979ae7f64)
+
+* In combination with the **new Cover &amp; Metadata Enforcement Features**, a database now exists to keep track of any and all enforcements, both for peace of mind and to make checking for any bugs or weird behaviour easier, but also to make the data available for statistical analysis or whatever else someone might want to use the data for
+
+# New and Simplified Installation Methods
+
+**Now Fully installable through Docker Compose using the Latest Docker Hub Image! 🐋🎉🙌**
+
+* Full install now possible using the Docker Compose template below (**a full installation guide can be found** [**here**](https://github.com/crocodilestick/Calibre-Web-Automator?tab=readme-ov-file#how-to-install-)):
+
+&amp;#8203;
+
+    ---
+    services:
+      calibre-web-automated:
+        image: crocodilestick/calibre-web-automated:latest
+        container_name: calibre-web-automated
+        environment:
+          - PUID=1000
+          - PGID=100
+          - TZ=UTC
+        volumes:
+          - /path/to/config/folder:/config
+          - /path/to/the/folder/you/want/to/use/for/book/ingest:/cwa-book-ingest
+          - /path/to/your/calibre/library:/calibre-main # Point to your Calibre config folder NOT the 'Calibre Library' folder directly
+          #- /path/to/where/you/keep/your/books:/books #Optional
+          #- /path/to/your/gmail/credentials.json:/app/calibre-web/gmail.json #Optional
+        ports:
+          - 8084:8083 # Change the first number to change the port you want to access the Web UI, not the second
+        restart: unless-stopped
+
+* **Explanation of the Container Bindings:**
+   * **/config** - Can be any empty folder, used to store logs and other miscellaneous files that keep CWA running
+   * **/cwa-book-ingest** - **ATTENTION** ⚠️ - All files within this folder will be **DELETED** after being processed. This folder should only be used to dump new books into for import and automatic conversion
+   * **/calibre-main** - This should be bound to the folder that your `metadata.db` file resides within.
+      * If you don't have an **existing** Calibre Database, make an empty folder somewhere called 'calibre-main' or something similar, bind that, place the `metadata.db` file from the project's GitHub page within it and follow the steps below after building the container
+   * **/books** *(Optional)* - This is purely optional, I personally bind /books to where I store my downloaded books so that they accessible from within the container but CWA doesn't require this
+   * **/gmail.json** *(Optional)* - This is used to setup Calibre-Web and/or CWA with your gmail account for sending books via email. Follow the guide [here](https://github.com/janeczku/calibre-web/wiki/Setup-Mailserver#gmail) if this is something you're interested in but be warned it can be a very fiddly process, I would personally recommend a simple SMTP Server
+
+**Future Development**
+
+* I've now been daily driving this version of Calibre-Web Automated (*formerly Calibre-Web Automator*) for a couple weeks now and it now does everything I need for my reading workflow, I personally love the new features and hope you do to!
+* I will continue to maintain this project but as to new features I'm very much open to requests so please reach out with any suggestions or ideas you might have and I'll do my best to implement them!
+
+**TLDR: Calibre-Web Automated now support Automatic Cover &amp; Metadata Enforcement, a super easy Docker Compose install method on top of the existing features like Auto-Import and Auto-Conversion. The project aims to add in all the core features of Calibre that are sorely lacking in stock Calibre-Web to become a one-stop, light-weight solution.**
+
+[Link to GitHub Project Page](https://github.com/crocodilestick/Calibre-Web-Automator)
+
+Top 7 comments:
+Comment 1:
+  Author: werebeowolf
+  Comment: This is amazing, thank you for this. I didn’t know anyone forked calibre-web which is awesome itself but hasn’t seen a lot of feature changes throughout the years.
+
+Is there any chance of multi library/directory support?
+  Score: 12
+  Created UTC: 2024-07-24 13:55:01
+
+Comment 2:
+  Author: george-its-james
+  Comment: oh damn this looks amazing, currently setting it up! A bit confused though. I'm using Calibre-Web, and have my library in /media/books. This folder contains the metadata.db, and is the library used by both Calibre-Web and the Calibre instance I'm running in KasmVNC. 
+
+This my current mapping:
+
+      - ~/calibre-web/config:/config
+      - /media/usenet/complete/books:/cwa-book-ingest
+      - ~/calibre-web/calibre:/calibre-main
+      - /media/books:/books
+
+I've copied my metadata.db to calibre-web/calibre (calibre-main), but in initial setup, when I set the DB location to /calibre-main I get the error "DB Location is not Valid, Please Enter Correct Path" and can't proceed.
+
+Am I doing something wrong?
+
+Edit - I set my db location to /books and it worked perfectly. I guess I'm fine?
+  Score: 5
+  Created UTC: 2024-07-24 12:25:50
+
+Comment 3:
+  Author: Hairy_Elk_5313
+  Comment: Do you run this in place of Calibre-web, or in addition to Calibre-web?  
+
+Your github title page describes it as "A simple tool to give *Calibre*-*Web* the *Auto*-Import and *Auto*-Conversion Functionality", which implies it is a separate tool, but reading through the readme, I see a vague reference to the fact that it was built off of an older version of Calibre-web.  You should put this info in the first paragraph of the readme.md.
+
+Either way, I like this project.  I've been using Calibre-web for years, but the way I use it is frustrating.  I get emailed batches of books from family and then I have to either spin up full calibre, or upload them 3 at a time because Calibre-web will freeze(and still does anyway sometimes).  This will save me a ton of effort.
+  Score: 4
+  Created UTC: 2024-07-24 22:44:33
+
+Comment 4:
+  Author: -eschguy-
+  Comment: Man I just wish calibre-web supported OIDC so I could use Authentik without messing around with LDAP.
+  Score: 3
+  Created UTC: 2024-07-24 19:43:55
+
+Comment 5:
+  Author: fredflintstone88
+  Comment: Can I just say that I love how you have provided comments in your docker-compose for the simplest of things. Nicely done for someone who may be new to the world of docker-compose. I still remember the time when I used to accidentally switch out the wrong port
+  Score: 5
+  Created UTC: 2024-07-25 01:05:08
+
+Comment 6:
+  Author: realpm_net
+  Comment: This is great! Was planning a Calibre/Calibre-Web install tomorrow. I will definitely give this a try!
+  Score: 2
+  Created UTC: 2024-07-26 03:09:16
+
+Comment 7:
+  Author: YourLoliOverlord
+  Comment: Looks awesome, thanks! I've gotten pretty much everything else settled in terms of home media, but getting the cursed combination of calibre, calibre web, and readarr working was just not working for me lol.
+
+Took a quick look at the project and it seems like it's written in python so would be happy to contribute when I get some time.
+  Score: 2
+  Created UTC: 2024-07-24 18:00:18
+

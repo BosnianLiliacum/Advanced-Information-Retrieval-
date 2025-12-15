@@ -1,0 +1,56 @@
+Post Title: "Mail my self" from my server(s)?
+Author: FuriousRageSE
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e7dtzz/mail_my_self_from_my_servers/
+Number of comments: 11
+Created UTC: 2024-07-19 20:38:59
+
+Post Content:
+I don't realyl want to self host a mail server (unless i really really really need to).
+
+But What is the best ways to get various notifications from my server (proxmox + guest VM's)?
+
+for most of my domains i use Migadu, they do have a send limit to X per day/month.
+
+I would like to get mails from my servers, for various stuff.. like perhaps todays fail2ban info;s. Info of status of borg backup (or similar stuff), failed 2fa/sso/other stuff.
+
+&amp;#x200B;
+
+Top 6 comments:
+Comment 1:
+  Author: Self_toasted
+  Comment: I used to run a postfix smtp relay to send smtp from apps, servers and services to myself via a Gmail relay, I never ran into any issues. I switched to ntfy instead, fantastic app. https://ntfy.sh/
+  Score: 13
+  Created UTC: 2024-07-19 20:49:54
+
+Comment 2:
+  Author: caffeineneededtolive
+  Comment: Are you specifically looking for email? I use telegram for all my notifications. The api is really simple and there's a bunch of integrations for the services I run.
+  Score: 2
+  Created UTC: 2024-07-19 23:06:19
+
+Comment 3:
+  Author: SillyLilBear
+  Comment: I use sendpulse, it's free for the volume you will need.  I use it only for notification alerts.
+  Score: 1
+  Created UTC: 2024-07-20 18:27:50
+
+Comment 4:
+  Author: 2TAP2B
+  Comment: Ive a [gotify](https://gotify.net/) container and the app for all notifications and it works pretty well.
+  Score: 1
+  Created UTC: 2024-07-20 18:58:47
+
+Comment 5:
+  Author: withere
+  Comment: Check Mailrise https://github.com/YoRyan/mailrise
+  Score: 0
+  Created UTC: 2024-07-20 09:30:59
+
+Comment 6:
+  Author: withere
+  Comment: Checkout Mailrise https://github.com/YoRyan/mailrise
+  Score: -1
+  Created UTC: 2024-07-20 09:40:22
+
+Note: This post has only 6 comments at the time of scraping.

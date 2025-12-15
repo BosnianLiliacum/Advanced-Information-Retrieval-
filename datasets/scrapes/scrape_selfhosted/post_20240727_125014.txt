@@ -1,0 +1,39 @@
+Post Title: Looking for advice for my hosting company
+Author: Successful_Tap4678
+Score: 4
+URL: https://www.reddit.com/r/selfhosted/comments/1e7anwp/looking_for_advice_for_my_hosting_company/
+Number of comments: 3
+Created UTC: 2024-07-19 18:23:35
+
+Post Content:
+Hi, I’m currently rebranding my business. One of the services I provide is web hosting. I’m using a VPS which is running Plesk.
+
+I’m looking for self-hosted apps to make my business administration easier. I’m currently paying for DigibTW (a Dutch accounting program) and the license for Plesk. I have Uptime Kuma running for uptime management, but this is getting really slow because of the many sites.
+
+Do you guys have any recommendations for the following services:
+
+- Bookkeeping for multiple businesses with a gateway via Mollie (invoicing/quotes would be separate if possible)
+- Uptime management with the possibility to notify me/client if a site is down. Preferably via my WhatsApp business (is a other software can do this part please let me know)
+- A portal for web hosting with automated account creation in Plesk and billing (something like Fossbilling or similar) with the possibility to order via my site
+- Something I’m forgetting but is really useful to have
+
+As I mentioned earlier, I have a VPS for the webhosting. I’m also running a home server with Ubuntu and Docker/Portainer.
+
+Looking forward to your replies!
+
+Top 2 comments:
+Comment 1:
+  Author: TCOOfficiall
+  Comment: InvoiceNinja (Selfhosted &amp; Hosted)  
+UptimeKuma (Selfhosted)  
+WHMCS (Paid)
+  Score: 2
+  Created UTC: 2024-07-19 21:20:02
+
+Comment 2:
+  Author: vantasmer
+  Comment: For alerts Prometheus with alertManager is a great integration and free
+  Score: 1
+  Created UTC: 2024-07-22 05:10:58
+
+Note: This post has only 2 comments at the time of scraping.

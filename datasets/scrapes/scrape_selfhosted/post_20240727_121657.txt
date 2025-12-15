@@ -1,0 +1,22 @@
+Post Title: Upgraded minecraft server rig, now can’t connect.
+Author: nospeedlimit4me
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e9d8wj/upgraded_minecraft_server_rig_now_cant_connect/
+Number of comments: 5
+Created UTC: 2024-07-22 12:37:58
+
+Post Content:
+I just upgraded my server hosting rig with some parts from my personal rig. New motherboard, ram, processor. 
+
+Now my server won’t allow me or anyone outside my network to connect BUT I am able to connect via Lan.
+
+Someone please help with this. I’m not to keen on network stuff and could really use the help! Thanks.
+
+Top 1 comments:
+Comment 1:
+  Author: Rubent55
+  Comment: Im guessing you got a new local IP on the server because you changed the motherboard. So you might have to update your portforward.
+  Score: 6
+  Created UTC: 2024-07-22 12:50:43
+
+Note: This post has only 1 comments at the time of scraping.

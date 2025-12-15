@@ -1,0 +1,49 @@
+Post Title:  PhotoPrism - please help on adding directories in Windows 
+Author: Nice-weather-today
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eaw9kb/photoprism_please_help_on_adding_directories_in/
+Number of comments: 5
+Created UTC: 2024-07-24 08:30:46
+
+Post Content:
+Hi,
+
+First of all I did already try PhotoPrism group here on Reddit but with no luck. There is much more people so maybe you can help me.
+
+I am new to PhotoPrism, Docker, etc. and I have two questions:
+
+1. Is it possible to add new folder with photos after I already ran Photoprism with Docker and MariaDB? Basically if I can add new and new folders anytime later? If yes does it mean to only to modify config file before running Docker or do I have to do something extra?
+2. I have photos in directories in Windows as it is in the picture below marked with yellow color. I was following PhotoPrism setup guide about how to add it into config file but photos are not appearing in PhotoPrism at all. Even scan in Library page does not help. Any idea where can be problem?
+
+https://preview.redd.it/jvglf689gfed1.png?width=1726&amp;format=png&amp;auto=webp&amp;s=0bcd5b50c07e5a1afd1c19a918edf21f23532cce
+
+Thanks in advance for help!
+
+Top 2 comments:
+Comment 1:
+  Author: shadoodled
+  Comment: Look at the next line after the highlighted lines.
+  Score: 1
+  Created UTC: 2024-07-24 09:43:14
+
+Comment 2:
+  Author: Personal_Plastic_443
+  Comment: Hi,
+
+1. **Yes**, you basically go it !  (you have to restart the app after modification)
+   1. Edit your config file
+   2. Restart the compose
+2. Your custom Paths "C:/Test" and "C:/Family Photos" are **mounted to the same destination** directory  ("/photoprism/originals"), which is already used by the default "Pictures" folder.
+
+What you need to do :  
+Change the destination for your additional folders, for example :  
+ `- "C:Test:/photoprism/originals/test"`   
+ `- "C:Family Photos:/photoprism/originals/family"`   
+ `- "C:RandomPhotosDirectory:/photoprism/originals/whatevernameiwant"`   
+*(you can name the destination folder as you want, the directory will be created if it doesn't exist)*
+
+Hope this help 🙂
+  Score: 1
+  Created UTC: 2024-07-24 11:05:15
+
+Note: This post has only 2 comments at the time of scraping.

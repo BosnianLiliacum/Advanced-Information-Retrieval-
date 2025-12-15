@@ -1,0 +1,44 @@
+Post Title: Is there a single-binary app that can provide system information?
+Author: leo-g
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e99xro/is_there_a_singlebinary_app_that_can_provide/
+Number of comments: 8
+Created UTC: 2024-07-22 09:26:02
+
+Post Content:
+Is there a single-binary app that can provide system information? I love how easy to setup FileBrowser.org I wish there’s something like that for SysInfo.
+
+Top 4 comments:
+Comment 1:
+  Author: Innocent__Rain
+  Comment: i don't know if this is what you're looking for but [Glances](https://github.com/nicolargo/glances) shows your system component + sensor data
+  Score: 2
+  Created UTC: 2024-07-22 11:22:10
+
+Comment 2:
+  Author: excellentletter
+  Comment: [node_exporter](https://github.com/prometheus/node_exporter) will do as you want.
+  Score: 2
+  Created UTC: 2024-07-22 15:40:32
+
+Comment 3:
+  Author: wsoqwo
+  Comment: What Information about what system would you like to have provided to you?
+  Score: 1
+  Created UTC: 2024-07-22 11:22:11
+
+Comment 4:
+  Author: xkcd__386
+  Comment: Edit: looking at your other responses, I think you should try `btop`.
+
+----
+
+(original comment)
+
+I don't know what you mean by system information.  If you mean running info like the classic `top` then `btop` is a single binary.
+
+If you mean static system info (usually *hardware* info like CPU RAM battery etc) then I use `inxi`.  This is also a single file (but not a *binary* -- it's one humongous perl script!)
+  Score: 1
+  Created UTC: 2024-07-23 11:59:39
+
+Note: This post has only 4 comments at the time of scraping.

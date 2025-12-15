@@ -1,0 +1,37 @@
+Post Title: Which file sync selfhosted services currently are able to handle symlinks keeping them as symlinks?
+Author: DawidPrzyrodnik
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ed3u5k/which_file_sync_selfhosted_services_currently_are/
+Number of comments: 2
+Created UTC: 2024-07-27 00:49:28
+
+Post Content:
+By symlinks I mean linux symbolic links, which I believe exist in Windows systems as well, similar to shortcuts but at the filesystem level.
+
+I have used nextcloud before, but I couldn't find info about it neither did I notice how it handled symlinks at the time. Now I have been using seafile to a great extent, however, I have just realized how it ruins any symlink converting it to a file with the target content. There are several open tickets related to this issue and this won't be solved as it has been the case for much of the other glitches of the software.
+
+I know there is an ugly workaround somewhere in github implemented by a good soul, which I would avoid at all costs unless someone can report a good experience with it.
+
+I tried to install owncloud to try to check for the correct handling of symlinks, but get stuck trying to find the proper installation steps.
+
+At this point I am really considering using rsync over my cloudflare tunnels.
+
+Any sugestion?
+
+The use case is a desktop at home (which serves as client and server), another desktop at work (client), a laptop (client). A mobile client is welcome, but far from essential as the main goal is to keep lots of personal documents, code, results of experiments etc synced (basically all my files).  
+
+
+Top 2 comments:
+Comment 1:
+  Author: DawidPrzyrodnik
+  Comment: Not the same kind of app, but syncthing preserves symlinks.
+  Score: 1
+  Created UTC: 2024-07-27 03:01:26
+
+Comment 2:
+  Author: vermyx
+  Comment: Host files in one location batch symlinks and every symlink you create you keep adding to said batch. Why make your life difficult trying to unravel your symlinks like this? It basically says “i have no clue how i set things up” and will bite you if you dont have a full understanding of the setup if a disaster hits.
+  Score: 1
+  Created UTC: 2024-07-27 05:06:38
+
+Note: This post has only 2 comments at the time of scraping.

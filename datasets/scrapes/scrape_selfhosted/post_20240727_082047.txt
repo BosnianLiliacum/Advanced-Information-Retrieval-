@@ -1,0 +1,39 @@
+Post Title: OK, can someone ELI5 how I add a widget in Dashy?
+Author: phi303
+Score: 1
+URL: https://i.imgur.com/IFNlpuA.jpeg
+Number of comments: 5
+Created UTC: 2024-07-27 06:40:41
+
+Post Content:
+[This post has no text content]
+
+Top 3 comments:
+Comment 1:
+  Author: root_switch
+  Comment: You delete dashy and run homepage instead. That’s how. It’s much easier to set up, it works without hiccups, it has way more integration. It’s overall a better app IMO.
+
+https://github.com/gethomepage/homepage
+  Score: 6
+  Created UTC: 2024-07-27 07:12:36
+
+Comment 2:
+  Author: phi303
+  Comment: like i get that the documentation says i can add 
+
+    - type: pi-hole-traffic
+      options:
+        hostname: https://pi-hole.local
+        apiKey: xxxxxxxxxxxxxxxxxxxxxxx
+
+but how?
+  Score: 1
+  Created UTC: 2024-07-27 06:42:11
+
+Comment 3:
+  Author: nightcom
+  Comment: homarr, use homarr and you will be happy
+  Score: 1
+  Created UTC: 2024-07-27 08:07:02
+
+Note: This post has only 3 comments at the time of scraping.

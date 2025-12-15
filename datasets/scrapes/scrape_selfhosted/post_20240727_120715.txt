@@ -1,0 +1,53 @@
+Post Title: Alternative to Google photos
+Author: Pitiful-Fruit-5267
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea0whk/alternative_to_google_photos/
+Number of comments: 22
+Created UTC: 2024-07-23 06:32:55
+
+Post Content:
+What would you choose instead of google photos
+
+Top 7 comments:
+Comment 1:
+  Author: dancgn
+  Comment: Immich
+  Score: 44
+  Created UTC: 2024-07-23 06:36:20
+
+Comment 2:
+  Author: akzyra
+  Comment: The search bar
+  Score: 39
+  Created UTC: 2024-07-23 07:24:53
+
+Comment 3:
+  Author: DonkeeeyKong
+  Comment: Nextcloud Memories or Immich. Memories is more stable as it is part of Nextcloud, Immich has the far better face detection.
+  Score: 4
+  Created UTC: 2024-07-23 08:20:32
+
+Comment 4:
+  Author: FlashTwerk69
+  Comment: I use photoprism with mariadb. Have about 10k photos works like a charm.
+  Score: 6
+  Created UTC: 2024-07-23 07:54:27
+
+Comment 5:
+  Author: Famku
+  Comment: [https://www.reddit.com/r/selfhosted](https://www.reddit.com/r/selfhosted)
+  Score: 11
+  Created UTC: 2024-07-23 07:26:36
+
+Comment 6:
+  Author: DartSteven
+  Comment: Immich
+  Score: 7
+  Created UTC: 2024-07-23 07:04:07
+
+Comment 7:
+  Author: atika
+  Comment: I know I will get flack for this, but for my needs, Synology Photos is a perfect replacement.
+  Score: 6
+  Created UTC: 2024-07-23 07:37:41
+

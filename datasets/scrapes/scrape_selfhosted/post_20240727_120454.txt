@@ -1,0 +1,37 @@
+Post Title: GetHomepage Question
+
+Author: localhostFR
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ea3qja/gethomepage_question/
+Number of comments: 9
+Created UTC: 2024-07-23 09:42:58
+
+Post Content:
+Hi everyone,
+
+Does anyone know if it is possible to run homepage on port 80? My goal is to run it without including the port number in the URL, using only the domain name.
+
+  
+thanks
+
+Top 2 comments:
+Comment 1:
+  Author: rambostabana
+  Comment: To run it on port 80, modify docker compose:
+
+ports: - 80:3000
+
+
+Make sure there is nothing else running on thr same port.
+
+But you can run it on any port and still access it using domain name only. You need reverse proxy for that
+  Score: 4
+  Created UTC: 2024-07-23 09:54:13
+
+Comment 2:
+  Author: Mr-Bitter
+  Comment: Also, and this is very important... put it behind a proxy to disallow access to your home network. NGinXProxyManager is a quick docker setup and will help protect whats important. It's not the Fort Knox of proxy managers, but it's way better than leaving the door wide open.
+  Score: -2
+  Created UTC: 2024-07-23 10:17:57
+
+Note: This post has only 2 comments at the time of scraping.

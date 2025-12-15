@@ -1,0 +1,152 @@
+Post Title: Owncloud Infinite Scale using POSIX filesystem storage driver - how to?
+Author: farazeus
+Score: 15
+URL: https://www.reddit.com/r/selfhosted/comments/1e80ru1/owncloud_infinite_scale_using_posix_filesystem/
+Number of comments: 12
+Created UTC: 2024-07-20 17:23:24
+
+Post Content:
+Hello, r/selfhosted community!
+
+  
+**History (may be skipped):**
+
+I had some long story with a lot selfhosted filesyncing solutions and to make it short: I need something like nextcloud, which will work super fast (nextcloud doesnt work reliably fast even with all these manuals about optimization, I tried a lot of options there) and might not bloated with things keeping it slow. &gt;!Filerun suitied me 8.5/10, with their nextcloud mobile apps compatibility, though it's proprietary and become not free now.!&lt;  
+
+
+In those conditions OCIS seems to be fine solution I'm looking for. Though, by default it has one thing, which become an issue for me: Decomposed FS. That means, I can't serve my files to any other services I (might) have, because files are stored not the same way they are downloaded by application. For example, I can't feed my media files to Immich, I can't play my music in Navidrome, etc. &gt;!That is also why Seafile doesnt suit me and probably other solutions.!&lt;  
+
+
+Yes, I know the benefits of that way, though there is another solution, POSIX FS storage driver, that those great guys are developing. It does exactly what I need, though I can't make it working on my deployment. To begin with something, I'll share my Ansible script, which deploys working version of ocis docker container alongside with Traefik. &gt;!It is simple: just creates folders for docker container and launches service, there is no other config files. Version is latest production 5.0.6.!&lt;
+
+  
+**What I have now:**
+
+    ---
+    - name: Delete OCIS directory
+      ansible.builtin.file:
+        path: "{{ ocis_data_directory }}"
+        state: absent
+    
+    - name: Create OCIS files directory
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ admin_uid }}" # 1000 # I have to add this, otherwise config cant be 
+        group: "{{ admin_gid }}" # 1001 # created by ocis and it wont launch
+        # mode: u=rwX,g=rwX,o=rwX
+        # recurse: yes
+      with_items:
+        - "{{ ocis_data_directory }}/config"
+        - "{{ ocis_data_directory }}/userfiles"
+        # - "{{ ocis_data_directory }}/metadata"
+    
+    - name: OCIS Docker Container
+      community.docker.docker_container:
+        name: ocis
+        image: "{{ ocis_container }}:{{ ocis_version }}"
+        # user: "{{ admin_uid }}:{{ admin_gid }}"
+        pull: true
+        recreate: yes
+        volumes:
+          - "{{ ocis_data_directory }}/config:/etc/ocis"
+          - "{{ ocis_data_directory }}/userfiles:/var/lib/ocis"
+          # - "{{ ocis_data_directory }}/metadata:/home/kf/tmp/posix-storage"
+        entrypoint:
+          - /bin/sh
+        command: ["-c", "ocis init || true; ocis server"]
+        env:
+          IDM_ADMIN_PASSWORD: "{{ admin_userpassword }}"
+          IDM_CREATE_DEMO_USERS: "false"
+          OCIS_INSECURE: "false"
+          OCIS_LOG_COLOR: "false"
+          OCIS_LOG_LEVEL: "error"
+          OCIS_URL: "https://{{ ocis_subdomain }}.{{ server_hostname }}"
+          PROXY_ENABLE_BASIC_AUTH: "false"
+          PROXY_TLS: "false"
+          # STORAGE_USERS_DRIVER: "posix"
+          # STORAGE_USERS_POSIX_USE_SPACE_GROUPS: "true"
+          # STORAGE_USERS_POSIX_WATCH_TYPE: "inotifywait"
+          # STORAGE_USERS_ID_CACHE_STORE: "nats-js-kv"
+          # STORAGE_USERS_ID_CACHE_STORE: "memory"
+          # STORAGE_USERS_ID_CACHE_STORE_NODES: "localhost:9233"
+          # STORAGE_USERS_POSIX_ROOT: "/home/kf/tmp/posix-storage"
+          TZ: "{{ server_timezone }}"
+        restart_policy: unless-stopped
+        labels:
+          traefik.enable: "{{ ocis_available_externally }}"
+          traefik.http.routers.ocis.rule: "Host(`{{ ocis_subdomain }}.{{ server_hostname }}`)"
+          traefik.http.services.ocis.loadbalancer.server.port: "9200"
+          traefik.http.routers.ocis.middlewares: "my-headers@file"
+
+Now, lets go straight with with [documentation](https://owncloud.dev/architecture/posixfs-storage-driver/) — and add those environment things which are stated. &gt;!Being honest, I have no idea, why it's not like 1-2 envs, but thats their decision!&lt;
+
+    STORAGE_USERS_DRIVER: "posix"
+    STORAGE_USERS_POSIX_USE_SPACE_GROUPS: "true"
+    STORAGE_USERS_POSIX_WATCH_TYPE: "inotifywait"
+    STORAGE_USERS_ID_CACHE_STORE: "nats-js-kv" 
+    STORAGE_USERS_ID_CACHE_STORE_NODES: "localhost:9233"
+    STORAGE_USERS_POSIX_ROOT: "/home/kf/tmp/posix-storage"
+
+What am I getting is that OCIS cant create some folders/spaces/etc. for my user. Here is the spammed error itself from logs:
+
+`2024-07-20T17:05:55Z ERR error when calling Createhome | service=proxy error=gateway: grpc failed with code CODE_PERMISSION_DENIED`  
+  
+I've uploaded [full log](https://pastebin.com/7V2gYJsf), if that info might be helpful somehow.
+
+**What I tried:**
+
+Actually — billions of things. I tried things with folder rights (gave 777 to folders), with container usership (made `user: "1000:1001"` for container), played with `STORAGE_USERS_ID_CACHE_STORE (`thought it was a service, tried "memory"), tried store metadata on volume.
+
+I don't see a thing where I'm doing something wrong.
+
+**What I want:**
+
+As a result, it would be nice to have my files with reasonable readable filerights. I'd like those files to be readen (or even written) by another services. Also, would be a pleasure to have config available for edit on volume.
+
+  
+Thanks in advance! That would be super nice to have TL;DR instuction instead of owncloud's documentation as a final result of this thread.
+
+Top 6 comments:
+Comment 1:
+  Author: Whitestrake
+  Comment: What's up with the random spoiler tags in your post?
+  Score: 4
+  Created UTC: 2024-07-20 22:44:35
+
+Comment 2:
+  Author: PaperDoom
+  Comment: Did you create the bind mount folders yourself or let docker compose do it?
+  Score: 2
+  Created UTC: 2024-07-20 17:46:44
+
+Comment 3:
+  Author: Topvennie
+  Comment: I can't help you with your question sry.
+I'm looking at several filesyncing solutions and I was wondering why you're stepping away from filerun. Are there any other reason apart from it not being free and closed source?
+  Score: 1
+  Created UTC: 2024-07-20 18:01:01
+
+Comment 4:
+  Author: Tharunx
+  Comment: Hi u/farazeus i was looking exactly the same for the same reasons today. Please update the full compose file and any settings you did if it works for you. Ill do the same here when/if i get everything working well
+  Score: 1
+  Created UTC: 2024-07-20 19:21:41
+
+Comment 5:
+  Author: mangopearapples
+  Comment: Seafile with sea-fuse might be suitable
+  Score: 1
+  Created UTC: 2024-07-20 20:03:41
+
+Comment 6:
+  Author: inlophe
+  Comment: Are you using ocis provided container? Have you tried ocis-rolling image?
+
+I just tried it myself and it works for me without doing anything special (folder permission, etc).
+
+Tried it with the latest regular image (owncloud/ocis) and the container kill itself because it can't find inotifywait. After fiddling around in ocis github, there's some commit last month regarding inotify-tools in the dockerfile. Tried the owncloud:ocis-rolling image and it works
+  Score: 1
+  Created UTC: 2024-07-22 05:58:09
+
+Note: This post has only 6 comments at the time of scraping.

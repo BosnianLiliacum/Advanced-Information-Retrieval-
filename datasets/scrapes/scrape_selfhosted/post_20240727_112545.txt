@@ -1,0 +1,34 @@
+Post Title: Jellyfin and the spinny drive
+Author: steviefaux
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ec9kz7/jellyfin_and_the_spinny_drive/
+Number of comments: 5
+Created UTC: 2024-07-25 23:40:16
+
+Post Content:
+So finally hosting Jellyfin on the pi4 thats sat there doing nothing forever.
+
+All is fine, my 4tb WD USB spinny movie drive is now almost full. However, I've just noticed, on occasion when on the pi4 get that clicking from the drive. The dredded click. The panic set in and now fully backed it up. But works fine and when plugged into my big PC, it doesn't do it.
+
+However I got thinking, could it be a power issue with the Pi? Could the pi just be struggling to power itself, stream and power the USB WD passport drive?
+
+Top 3 comments:
+Comment 1:
+  Author: jerwong
+  Comment: I was using a Pi4 8 GB for Jellyfin and ran into issues in the beginning with my WD Passport as well. Ended up replacing the power supply with the official one from the Raspberry Pi foundation and it started working better. If that's not enough for you, you might be able to use a powered USB hub instead.
+  Score: 3
+  Created UTC: 2024-07-25 23:54:05
+
+Comment 2:
+  Author: EldestPort
+  Comment: If it's a spinny (3.5") drive then presumably it requires AC power as well as a USB connection to the Pi? In which case I wouldn't worry about if the Pi itself can power the drive.
+  Score: 1
+  Created UTC: 2024-07-26 00:13:17
+
+Comment 3:
+  Author: cyt0kinetic
+  Comment: I have a powered enclosure for my drive for my pi, which is also a good idea in order to have a fan.
+  Score: 1
+  Created UTC: 2024-07-26 03:19:15
+
+Note: This post has only 3 comments at the time of scraping.

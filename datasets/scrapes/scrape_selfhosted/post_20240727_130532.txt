@@ -1,0 +1,63 @@
+Post Title: Can I host fully functional dynamic website for free?
+Author: Kato_111
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e6egjb/can_i_host_fully_functional_dynamic_website_for/
+Number of comments: 26
+Created UTC: 2024-07-18 15:36:40
+
+Post Content:
+Is it possible to deploy everything for free. Django for the rest api, nextjs for the frontend, postgresql for the database and even domain name with SSL Lol. I know that it might not be possible so please tell which ones can I do for free and which ones I have to pay for and what would minimal cost look like. 
+
+Top 7 comments:
+Comment 1:
+  Author: ericesev
+  Comment: You don't mention how many visits per day. I'll assume you're starting out small. All of the software components could be hosted on the free tier on either Oracle's or Google's cloud. Both offer free VMs that should support this. Or you can host it from home as well if you have a public IP address. Any Raspberry Pi would be sufficient.
+
+You could use something like DuckDNS for a free domain name. And certificates are free from Let's Encrypt.
+  Score: 23
+  Created UTC: 2024-07-18 15:44:31
+
+Comment 2:
+  Author: shadoodled
+  Comment: Oracle Free Tier
+  Score: 8
+  Created UTC: 2024-07-18 15:44:51
+
+Comment 3:
+  Author: opensrcdev
+  Comment: Use Cloudflare Tunnels, run all the containers on your Linux server, and you're done.
+  Score: 7
+  Created UTC: 2024-07-18 16:38:32
+
+Comment 4:
+  Author: 2lach
+  Comment: As mentioned i dont think you can get around paying for the domain name if you want a "real" domain name, you can get a free subdomain on plenty of services like vercel, duckdns or surge. 
+
+However you can get a domain name really cheap on providers like namecheap, strato etc (stay away from GoDaddy)
+
+Then you can get an always free tier vm on google cloud and set up your services on that machine.
+  Score: 4
+  Created UTC: 2024-07-18 18:13:41
+
+Comment 5:
+  Author: gwicksted
+  Comment: Yes. Cloudflare pages + Supabase. Don’t know if Django is supported but next is and supa is Postgres.
+
+If you want full control, lowendbox.com posts great deals on VPS and dedicated hosting. They’re not always reliable (some providers are much better than others!) so read reviews.
+  Score: 3
+  Created UTC: 2024-07-18 17:51:03
+
+Comment 6:
+  Author: nosliw_rm
+  Comment: I do. I host a portfolio website showing off lots of my projects and it’s come in handy when applying for jobs. If you want to check it out it’s at [wilsonfabrication.com](https://wilsonfabrication.com/projects)
+
+I pay $10 a year for the domain name and that’s it. All hosted through a server in my living room running proxmox, Wordpress, ddns, nginxproxymanager, plausible and a couple other services all proxied through cloudflare. Honestly though it’s been a huge pain in the ass to set up and I am the only person who will fix it if something breaks. I have learned so much which to me made it all worth it but it’s been almost a year in the making and nothing was ever easy. If you just want a simple site go for the options other people listed
+  Score: 3
+  Created UTC: 2024-07-18 23:10:29
+
+Comment 7:
+  Author: cyt0kinetic
+  Comment: I mean it is possible, other than if you want your own too level domain and then it's a nominal cost per year. I put up a wordpress for funsies in 30 minutes, this whole post is baffling.
+  Score: 3
+  Created UTC: 2024-07-19 04:39:47
+

@@ -1,0 +1,31 @@
+Post Title: How To Update Tailcale Running In A Docker Container?
+Author: Altruistic-Bowl801
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1eaz7fu/how_to_update_tailcale_running_in_a_docker/
+Number of comments: 5
+Created UTC: 2024-07-24 11:34:56
+
+Post Content:
+Hello,
+
+  
+In the admin console, I can't update the container that contains the tailscale.
+
+When I run the updates, I get the error message Failed to update container.
+
+I'm currently using version 1.62 and want to upgrade to 1.70.
+
+Why is this not working, and what should I do to make it so?
+
+
+
+Thank you.
+
+Top 1 comments:
+Comment 1:
+  Author: MentionSensitive8593
+  Comment: You need to pull the new version of the tailscale container from docker
+  Score: 2
+  Created UTC: 2024-07-24 11:51:49
+
+Note: This post has only 1 comments at the time of scraping.

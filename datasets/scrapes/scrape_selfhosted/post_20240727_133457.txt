@@ -1,0 +1,26 @@
+Post Title: Best S3 server for postgres backups using pgbackrest
+Author: BosonCollider
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ms5p/best_s3_server_for_postgres_backups_using/
+Number of comments: 2
+Created UTC: 2024-07-16 11:58:13
+
+Post Content:
+The main context of this is that the S3 server is intended for database backups using pgbackrest for postgres or litestream for sqlite, and that it has to be self hosted. S3 seems to be widely supported so I am leaning towards using it to be able to containerize my setup. I may deploy a second instance for logs/metrics and less important data, either via direct storage or via the grafana stack.
+
+Minio and seaweedfs both seem to be reasonably mature?
+
+Top 2 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: I use PB sized MinIO, so go for it.
+  Score: 2
+  Created UTC: 2024-07-16 12:13:21
+
+Comment 2:
+  Author: RaceFPV
+  Comment: Minio is the go to, a little slow but its been around and solid for a long time
+  Score: 1
+  Created UTC: 2024-07-17 05:37:24
+
+Note: This post has only 2 comments at the time of scraping.

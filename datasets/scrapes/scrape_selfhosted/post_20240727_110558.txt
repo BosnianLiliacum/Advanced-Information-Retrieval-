@@ -1,0 +1,70 @@
+Post Title: how to expose services, Sunshine/Jellyfin host, to the internet, but private?
+Author: Strict-Tap-2206
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3abad/how_to_expose_services_sunshinejellyfin_host_to/
+Number of comments: 10
+Created UTC: 2024-07-14 19:10:07
+
+Post Content:
+Hey there,
+
+I am still learning about this stuff, so do bear with me.
+
+I want to expose my Sunshine/Jellyfin host to the internet, but I still want it to be private. I know about tailscale, a great service I use a lot, but the problem is, I am on mobile data almost all the time and my connection gets relayed. you see, relay speeds on tailscale are a bit slow, max I can do is 720p 30fps 3mbps on moonlight, which is not a great experience. Works well for small services like Pihole, but definitely not good enough for gaming or video streaming.
+
+I do have a domain I used to use for my portfolio and I did add it to Cloudflare to manage DNS and SSL certificate. I set up a DNS record leading to my tailscale IP and Nginx proxy manager to reverse proxy to my self-hosted services. I also set up a DNS record leading to sunshine hosts tailscale address but the connection still gets relayed over mobile data. I know tunnelling is an option but it is still slow for the free plan on Cloudflare and it's also just exposing to everyone on the internet, which is not good.
+
+So, my question is, can I use the tailscale network to expose my sunshine host to the internet and then it can only be accessed via other tailscale-connected devices?
+
+thanks very much in advance.
+
+  
+Edit: I ended up getting a VPS for $6/mo and wireguard, which works amazingly. I had to switch VPS providers since OVHcloud's base VPS capped speed at 100mbps, so I just went with Digital Ocean. cheers. now I've got to find something to do with the OVHcloud VPS haha. (very cheap btw, less than £1 per month haha)
+
+Top 7 comments:
+Comment 1:
+  Author: chaplin2
+  Comment: Tailscale
+  Score: 6
+  Created UTC: 2024-07-14 22:01:50
+
+Comment 2:
+  Author: TheRealKKGC
+  Comment: cloudflare argo tunnels
+  Score: 2
+  Created UTC: 2024-07-14 20:52:26
+
+Comment 3:
+  Author: Sekhen
+  Comment: VPN and Firewalls.
+  Score: 2
+  Created UTC: 2024-07-14 21:01:54
+
+Comment 4:
+  Author: ElevenNotes
+  Comment: That's how tailscale works but personally I would avoid using such services. Setup Wireguard directly. If you are behind CGNAT a 4$/month VPS with a static IP is all you need.
+  Score: 3
+  Created UTC: 2024-07-14 19:21:59
+
+Comment 5:
+  Author: LongerHV
+  Comment: AFAIK Tailscale only relays if your network blocks udp traffic. It uses NAT traversal to set up a peer-to-peer connection between clients.
+  Score: 1
+  Created UTC: 2024-07-14 22:10:15
+
+Comment 6:
+  Author: the_matrix_hyena
+  Comment: Twingate
+  Score: 1
+  Created UTC: 2024-07-14 23:59:03
+
+Comment 7:
+  Author: ipaqmaster
+  Comment: If it's only for you and you have nobody else expecting to access them. Consider not exposing them at all and instead investigating one of many VPN solutions to avoid exposing your internal network itself to the Internet.
+
+If they must be exposed it's best practice to run them either containerized or as an underprivileged user with no access to anything other than exactly the directories and files they need access to. In the unlikely event of a compromise an attacker won't be able to do anything on the system if they gain access through this software.
+
+Regardless of your direction here always remember to keep everything up to date.
+  Score: 1
+  Created UTC: 2024-07-15 00:41:15
+

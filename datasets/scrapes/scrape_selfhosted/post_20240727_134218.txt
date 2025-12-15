@@ -1,0 +1,44 @@
+Post Title: Self hosted version of cloudflare
+Author: Ok_Scratch_3596
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e42rfz/self_hosted_version_of_cloudflare/
+Number of comments: 7
+Created UTC: 2024-07-15 18:50:48
+
+Post Content:
+Alright then how would I do it? I'm planning on renting a few small VPS servers. The key features I want to copy are mainly the ability to hide the origin server and if possible a cache for static images. I'm not to sure but Nginxproxymanager and squid proxy seem like the best options. The reason I need to do it is the file size limit on Cloudflares just no good and at some point there gonna complain about me using there service for videos 🤫 they don't know yet. 
+
+Any advice and tips would be great 👍
+
+Top 5 comments:
+Comment 1:
+  Author: thekrautboy
+  Comment: *lol*
+  Score: 44
+  Created UTC: 2024-07-15 19:03:46
+
+Comment 2:
+  Author: ElevenNotes
+  Comment: NPM is the wrong tool for this, as well as squid proxy which is an egress and not ingress proxy. You can hide an IP from any VPS. Simply setup an edge cache with Nginx and Traefik. Traefik as the proxy part and Nginx as the caching part, then proxy to your endpoints, be it TCP or UDP. But I support /u/thekrautboy this is simply *lol*.
+  Score: 8
+  Created UTC: 2024-07-15 19:11:57
+
+Comment 3:
+  Author: Whiplashorus
+  Comment: Could be a good project but add some suricata/ crowdsec to enhance the security
+  Score: 1
+  Created UTC: 2024-07-15 20:21:37
+
+Comment 4:
+  Author: pigers1986
+  Comment: Do want PROXY service and CDN - does it cover ya needs ?
+  Score: 1
+  Created UTC: 2024-07-15 21:44:32
+
+Comment 5:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 0
+  Created UTC: 2024-07-15 20:47:51
+
+Note: This post has only 5 comments at the time of scraping.

@@ -1,0 +1,51 @@
+Post Title: Homepage not working behind Nginx. Please help
+Author: AppleFan1010
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e680fi/homepage_not_working_behind_nginx_please_help/
+Number of comments: 7
+Created UTC: 2024-07-18 10:22:45
+
+Post Content:
+New to self hosting. I am running   
+HA
+
+Portainer
+
+Adguard
+
+on RPi4 8GB.
+
+Recently installed Homepage and it was working.
+
+On their website, they mentioned a danger warning:
+
+*"Please note that when using features such as widgets, Homepage can access personal information (for example from your home automation system) and Homepage currently does not (and is not planned to) include any authentication layer itself. Thus, we recommend homepage be deployed behind a reverse proxy including authentication, SSL etc, and / or behind a VPN."*
+
+To fix this, I installed Nginx with SSL.
+
+Now it is not working.
+
+Also, since ports 3000, 80 and 443 were occupied, so I changed the port numbers for Homepage and Nginx.
+
+Can anybody explain what I did wrong?
+
+Top 1 comments:
+Comment 1:
+  Author: Adam_Meshnet
+  Comment: I'm going to assume that you're using Nginx as a reverse proxy to access your Homepage from outside of your network. If that's an incorrect assumption, let me know what exactly you plan to do.
+
+  
+The general order of things, when it comes to such a setup, is:  
+1. A client sends a request (by typing in the domain in their web browser) to a domain name server. This request includes a domain name (e.g., homepage.applefan1010.com). If the correct DNS records are pointed at your server (more likely your ISP router), the request will be pointed at your (router's) IP address.  
+2. If on your ISP router, you have forwarded ports 80 (HTTP) and 443 (HTTPS) on your ISP router to a specific machine (most likely your server), e.g., [192.168.1.21](http://192.168.1.21), this request will reach your server at port 80 or 443 and will still include the domain name.  
+3. Nginx (given that you have configured it correctly) will look at the request and route it to a specific port on your machine, such as port 3000 for the Homepage webUI.
+
+If my initial assumption is incorrect, and instead, you want to access the Homepage internally through a domain only available to your LAN, then you're missing a DNS service or a host file entry.
+
+I'm not too familiar with Adguard and what it's capable of; however, the above-mentioned functionality can be achieved with a combination of PiHole and Nginx (Proxy Manager). 
+
+Here's a **very** short guide [https://joekarlsson.com/2024/01/adding-custom-domain-names-on-your-internal-network-using-nginx-proxy-manager-and-pi-hole/](https://joekarlsson.com/2024/01/adding-custom-domain-names-on-your-internal-network-using-nginx-proxy-manager-and-pi-hole/)
+  Score: 1
+  Created UTC: 2024-07-18 11:09:41
+
+Note: This post has only 1 comments at the time of scraping.

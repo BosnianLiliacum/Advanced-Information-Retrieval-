@@ -1,0 +1,60 @@
+Post Title: Immich introduces paid licensing options -- unpaid self-hosted version changed to "unlimited trial period"
+Author: LithiumFrost
+Score: 592
+URL: https://github.com/immich-app/immich/discussions/11186
+Number of comments: 419
+Created UTC: 2024-07-18 17:45:57
+
+Post Content:
+[This post has no text content]
+
+Top 7 comments:
+Comment 1:
+  Author: Veloder
+  Comment: It should be called community edition and supporter edition or something like that, not licensed and trial...
+  Score: 803
+  Created UTC: 2024-07-18 18:53:09
+
+Comment 2:
+  Author: mrkesu
+  Comment: They could name it literally whatever they wanted, and they chose _"trial"_.
+
+
+That's what we call "testing the waters", seen this path treaded by many many projects over the decades.
+  Score: 556
+  Created UTC: 2024-07-18 19:02:20
+
+Comment 3:
+  Author: whowasonCRACK2
+  Comment: I don’t really understand the point of individual and server licenses if they are sticking to their claim of no features ever behind a paywall. Seems a bit overly complicated for what is essentially a donate button.
+  Score: 204
+  Created UTC: 2024-07-18 17:58:46
+
+Comment 4:
+  Author: Substantial_Age_4138
+  Comment: I hope that it won’t show a “Trial” version anywhere on menu. Terrible decision to call an open source project as trial. 
+  Score: 68
+  Created UTC: 2024-07-18 19:23:00
+
+Comment 5:
+  Author: Kuken500
+  Comment: here we go
+  Score: 379
+  Created UTC: 2024-07-18 17:54:36
+
+Comment 6:
+  Author: purgedreality
+  Comment: With all due respect, since Immich is a great project and very dedicated developers, I don't really wish to invest any additional time or money into self-hosted software with disingenuous ("unlimited trial", "lifetime" anything) licensing infrastructure. Regardless of how your intentions are at this current point in time, it's now extremely easy for a future decision to be made to force payment and limit access to new releases since the mechanisms are already in place. Donation links, YouTube Thanks, Patreons etc are for raising money and letting your users help financially support you, licensing infrastructure is strictly for limiting access and restricting freedoms. 
+
+Thank you for the journey up to this point and I wish your project well in the future.
+  Score: 273
+  Created UTC: 2024-07-18 19:09:50
+
+Comment 7:
+  Author: Veloxy
+  Comment: I'd much rather see something like funding towards a specific feature, fix or roadmap. I'd definitely donate towards some specific feature I'd want if that would give it some extra incentive to move it forward/add it to future release. Of course that would also mean such a system has to be in place.
+
+The licensing is just confusing and seems like it could scare new people away.
+  Score: 49
+  Created UTC: 2024-07-18 19:20:17
+

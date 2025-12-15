@@ -1,0 +1,49 @@
+Post Title: How can I host a website at home but use a VPS as a cache? 
+Author: RoleAwkward6837
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6eb20/how_can_i_host_a_website_at_home_but_use_a_vps_as/
+Number of comments: 15
+Created UTC: 2024-07-18 15:30:16
+
+Post Content:
+Basically what I’m wanting to do is setup a web server on my home home server. I want to be able to keep and manage it all locally. 
+
+But I want to point the domain at my VPS and have it act as a cache in front of the server at my house. This way a majority of the data will be served from the VPS and things will only come from the home server when needed. 
+
+Top 4 comments:
+Comment 1:
+  Author: ericesev
+  Comment: Why a VPS? Cloudflare would do this for free.
+
+Look into [Varnish](https://varnish-cache.org/). It'll likely do what you're looking for. But you may need to adjust the Cache-Control headers on the content you serve from home.
+  Score: 9
+  Created UTC: 2024-07-18 15:47:56
+
+Comment 2:
+  Author: sriks08
+  Comment: Why not simply rsync your home server website folder with your VPS in the cloud? Super simple to setup
+  Score: 2
+  Created UTC: 2024-07-18 16:29:42
+
+Comment 3:
+  Author: MBILC
+  Comment: You also want to use Cloudflare or similar as your front end and restrict access to only allow connections from that.
+
+Unless you have the ability to segment your home network with your website server being isolated, do not host things direct from your home connection to the world.
+  Score: 1
+  Created UTC: 2024-07-18 16:02:30
+
+Comment 4:
+  Author: Awkward-Plate7826
+  Comment: Not exactly what you asked for, but a good alternative would be to deploy your website to your own server using Shiper [Shiper](https://shiper.app). Shiper allows you to connect your own server via Shiper Self-hosted Instances. This will also make your website available to the Internet. Then, add Cloudflare cache to cache your website in the cloud.
+
+Shiper Self-hosted Instance Documentation: https://docs.shiper.app/self-hosted
+
+Set up CF cache with Shiper: https://docs.shiper.app/projects/domains
+Navigate to step 2 and select Cloudflare DNS
+
+Small disclaimer: I am a member of the Shiper team.
+  Score: 1
+  Created UTC: 2024-07-18 16:58:20
+
+Note: This post has only 4 comments at the time of scraping.

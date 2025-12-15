@@ -1,0 +1,28 @@
+Post Title: GTX 1060 vs Tesla P4 vs Tesla P40 for Llama 3 + InvokeAI? 
+Author: Calm_Significance541
+Score: 3
+URL: https://www.reddit.com/r/ollama/comments/1ebxgrr/gtx_1060_vs_tesla_p4_vs_tesla_p40_for_llama_3/
+Number of comments: 5
+Created UTC: 2024-07-25 15:17:10
+
+Post Content:
+Hi!
+
+If this isn't the right sub for it please do let me know. I'm trying to find the best GPU for my PowerEdge R730. ATM its running a 1060 6GB I had lay about but it gets super warm so not ideal for future use. I'm tempted with the low prices of the Tesla P40's on eBay but they all come from china so that's making me a bit suspicious. Any advice would be super appreciated!
+
+Top 2 comments:
+Comment 1:
+  Author: schlammsuhler
+  Comment: As a consumer you are better off with a used 3090 or 4060 16gb
+  Score: 3
+  Created UTC: 2024-07-25 16:23:45
+
+Comment 2:
+  Author: MachineZer0
+  Comment: Best deal is P100 16gb for 2U server form factor.
+
+You could do 1080ti and 3x P102-100 in a large form factor workstation. That way they are the same CUDA support.
+  Score: 1
+  Created UTC: 2024-07-25 23:54:59
+
+Note: This post has only 2 comments at the time of scraping.

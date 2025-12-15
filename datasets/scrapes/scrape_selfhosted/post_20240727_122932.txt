@@ -1,0 +1,65 @@
+Post Title: How you use the 3-2-1 backup method
+Author: RealJoshLee0
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e8mzbh/how_you_use_the_321_backup_method/
+Number of comments: 15
+Created UTC: 2024-07-21 14:00:47
+
+Post Content:
+I’m curious how everyone handles their backups. 3 copies. 2 media types. 1 offsite. I have my main NAS that mirrors itself to an offsite backup which then takes snapshots of the mirrored data at certain times. (Just for ease of mind). For my third copy of the data, I plug in an external drive to my local NAS and then run a script that creates an archive of the data on the nas over to the external drive. this is the only part that i don't have automated and plugging and unplugging a drive when I do this is getting a little old. What do you guys use for all your backup and how is it setup? I will still most likely copy  backups to the offline external drive, when I get the 3rd backup media automated just to have an offline, no internet, copy, but that would then become less often. 
+
+Top 7 comments:
+Comment 1:
+  Author: SparkyGears
+  Comment: If it's any help, I asked a similar question a while ago. People gave some great responses despite my own skepticism at the time.
+
+https://www.reddit.com/r/selfhosted/comments/1dj9zmd/skeptical_of_321_backup_for_home_use/
+  Score: 7
+  Created UTC: 2024-07-21 14:14:42
+
+Comment 2:
+  Author: Psychological_Try559
+  Comment: 3-2-1 is an easy method to say and generally works pretty well regardless of interpretation.  Hence why it became popular on the internet.
+
+
+If you have the time to do a risk analysis, you'll get a more tailored result.
+  Score: 4
+  Created UTC: 2024-07-21 14:59:55
+
+Comment 3:
+  Author: KillerTic
+  Comment: I have written a guide here on how I do it. In short, restic to one local and one offsite backup location with monitoring in place.
+
+https://nerdyarticles.com/backup-strategy-with-restic-and-healthchecks-io/
+  Score: 3
+  Created UTC: 2024-07-21 19:23:02
+
+Comment 4:
+  Author: cyt0kinetic
+  Comment: I am still working on my "offsite", I may even just do cold storage in a safe location, the personal data only changes occasionally in a way where there aren't local copies on other devices. Though I have an independent backup on the network, with a drive from a different manufacturer.
+
+So I have a Raspberry Pi with a backup shell script using rsync. It runs nightly. It creates a read only SMB connection with the main data drive partitions, mounts the corresponding backup partition. Runs an incremental backup, updates the primary backup with the oldest incremental backup, deleted the oldest backup, then umounts the drive. I wrote it as a function so for our 4 partitions I just need to call it for each versus rescript the whole thing. Lots of how tos out there.
+  Score: 2
+  Created UTC: 2024-07-21 19:30:12
+
+Comment 5:
+  Author: virginity-dongle
+  Comment: I've been setting up the following system at work: company data on SSD's, daily backups (compressed) on HDD's (mounted in filesystem), daily backups to a remote server, mirroring the HDD's. The remote backups are initialized from the remote server over VPN to prevent ssh keys to the remote server being discovered in case of a security incident.
+  Score: 1
+  Created UTC: 2024-07-21 15:01:33
+
+Comment 6:
+  Author: yaslaw
+  Comment: I have a backup created by cron / rclone  every two weeks of all files / db into a special folder. An archive (tar.gz) is also made from that folder and saved automatically into the mounted external HDD. This folder is monitored via synching (https://syncthing.net), and every change in that folder is instantly replicated (one side) to my cloud machine (Oracle Always Free Tier)/   
+Additionally, just in case something happens with my cloud machine, the same folder is uploaded to Google Drive using "Kopia" (https://kopia.io/)
+  Score: 1
+  Created UTC: 2024-07-21 16:31:06
+
+Comment 7:
+  Author: mrbmi513
+  Comment: 1. Backup to a local TrueNAS, which is in a RAIDZ(2?) for redundancy
+2. That syncs with another local TrueNAS daily
+3. Main TrueNAS syncs an encrypted copy of data to cloud storage daily. The encryption key is securely stored elsewhere.
+  Score: 1
+  Created UTC: 2024-07-21 19:55:26
+

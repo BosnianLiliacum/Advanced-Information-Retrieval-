@@ -1,0 +1,61 @@
+Post Title: Ente.io selfhosting tutorials?
+Author: Teeeeze
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7prmo/enteio_selfhosting_tutorials/
+Number of comments: 7
+Created UTC: 2024-07-20 07:07:33
+
+Post Content:
+It looks like Ente open-sourcing/docker images have been a thing for a while. Yet I've not found any tutoials to selfhost it. I searched on the web and found very little:
+
+* [Official docs](https://help.ente.io/self-hosting/)
+* [Some reddit posts](https://www.reddit.com/r/enteio/comments/1b723qt/how_to_tutorial_how_to_self_host/)
+* Basically no youtube videos
+
+I just `docker compose up -d` and all seem to up and running yet `curl localhost:8080/ping`, which the official docs tell me to do returns: `curl: (7) Failed to connect to localhost port 8080 after 0 ms: Couldn't connect to server`
+
+ChatGPT hasn't been very helpful atm. 
+
+Any ideas? Why is there little to no resources...
+
+Top 3 comments:
+Comment 1:
+  Author: EEvilCorp
+  Comment: You can check the docker container logs to see if you made a mistake
+  Score: 2
+  Created UTC: 2024-07-20 08:02:06
+
+Comment 2:
+  Author: MothGirlMusic
+  Comment: Do 
+docker compose logs -f
+For logs. Maybe it cant bind to the port or maybe its not in host Mode etc.
+  Score: 1
+  Created UTC: 2024-07-20 14:11:36
+
+Comment 3:
+  Author: ben-ba
+  Comment: ss -tulpen | grep 8080
+
+T tcp
+U udp
+L listen
+P process
+E extended Infos
+N no name resolution
+
+Run it as root or with sudo 
+
+No output, no process listen on port 8080
+Output? Check which process use this port, should be docker.
+
+Alternatively run
+
+Docker compose ls
+
+Inside the folder where ur compose file is
+You will see on which port your container is listening
+  Score: 1
+  Created UTC: 2024-07-20 15:37:44
+
+Note: This post has only 3 comments at the time of scraping.

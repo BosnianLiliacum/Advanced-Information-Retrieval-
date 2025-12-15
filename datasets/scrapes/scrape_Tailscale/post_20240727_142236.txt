@@ -1,0 +1,27 @@
+Post Title: Network Drive Password?
+Author: 2026GradTime
+Score: 0
+URL: https://www.reddit.com/r/Tailscale/comments/1eb4fvy/network_drive_password/
+Number of comments: 2
+Created UTC: 2024-07-24 15:33:51
+
+Post Content:
+I want to protect this one Network drive being shared from a Windows home server PC.  How can I make it where it needs a password to even enter or access the drive? It is network shared to my laptop, I want it to by password protected because I have it also over a VPN. 
+
+  
+it asks me for a password the first time I joined it, that would be my Microsoft password. but if you click "remember" it will no longer ask for that password, with no way to say"forget" or"ask me for the password now"/  
+
+I am really confused how it works.  Can someone please explain it to me?  Same with RDC. With RDC, it says only people in my microsoft accound can access it. what if I wanted everyone to access a computer, meaning if they were on my VPN, they can access it? Does it saying only people on my Microsoft account are able to access it sicure?
+
+Top 1 comments:
+Comment 1:
+  Author: julietscause
+  Comment: /r/techsupport 
+
+r/WindowsHelp/
+
+Your question has nothing to do with tailscale, this is a Windows OS question
+  Score: 6
+  Created UTC: 2024-07-24 15:50:25
+
+Note: This post has only 1 comments at the time of scraping.

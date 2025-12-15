@@ -1,0 +1,63 @@
+Post Title: Google Photos Replacement 
+Author: Handaloo
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6n82c/google_photos_replacement/
+Number of comments: 10
+Created UTC: 2024-07-18 21:50:21
+
+Post Content:
+I've been toying with exporting all my photos out of Google Photos and self hosting as I have several proxmox systems which would work well and I'm getting further and further away from cloud solutions.
+
+Has anyone got experience exporting from Photos and is there an easier way than their options?
+
+Thanks in advance! 
+
+Top 6 comments:
+Comment 1:
+  Author: yahhpt
+  Comment: Google takeout, to get the full export of your photos data seems to best way to export from photos
+  Score: 2
+  Created UTC: 2024-07-18 22:26:15
+
+Comment 2:
+  Author: petervdn
+  Comment: Immich go, really easy. The takeout zips are a pain with folders and duplicates, this does al the hard work.
+https://github.com/simulot/immich-go
+  Score: 2
+  Created UTC: 2024-07-19 04:53:28
+
+Comment 3:
+  Author: i_am_art_65
+  Comment: Looking at **Settings**, I see
+
+Export your data
+
+Make a copy of your photos &amp; videos, which you can use with a service outside of Google, or keep as an additional backup
+
+Backup an archive of your data
+
+Prepare a backup of your photos &amp; videos for download, or to send to another service outside of Google. [Learn more](https://support.google.com/accounts?p=download_photos_data)
+  Score: 1
+  Created UTC: 2024-07-18 22:27:52
+
+Comment 4:
+  Author: Texasaudiovideoguy
+  Comment: I have been doing a deep dive on most of the options out there. And every one has that one tiny little deal breaker that ruins the experience. I thought I had it with Immich and then realized they don’t offer a vault, or private albums. And in the GitHub page they stated it’s not even on the rarer. I mean seriously, it’s 2024, and everything has a vault.
+  Score: 1
+  Created UTC: 2024-07-18 23:33:51
+
+Comment 5:
+  Author: lespasapp
+  Comment: Give [Les Pas](https://github.com/scubajeff/lespas#readme) a try.
+  Score: 1
+  Created UTC: 2024-07-19 04:54:06
+
+Comment 6:
+  Author: land8844
+  Comment: Just FYI, Immich announced paid tiers today. It reeks of enshittification.
+
+Edit: downvote all you want. This shit happens **all the time**. Pay attention to the wording and think critically for two seconds. I really hope the dev just made a dumbshit choice with the wording, but I'm not holding my breath.
+  Score: -6
+  Created UTC: 2024-07-19 01:05:02
+
+Note: This post has only 6 comments at the time of scraping.

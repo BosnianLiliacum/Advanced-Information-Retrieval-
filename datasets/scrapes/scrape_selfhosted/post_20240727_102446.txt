@@ -1,0 +1,24 @@
+Post Title: WebUI for ssh attempt from broad server?
+Author: L1so
+Score: 9
+URL: https://www.reddit.com/r/selfhosted/comments/1e5zmya/webui_for_ssh_attempt_from_broad_server/
+Number of comments: 5
+Created UTC: 2024-07-18 01:45:35
+
+Post Content:
+I manage 10+ server and I want to view statistic of succesful/failed attempt derive from all server like you see on \`/var/log/auth.log\`-- but in web with nice looking UI. Is there any self hosted service that does this?
+
+Top 2 comments:
+Comment 1:
+  Author: MothGirlMusic
+  Comment: Wazuh does that
+  Score: 3
+  Created UTC: 2024-07-18 03:03:32
+
+Comment 2:
+  Author: NikStalwart
+  Comment: So what's wrong with all the log aggregation solutions like Grafana Loki, Kibana, etc?
+  Score: 2
+  Created UTC: 2024-07-18 04:33:11
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,38 @@
+Post Title: Recently moved a domain from hostinger to namecheap. Transfer process isn't complete yet. Should I cancel it?
+Author: ShapeCurious465
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e418y8/recently_moved_a_domain_from_hostinger_to/
+Number of comments: 5
+Created UTC: 2024-07-15 17:50:35
+
+Post Content:
+Should I rather go for cloudflare as registrar? I do have a website with that domain.
+
+Top 4 comments:
+Comment 1:
+  Author: drpepper
+  Comment: i recommend porkbun as your domain registrar. support is awesome. prices are low.
+  Score: 5
+  Created UTC: 2024-07-15 18:10:54
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: I would go with porkbun or cloudflare.
+
+Wouldn't go to name cheap if you need API access. For example if you need wild card certs. Name cheap has certain requirements you need to meet before you are able to access the API.
+  Score: 2
+  Created UTC: 2024-07-15 18:17:05
+
+Comment 3:
+  Author: Sweaty-Gopher
+  Comment: Porkbun is where it's at
+  Score: 1
+  Created UTC: 2024-07-15 21:02:54
+
+Comment 4:
+  Author: William-roy
+  Comment: no is the same just remember to use cloudflar always but not if the domain is use for emailserver
+  Score: 1
+  Created UTC: 2024-07-16 01:01:28
+
+Note: This post has only 4 comments at the time of scraping.

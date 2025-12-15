@@ -1,0 +1,40 @@
+Post Title: Current Favourite Read-It-Later app - Readeck
+Author: No_Ja
+Score: 26
+URL: https://www.reddit.com/r/selfhosted/comments/1ea8w8o/current_favourite_readitlater_app_readeck/
+Number of comments: 7
+Created UTC: 2024-07-23 14:14:20
+
+Post Content:
+[https://readeck.org/en/](https://readeck.org/en/)
+
+I know there are a ton of these kicking around and I never see anyone mention Readeck.  I honestly love it. Over time, Wallabag just stopped working well for me and it probably took about a year before I stumbled on this one. Currently, I'm just waiting to see integration with some kind of app and oauth support, but the ebook export works for offline and oauth is at least on the roadmap.
+
+Just thought I'd give it a quick shout out - thanks to the devs!
+
+Top 4 comments:
+Comment 1:
+  Author: nashosted
+  Comment: I've been using [Hoarder](https://noted.lol/hoarder/) and I really like how it can not only do articles but it will also save all the content locally too. And it does code snippets.
+  Score: 9
+  Created UTC: 2024-07-23 21:32:11
+
+Comment 2:
+  Author: Odd-Let9042
+  Comment: Have you found a way to share from iOS to Readeck?
+  Score: 2
+  Created UTC: 2024-07-23 14:56:43
+
+Comment 3:
+  Author: nelsonportela
+  Comment: I just recently moved from Archivebox to Readeck and so far I’m loving it.
+  Score: 2
+  Created UTC: 2024-07-23 18:32:13
+
+Comment 4:
+  Author: Lopsided-Painter5216
+  Comment: It’s the best feature wise but I always get let down by their web scraper, it never returns what it needs to 50% of the time…
+  Score: 2
+  Created UTC: 2024-07-24 01:45:26
+
+Note: This post has only 4 comments at the time of scraping.

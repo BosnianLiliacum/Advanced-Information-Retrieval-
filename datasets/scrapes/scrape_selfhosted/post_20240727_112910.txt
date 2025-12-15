@@ -1,0 +1,67 @@
+Post Title: Released Jetlog, a simple program to view and track your flights
+Author: Camminatore
+Score: 135
+URL: https://www.reddit.com/r/selfhosted/comments/1ec1va4/released_jetlog_a_simple_program_to_view_and/
+Number of comments: 55
+Created UTC: 2024-07-25 18:17:23
+
+Post Content:
+[Github Repository](https://github.com/pbogre/jetlog)
+
+Note that this is still a very early prototype, and I am sharing to see if there is interest in further developing this project.
+
+[Homepage preview](https://preview.redd.it/p37zme56iped1.png?width=2818&amp;format=png&amp;auto=webp&amp;s=539f64e998a4df39348c9322e2d8c267c33ec54e)
+
+For the past couple of years I have been logging flights I took by just jotting them down on my Notes app, but that wasn't enough. I discovered services like [myflightradar24](https://my.flightradar24.com)), and I decided to create my own self-hostable version of that. I'm sharing it with this community in case anyone else is curious about a project like this (I wasn't able to find anything similar when I looked).
+
+Adding a flight is simple, you just have to specify the origin and destination airports (which are autofilled for you, through a database which is part of the program, more about this in the README), and the date of the flight. You can also add other options such as departure/arrival times, seat type, aircraft model. The UI is mostly responsive (aside from the world map), so the program is totally usable with your phone.
+
+Once you have added a flight, its trajectory and airports will also show up on the main map in the homepage, as shown in the image. There are also pages for full statistics and flights which you can filter. This way you can take a look at all the flights that you have taken in the past, with a nice world map view of the places you’ve visited.
+
+Of course this is still a very early prototype, but if I see interest in the project I will extend it as requested and needed. Let me know you thoughts and suggestions :)
+
+Top 7 comments:
+Comment 1:
+  Author: TheSicknessZA
+  Comment: awesome stuff to see projects in the Aviation Industry, it is severely neglected in terms of software and services for everyone besides the Airline Industry, huge fan of your prototype and very interested to see the continues work
+  Score: 43
+  Created UTC: 2024-07-25 18:25:02
+
+Comment 2:
+  Author: abuettner93
+  Comment: This looks really cool! Would be great to be able to put in flight numbers, dates, etc. so I can track my travels over time. Maybe even a table underneath the map with flights this month/year/5 years?
+  Score: 11
+  Created UTC: 2024-07-25 19:56:25
+
+Comment 3:
+  Author: Fr0stbyten
+  Comment: Love this, will try it tonight
+  Score: 3
+  Created UTC: 2024-07-25 18:51:26
+
+Comment 4:
+  Author: AlexKalopsia
+  Comment: This is a really cool idea, thanks!
+  Score: 3
+  Created UTC: 2024-07-25 20:21:50
+
+Comment 5:
+  Author: thebaldmaniac
+  Comment: Looks great for logging flights. I have used myflightradar24 for years since it was known as flightdiary. I think the biggest advantage of that is that it pulls in flight information with just a flight number and even updates it later with aircraft info.
+
+I guess paying for the API to pull in flight data might be too much for a small project like this. Do you have any plans to at least import the exported CSV from myflightradar24? I have no desire to manually add 700+ flights.
+  Score: 3
+  Created UTC: 2024-07-25 20:50:27
+
+Comment 6:
+  Author: s3rv3rn3rd
+  Comment: As someone who's a new pilot, I'd love to have a self-hosted logbook. Something about only having of that data in the hands of Foreflight doesn't make me feel good. This looks like it's more for tracking commercial flights though, right?
+  Score: 3
+  Created UTC: 2024-07-25 20:19:56
+
+Comment 7:
+  Author: ShroomShroomBeepBeep
+  Comment: Great work, will spin out up this weekend.
+  Score: 2
+  Created UTC: 2024-07-25 21:49:02
+

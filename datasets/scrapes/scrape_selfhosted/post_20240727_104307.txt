@@ -1,0 +1,31 @@
+Post Title: A thank you to the self hosting community
+Author: Either-Bear-9507
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e4ox9w/a_thank_you_to_the_self_hosting_community/
+Number of comments: 2
+Created UTC: 2024-07-16 13:40:08
+
+Post Content:
+I've been practicing gratitude lately, and I really appreciate the work so many of you are doing. Self hosting has given me so much, most of all the ability to control my own data and not having to rely on external services that want to extract as much attention from me as possible. The latter I find extremely important in this day and age. It's so refreshing to use applications that seemingly don't want to influence me, instead they let me do my job in a user friendly manner.
+
+I merely have a Raspberry Pi 4 running with a bunch of Docker containers for Syncthing, FreshRSS and various media applications, but I'm really proud of the way I set it up using Ansible! However, what I should improve is the security, as currently it defaults to admin access everywhere for those on my local network. I wouldn't have made it without helpful members answering questions, and I admire the patience of many of you.
+
+I look forward to learning more from you all going forward, and hopefully also contributing my own content! Thank you!
+
+  
+Mods/admins: I'm not sure if this is relevant content for those who brwose the subreddit, so feel free to remove.
+
+Top 2 comments:
+Comment 1:
+  Author: YesGoodBuddy
+  Comment: You are welcome but I only speak for myself.
+  Score: 2
+  Created UTC: 2024-07-16 14:47:07
+
+Comment 2:
+  Author: tovazm
+  Comment: God bless u
+  Score: 1
+  Created UTC: 2024-07-18 07:04:00
+
+Note: This post has only 2 comments at the time of scraping.

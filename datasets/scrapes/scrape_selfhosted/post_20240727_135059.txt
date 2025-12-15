@@ -1,0 +1,43 @@
+Post Title: Local domains only work for some services or only with tailscale ip (Nginx, tailscale, Pihole)
+Author: razzy1319
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e3opgl/local_domains_only_work_for_some_services_or_only/
+Number of comments: 3
+Created UTC: 2024-07-15 07:21:14
+
+Post Content:
+My RPi server has OMV installed and my services are mostly installed on the docker feature there. 
+
+Pihole and Tailscale is installed directly on the RPi. I have subnet activated on my pi as well as the end point. I can access all the services on their local IPs in a browser
+
+I was trying to get custom local named domain names for all the services (Radarr, Bazarr, Etc) like radarr.pi or pi.hole. 
+
+https://preview.redd.it/fk0udzbbumcd1.png?width=1179&amp;format=png&amp;auto=webp&amp;s=e952ce802589a389490000ae32600cf7e3123259
+
+To do this I installed Nginx Proxy Manager in a docker container and created the proxy hosts. Then created the DNS local records on Pihole
+
+https://preview.redd.it/u6r25hhzumcd1.png?width=987&amp;format=png&amp;auto=webp&amp;s=cd55ec311e5c9e0cfbe104c4bdcc75cdb814130f
+
+Once done, I tested the urls and only 3 of them worked: bazaar, radarr and sonarr.  
+everything else wasn't linking to the webui of the other services.
+
+  
+Anyone have a clue whats happening here?
+
+Top 1 comments:
+Comment 1:
+  Author: lljdu77_-bvd
+  Comment: What message appears in your browser when you try to access the other services?
+
+Try to request one of the URLs that don't work from inside the server by running, like:
+
+    curl http://prowlarr.pi
+
+Also, a better way of working with NPM is using the containers' names instead of the machine IP on the proxy hosts. This way, you don't need to open the services' ports on your firewall. However, this works only if the NPM container runs in the same Docker network as the other containers.
+
+  
+You can also run NPM in network host mode and use localhost in the host proxies, like “http://localhost:8282”. This way, NPM doesn't need to run in the same docker network as the other containers and can also proxy things running on the machine (not in containers).
+  Score: 3
+  Created UTC: 2024-07-15 15:02:43
+
+Note: This post has only 1 comments at the time of scraping.

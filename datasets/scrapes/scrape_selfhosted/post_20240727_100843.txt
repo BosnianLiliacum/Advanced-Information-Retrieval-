@@ -1,0 +1,69 @@
+Post Title: Small powerefficient home server that is not a SBC
+Author: darkalimdor18
+Score: 11
+URL: https://www.reddit.com/r/selfhosted/comments/1e6vwi2/small_powerefficient_home_server_that_is_not_a_sbc/
+Number of comments: 49
+Created UTC: 2024-07-19 05:14:38
+
+Post Content:
+for over a year now, i have been self hosting things on my raspberry pi 3b+ that i got online for very very cheap. 
+
+now i have been thinking of upgrading my home server to that is not arm based so that i could run x32 x64 things on it that could not be ran on an arm processor.
+
+i have been thinking of getting an preowned old mini pc such as an i5 5th gen or i3 5th gen, however i am very concerened about the power usage. electricity is expensive in our country so i want something power efficient like a raspberry pi. 
+
+any suggestions? 
+
+Top 7 comments:
+Comment 1:
+  Author: LifeLeg5
+  Comment: An N100 setup should serve you well. My monitoring of the cpu alone gauges 6w on average use and maybe 15w when it rarely gets 100% cpu. 
+
+
+This has been my core setup the past year. 
+  Score: 20
+  Created UTC: 2024-07-19 05:40:47
+
+Comment 2:
+  Author: scottgal2
+  Comment: I run a bunch of HP G3 Minis, they generally run at 10-12w with SSDs at idle (higher with use of course). It also depends what you're using them for; you could set them to turn off at night for example and spin up each morning.   
+See [https://www.servethehome.com/hp-elitedesk-800-g3-mini-ce-review-project-tinyminimicro/4/](https://www.servethehome.com/hp-elitedesk-800-g3-mini-ce-review-project-tinyminimicro/4/)
+  Score: 6
+  Created UTC: 2024-07-19 05:25:15
+
+Comment 3:
+  Author: Sea_Dish_2821
+  Comment: I'm using HP ProDesk G4 Mini with i5 8th working pretty well and idles at 7 to 8W. Good for your needs. I/o also looks fine for me.
+  Score: 3
+  Created UTC: 2024-07-19 06:43:40
+
+Comment 4:
+  Author: Eirikr700
+  Comment: Why do you exclude SBCs ? They are frequently among the most power-efficient hardware.
+  Score: 3
+  Created UTC: 2024-07-19 06:45:02
+
+Comment 5:
+  Author: apiversaou
+  Comment: I would suggest you a HP Elitedesk or Prodesk. Throw in a 2TB ssd, max the ram to 32gb, upgrade to the i7 T series processor (low power), and you have a really decent server for less than 150€ when buying used of course.
+
+They really work excellent and use about 40w power. That's about the same as a modern super fast phone charger.
+  Score: 3
+  Created UTC: 2024-07-19 08:48:38
+
+Comment 6:
+  Author: Bagican
+  Comment: Odroid H4+ (N97 is better than N100) and also it supports in-band ECC for RAM. Idle: &lt;4W
+  Score: 3
+  Created UTC: 2024-07-19 09:49:38
+
+Comment 7:
+  Author: danz0l
+  Comment: I use a TRIGKEY Ryzen 7 Mini PC which has 8 Cores, 16 Threads with an AMD PC 5800H（Up to 4.4GHz), 32G DDR4 Ram and a 500G NVME SSD. Its a beast of a mini PC and only uses around 35 watts. 
+
+Its been amazing at everything i've thrown at it and works well as a dedicated games server too using Amp Game server software. 
+
+All my services are dockerised and im hosting around 40 containers in 21 or so services and memory is less than half and cpu barely reads. Its a powerful little bugger lol
+  Score: 1
+  Created UTC: 2024-07-19 05:26:27
+

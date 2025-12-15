@@ -1,0 +1,87 @@
+Post Title: Building Doomsday Vault, need suggestions
+Author: bswan2
+Score: 51
+URL: https://www.reddit.com/r/selfhosted/comments/1ed3wiv/building_doomsday_vault_need_suggestions/
+Number of comments: 22
+Created UTC: 2024-07-27 00:52:55
+
+Post Content:
+Hi! I live in Ukraine and lately we had a lot of blackouts sometimes going as long as 7 hours without power/2 hours with (it is getting better now). My backup internet connection is 4G and it is very bad, to the point where I cold barely check my email. I would've gone mad during those 7 hour periods without internet connection. Luckily few month ago I was in a doomsday prep mood with Fallout TV series just premiered and chance of sub-ocean internet cables to be cut glooming on a horizon. 
+
+
+
+I got myself Argon EON case for PR4 based NAS, pulled my 8GB RP 4B from a drower, dropped in 2 10TB 3.5" HDDs, 2 5TB 2.5" HDDs, installed OMV, create a mirrored 15TB volume wits LVM2. That was begining of my Doomsday Vault, place of knowledge and entertaiment in case whole civilized world goes to heck. 
+
+
+
+Idea was to self-host Wikipedia with Kiwix in case I would need an emergency knowledge for survival when internet is no longer exists. Then I realised that there are zim archives of stack-overflow and many-many other sites. Well, I decided, I might need those too.
+
+When I was done with sites, there still was a lot of space free in my vault. So I started downloading online libraries, faworite shows/movies, music. And then blackouts started and I was so happy that I squirreled all those in my vault. I could educate and entertain myself regardlef of power grid state.
+
+
+
+Then I discovered Jellyfin, Radarr/Sonarr/Lidarr/Readarr, installed qBitttorent. Now my vault turned in to fully featured media server for myself and my friends (we are now planning movie nights with SyncPlay in Jellyfin)
+
+
+
+Sorry for a long intro, now a "need suggestions" part. What else should I host in my Vault and what kind of media I should consider preserving for a doomsday scenario? 
+
+Top 7 comments:
+Comment 1:
+  Author: bummyjabbz
+  Comment: How do you plan to power this during the blackouts?
+  Score: 13
+  Created UTC: 2024-07-27 01:39:53
+
+Comment 2:
+  Author: Red_Redditor_Reddit
+  Comment: If your using linux, downloading the repo lets you install software in the future without that internet connection.  For debian it's about ~100GB.  The repo + wikipedia is the two I wouldn't go without.  Hell, during the virus, I had a computer with those two along with a few tv series, movies, roms and such.  It was all pre-virus.  I could calmly watch a tv show and read about coronaviruses without seeing anything about *the* virus.
+  Score: 14
+  Created UTC: 2024-07-27 01:05:57
+
+Comment 3:
+  Author: makanimike
+  Comment: Not directly related to self-hosting, but rather an expansion. If everything really did go down, if you and your friends had a LoRa network running that could be a godsend. Easiest is to use Meshtastic. And you could even bridge it to MQTT and get the LoRa connected to your other self-hosted systems.
+  Score: 6
+  Created UTC: 2024-07-27 05:45:22
+
+Comment 4:
+  Author: mikedoth
+  Comment: One thing I would look into is a LLM.  Usually has a lot of data packed into the database and you can chat with it.
+
+https://ollama.com/
+  Score: 4
+  Created UTC: 2024-07-27 06:05:25
+
+Comment 5:
+  Author: BelugaBilliam
+  Comment: Download Wikipedia? I remember seeing on r/datahorder of people doing that and it's like ~90gb
+  Score: 3
+  Created UTC: 2024-07-27 02:34:27
+
+Comment 6:
+  Author: thekrautboy
+  Comment: I would imagine a lot of your projects are running in Docker containers. So maybe host your own local container registry?
+
+Simple enough with the official one provided by Docker itself, but its very barebones.
+
+https://distribution.github.io/distribution/
+
+I would recommend something like Harbor instead that offers a lot more. Then you could host your most used images directly there locally, without having to pull them from the internet each time (can also save bandwidth if youre on the backup 4G connection for example). And you can setup sync jobs from the public registries to your private one with tools like `regsync`.
+
+https://goharbor.io/
+
+A tiny local Docker proxy for images might also be helpful to reduce bandwidth usage, but even tho it does store images locally, its just a cache, its not intended to work completely offline. But it can be a nice addition to the above.
+
+https://github.com/rpardini/docker-registry-proxy
+  Score: 3
+  Created UTC: 2024-07-27 06:25:02
+
+Comment 7:
+  Author: shoomowr
+  Comment: Hey, fellow Ukrainian here.
+
+Just curious, how much did you invest in this setup?
+  Score: 3
+  Created UTC: 2024-07-27 06:58:29
+

@@ -1,0 +1,42 @@
+Post Title: How to manage services without a desktop apps for a Linux custom TV Box ?
+Author: Outlauzhe
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e67s14/how_to_manage_services_without_a_desktop_apps_for/
+Number of comments: 9
+Created UTC: 2024-07-18 10:06:44
+
+Post Content:
+I plan on purchasing wa N100 MiniPC to use it as a TV Box with KDE Plasma Bigscreen
+
+I already own a Nvidia Shield but there are some usecases (namely AV1 decoding and full customability) that would justify a Linux device and a newer CPU
+
+The main app I would use will by far Kodi, which I already use on my Shield
+
+However, there are some other apps that I would like to use (mostly streaming service) that do not have a desktop application for Linux. 
+
+What would you recommend for this situation ? My first thought would be to embed the websites into desktop apps ? Or maybe an Android VM to run the Android TV apps ?
+
+Top 3 comments:
+Comment 1:
+  Author: Minimal-Matt
+  Comment: You could use a browser that can create PWAs (Chrome and all derivates), once you open a streaming website you should have the option to "install" it as an app
+
+EDIT: you will encounter some issues with streaming quality from the likes of netflix/prime video since they rely on a widevine version that is not supported on linux
+  Score: 1
+  Created UTC: 2024-07-18 10:27:23
+
+Comment 2:
+  Author: FangLeone2526
+  Comment: I currently do this! This very setup! Small computer, plasma bigscreen, browser based streaming services along with a couple actual desktop apps. For browser based services I just used .desktop files which launch Firefox and open the URL. I then have a windowing rule to automatically fullscreen Firefox on open. I'm sure there are better ways to go about managing stuff like this ( probably could make actual isolated PWAs instead of loading my full browser ) but this has worked pretty great for me.
+  Score: 1
+  Created UTC: 2024-07-18 11:54:47
+
+Comment 3:
+  Author: BourbonXenon
+  Comment: I would recommend the SlyGuy Kodi add-ons for streaming services vs the browser versions for the services supported by SlyGuy.  A Bluetooth air mouse/remote is a must-have as well. Keep in mind that you need to ensure Widevine DRM works probably in your browser or you're not going to be able to view anything in 1080p or higher.
+
+The reality is that it's a cat and mouse game for streaming services on Linux, so I use a capture card that bypasses HDCP that Kodi can open in a custom menu entry and have a Chromecast connected to it. That ensures I can always cast whatever I want and still have everything I want in a HTPC.
+  Score: 1
+  Created UTC: 2024-07-18 16:29:37
+
+Note: This post has only 3 comments at the time of scraping.

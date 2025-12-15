@@ -1,0 +1,85 @@
+Post Title: Not sure how to continue setting up reverse proxy for Minecraft server
+Author: Silver_Phone9719
+Score: 14
+URL: https://www.reddit.com/r/selfhosted/comments/1e8bamm/not_sure_how_to_continue_setting_up_reverse_proxy/
+Number of comments: 27
+Created UTC: 2024-07-21 01:45:35
+
+Post Content:
+I've been trying to set up a reverse proxy for my minecraft server which would take in requests from "mc.infernope.org" and forward them to my server's instance. I'm not actually doing this to use the domain though, it's just because Xfinity only allows you to port forward listed devices rather than just choosing an IP, so I cant port forward the ip of my proxmox instance and instead have to forward a standalone proxy server.
+
+I did follow a tutorial in which they used an AWS instance with nginx to proxy. I am doing something similar, but I have my own server running nginx on a docker container instead of just nginx. I have pretty much everything setup, I have an A record for my domain with the content being my home ip, I have nginx configured to listen for 25565 and I have the port forward on my proxy, but I'm really just confused on how this would work when applied. 
+
+Lets say that a client tried to connect to the subdomain in minecraft, I'm assuming that the proxy would detect the connection from port 25565 and redirect it to my home network at 25565. Does this mean the client request would be redirected to the proxmox instance? How would it know to redirect it to the local ip of my proxmox instance? I'm just not all so sure on how this would work, if my configuration would work at all. Any help would be appreciated. Also keep in mind that I have no certification or really any kind of know-how in this, and I'm really just running off of youtube tutorials.
+
+https://preview.redd.it/7q1a7dw80sdd1.png?width=1253&amp;format=png&amp;auto=webp&amp;s=e5adc6060419ada73255c538f31f4fd946bbcf79
+
+https://preview.redd.it/l52gy92g0sdd1.png?width=705&amp;format=png&amp;auto=webp&amp;s=9e404d90afb3e8367d4d3105ff62eac08200cd58
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: gryd3
+  Comment: Hrm.. 
+
+Let's tackle this a different way.  nginx is great for http/https traffic. Minecraft is \*not\* http/https.  
+Instead of nginx, use iptables (or similar) to simply forward the traffic to another destination.
+
+iptables -A FORWARD -p tcp --dport 25565 -j ACCEPT  
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 25565 -j DNAR --to-destination $actualMCserver
+
+You could then either use SRV records, or hard-code non-standard ports to host multiple minecraft instances.
+
+Otherwise take a look at bungeecord
+  Score: 34
+  Created UTC: 2024-07-21 02:04:15
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: Hello, will try to help
+
+&gt;I'm not actually doing this to use the domain though, it's just because Xfinity only allows you to port forward listed devices rather than just choosing an IP, so I cant port forward the ip of my proxmox instance and instead have to forward a standalone proxy server. 
+
+Can you clarify this a bit more. Typically when you create a VM or LXC in proxmox, it should show up as a different device and have its own IP address in your local network
+
+Can you go into the proxmox VM and do an `ip - a`, `ifconfig` or  any command to get the IP of the machine and see if it correlates to any device on Xfinity 
+
+If this is not the case, then we can talk about reverse proxies
+
+Hope that helps
+  Score: 3
+  Created UTC: 2024-07-21 02:54:30
+
+Comment 3:
+  Author: josemcornynetoperek
+  Comment: Use haproxy in TCP mode.
+  Score: 3
+  Created UTC: 2024-07-21 07:05:28
+
+Comment 4:
+  Author: Ydupc
+  Comment: NGINX proxy manager streams??? I've used them before
+  Score: 2
+  Created UTC: 2024-07-21 03:37:59
+
+Comment 5:
+  Author: tyami94
+  Comment: Comcast still allows you to replace the router. Try purchasing any router supported by OpenWRT and putting their gateway in bridge mode. Then you will be able to port forward as you please. A good cheap choice is the Linksys EA8300, but there are tons of options that will work. And OpenWRT will keep your router in support and secure for years longer than the OEM firmware would alongside giving you all of the tools to run a complex network.
+
+Another thing that may work is abusing UPNP to get the port forwarded, but just getting a competent router is going to be way easier.
+  Score: 2
+  Created UTC: 2024-07-21 15:28:04
+
+Comment 6:
+  Author: rursache
+  Comment: playit.gg
+  Score: 2
+  Created UTC: 2024-07-21 07:46:49
+
+Comment 7:
+  Author: BakerEvans4Eva
+  Comment: You might want to look at Gate Proxy (https://gate.minekube.com/), an open source reverse proxy specifically for Minecraft. You might want to look at the "Lite Mode"
+  Score: 2
+  Created UTC: 2024-07-21 06:44:57
+

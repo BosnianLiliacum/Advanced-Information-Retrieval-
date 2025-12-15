@@ -1,0 +1,70 @@
+Post Title: How much power do I really need?
+Author: Poppagrizzly
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8r168/how_much_power_do_i_really_need/
+Number of comments: 14
+Created UTC: 2024-07-21 17:04:32
+
+Post Content:
+Long time lurker, first time poster. Ive tried going down the rabbit hole but theres so soooo much information. Some of you guys run your homelabs on raspis and others use full on enterprise gear with 400 cores and 9000gbs of RAM.
+
+My use case as is follows ... mostly media / files. I have Plex Pass because it was on sale. Maybe eventually try out Jellyfin. At most, 2 local streams (1080p and 4k) and or 2 remote streams. I have a bunch of optiplex 7050s SFF that I would like to use as the front ends to watch tv/movies instead of fire/roku sticks.
+
+Id like to pair this all up with the -arr services. Using dockers, not VMs. Thinking of unRaid OS with 10 - 12 large hard drives. Has anyone used and have good experience with the data center hard drives regularly sold on Amazon? 12TB hard drives for like $85USD but have 30, 40, 50000hrs on them?
+
+Possibly host a few game servers for myself and brothers / coworker to play factory type games - factorio, space engineers, stuff along those lines. Not minecraft or survival games. I already have a gaming pc but i was reading somewhere recently about being able to set up a pool and run the steam games directly from there instead of the computer? Also, I have a good size collection or emulators. If a add a gpu to my setup, can I run them ON the server and stream them over to the 7050s with moonlight? Mostly would want to play Mario Party games in a different room with my girlfriend...how would controllers work?
+
+I live in an apartment, not interested in HA services.
+
+I want to be to host websites and backup my phones/devices with nextcloud (I think it was called) - my girlfriend recently upgraded her phone and it was an absolute shitshow. Lost many years with of photos and text messages.
+
+I had been looking at an i3 before I started thinking about the emulator situation. But then I read a lot about people running eveything in VMS. I dont have much experience with VMs but I know you have to share resources (cores and RAM) from the host, so lets say you have an 8core cpu and start splitting that up 1sie and 2sie, you wouldnt be able to run a whole lot. 
+
+I think Im just overthinking it but I dont want to upgrade components every couple years but I also dont want to spend $500USD before storage. Help? TYIA :D
+
+
+
+
+
+Top 5 comments:
+Comment 1:
+  Author: baba_janga
+  Comment: Maybe start with mini n100 pc?
+  Score: 5
+  Created UTC: 2024-07-21 17:19:50
+
+Comment 2:
+  Author: aetherspoon
+  Comment: You can do all of that with *one* 7050. Obviously not the twelve drives part, at least not without some type of external enclosure, but you really don't need the speed. You might want something slightly more powerful single-core performance for those game servers; Factorio should be fine for non-megabase  / heavily-modded servers at least, can't speak for the others myself.
+
+And just plug a 7050 into your TV instead of streaming it; emulators don't really hit the GPU all that hard unless if you're emulating something very modern. You would be eating the power draw of the GPU at all times, which is *probably* nor worth it.
+
+So you probably just want something that can handle your storage. Simple NAS box, just make sure you have enough SATA ports and ignore any extra complications. UnRAID isn't my forté, so I'm not much help with that one beyond google-fu.
+  Score: 2
+  Created UTC: 2024-07-21 17:20:52
+
+Comment 3:
+  Author: Caeliterra
+  Comment: If you’re near a microcenter just buy a $300 intel bundle and a case and call it a day!
+  Score: 2
+  Created UTC: 2024-07-21 17:21:24
+
+Comment 4:
+  Author: Lower_Range_4228
+  Comment: If you spend $500 - $1000 on a home server for that purpose, it can be compared to the equivalent of around 13+  years worth of subscription with a VPS that would fulfill your requirements. The VPS would guarantee around 99% uptime, no cost for electricity and if something breaks with hardware, it's not up to you to maintain. It would also be more secure, less risk of making your ISP mad or less likely to impose restrictions. There are even more benefits to renting a VPS when you can, but I think I made my point.
+
+Edit - I overlooked your storage requirements. It would cost more for that much storage. But unless you need 12tb of storage right away, you can add that on as needed. I also didn't consider running games on your server, but I meant to say that if you already have a gaming PC, it's not better to run it on something you're sharing as a server.
+  Score: 2
+  Created UTC: 2024-07-21 19:50:45
+
+Comment 5:
+  Author: MonsiuerLeComte
+  Comment: A 7th-10th gen i5 desktop can be had for under $100 through a few hundred with 8-16gb ram
+
+Slap a nvme disk for os/boot and things like hp elite desk g3 800 sff have two 3.5hdd spots by default. I did this with two 14tb from serverpartdeals total cost $320.
+
+I’m similar to your use case. 7th gen i5-7xxx and 8gb ram. Idle at 13-14 watts and ram is about 30% utilized. CPU in single digits unless during initial load into something like Immich.
+  Score: 2
+  Created UTC: 2024-07-21 21:05:40
+
+Note: This post has only 5 comments at the time of scraping.

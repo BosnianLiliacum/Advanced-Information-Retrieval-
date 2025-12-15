@@ -1,0 +1,68 @@
+Post Title: What do folk use for certificate management for internal apps? 
+Author: CrappyTan69
+Score: 54
+URL: https://www.reddit.com/r/selfhosted/comments/1ebwwby/what_do_folk_use_for_certificate_management_for/
+Number of comments: 63
+Created UTC: 2024-07-25 14:54:17
+
+Post Content:
+Years ago, I used TrueNAS to create a certificate authority, installed that cert on all my internal machines and then created my own signed certs for everything. It worked well. 
+
+TrueNAS though is no longer the correct place to do this so I am interested to hear from others what and how do you manage this internally? 
+
+  
+Happy to spin up a(nother) container to self-host this
+
+Top 7 comments:
+Comment 1:
+  Author: darksage07
+  Comment: I’m using an approach with traefik and dns challenge against cloudflare.this way it’s possible to generate certificates with a valid CA and with auto renew,since behind this, traefik is using letsencrypt.
+  Score: 28
+  Created UTC: 2024-07-25 15:19:17
+
+Comment 2:
+  Author: demosdemon
+  Comment: Running your own PKI is difficult. I do it for a living and it is stressful. The biggest advice I have is to just not and use LetsEncrypt instead. 
+
+* AWS Private CA has some good docs for this. Don’t actually use AWS PCA though because it’s $400/mo/CA.
+
+* Your root certificate authority should be generated with an HSM or in a completely airgapped environment. Private key should not be exposed to any network. Ever. 
+
+* Some software I’ve used in the past include https://github.com/smallstep/certificates and https://blog.cloudflare.com/introducing-cfssl and https://github.com/OpenVPN/easy-rsa
+  Score: 49
+  Created UTC: 2024-07-25 15:13:22
+
+Comment 3:
+  Author: purepersistence
+  Comment: I get certificates with the ACME Service on my OPNsense router. The certificates are acquired and renewed by using a DNS Challenge, and so my endpoints don't have to be reachable over the internet. The certs renew for 90 days, and get renewed when there's less than 30 days left. The Automations in the service copy the renewed certificates to my reverse proxy host and a few synology NAS devices, including a restart of HTTP on the servers as necessary for them to use the new certs. Totally set and forget.
+  Score: 11
+  Created UTC: 2024-07-25 15:21:53
+
+Comment 4:
+  Author: ElevenNotes
+  Comment: Buy a domain, they come as low as 4$/year and use Lets Encrypt with DNS-01 challenge. If you want to be your own Root CA: Hashicorp Vault, supports ACME too.
+  Score: 9
+  Created UTC: 2024-07-25 16:20:54
+
+Comment 5:
+  Author: gregtwallace
+  Comment: I would definitely recommend going the ACME route using a service like Let’s Encrypt. This eliminates having to make all your clients trust your custom root. There are a ton of tools out there. 
+
+Most tools run on each individual device you secure. I wanted something more centralized so I ended up creating Cert Warden (https://www.certwarden.com/) which offers centralized ACME services. Obviously I’m a little biased here. 
+  Score: 7
+  Created UTC: 2024-07-25 15:46:42
+
+Comment 6:
+  Author: itslaura_k
+  Comment: I use a [CertWarden Instance](https://www.certwarden.com/) that gets LetsEncrypt wildcard certificates and deploy them to my debian hosts with [certwarden-deploy](https://code.lila.network/adoralaura/certwarden-deploy). Its been a breeze so far :3
+
+(Disclaimer: I built and maintain certwarden-deploy, it should be pretty stable so far, but there’s a lot of documentation missing still.)
+  Score: 5
+  Created UTC: 2024-07-25 20:12:33
+
+Comment 7:
+  Author: After-Vacation-2146
+  Comment: I’ve started to Step-CA and it’s a great product. Set it and forget it. Plus it has a built in ACME provisioner so all my certificates are valid for 8 hours and automatically renew. This is for my .internal domain.
+  Score: 6
+  Created UTC: 2024-07-25 15:59:06
+

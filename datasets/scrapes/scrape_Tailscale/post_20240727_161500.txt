@@ -1,0 +1,27 @@
+Post Title: Taildrive on iOS/iPadOS - Files App keeps looping me back to the top?
+Author: FloJak2004
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1ebw2ys/taildrive_on_iosipados_files_app_keeps_looping_me/
+Number of comments: 2
+Created UTC: 2024-07-25 14:20:13
+
+Post Content:
+Configured Taildrive yesterday so I can access certain shares of my Unraid Server while traveling. 
+
+Works great on my Windows PC and MacBook. Both on my iPad and iPhone, the Files App keeps looping me back to the top level Folder, once I try to go deeper. 
+
+Like "Tailscale/&lt;Account-name&gt;/&lt;server-name&gt;/&lt;share-name&gt;/Media - and once I enter Media, I am back at "Tailscale", in an infinite loop.
+
+  
+Does anybody know what causes this and how to avoid it? Really only happens on iOS/iPad OS. Could not find any other threads here. 
+
+Thank you!
+
+Top 1 comments:
+Comment 1:
+  Author: DeltaEchoFour
+  Comment: I’m curious in doing the same thing - Taildrive and unRAID. Did you find a guide anywhere or just follow the Tailscale docs on setting up the unRAID side?
+  Score: 1
+  Created UTC: 2024-07-25 14:38:36
+
+Note: This post has only 1 comments at the time of scraping.

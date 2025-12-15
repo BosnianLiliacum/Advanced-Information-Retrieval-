@@ -1,0 +1,79 @@
+Post Title: CPU usage increases as model size increase.
+Author: youdontmesswitharpit
+Score: 4
+URL: https://www.reddit.com/r/ollama/comments/1ebr0lo/cpu_usage_increases_as_model_size_increase/
+Number of comments: 5
+Created UTC: 2024-07-25 09:56:48
+
+Post Content:
+ollama ps: 
+
+    NAME            ID              SIZE    PROCESSOR       UNTIL                                                                                     
+    llama3.1:8b     62757c860e01    5.9 GB  71%/29% CPU/GPU 4 minutes from now 
+
+    NAME            ID              SIZE    PROCESSOR       UNTIL                                                                                     
+    qwen2:1.5b      f6daf2b25194    2.0 GB  12%/88% CPU/GPU 4 minutes from now 
+
+    NAME            ID              SIZE    PROCESSOR       UNTIL                                                                                     
+    qwen2:0.5b      6f48b936a09f    1.3 GB  100% GPU        4 minutes from now
+
+    NAME                    ID              SIZE    PROCESSOR       UNTIL                                                                             
+    mistral-nemo:12b     4b300b8c6a97    8.5 GB  81%/19% CPU/GPU 4 minutes from now
+
+I noticed CPU usage increase as the parameter size increase.
+
+nvidia-smi:
+
+    +---------------------------------------------------------------------------------------+                                                         
+    | NVIDIA-SMI 530.41.03              Driver Version: 530.41.03    CUDA Version: 12.1     |                                                         
+    |-----------------------------------------+----------------------+----------------------+                                                         
+    | GPU  Name                  Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |                                                         
+    | Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |                                                         
+    |                                         |                      |               MIG M. |                                                         
+    |=========================================+======================+======================|                                                         
+    |   0  NVIDIA GeForce RTX 3090         Off| 00000000:26:00.0  On |                  N/A |                                                         
+    |  0%   40C    P8               16W / 350W|    508MiB / 24576MiB |      0%      Default |                                                         
+    |                                         |                      |                  N/A |                                                         
+    +-----------------------------------------+----------------------+----------------------+                                                         
+                                                                                                                                                      
+    +---------------------------------------------------------------------------------------+                                                         
+    | Processes:                                                                            |                                                         
+    |  GPU   GI   CI        PID   Type   Process name                            GPU Memory |                                                         
+    |        ID   ID                                                             Usage      |                                                         
+    |=======================================================================================|                                                         
+    |    0   N/A  N/A      1938      G   /usr/lib/xorg/Xorg                          170MiB |                                                         
+    |    0   N/A  N/A      2359      G   /usr/bin/gnome-shell                        166MiB |                                                         
+    |    0   N/A  N/A      4019      G   ...0765602,18121387477248672498,131072      114MiB |                                                         
+    |    0   N/A  N/A      9273      G   ...sion,SpareRendererForSitePerProcess       52MiB |                                                         
+    +---------------------------------------------------------------------------------------+
+
+  
+I'm working on ubuntu 18.04 LTS  
+Anyone else noticing this? Any suggestions?
+
+Top 4 comments:
+Comment 1:
+  Author: youdontmesswitharpit
+  Comment: I restarted my system and it's fixed. All models can now use 100% of gpu
+  Score: 3
+  Created UTC: 2024-07-25 10:42:17
+
+Comment 2:
+  Author: AI_RPI_SPY
+  Comment: Hi, just a word of advice, check github as there are a lot of issues relating to CPU / GPU load and options for fixing issues.
+  Score: 1
+  Created UTC: 2024-07-25 10:44:52
+
+Comment 3:
+  Author: Practical-Rate9734
+  Comment: Yeah, bigger models do tend to hog the CPU.
+  Score: 1
+  Created UTC: 2024-07-25 14:04:01
+
+Comment 4:
+  Author: Xlxlredditor
+  Comment: Hey, unrelated but have you considered updating Ubuntu
+  Score: 1
+  Created UTC: 2024-07-25 15:53:29
+
+Note: This post has only 4 comments at the time of scraping.

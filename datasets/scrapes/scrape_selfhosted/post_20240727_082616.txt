@@ -1,0 +1,58 @@
+Post Title: What is another alternative to tailscale's exit node?
+Author: CptanPanic
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1eczodv/what_is_another_alternative_to_tailscales_exit/
+Number of comments: 6
+Created UTC: 2024-07-26 21:37:13
+
+Post Content:
+I am having some issues with having tailscale's exit node working on all devices, and am working on that. But would also like a backup in the meantime. I want to be able to access my network remotely, from windows/android. And am running docker/unraid as the host. I like the ease of use of tailscale, and I am currently trying zerotier, but can't quite get the routing working, also it is just me, so want a free plan. 
+
+Thanks.
+
+Top 6 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Simply use Wireguard.
+  Score: 4
+  Created UTC: 2024-07-26 22:13:04
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: Tailscale and zero tier use wireguard under the hood 
+
+You can use a wireguard docker container or use something like [wg-easy](https://github.com/wg-easy/wg-easy) which wraps wireguard and has a admin UI for managing keys. 
+
+Note: only port forward wireguard instance not the management UI. 
+
+Hope that helps
+  Score: 1
+  Created UTC: 2024-07-26 23:59:33
+
+Comment 3:
+  Author: Darkextratoasty
+  Comment: Zerotier and netbird are practically the same as tailscale, so while they make easy alternatives, whatever the issue is you're having with tailscale, it might be present with those one as well.
+  Score: 1
+  Created UTC: 2024-07-27 00:19:35
+
+Comment 4:
+  Author: XandrosUM
+  Comment: You're running multiple exit nodes in one network?
+  Score: 1
+  Created UTC: 2024-07-27 00:25:12
+
+Comment 5:
+  Author: ReachingForVega
+  Comment: If you are trying to use an exit node to connect to the local network of the node there is a subnet step you need to do. On Synology NAS there is also an on boot command that needs to be run.
+  Score: 1
+  Created UTC: 2024-07-27 02:12:23
+
+Comment 6:
+  Author: ClintE1956
+  Comment: afaik Tailscale exit node is for routing all local network devices through one device. But if you want to remotely access all your network devices, you don't need to have Tailscale installed on everything. Set one (or more) Tailscale device for subnet routing per their instructions, and even devices on your local network that don't have a default gateway will be accessible remotely (as long as they have a local network address). I use IPMI remote interfaces in servers on my local network that I definitely do not want exposed to the internet, so those interfaces don't have default gateways set. I can still access them through the Tailscale VPN using subnet routing.
+
+Hope this helps you find a good solution that fits your needs.
+  Score: 0
+  Created UTC: 2024-07-27 00:30:34
+
+Note: This post has only 6 comments at the time of scraping.

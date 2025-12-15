@@ -1,0 +1,31 @@
+Post Title: Looking for a storage and sync solution that works with my existing filestructure
+Author: NakedxCrusader
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e72zna/looking_for_a_storage_and_sync_solution_that/
+Number of comments: 5
+Created UTC: 2024-07-19 12:51:34
+
+Post Content:
+I'm interested in setting up a home cloud similar to seafile, nextcloud, etc. that doesn't have an internal file library but works with my existing structure.
+
+Explanation:
+I have set up a NAS with OMV on which I run software like Jellyfin, Audiobookshelf and similar that need to be able to access my files. 
+I would also like to have easy configurable access and syncing abilities. To eg. Sync the pictures from my phone to the NAS or sync my thesis folder between my PC and my Laptop with the NAS as middleman so to speak.
+
+Is this possible? And are there tools outthere that allow me to do this? 
+I know about syncthing and it is what I use at the moment but it is a tad tedious to always configure every individual sync by itself, especially if I want to change the configuration later on.
+
+Top 2 comments:
+Comment 1:
+  Author: StefanMcL-Pulseway2
+  Comment: Seafile might be what your looking for, it can be set up to work directly with your existing file system structure and is pretty efficient when it comes performance and efficiency, I would even say its faster than nextcloud
+  Score: 2
+  Created UTC: 2024-07-19 13:11:21
+
+Comment 2:
+  Author: cyt0kinetic
+  Comment: Just wanted to throw out there OwnCloud, NextCloud and a lot of the other popular file solutions you can work with your own file structure by adding it as local storage. You can also add as broad or as selective as you like.
+  Score: 0
+  Created UTC: 2024-07-19 15:25:21
+
+Note: This post has only 2 comments at the time of scraping.

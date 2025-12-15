@@ -1,0 +1,156 @@
+Post Title: Noob question how to DDNS + reverse Proxy solution
+
+Author: Unique-Video-5052
+Score: 13
+URL: https://www.reddit.com/r/selfhosted/comments/1ea5wzp/noob_question_how_to_ddns_reverse_proxy_solution/
+Number of comments: 17
+Created UTC: 2024-07-23 11:53:33
+
+Post Content:
+Noob question how to DDNS + reverse Proxy solution
+
+
+
+I am self-hosting on a clean Ubuntu 24.04 machine, almost everything is docker-compose files.
+
+I have an Asus router (AX-56U, Merlin firmware) that updates DDNS and I open ports to some of the services that I want to expose to the world (Immich / Jellfin).This setup is working fine without any issues, but I understand that externally open ports are a security risk.
+
+
+
+After some research I understand that there are two main ways to secure your server: Reverse proxy and VPN.VPN is out of the question as I want the services accessible from multiple devices and setting up VPN on each sound horrible.
+
+
+
+I've tried to use the nginx proxy manager but had some difficulties. If I correctly understand the Asus DDNS is not supporting subdomain (I could be wrong here).
+
+I tried DuckDNS with nginx proxy manager but the connection was very slow and I feel like I've missed something.
+
+
+
+Now for the questions: 
+
+1. Could you please share what are you doing in your self-hosting setup ?
+
+2. Could I use my Asus DDNS and a local DNS server like technetium and use the nginx proxy manager?
+
+
+
+Top 7 comments:
+Comment 1:
+  Author: GolemancerVekk
+  Comment: Here's my setup (for things directly exposed to Internet):
+
+* Public dynamic IP offered by ISP (no CGNAT).
+* Get a domain name. Let's call it `domain.tld`. Preferably something in an established TLD or ccTLD, no novelty TLDs. You get better privacy and stable &amp; low prices long term.
+* Get a public DNS service. Maybe your registrar offers a decent one that allows you to edit the zone properly (either directly as text, or has an UI for it). You don't have to use your registrar's if it sucks. [Plenty of free DNS services out there.](https://community.letsencrypt.org/t/dns-providers-who-easily-integrate-with-lets-encrypt-dns-validation/86438) I recommend getting somewhere from that list because they will work well for both DDNS and for TLS certificate challenges. I use desec.io (ran by a German non-profit dedicated to promoting the use of DNSSEC).
+* Learn how to use the DNS service's API to establish DDNS. Usually you can do it with a simple curl script that runs on your server, or with a tool like ddclient, or your router may already have a DDNS tools compatible with the service's API. I run OpenWRT on my router and it has a DDNS tool like that, but I run my own curl script on the server.
+* At this point you should have an `A` record that points `domain.tld` to an IP, which gets updated by the DDNS script or tool whenever needed. Possibly a `AAAA` record as well.
+* You do not need your DDNS tool to do wildcards or subdomains. All you need to set is `domain.tld`. For any subdomains you want, you make a `CNAME` record that points `sub.domain.tld` to `domain.tld`. That subdomain will automatically point to the correct IP whenever the `A` and `AAAA` records for `domain.tld` change. You can also make a wildcard `CNAME` that points `*.domain.tld` to `domain.tld` but that can create some complications, and unless you want to make a lot of subdomains or need to create/destroy them dynamically all the time, I would recommend sticking to manual explicit `CNAME` definitions for starters.
+* Hint: don't make the subdomains obvious or easy to guess. So no `jellyfin.domain.tld` or `j.domain.tld`. Could be used by bots. Generate a string of letters or mix up some words and numbers. Normally your CNAMEs are not publicly available in DNS and can't be read but can be guessed. I know it's security by obscurity but if you use a randomly generated subdomain name it can act as a sort of access key for an extra protection layer.
+* Port-forward one port on your router to the NPM (Nginx Proxy Manager) IP and port. You can forward 443 and use `https://sub.domain.tld` directly, or you can forward a more obscure port and use `https://sub.domain.tld:55555` URLs. It does not make a huge difference, a bot can scan all 65535 TCP ports in less than one second.
+* Do not forward port 80 and never expose non-TLS to the Internet. Period. After you set up the TLS certificate in NPM it will be able to listen on 443 and that's what you should forward. You can also use TLS on your LAN (more on that below). My strong recommendation is to never ever use 80 for anything. It's a huge security risk.
+* Go to the NPM admin interface, SSL Certificates &gt; Add new certificate &gt; Let's Encrypt. Put `*.domain.tld` as the domain – notice the star. This will be a so called wildcard certificate, which will work for any subdomain, lets you add and remove subdomains freely, and has the added benefit of not publishing any explicit subdomain name in the public SSL logs for the bots to find. Make sure to check "Use DNS challenge", which will use your DNS service API to confirm you own the domain. You will have to select your DNS service from the dropdown and obtain an API key to enter here. I recommend to get a separate API key for this purpose, and reserve it only for NPM. You only have to enter it once but it will keep being reused periodically whenever the certs need renewing so make sure the API key stays valid. If everything works out you will get a certificate and you can start using it for NPM proxy hosts.
+* Go to NPM proxy hosts and create one. Fill in the public domain (eg. `jellyfin.domain.tld`) (you do NOT have to add the forward port). Point the service to the internal server IP and port, which can and should be `http` if on the LAN, no need to double-up on TLS. Make sure to go to the SSL tab and choose the wildcard certificate and *check all the boxes*. That's it, you should now be able to access the service at the public subdomain address (*with* the port, if you didn't use 443).
+
+If you want to also access your LAN services over HTTPS you can:
+
+* You need a dedicated sub-subdomain to use as a base for LAN services. Let's call it `lan.domain.tld` (but you can use whatever you want instead of "lan"). You do NOT normally define this one in the public DNS.
+* You need to define it in your LAN's private DNS, which probably runs on your router. You need a feature that will resolve `*.lan.domain.tld` to the LAN IP of your server. This is required. If your router can't do this it's a problem.
+* You *can* define this in the public DNS server as a workaround, with an `A` record for `lan.domain.tld` pointing at the LAN server IP, and a `*.lan.domain.tld` CNAME pointing at `lan.domain.tld`. But it's messy and many DNS services such as your ISPs typically block such records if they see a LAN IP because it can indicate a certain type of attack. Either way, you should be able to resolve `anything.lan.domain.tld` and see it answer with the server LAN IP.
+* Once you have this go ask for a new wildcard TLS certificate in NPM for `*.lan.domain.tld`. Same as before, ask for DNS challenge and use the same API key. DNS challenge doesn't care if the domain is reachable and does not care if `lan.domain.tld` is defined in the public DNS, just wants to make sure you own the DNS service for `domain.tld`.
+* Once you have the certificate you can now start defining NPM proxy hosts for domains such as `calendar.lan.domain.tld`, pointing at LAN IP's and ports. Make sure you use the correct certificate (`*.lan.domain.tld`, not `*.domain.tld`).
+* Hot tip: you can make NPM serve itself over HTTPS by making a proxy host for `npm.lan.domain.tld`.
+* Some people go as far as "hiding" all LAN services from the LAN, by exposing them only locally on the server (either on 127.0.0.1 or on a private Docker network) where only the NPM service can see them. NPM can make proxy hosts that point to 127.0.0.1 so it works fine. The trouble with this approach is that if NPM ever goes down, or your certificates aren't renewed for whatever reason, you're cut off from everything (including NPM if you proxied it through itself). So personally I put the services on the server's LAN IP and just *use* the https names in everyday work, but I can always fall back to the LAN IP + port if NPM ever dies or the certificates expire. Your choice.
+
+Some extra tips for hardening your DNS records for `domain.tld`:
+
+* Look into setting up DNSSEC. A decent DNS service will make it easy, it generates them for you and you just have to go turn it on at the registrar. It's not super hard, you'll have to copy and paste a security key basically.
+* May want to set up records that explicitly state that `domain.tld` is NOT used for email. Look it up, you want an `MX` record on `domain.tld` set to `0 .`, a `TXT` set to `"v=spf1 -all"` (with the quotes), and a `TXT` on `_dmarc.domain.tld` set to `"v=DMARC1; p=reject;"` (again, with quotes). May want to set the MX and spf on `*.domain.tld` too.
+* May want to set up a `CAA` record on `domain.tld` set to `0 issue "letsencrypt.org;validationmethods=dns-01"` so that nobody except Let's Encrypt is allowed to create TLS certificates for your domain.
+
+Please ask if you have any questions.
+  Score: 8
+  Created UTC: 2024-07-23 14:30:52
+
+Comment 2:
+  Author: Norgur
+  Comment: Okay, let's take a step back. A reverse proxy is not per se more secure than not having one. 
+
+Let's evaluate your needs:
+
+1. Who will access your services?
+Just you and your partner, or more people?
+Are there services for the whole world or just for a closed group of people?
+2. From where will they access your services? From your own home? Remotely? Which services will be accessed remotely and.by whom?
+3. Which services do you want to host?
+  Score: 6
+  Created UTC: 2024-07-23 12:05:35
+
+Comment 3:
+  Author: krysinello
+  Comment: Been ages since I've done this, but I had a cron job on the host that would pull my public IP, and use my DNS providers API to update DNS. Since reverse proxy and everything else was domain name driven, no updates there. 
+
+Worked well, but just have a static IP now and wont go back from that. 
+
+DNS side, just use Cnames for your subdomains, only have to update your root record and doubting you'd need anything else for a self hosted solution. 
+
+With docker, you can look at swag, this has a lot of the most common application configurations to reverse proxies with nginx. I mainly use this to set them up. In build Authelia you can enable as well for some added security, particularly attaching 2FA to it. For anything internal I use wireguard to connect and access that way. Proxy manager should be fine, but more to reverse proxies then just saying here to here, can be application dependent and other settings or snippets needed for the application to work well. It can go from easy to quite anoying depending on what's involved.
+  Score: 3
+  Created UTC: 2024-07-23 12:06:47
+
+Comment 4:
+  Author: blooping_blooper
+  Comment: there's a simple solution for your subdomains - create them as CNAME records pointed to whichever domain is set up with DDNS.
+  Score: 3
+  Created UTC: 2024-07-23 14:01:29
+
+Comment 5:
+  Author: PaperDoom
+  Comment: While reverse proxies do provide some measure of security if you configure them correctly, they are not a security tool. A reverse proxy and a VPN  serve completely different functions. Reverse proxies provide routing for domain names to IP:Port, while VPN provides a secure connection and funnels specified traffic through that connection, usually to some kind of network behind firewalls.
+
+Opening any unrestricted traffic from the internet to your LAN is a security risk, ports or otherwise.
+
+As for your questions:
+
+1. I use Cloudflare + NPM + DNS Challenge to do pretty much all my DNS stuff. I run Technitium as my recursive and authoritative DNS server for my home network. For my personal access I just use a plain wireguard server and my IP for that subdomain is updated on cloudflare with an app called DDNS Updater. For the few times I want to give access to somebody else, I have a cloudflare tunnel that I keep turned off unless I know specifically what is being requested. I also have a website that is public that is firewalled off like ft. knox, through cloudflare tunnel with liberal IP and geo restrictions.
+2. TBH, if you're going to be using domains anyway, it's probably better to just buy your own domain through a registrar that supports DNS challenge and has some kind of DDNS API. They're not particularly expensive. In the past I found DDNS specific services and especially baked in router DDNS services to be unreliable.
+  Score: 2
+  Created UTC: 2024-07-23 12:10:53
+
+Comment 6:
+  Author: CubeRootofZero
+  Comment: My preferred setup is using my router (OPNsense) to update my domain DNS (Cloudflare) using the Dynamic DNS service. Just needs an API key.
+
+I then have NGINX Proxy Manager set to receive 80/443 traffic. It then has Proxy Hosts set for my services and requests LE Certs using a DNS Challenge.
+
+I also have Tailscale/Wireguard for overlay network/VPN duties.
+  Score: 2
+  Created UTC: 2024-07-23 12:13:03
+
+Comment 7:
+  Author: RedKomrad
+  Comment: &gt; After some research I understand that there are two main ways to secure your server: Reverse proxy and VPN.VPN is out of the question as I want the services accessible from multiple devices and setting up VPN on each sound horrible.
+
+Security isn’t free. In fact , nothing is free out these 3 features - fast, cheap, secure.  It comes at a cost.
+
+So it’s about how you are going to balance them.
+
+The easiest security is not to expose your home  network to the outside.
+
+The second is is usually to use a VPN. Some people put 3rd party tunnels here but personally I don’t trust 3rd parties. That it up to you.
+
+Third would be to open ports and use security in depth to limit the risk of bad actors ruining your day. 
+
+Personally, I’m at 1)  but I plan on 3) for a couple of services I want to access from my work computer. it’s been days or research and planning to see how I can secure each touch point for external traffic.
+
+In addition to defense in depth, look at blocking traffic as far away as possible, commonly known as the perimeter. If you block a type of traffic at your router, then technically you don’t need to block it again inside your network. 
+
+Also blocking it further away lowers the risk to your systems.  You might have traffic enter from a VPS or 3rd part so that their IPs get ddos’s and not yours, for example. 
+
+Good luck. It seems like you’ve started with some
+bad assumptions about security, so you have a lot more self educating to do before you can assemble a good security plan for what you want to do. No biggee, we all start somewhere. 
+
+Or hire a professional to do it for us. 
+  Score: 2
+  Created UTC: 2024-07-23 13:23:45
+

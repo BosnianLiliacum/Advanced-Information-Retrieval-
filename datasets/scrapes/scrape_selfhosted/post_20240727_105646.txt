@@ -1,0 +1,31 @@
+Post Title: Looking for a self-hostable multiplayer jigsaw puzzle service
+Author: Amazing_Operation215
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e3w2bw/looking_for_a_selfhostable_multiplayer_jigsaw/
+Number of comments: 1
+Created UTC: 2024-07-15 14:24:09
+
+Post Content:
+Hi,
+
+  
+we had been using puzzle.aggie.io for quite a while for multiplayer puzzling but that service recently went down then back up and now down again.
+
+Mainly for that reason but also because I'd prefer hosting it myself I've been looking into finding a self-hostable alternative but have not been able to find anything in that regard yet. If any of y'all could help I'd appreciate it.
+
+Ideally the service should offer
+
+- Custom image upload
+
+- Variable piece size (up to a few thousand)
+
+Top 1 comments:
+Comment 1:
+  Author: Ssakaa
+  Comment: Haven't poked it at all, but a quick search turned up this, which may do the trick
+
+https://github.com/jkenlooper/puzzle-massive
+  Score: 1
+  Created UTC: 2024-07-16 04:26:39
+
+Note: This post has only 1 comments at the time of scraping.

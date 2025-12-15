@@ -1,0 +1,68 @@
+Post Title: selfhost code-server, but can not get https working
+Author: darrenhuang22
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e8eoop/selfhost_codeserver_but_can_not_get_https_working/
+Number of comments: 15
+Created UTC: 2024-07-21 05:04:47
+
+Post Content:
+HI folks, need some help here?
+
+so i have a ubuntu server, installed code-server through official script, running fine on port 7001, i have pi-hole dns point example and [example.com](http://example.com) to server ip, so i can access code-server through example:7001, when i am away from home, i can access through tailscale (tailscale magic dns point example to the ubuntu server too).
+
+Now i try to set up https for code-server, so i followed this [tutorial](https://medium.com/@elysiumceleste/setting-up-a-secure-self-signed-ssl-certificate-for-code-server-on-ios-13-and-macos-10-15-294a1437cc4c) to generate cert and key and systemctl restart code-server, but when i load it through [example.com:7001](http://example.com:7001), the browser still complains, i "proceed anyway" but there is still issue opening, for example, .ipynb file, "error: Could not register service worker: SecurityError: Failed to register a ServiceWorker for scope ", what am i missing here?? Thanks in advance  
+
+
+Top 4 comments:
+Comment 1:
+  Author: retrogamer-999
+  Comment: +1 for nginx proxy manager. It does https via let's encrypt and you can do wildcard certificates.
+  Score: 5
+  Created UTC: 2024-07-21 11:03:36
+
+Comment 2:
+  Author: transconductor
+  Comment: Have you installed your self-signed ca cert in the browser's / your OS's certificate store?
+
+If you're using Tailscale with magic DNS, maybe it's HTPS feature might be the easier route compared to self-signing?
+
+https://tailscale.com/kb/1153/enabling-https
+
+Haven't tried it myself, though.
+  Score: 2
+  Created UTC: 2024-07-21 12:39:50
+
+Comment 3:
+  Author: suicidaleggroll
+  Comment: Few different ways of doing https:
+
+1) self-signed cert.  It’ll work and the data will be encrypted, but your browsers and apps will complain that it’s not secure since they can’t verify the host.
+
+2) deploying your own certificate authority (CA) and using that to sign your cert.  This will get rid of the complaints from your client, but only if you go install the CA docs into every machine you want to connect to the host with, which sucks.
+
+3) Let’s Encrypt (or similar) http challenge.  This is easy and reliable and gets rid of all warnings, but you must open up a port in your firewall so the Let’s Encrypt servers can verify you really do own the domain.  You only need to open the port when renewing the cert, but that means you’ll have to re-open it, renew, and close it back every 3 months.  Not terrible if it’s just one server you have to do this for, but it gets ugly quickly when you start adding more.  Or you can just leave your server permanently exposed to incoming connections from the internet, but that’s not a great idea for security unless it’s absolutely necessary.
+
+4) Let’s Encrypt (or similar) dns challenge.  This requires you own a domain from one of the supported domain hosts, but otherwise it’s painless - assuming the service you’re setting up supports it, most don’t, or they make it difficult.  But it lets you get a real cert that keeps all your clients happy, and it’ll auto-renew, and you don’t have to go punching holes in the firewall.
+
+5) A combination of #1 and #4 using a reverse proxy.  You set up a reverse proxy like nginx or caddy with a dns-challenge wildcard cirt that auto-renews and is valid for any subdomain at your domain.  The reverse proxy then forwards the connection on to your server, which should also be set up with https (so the connection is encrypted), but the cert doesn’t matter for that half, so you can use any self-signed or expired cert that you want and your client machines won’t know the difference.
+  Score: 1
+  Created UTC: 2024-07-22 01:41:33
+
+Comment 4:
+  Author: 1WeekNotice
+  Comment: If you want easy self managed https most people use a reverse proxy such as caddy, Nginx, NPM etc. 
+
+Caddy is the easiest to set up but you can definitely use the others. (Not to many videos on caddy because it is the baby compared to the others, doesn't mean it is bad. It's getting a lot of traction)
+
+[Here is a video using NPM](https://youtu.be/qlcVx-k-02E?si=gCpsb0BX8izgB_pk) to give you the general concept of reverse proxies.
+
+Caddy has some nice default features like automatic http to https and configuration as code (it's a single file VS NPM where you need to click around in a GUI)
+
+But if this is your first time setting up a reverse proxy. It might be best to follow the video and get it working before trying others out.
+
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-21 06:03:56
+
+Note: This post has only 4 comments at the time of scraping.

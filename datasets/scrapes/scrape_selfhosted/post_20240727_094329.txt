@@ -1,0 +1,26 @@
+Post Title: Extremely barebones issue/feature/ticket tracker
+Author: bbb23sucks
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e8dpyy/extremely_barebones_issuefeatureticket_tracker/
+Number of comments: 6
+Created UTC: 2024-07-21 04:04:17
+
+Post Content:
+Anyone know of a barebones web-based issue/ticket system? No fancy UI or backend. Just plain HTML.
+
+Edit: Also note that it should be able to work as a public facing service.
+
+Top 2 comments:
+Comment 1:
+  Author: dapperwhippersnapper
+  Comment: How is it going to store data about issues/features/tickets with only HTML and no backend?
+  Score: 5
+  Created UTC: 2024-07-21 04:07:22
+
+Comment 2:
+  Author: mosswill
+  Comment: I don't know if that's barebone enough for you, but I can't recommend Hesk enough (https://www.hesk.com/). It's free, open-source, self-hostable, and relatively lightweight. I've deployed it a few times in both personal and professional contexts, and the amount of features it includes is pretty insane.
+  Score: 2
+  Created UTC: 2024-07-21 05:45:36
+
+Note: This post has only 2 comments at the time of scraping.

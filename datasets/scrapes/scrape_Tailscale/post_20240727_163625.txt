@@ -1,0 +1,37 @@
+Post Title: Handling multiple tailnets and authentication with tailscale
+Author: Traditional-Elk-5472
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ebga79/handling_multiple_tailnets_and_authentication/
+Number of comments: 3
+Created UTC: 2024-07-24 23:42:28
+
+Post Content:
+I’m running into a configuration issue that I hope the community can help with. Here’s the situation:
+
+I have two separate tailnets:
+
+* `tailnet1.com`
+* `tailnet2.com`
+
+Both tailnets use the same identity provider (IdP) issuer URL (`https://example.com`), but each has its own app with a unique client ID and secret for authentication.
+
+We are transitioning some users from `tailnet1` email addresses to `tailnet2` email addresses but only want them to retain access to `tailnet1`. After updating their emails, users are being redirected to the `tailnet2` tailnet instead of the `tailnet1` tailnet. This is causing issues because they need access to `tailnet1`. From what I understand, Tailscale itself doesn’t use domain-based routing, so I’m unsure why the domain change is affecting access.
+
+How can we configure Tailscale and our IdP so that users with tailnet2.com emails can access the tailnet1 tailnet without being redirected incorrectly? Any tips on configuring Tailscale ACLs or IdP settings to handle this scenario effectively?
+
+Top 2 comments:
+Comment 1:
+  Author: xdrolemit
+  Comment: I’m not 100% sure I understand your request, but you may want to try to share machines from Tailnet1 to users from Tailnet2
+
+* [https://tailscale.com/kb/1084/sharing](https://tailscale.com/kb/1084/sharing)
+  Score: 1
+  Created UTC: 2024-07-25 01:19:37
+
+Comment 2:
+  Author: artemis-sun
+  Comment: You should contact Support for this. I don't remember exactly what the solution is, but I know they have ways to connect multiple domains to a single tailnet. [http://www.tailscale.com/support](http://www.tailscale.com/support)
+  Score: 1
+  Created UTC: 2024-07-25 13:16:55
+
+Note: This post has only 2 comments at the time of scraping.

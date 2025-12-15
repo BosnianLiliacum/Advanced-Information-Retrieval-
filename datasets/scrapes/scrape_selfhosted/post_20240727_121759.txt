@@ -1,0 +1,25 @@
+Post Title: Alternative for Miro / Multi-user whiteboards
+Author: yeapea
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e9c3gr/alternative_for_miro_multiuser_whiteboards/
+Number of comments: 2
+Created UTC: 2024-07-22 11:39:39
+
+Post Content:
+Hello, I am looking for an alternative for Miro. We have tried Affine, but the deployment is still very shaky and unfortunately the restrictions for Free are also quite severe. Can you suggest any other solutions?
+
+We currently use Miro, but only for retrospectives and the pricing is simply too high for that - as only three boards are allowed free of charge and the costs/benefits for pre- and post-processing are simply too high. The solution directly from Nextcloud has unfortunately turned out to be far too slow and inflexible.
+
+Top 1 comments:
+Comment 1:
+  Author: Dom4n
+  Comment: maybe [https://excalidraw.com/](https://excalidraw.com/) ?  
+ah... nextcloud is using it under the hood...
+
+what about draw.io? https://app.diagrams.net/
+
+[canva.com](http://canva.com) maybe?
+  Score: 1
+  Created UTC: 2024-07-22 13:02:44
+
+Note: This post has only 1 comments at the time of scraping.

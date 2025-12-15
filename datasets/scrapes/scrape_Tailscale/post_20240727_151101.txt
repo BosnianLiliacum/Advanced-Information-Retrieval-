@@ -1,0 +1,60 @@
+Post Title: How does this work? 
+Author: dankata1337
+Score: 0
+URL: https://www.reddit.com/gallery/1ecwg5c
+Number of comments: 4
+Created UTC: 2024-07-26 19:18:07
+
+Post Content:
+Awnser it dosent, it even dosent make any sence why are they like that
+
+Back story: today early in the mornig 2am the proxmox-mitac node shutdown idk why, and i got
+there and rebooted it evrything worked and i left, when i got home i saw it used a relay and i was like wtf!
+Afther trying evrything litteraly from manual mapping the 41641 port to the proxmox node to many
+many reboots it still dosent wana connect directly (before it did with no problems)
+
+Can someone smater please give advise???
+
+
+Top 4 comments:
+Comment 1:
+  Author: Artistic_Age6069
+  Comment: **The message "Some peers are advertising routes but --accept-routes is false" is highly relevant to the issue of Proxmox tenants not communicating through Tailscale.**
+
+This indicates a configuration mismatch between the Tailscale nodes. For proper routing and communication, the `--accept-routes` flag should typically be set to `true` to allow nodes to accept routes advertised by other peers.
+
+If this flag is set to `false`, it can lead to communication issues between Proxmox tenants, as they might not be able to reach each other through the Tailscale network.
+
+**It's essential to check the Tailscale configuration on all involved nodes to ensure consistent** `--accept-routes` **settings.**
+  Score: 2
+  Created UTC: 2024-07-26 20:18:42
+
+Comment 2:
+  Author: wudchk
+  Comment: you’re very lacking on context but i think what you really want `—port`
+
+
+—port=N to set the UDP port to listen on for peer-to-peer traffic; 0 means to auto-select.
+
+
+documentation has a search feature, which i used: https://tailscale.com/kb/1278/tailscaled?q=listen%20port
+  Score: 2
+  Created UTC: 2024-07-26 23:45:13
+
+Comment 3:
+  Author: dankata1337
+  Comment: Its not about that, they all try and use the same ingress port on the Nat but only one sucesds as a result only one can establish directly connection, the others use relays wich messes things up as it ads latency!!!
+
++ proxmox cluster can operate entirley on tailscale subnet such as the case with mine, So it dosent matter!
+  Score: -2
+  Created UTC: 2024-07-26 22:11:29
+
+Comment 4:
+  Author: dankata1337
+  Comment: Its not about that, they all try and use the same ingress port on the Nat but only one sucesds as a result only one can establish directly connection, the others use relays wich messes things up as it ads latency!!!
+
++ proxmox cluster can operate entirley on tailscale subnet such as the case with mine, So it dosent matter!
+  Score: -2
+  Created UTC: 2024-07-26 22:11:44
+
+Note: This post has only 4 comments at the time of scraping.

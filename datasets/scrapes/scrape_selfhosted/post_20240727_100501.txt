@@ -1,0 +1,76 @@
+Post Title: changedetection.io update 0.46.01 introducing price tracking!
+Author: dgtlmoon123
+Score: 146
+URL: https://www.reddit.com/r/selfhosted/comments/1e733vj/changedetectionio_update_04601_introducing_price/
+Number of comments: 17
+Created UTC: 2024-07-19 12:57:32
+
+Post Content:
+Long time no post to r/selfhosted :) &lt;3 wanted to give a little update since I havent posted here for several months, the newest big feature is **price change alerts and comparison/rules** so you can set upper and lower or even "percentage" change notifications.   
+Those rules can also be applied with a "tag" so you can tag hundreds of single product URL's and setup a notification if the price moves by 5% (for example)  
+  
+You can now also view those prices ***\_directly\_*** in the dashboard.
+
+[Price change rules](https://preview.redd.it/nlq7q5ia3hdd1.png?width=694&amp;format=png&amp;auto=webp&amp;s=a06bffb5aab690d4ec1d6031fd7440c3dd9be6e5)
+
+  
+And here's how it looks directly in the dashboard
+
+[Price monitoring in the dashboard](https://preview.redd.it/am0u19ke3hdd1.png?width=1032&amp;format=png&amp;auto=webp&amp;s=b8b2a224c09b03fffdc180fac7ff875ef4dd6690)
+
+  
+Other awesome feature is that the **Visual Selector** tool now accepts MULTIPLE selections :)
+
+Have fun, hope you enjoy the update - please share and give us a star on our github page - our stars stopped growing over summer :(
+
+Thanks all &lt;3 much love
+
+Top 7 comments:
+Comment 1:
+  Author: YesGoodBuddy
+  Comment: Easiest and best self hosted app
+  Score: 28
+  Created UTC: 2024-07-19 13:49:31
+
+Comment 2:
+  Author: longdarkfantasy
+  Comment: Still no support flaresolverr? Tbh, it's useless for me most of the time, because so many websites use Cloudflare nowadays.
+  Score: 30
+  Created UTC: 2024-07-19 16:17:42
+
+Comment 3:
+  Author: ribbit43
+  Comment: Is there a way to get around "are you a robot" buttons. For instance, walmart/sams makes you press a button until it changes.
+  Score: 8
+  Created UTC: 2024-07-20 01:06:23
+
+Comment 4:
+  Author: FanClubof5
+  Comment: Very cool. I have enjoyed using this app for a while now to monitor sales subs on reddit for things that I might want.
+  Score: 6
+  Created UTC: 2024-07-19 17:49:50
+
+Comment 5:
+  Author: benjo1989
+  Comment: Nice update. How can I get the price to display in my dashboard like you've shown in your screenshots?
+
+I'm monitoring an Amazon.co.uk page using Playwright Chrome:
+
+https://imgur.com/a/8yzMjC6
+  Score: 2
+  Created UTC: 2024-07-19 14:38:12
+
+Comment 6:
+  Author: mistersinicide
+  Comment: Is there like a guide to using changedetection with amazon? Whenever I try to set the restock/price tracking for an amazon page it never works and I have to change it to the general change tracking. Even turning off stock tracking, I still get the same error.
+
+    Unable to extract restock data for this page unfortunately. (Got code 200 from server), no embedded stock information was found and nothing interesting in the text, try using this watch with Chrome.
+  Score: 2
+  Created UTC: 2024-07-19 15:58:31
+
+Comment 7:
+  Author: HolaGuacamola
+  Comment: Love this software! Is there any way to make it detect changes in IFrames as well? A lot of sites I want to watch use iframes to embed content. 
+  Score: 2
+  Created UTC: 2024-07-19 19:09:07
+

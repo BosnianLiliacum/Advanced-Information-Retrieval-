@@ -1,0 +1,24 @@
+Post Title: How can I integrate a second device into the home lab?
+Author: ElectronicFinance603
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e6kknf/how_can_i_integrate_a_second_device_into_the_home/
+Number of comments: 2
+Created UTC: 2024-07-18 19:59:49
+
+Post Content:
+Hi guys, until now I've only used a single Rpi4 4Gb like home server (mainly pi hole and Nextcloud). Now I've recovered a mini-pc with an N95 and 8gb ram and so the idea is to add more services.
+
+I am considering trying to use k3s, but from what I understand it is recommended to have at least 3 nodes. Do you think for home use it may make sense to try with only 2? Or do you have any alternatives to recommend for balancing the load between the two devices?
+
+Note: the possible difficulty of k3s is not a problem, since I will need Kubernetes for a college course sooner or later
+
+edit: I also have a Rpi0 W if it can turn useful in some way
+
+Top 1 comments:
+Comment 1:
+  Author: ajd103
+  Comment: Could try a proxmox cluster but you won't have a lot of ram to dedicate to the VMs.  Could also look at docker swarm or just have two standalone docker setups hosting different stuff and integrated on the app side.
+  Score: 2
+  Created UTC: 2024-07-18 21:20:39
+
+Note: This post has only 1 comments at the time of scraping.

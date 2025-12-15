@@ -1,0 +1,20 @@
+Post Title: Vultr openbsd box spec recommendations?
+Author: PlusButterscotch1723
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1ec2hl0/vultr_openbsd_box_spec_recommendations/
+Number of comments: 2
+Created UTC: 2024-07-25 18:42:12
+
+Post Content:
+I am buying a vultr box with openbsd today and i need it to host a homepage and a spotify alternative i can connect to from my iphone. The homepage would possibly have an sql database attached to it that would be small. I would want to run both at the same time. Would the $6 per month option be enough for me?
+
+Top 1 comments:
+Comment 1:
+  Author: upofadown
+  Comment: Dunno, but I have no problem on the "1024.00 MB Regular Cloud Compute" plan running Dokuwiki on the OpenBSD httpd. Memory usage looks like this after a long up time:
+
+    Memory: Real: 91M/370M act/tot Free: 596M Cache: 193M Swap: 32M/518M
+  Score: 1
+  Created UTC: 2024-07-25 21:02:19
+
+Note: This post has only 1 comments at the time of scraping.

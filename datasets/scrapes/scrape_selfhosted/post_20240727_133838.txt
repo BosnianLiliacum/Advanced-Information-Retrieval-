@@ -1,0 +1,38 @@
+Post Title: Been running just a mac mini and a pihole, looking to get a NAS setup. Any tips?
+Author: Zdcthomas
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4cypm/been_running_just_a_mac_mini_and_a_pihole_looking/
+Number of comments: 4
+Created UTC: 2024-07-16 02:06:16
+
+Post Content:
+Hey y'all, I'm wondering what peoples tips and recs are for moving data from internal storage on an old mac mini to a NAS. Should I just move data over and abandon the mac mini for anything data storage related, or is it worth it to just mount the NAS as external storage for the mini? 
+
+Could also be that I'm asking the totally wrong question, and if so, definitely let me know! 
+
+Thanks!
+
+Top 2 comments:
+Comment 1:
+  Author: vee-eem
+  Comment: or you could use the NAS of a backup of the data on the mini, backing up daily or weekly. Depends on how important, how much its used, and how many layers of backups you need. Do you have other machines that use the data besides the mini?
+  Score: 1
+  Created UTC: 2024-07-16 03:13:34
+
+Comment 2:
+  Author: 1WeekNotice
+  Comment: &gt;Could also be that I'm asking the totally wrong question, and if so, definitely let me know! 
+
+You need to be a bit more clear in your questions. Technically the Mac mini can be a NAS. 
+
+I'm assuming by NAS you mean that you want a new machine that can hold a lot of storage in the form of many HHD? Maybe want RAID?
+
+Do you want to host service? 
+
+What exactly are your requirements? What do you want to do? And why is your Mac mini not good enough anymore?
+
+Hope that helps.
+  Score: 1
+  Created UTC: 2024-07-16 03:29:13
+
+Note: This post has only 2 comments at the time of scraping.

@@ -1,0 +1,38 @@
+Post Title: Self hosted barcode scanner w/ lookup and list creation?
+Author: elliottmarter
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e7q76d/self_hosted_barcode_scanner_w_lookup_and_list/
+Number of comments: 3
+Created UTC: 2024-07-20 07:36:56
+
+Post Content:
+I am looking for an app that I can use from my phone to scan barcodes and automatically look them up (they are blu-rays).
+
+Essentially want to be able to quickly scan a load of them and generate a big list of what I have scanned and save it for later reference.
+
+I keep finding a lot of inventory software where you generate your OWN barcodes but this is not quite what I want, I want it to immediately look the item up and give me an option to save it.
+
+A bit like eBay does when you list via the app, except self hosted and with a bit of an inventory feature.
+
+Top 3 comments:
+Comment 1:
+  Author: therkleon
+  Comment: You might be able to do this with excel.
+  Score: 1
+  Created UTC: 2024-07-20 14:04:09
+
+Comment 2:
+  Author: olejazz
+  Comment: There are a couple of android apps that may help  - see here for list and try the free ones with github links:
+https://android.izzysoft.de/applists/category/named/office_barcode_inventory#group_1074
+  Score: 1
+  Created UTC: 2024-07-23 15:30:25
+
+Comment 3:
+  Author: Hakker9
+  Comment: Not free but this might work for you
+http://www.invelos.com/
+  Score: 0
+  Created UTC: 2024-07-20 10:05:57
+
+Note: This post has only 3 comments at the time of scraping.

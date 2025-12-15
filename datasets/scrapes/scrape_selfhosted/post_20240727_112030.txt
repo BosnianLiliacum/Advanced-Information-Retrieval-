@@ -1,0 +1,78 @@
+Post Title: Tasks.md: 2.4.0 released
+Author: baIdissara
+Score: 91
+URL: https://www.reddit.com/r/selfhosted/comments/1ecnkt2/tasksmd_240_released/
+Number of comments: 9
+Created UTC: 2024-07-26 13:03:52
+
+Post Content:
+Hey guys, version 2.4.0 of [Tasks.md](https://github.com/BaldissaraMatheus/Tasks.md) was just released. The biggest change is the improved drag-and-drop experience, which feels much better to use. For touch devices it was fully overhauled, since it was not really working before (which is embarrassing tbh). You can see below a comparison between the previous version and the current release.
+
+Previous:
+
+https://i.redd.it/4dx5jtrh1ved1.gif
+
+New release:
+
+https://i.redd.it/k9asbg4j1ved1.gif
+
+[Tasks.md](https://github.com/BaldissaraMatheus/Tasks.md) is a self-hosted, Markdown file based task management board. It's like a kanban board that uses your filesystem as a database, so you can manipulate all cards within the app or change them directly through a text editor, changing them in one place will reflect on the other one.
+
+You can see below the main changes included in the new release.
+
+* Feature: Greatly improves drag and drop experience: New swap animations, visual indications and better interactions for touch and mobile devices;
+* Feature: Adds autoscroll when you drag cards and lanes partially out their container;
+* Bugfix: Fix touch and navigation on touch devices;
+* Bugfix: Fix issue where navigation bar outgrows lanes;
+* Bugfix: Prevents saving card name with invalid characters;
+* Bugfix: Fix some smaller issues;
+* Documentation: Remind user to hard-reload the browser after changing a theme.
+
+Top 7 comments:
+Comment 1:
+  Author: Cybasura
+  Comment: Oh shit, its a simple, straight to the point, no frisks or things to note kanban board
+
+How is it only now I learn about this
+  Score: 23
+  Created UTC: 2024-07-26 13:26:41
+
+Comment 2:
+  Author: Dudefoxlive
+  Comment: I am adding this to my homelab. As I see things that I want to do I can add it to that. Never knew this might be something that I needed.
+  Score: 8
+  Created UTC: 2024-07-26 14:21:55
+
+Comment 3:
+  Author: stiky21
+  Comment: Very cool!!
+
+At work, we are forced to learn Ruby on Rails right now, and this was a project for our R&amp;D division.
+  Score: 5
+  Created UTC: 2024-07-26 15:13:05
+
+Comment 4:
+  Author: Easy_Ad_9878
+  Comment: Wow great tool!
+Ging to add this thnx!
+  Score: 2
+  Created UTC: 2024-07-26 14:51:26
+
+Comment 5:
+  Author: DarthSidiousPT
+  Comment: Is there a way to install this on a shared-hosting server, without relying on Docker (which is not available, at all)?
+  Score: 2
+  Created UTC: 2024-07-26 16:45:09
+
+Comment 6:
+  Author: josemcornynetoperek
+  Comment: That's will be great with deadlines and notifications about it.
+  Score: 2
+  Created UTC: 2024-07-26 17:59:58
+
+Comment 7:
+  Author: nightcom
+  Comment: I'm adding it to my lab. Thank you for your work!
+  Score: 2
+  Created UTC: 2024-07-26 18:03:38
+

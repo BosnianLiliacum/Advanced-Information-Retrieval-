@@ -1,0 +1,50 @@
+Post Title: Rebuilt my homelab... fun :)
+Author: neilcresswell
+Score: 36
+URL: https://www.reddit.com/r/selfhosted/comments/1e8cuyk/rebuilt_my_homelab_fun/
+Number of comments: 27
+Created UTC: 2024-07-21 03:12:59
+
+Post Content:
+So, finally got around to rebuilding my homelab after my old Mac Mini VMware Host decided it was time to stop working..
+
+I went with a HP Z440 Pro Workstation with 14 Xeon Cores (28 Logical CPU's), 64GB RAM, and 1TB SSD... will upgrade it with a 2TB NVMe and likely add some extra RAM, as its a little sluggish with all these VMs. Proxmox v8 is running on it, and then an array of Container Platforms (Docker and Kubernetes)... why you ask? So i can play with Portainer managing them all... 
+
+Proxmox takes a while to get used to when you have spent 20 years working with VMware, but hey, its close enough.
+
+Forgot how much I love messing with this stuff.
+
+Next, some NFS storage to test NFS CSI drivers for Kubernetes.. oh and I want to deploy an OpenShift OKD cluster to experiment with too..
+
+https://preview.redd.it/pa943r1tgsdd1.png?width=1919&amp;format=png&amp;auto=webp&amp;s=3290e2ab3e5f93020bf0bffdf4194b4252d375e9
+
+https://preview.redd.it/988f0n9vgsdd1.png?width=1909&amp;format=png&amp;auto=webp&amp;s=154a65fc464a39058f8391bf0b85ef5ebbb5cad9
+
+
+
+Top 3 comments:
+Comment 1:
+  Author: madhur_ahuja
+  Comment: Hi.. Great stuff. Can you tell me more about services you are running? Are you running kubernetes in docker. From first screenshot it seems its running in docker. In second, it looks it running in proxmox VM's.
+  Score: 7
+  Created UTC: 2024-07-21 03:34:53
+
+Comment 2:
+  Author: marceldarvas
+  Comment: For Portainer BE, are you using Home user license?
+I see several nodes, no need to limit due to license count?
+  Score: 1
+  Created UTC: 2024-07-22 18:21:29
+
+Comment 3:
+  Author: neilcresswell
+  Comment: Learnings.. 
+
+1) Proxmox backup/restore is not very useful.. backed up vm’s can only be restored on the same host. No way to download the backup and restore on another host.. seems silly… need to use the dedicated proxmox backup server if you need this.
+2) proxmox clustering is neat, and an easy way to migrate vms across hosts.
+3) memory deduplication, like vmware has, would be awesome in Proxmox.. but right now 1gb assigned = 1gb used.
+4) disk IO is the real bottleneck. Need massive iops to run any decent number of VM’s, and even a SSD isnt enough.
+  Score: 1
+  Created UTC: 2024-07-21 03:30:22
+
+Note: This post has only 3 comments at the time of scraping.

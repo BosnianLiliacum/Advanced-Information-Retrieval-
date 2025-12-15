@@ -1,0 +1,58 @@
+Post Title: Swarmcast: Open-source P2P Livestreaming (No logins, scalable)
+Author: TheDuk33
+Score: 20
+URL: https://www.reddit.com/r/selfhosted/comments/1e6r7u1/swarmcast_opensource_p2p_livestreaming_no_logins/
+Number of comments: 13
+Created UTC: 2024-07-19 00:58:38
+
+Post Content:
+If you just want to see it in action, I’m hosting a stream now here [~https://saito.io/swarmcast/~](https://saito.io/swarmcast/?dream=eDhFVkJGY3k2aDd5VmMyTVpaRlNLSndDQWF2YktzN2hiS243TndjaVFXWXY=) (the one with the cats). Keep in mind this is in beta, and we’re still fixing issues, but the tech roughly works.
+
+It’s a P2P livestreaming system called Swarmcast. Key points:
+
+* Pure P2P architecture
+* No logins required
+* Open-source
+* Scalable design
+
+Technical overview:
+
+* Host broadcasts directly to initial peers
+* Subsequent peers form a branching network, relaying the stream
+* Uses STUN for peer discovery
+* Public/private keypairs for user authentication
+
+Current focus: Improving stability at scale, particularly handling peer disconnections and UI.
+
+The project aims to provide an independent alternative to centralized streaming platforms, with added video and screen sharing capabilities.
+
+GitHub:[ ~https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/limbo~](https://github.com/SaitoTech/saito-lite-rust/tree/master/mods/limbo)
+
+Feedback, questions, and contributions are welcome.
+
+Top 4 comments:
+Comment 1:
+  Author: YesGoodBuddy
+  Comment: Why crypto?
+  Score: 3
+  Created UTC: 2024-07-19 10:41:07
+
+Comment 2:
+  Author: jokhm
+  Comment: what is impressive is, you can spin the whole thing up yourself!!!
+  Score: 2
+  Created UTC: 2024-07-19 01:05:51
+
+Comment 3:
+  Author: GaryTitter
+  Comment: Saito is a proven scam And crypto grift
+  Score: 0
+  Created UTC: 2024-07-19 08:30:42
+
+Comment 4:
+  Author: SerinitySW
+  Comment: Damn, I was interested until I saw it was crypto...
+  Score: 0
+  Created UTC: 2024-07-19 10:00:30
+
+Note: This post has only 4 comments at the time of scraping.

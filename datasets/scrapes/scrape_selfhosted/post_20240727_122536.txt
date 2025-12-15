@@ -1,0 +1,83 @@
+Post Title: Anyone self hosting with T-Mobile home Internet gateway as an ISP? 
+Author: soggyGreyDuck
+Score: 8
+URL: https://www.reddit.com/r/selfhosted/comments/1e8rhl7/anyone_self_hosting_with_tmobile_home_internet/
+Number of comments: 18
+Created UTC: 2024-07-21 17:24:42
+
+Post Content:
+I really love the monthly price but because it's so locked down I feel like I'm unable to do any personal projects. I'm wondering if anyone else is using T-Mobile as a home Internet provider and also self hosting. Id love to find out there's just some setting or passthrough I need to enable but I fear it's simply not possible with the way T-Mobile configures their gnet? 
+
+My current frustration is trying to setup a home server. I'm trying to setup a zimaboard and the initial setup goes as expected but the app store doesn't have Internet access, I can't check for updates and I don't have an IP address when I check from command line. 
+
+The instructions for it are to basically plug and play to get to the app store so something must be wrong. 
+
+Edit &amp; Answer: the problem was with the devices date and time being invalid and thus failing with the security certificate. Manually updating the date, time and time zone should resolve the issue. 
+
+Top 7 comments:
+Comment 1:
+  Author: 399ddf95
+  Comment: You will not be able to accept inbound connections in the traditional way. It's possible to use things like ngrok or Cloudflare tunnels to create workarounds but the service is not meant for this. 
+
+It's much easier to "self host" something on a VPS somewhere if you need it to be accessible from the global internet.
+  Score: 5
+  Created UTC: 2024-07-21 17:38:34
+
+Comment 2:
+  Author: chmedly020
+  Comment: Here's a recipe for somewhere in the US (T-mobile land): 
+
+1) Go to lowendbox and look for special discounted VPS's. This link has an option for a 1GB ram 2TB bandwidth VPS for about $1/month. [https://lowendbox.com/blog/racknerd-restock-alert-kvm-vps-in-multiple-locations-from-11-38-year/](https://lowendbox.com/blog/racknerd-restock-alert-kvm-vps-in-multiple-locations-from-11-38-year/)   select a city near you. 
+
+2) Install Docker on the VPS
+
+3) Setup a docker container with rathole on the VPS and configure as the server
+
+4) Setup a rathole container (or "bare metal") on your local machine with rathole configured as a client
+
+5) Set the DNS for your domain to point to the VPS ip address
+
+6) Use caddy (or nginx w/certbot) at your local machine to setup certificates (just as you would with a 'regular' port forward scenario). This way, the encryption will pass right through the VPS and terminate at your local machine. 
+
+
+
+Enjoy hosting from your home for a small annual VPS fee.
+  Score: 3
+  Created UTC: 2024-07-21 20:06:42
+
+Comment 3:
+  Author: Evajellyfish
+  Comment: That’s the reason I left tmobile internet, I couldn’t port forward and host my applications
+  Score: 2
+  Created UTC: 2024-07-21 18:43:58
+
+Comment 4:
+  Author: chucklesduck
+  Comment: I had T-Mobile home Internet. I had to run a VPS to access my servers and get a static IP.
+  Score: 2
+  Created UTC: 2024-07-21 20:47:50
+
+Comment 5:
+  Author: Lazy_Sl0b
+  Comment: T-Mobile uses CG-NAT, so you won't be able to access anything from outside your network without something like a VPN or Cloudflare (as mentioned previously). 
+
+That said, all of your applications will have no problem accessing the internet, which it looks like is your concern.
+
+Just know without some work, you won't be able to access anything when you're away from home.
+  Score: 2
+  Created UTC: 2024-07-22 00:10:17
+
+Comment 6:
+  Author: ChiefLewus
+  Comment: I use T-Mobile as a backup provider to Starlink. While my service is not the fastest with T-Mobile… usually 5 down 20 up it still allows me access to my self hosted applications. 
+
+Both of my providers are CG-NAT however so I can’t port forward. To get around this I originally used cloudflare tunnels. Now I run my own tunnel with a VPS, Tailscale and Nginx.
+  Score: 2
+  Created UTC: 2024-07-22 10:00:57
+
+Comment 7:
+  Author: mrcruton
+  Comment: https://github.com/zacharee/ArcadyanKVD21Control/
+  Score: 1
+  Created UTC: 2024-07-22 02:09:14
+

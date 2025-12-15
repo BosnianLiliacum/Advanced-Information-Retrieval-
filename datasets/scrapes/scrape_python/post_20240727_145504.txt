@@ -1,0 +1,56 @@
+Post Title: pgmq-sqlalchemy - Postgres Message Queue Python client that using SQLAlchemy ORM
+Author: jason810496
+Score: 21
+URL: https://www.reddit.com/r/Python/comments/1ebvafo/pgmqsqlalchemy_postgres_message_queue_python/
+Number of comments: 6
+Created UTC: 2024-07-25 13:46:02
+
+Post Content:
+# [pgmq-sqlalchemy](https://github.com/jason810496/pgmq-sqlalchemy)
+
+# What My Project Does
+
+A more flexible [PGMQ Postgres extension](https://github.com/tembo-io/pgmq) Python client using **SQLAlchemy ORM**, supporting both **async** and **sync** `engines`, `sessionmakers`, or built from `dsn`.
+
+# Comparison
+
+* The [official PGMQ package](https://github.com/tembo-io/pgmq) only supports `psycopg3` DBAPIs.
+* For most use cases, using `SQLAlchemy` ORM as the PGMQ client is more flexible, as most Python backend developers won't directly use Python Postgres DBAPIs.
+
+# Features
+
+* Supports **async** and **sync** `engines` and `sessionmakers`, or built from `dsn`.
+* **Automatically** creates the `pgmq` (or `pg_partman`) extension on the database if it does not exist.
+* Supports **all Postgres DBAPIs supported by SQLAlchemy**, e.g., `psycopg`, `psycopg2`, `asyncpg`.
+   * See [SQLAlchemy Postgresql Dialects](https://docs.sqlalchemy.org/en/20/dialects/postgresql.html) for all dialects.
+
+# Target Audience
+
+[pgmq-sqlalchemy](https://github.com/jason810496/pgmq-sqlalchemy) is a production package that can be used in scenarios that need a message queue for general fan-out systems or third-party dependencies retry mechanisms.
+
+# Links
+
+* [PyPI](https://pypi.org/project/pgmq-sqlalchemy/)
+* [GitHub](https://github.com/jason810496/pgmq-sqlalchemy)
+* [Documentation](https://pgmq-sqlalchemy.readthedocs.io/en/latest/)
+
+Top 3 comments:
+Comment 1:
+  Author: ElectricalBat4629
+  Comment: Cool ![img](emote|t5_2qh0y|608)
+  Score: 1
+  Created UTC: 2024-07-25 13:49:21
+
+Comment 2:
+  Author: chuckhend
+  Comment: Awesome work!
+  Score: 1
+  Created UTC: 2024-07-25 14:02:27
+
+Comment 3:
+  Author: MeroLegend4
+  Comment: Nice project 👍
+  Score: 1
+  Created UTC: 2024-07-25 15:48:51
+
+Note: This post has only 3 comments at the time of scraping.

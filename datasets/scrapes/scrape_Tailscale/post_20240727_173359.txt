@@ -1,0 +1,44 @@
+Post Title: Route traffic for example.com on my LAN via Exit Node without VPN clients on End-User Devices
+Author: SamuraiHack43
+Score: 2
+URL: https://www.reddit.com/r/Tailscale/comments/1eb4hvs/route_traffic_for_examplecom_on_my_lan_via_exit/
+Number of comments: 4
+Created UTC: 2024-07-24 15:36:09
+
+Post Content:
+https://preview.redd.it/ych4x095jhed1.png?width=876&amp;format=png&amp;auto=webp&amp;s=0cf850bb863a52bf440900d3244ede6321676f15
+
+Hi,
+
+I am looking for a solution where when I access [example.com](http://example.com) on my computer/mobile it routes traffic via tailscale exit node without VPN on end user devices.
+
+On my LAN the DNS resolves [example.com](http://example.com) to a local server IP Address. This local server has a container with tailscale configured to route internet traffic to the exit node on AWS. The node on AWS is advertised as an exit node in a tailscale network.
+
+I don't want to install a tailscale VPN client on my laptop/mobile.
+
+The diagram above show my thought process.
+
+I am open to setting up squid proxy or reverse proxy (nginx) or routing on the container.
+
+Top 2 comments:
+Comment 1:
+  Author: The-Sentinel
+  Comment: This really isn't possible without a client.
+
+Tailscale configured an encrypted tunnel between two clients. If you want to get not Tailscale clients into the secure network, the only way to effectively do that is to set up routes to a Tailscale devices interface.
+
+You can set a route on your router to send any traffic destined for the IP addresses for example.com to the Tailscale client, depending on the model, but really this is trying to fit a square peg into a round hole.
+  Score: 3
+  Created UTC: 2024-07-24 17:35:23
+
+Comment 2:
+  Author: banerxus
+  Comment: Not sure if this could be accomplished with tailscale subnet router.
+
+I have a working configuration using a VPS with tailscale and when I type example.com redirect to my VPS IP then caddy redirects the traffic to 100.x.x.x tailscale IP which points to a service on my home server.  I know it is not the same but maybe if I configure that service tailnet with an exit node it will work. I will try testing.
+
+But I am really not sure what you are trying to accomplish with that setup.
+  Score: 1
+  Created UTC: 2024-07-25 04:04:06
+
+Note: This post has only 2 comments at the time of scraping.

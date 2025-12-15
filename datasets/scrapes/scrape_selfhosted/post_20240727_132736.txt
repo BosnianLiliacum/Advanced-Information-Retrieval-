@@ -1,0 +1,30 @@
+Post Title: MoodeAudio: Can someone tell me what this button is, and how I could access it through the terminal? 
+Author: Obvious-Dinner-1082
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e4y285/moodeaudio_can_someone_tell_me_what_this_button/
+Number of comments: 2
+Created UTC: 2024-07-16 19:51:45
+
+Post Content:
+I'm building a headless music player, and I've written a script to automatically upload music files to the directory where moodeaudio pulls from.
+
+Anyway, the new music doesn't show up in the library until I click this star button. Even when going to the M menu and selecting "update library"
+
+I don't see any documentation that tells me what this button is.
+
+Being a headless unit, I want to add into my script, to execute that command for seamless updating in the library.
+
+https://preview.redd.it/rivfvafzqxcd1.png?width=949&amp;format=png&amp;auto=webp&amp;s=ab179897d20150cedadded789eb8b1073b8e0c92
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: AngryDemonoid
+  Comment: It is "Play a random album"
+
+https://github.com/moode-player/docs/blob/main/Quickhelp.pdf
+  Score: 1
+  Created UTC: 2024-07-17 02:12:06
+
+Note: This post has only 1 comments at the time of scraping.

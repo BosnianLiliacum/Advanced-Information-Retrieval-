@@ -1,0 +1,44 @@
+Post Title: How to get apps to support nginx + [AUTH] proxy?
+Author: JamesP3-
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1ec058r/how_to_get_apps_to_support_nginx_auth_proxy/
+Number of comments: 3
+Created UTC: 2024-07-25 17:07:27
+
+Post Content:
+How can I keep nginx+authelia but also use companion apps which don't expect authelia?
+
+I have nginx (proxy manager) set up with Authelia for authentication. That's worked pretty well for me, and I feel better about having the authentication layer in front of apps. However, some of the proxied applications have companion apps, and those apps don't support the authelia login screen. Examples are home assistant and paperless ngx.
+
+Some thoughts:
+
+1. Turn off authelia authentication for the affected self-hosted apps. Not ideal, though most self-hosted apps advanced enough to have a companion app tend to have their own decent authentication.
+2.  Keep authelia and then use something like tailscale from my mobile device to bypass nginx altogether. 
+3. Keep authelia but then create a special rule in NPM to bypass authelia for specific traffic.
+   1. Ideally, I could do something like a client certificate on my mobile device and if NPM sees the client certificate then it bypasses authelia. However, [apps aren't great with client certificate support](https://www.reddit.com/r/selfhosted/comments/tfxtr8/client_certificates_and_apps/).
+   2. Make some security-through-obscurity rules to bypass this traffic, like keeping an allowlist of user agents for the apps that I want to bypass authelia.
+
+Any better ideas?
+
+  
+
+
+Top 2 comments:
+Comment 1:
+  Author: Parking-Cow4107
+  Comment:  - Disable built it authentication where possible and use only authelia. I see paperless finally added oidc? 
+https://docs.paperless-ngx.com/configuration/#PAPERLESS_SOCIALACCOUNT_PROVIDERS
+
+- use both authelia and app logins (tripple auth? 🤓)
+
+- disable authelia and only use app auth.
+  Score: 1
+  Created UTC: 2024-07-25 17:57:53
+
+Comment 2:
+  Author: fyijesuisunchat
+  Comment: If OAuth or other authentication isn’t possible, you would allow access to just the API path of your application without authentication, enabling access with an API key.
+  Score: 1
+  Created UTC: 2024-07-25 23:31:17
+
+Note: This post has only 2 comments at the time of scraping.

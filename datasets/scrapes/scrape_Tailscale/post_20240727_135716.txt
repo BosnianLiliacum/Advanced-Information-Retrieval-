@@ -1,0 +1,18 @@
+Post Title: Td  link travel router 
+Author: MrPolly83
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1ecd6o1/td_link_travel_router/
+Number of comments: 1
+Created UTC: 2024-07-26 02:36:15
+
+Post Content:
+Hello. I reached out to Tailscale support on installing Tailscale on a TP-Link Ultra-Portable Wi-Fi 6 AX1500 Travel Router TL-WR1502X and they said to ask on this channel. So anyone do it and have the steps on installing it?
+
+Top 1 comments:
+Comment 1:
+  Author: Forsaked
+  Comment: Probably only when running OpenWRT, but isn't compatible yet.
+  Score: 1
+  Created UTC: 2024-07-26 06:29:38
+
+Note: This post has only 1 comments at the time of scraping.

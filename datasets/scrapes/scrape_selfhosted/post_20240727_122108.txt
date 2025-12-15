@@ -1,0 +1,63 @@
+Post Title: Need help with expanding storage
+Author: ak127a
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e97y3j/need_help_with_expanding_storage/
+Number of comments: 8
+Created UTC: 2024-07-22 07:06:16
+
+Post Content:
+Hi folks! Second post here.
+
+I recently started my self hosted journey, I am running an old legion y520 laptop as my server for jellyfin + immich.
+
+
+I only recently added immich to the setup and I realise that I might need more storage soon, and also because currently there's no backup setup.
+
+
+Here's the current storage setup:
+
+- 2 tb 5200rpm HDD
+- 256 gb nvme ssd
+
+
+Slots as per manual:
+
+
+- Storage : HDD / 2.5" wide, 5400 rpm, 7mm high, SATA 6.0Gb/s support
+- M.2 SSD : M.2 SSD / PCIe 3.0 x 4
+- Optical : None
+ 
+I don't see any limits being mentioned, but perhaps there are..
+
+
+What are my options here? I want the cheapest solution which: 
+
+- increases my storage to lets say 6tb
+- implements a backup so I don't need to worry if one drive fails
+
+Top 2 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: &gt; increases my storage to lets say 6tb 
+
+Bigger drives.
+
+&gt; implements a backup so I don't need to worry if one drive fails 
+
+Have offsite backup and use RAID.
+  Score: 1
+  Created UTC: 2024-07-22 07:58:07
+
+Comment 2:
+  Author: cyt0kinetic
+  Comment: Are you looking to replace the internal drives in the tower? It sounds like yes, is this a rig you built yourself or one you built? A lot comes down to how many SATA slots there are on the board and what type and how many drive bays are in the case. For storage I personally prefer 3.5in HDDs in a tower. Likely there is a bay that size in a tower and you likely have more SATA slots than the manual says since boards are typically made with at least two. Might be that because it was a pre built box they just did one? I'm just used to even pre built towers having a little bit extra.
+
+You'll want to either get the true specs on the board or match the current stats. Personally I'd fine the board specs since being able to go over 5400 would be nice and give you more options. If you can't find the board specs you're likely going to need to get inside to check the drive bay situation and can see what sata is available and just stick with 5400rpm.
+
+I'd create at least one backup that isn't live on the server, either run through a second device, like I use a raspberry pi, or even build an external drive and manually do it if nothing else, just disconnect when done. Idea is if the server itself fails your backup won't fail with it. Best case is offsite backup. Avoid pre built off the shelf external drives. They fail a lot, don't tend to be made great.
+
+Ideally you have two 3.5 SATA slots and bays, get two new drives and raid them, and get an enclosure for your 2.5in drive and make it the backup.
+  Score: 1
+  Created UTC: 2024-07-22 08:40:19
+
+Note: This post has only 2 comments at the time of scraping.

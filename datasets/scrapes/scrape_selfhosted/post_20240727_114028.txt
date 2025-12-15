@@ -1,0 +1,41 @@
+Post Title: Nginx Proxy Manager Problem
+Author: BeardedBearUk
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebd6gz/nginx_proxy_manager_problem/
+Number of comments: 3
+Created UTC: 2024-07-24 21:28:20
+
+Post Content:
+Today I started getting this error and can't figure what went wrong or how to fix it - I have even tried restoring a recent backup
+
+    nginx-proxy-manager-npm-1 | ❯ Starting nginx ...  
+    nginx-proxy-manager-npm-1 | nginx: \[emerg\] cannot load certificate "/etc/letsencrypt/live/npm-2/fullchain.pem": BIO\_new\_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/npm-2/fullchain.pem, r) error:10000080:BIO routines::no such file)
+
+Can anyone help?
+
+Top 2 comments:
+Comment 1:
+  Author: d4nm3d
+  Comment: yeah this happened to me in the past after deleting a certificate..
+
+You need to find the config that's trying to call the missing certificate.
+
+or, do what i used to do and just wipe it and start again
+
+(I've now moved to Caddy)
+  Score: 7
+  Created UTC: 2024-07-24 22:20:50
+
+Comment 2:
+  Author: GolemancerVekk
+  Comment: You've deleted a SSL certificate but you still have one or more proxy hosts that use that certificate.
+
+Go to your `/data/nginx/proxy_host/` dir where you have the `*.conf` files for proxy hosts and search for "/etc/letsencrypt/live/npm-2/fullchain.pem" to find the configs that use it. You can delete those files (or move them out of the way) and restart the proxy or container.
+
+You can also edit them to make them use a different certificate – basically you just have to change the "2" in "npm-2" to another number... just make sure that certificate exists and matches the host's domain.
+
+Edit: Unfortunately this is a problem with Nginx, if any piece of the config goes bad the whole thing refuses to work. If you don't like this then look into using Caddy (best if you want something easy to learn) or Traefik.
+  Score: 2
+  Created UTC: 2024-07-25 11:08:52
+
+Note: This post has only 2 comments at the time of scraping.

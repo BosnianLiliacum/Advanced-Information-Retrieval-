@@ -1,0 +1,59 @@
+Post Title: Help me get around NAT
+Author: thundersleet11235
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e544dq/help_me_get_around_nat/
+Number of comments: 17
+Created UTC: 2024-07-17 00:09:58
+
+Post Content:
+I recently got a new ISP, which came with a new set of problems. I am used to having the ability to slap some port forwarding and DNS records together to get access to my local services, but my ISPs NAT has thrown a wrench in that. I'd like to be able to set up a game server hosted on my local network, and be able to have my friends play with me over the internet. I'm looking for some solution that doesn't involve having them install a VPN client, but I'm not really coming up with anything. What are my options?
+
+Top 7 comments:
+Comment 1:
+  Author: Cynyr36
+  Comment: A vps with a wireguard tunnel back to your network. Friends connect to vps, and that forwards the connection back home.
+  Score: 8
+  Created UTC: 2024-07-17 00:33:54
+
+Comment 2:
+  Author: natermer
+  Comment: Most of the time these ISPs use CGNAT to work around the costs of Ipv4 addressing.
+
+If you use IPv6 instead it works around most of these issues.  Each system on your network will have a individually internet-addressable address. Depending on the ISP you can often have your router request a subnet-able.
+  Score: 3
+  Created UTC: 2024-07-17 00:14:13
+
+Comment 3:
+  Author: TheLucidRoad
+  Comment: [Tailscale Funnel](https://tailscale.com/kb/1223/funnel) may work in this instance. You only need to run Tailscale on your server, run the funnel command and then provide your friends with the publically accesible funnel URL.
+
+Your friends won't need to have the Tailscale client installed.
+  Score: 3
+  Created UTC: 2024-07-17 04:40:16
+
+Comment 4:
+  Author: Geoffman05
+  Comment: Call your ISP and get a static IP assigned. It’ll cost you a few extra bucks a month but that’s the price to play the game.
+  Score: 2
+  Created UTC: 2024-07-17 01:29:47
+
+Comment 5:
+  Author: FlashTwerk69
+  Comment: Tailscale
+  Score: 2
+  Created UTC: 2024-07-17 05:41:19
+
+Comment 6:
+  Author: DULUXR1R2L1L2
+  Comment: &gt;but my ISPs NAT has thrown a wrench in that
+
+You gotta say more than that
+  Score: 1
+  Created UTC: 2024-07-17 07:10:21
+
+Comment 7:
+  Author: sylsylsylsylsylsyl
+  Comment: Cloudflare tunnel would get around it.
+  Score: 2
+  Created UTC: 2024-07-17 19:47:45
+

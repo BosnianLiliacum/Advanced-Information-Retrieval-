@@ -1,0 +1,87 @@
+Post Title: Hetzner, network Abuse
+Author: Specialist-Menu-5688
+Score: 46
+URL: https://www.reddit.com/r/selfhosted/comments/1e9k1x1/hetzner_network_abuse/
+Number of comments: 33
+Created UTC: 2024-07-22 17:29:19
+
+Post Content:
+Hi Everyone,
+
+About a year ago, I became an enthusiastic self-hoster. It gives me a sense of control, and I'm learning a lot. Since I prefer not to run computers at home, I rent a dedicated server from Hetzner.
+
+Yesterday, I received an email notifying me that a netscan had been detected originating from my server. It had been scanning IP addresses like [192.1.0.253](http://192.1.0.253) on port 8006. Because I didn't respond in time, Hetzner temporarily blocked my IP from accessing the internet. I am now trying to find the root cause, as it seems something in my network is performing these scans. I have no idea how this happened since none of my servers are accessible from the internet; I use Cloudflare to protect them.
+
+Where would you start in addressing this issue? How can I find the root cause?
+
+Here's my setup:
+
+* Dedicated server from Hetzner with a WAN IP address: x.x.x.1
+* ProxMox firewall enabled, only my own IP has access
+* ProxMox running pfSense with WAN IP address: x.x.x.2 (this IP was blocked)
+* 15 virtual servers with internal IPs assigned by pfSense
+* Access only via Cloudflare, no open public ports. A Cloudflare connector is installed in my network.
+* Each service has a unique subdomain on my main domain.
+* Each subdomain is protected by Cloudflare Zero Trust: I can only log in when connected to Cloudflare Warp and authenticated; otherwise, Cloudflare blocks everything.
+
+My question is: How is this possible when none of my servers are supposed to be connected to the internet? How can I determine which server caused this? How do you prevent issues like this? I'd also like to be notified immediately when something unusual occurs in my network. What tools do you use for this?
+
+I'm feeling quite anxious because I also host 55,000 photos on my server.
+
+Where would you start?
+
+Thank you for your help.
+
+Top 7 comments:
+Comment 1:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: 55
+  Created UTC: 2024-07-22 18:13:32
+
+Comment 2:
+  Author: phein4242
+  Comment: Start by checking network connections using ‘ss -p’. Look for port 8006 and SYN_SENT. This will tell you which program is making the connection (if you are lucky).
+
+If you are not comfortable with forensics, a reinstall is usually quicker. Be sure to also reset all passwords involved with this host. If there is a vpn, also check all hosts connected to the vpn.
+  Score: 18
+  Created UTC: 2024-07-22 23:11:39
+
+Comment 3:
+  Author: jwreford
+  Comment: On your proxmox box you might be able to find out what’s happening by running a packet capture. For example:
+
+tcpdump -i any port 8006
+
+If the traffic is coming from one of your VMs, and is happening while you’re running the capture, you should see it here
+  Score: 13
+  Created UTC: 2024-07-22 20:31:39
+
+Comment 4:
+  Author: funkypenguin
+  Comment: Do your proxmox VMs have the proxmox agent installed? If so, is it possible the agent is trying to talk back to your Proxmox host, but the egress traffic is leaving the WAN interface of the pfsense and triggering the Hetzner abuse/scan alert?
+  Score: 9
+  Created UTC: 2024-07-23 02:22:48
+
+Comment 5:
+  Author: casafora
+  Comment: | 15 virtual servers
+
+Sorry by the question but how much are you expending on this server?
+  Score: 17
+  Created UTC: 2024-07-23 00:02:56
+
+Comment 6:
+  Author: NeitherManner
+  Comment: I had recently issue with hetzner and they said it was issue on their system after initial abuse email. 
+  Score: 4
+  Created UTC: 2024-07-23 02:25:59
+
+Comment 7:
+  Author: bendem
+  Comment: Firewall is for outbound traffic too. Block that port see what stops working.
+
+Also reminder that a very short internet allowlist is a great security since most malware will reach to the internet to download their payload.
+  Score: 4
+  Created UTC: 2024-07-23 06:22:06
+

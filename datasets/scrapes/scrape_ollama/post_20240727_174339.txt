@@ -1,0 +1,24 @@
+Post Title: How to I make the AI know sports 
+Author: dirtybirdhq
+Score: 1
+URL: https://www.reddit.com/r/ollama/comments/1ec9u17/how_to_i_make_the_ai_know_sports/
+Number of comments: 6
+Created UTC: 2024-07-25 23:51:59
+
+Post Content:
+Just install recent mistral for ollama how do i make the AI know more about from basketball, football, baseball, hockey 
+
+Top 2 comments:
+Comment 1:
+  Author: FesseJerguson
+  Comment: Like news or stats? News might work but stats or historical facts will not work so great for that you might want to look at rags, check out the front-ends for ollama there's plenty to choose from and try out
+  Score: 2
+  Created UTC: 2024-07-26 00:15:16
+
+Comment 2:
+  Author: c_ya_c
+  Comment: I combination with OpenWebui and RAG this works flawlessly in my setup. From what I can judge the easiest to use LLM toolbox.
+  Score: 1
+  Created UTC: 2024-07-26 10:21:36
+
+Note: This post has only 2 comments at the time of scraping.

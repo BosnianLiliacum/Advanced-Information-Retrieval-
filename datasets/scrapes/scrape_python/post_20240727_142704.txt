@@ -1,0 +1,99 @@
+Post Title: Introducing Expedite Bridge - A simple encrypted file transfer utility for humans
+Author: t0xic0der
+Score: 1
+URL: https://www.reddit.com/r/Python/comments/1ea5av1/introducing_expedite_bridge_a_simple_encrypted/
+Number of comments: 7
+Created UTC: 2024-07-23 11:18:49
+
+Post Content:
+# What my project does
+
+**Expedite Bridge** is a GUI client for **Expedite Service**, a simple encrypted file transfer service (that I published [about](https://www.reddit.com/r/Python/comments/1dx7qqb/introducing_expedite_a_simple_encrypted_file/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button) around a couple of weeks back). Written in [PySide6](https://pypi.org/project/PySide6/), the builds are provided for GNU/Linux distributions and Microsoft Windows. With this project, I attempt to make it easier for users where a desktop environment is available, compared to the CLI client **Expedite Prompt**.
+
+# Illustrations
+
+* [https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-info-stat.png](https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-info-stat.png)
+* [https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-send-stat.png](https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-send-stat.png)
+* [https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-recv-stat.png](https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-recv-stat.png)
+* [https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-send-prog.gif](https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-send-prog.gif)
+* [https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-recv-prog.gif](https://raw.githubusercontent.com/gridhead/expedite/main/data/bridge-recv-prog.gif)
+
+# Attempting
+
+If this looks exciting to you, please consider giving the project a spin using the [publicly available servers](https://github.com/gridhead/expedite?tab=readme-ov-file#offerings) and let me know how I can further improve the project by [**filing**](https://github.com/gridhead/expedite/issues) issue tickets for software errors or feature requests. [**Starring**](https://github.com/gridhead/expedite/stargazers) the project repository, [**contributing**](https://github.com/gridhead/expedite/fork) to the codebase or [**sponsoring**](https://github.com/sponsors/gridhead) me to keep working on more FOSS projects would forever be greatly appreciated! &lt;3
+
+The binaries are built using [PyInstaller](https://pypi.org/project/pyinstaller/) on the [GitHub Actions CI](https://github.com/actions) whenever a commit is pushed to the repository. Please visit the [GitHub Actions page](https://github.com/gridhead/expedite/actions) of the project repository to download the builds. While the project can run on any platform supporting Python, the automated builds are available only for GNU/Linux distributions and Microsoft Windows of x86-64 architecture.
+
+# Target Audience
+
+This project is meant for general users...
+
+* Those who do not have a publicly accessible IP address for their personal computers
+   * Because their ISP provides them a carrier-grade network address translation service
+   * Because they do not want to expose their personal computers to the open internet
+* Those who do not want to use third party storage services for storing their data assets
+   * Because they do not trust how the service providers might use their information
+   * Because they do not want or cannot pay for the services of larger storage capacity
+* Those who do not want to go through the trouble of setting up a VPN service
+   * Because they do not necessarily belong to the system administration fraternity
+   * Because sharing data assets is too small of a usecase for setting up a VPN
+
+# Comparison
+
+* **transfer.sh**
+   * Positives
+      * Asynchronous mode of transmission is possible up to a default time of 14 days
+      * No account creation or no utility installation is required in most cases
+   * Negatives
+      * Requires the entire file contents to be uploaded before it can be downloaded
+      * Requires large storage capacity at the server side due to data retention
+* **Google Drive**
+   * Positives
+      * Large amount of mirrors ensures proper data content duplication and availability
+      * Integration with multiple Google Workspace services and other collaborative tools
+   * Negatives
+      * Requires a mandatory Google account inviting invasive analytical tracking
+      * Concerns regarding privacy and usage conditions of data content stored
+
+# Resources
+
+* [Expedite - GitHub](https://github.com/gridhead/expedite)
+* [Expedite - PyPI](https://pypi.org/project/expedite/)
+* [Expedite - Docker Hub](https://hub.docker.com/r/t0xic0der/expedite)
+* [Gridhead - GitHub Sponsors](https://github.com/sponsors/gridhead)
+
+Top 3 comments:
+Comment 1:
+  Author: AutoModerator
+  Comment: Hi there, from the /r/Python mods.
+
+We want to emphasize that while security-centric programs are fun project spaces to explore we do not recommend that they be treated as a 
+security solution unless they’ve been audited by a third party, security professional and the audit is visible for review.
+
+Security is not easy. And making project to learn how to manage it is a great idea to learn about the complexity of this world. That said, there’s a difference 
+between exploring and learning about a topic space, and trusting that a product is secure for sensitive materials in the face of adversaries. 
+
+We hope you enjoy projects like these from a safety conscious perspective. 
+
+Warm regards and all the best for your future Pythoneering,
+
+/r/Python moderator team
+
+*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/Python) if you have any questions or concerns.*
+  Score: 1
+  Created UTC: 2024-07-23 11:18:50
+
+Comment 2:
+  Author: theng
+  Comment: looks ok to me  
+m2c : SHA display is useless here (both cli and gui)
+  Score: 1
+  Created UTC: 2024-07-23 13:03:04
+
+Comment 3:
+  Author: aoristdual
+  Comment: Are you hosting those public file transfer servers? Have you carefully thought through the legal risks of doing so?
+  Score: 1
+  Created UTC: 2024-07-23 16:50:20
+
+Note: This post has only 3 comments at the time of scraping.

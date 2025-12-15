@@ -1,0 +1,46 @@
+Post Title: Chatbot with Web (LLAMA3?)
+Author: junialter
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1ebtaxe/chatbot_with_web_llama3/
+Number of comments: 4
+Created UTC: 2024-07-25 12:11:25
+
+Post Content:
+So far I tried #gpt4all on my Linux desktop successfully. I would want to make it available to myself and my family but I was wondering what hardware you would suggest? so I can offload it away from my CPU.
+What in turn would you use software-wize? I run proxmox and the guest would need to get it forwarded so I can run the process in a container.
+Currently I would head towards LLAMA 3.1 concerning the model.
+
+Top 4 comments:
+Comment 1:
+  Author: 7640LPS
+  Comment: You’ll want to run ollama with your flavour of webui. I personally use OpenWebUI but Big-AGI works fine as well. OpenWebUI allows for plenty of integrations and also has different API endpoints. I have mine sitting behind a reverse proxy. 
+GPU wise i’d suggest 4080/4090 if you want to run any decent Model at usable speeds. But you won’t be able to run something like Llama 3.1 405B, needs way more compute.
+
+I run it all in a Debian VM on Proxmox, GPU passed straight through.
+  Score: 2
+  Created UTC: 2024-07-25 14:43:41
+
+Comment 2:
+  Author: Chinoman10
+  Comment: LM Studio has offered the best UX for me.
+
+Not sure if it can connect to a remote OpenAI-equivalent API, but I'd surprised if not.
+
+I'm suggesting this both as a server (for you) and as a client (for family).
+Easiest way to get started, basically... And if you want to make it available through the Internet, you can use a Cloudflare Tunnel for free (no need to do portforwarding or configuring FWs), and then use Cloudflare Access (also free up to 50 users) to manage access to the tunnel (if you find the need for it).
+  Score: 1
+  Created UTC: 2024-07-25 12:56:09
+
+Comment 3:
+  Author: ghosthvj
+  Comment: Hi there, I'm using Ollama + Open WebUI with GPU acceleration on a GTX 1080 and 8GB RAM, but I'm unable to run Llama3.1 70B. Is there any way to run a 70B model with my hardware? Thanks
+  Score: 1
+  Created UTC: 2024-07-25 17:34:34
+
+Comment 4:
+  Author: AsleepOnTheTrain
+  Comment: What about LibreChat?
+  Score: 0
+  Created UTC: 2024-07-25 23:17:52
+
+Note: This post has only 4 comments at the time of scraping.

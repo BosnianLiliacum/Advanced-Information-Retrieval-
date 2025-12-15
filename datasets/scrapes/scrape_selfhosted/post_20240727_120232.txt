@@ -1,0 +1,80 @@
+Post Title: Just got a Raspberry Pi 4 I want to use to selfhost personal stuff (blog, pictures, etc.)
+Author: checofox
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1ea895u/just_got_a_raspberry_pi_4_i_want_to_use_to/
+Number of comments: 14
+Created UTC: 2024-07-23 13:47:01
+
+Post Content:
+What approach do you recommend me to get started? I read about CasaOS and Umbrel, and appreciate the UI and app selection but I might still be limited in terms of app availability - for instance I could not host a personal blog there.
+
+  
+Thank you for sharing your thoughts and experiences!
+
+Top 6 comments:
+Comment 1:
+  Author: Accomplished-Moose50
+  Comment: My advice, don't rush it. Just choose an OS and try and get familiar with it. Especially the security part if you plan on hosting a public website, exposing the Raspberry to the internet.
+
+
+
+
+
+On any of the mentioned OSes you could probably host a blog/image host even if the app is not in gust selection. 
+
+
+
+
+Docker compose could be a good and easy start.
+  Score: 8
+  Created UTC: 2024-07-23 14:03:04
+
+Comment 2:
+  Author: Electrical-Block7878
+  Comment: Trying to understand here OP, why did you bought rpi4 instead of 5 because both are nearly same price in market but rpi5 gives better performance
+  Score: 4
+  Created UTC: 2024-07-23 14:45:50
+
+Comment 3:
+  Author: migsperez
+  Comment: Install Docker and Portainer. Then look on Docker Hub for applications you'd like. I personally install containers using Docker Compose yaml files which I also store in a Git repository for safe keeping.  
+
+It's amazing how many applications can run on the Pi 4 comfortably.
+
+There's a lot to learn but it's useful knowledge to have.
+  Score: 2
+  Created UTC: 2024-07-23 17:19:47
+
+Comment 4:
+  Author: checkoutchannelnine
+  Comment: I run all of this on an RPi 4, with the exception of QNAP and Obsidian, which are just links.  
+
+https://i.imgur.com/oUon5o5.png
+
+https://i.imgur.com/bxBuBW5.png
+
+When running CPU-intensive tasks like processing new images on Immich and documents on Paperless, it does slow down a bit if I'm connected to it and working on other things. For the most part though, these are background operations that run and I don't pay attention to.
+
+Are there "better" options out there? Yes, of course, depending on your use case. You said that this was a gift though, so I say make the most of it and learn.
+  Score: 2
+  Created UTC: 2024-07-24 13:37:57
+
+Comment 5:
+  Author: developerbuzz
+  Comment: Give DietPi a try, couldn't recommend it enough for out of the box apps and for apps that they don't cover you always have docker and portainer.
+
+You won't regret it, especially if you are starting your selfhosted journey.
+  Score: 1
+  Created UTC: 2024-07-23 19:13:01
+
+Comment 6:
+  Author: migsperez
+  Comment: Install Docker and Portainer. Then look on Docker Hub for applications you'd like. I personally install containers using Docker Compose yaml files which I also store in a Git repository for safe keeping.  
+
+It's amazing how many applications can run on the Pi 4 comfortably.
+
+There's a lot to learn but it's useful knowledge to have.
+  Score: 0
+  Created UTC: 2024-07-23 17:19:47
+
+Note: This post has only 6 comments at the time of scraping.

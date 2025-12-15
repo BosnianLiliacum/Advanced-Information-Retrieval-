@@ -1,0 +1,56 @@
+Post Title: Need mini PC homelab recommendations
+Author: Curious_Perspective8
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e7szyk/need_mini_pc_homelab_recommendations/
+Number of comments: 14
+Created UTC: 2024-07-20 10:57:09
+
+Post Content:
+I purchased an used Dell Optiplex 3060 today for 14,000 INR (167 USD). I plan to set up services like Emby, Jellyfin, Sonarr, Radarr, Code Server, Navidrome, FreshRSS, Transmission, and some static public websites on it. Since I mostly live at university, which is far from my home for about 9 months a year, and have experience using a VPS, I would appreciate some recommendations on setting up my homelab and implementing backups. My home internet speeds are 300Mbps for both upload and download with a latency of 3ms, and my mobile bandwidth is virtually unlimited.
+
+Dell Optiplex 3060 specifications:
+
+- Intel i5-8500 (6) @ 3.000GHz
+
+- 8GB DDR4
+
+- 256GB M.2 SSD
+
+- 2TB HDD
+
+Top 4 comments:
+Comment 1:
+  Author: marbonmb
+  Comment: I imagine you plan to leave your server in the house and not taking it with you to university, in this case I think setting VPN could be good idea, so that you'll be "in home" but physically far. It will remove the need to leave SSH available on the Internet.
+
+Idk but maybe 8GB of ram could be too small if you plan to add more service by the time, like a collaboration platform like nextcloud + password manager + websites + tools like budibase that are nice for schools when mastered etc...
+
+About home backups I will let other speak since I only have experiences about professionals backups, that are nothing in common with home backups.
+
+Or course you need to setup firewall on Internet box / server in order to deny access to all port except the ones necessary
+
+Hope it will help a lil bit!
+  Score: 3
+  Created UTC: 2024-07-20 11:24:28
+
+Comment 2:
+  Author: kakashi_1402
+  Comment: The hard disk space is too les.. you could get an permanent ip from ur ISP and buy a domain name.
+
+Otherways are tailscale, VPN and Cloudfare tunnel.
+  Score: 1
+  Created UTC: 2024-07-20 13:30:34
+
+Comment 3:
+  Author: aktentasche
+  Comment: Just follow 3 2 1 rule, besides that there's a million ways doing backups. I personally love proxmox and its built in backup functionality for VMs and containers because it works universally for all applications and still does delta backups.
+  Score: 1
+  Created UTC: 2024-07-20 21:26:40
+
+Comment 4:
+  Author: jedi00331188
+  Comment: I would recommend getting at least another 8gb of RAM if you're going to be running all of that at once, but otherwise, looks good! Make sure to use a wired connection, and set up a VPN to secure access to your virtual machines, I use Tailscale myself, but some others also recommend plain old Wireguard.
+  Score: 1
+  Created UTC: 2024-07-20 22:23:27
+
+Note: This post has only 4 comments at the time of scraping.

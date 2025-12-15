@@ -1,0 +1,34 @@
+Post Title: Private WoW Server Reverse Proxy
+Author: ProletariatPat
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4sfad/private_wow_server_reverse_proxy/
+Number of comments: 15
+Created UTC: 2024-07-16 16:04:22
+
+Post Content:
+Hello, I was encouraged to repost this so I shall. 
+
+I started tinkering with Azeroth Core since I had an extra mini PC lying around. My brother and I played a ton of WotLK back in the day and I wanted to invite him to play. I've only used it on my network and I don't think setting up a VPN will be the easiest route (he lives a couple states away and isn't very techie). I was hoping to tunnel it through to my VPS and have it exposed from there.
+
+My question is: how can I reverse proxy the service so it points to wow.mydomain.tld? It needs 2 ports 8085 and 3724 I believe, but I can only proxy to one port for each host so I can't point both at the server. Does anyone have a working solution or can walk me through how I could split the proxy and have both ports go to my domain? If I understand the concept and have some guidance I'm sure I can figure it out. I use NPM and Cosmos Cloud for proxy.
+
+Top 3 comments:
+Comment 1:
+  Author: ElevenNotes
+  Comment: Use Traefik or Nginx and setup a TCP proxy for 1119 and 3724. Add geoblock or ipwhitelist to protect your server.
+  Score: 7
+  Created UTC: 2024-07-16 17:54:47
+
+Comment 2:
+  Author: StrawNana22
+  Comment: To set up a reverse proxy for your private WoW server and point it to mydomain using NPM and Cosmos Cloud, you'll need to handle multiple ports. Since you mentioned ports 8085 and 3724, here's a way to manage it:
+  Score: 1
+  Created UTC: 2024-07-23 14:56:20
+
+Comment 3:
+  Author: [deleted]
+  Comment: [deleted]
+  Score: -15
+  Created UTC: 2024-07-16 16:53:40
+
+Note: This post has only 3 comments at the time of scraping.

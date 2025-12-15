@@ -1,0 +1,77 @@
+Post Title: Ollama, llama.cpp and macbooks
+Author: Expensive_Let618
+Score: 6
+URL: https://www.reddit.com/r/ollama/comments/1echlso/ollama_llamacpp_and_macbooks/
+Number of comments: 10
+Created UTC: 2024-07-26 06:54:28
+
+Post Content:
+Hi all, finally saved up for a machine that could run a local LLM. Would really appreciate any help I can get with some questions. I tried searching around but still am not quite clear on them
+
+* Whats the difference between llama.cpp and Ollama? Is llama.cpp faster since (from what Ive read) Ollama works like a wrapper around llama.cpp?
+* After downloading llama 3.1 70B with ollama, i see the model is 40GB in total. However, i see on huggingface it is almost 150GB in files. Anyone know why the discrepancy?
+* I’m using a Macbook m3 max/128GB. Does anyone know how i can get Ollama to use my GPU (i believe its called running on bare metal?)
+
+Thanks so much!
+
+Top 4 comments:
+Comment 1:
+  Author: ahjorth
+  Comment: As u/IngratefulMofo wrote, the difference in speed is negligible. Ollama usually takes a few days to implement the latest version of llama.cpp so unless you need the newest version *right this minute*, ollama is completely fine.
+
+The biggest difference that I'd mention is that ollama does not expose the full llama.cpp API on its built in server. If you are making a decision now about which tool to familiarize yourself with, I'd compare the APIs and see if llama.cpp offers something that you absolutely need and that ollama does not expose. (As an example, ollama does not expose the perplexity functions, and I'm often interested in seeing the full logits of all tokens for each token generated, so in those cases I boot up llama.cpp. But for everything else I run Ollama.)
+
+llama.cpp API: [https://github.com/ggerganov/llama.cpp/blob/master/examples/server/README.md](https://github.com/ggerganov/llama.cpp/blob/master/examples/server/README.md)
+
+Ollama API: [https://github.com/ollama/ollama/blob/main/docs/api.md](https://github.com/ollama/ollama/blob/main/docs/api.md)
+
+If you're new to local models, I'd recommend you start with Ollama, especially since they offer amazing out of the box M-processor support and it's a simple one-click installer. For contrast, you can look at the llama.cpp installation guidelines on the llama.cpp github. It's not *hard*, it's just a lot more work and it can break in funny ways. If you at some point want to do something that Ollama does not allow you to do, you can bootstrap a lot of your understanding of Ollama and get started much faster with llama.cpp.
+  Score: 11
+  Created UTC: 2024-07-26 08:49:32
+
+Comment 2:
+  Author: IngratefulMofo
+  Comment: per llama.cpp note
+
+&gt;On MacOS, Metal is enabled by default. Using Metal makes the computation run on the GPU. To disable the Metal build at compile time use the `GGML_NO_METAL=1` flag or the `GGML_METAL=OFF` cmake option.
+
+yes ollama is a wrapper, and i think the difference is negligible
+
+and the difference between those model size is that ollama/llama.cpp usually use the gguf and other quantized version, which means it's a compressed version of the original full floating precision version of the model. there might/might not be differences in the accuracy, but for most of the times, quantized (compressed) version works pretty similar and definitely more efficient so it's worth the trade-off
+  Score: 7
+  Created UTC: 2024-07-26 07:12:28
+
+Comment 3:
+  Author: somamosaurus
+  Comment: I've had the same setup as you for the past few days. Ollama is super fun and intuitive. Here are a few more pointers:
+
+My experience:
+
+* The largest model I've been brave enough to try is Mistral 2407, specifically [this quantization](https://ollama.com/library/mistral-large:123b-instruct-2407-q4_K_M) (`mistral-large:123b-instruct-2407-q4_K_M`). I'm impressed with its ability to interpret quite convoluted prose. The fact I can multitask while running that model -- Memory Used reaching \~109 GB in Activity Monitor -- is nothing short of miraculous.
+* From there, the next largest in descending order I've tried are: `command-r-plus:latest`, `llama3.1:70b-instruct-q5_K_M`, `gemma2:27b-instruct-q5_K_M`.
+
+Quantization info:
+
+* For choosing which quantization: [great rule of thumb ](https://www.reddit.com/r/ollama/comments/1d4ofem/comment/l6if28y/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button)on how the number of parameters and precision relates to VRAM usage. 1B parameters at fp16 equates to \~2GB VRAM. 1B parameters at Q8 equates to \~1GB VRAM. 1B parameters at Q4 equates to \~0.5GB VRAM. You'll need some extra space left for the context window.
+* Here's [a list](https://www.reddit.com/r/LocalLLaMA/comments/1d32q63/comment/l64nqb7/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button) of what all those quantization suffixes imply, with recommendations annotated.
+* Check out this [visualization](https://www.reddit.com/r/LocalLLaMA/comments/1441jnr/k_quantization_vs_perplexity/) comparing both the effect of quantizations and the effect of # parameters. Others (anecdotally) have sworn by Q8, but I haven't tried it yet. 
+* EDIT: Actually, on that note, [this post](https://www.reddit.com/r/LocalLLaMA/comments/1b5uv86/perplexity_is_not_a_good_measurement_of_how_well/) makes me want to start trying fp16 and Q8. I know what I'm doing tonight!
+
+Practical stuff of using Ollama in the command line:
+
+* Once you load the model, remember to manually increase the context window length in tokens if applicable: `/set parameter num_ctx 8192`. As a rule of thumb, one token is around four characters. Past a couple thousand tokens, Mistral 2407 slows to quite the crawl.
+* For multi line input, begin and end your prompt with triple quotes"""like this."""
+  Score: 5
+  Created UTC: 2024-07-26 09:59:29
+
+Comment 4:
+  Author: Past-Grapefruit488
+  Comment: &gt; 3.1 70B with ollama, i see the model is 40GB in total. However, i see on huggingface it is almost 150GB in files
+
+Ollama reduces Quality of models (by default) so that models run faster on local hardware.  You can choose to download "full quality" version of model. For llama 3.1 70B , download this Version which should have same quality as on Hugging Face. 
+
+https://ollama.com/library/llama3.1:70b-instruct-fp16
+  Score: 3
+  Created UTC: 2024-07-26 10:47:24
+
+Note: This post has only 4 comments at the time of scraping.

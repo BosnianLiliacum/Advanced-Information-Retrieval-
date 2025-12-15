@@ -1,0 +1,74 @@
+Post Title: AdGuard vs Pihole for some more advanced settings
+Author: sendcodenotnudes
+Score: 7
+URL: https://www.reddit.com/r/selfhosted/comments/1ebwbmv/adguard_vs_pihole_for_some_more_advanced_settings/
+Number of comments: 7
+Created UTC: 2024-07-25 14:30:15
+
+Post Content:
+I use Pihole and was curious about AdGuard - most of the comparisons are  ~50/50 (= it does not really matter which one you use). 
+
+In the pure "fix it until you beak it" philosophy, I am tempted to try AdGuard and was wondering if it has a few more advanced features I use in Pihole:
+
+- ability to run parallel upstrem DNS requests (`all-servers` in `dnsmasq`)
+- use DHCP options such as 42 (NTP) or classless static routes
+
+I would appreciate some feedback for those who run AdGuard already
+
+
+Top 6 comments:
+Comment 1:
+  Author: 654354365476435
+  Comment: You can check technitium, if you need more advance stuff this is the way
+  Score: 8
+  Created UTC: 2024-07-25 14:47:11
+
+Comment 2:
+  Author: jusepal
+  Comment: Yes adguardhome can parallel query upstream. Not sure about dhcp. Can even be paired with local bind9 axfr-ing icann root zone for your setup to be 100% locally self reliant doesn't need remote upstream at all. Adguardhome can also natively act as doh and dot server, which i believe pihole can't?
+
+Theres also technitium dns that can act as authoritative natively, no need bind9 at all to be 100% locally self reliant.
+  Score: 7
+  Created UTC: 2024-07-25 14:41:54
+
+Comment 3:
+  Author: tharic99
+  Comment: I ran Pihole for about six months and hit the issue of needing a second instance of it up and running on my network due to reboots, outages, etc and not getting resolution. Then I brought a second instance of it up and I needed to keep the two in sync. I didn't care for the way Gravity Sync worked, it just didn't work for me. I know people that use it and love it.
+
+I switched to two Adguard instances, both sync'd with https://github.com/bakito/adguardhome-sync and it's worked great for me.
+  Score: 5
+  Created UTC: 2024-07-25 19:05:20
+
+Comment 4:
+  Author: JSouthGB
+  Comment: I can't speak to your bullet points specifically, but I just switched to it a few days ago after running pihole for a couple of years. Nothing wrong with pihole, I just wanted to try AdGuard.
+
+The interface feels lighter and easier to navigate. Wildcard redirects are quick to implement. The default block list seems to catch quite a bit more vs the pihole default.
+  Score: 4
+  Created UTC: 2024-07-25 17:40:15
+
+Comment 5:
+  Author: PaperDoom
+  Comment: You should just try it anyway. Easy to set up. Throw Technitium into the mix while you're at it.
+  Score: 1
+  Created UTC: 2024-07-25 14:44:16
+
+Comment 6:
+  Author: frylock364
+  Comment: AdGuard and Pi-Hole are similar programs and do pretty much the same thing with slightly different features,   
+AdGuard is written in Go so it's just a single binary vs  
+Pi-Hole is written in PHP so it has a ton of dependencies.    
+  
+  
+If you really want more advanced settings look at Technitium  
+https://technitium.com/dns/  
+  
+  
+I think a lot of people go from Pi-Hole, to AdGuard, to Technitium as they want "more" from there DNS server/ad blocker (simple evolution)  
+  
+  
+As amazing as Pi-Hole was when it came out 10ish years ago in 2024 Pi-Hole seems very much like a project of a bygone era (no support for DoH or DoT).
+  Score: 1
+  Created UTC: 2024-07-26 07:19:40
+
+Note: This post has only 6 comments at the time of scraping.

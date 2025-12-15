@@ -1,0 +1,21 @@
+Post Title: Block list for Cloud Storage providers
+Author: localhost-127
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e3wjnu/block_list_for_cloud_storage_providers/
+Number of comments: 3
+Created UTC: 2024-07-15 14:44:27
+
+Post Content:
+Am looking for a simple dynamically updated prebuilt list of all cloud storage providers such as Google Drive, WeTransfer and other obscure providers. An instance of ADH is deployed in my enterprise environment, and I wish to block DNS requests to these providers to prevent any data exfiltration.
+
+Top 1 comments:
+Comment 1:
+  Author: blind_guardian23
+  Comment: this is the kind of snake-oil-security-thinking enterprises are famous for. even if you have a proper list, its no problem for a criminals to host some kind of filetransfer over https (even common people can host nextcloud or use one of numerous hosting services for it) ... and you'll need to block usb-drives too ... plus DNS-blocking isn't even sufficient.
+most likely you will criple productivity (how do you exchange data with externals?) while criminals are prepared for your ideas.
+
+P.S. ADH...?
+  Score: 6
+  Created UTC: 2024-07-15 16:58:28
+
+Note: This post has only 1 comments at the time of scraping.

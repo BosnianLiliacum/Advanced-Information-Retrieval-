@@ -1,0 +1,75 @@
+Post Title:  What is too much type hinting for you?
+Author: CoderStudios
+Score: 24
+URL: https://www.reddit.com/r/Python/comments/1edcel1/what_is_too_much_type_hinting_for_you/
+Number of comments: 99
+Created UTC: 2024-07-27 09:30:48
+
+Post Content:
+For me it's :
+
+    from typing import Self
+    
+    class Foo:
+        def __init__(self: Self) -&gt; None:
+            ...
+
+The second example is acceptable in my opinion, as the parameter are one type and the type hint for the actual attributes is for their entire lifetimes within the instance :
+
+    class Foo:
+        def __init__(self, par1: int, par2: tuple[float, float]):
+            self.par1: int = par1
+            self.par2: tuple[float, float] | None = par2
+
+Edit: changed the method in the first example from bar to \_\_init\_\_
+
+Top 7 comments:
+Comment 1:
+  Author: Nooooope
+  Comment: Type-hinting the return type as None is great. Type-hinting "self: Self" is madness.
+  Score: 97
+  Created UTC: 2024-07-27 11:51:17
+
+Comment 2:
+  Author: KyxeMusic
+  Comment: Never enough. If the typehints get too long (e.g dict[str, tuple[float, float]] ) it's usually a smell, I'm not doing something right and I probably should be making some different data structures.
+  Score: 161
+  Created UTC: 2024-07-27 10:08:00
+
+Comment 3:
+  Author: L_e_on_
+  Comment: No such thing as too much type hinting in my opinion, it makes life much easier. Worst thing in the world is trying to work out how someone else's code works and they've used no type hints.
+
+The 2nd example is a good exanple of using type hints in my opinion and i wish more people did this. Although a small thing, there is a mismatch between whether self.par2 or par2 can be None.
+
+Edit:
+The mismatch is fine, i didn't consider that maybe you want the var nullable later on, there could probably be a valid use-case
+  Score: 48
+  Created UTC: 2024-07-27 09:43:31
+
+Comment 4:
+  Author: aqjo
+  Comment: I just went through a big project and made sure I had type hints on all function parameters, and some other places. As an example, I have data that is frequently channels x time or time x channels, so the type hints (aliases) tell me at a glance what the function expects. It’s certainly better, and less verbose, than trying to encode that information into variable names.       
+I’ve also added some type hints for variables within functions to help vscode give me better completions.     
+But I’ve also backed off on some type hints, particularly ones that are e.g. ‘int | None’ as I got tired of sprinkling ‘assert var is not None’ around to make the linter happy.
+  Score: 8
+  Created UTC: 2024-07-27 11:14:39
+
+Comment 5:
+  Author: ihih_reddit
+  Comment: For me, it's when people type hint in the function/method. Doing it in the signature is ok
+  Score: 5
+  Created UTC: 2024-07-27 12:15:45
+
+Comment 6:
+  Author: meetmeatthedance
+  Comment: It’s never enough
+  Score: 21
+  Created UTC: 2024-07-27 09:40:26
+
+Comment 7:
+  Author: violentlymickey
+  Comment: If I’m implementing something greenfield I will type hint aggressively. If I’m refactoring legacy code and introducing type hints it’s more of a judgement call.
+  Score: 3
+  Created UTC: 2024-07-27 12:21:41
+

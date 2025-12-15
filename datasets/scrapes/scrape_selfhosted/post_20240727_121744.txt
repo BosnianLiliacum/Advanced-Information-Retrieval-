@@ -1,0 +1,40 @@
+Post Title: A service to record online audio call of 3-4 people through web browser
+Author: fuxoft
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e9c9pw/a_service_to_record_online_audio_call_of_34/
+Number of comments: 5
+Created UTC: 2024-07-22 11:48:50
+
+Post Content:
+Hello,
+
+I am occassionally recording podcasts and I am interested in self hosted solution that does following:
+
+* 4 people sit at their homes, in front of their browsers.
+* One of them (the admin) sends a custom generated link to all of them, which they click on.
+* All of them are now connected through their audio. Each of them hears the remaining 3.
+* They can chat for however long they want (usually less than 3 hours).
+* At the end, there are 4 separate WAV files (one for each participant), ready to download by admin to mix them into a podcast.
+
+There are MANY solutions available online for this (e.g. [cleanfeed.net](http://cleanfeed.net), [podcastle.ai](http://podcastle.ai), [riverside.fm](http://riverside.fm) ) but all of them have artificial limitations unless you pay monthly, e.g.:
+
+* The audio recording time is capped at 2 hours or less.
+* The downloaded audio is not full CD quality uncompressed WAV but low quality MP3.
+* The downloaded audio is a single WAV with all participants mixed into a single channel.
+
+I have my own public Ubuntu Linux server which I am able to install anything on. I was googling for 30 minutes but I was unable to find a simple application which does JUST the above and does not require me to install complex databases, webservers, frameworks, certificates etc...
+
+Top 2 comments:
+Comment 1:
+  Author: sriks08
+  Comment: Try WebRTC - [https://github.com/anoek/webrtc-group-chat-example](https://github.com/anoek/webrtc-group-chat-example)
+  Score: 1
+  Created UTC: 2024-07-22 16:48:21
+
+Comment 2:
+  Author: SirMasterLordinc
+  Comment: WhatsApp already does this
+  Score: 1
+  Created UTC: 2024-07-22 23:11:45
+
+Note: This post has only 2 comments at the time of scraping.

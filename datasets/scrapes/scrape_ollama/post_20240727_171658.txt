@@ -1,0 +1,22 @@
+Post Title: Most difficult error ever: : no suitable llama servers found.
+Author: Lazy-Interaction-189
+Score: 0
+URL: https://www.reddit.com/r/ollama/comments/1ebqlg5/most_difficult_error_ever_no_suitable_llama/
+Number of comments: 2
+Created UTC: 2024-07-25 09:27:56
+
+Post Content:
+Hi friends, I've reinstalled Ollama several times but it won't fix the error I'm getting. Please help me out. Thanks
+
+https://preview.redd.it/wrvlas6svmed1.png?width=355&amp;format=png&amp;auto=webp&amp;s=a91eae2cea26e989d2ccb19db80d201f6664b180
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: Hubi522
+  Comment: Look into logs
+  Score: 2
+  Created UTC: 2024-07-25 10:46:03
+
+Note: This post has only 1 comments at the time of scraping.

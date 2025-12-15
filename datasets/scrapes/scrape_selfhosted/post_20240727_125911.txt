@@ -1,0 +1,18 @@
+Post Title: Synced video stream to multiple devices
+Author: AssembledJB
+Score: 3
+URL: https://www.reddit.com/r/selfhosted/comments/1e6syvx/synced_video_stream_to_multiple_devices/
+Number of comments: 4
+Created UTC: 2024-07-19 02:28:37
+
+Post Content:
+I've been searching and maybe I'm just not looking in the right place or phrasing things correctly, but I want to be able to stream a video across multiple systems in my network simultaneously. Does anyone know if this is possible? Let's say I wanted to play a movie or recorded show on TVs in 3 different rooms when friends are over, any thoughts? 
+
+Top 1 comments:
+Comment 1:
+  Author: AlphaWolf0
+  Comment: Jellyfin has a built in feature for this, called SyncPlay. Any user can make a 'group', and then other users can join their stream, and it will be synced with all other group members. Pausing one pauses all of them.
+  Score: 3
+  Created UTC: 2024-07-19 02:43:44
+
+Note: This post has only 1 comments at the time of scraping.

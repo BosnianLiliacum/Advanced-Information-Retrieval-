@@ -1,0 +1,22 @@
+Post Title: Tailscale Funnel availibility in the pricing range
+Author: Natural-Bowl5439
+Score: 1
+URL: https://www.reddit.com/r/Tailscale/comments/1eb4723/tailscale_funnel_availibility_in_the_pricing_range/
+Number of comments: 1
+Created UTC: 2024-07-24 15:23:52
+
+Post Content:
+Hi, it's quoted [here in the funnel documentation](https://tailscale.com/kb/1223/funnel) that the Funnel is available for the [the Personal, Premium, and Enterprise plans](https://tailscale.com/pricing), yet it's mentionned in the [pricing page](https://tailscale.com/pricing) that it is included starting premium. What's the current status?
+
+https://preview.redd.it/dq3twtidihed1.png?width=1260&amp;format=png&amp;auto=webp&amp;s=7fb910ddf97968ad294ba11313670fd4a663ae34
+
+
+
+Top 1 comments:
+Comment 1:
+  Author: thisisparker
+  Comment: The documentation is correct! And if you scroll down past the features summary to the full comparison on the pricing page, it matches the docs.
+  Score: 2
+  Created UTC: 2024-07-24 15:27:46
+
+Note: This post has only 1 comments at the time of scraping.

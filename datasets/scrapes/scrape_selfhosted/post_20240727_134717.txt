@@ -1,0 +1,28 @@
+Post Title: Like a car management?
+Author: MrTwax
+Score: 6
+URL: https://www.reddit.com/r/selfhosted/comments/1e3u0wa/like_a_car_management/
+Number of comments: 12
+Created UTC: 2024-07-15 12:51:38
+
+Post Content:
+Hi, do you know where I can store my home fleet in a simple way.
+
+I imagine something where I enter e.g. an excavator brand model running time ... then which engine what oil what glow plugs ...
+
+Then another card maybe with the motorcycle with all the trimmings. So when which air filter was changed... just to get an overview of when what maintenance is due or which spark plug I need again exactly. Or how much oil and which one.
+
+Top 2 comments:
+Comment 1:
+  Author: olejazz
+  Comment: Have you looked at https://lubelogger.com/ ?
+  Score: 10
+  Created UTC: 2024-07-15 12:54:26
+
+Comment 2:
+  Author: Prog
+  Comment: Hasn't been updated in a while, but Hammond: https://github.com/akhilrex/hammond
+  Score: 2
+  Created UTC: 2024-07-15 14:24:40
+
+Note: This post has only 2 comments at the time of scraping.

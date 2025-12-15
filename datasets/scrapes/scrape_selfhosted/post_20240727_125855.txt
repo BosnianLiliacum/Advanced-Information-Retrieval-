@@ -1,0 +1,67 @@
+Post Title: Immich alternatives?
+Author: BelugaBilliam
+Score: 2
+URL: https://www.reddit.com/r/selfhosted/comments/1e6t85c/immich_alternatives/
+Number of comments: 52
+Created UTC: 2024-07-19 02:42:03
+
+Post Content:
+As everyone had probably seen, immich has a new license (as far as their payment term license), and I read about it, but it leaves a sour taste in my mouth. 
+
+Before I set it up, what are some good alternatives? 
+
+Primary goal of viewing photos, and having it sync (and not jank like using syncthing)
+
+Top 7 comments:
+Comment 1:
+  Author: root_switch
+  Comment: Have a look here. Lots of work put into this. 
+
+https://github.com/meichthys/foss_photo_libraries
+  Score: 62
+  Created UTC: 2024-07-19 03:17:20
+
+Comment 2:
+  Author: Skotticus
+  Comment: It doesn't have a new license. Same old AGPL v3. 
+
+What you're referring to is a new structure for encouraging people to support Immich. It's still entirely free to use, people are just getting riled up via rampant speculation.
+  Score: 122
+  Created UTC: 2024-07-19 02:51:09
+
+Comment 3:
+  Author: forwardslashroot
+  Comment: Nextcloud with the Memories plugin.  
+https://memories.gallery/
+  Score: 7
+  Created UTC: 2024-07-19 06:40:39
+
+Comment 4:
+  Author: Simplixt
+  Comment: No paywalled features with Immich, so don't dramatize ... if the project goes in a wrong direction, I'm sure there will be an licensed-free fork at some point ;) In the moment it's just one way to support the developers. 
+
+Best alternative would be Nextcloud with Memories.
+
+  
+(and btw, I love Syncthing and I'm using it together with Immich, but that's personal preferences \^\^)
+  Score: 19
+  Created UTC: 2024-07-19 06:11:53
+
+Comment 5:
+  Author: ORAETHIUF
+  Comment: Nextcloud Memories is the way. The app is solid, and actively developed. I'v been using it for some time and it's great !
+  Score: 5
+  Created UTC: 2024-07-19 07:03:41
+
+Comment 6:
+  Author: polaroid_kidd
+  Comment: I used to contribute to libre photos und currently run the gpu version of it. Could not be happier.
+  Score: 3
+  Created UTC: 2024-07-19 04:48:22
+
+Comment 7:
+  Author: Whiplashorus
+  Comment: Am using docker-vdsm to use Synology photos it's very good
+  Score: 3
+  Created UTC: 2024-07-19 10:45:30
+

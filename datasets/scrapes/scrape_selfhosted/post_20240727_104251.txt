@@ -1,0 +1,36 @@
+Post Title: AWS HOSTING, containerize 
+Author: GeneralPlastic4589
+Score: 0
+URL: https://www.reddit.com/r/selfhosted/comments/1e4p0ry/aws_hosting_containerize/
+Number of comments: 4
+Created UTC: 2024-07-16 13:44:21
+
+Post Content:
+we are trying to containerize our node.js application, but we are unable to.
+
+The unzipped version of bundle is exceeding 250MB ( web pack bundling ) 
+
+- Cause excess node module ( unused dependencies/ Devdependencies).
+
+- Lot of warnings regarding node module versions .
+
+This  was the earlier issue we faced so we tried containerize our application using Docker .
+
+Top 2 comments:
+Comment 1:
+  Author: zaphod4th
+  Comment: Guess you're not getting any reply coz wrong sub ?
+  Score: 1
+  Created UTC: 2024-07-16 17:00:49
+
+Comment 2:
+  Author: SammyDavidJuniorJr
+  Comment: That webpack bundle does seem pretty massive, but I would also consider putting the bundle on S3 instead of within a container image if it's not difficult to do with your deploy process.
+
+This is a webpack bundle using the `--production` flag and minification/compression enabled (which I think is the default with the production flag)?
+
+You might also consider turning off source maps.
+  Score: 1
+  Created UTC: 2024-07-16 17:29:54
+
+Note: This post has only 2 comments at the time of scraping.

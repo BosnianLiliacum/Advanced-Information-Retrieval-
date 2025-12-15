@@ -1,0 +1,28 @@
+Post Title: CRM that integrates with ticket management/Messaging service
+Author: Maleficent-Usual4415
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e7e8zh/crm_that_integrates_with_ticket/
+Number of comments: 2
+Created UTC: 2024-07-19 20:56:21
+
+Post Content:
+Hi Everyone,
+
+I searched the group before posting but couldn't find the specific information I need about CRM systems.
+
+I'm helping a team that has previously used Bitrix24 Enterprise, and they’re looking for a free, self hosted CRM that can replicate some of its key functions. They understand that a free option might have limitations but are looking for the following features in addition to standard CRM capabilities:
+
+1. Task assignment (project/ticket management)
+2. Integration with a messaging service, with the ability to assign messages by groups
+3. Contact center functionality, potentially integrating with WhatsApp or SMS
+
+Any recommendations or support would be greatly appreciated. Thank you!
+
+Top 1 comments:
+Comment 1:
+  Author: FredericaWeddington7
+  Comment: You might want to check out Odoo CRM for a self-hosted solution. It has a robust task assignment system and integrates with various messaging services. For visual documentation and training, I highly recommend using Guidde  its been a game-changer for creating quick how-to videos for our team.
+  Score: 1
+  Created UTC: 2024-07-20 04:40:16
+
+Note: This post has only 1 comments at the time of scraping.

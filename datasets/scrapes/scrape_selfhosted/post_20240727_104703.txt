@@ -1,0 +1,39 @@
+Post Title: How to allow outside connections to Server when VPN is running on it?
+Author: More-Hawk-351
+Score: 1
+URL: https://www.reddit.com/r/selfhosted/comments/1e4j519/how_to_allow_outside_connections_to_server_when/
+Number of comments: 3
+Created UTC: 2024-07-16 08:06:59
+
+Post Content:
+I have an Ubuntu Server running a few Services (Jellyfin, Nextcloud, qBittorrent-nox etc.). I also use a VPN (qBit is bound to the appropriate interface), and it works great. The problem is that when I try to connect to the server (to any of the above-mentioned services) I have no connection. Testing it without the VPN running, I can connect to it (so there's no port forwarding problem or any of the sorts).
+
+My question is, how can I keep the VPN running for torrenting, while also being able to connect to the server from outside of the network?
+
+I should also mention that my home network is behind CGNAT, and my ISP provides me with DDNS, so I have a subdomain from them (i.e. myserver.ispdomain.com). I also run NGINX Proxy Manager.
+
+  
+EDIT: For anyone else experiencing this problem, I found an article that shows how a qBittorrent Docker (https://github.com/linuxserver/docker-qbittorrent) Container's traffic can be routed through your VPN: https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
+
+Top 2 comments:
+Comment 1:
+  Author: zoredache
+  Comment: When your VPN makes the outgoing connection it is changing the routing.  You need to make some kind of exception for the routing.
+
+You have a couple popular choices.
+
+Use multiple routing tables, and complicated ip rules.  Search this, or the various vpn subreddits for how to do that.  It has been covered hundreds of times.
+
+Use some kind of 'virutalization'.  By this I mean use a VM, or LXC, docker, podman, etc.  All of these give you a separate virtual network stack with separate routing.
+
+Which approach you take, is up to you, and how you manage your system.  All the various approaches are complicated. You basiclaly get to decide where you want the complications at.
+  Score: 2
+  Created UTC: 2024-07-16 09:11:35
+
+Comment 2:
+  Author: glocktavious1
+  Comment: Your issue is with routing.  The server is trying to send all of it's traffic out the VPN tunnel.  On your Ubuntu server, you need to add a route in that sends the local subnet traffic to your LAN instead.  You may need to reconfigure your VPN tunnel to exclude the local subnet.  I would start with the route first.
+  Score: 2
+  Created UTC: 2024-07-16 09:17:42
+
+Note: This post has only 2 comments at the time of scraping.
