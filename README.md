@@ -52,3 +52,9 @@ Vector Database Insertion (HelixDB or Qdrant)
 Query Embedding & Similarity Search
         ↓
 Retrieval-Augmented LLM Response
+
+```
+
+
+### Game plan
+-
