@@ -109,12 +109,12 @@ schema: Some(r#"{
       {
         "name": "Post",
         "properties": {
-          "label": "String",
-          "title": "String",
-          "content": "String",
-          "url": "String",
-          "subreddit": "String",
           "id": "ID",
+          "url": "String",
+          "title": "String",
+          "subreddit": "String",
+          "label": "String",
+          "content": "String",
           "score": "I32"
         }
       },
@@ -122,9 +122,9 @@ schema: Some(r#"{
         "name": "Comment",
         "properties": {
           "label": "String",
-          "content": "String",
+          "id": "ID",
           "score": "I32",
-          "id": "ID"
+          "content": "String"
         }
       }
     ],
@@ -132,10 +132,10 @@ schema: Some(r#"{
       {
         "name": "Content",
         "properties": {
+          "id": "ID",
+          "data": "Array(F64)",
           "label": "String",
           "content": "Array(F64)",
-          "data": "Array(F64)",
-          "id": "ID",
           "score": "F64"
         }
       }
@@ -157,18 +157,24 @@ schema: Some(r#"{
   },
   "queries": [
     {
-      "name": "upload_all_posts",
-      "parameters": {
-        "posts": "Array({title: Stringscore: I32comments: Array({ic_content: Stringic_score: I32})subreddit: Stringcontent: Stringvector: Array(F64)url: String})"
-      },
-      "returns": []
-    },
-    {
       "name": "get_all_posts",
       "parameters": {},
       "returns": [
         "posts"
       ]
+    },
+    {
+      "name": "upload_a_post",
+      "parameters": {
+        "content": "String",
+        "title": "String",
+        "vector": "Array(F64)",
+        "score": "I32",
+        "comments": "Array({ic_score: I32ic_content: String})",
+        "url": "String",
+        "subreddit": "String"
+      },
+      "returns": []
     },
     {
       "name": "search_posts_vec",
@@ -211,63 +217,14 @@ pub struct Content {
     pub content: Vec<f64>,
 }
 
-#[derive(Serialize, Deserialize, Clone)]
-pub struct upload_all_postsInput {
-
-pub posts: Vec<postsData>
-}
-#[derive(Serialize, Deserialize, Clone)]
-pub struct commentsData {
-    pub ic_content: String,
-    pub ic_score: i32,
-}
-#[derive(Serialize, Deserialize, Clone)]
-pub struct postsData {
-    pub title: String,
-    pub score: i32,
-    pub comments: Vec<commentsData>,
-    pub subreddit: String,
-    pub content: String,
-    pub vector: Vec<f64>,
-    pub url: String,
-}
-#[handler]
-pub fn upload_all_posts (input: HandlerInput) -> Result<Response, GraphError> {
-let db = Arc::clone(&input.graph.storage);
-let data = input.request.in_fmt.deserialize::<upload_all_postsInput>(&input.request.body)?;
-let arena = Bump::new();
-let mut txn = db.graph_env.write_txn().map_err(|e| GraphError::New(format!("Failed to start write transaction: {:?}", e)))?;
-    for postsData { subreddit, title, content, vector, url, score, comments } in &data.posts {
-    let post_node = G::new_mut(&db, &arena, &mut txn)
-.add_n("Post", Some(ImmutablePropertiesMap::new(5, vec![("subreddit", Value::from(&subreddit)), ("url", Value::from(&url)), ("score", Value::from(&score)), ("title", Value::from(&title)), ("content", Value::from(&content))].into_iter(), &arena)), None).collect_to_obj()?;
-    let vec = G::new_mut(&db, &arena, &mut txn)
-.insert_v::<fn(&HVector, &RoTxn) -> bool>(&vector, "Content", Some(ImmutablePropertiesMap::new(0, vec![].into_iter(), &arena))).collect_to_obj()?;
-    G::new_mut(&db, &arena, &mut txn)
-.add_edge("EmbeddingOf", None, post_node.id(), vec.id(), false).collect_to_obj()?;
-    for commentsData { ic_content, ic_score } in comments {
-    let comment_node = G::new_mut(&db, &arena, &mut txn)
-.add_n("Comment", Some(ImmutablePropertiesMap::new(2, vec![("content", Value::from(&ic_content)), ("score", Value::from(&ic_score))].into_iter(), &arena)), None).collect_to_obj()?;
-    G::new_mut(&db, &arena, &mut txn)
-.add_edge("CommentOf", None, post_node.id(), comment_node.id(), false).collect_to_obj()?;
-}
-;
-}
-;
-let response = json!({
-    "data": "success"
-});
-txn.commit().map_err(|e| GraphError::New(format!("Failed to commit transaction: {:?}", e)))?;
-Ok(input.request.out_fmt.create_response(&response))
-}
-
 #[derive(Serialize)]
 pub struct Get_all_postsPostsReturnType<'a> {
     pub id: &'a str,
     pub label: &'a str,
-    pub title: Option<&'a Value>,
-    pub url: Option<&'a Value>,
-    pub content: Option<&'a Value>,
     pub subreddit: Option<&'a Value>,
+    pub title: Option<&'a Value>,
+    pub content: Option<&'a Value>,
+    pub url: Option<&'a Value>,
 }
 
 #[handler]
@@ -281,11 +238,53 @@ let response = json!({
     "posts": posts.iter().map(|post| Get_all_postsPostsReturnType {
         id: uuid_str(post.id(), &arena),
         label: post.label(),
-        title: post.get_property("title"),
-        url: post.get_property("url"),
-        content: post.get_property("content"),
         subreddit: post.get_property("subreddit"),
+        title: post.get_property("title"),
+        content: post.get_property("content"),
+        url: post.get_property("url"),
     }).collect::<Vec<_>>()
+});
+txn.commit().map_err(|e| GraphError::New(format!("Failed to commit transaction: {:?}", e)))?;
+Ok(input.request.out_fmt.create_response(&response))
+}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct upload_a_postInput {
+
+pub subreddit: String,
+pub title: String,
+pub content: String,
+pub vector: Vec<f64>,
+pub url: String,
+pub score: i32,
+pub comments: Vec<commentsData>
+}
+#[derive(Serialize, Deserialize, Clone)]
+pub struct commentsData {
+    pub ic_score: i32,
+    pub ic_content: String,
+}
+#[handler]
+pub fn upload_a_post (input: HandlerInput) -> Result<Response, GraphError> {
+let db = Arc::clone(&input.graph.storage);
+let data = input.request.in_fmt.deserialize::<upload_a_postInput>(&input.request.body)?;
+let arena = Bump::new();
+let mut txn = db.graph_env.write_txn().map_err(|e| GraphError::New(format!("Failed to start write transaction: {:?}", e)))?;
+    let post_node = G::new_mut(&db, &arena, &mut txn)
+.add_n("Post", Some(ImmutablePropertiesMap::new(5, vec![("title", Value::from(&data.title)), ("subreddit", Value::from(&data.subreddit)), ("url", Value::from(&data.url)), ("score", Value::from(&data.score)), ("content", Value::from(&data.content))].into_iter(), &arena)), None).collect_to_obj()?;
+    let vec = G::new_mut(&db, &arena, &mut txn)
+.insert_v::<fn(&HVector, &RoTxn) -> bool>(&data.vector, "Content", Some(ImmutablePropertiesMap::new(0, vec![].into_iter(), &arena))).collect_to_obj()?;
+    G::new_mut(&db, &arena, &mut txn)
+.add_edge("EmbeddingOf", None, post_node.id(), vec.id(), false).collect_to_obj()?;
+    for commentsData { ic_content, ic_score } in &data.comments {
+    let comment_node = G::new_mut(&db, &arena, &mut txn)
+.add_n("Comment", Some(ImmutablePropertiesMap::new(2, vec![("content", Value::from(&ic_content)), ("score", Value::from(&ic_score))].into_iter(), &arena)), None).collect_to_obj()?;
+    G::new_mut(&db, &arena, &mut txn)
+.add_edge("CommentOf", None, post_node.id(), comment_node.id(), false).collect_to_obj()?;
+}
+;
+let response = json!({
+    "data": "success"
 });
 txn.commit().map_err(|e| GraphError::New(format!("Failed to commit transaction: {:?}", e)))?;
 Ok(input.request.out_fmt.create_response(&response))
