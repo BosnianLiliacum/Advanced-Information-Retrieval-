@@ -39,6 +39,6 @@ class search_posts_vec(helix.Query):
 #text = input("prompt: ")
 text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
 vec = vectorize_text(text)
-res = db.query(search_posts_vec(vec, 10))
+res = db.query(search_posts_vec(vec, 20))
 print(res)
 [print(f"{o}\n\n") for o in res[0]["posts"]]

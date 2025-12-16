@@ -8,8 +8,8 @@ source .venv/bin/activate
 git clone git@hf.co:datasets/PranavVerma-droid/reddit data/reddit
 
 curl -sSL "https://install.helix-db.com" | bash
-helix compile
 helix push dev
+python insert_data.py
 ```
 
 ### Game plan
@@ -27,6 +27,7 @@ text input query
 - [X] user text input, reformulate with an llm to be like the data in the db
 - [X] vector similarity search in db, output top 5 closest nodes
 - [ ] evaluation criteria
+    - recall
     - does the subreddit make sense for the query?
     - some sort of sentiment analysis with an embedding model?
 
