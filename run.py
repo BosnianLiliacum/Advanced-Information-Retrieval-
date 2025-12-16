@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from typing import List, Tuple
 from insert_data import vectorize_text
 import json
@@ -35,8 +37,8 @@ class search_posts_vec(helix.Query):
         return response
 
 #text = input("prompt: ")
-text = "Hello everyone, I'm having a little trouble understanding how an LLM works locally.  If I'm using Ollama and I'm talking with, let say gemma2, I have a conversation.  I first give my name to the LLM. Get the response, then ask a bunch more questions.  If I then say what's my name, it will tell me my name."
+text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
 vec = vectorize_text(text)
-res = db.query(search_posts_vec(vec, 5))
+res = db.query(search_posts_vec(vec, 10))
 print(res)
 [print(f"{o}\n\n") for o in res[0]["posts"]]

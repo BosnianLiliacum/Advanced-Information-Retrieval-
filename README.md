@@ -29,3 +29,6 @@ text input query
 - [ ] evaluation criteria
     - does the subreddit make sense for the query?
     - some sort of sentiment analysis with an embedding model?
+
+### Main Dataset (excluding actual web scraping from Reddit)
+- `https://huggingface.co/datasets/PranavVerma-droid/reddit`
