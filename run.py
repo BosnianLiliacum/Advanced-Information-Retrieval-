@@ -1,4 +1,5 @@
 from typing import List, Tuple
+from insert_data import vectorize_text
 import json
 import helix
 import torch
@@ -10,23 +11,9 @@ db = helix.Client(local=True, verbose=True)
 tokenizer = AutoTokenizer.from_pretrained("mixedbread-ai/mxbai-embed-large-v1")
 model = AutoModel.from_pretrained("mixedbread-ai/mxbai-embed-large-v1")
 device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"using device: {device}")
 model.to(device)
 model.eval()
-
-def vectorize_text(text):
-    inputs = tokenizer(
-            text,
-            return_tensors="pt",
-            truncation=True,
-            padding=True,
-            max_length=512
-    ).to(device)
-
-    with torch.no_grad():
-        outputs = model(**inputs)
-        embedding = outputs.last_hidden_state[:, 0, :].squeeze().tolist()
-
-    return embedding
 
 class search_posts_vec(helix.Query):
     def __init__(

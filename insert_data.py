@@ -6,11 +6,10 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModel
 
-db = helix.Client(local=True, verbose=True)
-
 tokenizer = AutoTokenizer.from_pretrained("mixedbread-ai/mxbai-embed-large-v1")
 model = AutoModel.from_pretrained("mixedbread-ai/mxbai-embed-large-v1")
 device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"using device: {device}")
 model.to(device)
 model.eval()
 
@@ -66,17 +65,20 @@ def vectorize_text(text):
 
     return embedding
 
-data = load_all_posts("datasets/scrapes")
-#vecs = []
-#for _, _, content, _, _, _ in tqdm(data):
-#    vec = vectorize_text(content)
-#    vecs.append(vec)
-#with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
+if __name__ == "__main__":
+    db = helix.Client(local=True, verbose=True)
 
-n_data = []
-vecs = json.load(open("embeded_vectors.json"))
-for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
-    db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
+    data = load_all_posts("datasets/scrapes")
+    #vecs = []
+    #for _, _, content, _, _, _ in tqdm(data):
+    #    vec = vectorize_text(content)
+    #    vecs.append(vec)
+    #with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
 
-posts = db.query("get_all_posts")
-print(len(posts[0]["posts"]))
+    n_data = []
+    vecs = json.load(open("embeded_vectors.json"))
+    for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
+        db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
+
+    posts = db.query("get_all_posts")
+    print(len(posts[0]["posts"]))
