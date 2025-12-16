@@ -6,6 +6,10 @@
 uv sync
 source .venv/bin/activate
 git clone git@hf.co:datasets/PranavVerma-droid/reddit data/reddit
+
+curl -sSL "https://install.helix-db.com" | bash
+helix compile
+helix push dev
 ```
 
 

@@ -296,4 +296,3 @@ if __name__ == "__main__":
         print("Score:", score)
         print("Top comments:", top)
         print(len(posts))
-      

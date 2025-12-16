@@ -1,2 +1,4 @@
-data/
-.venv/
+.helix/
+target/
+*.log
+__pycache__
