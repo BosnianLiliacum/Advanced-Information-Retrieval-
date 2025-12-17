@@ -27,9 +27,9 @@ text input query
 - [X] user text input, reformulate with an llm to be like the data in the db
 - [X] vector similarity search in db, output top 5 closest nodes
 - [ ] evaluation criteria
-    - recall
-    - does the subreddit make sense for the query?
-    - some sort of sentiment analysis with an embedding model?
+    - [ ] recall, does the subreddit make sense for the query?
+    - [ ] some sort of sentiment analysis with an embedding model?
+    - [ ] graph of cosine similarity of prompt to text
 
 - embedding model: `https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1`
 
