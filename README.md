@@ -19,9 +19,8 @@ text input query
     -> output top 5 posts/comments, subreddit, sort based on upvotes
     -> have llm make output nicer
 
-- possibly write a web scraper if you want?
-
 - [X] choose which data we want
+- [ ] web scraper for more data
 - [X] pre-process data (title, content [vector], top k comments, url)
 - [X] vectorize all data and insert into db with tags to each vector with subreddit, upvotes, downvotes
 - [X] user text input, reformulate with an llm to be like the data in the db
@@ -30,8 +29,9 @@ text input query
     - [ ] recall, does the subreddit make sense for the query?
     - [ ] some sort of sentiment analysis with an embedding model?
     - [ ] graph of cosine similarity of prompt to text
+    - [ ] WE NEED PLOTS FOR THIS
 
-- embedding model: `https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1`
-
-### Main Dataset (excluding actual web scraping from Reddit)
-- `https://huggingface.co/datasets/PranavVerma-droid/reddit`
+### Resources
+- Dataset: `https://huggingface.co/datasets/PranavVerma-droid/reddit`
+- Embedding model: `https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1`
+- LLM via Ollama: `https://mistral.ai/news/announcing-mistral-7b`
