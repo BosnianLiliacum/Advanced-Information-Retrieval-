@@ -8,6 +8,7 @@ dependencies = [
     "helix-py>=0.2.31",
     "matplotlib>=3.10.8",
     "numpy>=2.3.5",
+    "requests>=2.32.5",
     "torch>=2.9.1",
     "transformers>=4.57.3",
 ]
