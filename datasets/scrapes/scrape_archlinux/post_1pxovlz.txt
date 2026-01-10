@@ -1,0 +1,32 @@
+Post Title: No thumbnails for android phone in Dolphin
+Author: No_Look_9932
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1pxovlz/no_thumbnails_for_android_phone_in_dolphin/
+Number of comments: 7
+Created UTC: 1766920098.0
+
+Post Content:
+Connected my phone via USB to Dolphin but image thumbnails don't show. Other USB drives work fine. Arch + KDE Plasma 6 kio-extras and libmtp installed Files show up, just no previews Is this fixable or just how MTP works?
+
+Edit: In Dolphin, go to Settings → Interface → Previews and check the Remote Storage Size Limit
+
+
+Top 3 comments:
+
+Comment 1:
+Author: maskedredstonerproz1
+Score: 11
+Created UTC: 1766933500.0
+Comment: I love you, upvote just soley based on the fact you provided the solution, when you acquired it, for the next person, I personally don't use Dolphin, but still
+
+Comment 2:
+Author: Objective-Stranger99
+Score: 3
+Created UTC: 1766920862.0
+Comment: Yeah mtp is kinda bad.
+
+Comment 3:
+Author: piepie526
+Score: 1
+Created UTC: 1766962059.0
+Comment: Thank you!

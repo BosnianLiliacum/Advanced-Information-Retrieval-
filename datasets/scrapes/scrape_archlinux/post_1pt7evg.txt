@@ -1,0 +1,46 @@
+Post Title: Errors popping up at shutdown
+Author: moedadourada1
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1pt7evg/errors_popping_up_at_shutdown/
+Number of comments: 7
+Created UTC: 1766429057.0
+
+Post Content:
+I am currently dual-booting arch linux and windows 11 on my machine. After an update on windows, some of my partitions were rearranged, in particular one that was referred to as "D:\\" on windows, messing up the order of my other partitions and nuking my bootloader from the boot options on the motherboard. I am somewhat of a newbie to arch myself, but i did try a solution of my own, which happened to work for the most part. In order to restore my system, i booted up my arch iso, which i had used to install the system back in june, deleted the "D:\\" partition through cfdisk and created a new boot partition. After that, i've formatted the new boot partition normally and mounted /mnt, /mnt/boot/efi and swap (swapon /dev/nvme0n1p6), followed by generating a new fstab, which was what was broken to begin with. After that, chroot, followed by grub-install and then grub-mkconfig to the new boot partition. Pretty much just redone those few steps from the installation guide i had followed when i had originally installed the system. The system returned to working just fine. However, i'm not sure if this was after the first shutdown after the fix or at the second shutdown, but i have started receiving some errors on every shutdown. They don't impact shutdown times, and the system still seems to be working fine even with them, although it would still be best if i could fix them. I believe that i had also probably done a pacman -Syu after the original fix, before doing any shutdowns. Also, as a side note, i'm assuming that the errors are the same on all shutdowns, since i'm always getting what seems to be roughly the same number of lines on each shutdown, although given how my system shutdowns in \~2 seconds, it is really hard to be 100% sure, although it seems to be very likely the case. Recording a video of the shutdown on my phone was what allowed me to actually read the errors
+
+The errors are the following:
+
+    The system will power off now!
+    
+    shutdown[1]: Failed to parse /proc/self/mountinfo: Operation not supported
+    shutdown[1]: Unable to unmount file systems: Operation not supported
+    shutdown[1]: Cannot enumerate swap partitions, no libmount support.
+    shutdown[1]: Unable to deactivate swaps: Operation not supported
+    shutdown[1]: Failed to parse /proc/self/mountinfo: Operation not supported
+    shutdown[1]: Unable to unmount file systems: Operation not supported
+    shutdown[1]: Cannot enumerate swap partitions, no libmount support.
+    shutdown[1]: Unable to deactivate swaps: Operation not supported
+    shutdown[1]: Unable to finalize remaining file systems, swap devices, ignoring
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Swipe650
+Score: 18
+Created UTC: 1766434065.0
+Comment: Those errors on shutdown will be fixed in the next mkinitcpio release:
+
+https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio/-/merge_requests/457/diffs?commit_id=d0a64f47286f04701fbe1e6e856147b372ad1c9a
+
+Comment 2:
+Author: GoldryBluszco
+Score: 7
+Created UTC: 1766445589.0
+Comment: Thank you for this post!  I've been haphazardly searching about various sites to see if it's another case of "It's just you".
+
+Comment 3:
+Author: Temporary_Ad4903
+Score: 1
+Created UTC: 1766696729.0
+Comment: I just updated the system and err gone

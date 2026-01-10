@@ -1,0 +1,79 @@
+Post Title: My Python farming game has helped lots of people learn how to program! As a solo dev, seeing this is so wholesome.
+Author: AdSad9018
+Score: 278
+URL: https://www.reddit.com/r/learnprogramming/comments/1pqn9jd/my_python_farming_game_has_helped_lots_of_people/
+Number of comments: 32
+Created UTC: 1766156519.0
+
+Post Content:
+Program a drone using a simple python-like language to fully automate various farming tasks that would otherwise be very grindy. Feel the satisfaction of simply pressing "execute" and watching your drone do all the hard work.
+
+Unlike most programming games the game isn't divided into distinct levels that you have to complete but features a continuous progression.
+
+Farming earns you resources which can be spent to unlock new technology.
+
+Programming is done in a simple language similar to Python. The beginning of the game is designed to teach you all the basic programming concepts you will need by introducing them one at a time.
+
+While it introduces everything that is relevant, it won't hold your hand when it comes to solving the various tasks in the game. You will have to figure those out for yourself, and that can be very challenging if you have never programmed before.
+
+If you are an experienced programmer, you should be able to get through the early game very quickly and move on to the more complex tasks of the later game, which should still provide interesting challenges.
+
+Although the programming language isn't exactly Python, it's similar enough that Python IntelliSense works well with it. All code is stored in .py files and can optionally be edited using external code editors like VS Code. When the "File Watcher" setting is enabled, the game automatically detects external changes.
+
+Hope you like the coding game concept! :)
+
+You can find it here:   
+[https://store.steampowered.com/app/2060160/The\_Farmer\_Was\_Replaced/](https://store.steampowered.com/app/2060160?utm_source=RD)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: iamnull
+Score: 17
+Created UTC: 1766157727.0
+Comment: Worth mentioning: very active discord for the game. Friendly to people of all skill levels as well.
+
+I love The Farmer Was Replaced. I had a dumb little project inside it to encode data into part of the farm so drones can share state. I forget where I left off, but I did get a data encoding/decoding scheme working. I think 8 cells was enough to share useful amounts of data? That said, the game rules make it more of a fun side project than anything useful.
+
+I would be absolutely ecstatic if the drones could have a shared reference to some piece of memory. Let the player implement locks as an advanced exercise.
+
+Comment 2:
+Author: HomicidalPanda365
+Score: 10
+Created UTC: 1766158274.0
+Comment: You say "python like" but for some1 that wants to learn python for a job how different would it be from actual pytjon?, like if i master/finish this game how much of python would i have to go relearn?(syntax mainly,)
+
+Comment 3:
+Author: Raioc2436
+Score: 4
+Created UTC: 1766168406.0
+Comment: Hey. I was talking about your game with a friend just the other day!!!
+
+Disclaimer, I haven’t actually played your game but I saw a couple of gameplays on YouTube. 
+
+From everything I’ve seen about the game, I truly believe you have achieved the best educational game I have ever seen. 
+
+Most educational games have some clunky mechanics around the “learning” part and just aren’t fun and I feel like they justify themselves as “it’s boring but it’s educational”. 
+
+Your game seems to be really fun and the mechanics around “programming a robot farm” is genius in my opinion. 
+
+I wish I was starting my programming journey to enjoy your game with fresh eyes. 
+
+Overall, really nice job!!!
+
+Comment 4:
+Author: Rednitz
+Score: 2
+Created UTC: 1766171144.0
+Comment: You sir are epic.
+
+You found an fantastic balance of challenge and fun, so you will be "Archmage of the zone of proximal development" for me.
+
+Thanks.
+
+Comment 5:
+Author: Rain-And-Coffee
+Score: 2
+Created UTC: 1766182349.0
+Comment: This looks great, bookmarked so I can give it a try

@@ -1,0 +1,56 @@
+Post Title: What’s the easiest way to learn a programming language without quitting halfway?
+Author: InspectorFeeling3892
+Score: 25
+URL: https://www.reddit.com/r/learnprogramming/comments/1pt50ed/whats_the_easiest_way_to_learn_a_programming/
+Number of comments: 41
+Created UTC: 1766423528.0
+
+Post Content:
+I’m looking for some advice. I’m learning JavaScript right now and this is my second attempt. The first time didn’t go well and I ended up dropping it, and I really don’t want to repeat that mistake.
+
+At the moment I’m using freeCodeCamp and the lessons make sense to me. I like how things are explained step by step. At the same time, a friend keeps telling me the fastest way is to learn by building small projects instead of only following lessons.
+
+I’m a bit stuck between these two approaches and don’t want to lose momentum. For people who have been through this, what actually worked for you when starting out? Is there a simple blueprint to follow so you don’t burn out or quit halfway?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Trizzzolam7
+Score: 17
+Created UTC: 1766423708.0
+Comment: Keep trying and don't quit
+
+Comment 2:
+Author: maxpowerAU
+Score: 8
+Created UTC: 1766424861.0
+Comment: Your friend is correct. It’s not just the fastest way, it’s the only way to learn a language – using it to actually do stuff.
+
+Don’t think of programming like learning times tables. Think of it like learning how to ride a bicycle. You can read about it and study the rules of balancing and pedalling but you have to physically do it to actually get it.
+
+Comment 3:
+Author: madnhain
+Score: 5
+Created UTC: 1766423877.0
+Comment: For me it was to stop trying to learn. It felt forced. I had an idea of what I wanted to write, and I figured out how to do it. I made a ton of mistakes and a bunch of bad habits. But I learned what I wanted, when I needed it, with actionable, real-world use.
+
+Comment 4:
+Author: ffrkAnonymous
+Score: 4
+Created UTC: 1766427457.0
+Comment: &gt; and the lessons make sense to me.
+
+Sure, they make sense.  But did you learn anything?  Or did you nod your head.
+
+Comment 5:
+Author: thenamo
+Score: 3
+Created UTC: 1766424530.0
+Comment: It really depends on your goals and situation. But best approach from my perspective would be, as beginner freecodecamp is good start and you will build mini projects there as you move forward through curriculum. 
+
+So focus on finishing freecodecamp because two approaches are apllied there, the projects and theory. And when you finish the freecodecamp build mini projects on your own. There are mini projects on github how to build with JS and its frameworks. 
+
+And then build a good CV or update if you have one. Also linkedin. 
+
+And when you finish or land a job upskill all the time. I recommend hyperskill or TheOdinProject. I am currently going with TheOdinProject. It is the best open source and free course for JS imho.

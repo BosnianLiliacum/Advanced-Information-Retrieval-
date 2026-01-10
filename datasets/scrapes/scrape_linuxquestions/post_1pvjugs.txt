@@ -1,0 +1,59 @@
+Post Title: Bitlocker but for Linux
+Author: _v0id_01
+Score: 25
+URL: https://www.reddit.com/r/linuxquestions/comments/1pvjugs/bitlocker_but_for_linux/
+Number of comments: 43
+Created UTC: 1766688277.0
+
+Post Content:
+Hi everyone, I just moved to Linux, and I want to encrypt all my data until I log into my account, like bitlocker does.
+
+  
+It keeps my information secure to be stolen and I'm more calm about it, so, what's your advice???
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DB_Explorer
+Score: 42
+Created UTC: 1766688750.0
+Comment:  LUKS is the standard for Linux 
+
+https://gitlab.com/cryptsetup/cryptsetup/
+
+some Distros like Pop OS offer it by default
+
+Comment 2:
+Author: KoholintCustoms
+Score: 35
+Created UTC: 1766688506.0
+Comment: Most distros have the option to encrypt when you install the distro. This should fit your needs. 
+
+I know Mint and Ubuntu do. 
+
+What distro do you want to use?
+
+Comment 3:
+Author: birdbrainedphoenix
+Score: 7
+Created UTC: 1766688495.0
+Comment: [Encrypt your home directory.](https://www.google.com/search?q=linux+encrypt+home+directory+how+to)
+
+You didn't specify which distribution you're using, so finding the exact setup instructions is up to you.
+
+Comment 4:
+Author: davo-cc
+Score: 7
+Created UTC: 1766689235.0
+Comment: Veracrypt for the win.  Makes container files that you can move around, also can encrypt entire drives.
+
+My old boss knew a guy working for an Australian state's police in the 2000s and they had a lot of trouble with it's predecessor TrueCrypt as the bad guys would always use it for storage and cut power when they were raided.  Vera is stronger than that AFAIK so it's probably beyond most non-state actors today.
+
+Comment 5:
+Author: Beolab1700KAT
+Score: 3
+Created UTC: 1766688640.0
+Comment: Most distro's allow you to encrypt the system during the install process using LUKS. 
+
+Another option is Veracrypt.

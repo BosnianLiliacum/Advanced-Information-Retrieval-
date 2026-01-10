@@ -1,0 +1,52 @@
+Post Title: What degree involves more coding rather than math?
+Author: takdeeznuts
+Score: 40
+URL: https://www.reddit.com/r/learnprogramming/comments/1q5hw23/what_degree_involves_more_coding_rather_than_math/
+Number of comments: 45
+Created UTC: 1767704324.0
+
+Post Content:
+Hello! I am a highschool student that is graduating in three years. I would like to study something related to coding in university/college in the future. I feel like my math is acceptable but not one of my favorite subjects but I love coding. What degree would you guys recommend and what jobs could I get with it?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Standard_Bag5426
+Score: 52
+Created UTC: 1767704695.0
+Comment: Software Engineering or Computer Science with a focus on software development would be your best bet - you'll still need some math but way less than like data science or computer engineering. Most of the actual coding jobs (web dev, mobile apps, etc) don't use much heavy math day-to-day anyway
+
+Comment 2:
+Author: znjohnson
+Score: 18
+Created UTC: 1767704917.0
+Comment: Most degrees dealing with coding will have similar math requirements. Math teaches you logic and coding is logic based. Coding and computers arose from math and to this day they are taught together. 
+
+You’ll be hard be hard pressed to find a degree which teaches coding and doesn’t require at least Calculus 1 to 3 and likely linear algebra as well. 
+
+Some business schools might have there own programming course work but they will likely be less rigorous and more focused on specific tasks with coding.
+
+Comment 3:
+Author: hrm
+Score: 10
+Created UTC: 1767704882.0
+Comment: I’d say most coding involves very little maths but univeristy studies are often very theoretical and thus a lot heavier on maths than real life.
+
+The obvious choice is leaning into web dev in some way, those guy’s can’t math to save their lives ;) but then you must be able to tell hotpink apart from magenta…
+
+In the end you probably have to look into the courses at each school to get a feel for how maths heavy they are.
+
+(of course there are programmers that do very maths intense stuff, but they are fewer than the ”build me a basic rest app” kind of programmer)
+
+Comment 4:
+Author: True-Strike7696
+Score: 4
+Created UTC: 1767705929.0
+Comment: i think there is no escape from math. When it it comes to degrees no two colleges and classes are the same. So you'll have to do the research before signing up for a curriculum. For personal experience my cs path friends had to do a lot less math than my engineering path friends.
+
+Comment 5:
+Author: DishwashingUnit
+Score: 4
+Created UTC: 1767709880.0
+Comment: Just embrace it. You're going to want the calculus to understand machine learning.

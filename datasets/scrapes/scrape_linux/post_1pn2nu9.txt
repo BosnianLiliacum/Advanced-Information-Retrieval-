@@ -1,0 +1,54 @@
+Post Title: Installing Linux is significantly easier than installing Windows.
+Author: evrdev
+Score: 1143
+URL: https://www.reddit.com/r/linux/comments/1pn2nu9/installing_linux_is_significantly_easier_than/
+Number of comments: 381
+Created UTC: 1765788474.0
+
+Post Content:
+Recently I tried installing Windows 11 and got stuck because the installer failed to detect a usable partition.
+
+As a long-time Linux and macOS user and a developer, I expected this to be trivial. It wasn’t even after searching and asking ChatGPT.
+
+Installing Linux is significantly easier than installing Windows.
+Bye. Have a beautiful time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: LemmysCodPiece
+Score: 376
+Created UTC: 1765788865.0
+Comment: When Windows XP went EOL there was a magazine article by Which following people that had gone over to Ubuntu as an alternative.  None of the people in the article could find any fault with Ubuntu, they could still use Chrome or Firefox, so they were happy.
+
+Almost all of them complained that Ubuntu was difficult and time consuming to install.  It then dawned on me that most end users will never install an OS.  They should have got them to install Windows as a side by side comparison.
+
+Comment 2:
+Author: Mughi1138
+Score: 145
+Created UTC: 1765788881.0
+Comment: Yeah, I found that to be the case since '95.
+
+The most common explanation is that very few people needed to install Windows if they have it pre-installed when they buy a new computer.
+
+  
+Oh, wait. I forgot. The other thing was that there used to be an annual "time to re-install Windows ritual" once machines got too unstable. Never had to do that with Linux, though.
+
+Comment 3:
+Author: Infiniti_151
+Score: 54
+Created UTC: 1765789445.0
+Comment: And also don't have to turn off an awful number of options to ensure privacy
+
+Comment 4:
+Author: bear5official
+Score: 31
+Created UTC: 1765789204.0
+Comment: the windows installer is a little more complicated than the average live iso installers on linux, but most people dont even see this installer bc their pc comes with windows
+
+Comment 5:
+Author: DamnedIfIDiddely
+Score: 31
+Created UTC: 1765789348.0
+Comment: It's a nightmare to even write a Windows install USB without already having a Windows box, and then once you write it it's a nightmare to overwrite it.

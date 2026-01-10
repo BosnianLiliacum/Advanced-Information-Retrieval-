@@ -1,0 +1,42 @@
+Post Title: What helped you stay consistent while learning programming?
+Author: Competitive-Mix7071
+Score: 65
+URL: https://www.reddit.com/r/learnprogramming/comments/1q7d4v3/what_helped_you_stay_consistent_while_learning/
+Number of comments: 41
+Created UTC: 1767882350.0
+
+Post Content:
+I always start motivated but struggle to stay consistent after a few weeks. For those who made it past the beginner phase, what actually helped you stick with it long term?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ktnaneri
+Score: 50
+Created UTC: 1767883848.0
+Comment: I had to make money and was simply lucky because the first company I started working for (after learning programming for 6 month) was doing money laundering and they did not care about my knowledge. I just stayed there and just kept studying programming, but if I started over I would choose a completely different style of self study.
+
+Comment 2:
+Author: Achereto
+Score: 23
+Created UTC: 1767882733.0
+Comment: For me programming is a fun thing to do. It's my daily dopamine.
+
+Comment 3:
+Author: sasuketaichou
+Score: 15
+Created UTC: 1767883618.0
+Comment: i don't normally enjoy it when building for work/other people. the true motivation comes from desperation. put yourself in need of to build something for whatever reason. you will failed first few round, that's for sure. build, failed, repeat
+
+Comment 4:
+Author: DiscipleOfYeshua
+Score: 12
+Created UTC: 1767884237.0
+Comment: Treat it like a game. Have fun. It’s a puzzle. But take it personally when things don’t work, like the code is my opponent trying to give me a hard time and I’ll keep at it until I win (by finally getting it right).
+
+Comment 5:
+Author: Latter-Risk-7215
+Score: 8
+Created UTC: 1767883005.0
+Comment: small daily goals, even 10 minutes. less burnout, more progress. consistency beats motivation.

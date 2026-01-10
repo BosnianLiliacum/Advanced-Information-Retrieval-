@@ -1,0 +1,69 @@
+Post Title: For the both os...
+Author: Smart_Fennel_703
+Score: 32
+URL: https://www.reddit.com/r/archlinux/comments/1pp2cgj/for_the_both_os/
+Number of comments: 9
+Created UTC: 1765992156.0
+
+Post Content:
+I’m Egyptian, and back in the day there was a small sacred ritual.
+Every Thursday, I’d rush home just to play Flash games for about two hours. That was a thing in Egypt until around 2019. Then Flash died, time sped up, and everything quietly fell apart. Funny how that works.
+
+I started on Windows 7. It felt solid, predictable, almost friendly.
+Then I moved to Windows 10, which was basically Windows 7 but louder, heavier, and constantly asking for updates like a needy coworker.
+
+Eventually, I switched to Linux. And suddenly things made sense.
+
+Linux isn’t just an OS. It’s a playground. A workshop. A place where creativity actually breathes.
+Windows, on the other hand, feels like a locked apartment where you’re not allowed to move the furniture, repaint the walls, or ask questions. It had its era. That era is over.
+
+Windows was comfort.
+Linux is freedom.
+
+Windows had its time, and it ran out of ideas.
+The age of Linux has already started.
+
+I use arch btw.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Special-Fan-1902
+Score: 17
+Created UTC: 1765993263.0
+Comment: Hey it's me, your former coworker. I know we don't work together anymore, but will you please update me? Ever since you left, I haven't been updated, and I desperately need updates. Please?
+
+Comment 2:
+Author: evild4ve
+Score: 1
+Created UTC: 1765995572.0
+Comment: I don't think it even really did have an era
+
+Win7 was their last hurrah and it could not bulk-copy files properly. Garbage.
+
+Win95 had a DE, but mostly it was a bloaty version of Windows 3.1 that messed up MS-DOS. I'm sure most people lost more time getting MS-DOS programs to work in spite of Win95 than the DE saved them.
+
+And XP had such a horrible GUI that you used to need to buy a 3rd-party program.
+
+Based on this small cross-section, I think Windows arrived in the eras of other things and generally made them worse whilst taking the credit.
+
+Comment 3:
+Author: AMGz20xx
+Score: 1
+Created UTC: 1766082922.0
+Comment: You can still play many flash games on [flashpointarchive.org](http://flashpointarchive.org) and you don't need Flash installed. The website uses a Flash emulator, called Ruffle. So some games might not work properly, especially those that require online connectivity.
+
+Comment 4:
+Author: ARSXALF
+Score: 1
+Created UTC: 1766134029.0
+Comment: That's what's happening if you are too successful. You Lost Passion 
+
+I'm looking at you Microsoft
+
+Comment 5:
+Author: DarkZERO43
+Score: 0
+Created UTC: 1766044526.0
+Comment: Freakin' AI slop everywhere... People apparently can't even think for themselves to write a few paragraphs now.

@@ -1,0 +1,47 @@
+Post Title: Just upgraded all three of my main servers to the 6.18 kernel. Memory usage dropped significantly on all of them immediately after the upgrade.
+Author: [deleted]
+Score: 91
+URL: https://www.reddit.com/r/kernel/comments/1q2tt08/just_upgraded_all_three_of_my_main_servers_to_the/
+Number of comments: 12
+Created UTC: 1767444479.0
+
+Post Content:
+Just upgraded all three of my main servers to the 6.18 kernel. Memory usage dropped significantly on all of them immediately after the upgrade. Nothing else changed and nothing looks obviously misconfigured. Did 6.18 introduce any changes to memory management, accounting, or reclamation that would explain this behavior?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: avinthakur080
+Score: 26
+Created UTC: 1767446127.0
+Comment: There are a few memory-related enhancements in 6.18 documented at &lt;https://kernelnewbies.org/Linux_6.18&gt;, which lists some changes related to NFS servers, memory allocations and more about memory management.
+
+But, curious to know how much is the gain ?
+
+Comment 2:
+Author: EmbeddedEntropy
+Score: 16
+Created UTC: 1767447311.0
+Comment: What kind of memory?  Virtual? Real?
+
+If it’s real, as Linus said, “Free memory is wasted memory.”  Sounds like 6.18 could be wasting memory.
+
+Comment 3:
+Author: wRAR_
+Score: 14
+Created UTC: 1767514407.0
+Comment: You've rebooted them.
+
+Comment 4:
+Author: mattbillenstein
+Score: 1
+Created UTC: 1767656088.0
+Comment: Would be good if you compared the "available" column from the output of `free -m` keeping in mind the buffer/cache is "available" but not "free"
+
+Comment 5:
+Author: gothicVI
+Score: 1
+Created UTC: 1767695439.0
+Comment: What was the uptime prior? Could be a memory leak.
+Apart from that, free memory is wasted memory. Only a drop in used would be an improvement if you can exclude memory leaks in your applications.

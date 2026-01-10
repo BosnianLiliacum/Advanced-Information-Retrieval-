@@ -1,0 +1,50 @@
+Post Title: BULK INSTALL ALL YOUR FAVOURITE APPS IN ONE GO
+Author: N1C4T
+Score: 1017
+URL: https://i.redd.it/isik8442cbcg1.png
+Number of comments: 187
+Created UTC: 1767959817.0
+
+Post Content:
+I noticed beginners get super overwhelmed trying to find and install apps via the terminal or software centers, so i made this tool to put everything in one place
+
+besides bulk installing, it's good for discovery - go thru the list, find new apps, and install them in one single command
+
+Currently supports most major distros **Arch, Fedora, Ubuntu** based systems, handling all the `pacman` / `dnf` / `apt` logic for you. Just added **flatpak** support as well, so you can toggle sources to install proprietary stuff (discord, spotify, etc) via flathub if your native repos don't have them.
+
+It’s completely open source and runs in your browser. I’d love to hear what you think!
+
+Try it here: [tuxmate.com](http://tuxmate.com/) Source Code: [abusoww/tuxmate](https://github.com/abusoww/tuxmate)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Nereithp
+Score: 312
+Created UTC: 1767962384.0
+Comment: TIL the declarative part of NixOS is that you have to declare to everyone that you use NixOS on any tangentially-related thread.
+
+Comment 2:
+Author: chipface
+Score: 287
+Created UTC: 1767960051.0
+Comment: So it's basically Ninite for Linux. Very nice!
+
+Comment 3:
+Author: PalDoPalKaaShaayar
+Score: 45
+Created UTC: 1767962053.0
+Comment: A feature where we can save/store the apps installed metadata so that I can reinstall all my apps again when needed for e.g. after fresh installing linux os or installing same apps in another system without going into list again and choose.
+
+Comment 4:
+Author: InterestingTrip9590
+Score: 44
+Created UTC: 1767964014.0
+Comment: I’m a simple man. I see FOSS, I upvote. Thanks for bringing this to our community!!
+
+Comment 5:
+Author: STSchif
+Score: 30
+Created UTC: 1767960632.0
+Comment: Laughs in nixos

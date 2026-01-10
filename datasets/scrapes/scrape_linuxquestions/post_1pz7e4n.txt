@@ -1,0 +1,82 @@
+Post Title: Question for parents: at what age did you introduce your kids to Linux, unsupervised?
+Author: dude-where-am-i
+Score: 19
+URL: https://www.reddit.com/r/linuxquestions/comments/1pz7e4n/question_for_parents_at_what_age_did_you/
+Number of comments: 43
+Created UTC: 1767065854.0
+
+Post Content:
+I’d like to set up an Ubuntu desktop for my kids. Oldest is 6. 
+
+Having a hard time selling the idea to my other half. They don’t believe additional screen time is appropriate at this age, even if their school already uses Chromebooks. 
+
+To me, early computer literacy in this day and age is critically important. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AFlyingGideon
+Score: 23
+Created UTC: 1767069965.0
+Comment: "Screen time" - outside of niche areas such as optometry - is meaningless.  If you look at the various studies claiming to be about "screen time", they're either about mindless viewing of insipid videos (including bad TV) or social media. There are certainly issues with those activities, but they're far from the only ways to use "screens".
+
+My kids had computer access since a very early age, though it started as activities with us.  For example, I'd my kids learning [to type] words concurrent with their development of the dexterity to form letters by hand.  Why should the former await the latter (an idea I stole from the "teach kids sign language" movement)?  We also had various educational games they used (along with toys and games in the non-digital universe, of course).
+
+Around the middle of elementary school, they started "developing", playing with HTML and MIT's Scratch.   This really hooked one of my kids, and he was programming Arduino and heavy-duty graphics stuff in Java and then C#  in high school. 
+
+Both played with various creation tools like Blender and such. 
+
+The early years were all on Apple and Linux, but the attraction of games pulled them eventually to the dark side and MSFT.   As penance for their betrayal, they had to build their own computers.  That was especially fun when I had to show one the trick of straightening a pin with a mechanical pencil. 
+
+All this targetted use of computing - screens - left them with little interest in what most people call social media.  They have played multiuser games, one was successful enough with videos to win a minor YouTube award, and they've done a fair amount of online collaboration.  One held leadership roles in robotics in HS and the eSports team in his undergrad, the other TAed for CS classes, and both did very well in their STEMy degree programs.  The recent graduate had a job awaiting him, which seems to be outside the norm nowadays. 
+
+So: while I agree with avoidance of mindless viewing and social media, computing itself can be a gateway to various art forms, mathematics, and other activities that are fun, educational, and lucrative. 
+
+I believe the key is in introducing the computer as a creative device rather than a tool for passive entertainment, and continually encouraging the exploration of that creation.
+
+ETA: I completely forgot Minecraft.  That was big, and one went from building "machines" using some in-game mechanism i don't recall to coding extensions in Java.  Running their own servers offered a deeper dive into Linux.
+
+Comment 2:
+Author: reborngoat
+Score: 11
+Created UTC: 1767066997.0
+Comment: I had an old PC set up with Manjaro for the kids to play minecraft and gcompris on when they were around 4-6 y/o. Now my kids are 11-13 and they each have their own linux machine (Mint).
+
+Granted it's basically never "unsupervised" since their computers and mine are all in the same room.
+
+They use it for Steam, YouTube/Twitch, Minecraft, schoolwork, a bit of light coding, and digital art.
+
+Comment 3:
+Author: DigitalJedi850
+Score: 7
+Created UTC: 1767066165.0
+Comment: I don't think you need to correlate age and ... operating system, as much as maturity and access control. Linux is... Honestly probably safer than Windows, since they can't just download 'apps' on a whim... 
+
+At 6, IDK what your other half is expecting them to get into that they can't on their chromebook.
+
+Comment 4:
+Author: Lucky_n_crazy
+Score: 7
+Created UTC: 1767069373.0
+Comment: Unsupervised entirely? Not until maybe 15-16.
+
+Our rule is that devices with Internet access must be used in our family room together where we all can generally see. 
+
+When the kids have the money to buy their own devices and pay for them. Fine, I can't/won't control them. 
+
+However, until they can pay for their own Internet access. I'm using pi-hole and DNS filtering to block porn, and most social media. Kids under 14 don't need it. Gaming, hanging with friends and family. Absolutely!
+
+My kids all have their own devices we play on together, mostly running Linux, some windows too. I just block browsers for them until they are older.
+
+Comment 5:
+Author: GhettoSauce
+Score: 3
+Created UTC: 1767067840.0
+Comment: I think what happened to be my situation can work out for you:
+
+Age 6 or 7 we were using Apple IIs in school, but I happened to have a computer at home, in my room, using Win 95, 98, NT, etc.
+
+The kicker is that even though some of my friends had the internet at home, we didn't. I'd still spend long times on the computer, though. I'd write things, draw, play with settings, problem solve and just grow my understanding of what a digital environment is and how to "pilot" it. I'd manage to run games on it, too, from card games to Starcraft. 
+
+In a nutshell, I mean try giving them a computer to learn computers with, just without the internet.

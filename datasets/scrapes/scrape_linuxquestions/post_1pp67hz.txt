@@ -1,0 +1,56 @@
+Post Title: Choosing a Linux distro for a daily driver
+Author: crazsum04
+Score: 48
+URL: https://www.reddit.com/r/linuxquestions/comments/1pp67hz/choosing_a_linux_distro_for_a_daily_driver/
+Number of comments: 81
+Created UTC: 1766001093.0
+
+Post Content:
+I'm not new to Linux at all. I've made me way around all the distros, but I want to pick one to stick with and keep. I'm thinking of going arch based for the AUR and the pacman package manager. I am currently on Pop os with the new cosmic desktop but something just feels off about cosmic. Previously I used arch with hyprland and I loved it but I'm a university student and trying to fix hyprland when something breaks was a bit challenging at times. Just want to know what people are using, the distro and the desktop. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GoodHoney2887
+Score: 27
+Created UTC: 1766002793.0
+Comment: Look, do you want to spend your weekend reading the Arch Wiki because a rolling release decided your bootloader was optional, or do you want a system that's been tested until it's rock-solid? Debian is what powers the damn internet for a reason.
+
+The repository depth in Debian is insane. You want a package? It’s there. You don't have to rely on the AUR (Arch User Repository) where some random guy named 'xX_LinuxLover_Xx' maintains the script you're betting your security on.
+
+If you want to 'learn Linux,' sure, go break Arch three times a week. But if you want to get work done, play games, or actually finish a project, Debian stays out of your way. It’s the difference between a project car that stays on blocks and a reliable truck that starts every damn morning.
+
+Look, man, go Arch if you want to brag on Reddit. Go Debian if you want a machine that doesn't treat every update like a game of Russian Roulette. I’ve seen enough bricked installs to know that 'latest' rarely means 'greatest.
+
+Comment 2:
+Author: D4VIE
+Score: 16
+Created UTC: 1766001473.0
+Comment: Bro believe me. As a student myself studying computer engineering, just use Debian and choose a desktop environment which is already to your liking and rice it a little. If you study cs or anything similar i assume that the courses using Linux are also using Debian or Ubuntu, so it is easier to get help directly instead of forums and what not. 
+
+After distrohopping like an idiot, I am happy with the stability of Debian and how it works for school.
+
+Edit: saw that you prefer arch, and then i would recommend omarchy if you haven't tried it yet.
+
+Comment 3:
+Author: SynapticStatic
+Score: 7
+Created UTC: 1766036610.0
+Comment: The best advice I can give anyone is to just pick a distro and stick with it. Don't distro hop, learn to solve the things you don't like about your distro. If you are always distro hopping, the only thing you're getting good at is installing distros.
+
+There's been a couple good suggestions already. Debian, Fedora, Mint, all good stable distros that won't explode on you.
+
+I'd stay away from distros like arch, gentoo, or anything that requires lots of fiddling around with as your desktop. Just install them on a spare computer and explode *that* instead. Experimenting with the OS on the machine you're using as a desktop is a recipe for disaster. If you don't have a spare computer, learn to use virtualbox and tinker around with them as a VM. If it explodes in a VM, you lose nothing.
+
+Comment 4:
+Author: MaruThePug
+Score: 5
+Created UTC: 1766004532.0
+Comment: have you tried mint? It's designed as a general purpose distro that you can basically set and easily maintain
+
+Comment 5:
+Author: MichiganRedWing
+Score: 4
+Created UTC: 1766001353.0
+Comment: Fedora KDE Plasma 43

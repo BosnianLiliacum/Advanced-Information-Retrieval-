@@ -1,0 +1,65 @@
+Post Title: Have `sudo` insult you upon incorrect password
+Author: TomHale
+Score: 989
+URL: https://man7.org/linux/man-pages/man5/sudoers.5.html#:~:text=insults%20%20%20%20%20%20%20%20%20%20%20If%20set%2C%20sudo%20will%20insult%20users
+Number of comments: 70
+Created UTC: 1766137998.0
+
+Post Content:
+```
+$ f=/etc/sudoers.d/99-insults; echo "Defaults insults" | sudo tee "$f" &amp;&amp; sudo chmod 440 "$f" &amp;&amp; sudo visudo --check
+Defaults insults
+/etc/sudoers: parsed OK
+/etc/sudoers.d/99-insults: parsed OK
+```
+
+Then, get abused:
+```
+$ sudo true
+[sudo] password for tom:
+Listen, broccoli brains, I don't have time to listen to this trash.
+[sudo] password for tom:
+Sorry about this, I know it's a bit silly.
+[sudo] password for tom:
+Pauses for audience applause, not a sausage
+```
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Skaarj
+Score: 379
+Created UTC: 1766139377.0
+Comment: For my personal machines I also like:
+
+
+     Defaults pwfeedback
+     Defaults passprompt="The Enrichment Center regrets to inform you that this next test is impossible. Make no attempt to solve it. "
+     Defaults passwd_timeout = 0
+
+Comment 2:
+Author: really_not_unreal
+Score: 148
+Created UTC: 1766138881.0
+Comment: Can I get it to congratulate me when I successfully guess my own password?
+
+Comment 3:
+Author: TheBrokenRail-Dev
+Score: 38
+Created UTC: 1766141839.0
+Comment: That's cool. It's always nice to see software that has a bit of personality in it. As opposed to the Microsoft-esque approach of uniform corporate beige. IMO we lost something after Windows XP when everyone started trying to make software as professional and "sleek" as possible.
+
+Comment 4:
+Author: TomHale
+Score: 28
+Created UTC: 1766138358.0
+Comment: Check out all the available insults:
+
+https://github.com/search?q=repo%3Asudo-project%2Fsudo+ins_&amp;type=code
+
+Comment 5:
+Author: litelinux
+Score: 28
+Created UTC: 1766146993.0
+Comment: Still defaults to on in Slackware :)

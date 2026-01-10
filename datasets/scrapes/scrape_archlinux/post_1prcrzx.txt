@@ -1,0 +1,52 @@
+Post Title: Recommendation for a non-tilling window manager for Wayland.
+Author: CosmicBlue05
+Score: 9
+URL: https://www.reddit.com/r/archlinux/comments/1prcrzx/recommendation_for_a_nontilling_window_manager/
+Number of comments: 35
+Created UTC: 1766232067.0
+
+Post Content:
+Hello,   
+I've spend some time configuring a  Hyprland setup and  have been  (mostly) amused by how  minimal it is possible to make. But, I realized I can't really adopt to the auto-tilling window management workflow. I felt like some apps were really not optimized for auto-tilling. Now, If I appreciate the minimalism of using an window manager but willing to stick to the more common floating workflow, what are my options? I've seen the long list of supported window managers on Arch wiki, but I would still like to hear it from the community.   
+Thank you for your time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BravestCheetah
+Score: 33
+Created UTC: 1766232518.0
+Comment: Most tiling window managers have a floating mode, otherwise you would probably need a normal DE
+
+Comment 2:
+Author: ugly-051
+Score: 26
+Created UTC: 1766239953.0
+Comment: KDE Plasma.
+
+Comment 3:
+Author: naurias
+Score: 19
+Created UTC: 1766233256.0
+Comment: labwc. You can use tiling wm in floating mode but if you want dedicated floating/stacking Wayland compositor then it's labwc or your usual desktop environments. There's also hikari but I haven't used/tested it. That aside labwc is pretty good
+
+Comment 4:
+Author: tac_eillA
+Score: 11
+Created UTC: 1766232807.0
+Comment: I’ve found myself coming back to gnome recently after putting myself through the hyprland and niri gauntlet again.
+
+Hyprland is great, I really like it but agree with you that certain workflows just aren’t designed with that sort of system in mind. I still keep it installed alongside gnome (kinda redundant but I’ll get to that) just because I find it really nice for cutting out distractions when needed.
+
+One option you can give a shot is gnome w/ paperwm, combines the nice additive behavior of windows from niri to gnome and I find it way easier to get up and go with on systems compared to other setups personally. That’s why having hyprland is slightly redundant for me to keep around because I can enable or disable paperwm with a keypress butttttt ¯\_(ツ)_/¯
+
+End of the day find the workflow that’s best for you, I want to try out the wayland fork of openbox because I still think about crunchbang 15 years later but I’ve grown to really enjoy gnome’s average workflow. After getting some keybinds set to match my hyprland setup, it felt right.
+
+EDIT: There’s a great talk from Ubuntu Summit that just got posted on youtube about desktop interfaces and workflows if you want something interesting to watch. https://youtu.be/1fZTOjd_bOQ?si=z1_o4svCkIad67Ww
+
+Comment 5:
+Author: Sinaaaa
+Score: 4
+Created UTC: 1766242214.0
+Comment: Labwc is the only one worth mentioning &amp; it's worlds better than openbox, it's not just a boring wayland port.

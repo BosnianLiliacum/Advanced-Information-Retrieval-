@@ -1,0 +1,48 @@
+Post Title: Questions about new mount api
+Author: AdventurousFly4909
+Score: 9
+URL: https://www.reddit.com/r/kernel/comments/1pqqbl9/questions_about_new_mount_api/
+Number of comments: 3
+Created UTC: 1766163741.0
+
+Post Content:
+&gt;AT\_EMPTY\_PATH
+
+&gt;If pathname
+
+&gt;is an empty string, operate on the file referred to by dirfd
+
+&gt;(which may have been obtained from [open](https://man7.org/linux/man-pages/man2/open.2.html)(2) with
+
+&gt;O\_PATH, from [fsmount](https://github.com/sunfishcode/linux-mount-api-documentation/blob/main/fsmount.md)(2)
+
+&gt;or from another open\_tree()).
+
+&gt;If dirfd
+
+&gt;is AT\_FDCWD,
+
+&gt;the call operates on the current working directory. In this case, dirfd
+
+&gt;can refer to any type of file, not just a directory. This flag is Linux-specific; define \_GNU\_SOURCE
+
+&gt;to obtain its definition.
+
+Func in question is open\_tree
+
+Does that mean that dirfd can't be a file if it is not AT\_FDCWD? So it isn't possible to bind mount a file using fds in the new api? Additionally must it be \`open\` or can it also be \`openat\`?
+
+
+Top 1 comments:
+
+Comment 1:
+Author: cyphar
+Score: 12
+Created UTC: 1766165021.0
+Comment: I wrote this man page, sorry it ended up so wordy.
+
+
+1. The last sentence should probably be moved earlier -- `AT_EMPTY_PATH` lets you operate directly on `dirfd` which means it doesn't need to be a directory (this is a common pattern used by other `*at(2)` syscalls). The special value `AT_FDCWD` for `dirfd` refers to your current directory so it is (by definition) a directory.
+
+
+2. The reference to `open(2)` (and contrast with `fsmount(2)`/`open_tree(2)`)  is used to indicate that you can use a regular open file descriptor. Of course you can get it from `openat(2)` (and `openat2(2)`!) as well (as well as most other syscalls that return file descriptors).

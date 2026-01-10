@@ -1,0 +1,72 @@
+Post Title: Nvidia 590 def improved performance for me👏 almost there
+Author: Logical-Razzmatazz17
+Score: 52
+URL: https://www.reddit.com/r/archlinux/comments/1ptn7g9/nvidia_590_def_improved_performance_for_me_almost/
+Number of comments: 32
+Created UTC: 1766472426.0
+
+Post Content:
+Been playing Arc Raiders and was glad to see it was Platinum rated for Linux. Booted up and was happy for the most part and then had to go in Windows for something and played Arc and noticed i was getting a lot more frames.
+
+Could get very close if I switched to dx11. Ran updated today and was like welp let's see because I want to not have to boot into Windows anymore and what do ya know it's pushing. 
+
+For example before update [580] I was getting 90 fps on dx12 and maybe 120 or so on dx11 
+
+Today on 590 it's at 120 plus on dx12 so it's closer on Windows I still get 140+ 
+
+Both have same in game graphics settings.
+
+I have to say it's close enough I may just ride it out now.
+
+Looking promising
+
+Edited to add:
+Arch/Hyrpland
+Driver - Nvidia-open-dkms 
+GPU - 4070 Super
+
+
+Arc Settings: View Distance, Shadows, and Textures on Cinematic / Rest low/medium - 4K - DLSS Quality - FPS 120-140+ was 90 before update on dx12
+
+Windows is 140-150 or so which is close
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SpittingCoffeeOTG
+Score: 11
+Created UTC: 1766491697.0
+Comment: Just did a quick test on KCD2 I'm currently playing. 110 fps on 4K/High/DLSS balanced (K preset) on 4070ti. That's about +10 fps in the same scene i've been before the update. Looks promising.
+
+Comment 2:
+Author: Casual_DeJekyll
+Score: 8
+Created UTC: 1766522074.0
+Comment: I can vouch that the newer drivers do a lot better than before.
+
+Last time I played Cyberpunk 2077 with ultra RT on my 3080 12GB it got literally half the Windows performance. This was in late 2024.
+
+Now it's like ~62fps vs ~75fps on Windows with the older DLSS model. Yeah, it's still slower but good enough for me to not bother with selling my 3080 and getting an equivalent AMD card.
+
+Comment 3:
+Author: SirLarington
+Score: 5
+Created UTC: 1766486328.0
+Comment: I will have to test the performance gain on machine as soon as I get back home.
+
+What gpu do you have, if I may ask?
+
+Comment 4:
+Author: bakgwailo
+Score: 3
+Created UTC: 1766475006.0
+Comment: Totally broke d3 power savings on turing in prime, as the open module firmware doesn't support it. 580 might be the last hurray even for turing if you have a laptop, at least.
+
+Comment 5:
+Author: SunkyWasTaken
+Score: 3
+Created UTC: 1766477069.0
+Comment: I started on nvidia-open. I heard they delisted nvidia (not open), so what happened to those people?
+
+(This is a question out of curiosity. Pls don’t downvote me for my curiosity)

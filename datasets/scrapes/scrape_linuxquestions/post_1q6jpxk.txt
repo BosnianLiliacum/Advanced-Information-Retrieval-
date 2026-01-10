@@ -1,0 +1,65 @@
+Post Title: The Linux kernel provided by the vendor appears incomplete - unbuildable. What to do?
+Author: whew-inc
+Score: 11
+URL: https://www.reddit.com/r/linuxquestions/comments/1q6jpxk/the_linux_kernel_provided_by_the_vendor_appears/
+Number of comments: 9
+Created UTC: 1767802750.0
+
+Post Content:
+Hi everyone. Recently I got interested in rooting and messing with my TV to fix some issues I have with the OS and for funsies.
+
+Now I wanted to mess around with the HDMI CEC code to see where a bottleneck lies. I ended up tracing the call of pressing VOL+/- all the way down to kernel code.
+
+So, as a test, I wanted to call the function that manipulates the register. So I go on github, download the kernel source and... it's outdated. 3 years of no updates. Despite the latest firmware from December having a new kernel.
+
+Okay, whatever, let's try to boot this anyway. So I copy over my device's kconfig, run defconfig, and see if it builds.
+
+It doesn't.
+
+ CC \[M\]  drivers/gpu/mediatek/ged/src/ged\_monitor\_3D\_fence.o  
+**drivers/gpu/mediatek/ged/src/ged\_monitor\_3D\_fence.c:** In function '**ged\_monitor\_3D\_fence\_add**':  
+**drivers/gpu/mediatek/ged/src/ged\_monitor\_3D\_fence.c:166:41:** **error:** implicit declaration of function '**mt\_gpufreq\_get\_dvfs\_table\_num**' \[**-Werror=implicit-func**  
+**tion-declaration**\]  
+ 166 |                                         **mt\_gpufreq\_get\_dvfs\_table\_num**() - 1) {  
+|                                         **\^\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~**  
+cc1: some warnings being treated as errors  
+make\[4\]: \*\*\* \[scripts/Makefile.build:307: drivers/gpu/mediatek/ged/src/ged\_monitor\_3D\_fence.o\] Error 1
+
+  
+I've tried to chatgpt my way out of this but more errors start popping up. So I'm wondering... am I doing something wrong? I requested latest kernel sources from TCL but my hopes in that is extremely low...
+
+This is the repo: [https://github.com/TCLOpenSource/mt9653](https://github.com/TCLOpenSource/mt9653)  
+This is the kconfig from the TV: [https://pastebin.com/raw/7UxhKSmb](https://pastebin.com/raw/7UxhKSmb)
+
+
+Top 4 comments:
+
+Comment 1:
+Author: zakabog
+Score: 11
+Created UTC: 1767805363.0
+Comment: I would assume that you're missing the proprietary closed source parts that will not be released. All you'd have access to is the open source portion. 
+
+At least, that's my best guess, it's similar to trying to build any other Linux backend proprietary hardware.
+
+Comment 2:
+Author: Peanutbutter_Warrior
+Score: 1
+Created UTC: 1767851335.0
+Comment: You could try removing `-Werror=implicit-function-declaration` from the Makefile, but you'll probably get a linker error if you do. If you do then you're missing some code you need to build it
+
+Comment 3:
+Author: nyrb001
+Score: 1
+Created UTC: 1767875404.0
+Comment: Unfortunately very common that companies basically pay lip service to the GPL. Someone has to actually sue them before they will fix things. Generally that requires someone who actually wrote the GPL code or someone representing them to file suit.
+
+Comment 4:
+Author: Serious_Warning_6741
+Score: 1
+Created UTC: 1767869083.0
+Comment: Maybe the warnings shouldn't be treated as errors. Those go in and out of usability with different versions of code, build options
+
+Just because they say they'll have code available for download doesn't mean they're actually going to or timely
+
+Make sure you feel good about the flashing process and being able to flash with a broken OS using the bootloader or direct to chip with clamp

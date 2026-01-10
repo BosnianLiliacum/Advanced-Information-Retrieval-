@@ -1,0 +1,72 @@
+Post Title: Arch installation went well, I am now happily using modern capabilities
+Author: db443
+Score: 43
+URL: https://www.reddit.com/r/archlinux/comments/1q4cfd7/arch_installation_went_well_i_am_now_happily/
+Number of comments: 50
+Created UTC: 1767588593.0
+
+Post Content:
+Long time Linux Mint user, which is still chugging along on my primary machine. However, for my secondary machine I decided to experiment, I looked at: Omarchy, Endeavor, CachyOS, but ended up on plain Arch via `archinstall`. The Arch derivatives all felt opinionated, whilst pure Arch feels like Lego that you build yourself. I like Lego, so pure Arch for me.
+
+When you start from scratch you get to use some new toys, at least for me, these are some of the new toys I am now using:
+
+- `btrfs` for root partition, with just `@` and `@var_log` subvolumes, I like to keep things simple. This is my first `btrfs` machine
+
+- With `btrfs` on the @ (root) subvolume, that makes Timeshift easy to setup and quick to run. Arch being famous for *sometimes* breaking, an easy rollback strategy seems good to have in place. I have Timeshift setup for 5 daily, 3 weekly and 2 monthly snapshots.
+
+- Alongside of that I have some Clonezilla images in case anything goes super pear-shaped.
+
+- `/home` is an `ext4` partition with `fscrypt` user login encryption. I have wanted to ditch LUKS for a while, and `fscrypt` seems to work very well. I believe it is the same encryption that Google uses on Pixel phones. If it is good enough for that then it is good enough for me.
+
+- ZRAM for swap
+
+- I am now a Wireguard VPN everywhere person: Arch &amp; Mint, macOS, iPad and Smartphone. To be honest, I did not know that Wireguard works well on non-Linux devices, that was my fault.
+
+- I like that Arch uses `YESCRYPT` for passwords in `/etc/shadow`. I put my faith in `YESCRYPT` to be extremely challenging to decrypt in any type of offline attack since I have root unencrypted (whilst my home directory is encrypted via `fscrypt`).
+
+- I have installed `sudo-rs` and have set it up as my default `sudo`. Yes, I know many Rust rewrites can be wasteful, for example I am extremely unconvinced about `uutils`; but in the case of `sudo` I feel `sudo-rs` has a compelling reason to exist.
+
+- Finally I have setup KeePassXC is my only browser password manager, that includes replacing Google Authenticator with KeePassXC TOTP for some sites that support TOTP 2nd factors (such as PayPal and Reddit for example). I was too lazy for too many years in just using the browser password manager which hooks into GNOME Keyring, that is now gone for me.
+
+I am still using Cinnamon as my desktop, but I will eventually kick that tyres of Niri and LabWC (just for fun).
+
+Anyway, I feel like I am in total control of my own machine, for better or worse. I will likely end up using this Arch installation on my main machine if after six months I am comfortable that Arch does not break often.
+
+Cheers.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Interesting_Screen19
+Score: 21
+Created UTC: 1767589521.0
+Comment: I don't know how Omarchy got lumped in with EndeavourOS and CachyOS.
+
+Comment 2:
+Author: iAmHidingHere
+Score: 5
+Created UTC: 1767590149.0
+Comment: Why did you choose a dedicated home partition instead of a subvolume?
+
+Comment 3:
+Author: dramake
+Score: 4
+Created UTC: 1767598985.0
+Comment: Why don't you like LUKS encryption?
+
+I did a new arch set up after a few years with same installation three/four weeks ago and now I have everything encrypted with LUKS2 and I'm super happy.
+
+Out of curiosity .
+
+Comment 4:
+Author: ArshRocks
+Score: 1
+Created UTC: 1767589738.0
+Comment: Beautiful setup. I am yet to play around with btrfs myself, must RTFM more once work gives me some time off.
+
+Comment 5:
+Author: un-important-human
+Score: 1
+Created UTC: 1767603340.0
+Comment: Nice setup, its good you chose the base distro cause now you can compare well with debian based. You seem an experienced linux user as long as you read arch news for user required intervention you should never run into trouble

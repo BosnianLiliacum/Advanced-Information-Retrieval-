@@ -1,0 +1,48 @@
+Post Title: is it typical to mark a git AUR package as out of date if it doesn't list that it "provides" its upstream version
+Author: nathan22211
+Score: 19
+URL: https://www.reddit.com/r/archlinux/comments/1pwfzu2/is_it_typical_to_mark_a_git_aur_package_as_out_of/
+Number of comments: 15
+Created UTC: 1766785650.0
+
+Post Content:
+just got that as a reason for it being mark as out of date... I know you generally don't mark git packages out of date, but this reason is odd to mark it as so.
+
+pkg in question...: [https://aur.archlinux.org/packages/labfyre-git](https://aur.archlinux.org/packages/labfyre-git)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: cosarara97
+Score: 23
+Created UTC: 1766790411.0
+Comment: In my experience, people will mark AUR packages as out of date for any reason, without commenting or leaving any explanation. It is what it is, don't take it personally.
+
+Comment 2:
+Author: SaltInflation7818
+Score: 7
+Created UTC: 1766786497.0
+Comment: Normally people use either comments or send patches via mail. But it is generally a good idea to set provides for a git package, so if another package depends on this package the user can choose which one to pull (-bin, -git, ..)
+
+Comment 3:
+Author: SavvyBeardedFish
+Score: 6
+Created UTC: 1766796858.0
+Comment: Might be because you pushed `pkgver=0`, which seems odd when looking at it...
+
+Typically you just push whatever version is returned by the `pkgver`function when pushing an update to PKGBUILD, i.e., the expected version would be: `pkgver=0.9.2.r135.g8103a01` at the time of writing.
+
+Edit: My bad, interpreted the "issue" incorrectly, would assume that should've been a comment rather than a reason to mark it as out-of-date, yeah...
+
+Comment 4:
+Author: severach
+Score: 2
+Created UTC: 1766790504.0
+Comment: Comments might be missed. Ood bugs until reset
+
+Comment 5:
+Author: mindtaker_linux
+Score: 2
+Created UTC: 1766802300.0
+Comment: You already admitted that you don't know what you're doing because this is your first time.

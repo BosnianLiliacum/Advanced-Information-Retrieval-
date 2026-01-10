@@ -1,0 +1,40 @@
+Post Title: Need help with compiling
+Author: Striking-Flower-4115
+Score: 2
+URL: https://www.reddit.com/r/kernel/comments/1pq4n5l/need_help_with_compiling/
+Number of comments: 6
+Created UTC: 1766097865.0
+
+Post Content:
+1) make is building all the unnecessary drivers for no reason. How do I fix this?
+
+2) What should I do to optimise kernel for gaming? Currently running a HP Notebook 14 i3 Tiger Lake
+
+I don't have much experience other than compiling a 5.11.x kernel (Successfully failed)
+
+I'm currently on Ubuntu. Not sure if my distro has anything to do with building a kernel
+
+
+Top 3 comments:
+
+Comment 1:
+Author: tiny_humble_guy
+Score: 4
+Created UTC: 1766112149.0
+Comment: You need to run "make localmodconfig". It would build only loaded modules. 
+
+Comment 2:
+Author: alpha417
+Score: 2
+Created UTC: 1766104630.0
+Comment: On Debian,  i d/l the source, extract it to a folder, cd into that folder, copy my current .config into it, then run 'make [n]/xconfig'.  Window pops up,  i change what i need to change,  etc.  I disable hardware for support that I'll never need on that system , etc.  I save, i exit, i compile, it builds .deb.  i install them, then i reboot.
+
+Ymmv.
+
+You didn't mention your distro, so i was intentionally vague.
+
+Comment 3:
+Author: wRAR_
+Score: 2
+Created UTC: 1766127259.0
+Comment: It sounds like you don't need to compile your own kernel.

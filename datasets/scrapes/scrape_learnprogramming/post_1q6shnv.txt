@@ -1,0 +1,53 @@
+Post Title: Too many people over think the process in getting started
+Author: Optimal_House_2897
+Score: 219
+URL: https://www.reddit.com/r/learnprogramming/comments/1q6shnv/too_many_people_over_think_the_process_in_getting/
+Number of comments: 75
+Created UTC: 1767821885.0
+
+Post Content:
+I'm going to be brutally honest here. I see too many people on here constantly saying their in limbo on how to get started or what languages should they pick up. The main issue is that most of these people are over thinking this and just need to pick one language and learn the syntax then build things. You're not getting a job in this field anytime soon if you're not actively building projects and constantly learning. This isn't a joke, if you're not committed to this then the truth is you're not going to become a dev. Becoming good at this doesn't take a few weeks or a few months. If you're genuinely passionate and curious you will get far. But stop wasting time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Alta_21
+Score: 46
+Created UTC: 1767822638.0
+Comment: Biggest lie when I was starting out my learning journey was "you need to pick x or y language if you really want to learn and get a job" or even "you need to know at least x languages if you want to rivalise with others" 
+
+still now, I see too many of my students going through the same thing sometime even with some regression in their skills cause they just go back to learning the very basics in x languages rather than continuing from where they already were...
+
+No, don't fucking throw away your project where you're now finally solving interesting problems because you made it in js rather than in python.
+You won't be more employable because you know how to print hello world in the console in 20 languages
+
+Comment 2:
+Author: EntrepreneurHuge5008
+Score: 36
+Created UTC: 1767822417.0
+Comment: &gt; you're not going to become a dev
+
+The truth hurts sometimes.
+
+Comment 3:
+Author: SillyEnglishKinnigit
+Score: 14
+Created UTC: 1767822312.0
+Comment: I learned the Go syntax, but when I start a project, i draw a blank. IT sucks. Even after breaking it down getting started sometimes is a pain. I'm constantly having to refresh on the syntax (it's brand new to me so expected). I will admit to using AI just to get started. Not taking any of it's actual code suggestions but at least to help with the writers block. I look and say, OH that's kind of a good idea, then roll it myself.
+
+Comment 4:
+Author: no_regerts_bob
+Score: 12
+Created UTC: 1767828396.0
+Comment: For beginners, anyone who spends time writing code in the "wrong" language is going to be miles ahead of someone who spent the same time finding the "right" language 
+
+In fact the person who spent time writing code in the wrong language is now much more qualified to choose the right one
+
+Comment 5:
+Author: AloewareLabs
+Score: 10
+Created UTC: 1767827690.0
+Comment: The guy that told me I was stupid for making little C++ projects and Win32 or SDL games instead of first starting with html, JavaScript and front end… Is now working at Walmart.     And yet I work in simulations now.    Weird. 
+
+I feel like in tech and IT there’s always that fanboy mentality about languages and tools.

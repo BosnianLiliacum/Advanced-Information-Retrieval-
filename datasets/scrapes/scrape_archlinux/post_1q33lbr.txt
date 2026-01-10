@@ -1,0 +1,97 @@
+Post Title: Reading Documentation is a Skill
+Author: Muse_Hunter_Relma
+Score: 227
+URL: https://www.reddit.com/r/archlinux/comments/1q33lbr/reading_documentation_is_a_skill/
+Number of comments: 60
+Created UTC: 1767468387.0
+
+Post Content:
+I have oft seen Arch bros tout that Arch is, in fact, Easy™ provided one reads the relevant documentation; as if doing so is a zero-effort activity that takes the distro from "hard" to "not hard". There is clearly a disconnect here, as many do not understand that **the act of reading documentation is itself a skill**, one that takes practice to improve at and one that we, too, were once novices at.
+
+Far from being simply copy-pasting from a wiki, the skill of Reading Documentation entails knowing:
+  - how to word a Google Search
+  - how to follow a stacktrace
+  - the process of common troubleshooting steps
+  - other stuff I'm definitely forgetting
+
+Docs, even great ones, also require experience to navigate.  
+True, the ⭐**Arch Wiki**⭐ is a gold standard of documentation. It is also ***VERY DENSE***. Almost all articles assume prior knowledge of other advanced Linux concepts, and if you don't have that knowledge, reading one article can turn into reading ten very quickly. 
+
+I have also seen claimed that using Arch does not require "programming knowledge". **I do not know of any other discipline that develops "Reading Documentation" as a Required Secondary Power**, nor do I think there is a way to develop this skill independently of learning programming. (if I am wrong please correct me) Therefore, claiming that "programming knowledge" is not required seems disingenuous.
+
+Now, is this Skill worth learning? Absolutely. So instead of saying it's "easy", perhaps we should expect novices at Linux are also novices at Reading Documentation; and perhaps give pointers on how to start developing that skill first.
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: falxfour
+Score: 95
+Created UTC: 1767470921.0
+Comment: &gt; I do not know of any other discipline that develops "Reading Documentation" as a Required Secondary Power, nor do I think there is a way to develop this skill independently of learning programming. (if I am wrong please correct me)
+
+Uh, basically *any* engineering profession involves this... Mechanical engineering? Reading material datasheets (and more). Electrical Engineering? Reading component datasheets (and more). Chemical engineering? Reading MSDS (and more).
+
+I'd go so far as to say that reading comprehension (the broader category for reading documentation) is, in fact, a skill that one should develop to simply live a better life. Do you need this for programming? Sure, but so many other facets of life require this that it's a bit ridiculous to say that only those who learn to program can develop this...
+
+Now, I *do* believe that simply reading documentation is insufficient. Otherwise, what would be the point in getting a degree in any of those engineering fields? Documentation typically (across all I've encountered) describes the following:
+- Intended functionality or utility
+- Principle of operation
+- Key limitations and exceptions to usage
+- Example applications
+- Essential specifications (such as dimensions)
+
+Notably, documentation rarely says *why* you should use something at all. For example, you could make a joystick with Hall Effect sensors or potentiometers. The datasheets will tell you everything you need to know about using either type of component, but not *why* you should choose one over the other.
+
+Nothing can really tell you that. That's really the job (for an engineer). But here we get back to your last sentence:
+
+&gt; So instead of saying it's "easy", perhaps we should expect novices at Linux are also novices at Reading Documentation; and perhaps give pointers on how to start developing that skill first.
+
+I can tell someone that they can use `cryptsetup` to make an encrypted LUKS partition and `systemd-cryptenroll` to enroll the TPM for decryption in the initramfs (among other steps). What I can't do is tell them whether or not they should even do this. How do you expect the Wiki to cover the myriad use cases users might have? You can't expect documentation to describe every possible scenario a user may consider when learning about a topic or a utility.
+
+This is why education exists (circling back to why engineers get degrees). Do we need that for Linux (or computers in general)? Possibly. In lieu of that, this is why these types of forums, or subreddits, exist.
+
+My issue is when people pose malformed questions or ask questions that are trivially answered by The Wiki. It doesn't take much to search for encryption on The Wiki and get to the [how-to guide](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system) for it. Similarly, asking a question like, "Why is my Arch broken? Please help," doesn't even provide a starting point for anyone to help.
+
+I believe people *should* ask question here, but they should be able to demonstrate that they have:
+1. Done some research on the topic or issue
+2. State their goals or intended resolution
+3. Show how they've approached it so far
+4. Provide a clear expectation for how others can help
+
+I don't expect every person to be an expert of every word in a given Wiki page, but if you've followed the links and done some additional research, and you're still confused, I think that qualifies for a reasonable question
+
+Comment 2:
+Author: ObscureResonance
+Score: 31
+Created UTC: 1767469500.0
+Comment: Reading comprehension is taught to children though? Its the same thing, sorting through lots of info to find the relevant thing... literally every profession has documentation to read??? I really dont understand this post.
+
+
+I dont know how to code yet i can read a man page perfectly fine.
+
+
+And one more ? For good luck.
+
+Comment 3:
+Author: Natetronn
+Score: 21
+Created UTC: 1767470868.0
+Comment: I'm not sure I agree that it's the gold standard of documentation. It's just the best documentation of the Linux distros (and really great for what it is; don't get me wrong).
+
+Comment 4:
+Author: 10leej
+Score: 17
+Created UTC: 1767473190.0
+Comment: Implying you need "programmer knowledge" to do anything implies to me you're not an actual programmer. Sure your argument about "reading documentation is a skill" is valid. But really it's learning how to learn. Which is something you actually have to pick up yourself as it's not really something taught in schools at least here in the US.
+
+Comment 5:
+Author: burntout40s
+Score: 17
+Created UTC: 1767472086.0
+Comment: decades ago the term RTFM was popular in the community. I don't see it used these days, but still very much relevant.
+
+users today are spoiled by tech that 'just works' for so long now, that when something goes wrong they have little idea how to fix it, find a work around/alternative or simply settle with a compromise. 
+
+more than just reading documentation, from my own experience one needs to develop learning as a skill. over time you get better and once complicated subjects become trivial.

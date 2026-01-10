@@ -1,0 +1,56 @@
+Post Title: Advice (and rant) for new (and experienced) programmers: Stop wasting your time learning "tips and tricks"
+Author: StayReal1
+Score: 66
+URL: https://www.reddit.com/r/learnprogramming/comments/1pqr0b0/advice_and_rant_for_new_and_experienced/
+Number of comments: 11
+Created UTC: 1766165382.0
+
+Post Content:
+This is a topic that I've been really wanting to talk about.
+
+The market for teaching people how to program is very lucrative (gold rush and selling shovels, all over again), so don't listen to just to whoever claims to be an authority.
+
+On instagram, I saw this video of a person (I won't mention who it is, but many of you probably already know him) talking about how if you want to impress people in a C++ tech interview, instead of doing "for (int i = 0; i &lt; n; i++) {}" the boring "amateur" way, you have to do "for (auto i{0uz};)" in order to look cool and experienced.
+
+Well, first off, you're not really impressing many people (except maybe for beginners) by applying these tricks. People who don't program won't know the difference, and experienced programmers genuinely won't give a shit (and might in fact think your code is inferior, since it's less readable now).
+
+But most importantly, memorizing lots of tricks won't make you a good programmer. You know what makes you a good programmer? Understanding fundamentals and learning creative problem solving, that's what you really need.
+
+Please, for the love of God, stop following pop-coding "coaches". Their advice is often useless, and can waste your time by making you focus on the wrong things. As far as they're concerned, they WANT you to waste your time on them because it gives them more watchtime. Spend your time by instead working on projects you're interested in and reading up on the fundamentals of coding.
+
+Rant over.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: nikfp
+Score: 34
+Created UTC: 1766165870.0
+Comment: From someone that has been writing code for over a decade now: Make your code as simple and readable and understandable as you possibly can, while still reaching the desired goal. The next person to come along and read that code will definitely thank you, and that person might be you in 5 years!!! Being clever shows that you can show off, not that you understand the problem, and it turns into your own worst enemy. 
+
+Speaking from experience.
+
+Comment 2:
+Author: aqua_regis
+Score: 10
+Created UTC: 1766166740.0
+Comment: I'd add to it: 
+
+**Don't ask about avoidable mistakes. Make your own mistakes and learn from them.**
+
+It is absolutely essential to make mistakes, your own mistakes, to try things, to experiment, to fail. This is an integral part of *learning*.
+
+Comment 3:
+Author: PoMoAnachro
+Score: 7
+Created UTC: 1766169514.0
+Comment: I think part of it is, for newbies who have never really gotten into the weeds of a big codebase, it seems like all there must *be* to programming is "tips and tricks" after you understand the basics. Because once you learn the fundamentals, programming is pretty easy, so what else can there be to learn other than tricks and tips, right?
+
+But of course once you have some experience under your belt you quickly realize all the really skilled labour isn't directly writing code at all, it is all communication and coordination. And most of the skill in writing code is writing code that makes that communication and coordination easier instead of harder.
+
+Comment 4:
+Author: TemporaryWorldly859
+Score: 2
+Created UTC: 1766182640.0
+Comment: I totally agree that making code readable and simple is important. That said, “simple” can be pretty subjective — what feels obvious to one person might be confusing or even unreadable to someone else. Having code reviews and using clear, consistent naming for variables and functions goes a long way toward improving overall readability and maintainability.

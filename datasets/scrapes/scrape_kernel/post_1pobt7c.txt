@@ -1,0 +1,39 @@
+Post Title: PSA: When making a kernel module makefile it must be capitalized as Makefile
+Author: NoahNoah011
+Score: 0
+URL: https://www.reddit.com/r/kernel/comments/1pobt7c/psa_when_making_a_kernel_module_makefile_it_must/
+Number of comments: 12
+Created UTC: 1765914905.0
+
+Post Content:
+Hello everyone, I was writing my first kernel module and kept running into an error with kernel-headers/scripts/Makfile.build running into an include error on line 41 and couldn’t find any info on this whatsoever online, so I figured I should post my solution in case anyone runs into the same issue.
+
+Basically, your module makefile must be capitalized as Makefile (not makefile or MakeFile) because the kernel module build system is hard coded to look for either a “KBuild” file or “Makefile” in your source directory and doesn’t check for different capitalizations.
+
+So, in case anyone else has this issue the error is in Makefile.build line 41: no such file or directory. Just rename your makefile or MakeFile to Makefile and that should fix it.
+
+Edit: For those saying makefiles are always capitalized that is incorrect, make commands will work just fine with lowercase, that being said, it was a mistake for me to say MakeFile, not that I’ve actually tested it. I usually use lowercase because my editor (zed) only shows the correct icon with lowercase makefiles (it shows a generic text file icon otherwise). Also, could you please direct me to the docs where it says Makefile should be capitalized as I didn’t see this mentioned anywhere in the docs. Thanks.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: JoJoModding
+Score: 13
+Created UTC: 1765916160.0
+Comment: Makefiles are always capitalized, I've never seen an uncapitalized "m"akefile.
+
+
+Also, welcome to today's [club of 10000](https://xkcd.com/1053/) for realizing that capitalization on Linux really matters and you can't just deviate from it 😅
+
+Comment 2:
+Author: alpha417
+Score: 1
+Created UTC: 1765916937.0
+Comment: ...so the docs are correct?
+
+Comment 3:
+Author: edthesmokebeard
+Score: 1
+Created UTC: 1765918525.0
+Comment: oof

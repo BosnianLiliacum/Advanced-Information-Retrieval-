@@ -1,0 +1,60 @@
+Post Title: What is a free open source software like zoom or Skype?
+Author: Dover299
+Score: 63
+URL: https://www.reddit.com/r/linuxquestions/comments/1q7fjeo/what_is_a_free_open_source_software_like_zoom_or/
+Number of comments: 32
+Created UTC: 1767887981.0
+
+Post Content:
+I’m looking for free open source software like zoom or Skype.
+
+Anyone here use any free open source software like zoom or Skype?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 40
+Created UTC: 1767888822.0
+Comment: As I understand it, quite a number are available.
+
+Jitsi Meet is widely used and based on my experience is a solid alternative.
+
+Like many "Zoom alternatives", though, Jitsi Meet is an alternative *platform* and does not allow users to sign into Zoom or other platforms.
+
+My best and good luck.
+
+Comment 2:
+Author: ctesibius
+Score: 23
+Created UTC: 1767889883.0
+Comment: It might be helpful to outline what you want to use it for. For instance Zoom is great if you need to send an invitation to a group of people who don’t have logins and don’t have much technical skill, but those criteria might not matter to you if you want to do 1:1 conversations with someone who doesn’t mind setting up their machine. So:
+
+* can you persuade people to install an app to talk with you?
+* 1:1 or groups?
+* do you care if people need accounts?
+* mobile and / or desktop?
+* do you have any security or privacy requirements?
+
+Comment 3:
+Author: Resident-Cricket-710
+Score: 18
+Created UTC: 1767888073.0
+Comment: Signal or Jitsi
+
+Comment 4:
+Author: Immediate_Sky8523
+Score: 16
+Created UTC: 1767889216.0
+Comment: I used these two in past-  
+\- Jitsi  
+\- Nextcloud Talk
+
+Both of these support self-hosting as well.
+
+Comment 5:
+Author: Charming_Mark7066
+Score: 16
+Created UTC: 1767890228.0
+Comment: one time I used OBS (you cast) and VLC (you watch the stream) as communication apps xD

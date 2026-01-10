@@ -1,0 +1,75 @@
+Post Title: histui - A themeable notification daemon with history
+Author: jmylchreest
+Score: 12
+URL: https://www.reddit.com/r/archlinux/comments/1q0oj6g/histui_a_themeable_notification_daemon_with/
+Number of comments: 6
+Created UTC: 1767218361.0
+
+Post Content:
+Hey everyone! I wanted to share a little project I've been working on called **histui**.
+
+Don't get me wrong - **dunst is absolutely fantastic** (and plenty of other notification daemons!) and I have nothing but love for it. But I found myself wanting notification history via CLI, plus some extra theming flexibility, so I built histui as a complement to existing notification daemons, which I then ended up extending into a highly themeable notification daemon that worked the way I wanted it to.
+
+It's probably got bugs, but I would love to see some people try it out and if people are really keen share some of your theme creations!
+
+**What is it?**
+
+* GTK4-based notification daemon for Wayland
+* TUI-based CLI for browsing history
+* History &amp; replay (SQLite database) with configurable retention
+* Full CSS theming with hot reload
+
+**Key features:**
+
+* **Dunst compatibility** \- supports stacking, progress bars
+* **Two modes**: Full daemon (exclusive dbus access) or monitor mode (runs alongside dunst/mako/etc to capture history only)
+* **Rich content** \- clickable links, image previews, action buttons
+* **Powerful search** \- query by app, urgency, time with JSON/dmenu output
+* **Audio alerts** with per-urgency sounds
+
+**Getting started (Arch):**
+
+Bash
+
+    yay -S histui-bin
+    systemctl --user stop dunst  # if running, or mask it if using socket activation
+    systemctl --user enable --now histuid
+
+For monitor mode (alongside dunst):
+
+Bash
+
+    yay -S histui-bin
+    systemctl --user enable --now histuid-monitor
+
+Or of course for most of us using hyprland, just add exec-once=`histuid` to your hyprland config. You can access the TUI using `histui`
+
+That's it! Check out the [documentation](https://jmylchreest.github.io/histui/) for other distros and configuration options. There's also a [demo video](https://youtu.be/kFPKzW_4zOg) (slightly older version) if you want to see it in action.
+
+Would love to hear your thoughts or answer any questions!
+
+**Links:**
+
+* [Documentation](https://jmylchreest.github.io/histui/)
+* [GitHub](https://github.com/jmylchreest/histui)
+* [AUR Package](https://aur.archlinux.org/packages/histui)
+
+
+Top 2 comments:
+
+Comment 1:
+Author: k1ake
+Score: 1
+Created UTC: 1767324590.0
+Comment: &gt; .claude
+&gt; .github
+&gt; .specify
+&gt; _archive
+
+I've got it that you vibe coded it, but please clean repo before showing it to the public
+
+Comment 2:
+Author: Xu_Lin
+Score: 1
+Created UTC: 1767219519.0
+Comment: No support for X?

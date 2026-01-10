@@ -1,0 +1,58 @@
+Post Title: Shai-Hulud 2.0 npm worm attacker authored all its commits as "Linus Torvalds"
+Author: Azar42
+Score: 500
+URL: https://www.reddit.com/r/linux/comments/1pn12po/shaihulud_20_npm_worm_attacker_authored_all_its/
+Number of comments: 56
+Created UTC: 1765782063.0
+
+Post Content:
+I was just reading [this hack post-mortem](https://trigger.dev/blog/shai-hulud-postmortem), and don't know anything about the developer or what they make, but this anecdote caught my eye. Kinda funny? 
+
+*"We had been compromised by Shai-Hulud 2.0, a sophisticated npm supply chain worm that compromised over 500 packages, affected 25,000+ repositories, and spread across the JavaScript ecosystem. We weren't alone: PostHog, Zapier, AsyncAPI, Postman, and ENS were among those hit. ...* 
+
+*Every malicious commit was authored as:*
+
+*Author: Linus Torvalds &lt;torvalds@linux-foundation.org&gt;*
+
+*Message: init*
+
+*We haven't found reports of other Shai-Hulud victims seeing this same 'Linus Torvalds' vandalism pattern. The worm's documented behavior focuses on credential exfiltration and npm package propagation, not repository destruction. This destructive phase may have been unique to our attacker, or perhaps a manual follow-up action after the automated worm had done its credential harvesting."*
+
+I'm just imagining that few seconds before you figure out it's an attack being like, "Uhh, Linus, what are you doing here?"
+
+
+Top 5 comments:
+
+Comment 1:
+Author: crocodus
+Score: 410
+Created UTC: 1765783126.0
+Comment: Next up at 11: Richard Stallman commits proprietary code in supply chain attack.
+
+Comment 2:
+Author: deanrihpee
+Score: 192
+Created UTC: 1765782914.0
+Comment: if the malware didn't add a comment on your code saying how bad of a programmer you are and how bad the code is i won't be convinced
+
+
+/s
+
+Comment 3:
+Author: ND3lle
+Score: 85
+Created UTC: 1765784187.0
+Comment: What Is Dune doing in my Linux subreddit?
+
+Comment 4:
+Author: Exernuth
+Score: 35
+Created UTC: 1765785605.0
+Comment: I would be more scared of an attack from Linus than one from Shai-Hulud.
+
+Comment 5:
+Author: Brillegeit
+Score: 34
+Created UTC: 1765794337.0
+Comment: &gt; I'm an egotistical bastard, and I name all my projects after myself. First Linux, then git, now Shai-Hulud.  
+&gt; **-Linus Torvalds**

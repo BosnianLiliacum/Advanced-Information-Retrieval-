@@ -1,0 +1,32 @@
+Post Title: Can't Access aur.archlinux.org
+Author: minh_lol_
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1pz8fm3/cant_access_aurarchlinuxorg/
+Number of comments: 15
+Created UTC: 1767068857.0
+
+Post Content:
+I can't access aur.archlinux.org to use yay -Syu on my computer, but I can access aur.archlinux.org website only when enable 1.1.1.1 on my phone  
+I can access [archlinux.org](http://archlinux.org), [bbs.archlinux.org](http://bbs.archlinux.org) and everything else  
+Never have this problem before
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Slight_Dragonfly5566
+Score: 21
+Created UTC: 1767072127.0
+Comment: I think the AUR is down. Tried accessing from my browser as well. [https://downforeveryoneorjustme.com/aur.archlinux.org](https://downforeveryoneorjustme.com/aur.archlinux.org) says its down too, so yeah.
+
+Comment 2:
+Author: BlueGoliath
+Score: 12
+Created UTC: 1767074133.0
+Comment: Jia Tan? Is that you DDOSing the AUR again?
+
+Comment 3:
+Author: TheEbolaDoc
+Score: 3
+Created UTC: 1767091439.0
+Comment: Is the issue resolved or still present?

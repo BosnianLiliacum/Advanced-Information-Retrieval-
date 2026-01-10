@@ -1,0 +1,70 @@
+Post Title: How do you keep your Arch system stable over time?
+Author: TrapNouz
+Score: 64
+URL: https://www.reddit.com/r/archlinux/comments/1q0uipr/how_do_you_keep_your_arch_system_stable_over_time/
+Number of comments: 129
+Created UTC: 1767237745.0
+
+Post Content:
+Hi everyone, I’ve been using Arch for about a month now and I’m really enjoying learning how things work. I’d love to hear how more experienced users keep their systems reliable long-term.
+
+So far I’ve heard advice like preferring official repo packages first, using Flatpak when appropriate, and treating the AUR carefully. Are there any other habits or workflows you’d recommend for maintaining a stable system and avoiding unnecessary breakage?
+
+Thanks in advance for sharing your experience!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ybalrid
+Score: 176
+Created UTC: 1767238643.0
+Comment: Not rocket science: 
+
+You **read the arch Linux news** before installing the updates. 
+
+You **never** let the system in a partially updated state. 
+
+You **be careful** when installing from non-official repos. Including AUR. 
+
+You don’t follow outdated tutorial from random people. Instead you trust the Arch Wiki first. Then the upstream documentation of what we software you are dealing with. 
+
+You don’t need to chase the latest fancy window manager, unless you get a kick out of that, of course. But that’s a want not a need.
+
+Comment 2:
+Author: revken86
+Score: 25
+Created UTC: 1767241595.0
+Comment: It's easy.
+
+Always `pacman -Syu`, when upgrading *and* installing, and never do partial upgrades.
+
+Use from the AUR sparingly, and only if I can't find alternatives in the official repos.
+
+If at any time `pacman` gives me a strange message or indicates something I'm not anticipating, hoof it over to the website and check the news. Follow any pertinent instructions.
+
+Sticking to these rules I don't have any problems. Arch is as smooth as butter and solid as rock. No breakages.
+
+It's only when I try to force my system to do something it wasn't designed to do, or I go mucking around where someone with my level of knowledge doesn't belong, that I break something. It's my fault then.
+
+The idea that properly upgrading one's packages causes Arch to break is blown hilariously out of proportion. No system is perfect, and yes, on rare occasions something will have been updated incorrectly and cause a problem. But no more so than other systems. I had breakages on Mint and Trisquel when I used them, too.
+
+Comment 3:
+Author: BlueGoliath
+Score: 19
+Created UTC: 1767238157.0
+Comment: Did you just imply Arch breaks? Prepare for the onslaught of comments telling you it's a skill issue.
+
+Comment 4:
+Author: Upset-Reflection-382
+Score: 10
+Created UTC: 1767237864.0
+Comment: Commenting, but only because I wanna see what others say. I kinda have the same question lol
+
+Comment 5:
+Author: theRealNilz02
+Score: 8
+Created UTC: 1767238456.0
+Comment: Arch is a rolling release. Making it stable defeats its purpose and also breaks compatibility like manjarno does.
+
+What you mean is reliable. Update at least once a week and read announcements.

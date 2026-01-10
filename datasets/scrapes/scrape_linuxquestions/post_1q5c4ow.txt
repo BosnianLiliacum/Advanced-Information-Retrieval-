@@ -1,0 +1,62 @@
+Post Title: Do you keep the default terminal or install another one?
+Author: ShotJuice3903
+Score: 27
+URL: https://www.reddit.com/r/linuxquestions/comments/1q5c4ow/do_you_keep_the_default_terminal_or_install/
+Number of comments: 58
+Created UTC: 1767684396.0
+
+Post Content:
+Hi everyone 👋.
+
+I have a question/something I'm curious about. Years ago I used Linux and I remember installing a transparent terminal that looked great. Now that I've decided to go back to Linux, the default terminal seems a bit basic to me.
+
+Do you usually use the one that comes with the system or do you have a favorite that you'd recommend downloading? I'm looking for something customizable that looks good. Let me know what you think!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Tall-Introduction414
+Score: 14
+Created UTC: 1767686804.0
+Comment: I personally like xfce4-terminal.
+
+Most of the "fancy" newer terminals don't have a GUI for configuration, which I find weird.
+
+Comment 2:
+Author: Orlandocollins
+Score: 11
+Created UTC: 1767685461.0
+Comment: I always download kitty
+
+Comment 3:
+Author: ImreBertalan
+Score: 9
+Created UTC: 1767685375.0
+Comment: I always install terminator. I love the functionality of it as I can split one window to multiple and also create new tabs.
+
+Comment 4:
+Author: Do_TheEvolution
+Score: 3
+Created UTC: 1767701052.0
+Comment: when I was noob I absolutely loved the drop down type of terminal, that slides out of the top, always same place same size, and where stuff can still run even when hidden, when you execute something and wait for it to finish...
+
+Semi transparent, large font, clean to remove some bars and buttons,...  binded to a single key hotkey, first F1 then the tilda key under esc,...
+
+**tilda, yakuake and guake** are the ones I tried and all were good with some differences... 
+
+but when I moved to i3wm where all windows behave a certain predictable way I kinda did not feel like I need it anymore. But if I were back in kde or xfce I would definitly have a drop down terminal.
+
+As for choice of my current terminal, I used termite, just cuz it just worked and was clean and had a sane name instead what seemed like bunch of letters, then when its development stopped I switched to alacritty as that was recommended as its successor. I like that it supports easy copy paste over ssh with my prefered editor - micro, but other than that I could use whatever I guess...
+
+Comment 5:
+Author: forestbeasts
+Score: 3
+Created UTC: 1767686728.0
+Comment: We used to use gnome-terminal despite using KDE, basically entirely because it snaps the window size to the character grid and also because we were used to it.
+
+Now we use Konsole (the one that comes with KDE). It's, alright. Has some neat features. Wish it snapped the window size to the character grid, but unfortunately it doesn't. (One plus side is that it doesn't store its settings in the Gnome Registry (dconf). Another plus side is sixel support, which can be fun for images-in-the-terminal shenanigans. Also its 'notify on activity/silence/command finished' features are super handy sometimes.)
+
+Oh, gnome-terminal can also automatically match your system light/dark setting. Konsole can't AFAIK.
+
+Never used any of the "has a specific feature/gimmick/etc" terminals like kitty and foot and stuff. Konsole does 99% of what we need and the annoying parts are still livable.

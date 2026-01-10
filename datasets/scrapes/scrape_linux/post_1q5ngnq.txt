@@ -1,0 +1,56 @@
+Post Title: Should Europe Now Consider Standardising on Linux?
+Author: Ill_Emphasis3447
+Score: 1041
+URL: https://www.reddit.com/r/linux/comments/1q5ngnq/should_europe_now_consider_standardising_on_linux/
+Number of comments: 374
+Created UTC: 1767717328.0
+
+Post Content:
+Bear with me - it's not as far fetched as it may appear:
+
+Given current US foreign policy, and "possible" issues going forward with the US/European relationship, is now the time to consider standardising on Linux as THE defacto European desktop OS?  Is it a strategically wise move to leave European business IT under the control of Windows, which (as we have seen) can be rendered largely (or totally) inoperative with an update?
+
+Note:  this is NOT an anti-US post - thinking purely along the lines of business continuity here should things turn sour(er).
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GreyXor
+Score: 448
+Created UTC: 1767717418.0
+Comment: Yes lot of migration to linux and libreoffice in 2024 and 2025. that's the only option for sovereignty
+
+Comment 2:
+Author: DrBaronVonEvil
+Score: 234
+Created UTC: 1767717910.0
+Comment: Yes, full stop.
+
+I think we need to start seeing a general office workflow (OS, Email Client, Office Suite, Communication and Project Management tools) as infrastructure. Digital Roadways so to speak.
+
+It's a no brainer that you do not let an American company own the literal roads or sewage system in a European city. Why do you let them own the methods by which you do any meaningful work?
+
+Infrastructure in computing should be Open Source. It's insulated via legal framework from hostile corporate or government takeovers. It can be forked when necessary to protect against bad actors and provides the local IT departments greater flexibility to control for downtime.
+
+Comment 3:
+Author: littypika
+Score: 152
+Created UTC: 1767717579.0
+Comment: I think the entire world should now consider standardizing Linux.
+
+It's objectively a more secure, private, and better performing OS.
+
+Why else is it used on all the world's 500 fastest supercomputers and the predominant OS for servers?
+
+Comment 4:
+Author: Iridium486
+Score: 96
+Created UTC: 1767719120.0
+Comment: Just give it people Linux in school instead of Windows and the issue will resolve by itself.
+
+Comment 5:
+Author: savornicesei
+Score: 42
+Created UTC: 1767717882.0
+Comment: SUSE and openSUSE are european distros

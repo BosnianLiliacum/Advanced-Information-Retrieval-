@@ -1,0 +1,56 @@
+Post Title: How can I securely manage my SSH keys on a Linux system?
+Author: Busternookiedude
+Score: 44
+URL: https://www.reddit.com/r/linuxquestions/comments/1pkygt6/how_can_i_securely_manage_my_ssh_keys_on_a_linux/
+Number of comments: 49
+Created UTC: 1765562132.0
+
+Post Content:
+I'm looking for best practices to securely manage my SSH keys on my Linux machine. I use SSH frequently for remote access to servers, and I want to ensure that my keys are stored safely and that I'm following the right protocols to prevent unauthorized access. 
+
+What are the recommended methods for generating, storing, and backing up SSH keys?   
+Additionally, should I consider using a password manager or key agent, and what tools or commands would be helpful in managing my SSH keys effectively?   
+Any advice on how to set up proper permissions or additional security measures (like using passphrases) would also be appreciated.   
+I'm eager to learn more about keeping my remote connections secure while using Linux.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: gordonmessmer
+Score: 21
+Created UTC: 1765562578.0
+Comment: Scope is always a core part of this class of questions. 
+
+It sounds like you're asking about how to manage private keys on your personal devices, as opposed to managing public keys in a production environment.
+
+And from a best-practice point of view, that is very simple: Don't back up your private keys, don't share them across devices, don't "manage" them at all. Private keys should be generated where they are needed, and they should never be transferred anywhere else. A passphrase on private keys is usually a good idea, it will reduce the risk that malware can capture and exfiltrate the private key. Encrypting your home directory or disk greatly reduces the risk that your private keys can be discovered and abused if you lose possession of your device. Permissions on the file are less critical, IMO, given encryption.
+
+Comment 2:
+Author: tblancher
+Score: 14
+Created UTC: 1765562473.0
+Comment: Look into ssh-agent, and protect your private keys with passphrases.  There are several keyrings like gnome-keyring/kwallet that can unlock them all when you log in through your DM.
+
+Comment 3:
+Author: ipsirc
+Score: 8
+Created UTC: 1765562278.0
+Comment: `~/.ssh` folder should be enough for everyone
+
+Comment 4:
+Author: SrNormanDPlume
+Score: 3
+Created UTC: 1765582673.0
+Comment: https://github.com/drduh/YubiKey-Guide
+
+Use GPG on a YubiKey. Get a few of these + a few storage devices (thumb drives, SD cards, etc) for backups. Generate your private key and store the details encrypted to the storage devices, and load the YubiKey 3rd channels along the way. Keep one YubiKey for daily use, one backup on site, and the others off-site in a secure location.
+
+Comment 5:
+Author: nalakawula
+Score: 3
+Created UTC: 1765574572.0
+Comment: Use a non-resident -sk type key because using the key requires both the key file and the hardware (e.g., a YubiKey), this ensures that if either component is unavailable, nobody can use it. 
+
+
+If you do not have a hardware security key, you should save the private key in KeepassXC and utilize an SSH agent when you need to use the key.

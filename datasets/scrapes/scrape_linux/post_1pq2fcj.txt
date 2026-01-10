@@ -1,0 +1,69 @@
+Post Title: AI’s Unpaid Debt: How LLM Scrapers Destroy the Social Contract of Open Source
+Author: yoasif
+Score: 701
+URL: https://www.quippd.com/writing/2025/12/17/AIs-unpaid-debt-how-llm-scrapers-destroy-the-social-contract-of-open-source.html
+Number of comments: 146
+Created UTC: 1766092468.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DFS_0019287
+Score: 309
+Created UTC: 1766094153.0
+Comment: Not only that, but the AI scrapers can put intense loads on servers.  I run my own server and had to block a ton of user-agents and large swaths of East Asia to stop AI scrapers from hammering my server.  Eventually I put all the stuff they wanted to scrape behind a password-protected login, which is super-annoying for users.
+
+Comment 2:
+Author: DoubleOwl7777
+Score: 87
+Created UTC: 1766095266.0
+Comment: so, its okay when they steal our work but its a problem when we steal theirs? yeah that seems very logical. /s
+
+Comment 3:
+Author: tcoxon
+Score: 66
+Created UTC: 1766101708.0
+Comment: I run a few small websites and these scraper bots have been a persistent pain in the arse, especially since January for some reason. They don't respect robots.txt at all.
+
+
+So I started putting this in the footer text of my sites:
+
+
+&gt; By training your Large Language Model (LLM) or other Generative Artificial Intelligence on the content of this website, you agree to assign ownership of all your intellectual property to the public domain, immediately, irrevocably, and free of charge.
+
+
+The OpenAI and Meta scrapers kept coming. Game over big tech!
+
+Comment 4:
+Author: natermer
+Score: 63
+Created UTC: 1766096827.0
+Comment: Copyright is completely arbitrary. 
+
+In some cases it applies, in other cases it doesn't. There isn't any underlying "social contract" or ethical guidelines or anything like that. 
+
+Copyright exists as market regulation created by the state for specific economic purposes and goals. 
+
+Copyleft and similar concepts wouldn't even be needed if it wasn't for the decision to make software copyrightable when USA Congress reclassified programs as "Literary Works" in 1980. 
+
+The whole thing is nonsense and software licenses like GPL really exist to undo the damage caused by this state intervention. Whether the copyright holders realize this or not.
+
+And, for whatever reason, the regulators have not decided to go around enforcing this crap against AI companies. 
+
+I 100% expect they will, but only after the AI companies have established themselves and found (expensive) alternatives for building their models. One of the hallmarks of modern corporatism is that companies grow big and then once they are big they go crying to government to change the rules to make sure the door is slammed shut behind them. 
+
+Classic example is Adobe, which got its start by cloning and selling cheaper versions of fonts that were created by other firms. Try to do that today to their software and they will absolutely not hesitate to sue the ever living crap out of you.
+
+So don't go around thinking that copyright is this sacred thing. It isn't. It is something that exists and we have to deal with, but we would be a hell of a lot better off without.
+
+Comment 5:
+Author: DizzyCardiologist213
+Score: 45
+Created UTC: 1766094830.0
+Comment: this whole AI thing as it's going together is one of the biggest thefts from society that we'll ever see. And I don't say that as an SJW, I'm just a regular guy, but it's undeniable that all of this scraping of information just because it can be done, and the use of "fair use" and lying behind the scenes and taking stuff that's not publicly accessible is just transferring everything out in society to a source who really wants to use it to squeeze out everywhere and everyone who created what's there. 
+
+Just look at the personalities of the individuals in charge of each large corporate AI group. Not one of them seems like a decent or honest individual.

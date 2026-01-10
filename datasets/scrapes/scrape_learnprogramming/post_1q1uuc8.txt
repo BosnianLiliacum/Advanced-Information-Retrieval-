@@ -1,0 +1,65 @@
+Post Title: How do I upskill myself?
+Author: engineergyudon
+Score: 74
+URL: https://www.reddit.com/r/learnprogramming/comments/1q1uuc8/how_do_i_upskill_myself/
+Number of comments: 24
+Created UTC: 1767348151.0
+
+Post Content:
+Hello everyone.
+
+Aside from learning programming languages, how do I upskill myself? I'm currently an engineering student. I have few units for my next semester and I want to upskill myself during my free time. I also want to start by making my portfolio.
+
+I'm targeting healthcare tech companies. I want to become a software engineer/data engineer.
+
+Will appreciate all of your responses. TIA!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: eh_it_works
+Score: 43
+Created UTC: 1767348522.0
+Comment: Work on soft skills, interview skills, take an improv class. 
+
+Become extroverted and good at public speaking. Learn the core technologies that you might be working with, start looking at job listings and see what they ask for and what you can learn in terms of libraries. 
+
+See what certifications are usually needed in the sector and how much they cost
+
+Comment 2:
+Author: zeeshanmd867
+Score: 20
+Created UTC: 1767348681.0
+Comment: Great choice on the niche. Healthcare tech is distinct because of the regulations and data complexity. Since you have free time, here is exactly what I’d suggest to stand out for SWE/Data Engineer roles:
+
+1. **Learn FHIR:** This is the gold standard for healthcare data exchange. If you can build a project that parses JSON data in the FHIR format, you are already ahead of 90% of students.
+2. **Cloud Experience:** Learn the basics of AWS or Azure. Healthcare is moving to the cloud rapidly.
+3. **Data Pipelines:** For a Data Engineering role, learn **Apache Airflow** and **Docker**.
+4. **Privacy:** Read up on **HIPAA** compliance. You need to know how to handle sensitive data safely.
+
+For your portfolio, try taking a messy public health dataset and building an automated pipeline to clean and visualize it. Good luck!
+
+Comment 3:
+Author: Latter-Risk-7215
+Score: 4
+Created UTC: 1767348687.0
+Comment: consider focusing on real projects. build small apps, contribute to open source.
+
+Comment 4:
+Author: Haunting-Dare-5746
+Score: 4
+Created UTC: 1767348930.0
+Comment: Don't mind the dork in this comments section yapping about the FAQ. 
+
+Is there anything you are interested in personally? Is there any software you wish was better? Would you like to improve your school website? Do you wanna make a discord chat bot? Do you have a desire to create? 
+
+Don't wait, start making what you want to make now. Skills will naturally come to you as you start making something. Make something relevant to your own life that you will care about. When you create something that you care about, committing to your projects repository will feel like a video game. Watch YouTube videos as necessary for a crash course on new technologies, then consult relevant documentation. 
+
+You'll get to where you want to be in no time by doing this! Build stuff you care about....
+
+Comment 5:
+Author: Hamburgerfatso
+Score: 4
+Created UTC: 1767353417.0
+Comment: Yeah i read that title completely wrongly at first lol

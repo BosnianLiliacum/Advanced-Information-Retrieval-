@@ -1,0 +1,64 @@
+Post Title: Be honest: what skills actually age well in programming?
+Author: 5wimmlng
+Score: 136
+URL: https://www.reddit.com/r/learnprogramming/comments/1pyu6e8/be_honest_what_skills_actually_age_well_in/
+Number of comments: 112
+Created UTC: 1767033362.0
+
+Post Content:
+Every year there’s a new “must-learn” stack. Every five years people swear *this time* it’s different. But most of us have seen hot tech cool off… fast.
+
+So from real experience: What skills have actually paid off long-term for you?
+
+Not tools. Not frameworks. I’m talking things that still matter after layoffs, hype cycles, and “AI will replace us” headlines.
+
+Curious what survived reality.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ok_Butterscotch_7930
+Score: 164
+Created UTC: 1767033652.0
+Comment: I'd say problem solving, coz that's what you are as a dev, a problem solver.
+
+Comment 2:
+Author: aqua_regis
+Score: 63
+Created UTC: 1767034082.0
+Comment: Honestly: programming
+
+Really, that's the only constant. Being able to analyze, dissect, and solve problems in an algorithmic step by step way that then can be implemented in a programming language is the single constant.
+
+If one reaches that level of abstraction, languages, frameworks, libraries are of barely any relevance anymore and can be switched at will and new ones can be quickly learnt.
+
+Comment 3:
+Author: disposepriority
+Score: 47
+Created UTC: 1767039088.0
+Comment: &gt;Every year there’s a new “must-learn” stack.
+
+Yeah, on social media.
+
+In reality, most developers just do their jobs, and their must learn stack is what their employer decides. 
+
+Reading and internalizing information is S+ tier skill, fancy it even works outside of programming.
+
+Comment 4:
+Author: yummyjackalmeat
+Score: 26
+Created UTC: 1767035547.0
+Comment: Knowing how to communicate clearly and more specifically **Adaptive Communication.**
+
+Comment 5:
+Author: shadow-battle-crab
+Score: 16
+Created UTC: 1767033856.0
+Comment: The difficult part in programming is not building a thing, it is maintaining it long term.  The wisdom in how to organize parts of the program so they are maintainable is an art form you only can learn from experimentation and experience.
+
+The other major component is project management.  Programs are long term projects.  The goals the project has on day one will not be the same goals the project has 1 year in.  New things happen, assumptions on what is important might change, and you need a cycle to manage this reality.  Waterfall strategy only works short term, agile strategy is what separates success stories from failures long term.  This is, again, something that comes with experience.
+
+As far as what technologies survive long term?  Well, bash and linux scripting, javascript (specifically async), sql (on the administration and optimization side), and react state as a design pattern I feel are all key.  Linux in particular hasn't changed much since I learned the basics 20 years ago.
+
+Good ideas will persist and better ideas will replace them over time.  This is just how it goes.  Nobody really knows what comes next.

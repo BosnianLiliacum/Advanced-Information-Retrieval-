@@ -1,0 +1,52 @@
+Post Title: Why don't kernel level anti-cheats exist on linux?
+Author: realddgamer
+Score: 341
+URL: https://www.reddit.com/r/linuxquestions/comments/1ps4tcz/why_dont_kernel_level_anticheats_exist_on_linux/
+Number of comments: 196
+Created UTC: 1766317922.0
+
+Post Content:
+Its my understanding that programs can get access to kernel space by installing themselves as drivers (makes sense, actual drivers likely require the privilege to control hardware) - I'm assuming drivers on linux also have access to kernel space - so why cant an anti-cheat just install itself as a driver, in the same way it does on windows? Just curious about the inner workings
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AiwendilH
+Score: 358
+Created UTC: 1766318910.0
+Comment: Several reasons:
+
+- License issues: Yes, you can have non-open source drivers as kernel modules...but if a kernel module is not licensed as GPL or under a compatible license it can't access kernel symbols exported with EXPORT_SYMBOL_GPL()...meaning it has potentially less access than a cheat..defeating the point of the kernel level anti cheat. Alternative would be making the anti-cheat open source...allowing everyone to easily see in the source-code how to defeat it.
+- The kernel is open source too. Anyone can modify it and create own versions...even with modifications especially for cheating. A kernel level anti-cheat in linux would be "only" as effective as a user-level anti-cheat on a proprietary system where users can't just create own, modified kernels...the anticheat would be again on the same level as the cheats and play the same cat&amp;mouse game without any real advantages.
+- To prevent the above kernel-level anti-cheat would need to place severe restrictions on what kernel can be loaded. And not just "You need secure boot enabled"...more like "You need secure boot enabled, are not allowed to roll your own keys for secure boot...actually we only allow this one singing key matching to the kernel of steam-os three years ago...which we can't allow to load any unknowen or updated kernel modules so you also have to use the nvidia driver versions from 4 years ago until we get around to add and test more keys...and forget about that external driver for your gamepad, we can't run a certification authority for every possible kernel module out there"
+
+*Edit: slight rephrasing in hopes my poor English shows a tiny bit less...yeah, I know, not successful but let me wallow in ignorant bliss*
+
+Comment 2:
+Author: Confident_Hyena2506
+Score: 48
+Created UTC: 1766321875.0
+Comment: They can. But nobody wants to install malware, and it would only work on some "approved" linux with a signed kernel. So nobody wants to install that either!
+
+There aren't enough users on linux for them to bother really.
+
+Most of the other posts here are completely incorrect - there is nothing stopping linux from using secureboot with vendor keys etc. There is a lot of industrial software and security stuff that uses similar mechanisms.
+
+Comment 3:
+Author: S3k_01
+Score: 41
+Created UTC: 1766321367.0
+Comment: Kernel-level anti-cheat goes against the very philosophy of Linux. It requires proprietary code running with full system privileges, creates massive security and privacy risks, and breaks regularly due to kernel updates. Effective anti-cheat can and should be done server-side. If a game requires kernel-level access, then the problem is the game, not Linux.
+
+Comment 4:
+Author: GhostInThePudding
+Score: 36
+Created UTC: 1766318395.0
+Comment: They could do that. But with the kernel being open source someone would rapidly code a way to make it think it is still working as part of the kernel, while actually isolated. It would be a lot of work developing it in the first place, for relatively few users, with no chance of it working for long. 
+
+Comment 5:
+Author: plasticbomb1986
+Score: 18
+Created UTC: 1766326229.0
+Comment: The most important part is: anticheat devs are too... naïve. Simple, most effective anti cheat starts with the simple truth: you can't trust users and their computers. So, the only effective anticheat is server side anticheat, and carefully controlling what data do you send to the players.

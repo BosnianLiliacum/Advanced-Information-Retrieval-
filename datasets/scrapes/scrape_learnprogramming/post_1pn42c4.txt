@@ -1,0 +1,82 @@
+Post Title: Is It Worth Taking Introductory CS Courses Again for Deeper Understanding? Or is it a waste of time?
+Author: ArdnyX
+Score: 25
+URL: https://www.reddit.com/r/learnprogramming/comments/1pn42c4/is_it_worth_taking_introductory_cs_courses_again/
+Number of comments: 12
+Created UTC: 1765794258.0
+
+Post Content:
+I'm feeling of wanting to take Introductory courses like this [Introduction to Algorithms by MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) that I found despite already having taken a DSA, 2 discrete mathematics, and a dedicated algorithms and complexity courses last year because I felt inadequate and found myself wanting "more", like I might get a newer level of understanding?
+
+*for reference: our professor sucked teaching DSA (he was also our professor in algorithms and complexity), I didn't even know what the hell Big-O was. The most advanced thing he taught was stack and queues.*
+
+\*..\*and I'm already a 3rd year. I guess that's also my fault for slacking during summer vacation.
+
+I'm even willing to take the first 5 weeks of CS50 just to learn some C and understand some low level concepts because we didn't tackle it during my first 2 years, we just did the following on the first 2 years:
+
+EDIT: I forgot about Automata and Intro to AI
+
+\- High level programming (C#)
+
+\- OOP (Java),
+
+\- Discrete math
+
+\- Differential and Integral Calc
+
+\- Automata Theory and Formal Languages
+
+\- Numerical analysis
+
+\- Web programming
+
+\- Databases
+
+\- Digital logic
+
+\- Intro to AI
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mountainbrewer
+Score: 17
+Created UTC: 1765807639.0
+Comment: Reviewing fundamentals is never a bad idea.
+
+Comment 2:
+Author: Lonely_Survey7724
+Score: 6
+Created UTC: 1765796314.0
+Comment: Sure, if you have the time and motivation, then go for it. But inevitably you will have to use it in a real life scenario, there is a small benefit of repeatedly learning the same thing.
+
+Comment 3:
+Author: AlSweigart
+Score: 5
+Created UTC: 1765813049.0
+Comment: &gt; I didn't even know what the hell Big-O was.
+
+I half-joke that Big-O is about 30% of the usefulness of my entire CS degree, and really you just need to know it so that you know that you can turn your O(n^2) problem into a O(n log n) problem by sorting your data first.
+
+You definitely should watch this PyCon talk by Ned Batchelder on Big-O: https://www.youtube.com/watch?v=duvZ-2UK0fc
+
+As for the rest of a DSA course... meh. There are worse ways to spend your time.
+
+Comment 4:
+Author: cbdeane
+Score: 2
+Created UTC: 1765812219.0
+Comment: I mean, yeah, it's worth doing dsa again, if you want a job later you'll probably have to pass a technical interview at some point and that will be valuable. With programming though I really am a huge supporter of a "go where you are motivated" mentality. Finish your projects, but if you are motivated to review DSA then review DSA, you will get more out of it than doing something you're not motivated to do. Just make sure that you aren't getting yourself in book-reading theory hell or tutorial hell, find ways to use and practice this on your own, even if they arent projects, just code a little bit in a scratchpad file as you go along, try implementing it in different ways than verbatim from the material, that is how you will retain it.
+
+Comment 5:
+Author: vu47
+Score: 1
+Created UTC: 1765823052.0
+Comment: I think most university curricula probably don't teach any C anymore: it's a skill that you have to decide to pick up on your own if you want it. The lack of templates, for example, makes generic programming very tedious and difficult, even though it can be done. (It's just the wrong tool for the job, and DSA is probably better learned in C++, Java, or C#. It can be done in Python, but typically, Python offers "too much" and makes it too easy, not really giving a solid view of what goes into DSA, in my opinion.)
+
+If I were you, I'd audit a course on DSA if you feel that it would strengthen your knowledge of the subject instead of enrolling in it. Auditing is a great way to review or to learn new concepts without the pressure of assignments and exams with deadlines.
+
+I'm surprised you took a course on web programming: it's a landscape that changes so fast that by the time you've started the course, what you're learning is probably already obsolete. the others sound pretty standard for a CS curriculum, but not learning advanced algorithms or the theory of computability (unless you covered that in discrete math, which seems unlikely) seems like glaring omissions.
+
+Another option would be to pick up a book on DSA and work through it at your own pace... that undirected learning style doesn't work for everyone, though, so pick what works best for you, but yes, a solid foundation in DSA is very important to have: knowing what data structures and algorithms to pick and why is something that I would consider essential.

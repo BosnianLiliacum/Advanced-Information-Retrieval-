@@ -1,0 +1,58 @@
+Post Title: Shocked by Linux speed
+Author: MazurianSailor
+Score: 367
+URL: https://www.reddit.com/r/linux/comments/1po6282/shocked_by_linux_speed/
+Number of comments: 117
+Created UTC: 1765901849.0
+
+Post Content:
+I’ve been in IT for over 3 years, and I’ve never really dabbled in Linux but have followed this page and a few others for a while. 
+
+I got my hands on an old potato (HP), and thought it’d be a good time to try Linux. 
+
+Was actually amazed at the speed, had windows on it before and it was a slow experience, whereas Ubuntu has ran incredible. 
+
+Didn’t expect to like Linux, but seriously considering doing it for my main - major major upgrade. 
+
+Bit stuck on what is worth learning (I work security), but sure I’ll pick it up over time. 
+
+Great community
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BinkReddit
+Score: 130
+Created UTC: 1765902415.0
+Comment: &gt; Didn’t expect to like Linux, but seriously considering doing it for my main
+
+Same. Switched a couple of years ago due to the abomination that is Windows 11 and I have not looked back. It hasn't always been smooth sailing, but it's far better than being annoyed by Microsoft daily.
+
+Comment 2:
+Author: littypika
+Score: 41
+Created UTC: 1765905869.0
+Comment: Linux feels so magical with how it breathes new life into old hardware.
+
+Put it on newer hardware and you realize how light, efficient, and powerful the OS really is.
+
+No wonder it's used on all of the world's 500 fastest supercomputers!
+
+Comment 3:
+Author: flatline000
+Score: 32
+Created UTC: 1765902937.0
+Comment: Don't be afraid of the command line. if you're interested in security, you're going to want to be familiar with the command line because when you remote to a machine, that's all you have most of the time.
+
+Comment 4:
+Author: dufus_screwloose
+Score: 29
+Created UTC: 1765903153.0
+Comment: Why would you not expect to like Linux if you're in IT?
+
+Comment 5:
+Author: [deleted]
+Score: 13
+Created UTC: 1765913096.0
+Comment: If you think Ubuntu is fast, wait until you try Puppy or antiX or TinyCore.

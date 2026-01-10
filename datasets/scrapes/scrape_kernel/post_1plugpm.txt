@@ -1,0 +1,40 @@
+Post Title: Is it possible to use DMA like only input output system for peripheral device?
+Author: Conscious_Buddy1338
+Score: 8
+URL: https://www.reddit.com/r/kernel/comments/1plugpm/is_it_possible_to_use_dma_like_only_input_output/
+Number of comments: 8
+Created UTC: 1765655888.0
+
+Post Content:
+for peripheral device? I answered: "no, because we need to initialize device, git it information about the area of memory it can use for DMA". I was answered that, there is possible to use default memory such as circle buffer and it's possible and there is another reason why we need PMIO and MMIO in addition to DMA. Any ideas?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: BraveNewCurrency
+Score: 2
+Created UTC: 1765673794.0
+Comment: Imagine PMIO/MMIO are like bike courtiers. You can give them small packets of data, they get it there. But because they are optimized for small things, they aren't great for moving large amounts of data. 
+
+DMA is like a giant 18-wheeler truck. It is optimized for moving large amounts of data.  But if you only want to flip a few bits (i.e. change a few registers), it's actually going to be far slower than PMIO/MMIO, because the truck has much higher latency to start/stop.
+
+You also need something to "kick off" the DMA transfer. It's no use starting moving memory as soon as the CPU boots, because there is nothing to move yet.  You need to know when the CPU is finished writing to some memory before DMA starts moving the bytes (or conversely, knowing that the CPU has read the bytes before you overwrite them).
+
+Comment 2:
+Author: Rich-Engineer2670
+Score: 1
+Created UTC: 1765661408.0
+Comment: Yes, you *could* do that, but at least in my experience, DMA is good for unattended, multi-byte transfers.  Doing DMA a byte at a time isn't very efficient.  You'd have to wire each device an I/O and memory range.
+
+Comment 3:
+Author: dmills_00
+Score: 1
+Created UTC: 1765906144.0
+Comment: It is not usual, but you can of course. 
+
+Typically you have some way to configure the peripheral and the DMA engine, but that is not absolutely required. 
+
+If you have something like a special purpose peripheral implemented on an FPGA with an embedded ARM you can absolutely build the hardware so it uses the AXI bus to place data into a defined memory region and generates an appropriate interrupt with no software configuration at all, and Linux supports reserving a region of memory for this (Typically at the top of RAM), suitable play with the device tree should make this work. 
+
+A slightly more configurable version of this is how things like multi channel sound cards on PCIe work, triggering a DMA transfer ever 1/48000th of a second to move 16 channels of samples into the main memory, and generating an interrupt every time the buffer switches, these usually do have a configuration space and configuration registers.

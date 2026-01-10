@@ -1,0 +1,50 @@
+Post Title: "It worked yesterday.” Every Linux user has been here.
+Author: Expensive-Rice-2052
+Score: 47
+URL: https://www.reddit.com/r/linuxquestions/comments/1pyjxlp/it_worked_yesterday_every_linux_user_has_been_here/
+Number of comments: 105
+Created UTC: 1767007543.0
+
+Post Content:
+That moment when something suddenly stops working on Linux.
+
+What was the last issue that made you say this?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: indvs3
+Score: 42
+Created UTC: 1767010002.0
+Comment: Nope, sorry. I use debian.
+
+Any situation that would call out the expression "it worked yesterday", has been preceded by me "optimising". Over the years, even before landing on debian, I've learned to backup files I'm going to change so I can restore them quickly and easily, and reboot or restart relevant services to test my changes.
+
+I've used headless linux professionally before I became a daily driver and was very aware that if something "just stopped working", it was almost exclusively a result of something I did wrong. Unless you insist on using one of the bleeding edge distros that are more prone to breakage, it's a pretty safe conclusion to make.
+
+One thing that is almost a surefire way of breaking your install is forcing installing held-back package upgrades. Assume packages are held back for a good reason.
+
+Comment 2:
+Author: ipsirc
+Score: 24
+Created UTC: 1767007737.0
+Comment: Debian user here, I have no idea what you're talking about.
+
+Comment 3:
+Author: Xatraxalian
+Score: 22
+Created UTC: 1767008102.0
+Comment: Running Debian Stable. What got broken you say?
+
+Comment 4:
+Author: inn4tler
+Score: 17
+Created UTC: 1767009836.0
+Comment: That's how it used to be, 10-20 years ago. I was afraid of every update. Those days are long gone if you choose a stable distribution. Linux Mint has been running on my notebook for years and everything works like it did on the first day.
+
+Comment 5:
+Author: JaKrispy72
+Score: 16
+Created UTC: 1767008118.0
+Comment: Not EVERY Linux user has been there.

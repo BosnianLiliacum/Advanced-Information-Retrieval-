@@ -1,0 +1,52 @@
+Post Title: Do you manually close all programs when you shut down your PC?
+Author: Royaourt
+Score: 82
+URL: https://www.reddit.com/r/linuxquestions/comments/1psw62l/do_you_manually_close_all_programs_when_you_shut/
+Number of comments: 128
+Created UTC: 1766398657.0
+
+Post Content:
+Hi. Or do you just let the OS take care of it?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: adminmikael
+Score: 70
+Created UTC: 1766402955.0
+Comment: Age old questions, to which many have strong opinions about.
+
+In my opinion in the last days of 2025, it's the operating system's job to perform a proper graceful shutdown and there is no added value in having the user manually signal every program to quit. Linux (more specifically usually systemd) already does this well by first issuing a SIGTERM to the programs and later a SIGKILL if they don't quit in time. The problem is more about programs that have partially or completely lacking handling for the termination, e.g. Firefox that somehow ends up often considering the termination as a crash.
+
+Edit: Just to add, this has no relation to saving your changes. It's obviously the user's responsibility to have all changes saved before issuing a command to shut down the system.
+
+Comment 2:
+Author: blankman2g
+Score: 30
+Created UTC: 1766404853.0
+Comment: I manually shutdown anything I was actively working in, only to make sure my work is saved. Beyond that, the system shutdown can handle everything else.
+
+Comment 3:
+Author: tomscharbach
+Score: 17
+Created UTC: 1766399037.0
+Comment: I normally save work product and close running applications before I shut down.
+
+My mentors pounded "orderly shutdown" into my head when I was just starting out in the late 1960's, and the principle got stuck in there, I guess.
+
+But as I think about it, what is gained by **not** doing an orderly shutdown?
+
+My best and good luck.
+
+Comment 4:
+Author: ixoniq
+Score: 9
+Created UTC: 1766399802.0
+Comment: The OS should do that. But besides that, I never shutdown the PC. It goes to sleep when idle for an hour.
+
+Comment 5:
+Author: StrayFeral
+Score: 4
+Created UTC: 1766404828.0
+Comment: Most time yes, because i want to make sure whatever I want saved is saved properly and where i want it to be. Sometimes happens that 1-2 programs remain working when i shutdown.

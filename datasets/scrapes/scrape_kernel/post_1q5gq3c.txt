@@ -1,0 +1,20 @@
+Post Title: How welcome are newbies sending mail to the linux mailing list (bluetooth in particular )?
+Author: Striking-Storm-6092
+Score: 20
+URL: https://www.reddit.com/r/kernel/comments/1q5gq3c/how_welcome_are_newbies_sending_mail_to_the_linux/
+Number of comments: 5
+Created UTC: 1767700892.0
+
+Post Content:
+For context, I want to get the attention of the bluez team. I've submitted an issue on their official github page but looking through the recently opened issues, they don't seem that much active on it. There's certainly work being done on the repo though. 
+
+I want to know whether a PR (or anything really at this point ) will be welcome improving their documentation situation. I've wanted to look at bluez documentation, while the repo does have .rst files in a nicely labeled doc folder, They are not organised, nor easily accesible ( one has to go to the repo itself and look through the github previews ). I've forked their repo and converted all (almost all ) the .rst files to markdown and created a github page with the docs and I feel like this could be a good addition to the project
+
+
+Top 1 comments:
+
+Comment 1:
+Author: TwistedNinja15
+Score: 12
+Created UTC: 1767732872.0
+Comment: You've gotta know by now that no one is using the github page for the linux tree, everything is on the mailing lists: [https://kernelnewbies.org/FirstKernelPatch](https://kernelnewbies.org/FirstKernelPatch)

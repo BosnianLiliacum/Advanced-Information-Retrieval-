@@ -1,0 +1,66 @@
+Post Title: i need guidance as a cs student ( im pretty cooked)
+Author: Strong_Elk_1493
+Score: 36
+URL: https://www.reddit.com/r/learnprogramming/comments/1psbwnl/i_need_guidance_as_a_cs_student_im_pretty_cooked/
+Number of comments: 13
+Created UTC: 1766338076.0
+
+Post Content:
+I’m a college student with a tech/computer background and I’ll be honest I have absolutely no achievements at all. No hackathons, no LeetCode, nothing. Honestly, I’m very lost. I pick one thing, do it for some days, get overwhelmed, and then drop it.
+
+Whenever I search on the internet about what to do, it’s always the same things LeetCode, DSA, and a lot of other stuff  but no one really explains what to do first or how to actually start, which just makes everything more overwhelming.
+
+So I’m in my second year, and technically I’ve done C, C++, DSA, OOPs, and Python, but honestly, except for Python, everything else feels like a vague memory.
+
+Right now, I genuinely need guidance. I know I need to do hackathons and internships, but I don’t know how to get there or what steps I should take. Someone please tell me how.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: EntrepreneurHuge5008
+Score: 21
+Created UTC: 1766339126.0
+Comment: &gt;I pick one thing, do it for some days, get overwhelmed, and then drop it.
+
+try; "pick one thing, do it for some days, get overwhelmed, and then *keep going* either way." The key here is consistency.
+
+&gt;but no one really explains what to do first or how to actually start,
+
+That's because there really isn't anything else to it. You really just pick one thing and stick to it. You mentioned you've "technically" done DSA, so doing Leetcode seems like a pretty obvious next move. From there, you can literally start with any problem. If you want, start from 1 and move your way up. It really doesn't matter.  For a more directed interview prep, go to the "Study Plan" in the left side menu and pick "Top Interview 150," or any other plan under "**Cracking Coding Interview."** There really couldn't be any clearer signs to guide you. There's nothing scary about it, my dude/dudette, just spend some time familiarizing yourself with your resources, that's all there is to it.
+
+&gt;Right now, I genuinely need guidance. I know I need to do hackathons and internships, but I don’t know how to get there or what steps I should take. Someone please tell me how.
+
+You need to stop looking for hand-held guidance like this. Hackathons and Internships are both things you do through your university (usually, as in, they can provide guidance). You get there by asking your university staff. Schedule a 15 or 30-minute session with an advisor or career counselor, and they'll give you a place to start, but the rest is all you. Ultimately, you'll need to start finding your own way around being an adult, though.
+
+Comment 2:
+Author: Ok-Bill1958
+Score: 5
+Created UTC: 1766340327.0
+Comment: since you have already done bunch of exam in your university already, i would suggest you to apply them to a project. no need to be big, just a small simple project. you can start with cli software, learn how to organize, separate code and files, stick with whatever practice and style you choose (naming, folder structure..) but make sure you keep it consistent, try to apply some programming principles, deal with whatever errors your software throw at you. give yourself like a 1 2 weeks to finish it, you can try to learn to do some testing on your software, then bring your project to your teacher, see if you can get any feedback then move on to next slightly bigger project that requires some algorithm but not too much. something like text editor, that will force you to learn and apply some dsa, learn what algorithm text editor normally use and make simple function like open, read, edit, search, replace yourself. those 2 projects should teach you a lot about programming already, then things will get easier from there as long as you stay consistent and program every day
+
+Comment 3:
+Author: DrMinkenstein
+Score: 3
+Created UTC: 1766339377.0
+Comment: Ideally your school has relationships with companies to help place you for internships. If not then you’ll have to apply directly. 
+
+Also consider attending tech meetups in your area and getting involved with opensource projects that interest you. Regional tech conferences often have heavily discounted or free tickets for students. The goal of these things is connecting with people, much more than any learning. 
+
+Tech careers really benefit from developing your professional network. Sometimes these connections can be a way to find a mentors. If you find someone you respect, who is giving you time (it’s important that there is some basis of relationship), ask if they’d be open to being a mentor to you. It’s ok if it’s awkward. If they’ve done it before it wont be awkward. If not it should be fine. If they make it not fine they are asshole and you dodged a bullet.
+
+Comment 4:
+Author: Extension-Ad7241
+Score: 2
+Created UTC: 1766356228.0
+Comment: Since you're in college, don't your computer science professors have office hours? 
+
+Many people just ignore that and don't utilize it but it is an incredible resource and considering the price of tuition these days you need to get every penny out of your education!
+
+Comment 5:
+Author: exploradorobservador
+Score: 1
+Created UTC: 1766381760.0
+Comment: You don't need hackathons but you can do them if you'd like to improve. Just apply to internships if you'd like to. Now someone mentioned to do the Top Interview 150 but if you have not leet coded before maybe a guided course would be of help. Its something that you can do outside of school at your own pace and you will develop interview skills that way. 
+
+For internships look up companies that interest you and apply, there's no harm in doing that.

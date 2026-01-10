@@ -1,0 +1,64 @@
+Post Title: My adventures in Arch, this episode: don't use `pacman -Rsc` like a dumbass
+Author: kinda-anonymous
+Score: 202
+URL: https://www.reddit.com/r/archlinux/comments/1prv5af/my_adventures_in_arch_this_episode_dont_use/
+Number of comments: 38
+Created UTC: 1766283315.0
+
+Post Content:
+I bought a new laptop for the first time in 10 years last week. Never really needed one because I always used my work Macbook for personal things too. I got a Thinkpad because I knew I wanted to use Linux. I immediately wiped Windows and installed Arch. I spent a LOT of the past week trying different desktops and window managers, installing things, and configuring everything.
+
+Today, I decided to uninstall a package I had just installed, but I used the forbidden `-Rsc` flag. It kept going for a while and I stopped it, but it was too late. Naturally I wanted to see what packages I have left, so I ran `sudo pacman -Qe` and encountered:
+```
+Unknown command: sudo
+```
+
+Brother. What. The. Fuck. I though I misspelled it. But I didn't. I felt a pit in my stomach. I realized I don't need sudo, so tried it without and I saw:
+```
+Unknown command: pacman
+```
+
+Houston, we have a problem. But wait, I did the dumbest thing next: Reboot. I don't know hat I expected. There was no desktop manager, no TTY, nothing. Just a lovely message saying:
+```
+ERROR: Root device mounted successfully, but /sbin/init does not exist.
+Bailing out, you are on your own now. Good luck.
+```
+
+Long story short, using an archiso USB and following along [this post](https://www.reddit.com/r/archlinux/comments/s4vy2a/root_device_mounted_successfully_but_sbininit/), 2 hours later everything is back to normal with no data lost.
+
+I regret nothing. This was the most fun I had in the past month.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: onefish2
+Score: 87
+Created UTC: 1766284386.0
+Comment: It's always great when you have a disaster and can fix it. Great learning experience. Lucky for you no actual data was involved. It always makes me sad when when I read about people trying to dual boot and wipe out all of their data from the Windows partitions. Stuff like documents, pictures and videos... always sucks to lose that stuff.
+
+Comment 2:
+Author: theyellowshark2001
+Score: 49
+Created UTC: 1766316611.0
+Comment: "Unix gives you just enough rope to hang yourself and then a couple of more feet, just to be sure."  Eric Allman
+
+Comment 3:
+Author: Negative_Round_8813
+Score: 44
+Created UTC: 1766301403.0
+Comment: &gt; Bailing out, you are on your own
+
+Always makes me laugh.
+
+Comment 4:
+Author: anonymous-bot
+Score: 23
+Created UTC: 1766283525.0
+Comment: Did you not check the list of packages to be removed before confirming the command?
+
+Comment 5:
+Author: ilabsentuser
+Score: 15
+Created UTC: 1766323354.0
+Comment: The bailing out, you are on your own has always seemed hilarious to me. Kinda like: lol, you broke the system, now fix it yourself I dont want anything to do with this mess hahaha

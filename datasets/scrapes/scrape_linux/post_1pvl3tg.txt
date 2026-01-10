@@ -1,0 +1,49 @@
+Post Title: 23-Year-Old Radeon GPUs get a fix from the open-source Linux driver
+Author: RenatsMC
+Score: 854
+URL: https://videocardz.com/newz/23-year-old-radeon-gpus-get-a-fix-from-the-open-source-linux-driver
+Number of comments: 42
+Created UTC: 1766691757.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: vinciblechunk
+Score: 129
+Created UTC: 1766692042.0
+Comment: They fixed R500 and they fixed GCN, and here I am running two Linux boxes with Terascale 
+
+Comment 2:
+Author: Leading_Pay4635
+Score: 94
+Created UTC: 1766693290.0
+Comment: Man I miss when GPUs looked like this. 
+
+Comment 3:
+Author: Astandsforataxia69
+Score: 59
+Created UTC: 1766692183.0
+Comment: It has been 10 years when radeon 9000 was released.
+
+
+BACK IN MY DAY WE HAD FSB CLOCKING 
+
+Comment 4:
+Author: JotaRata
+Score: 31
+Created UTC: 1766699193.0
+Comment: Oh it's so sunny and beautiful on the AMD sidewalk!
+
+\*Looks back to the Nvidia side*
+
+Oh my god..
+
+Comment 5:
+Author: tilapiaco
+Score: 22
+Created UTC: 1766716404.0
+Comment: This compared to me learning that my 1080 Ti, which plays 4k 144 Hz Overwatch (the only game I play) just fine, is no longer supported by Nvidia in Windows. A perfectly functional device I bought for $700 less than a decade ago.

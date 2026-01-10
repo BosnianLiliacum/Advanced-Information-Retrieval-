@@ -1,0 +1,64 @@
+Post Title: The state of the kernel Rust experiment
+Author: small_kimono
+Score: 291
+URL: https://lwn.net/SubscriberLink/1050174/63aa7da43214c3ce/
+Number of comments: 137
+Created UTC: 1765652166.0
+
+Post Content:
+A choice pull quote: "The DRM (graphics) subsystem has been an early adopter of the Rust language. It was still perhaps surprising, though, when Airlie (the DRM maintainer) said that the subsystem is only 'about a year away' from disallowing new drivers written in C and requiring the use of Rust."
+
+
+Top 5 comments:
+
+Comment 1:
+Author: rien333
+Score: 115
+Created UTC: 1765655987.0
+Comment: &gt; With regard to Rust language versions, the current plan is to ensure that the kernel can always be built with the version of Rust that ships in the **Debian** stable release. 
+
+
+I always assumed kernel-level decisions weren't really influenced by whatever Debain, or any single distro in particular, were doing.
+
+
+Does this happen more often, or am i just misunderstanding this?
+
+Comment 2:
+Author: aj0413
+Score: 28
+Created UTC: 1765662850.0
+Comment: It’s kinda crazy to think about but C code will one day be the equivalent of today’s PERL or COBOL
+
+It’s cool to see how the Linux kernel is doing a gradual, in place evolution to keep up with changing times and improvements
+
+Comment 3:
+Author: berickphilip
+Score: 19
+Created UTC: 1765655543.0
+Comment: Please could anyone point me in the right direction to understand why there is so much pushing and effort to use Rust instead of C for the development of Linux?
+
+
+This is a honest question, I'd like to understand all this talk abot "Rust good, C bad*.
+
+
+I read the whole article to try and understand the advantages of replacing everything with Rust.. and there was not a single bit of information on that.
+
+
+I only read words and comments of people praising and celebrating each other that "Rust is taking over" almost like a cult following and not tech article.
+
+
+So again, honest question, what are the practical benefits? And why is it bad to continue using C?
+
+Comment 4:
+Author: Jristz
+Score: 13
+Created UTC: 1765695699.0
+Comment: Waiting for a full rewrite of SystemD in Rust
+
+Comment 5:
+Author: trmetroidmaniac
+Score: 11
+Created UTC: 1765674859.0
+Comment: &gt; Airlie (the DRM maintainer) said that the subsystem is only 'about a year away' **from disallowing new drivers written in C** and requiring the use of Rust."
+
+That's fucking insane, actually.

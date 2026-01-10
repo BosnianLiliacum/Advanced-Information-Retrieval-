@@ -1,0 +1,50 @@
+Post Title: KDE just surpassed 300% of donation goal
+Author: Ambyjkl
+Score: 1857
+URL: https://i.redd.it/h2vdj0cl3j7g1.png
+Number of comments: 132
+Created UTC: 1765874546.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ttooyy
+Score: 134
+Created UTC: 1765878038.0
+Comment: I live in Thailand, I would like to make a donation via a debit/credit card but this option is not available in my country (tried already ). I am sorry that PayPal is not an option for me due to some reasons. Hopefully this limitation will be sorted out for the future.
+
+Comment 2:
+Author: pomcomic
+Score: 84
+Created UTC: 1765880247.0
+Comment: holy smokes, that's pretty nuts. well deserved though, really happy to see this
+
+Comment 3:
+Author: I_AM_GODDAMN_BATMAN
+Score: 40
+Created UTC: 1765887235.0
+Comment: wow, the popup works great for them.
+
+Comment 4:
+Author: itsbentheboy
+Score: 31
+Created UTC: 1765906062.0
+Comment: A donation to KDE has become part of my yearly budget. 
+
+The project has been doing solid work that has finally allowed me to fully convert to Linux 100% on all my computers over the last few years. In my eyes, they've been good stewards and also support various other projects that I am interested in supporting. 
+
+I've also been more intentional in "Buying" my software. Keeping a list of my "Must have tools" and ensuring that I send some money to the developers too at least once per year. 
+
+This is especially true for the smaller tools I use, because those usually rely on one or 2 developers, and do not have the swarm of volunteers to pick up the mantle if the main devs decide to step out. 
+
+If you find something good and useful, you should pay for it, and I think KDE is setting a good example of how to do that well for their organizations needs.
+
+Comment 5:
+Author: Adam_Neverwas
+Score: 31
+Created UTC: 1765874823.0
+Comment: Good, now make Miracast support please

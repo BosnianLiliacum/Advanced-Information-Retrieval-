@@ -1,0 +1,55 @@
+Post Title: How do you see programming changing over the next few years?
+Author: [deleted]
+Score: 51
+URL: https://www.reddit.com/r/learnprogramming/comments/1pnpvvs/how_do_you_see_programming_changing_over_the_next/
+Number of comments: 46
+Created UTC: 1765850556.0
+
+Post Content:
+I’m learning programming and trying to understand what skills will matter most going forward and for my first language I started with Python.
+
+But With new tools and automation improving quickly, do you think the way we learn programming will change, or will fundamentals stay the same as they are now?
+
+For someone starting today, what would you guys personally focus on building strong skills for the future?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: EntrepreneurHuge5008
+Score: 63
+Created UTC: 1765851110.0
+Comment: Critical thinking, Problem solving, and people’s skills.
+
+That’s it. 
+
+Tools come and go, your career may start with web dev using Python and Django, but may end with reverse engineering reading assembly all day. Of course, that’s a bit of an extreme example, but it’s not uncommon jumping from tech stack to tech stack as you change teams and companies. Spend less time worrying about the newest latest greatest technologies, and more time mastering your fundamentals.
+
+You’re not hired for the tools you use, you’re hired for solving business problem.
+
+Comment 2:
+Author: OneHumanBill
+Score: 38
+Created UTC: 1765852106.0
+Comment: Over the next few years we're going to see more and more computer science majors who can't program to save their lives because they're letting an LLM do most of it.
+
+Comment 3:
+Author: btoned
+Score: 19
+Created UTC: 1765851850.0
+Comment: TIL automation and scripting was invented by OpenAI
+
+Comment 4:
+Author: ffrkAnonymous
+Score: 13
+Created UTC: 1765851100.0
+Comment: fundamentals are called fundamentals for a reason
+
+Comment 5:
+Author: Dubiisek
+Score: 8
+Created UTC: 1765854551.0
+Comment: I see it.... not changing at all.
+
+  
+What I think will happen, is the AI overhype/goldrush will cease. AI tools will remain for prototyping purposes and vibe-coding will die out when people understand that a vibe-coder who doesn't understand outputs is useless for anything other than hobby-projects.

@@ -1,0 +1,87 @@
+Post Title: ELI5 What are the core difference between main distros?
+Author: einemnes
+Score: 21
+URL: https://www.reddit.com/r/linuxquestions/comments/1pnhtle/eli5_what_are_the_core_difference_between_main/
+Number of comments: 23
+Created UTC: 1765829862.0
+
+Post Content:
+Why applications aren't compatible among many of them? What should I consider when chosing a Linux distro as a main OS? Please, ELI5, I know very little about Linux.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BitOBear
+Score: 19
+Created UTC: 1765832001.0
+Comment: The only thing that a distro is, at its core, is a test effort. 
+
+The point of using a distro is that someone other than you made sure that the code compiled and works together as a group. It is a abstraction made to make sure that the usage patterns are reasonably well tested instead of just blindly compiled. 
+
+So most distros start with a fairly common baseline, but if you're going to be doing a lot of multimedia work you might want to choose a distro that has spent more of its time looking at the multimedia integration. If you're looking to do a lot of math you'll find a distro that has done a lot of work making sure all the mathematical tools work together but the multimedia might be sketchy. 
+
+And of course the final testers of any distro, and this goes for not just Linux but every operating system, is the user base. 
+
+So what's your really looking for is a distro that is set up to appeal to like-minded people who are going to be using the same kinds of tools. Because those are the tools that we'll get the best integration because the thousands of hours of other people using those tools in the same combination as you constitute a larger test base and the right thing you would flawless integration.
+
+You'll get better advice on choosing a disco if you go to people who are likely to use the same sets of tools as you want to use then you will get if you just come in asking get a generic group like this. 
+
+If you're wondering what distro to use for making podcasts it's better to go ask me question in a podcaster's Reddit: hey everybody here that uses linux, which Linux distro do you use. 
+
+And the exact same question with the exact same wording can also be asked in a mathematics forum if you're looking to do a bunch of math and you're interested in using Oculus or Matlab and all that stuff.
+
+Distros only differ by stylistic taste and target audience for the most part.
+
+Comment 2:
+Author: Less_Ad7772
+Score: 7
+Created UTC: 1765830939.0
+Comment: The main difference between the distros is how they manage and deliver updates.
+
+**Arch** \- Has the latest software updates and features also known as a 'rolling release' and uses the pacman package manger.
+
+**Fedora** \- Has versioned ~~updates~~ releases that is close to the latest updates and uses dnf as it's package manager.
+
+**Debian** \- Also versioned but has older packages with a focus around stabilty. Uses apt as it's package manager.
+
+Most distros are built off those 3. Most other distros exist because they pre-package or build software in that the main 3 don't to make it easier for newer users to use.
+
+Then there's NixOS where you just manage a config file.
+
+This is a very low level take. There's obviously a lot more that goes into building an OS, but it's really the main factor in which I use to choose my distro.
+
+Comment 3:
+Author: fellipec
+Score: 3
+Created UTC: 1765831060.0
+Comment: Linux is like Minecraft. The distros are the mod packs people pick.
+
+Comment 4:
+Author: UNF0RM4TT3D
+Score: 2
+Created UTC: 1765830867.0
+Comment: &gt;Why applications aren't compatible among many of them?
+
+Davinci Resolve and other proprietary software designed for a specific distro. They may work, but you might see breakage when you update your system or the app.
+
+But that doesn't mean you can't make them work with almost 100% success. See [https://distrobox.it/](https://distrobox.it/)
+
+&gt;What should I consider when chosing a Linux distro as a main OS?
+
+Release cadence, that is: Do you prefer new software and features over potentially seeing a bit more bugs?
+
+Yes? Go for something rolling or with a short interval between releases like OpenSUSE Tumbleweed, CachyOS, Fedora.
+
+No? Go for something more stable, like things based on Debian, so Linux Mint, Ubuntu, elementary.
+
+And which desktop you wish to use. That is, you should pick the variant of the distro that provides the desktop you wish to use. Just look at how many options Fedora has between Editions and Spins https://fedoraproject.org/
+
+Also try https://distrosea.com/
+and maybe https://distrochooser.de/
+
+Comment 5:
+Author: Daytona_675
+Score: 2
+Created UTC: 1765837960.0
+Comment: women like you more if you use arch

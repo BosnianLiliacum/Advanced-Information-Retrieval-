@@ -1,0 +1,45 @@
+Post Title: Whats the current best maintained office app?
+Author: [deleted]
+Score: 19
+URL: https://www.reddit.com/r/linuxquestions/comments/1pyzqs6/whats_the_current_best_maintained_office_app/
+Number of comments: 25
+Created UTC: 1767046029.0
+
+Post Content:
+Theres LibreOffice, StarOffice, and OpenOffice.  I havent ran without a Windows machine for ages, and I'm finally at the point where I'm making Linux my primary OS.  The only thing I havent installed is an office tool.  I've used all of the aforementioned apps in the past.  But having not used them regulary, I dont know what is considered the current common tool.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: jr735
+Score: 17
+Created UTC: 1767053564.0
+Comment: Of the three you mentioned, the choice of best maintained is easy. That would be LibreOffice. OpenOffice technically has the latest update in November of 2025, but it is apparently quite far behind in security issues and the last major update was 2014. StarOffice was discontinued in 2009.
+
+Comment 2:
+Author: niKDE80800
+Score: 8
+Created UTC: 1767052944.0
+Comment: i mean, libreoffice is pretty popular, and its preinstalled on a crap ton of distros.
+
+Comment 3:
+Author: Nearby-Percentage-33
+Score: 7
+Created UTC: 1767047758.0
+Comment: OnlyOffice no Counter🔥
+
+Comment 4:
+Author: PixelmancerGames
+Score: 5
+Created UTC: 1767046914.0
+Comment: You can just use the browser version of Microsoft Office, it works just fine. I know this wasn't your question. Just letting you know.
+
+Comment 5:
+Author: ClubPuzzleheaded8514
+Score: 4
+Created UTC: 1767047630.0
+Comment: Onlyoffice UI is simple and smart, with tabs for all document formats.
+
+
+You can open in the same window all needed doc, pdf and excellent files, like you do with websites on your browser tabs. 

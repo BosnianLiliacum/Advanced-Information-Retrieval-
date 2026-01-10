@@ -1,0 +1,44 @@
+Post Title: Is it possible to replace GNU Make (Kbuild) with another build system?
+Author: Summer_1228
+Score: 13
+URL: https://www.reddit.com/r/kernel/comments/1ppgwt5/is_it_possible_to_replace_gnu_make_kbuild_with/
+Number of comments: 17
+Created UTC: 1766029422.0
+
+Post Content:
+I've been diving into kernel building for several weeks, and I'm wondering if it's possible to replace Kbuild with another build system? Like CMake or Meson?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: aioeu
+Score: 21
+Created UTC: 1766029901.0
+Comment: With enough time and effort, anything is possible. Good luck!
+
+Comment 2:
+Author: gpfault
+Score: 7
+Created UTC: 1766032005.0
+Comment: Possible? Sure, but why? It works fine.
+
+Comment 3:
+Author: afr0ck
+Score: 2
+Created UTC: 1766066498.0
+Comment: It could be a very fun and rewarding project, but I doubt it could be done in less than a year.
+
+Comment 4:
+Author: giant3
+Score: 2
+Created UTC: 1766032178.0
+Comment: BUT WHY? (Ryan Reynolds gif)
+
+Comment 5:
+Author: danielkza
+Score: 1
+Created UTC: 1766067449.0
+Comment: Any replacement would probably be a hard sell to the kernel community, since every single Linux distribution or platform would need to change how they configure and build kernels.
+
+Not impossible, as the integration of Rust has proven, but the benefits would need to be very substantial to justify the lift.

@@ -1,0 +1,64 @@
+Post Title: Finally! Decided to Switch to Linux
+Author: gadjetzss
+Score: 19
+URL: https://www.reddit.com/r/linuxquestions/comments/1ptljp2/finally_decided_to_switch_to_linux/
+Number of comments: 26
+Created UTC: 1766466806.0
+
+Post Content:
+Hello, Guyz! I recently decided to join linux. And as a beginner I don't know a thing about linux. I just know that there are some distros like mint which I want to go with too.
+
+Now I want to know if my laptop can actually run mint or not because it's very old; specs: i5 5th gen, DDR3 4gb ram, hdd. And yeah my laptop is Lenovo ThinkPad.
+
+So, Can you guys suggest me on how I can get started. Like should I learn about linux mint first, or check if my laptop can run it or anything else. Help me out in this one (pspsps for the cats reading this)
+
+System Model: 20BWS05T00
+
+System SKU: LENOVO\_MT\_20BW\_BU\_Think\_FM\_ThinkPad T450s
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ipsirc
+Score: 7
+Created UTC: 1766467082.0
+Comment: &gt;Now I want to know if my laptop can actually run mint or not 
+
+[https://duckduckgo.com/?q=linuxmint+minimum+hardware](https://duckduckgo.com/?q=linuxmint+minimum+hardware)
+
+Comment 2:
+Author: ofernandofilo
+Score: 4
+Created UTC: 1766469217.0
+Comment: before deciding to ***switch*** to Linux, you should decide to just ***try*** Linux.
+
+format a thumb drive with VENTOY, and move all the ISOs of all the Linux distributions you are interested in trying onto it, and try them all out before deciding to install anything.
+
+_o/
+
+Comment 3:
+Author: green_meklar
+Score: 3
+Created UTC: 1766474826.0
+Comment: &gt;Now I want to know if my laptop can actually run mint or not because it's very old; specs: i5 5th gen, DDR3 4gb ram, hdd.
+
+Yes, it can run Mint. I ran Mint in a VM with 2GB of RAM.
+
+But the real question is whether you can run all the applications you want. Modern websites kind of expect you to have lots of RAM. Ad-blocking is a must for performance, but even then, at 4GB you're going to find that a few browser tabs and some multitasking with other applications will eat through your RAM surprisingly quickly, regardless of what OS you have.
+
+Comment 4:
+Author: Siarzewski
+Score: 3
+Created UTC: 1766472555.0
+Comment: I suggest getting a 2.5" ssd instead of the hdd it will run smoother
+
+Comment 5:
+Author: pegasusandme
+Score: 2
+Created UTC: 1766468060.0
+Comment: Definitely try Linux Mint. It will be a pleasent entry to a new OS world and leave you confidence to try something more advanced down the road. Or just stick with it because it's a slick system.
+
+Arch is very specifically not meant for people who are new to Linux and there's really not much of an advantage to going that route until you truly understand how Linux works (you may end up blindly copy pasting from a wiki not really "knowing" what you're doing).
+
+Don't get me wrong, Arch is great, but the best options for newcomers are all contained in the top 10 on distrowatch.com and have been since 2002.

@@ -1,0 +1,55 @@
+Post Title: The billion dollar race to replace Windows
+Author: Putrid_Draft378
+Score: 446
+URL: https://youtu.be/M_bl0HvVcmw?si=N5yGiNSIU7b3buJz
+Number of comments: 150
+Created UTC: 1766858181.0
+
+Post Content:
+"Gaming on Linux is on the rise. SteamOS and the Steam Deck popularized it, desktop distros like Bazzite and Cachy are taking it to the next level."
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Hofnaerrchen
+Score: 204
+Created UTC: 1766859462.0
+Comment: Someone should tell people: Most Linux distros are free of charge!\^\^
+
+So who's going to make all those billion $s? There's just a single company that has to lose a lot from people moving away from them.
+
+Comment 2:
+Author: TONKAHANAH
+Score: 62
+Created UTC: 1766861667.0
+Comment: saw this video the other day and I feel like it kinda gets the wrong idea.
+
+I dont think valve intends to replace windows, in fact I've witnessed them say this specifically (it was a pretty one off short interview on a showroom floor with one of the engineers) Valve fully replacing windows is a monumental task that isnt really that feasible cuz it would require venturing into aspects of the software industry that valve doesnt really currently have any stake in (primarily business stuff)
+
+It is pretty evident that their goal is to provide a viable alternative to Microsoft for video games though and not because "they hold all the cards". This video frames the whole journey as if its some kind of power move by Valve to storm the OS and gaming industry when I dont think its that aggressive or deep. From what I can gather it started as Valve building a safety net for their platform, should MS ever fully take on an apple like walled garden approach to windows and start demanding all apps going forward to be loaded though the windows store and utilize special encrypted app packaging methods etc.. Valve and steam would kinda fucked. 
+
+now that they have that safety net, its upgrades, enhancements, and now the hardware are starting to form a more robust foundation for their platform to be something more than just a store front with a alternative OS choice.
+
+the goal doesnt seem to be replacing windows or making it entirely irrelevant (though that may be a symptom depending on how things go). the goal just seems to be removing gamers reliance on windows by giving gamers more options on how they access and play the games they've purchased through steam.
+
+Comment 3:
+Author: addition
+Score: 40
+Created UTC: 1766859557.0
+Comment: It's interesting that linux culture emphasizes decentralization and freedom, yet in order to replace Windows it seems like centralization is necessary. Luckily it'll still be a far better situation, with more freedom, than Windows.
+
+Comment 4:
+Author: NedStarkX
+Score: 22
+Created UTC: 1766861348.0
+Comment: I love Linux with all my heart but I had to read documentation and tinker for two hours (ozone and gamescope) to try to get Crusader Kings 3 running on Hyprland
+
+
+Normies do not want to do this and I don't blame them. Most people just want to click a button to play a game
+
+Comment 5:
+Author: DrollAntic
+Score: 2
+Created UTC: 1766874398.0
+Comment: Bazzite and Cachey didn't take it to the next level, they just got on the train. Steam/Valve is the reason for gaming on Linux being better, and they will save hundreds of millions when they eschew Ms. Windows is spyware, has been since 22h2, anyone running Windows has zero privacy, screenshots every few seconds processed into data MS takes to market to you.

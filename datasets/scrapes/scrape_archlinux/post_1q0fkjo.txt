@@ -1,0 +1,52 @@
+Post Title: 1st time installing Arch
+Author: Antique-Specific-707
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1q0fkjo/1st_time_installing_arch/
+Number of comments: 14
+Created UTC: 1767194794.0
+
+Post Content:
+I am using ubuntu 24 LTS(on my main laptop)  but I want to try Arch and see the level of customisation I can do I will be installing it on my secoundry laptop then later on my Main ( macbook 6,1 ). Tips and suggestions will be appreciated. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Techy-Stiggy
+Score: 12
+Created UTC: 1767194889.0
+Comment: Follow the guide and make sure to look for the specific tweaks needed to get Wifi working on macbooks. because they are annoying at times.
+
+Comment 2:
+Author: k___othrine
+Score: 8
+Created UTC: 1767194943.0
+Comment: Read the ArchWiki!
+
+Comment 3:
+Author: onefish2
+Score: 8
+Created UTC: 1767195554.0
+Comment: All you need to know:
+
+Just below the link where you [Download](https://archlinux.org/download/) the iso is this:
+
+**Documentation**
+
+[Wiki](https://wiki.archlinux.org/)
+
+[Manual Pages](https://man.archlinux.org/)
+
+[Installation Guide &lt;---](https://wiki.archlinux.org/title/Installation_guide)
+
+Comment 4:
+Author: Odd-Possibility-7435
+Score: 7
+Created UTC: 1767196423.0
+Comment: The customization is just the manual installation options and DIY choice of applications. Otherwise Ubuntu is just as customizable. You can switch desktop environments and themes on any Linux distro (which is what most people think of when they think customizability)
+
+Comment 5:
+Author: FL9NS
+Score: 5
+Created UTC: 1767194952.0
+Comment: first step, read the arch wiki to known how install and what install on your device. Keep It Simple

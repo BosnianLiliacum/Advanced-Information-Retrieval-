@@ -1,0 +1,56 @@
+Post Title: Is Linux forcing updates?
+Author: tom-smykowski-dev
+Score: 24
+URL: https://www.reddit.com/r/linuxquestions/comments/1po0o06/is_linux_forcing_updates/
+Number of comments: 91
+Created UTC: 1765887987.0
+
+Post Content:
+Do Linux distributions force restart updates without user consent, or nag people to do them?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dkopgerpgdolfg
+Score: 58
+Created UTC: 1765888906.0
+Comment: Tldr: You're never forced to do anything.
+
+By default it might install software updates automatically (without reboot) or "nag" or often nothing, but this can easily be changed. It will never decide to reboot for you now.
+
+Many updated things are fully usable immediately after updating without a need for any reboot, somtimes possibly with the need for some custom service-restart command that doesn't affect your normal work in any way. For those things that need actual rebooting to be effective, as said, it's up to you when you do it.
+
+This is true for all Linux distributions I know. It's technically possible that something different exists, but well, proving a negative is hard.
+
+Depending on your device, it might also be possible to update some device firmware with the "usual" tools in a distribution. For these things, a reboot might be technically necessary "during" the update to achieve anything, but it will tell you this in advance. It's your decision if and when you do such firmware updates.
+
+Comment 2:
+Author: GhostInThePudding
+Score: 55
+Created UTC: 1765888145.0
+Comment: Man, it's always interesting being reminded of the torments Windows users face.
+
+No, that is not a thing. Most distros check for updates automatically on their default settings, but I'm not aware of any that install them automatically and force a reboot, and there literally aren't any where you can't change the settings however you want.
+
+Comment 3:
+Author: Jwhodis
+Score: 18
+Created UTC: 1765888301.0
+Comment: At most it will tell you that you *should* restart, or *should* update, but no, it never forces you to.
+
+Comment 4:
+Author: [deleted]
+Score: 16
+Created UTC: 1765889151.0
+Comment: I forgot how little Windows respects its users.
+
+But to answer your question: no. At most, in some distributions, updates might be downloaded automatically and the system will give you an easy-to-remove notification that you should reboot to apply the updates when you can. However, there still hasn't been a distro that forces a restart. Also, the updates where you need to reboot to apply them will apply almost instantaneously, so it's not like your computer will be rendered useless for half an hour.
+
+Comment 5:
+Author: obsidian_razor
+Score: 9
+Created UTC: 1765888557.0
+Comment: Atomic distros like Bazzite/ Aurora sometimes run updates in the background and install them on your next boot, but I'm unsure if this is a common feature of all atomic distros or just the Silverblue family.
+
+I use Bazzite on my handheld, and I personally trust the team behind it, but if autoupdates trouble you, you should use one of the distros that give you full control about your system and will never install anything without your consent, such as Arch.

@@ -1,0 +1,46 @@
+Post Title: Maybe some other time, MediaTek...
+Author: KuzuPod
+Score: 312
+URL: https://i.redd.it/fg8puj3bmh7g1.jpeg
+Number of comments: 76
+Created UTC: 1765856614.0
+
+Post Content:
+Replaced the original MT7925 WiFi card on my ProArt PX13 with an old Intel WiFi 5 card I had laying around (8260)... needless to say, has been miles better.
+
+The MediaTek card would take FOREVER to connect to a network (if it even did... I often needed to restart the network service), and the link speed would be terrible (11mb/s). By contrast, the old card I installed connected instantly with an 866mb/s link and great speeds (200mb/s, as opposed to not-even-connecting)
+
+Are most MediaTek drivers this terrible on Linux? I swapped the card completely because I didn't want to go through the headache of finding/configuring proper drivers. What WiFi 7 cards play well with Linux that you all would recommend (for a more permanent solution)?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: iheartmuffinz
+Score: 156
+Created UTC: 1765857003.0
+Comment: Qualcomm cards are the best for Wifi 7. MediaTek is terrible on any platform.
+
+Comment 2:
+Author: ShiroeKurogeri
+Score: 42
+Created UTC: 1765858904.0
+Comment: I highly recommend Intel AX210, it works wonder for me on Fedora.
+
+Comment 3:
+Author: Deductivemonkee
+Score: 19
+Created UTC: 1765863181.0
+Comment: Yup, AX210 goes into every device I have. It just works.
+
+Comment 4:
+Author: Gormaganda
+Score: 6
+Created UTC: 1765869673.0
+Comment: Ha! I also ripped that out lately. Went for ax210 and never had any problems with bluetooth again.
+
+Comment 5:
+Author: woprandi
+Score: 6
+Created UTC: 1765869058.0
+Comment: Intel only for WiFi chipsets

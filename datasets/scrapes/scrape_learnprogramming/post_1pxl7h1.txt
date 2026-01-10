@@ -1,0 +1,59 @@
+Post Title: Late 30's career changer - degree as a cover
+Author: [deleted]
+Score: 59
+URL: https://www.reddit.com/r/learnprogramming/comments/1pxl7h1/late_30s_career_changer_degree_as_a_cover/
+Number of comments: 33
+Created UTC: 1766906159.0
+
+Post Content:
+I’m 37 (almost 38), recently sober,  and trying to make a realistic career move into tech. Not looking to code for Google or anything, really just looking for long-term stability. I was accepted into a fully covered online software engineering degree (4-year track) and I’m debating whether it’s worth doing in today’s market, mainly because of my age.
+
+The idea wouldn’t be to rely on the degree alone, but to use it as legitimacy/structure while building practical skills in parallel (I've already got a fully fleshed out self-created "boot camp" and I've started it) and aiming to get hired before graduating (year 1-3). I’d be targeting internal roles like QA/test automation, internal tools, ops, data/reporting, or technical support engineer, &amp;  not junior SWE or webdev as a starting point.
+
+Given age, AI, and market saturation, is this still a realistic approach, or is the degree mostly a time sink at this point? If you were late 30s and starting now, would you use a degree this way, or skip it entirely and go another route (IT, trades, ops, etc.)?
+
+Appreciate honest takes from people already in the field.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: IVIichaelD
+Score: 42
+Created UTC: 1766906990.0
+Comment: I think your main concern right now should be that software engineering has one of the highest unemployment rates for recent graduates. Also with how the job market looks now, it’s possible that an online degree from a school recruiters haven’t heard of could be a disadvantage. I would personally be more worried about that than age.
+
+That being said, you’re probably thinking about the job market in 4 years, not the job market now. My personal view is that the market will improve. But anyone’s take on that will be speculative.
+
+Don’t target QA. IMO the writing is on the wall that companies can outsource the job to less developed countries for a quarter of the cost. Aim for highest skill position possible for most safety.
+
+Comment 2:
+Author: Crafty0410
+Score: 36
+Created UTC: 1766907233.0
+Comment: Dude, You sound like me. I was early 30s and recently sober. I had been an electrician since I left high school and was looking for a career change. Always had an interest in programming and computers but never really pursued it. I'm by no means an expert in the field and job markets are different everywhere but I don't think I could have made it without my degree. I got my job through one of my University's work experience programs as well as the small network I made from participating in extra curricular activities. I was hired part time before I finished my degree. It really is just a piece of paper at the end of the day but I feel that the experience of going to uni and the network I built made it worth while. Not to mention the feeling of accomplishment when I graduated. It was a hard 4 years but I enjoyed it and really felt I earned it. 
+Best of luck and good work on the sobriety, my friend. If you want it, you can get it.
+
+Comment 3:
+Author: MihaelK
+Score: 26
+Created UTC: 1766907830.0
+Comment: If you want a career in software engineer, then get a degree.
+
+Also, your starting point should be junior SWE and not QA or technical support or data entry or whatever you mentined. You will have a very hard time transitioning from QA to Software Engineer unless there is some internal opening in the company, and even then, it would be hard. 
+
+Your degree is in SE, so stick to SE.
+
+Comment 4:
+Author: JoshisJoshingyou
+Score: 14
+Created UTC: 1766906638.0
+Comment: Get the degree. As someone without one who started tech older I wish I had one.  I never had a program I could afford while keeping my family fed and housed.
+
+Comment 5:
+Author: immediate_push5464
+Score: 11
+Created UTC: 1766909200.0
+Comment: Similar pathway. My best advice is to do a 2-year program, not a 4. Good middle ground. Gives you some formal education. But doesn’t take forever. You do not want to go into this battle with anything less than formal education.
+
+I know you think you have this figured out, but I can assure you, if you go into an interview as a self-taught learner with anything less than absolute brilliance, you will get your teeth kicked in figuratively speaking.

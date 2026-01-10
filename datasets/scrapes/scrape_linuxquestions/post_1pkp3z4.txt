@@ -1,0 +1,83 @@
+Post Title: Performance difference in old vs new kernel
+Author: Empty_Wheale_7988
+Score: 28
+URL: https://www.reddit.com/r/linuxquestions/comments/1pkp3z4/performance_difference_in_old_vs_new_kernel/
+Number of comments: 16
+Created UTC: 1765537158.0
+
+Post Content:
+If you see some Linux kernel release videos on YouTube You will see that there are huge performance improvement in every release. (At least they say )
+
+  
+How is improvement  in real life use? 
+
+  
+I personally think that the performance improvement is almost negligible at least for normal uses.   
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ofernandofilo
+Score: 19
+Created UTC: 1765539396.0
+Comment: context is usually key.
+
+one of the most popular performance tests in the Linux universe is the phoronix website, and the published performance gains can usually be reduced by 2 points:
+
+ * specific gains for simple functions rarely performed in domestic settings;
+ * improving support for very new hardware products;
+
+normally, when a piece of hardware is released, its support is poor, immature and tends to get full support when officially supported by Linux for around 2 years.
+
+when hardware is older than this, rarely any performance gains are found.
+
+on the other hand, when general gains are annound in relation to any hardware, they tend to be restricted to small functions, which despite being much more performant when announced, represent little accumulated effect when used with all other functions of the same analyzed programs.
+
+so, if you have relatively old hardware... around 5 years or more, officially supported by the manufacturer... it's very likely that you won't have any big news waiting for you in the kernel.
+
+if your hardware is not officially supported, and has downstream support... there may be the possibility that eventually such a driver will be incorporated into the kernel, become upstream, and thus its use will become more comfortable.
+
+this is not to say that you shouldn't update the kernel or anything like that, but just not to create unrealizable expectations.
+
+finally, there are individuals and groups that eventually try to produce optimized kernels through compilation, linking, profiling, architecture, etc., which tend to present better results on specific hardware and in specific cases than the more general and common kernel compilations among distributions. in any case, on average the gains are usually modest, and performance regressions are relatively common.
+
+_o/
+
+Comment 2:
+Author: ClubPuzzleheaded8514
+Score: 9
+Created UTC: 1765538106.0
+Comment: I guess improvements cannot be measured from kernel version to kernel+1 version, but the long way : all tiny improvements, step by step, make kernel clever and better, and you can see this if you compare the current one with the kernel of 2020.
+
+
+Note that the next kernel seems to be less performing, at this time : but it is not the released version yet, so... 
+https://www.phoronix.com/news/Linux-6.19-Early-Benchmarks
+
+Comment 3:
+Author: L30N1337
+Score: 6
+Created UTC: 1765538023.0
+Comment: People use Windows 11.
+
+People are very oblivious to performance.
+
+Comment 4:
+Author: Miserable_Ad7246
+Score: 4
+Created UTC: 1765540213.0
+Comment: It is important for servers. For example core isolation became much better across releases where is a noticeable difference between 6.1 and 6.12.
+
+Comment 5:
+Author: zeldaink
+Score: 1
+Created UTC: 1765552897.0
+Comment: Most of the time the huge bumps are very specific cases.
+
+As of right now, on Phoronix there is this article - [Linux Patches Fix eMMC Secure Erase Of 1GB Taking \~10 Minutes To Now Just 2 Seconds](https://www.phoronix.com/news/Linux-Quirky-Faster-eMMC-Erase). Yeah, nice 10 minutes secure erase down to 2 seconds (wtf was it doing so much anyways), but how often do you erase eMMC? That's practically soldered SD card. You probably can live just fine with it. And to top it off, it's for specific Kingston eMMC drives &lt;-- you don't have to read the article now, I just gave you the tl;dr variant.
+
+iirc there is crypto patches for 6.19 that significantly boosts AES performance on Zen 3+ CPUs but they are useless on Zen 2 and older, as VPCLMULQDQ is not present on older hardware.
+
+But then this one from yesterday [Linux 6.19 Networking Delivers 4x Improvement For Heavy Transfer Workloads, New Hardware](https://www.phoronix.com/news/Linux-6.19-Networking) looks like everyone would benefit.
+
+Sooo, there IS 10x improvement, but most of the time it's in specific spots. One drop doesn't make an ocean, but many do make an ocean.

@@ -1,0 +1,53 @@
+Post Title: [arch-announce] NVIDIA 590 driver drops Pascal support; main packages switch to Open Kernel Modules
+Author: TheEbolaDoc
+Score: 250
+URL: https://lists.archlinux.org/archives/list/arch-announce@lists.archlinux.org/thread/AMPPOBL6ZQPEOQ722IE3O5BO3PPWCQNA/
+Number of comments: 179
+Created UTC: 1766258137.0
+
+Post Content:
+With the update to driver version 590, the NVIDIA driver no longer supports Pascal (GTX 10xx) GPUs or older. We will replace the `nvidia` package with `nvidia-open`, `nvidia-dkms` with `nvidia-open-dkms`, and `nvidia-lts` with `nvidia-lts-open`.
+
+**Impact:** Updating the NVIDIA packages on systems with Pascal, Maxwell, or older cards will fail to load the driver, which may result in a broken graphical environment.
+
+**Intervention required for Pascal/older users:** Users with GTX 10xx series and older cards must switch to the legacy proprietary branch to maintain support:
+
+* Uninstall the official `nvidia`, `nvidia-lts`, or `nvidia-dkms` packages.
+* Install `nvidia-580xx-dkms` from the AUR
+
+Users with Turing (20xx and GTX 1650 series) and newer GPUs will automatically transition to the open kernel modules on upgrade and require no manual intervention.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Hitsounds
+Score: 51
+Created UTC: 1766262016.0
+Comment: I got the email notification but was there no way to make this more seamless. I think a lot of people are going to be hit by this.
+
+Comment 2:
+Author: Esrrlyg
+Score: 39
+Created UTC: 1766259648.0
+Comment: Can someone ELI5, why is an AUR package recommended over just freezing updates to the current nvidia 580 driver series?
+
+Edit: nevermind lol I got in my own head that this was gonna be a major headache to sort out, it was literally a piece of piss
+
+Comment 3:
+Author: xv_Bloom
+Score: 39
+Created UTC: 1766259064.0
+Comment: Steam can't be installed anymore since it depends on `lib32-nvidia-utils`, which requires `nvidia-utils` which is no longer an option since the 580xx drivers install the 580xx utils package. Do we just wait for this to be amended? (For context I am running the linux zen kernel 6.18.1-zen1-2-zen)
+
+Comment 4:
+Author: mar_lib
+Score: 29
+Created UTC: 1766262434.0
+Comment: It's a horrible decision to drop 580 series to AUR, Pascal cards are still very common.
+
+Comment 5:
+Author: Nullizer
+Score: 22
+Created UTC: 1766264916.0
+Comment: Can we put `nvidia-580xx-dkms` back to \[extra\] repo ?

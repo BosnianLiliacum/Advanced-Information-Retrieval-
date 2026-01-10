@@ -1,0 +1,40 @@
+Post Title: Kernel-Related Audio Issues
+Author: KashmiriChristian
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1pphmke/kernelrelated_audio_issues/
+Number of comments: 3
+Created UTC: 1766031684.0
+
+Post Content:
+# Problem has been fixed as of linux 6.18.3-arch1-1 update
+
+Laptop: 83MC (Lenovo Slim 7 14ILL10)
+
+Hey all, over the past many kernel updates I have found myself constantly having to downgrade to fix my audio. When updating to newer versions of the kernel, my speaker disappears and I am left with dummy output. Downgrading to an older kernel fixes it.
+
+I was hoping 6.18.1.arch1-2 would fix this issue, but it did not. I found myself, yet again, downgrading to 6.17.7.arch1-2.
+
+Online, people often list solutions involving packages they were missing. I have found that I am not missing any packages that I need (that I know of).
+
+Anyone else finding themselves in a similar situation? Is there any manual solution, or will I have to wait for another update?
+
+Furthermore, is this issue even being addressed? The way I articulate the problem isn't ideal, so I haven't really found anything addressing this issue or any indication that this is being worked on.
+
+I really hope this isn't a problem that I'm uniquely experiencing, or one that will just echo endlessly.
+
+I'm not an expert by any means, so please bear with me.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: EliJambu
+Score: 2
+Created UTC: 1766837737.0
+Comment: Same issue here on version 6.18.2 I had to downgrade to 6.17.13 where things are working correctly
+
+Comment 2:
+Author: tech_london
+Score: 1
+Created UTC: 1767984952.0
+Comment: I'm having the same problem in fedora with kernel 6.18 on a lenovo laptop

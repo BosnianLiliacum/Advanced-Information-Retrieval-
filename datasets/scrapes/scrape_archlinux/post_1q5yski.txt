@@ -1,0 +1,61 @@
+Post Title: How do you keep track of what you change in your system
+Author: nao_te_digo
+Score: 51
+URL: https://www.reddit.com/r/archlinux/comments/1q5yski/how_do_you_keep_track_of_what_you_change_in_your/
+Number of comments: 77
+Created UTC: 1767742050.0
+
+Post Content:
+I am a new user and often forget what I changed in my system. Is there any package that allows me to automatically track changes and isn't too much complicated
+
+Thanks
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Sudden-Peace9825
+Score: 52
+Created UTC: 1767742192.0
+Comment: I just keep a simple text file in my home directory and jot down whatever I install or tweak - way easier than trying to remember later when something inevitably breaks
+
+Comment 2:
+Author: Queasy-Dirt3472
+Score: 31
+Created UTC: 1767743115.0
+Comment: Git. If you want to go super hardcore you could start using Nix home manager
+
+Comment 3:
+Author: 3_Thumbs_Up
+Score: 27
+Created UTC: 1767743808.0
+Comment: I have a pacman hook that updates a list of all explicitly installed packages everytime I install or remove something, so I always have an updated list of all installed packages that's saved in /etc.
+
+Then i just backup /etc and my home directory regularly. Other than that, what are you actually changing?
+
+Comment 4:
+Author: Ayrr
+Score: 9
+Created UTC: 1767746121.0
+Comment: I write everything I do into obsidian, kind of like a personal wiki; I include relevant documentation too so I understand why I did what I did. 
+
+Also I have a pacman hook `/etc/pacman.d/hooks/10-packagelist.hook` which puts the current output of `pacman -Qqe` into a text file. Replace $user with your user name. 
+
+    [Trigger]
+    Operation = Install
+    Operation = Remove
+    Type = Package
+    Target = *
+    
+    [Action]
+    Description = Printing explicitly installed packages to ~/.config/arch/pkglist...
+    When = PostTransaction
+    Exec = /bin/sh -c 'runuser -u $user -- /usr/bin/pacman -Qqe &gt; /home/$user/.config/arch/pkglist'
+
+Comment 5:
+Author: CrazyWizard9835
+Score: 7
+Created UTC: 1767742284.0
+Comment: Right now I'm saving configuration files and writing notes inside a folder and synchronizing that with GitHub.
+
+I heard that there are better solutions like Chezmoi but haven't tried it yet.

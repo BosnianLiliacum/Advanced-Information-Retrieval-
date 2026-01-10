@@ -1,0 +1,38 @@
+Post Title: Asahi Linux Progress Report: Linux 6.18
+Author: ouyawei
+Score: 333
+URL: https://asahilinux.org/2025/12/progress-report-6-18/
+Number of comments: 16
+Created UTC: 1765982194.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Maipmc
+Score: 116
+Created UTC: 1765990986.0
+Comment: The work these people are doing is truly amazing, but i'm somewhat uneasy on how long will they be able to keep this game of cat and mouse with Apple, and how long will they support the older devices, wich are the more interesting to get.
+
+Edit. On top of that, even second hand M1 macs are stupidly expensive in my area, so they're not really worth it compared to a regular gaming laptop...
+
+Comment 2:
+Author: IceWilling1113
+Score: 23
+Created UTC: 1766030848.0
+Comment: It seems like progress is slowing down here. They have already had devs leave the project and we are on M5 and they haven't gotten M3 working. I fear it might be a while before newer hardware works (if at all).
+
+Comment 3:
+Author: FFroster12
+Score: 2
+Created UTC: 1766040383.0
+Comment: Im a mac user i can try this thanks asahi
+
+Comment 4:
+Author: Whole-Low-2995
+Score: 0
+Created UTC: 1766376363.0
+Comment: I felt that there was a clear lack of explanation regarding the somewhat controversial issues of the Asahi Linux team, such as the LGBTQ+ Pride, and why Rust was introduced in certain areas after the introduction of the Rust driver. To be honest, there have been times when I wasn't mentally stable, and I would attack those aspects. Of course, I don't have that much hostility now, but I definitely felt that this project provides octopus-like device support rather than gradually and fully supporting older devices. I use the earliest model of the M1 Macbook Pro, and it was late 2024 when everything started running smoothly. If support for older devices like the M2 had been prioritized, these were minor bugs related to webcams or microphones that would never have stretched this far. I am no longer a gender phobia and have benefited from this project in any case, so I view it positively, but I still believe that the interest of the engineers takes precedence and makes decisions. From the perspective of operating Fedora Spin Asahi Remix, I think it's necessary to increase the proportion of thinking from the end-user's perspective.

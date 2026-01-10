@@ -1,0 +1,64 @@
+Post Title: Wasted my first year of CS degree on games &amp; reels. Now I want to get serious but I’m completely confused about what to learn.
+Author: Witty-Management-212
+Score: 73
+URL: https://www.reddit.com/r/learnprogramming/comments/1q4ip06/wasted_my_first_year_of_cs_degree_on_games_reels/
+Number of comments: 16
+Created UTC: 1767610490.0
+
+Post Content:
+I’m a BSc CSIT student, currently in 3rd semester.
+To be honest, I completely wasted my first year playing games and scrolling reels. No real skills, no projects, nothing.
+Now reality has hit and I genuinely want to get serious about coding and my career but I’m overwhelmed and confused.
+
+Everywhere on the internet I see:
+“Start with web development”
+“Web dev is saturated”
+“AI will eat developer jobs”
+“Follow your interest”
+
+The problem is… I don’t even know what I’m interested in.
+
+Web development seems like the default path, but with all the AI tools and job market noise, I’m scared of choosing something that won’t be valuable in 3–4 years. At the same time, I don’t want to keep overthinking and end up doing nothing again.
+
+I’m not expecting shortcuts. I’m ready to put in consistent effort now.
+I just want clarity.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: jonathanfv
+Score: 31
+Created UTC: 1767610776.0
+Comment: Why not make a game using web-based technology? It can be fairly simple, like the dino game in Chrome for example.
+
+Comment 2:
+Author: KarutaK
+Score: 21
+Created UTC: 1767611032.0
+Comment: Good news it’s it was only the first year. I think it’s actually normal not to know. I didn’t, until my third year, when I took my first computer graphics class. Keep exploring. I believe what you hear about web dev is true but a lot of web dev has become common software engineering knowledge and is very transferrable to other fields. Much of what you learn and will learn should give you a better idea of what path to pursue and I don’t think you necessarily need to know right away, especially in an industry that’s always changing.
+
+Comment 3:
+Author: badasssravikumae
+Score: 12
+Created UTC: 1767611034.0
+Comment: There is no need to worry, you are still in your second year 
+Instead of choosing a single path right from the start, try different things and see what interests 
+There are various field like web, ai, web3, robotics, cybersec, etc etc pick one and start exploring it and eventually you'll understand what thrills you 
+I know it seems hard and there is a sense of urgency at start but once you'll start then only you can understand
+
+Comment 4:
+Author: eh_it_works
+Score: 5
+Created UTC: 1767614639.0
+Comment: Start learning electronics as you learn more CS, buy a cheap microcontroller and try to do whatever seems cool with it. 
+
+Also, Pico8 Fantasy console, make games.
+
+Comment 5:
+Author: Ok_Suggestion_4912
+Score: 4
+Created UTC: 1767613529.0
+Comment: build anything that interests you + has sufficient technical complexity for your current level of coding. so eventually you'll have both a product and skills to show.
+
+also I don't think you need to limit yourself to certain projects because "this field won't be relevant in the next few years", unless you're currently already eyeing very specific job posts which would require specific tech stacks. most concepts that you learn from doing even a basic project would probably be highly applicable anywhere else in tech.

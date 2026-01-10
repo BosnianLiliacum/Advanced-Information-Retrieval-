@@ -6,7 +6,7 @@ from pathlib import Path
 
 #SUBREDDITS
 #target_subreddits = ["MachineLearning", "LangChain", "huggingface", "homelab", "dataengineering"]
-target_subreddits = ["linux"]
+target_subreddits = ["learnprogramming"]
 
 #SETTINGS
 POSTS_LIMIT = 100

@@ -1,0 +1,38 @@
+Post Title: GNOME Style Bluetooth manager for tiling WMs
+Author: Necessary_Hunter_672
+Score: 20
+URL: https://www.reddit.com/r/archlinux/comments/1ppucne/gnome_style_bluetooth_manager_for_tiling_wms/
+Number of comments: 6
+Created UTC: 1766073478.0
+
+Post Content:
+Hey y'all, I recently just push a stable release of my project [adw-bluetooth](https://github.com/ezratweaver/adw-bluetooth)
+
+Its a gnome style bluetooth manager, mainly for tiling WMs like Hyprland and i3.
+
+Its on the AUR too :) Feel free to give it a try and let me know what you think!
+
+
+Top 3 comments:
+
+Comment 1:
+Author: SillyEnglishKinnigit
+Score: 4
+Created UTC: 1766075751.0
+Comment: Nice! Personally not a fan of Gnome anything, but you did some nice work here.
+
+Comment 2:
+Author: RhubarbSpecialist458
+Score: 3
+Created UTC: 1766074606.0
+Comment: Sweet!  
+Thank you for being awesome and contributing with your skills \\o/
+
+Comment 3:
+Author: Jristz
+Score: 2
+Created UTC: 1766095149.0
+Comment: I recomend you check libadapta from the mint guys if libadwaita even start becoming an issue
+
+
+Also I gonna check your Bluetooth, I use blueberry but looks your is lightweight, nice

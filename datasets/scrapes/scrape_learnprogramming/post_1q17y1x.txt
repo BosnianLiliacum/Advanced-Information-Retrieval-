@@ -1,0 +1,44 @@
+Post Title: I want to start doing beginner to intermediate projects to get hands-on-learning instead of "Tutorial Hell". Can some of u suggest me some project ideas to start
+Author: Outrageous_News2526
+Score: 32
+URL: https://www.reddit.com/r/learnprogramming/comments/1q17y1x/i_want_to_start_doing_beginner_to_intermediate/
+Number of comments: 12
+Created UTC: 1767284419.0
+
+Post Content:
+So recently, i learnt html and css and starting with javascript. But I have been struck in tutorial hell. So i want to start doing project-based learning. Any suggestions to get started and ideas? It can be related to web dev or any other thing to add
+
+
+Top 5 comments:
+
+Comment 1:
+Author: grappling_with_love
+Score: 21
+Created UTC: 1767287831.0
+Comment: John Crickett has a selection of [coding challenges](https://codingchallenges.fyi/challenges/intro) aimed at solving this exact problem.
+
+They're tagged by difficulty, it's worth doing some of the beginner ones too.
+
+Comment 2:
+Author: Ok_Arugula6315
+Score: 7
+Created UTC: 1767284680.0
+Comment: Build snake game lol
+
+Comment 3:
+Author: gh0st-Account5858
+Score: 5
+Created UTC: 1767285309.0
+Comment: Build a Amazon bro
+
+Comment 4:
+Author: aqua_regis
+Score: 4
+Created UTC: 1767284839.0
+Comment: https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_where_can_i_find_practice_exercises_and_project_ideas.3F
+
+Comment 5:
+Author: Interesting_Dog_761
+Score: 2
+Created UTC: 1767291763.0
+Comment: I'm not sure what can help you exercise initiative , because you needed people to do your work for you. You cannot succeed if you expect to always be spoonfed.

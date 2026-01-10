@@ -1,0 +1,50 @@
+Post Title: Is Linux still a viable option if I use a lot of specific apps / hardware?
+Author: one2hit
+Score: 23
+URL: https://www.reddit.com/r/linuxquestions/comments/1pls8g1/is_linux_still_a_viable_option_if_i_use_a_lot_of/
+Number of comments: 47
+Created UTC: 1765650278.0
+
+Post Content:
+I've been thinking about making the switch, instead of upgrading to W11. But I use some specific software for illustrative work (Clip Studio, PureRef, ACDSee, DesignDoll etc...) I also use an older Cintiq and a VR headset occasionally. 
+
+Just wondering if I'm going to be dealing with more pain and frustration or if things work pretty smoothly now.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: visualglitch91
+Score: 31
+Created UTC: 1765650683.0
+Comment: There are alternatives to almost everything, the question is whether you are willing to adapt or not.
+
+Comment 2:
+Author: ipsirc
+Score: 13
+Created UTC: 1765650566.0
+Comment: [Linux is not a drop-in-replacement for Windows](https://linux.oneandoneis2.org/LNW.htm)
+
+Comment 3:
+Author: Menithal
+Score: 6
+Created UTC: 1765668175.0
+Comment: VR Headsets shouldnt be a problem from my experience (I got my BSB working just fine on arch, and documentation goes all the way to even [older Oculus models](https://lvra.gitlab.io/docs/hardware/)) and hardware, but specific software tools wills be more complicated; when changing OS there is always goign to  a time of trying to find alternatives, Linux simply is NOT a drop in replacement.
+
+Comment 4:
+Author: geekroick
+Score: 5
+Created UTC: 1765650521.0
+Comment: Only one of those apps has a native Linux version, so you're going to be dealing with Windows emulation for the rest...
+
+Comment 5:
+Author: perfectdreaming
+Score: 2
+Created UTC: 1765651247.0
+Comment: You likely are going to have to learn some new software. Please google them. I am betting grease pencil in Blender + some addons will get you what you use in Clip Studio. You can always ask Google Gemini to try generate it for you. I do not know what the difference is for PureRef and ACDSee. DesignDoll you can probably script that functionality yourself in Blender. I have never used any of these pieces of software before so just guessing basing what I read on the front page.
+
+You can always try to open steam, add the installer as a nonsteam app, use proton to install it, then change the steam entry to the main .exe to see if it runs.
+
+Keep in mind; these are obscure pieces of proprietary software. They could be bought out the next day by a megacorp that tells you to go learn their suite. Or the firm stops selling it for whatever reason. Blender on the other hand is GPL open source backed by a strong community. It won't be shut down by a megacorp and it won't phone home to check if you have a license.
+
+Watcom Cintiq tablets should be fine. What VR headset? Not sure about the occulus but the Steam Frame coming out should be fine.

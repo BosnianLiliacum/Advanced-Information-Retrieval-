@@ -1,0 +1,46 @@
+Post Title: Is C# used often?
+Author: zenpanda0o0
+Score: 65
+URL: https://www.reddit.com/r/learnprogramming/comments/1pucrfi/is_c_used_often/
+Number of comments: 34
+Created UTC: 1766545235.0
+
+Post Content:
+I've only started learning programming. I've finished a foundations course which introduced HTML, CSS. And JavaScript. I am very interested In making games and looked into Unity, which uses C#. So I'm just wondering, if I decide to take time to learn C# am I in a way just 'wasting' time or is C# a good language which has skills that are transferrable to other languages? 
+
+I don't have a college degree in CS so I know that getting a job as a programmer is already an uphill battle so a part of me doesn't want to waste too much time learning something that won't be really beneficial.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Own_Attention_3392
+Score: 81
+Created UTC: 1766545627.0
+Comment: Programming isn't about any particular language. Programming is about thinking like a programmer, which is a systematic approach to problem solving and troubleshooting. These skills can be learned in any language and transferred to any other language.
+
+That said, C# is an incredibly powerful, popular language used in just about every industry in tens of thousands of companies. Unity's usage of C# is somewhat different than standard line-of-business software, but go and re-read my first paragraph.
+
+Comment 2:
+Author: BeauloTSM
+Score: 77
+Created UTC: 1766545789.0
+Comment: In 2025, C# was the 5th most used programming language according to GitHub. The number 1 and 3 languages, TypeScript and JavaScript, can be used and are used often in conjunction with C#.
+
+Comment 3:
+Author: nerfherder616
+Score: 43
+Created UTC: 1766545542.0
+Comment: C# is one of the most common languages for modern large scale projects. If you know C#, you'll be able to pick up Java easily too. 
+
+Comment 4:
+Author: lukkasz323
+Score: 13
+Created UTC: 1766545941.0
+Comment: Learning C# is not time wasted.
+
+Comment 5:
+Author: BoBoBearDev
+Score: 10
+Created UTC: 1766545919.0
+Comment: Yeah, I prefer C# over Java for RESTful API backend. It felt way easier than Java.

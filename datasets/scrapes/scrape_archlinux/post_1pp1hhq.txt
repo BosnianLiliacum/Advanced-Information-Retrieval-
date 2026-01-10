@@ -1,0 +1,55 @@
+Post Title: Created my first AUR package - a simple app launcher for Wayland
+Author: alphatrad
+Score: 31
+URL: https://www.reddit.com/r/archlinux/comments/1pp1hhq/created_my_first_aur_package_a_simple_app/
+Number of comments: 20
+Created UTC: 1765990164.0
+
+Post Content:
+So I've been daily driving Arch for about a year now. Work as a software engineer and honestly Hyprland has become my happy place for ricing.
+
+Anyway, I kept getting frustrated with app launchers. Like Rofi and Wofi are great dont get me wrong, tried Walker from Omarchy but I literaly just want to type a few letters, hit enter, app opens. Thats it. I dont need web search or calculator or any of that stuff - just want it stupid fast and out of my way.
+
+Couldn't find exactly what I wanted so I figured why not just build it myself?
+
+Called it Yeet because... well you yeet apps open I guess? Naming things is hard lmao
+
+The gist:
+
+* substring matching first, falls back to fuzzy if it doesnt find anything
+* keyboard driven (alt+1-9 to quick launch)
+* config is just TOML and you can theme it with CSS
+* single binary, pretty minimal depedencies
+
+Also submitted my first ever AUR package which feels like a right of passage at this point?? Kinda nervous about that tbh
+
+feel free to roast me and flame my arse
+
+GitHub: [https://github.com/1337hero/yeet](https://github.com/1337hero/yeet) 
+
+AUR: [https://aur.archlinux.org/packages/yeet-git](https://aur.archlinux.org/packages/yeet-git)
+
+
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Th3Sh4d0wKn0ws
+Score: 5
+Created UTC: 1765994217.0
+Comment: I'm about to start from scratch again on my laptop, I'll check this out. Thanks!
+
+Comment 2:
+Author: rrombill
+Score: 2
+Created UTC: 1766034253.0
+Comment: if you want something that "just opens the app", there is tofi and wmenu
+
+Comment 3:
+Author: evild4ve
+Score: -34
+Created UTC: 1765994441.0
+Comment: sorry back up there a second. why are app launchers being worked on? do apps not launch themselves? do people take up Linux without knowing how to install or link programs into /bin directories? in what kind of use-case does this require a further layer of configuration? I mean menus are arguable enough as being redundant cruft, but don't people's DEs already provide keyboard shortcuts?
+
+I admit I make some assumptions: people who want this sort of stuff will have a DE, and every DE I've seen lets you make keyboard shortcuts. (but I've not used Hyprland to be sure)

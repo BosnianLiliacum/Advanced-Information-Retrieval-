@@ -1,0 +1,96 @@
+Post Title: How do attackers use SQL injections
+Author: Opposite_Second_1053
+Score: 226
+URL: https://www.reddit.com/r/learnprogramming/comments/1pn8rvc/how_do_attackers_use_sql_injections/
+Number of comments: 64
+Created UTC: 1765809061.0
+
+Post Content:
+I'm confused how do malicious actors use SQL injections on an application when in order to access a database you need to authenticate to it? how are they able to get data returned from a database with their query if they are not an authenticated user to the database? and how would they even know what to inject into the SQL database to get what they want, are they just trying anything to get something back? this is purely educational because I honestly don't understand it?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: TheRealSlimCoder
+Score: 235
+Created UTC: 1765810127.0
+Comment: SQL injection happens when you are able to identify that the receiving application does not sanitize the user input or limit permissions levels before passing it to the database (application is what authenticates to the database, not the end user). Take the following as an example loophole. The common SQL injection came from login pages, meaning the application would accept a username and password from the end user, then will check the database for matching records.
+
+An example of a poor and vulnerable way to handle the input / login process would be something like
+
+`Select TOP(1) * FROM Users WHERE UserName = '{input.username}' AND Password = '{input.password}';`
+
+then accepting the record returned as the 'authenticated' user. Now, lets look at how the resulting query would work for a normal input as well as a malicious input. Lets say I put in "John@Doe.com" as the username and "RubberDucky" as the password. The application would pass the following to the database
+
+`SELECT TOP(1) * FROM Users WHERE UserName = 'John@Doe.com' AND Password = 'RubberDucky'`
+
+fair enough, now what happens if i put in a username of "Admin';--"? The application would pass the following 
+
+`SELECT TOP(1) * FROM Users WHERE UserName = 'Admin';-- ' AND Password = 'RubberDucky';`
+
+The database will return the first user that has the username of "Admin" and consider it to be authenticated because ' will finish my string input, ";" would terminate the SQL command, and "--" comments out the rest to prevent any kind of syntax errors.  
+  
+that is just a very basic example. Another example i found in production (i work for this company and had permission) was they created an API that would allow you to pass in a SQL query to generate custom reports and such (HORRIBLE IDEA btw). To make it "secure" they used pattern matching and prevented commands like "UPDATE", "DELETE", "\*", etc. So as a proof of concept, i encoded my query in b64 and passed in a query that would decode and execute it to create tables, dump SQL user names, dump stored CC info, etc. I have also seen  people do it in HEX
+
+  
+Once you start spotting potential holes like this, the possibilities are endless as to what you can do. Here is how you might be able to get the server credentials from a SQL injection 
+
+[https://medium.com/@markmotig/how-to-capture-mssql-credentials-with-xp-dirtree-smbserver-py-5c29d852f478](https://medium.com/@markmotig/how-to-capture-mssql-credentials-with-xp-dirtree-smbserver-py-5c29d852f478)
+
+Comment 2:
+Author: johlae
+Score: 98
+Created UTC: 1765810105.0
+Comment: [https://xkcd.com/327/](https://xkcd.com/327/)
+
+Comment 3:
+Author: Skusci
+Score: 36
+Created UTC: 1765809381.0
+Comment: The website backend itself needs to authenticate to the database to read data from it.
+
+Injection is adding additional queries to what is normally being sent, letting you issue commands with the permissions that the backend has.
+
+Comment 4:
+Author: wildgurularry
+Score: 14
+Created UTC: 1765810091.0
+Comment: Here is a very [simple example](https://xkcd.com/327/):  Let's say I have a website where you type in your name and it gives you some stats or something.
+
+So, there is an edit box where the user types in a name.  The front end then sends the name to the back end to retrieve the stats.
+
+Let's say the backend does an SQL query on the database like "SELECT \* FROM Students WHERE Name = '$name'".
+
+Normally this works great.  But what if I type the following:
+
+Robert'; DROP TABLE Students;
+
+Now the SQL query on the backend looks like this:
+
+SELECT \* FROM Students WHERE Name = 'Robert'; DROP TABLE Students;
+
+When that is executed, it will search for Robert in the database, and then it will wipe all the data out.
+
+Of course you can do more advanced things other than deleting stuff in the database.  You can add other queries to try to extract more information than the website would otherwise allow.  You can probe the database for other tables, like maybe asking if there is a list of credit card numbers.  You can get really fancy like querying to see if any columns start with the letter "A" or "B" or "C" and so on, and if you do enough of those queries you can reconstruct the schema for the database and discover all sorts of interesting things.
+
+I wrote a simple website one that had a shell injection vulnerability.  It was a great way to learn, and I felt really dumb when someone pointed it out to me, but I'm super glad they did!  Using a similar attack against my website, someone could have executed arbitrary shell script code on the backend as the www user.  I learned the value of always aggressively sanitizing my inputs.
+
+Comment 5:
+Author: itijara
+Score: 7
+Created UTC: 1765818102.0
+Comment: Let's imagine you have this logic for your login:
+
+    function isAuthenticated(username, hashed_pass) {
+      const sql = `SELECT COUNT(*) FROM USERS WHERE username = '${username}' AND hashed_pass = '${hashed_pass}'`;
+      const result = db.execute(sql);
+      if (result &gt; 0) {
+        return true;
+      }
+      return false;
+    }
+
+Now, let's imagine you don't sanitize your inputs and someone sends the following as their username, `admin_user'; --`, where admin\_user is a valid username belonging to an admin. This will make the sql query return true, so the login will succeed when it should fail.
+
+There are lots of other issues with this code, but that is how SQL injection can work. Note, that the attacker needs to guess what the structure of the SQL may be, but they don't need the password of the admin whom they are impersonating, nor access to the database to carry out this attack.

@@ -1,0 +1,53 @@
+Post Title: After completing a degree how much of the knowledge is self taught?
+Author: MilkyMadness6
+Score: 65
+URL: https://www.reddit.com/r/learnprogramming/comments/1ptov2w/after_completing_a_degree_how_much_of_the/
+Number of comments: 77
+Created UTC: 1766478609.0
+
+Post Content:
+This is something I've been wondering for a while now. Every time I look at something cool online I think to myself "wow, this is cool, wonder when will this be taught at uni?", just to find out later that there isn't a single mention of whatever that was in any of the future courses. The most recent one that happened was react and javascript (I'm doing Software Engineering). I understand why it wouldn't be taught in a Software Engineering degree, but every programmer out there seems to understand it regardless.
+
+So I'm now just wondering how much will I actually learn in college and how much do I actually need to learn myself to be competent at least.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Enough-Pie-5936
+Score: 116
+Created UTC: 1766478806.0
+Comment: Honestly, all of it. Everything I know is self taught. The only thing uni helped me with was a roadmap on how to learn things but everything else is just YouTube videos, online courses and small programs to test my knowledge
+
+Comment 2:
+Author: KarutaK
+Score: 29
+Created UTC: 1766479314.0
+Comment: A lot of people say they learn nothing in college but what you learn should be fundamentals that enables you in learning other topics. Where your college learning will end in a few years, you’ll continue to learn professionally or as a hobby. It’s hard to answer because some topics like systems design is taught at the masters level, other topics in other areas will be have to be self taught - Other topics if you want to get into web development or game development or any field that may overlap or use the software development process. So yea, a very large portion will be self taught, but what you learn in college though small, is still very important
+
+Comment 3:
+Author: Agreeable-Leek1573
+Score: 18
+Created UTC: 1766478865.0
+Comment: 98.7% is self taught.
+
+
+I did learn about table normalization for my degree though. So there's that at least. 
+
+Comment 4:
+Author: NapCo
+Score: 10
+Created UTC: 1766480731.0
+Comment: I'd say 90-99% of the tools and frameworks and products you use are learned "in the field".
+
+Universities are incentivised to keep students within academia as that's how they earn money. Academia's most direct output are research papers, and they are often ranked based on research output among other things. Research papers are way more focused on theory, algorithms, and stats than the actual implementation. Basically, universities have little incentive in teaching specific tools and programs. Thus, you don't really learn that many "products".
+
+Then you get to the "real world". A lot of the theory heavy material from academia has in some ways materialised as products, such as Docker, React, Terraform, Bun ...
+
+IMO the most useful things of going through college is learning how to learn. Also, since you learn a lot of theory, you are in a much better position to figure out how things work underneath, which maybe allows you to do more advanced debugging, developing and usage of the things you do.
+
+Comment 5:
+Author: 0x14f
+Score: 8
+Created UTC: 1766479617.0
+Comment: Most of it. One aspect of this trade is that you never stop needing to learn new things (new languages, new framework, new conventions, plenty and plenty of new libraries). The madness just never stops.

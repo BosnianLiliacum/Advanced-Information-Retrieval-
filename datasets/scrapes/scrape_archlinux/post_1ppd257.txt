@@ -1,0 +1,43 @@
+Post Title: Nvidia performance on latest mainline dkms open driver seems improved?
+Author: OhHaiMarc
+Score: 16
+URL: https://www.reddit.com/r/archlinux/comments/1ppd257/nvidia_performance_on_latest_mainline_dkms_open/
+Number of comments: 8
+Created UTC: 1766018070.0
+
+Post Content:
+Curious if anyone else using an Nvidia gpu noticed better frame pacing and better frame rates with the update today?  I'm on an rtx 3080ti and gameplay feels much smoother on dx12 games like outer worlds 2 or cyberpunk.  Let me know your experiences!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: PcChip
+Score: 5
+Created UTC: 1766025608.0
+Comment: 590?
+I noticed smoother gameplay on 590 a week or two ago when it came out
+
+Comment 2:
+Author: MONGSTRADAMUS
+Score: 3
+Created UTC: 1766030779.0
+Comment: On my rtx3080 in path of exile 2 I still seem to get a bunch of frame spikes so not sure anything is fixed at least  from my side. I have tried different version of protons to see if that’s the issue. Have tried GE, experimental and older versions of oroton  and  all seem to have same problem.
+
+Comment 3:
+Author: raven2cz
+Score: 2
+Created UTC: 1766116998.0
+Comment: https://github.com/yshui/picom/issues/1488
+
+Comment 4:
+Author: BlueGoliath
+Score: 1
+Created UTC: 1766030434.0
+Comment: Arch really needs to package Nvidia drivers differently. Having to wait until 590 is out of its fake beta sucks.
+
+Comment 5:
+Author: dcpugalaxy
+Score: 1
+Created UTC: 1766696518.0
+Comment: What does this have to do with arch linux

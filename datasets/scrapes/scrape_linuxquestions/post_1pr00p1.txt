@@ -1,0 +1,60 @@
+Post Title: who is the genius behind mkfs.ntfs defaults?
+Author: Individual-Cup-7458
+Score: 74
+URL: https://www.reddit.com/r/linuxquestions/comments/1pr00p1/who_is_the_genius_behind_mkfsntfs_defaults/
+Number of comments: 118
+Created UTC: 1766188515.0
+
+Post Content:
+I'm sitting here, yet again, wasting hours of my day because of the mkfs.ntfs defaults.
+
+Who decided that a full zeroing pass should be the default?  I cannot see any sane reason for this decision.  Who reviewed this lunacy, and what on earth were they smoking at the merge party?
+
+Every other filesystem tool, be it ext4, xfs, even vfat, does a quick format by default. It is the sane approach.   Why does mkfs.ntfs write zeroes to the entire device unless you remember the "-f" flag.
+
+The result is predictable: people run what should be a thirty-second command and unexpectedly lose half their day or more.   You can't even interrupt it cleanly without risking leaving the disk in an unrecoverable state.
+
+This isn't complicated. Defaults should match user expectations and standard behavior across tools. This default for mkfs.ntfs is just stupid.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SalimNotSalim
+Score: 74
+Created UTC: 1766191153.0
+Comment: The simple answer without going into how the NTFS file system works is that it ensures bad sectors are detected and recorded so that they're not used subsequently. Using the fast format option is a trade-off between safety and speed. This has been the full format default on Windows since Vista [https://learn.microsoft.com/en-us/previous-versions/troubleshoot/windows-server/format-command-not-write-zeros-to-disk](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/windows-server/format-command-not-write-zeros-to-disk)
+
+Comment 2:
+Author: CjKing2k
+Score: 35
+Created UTC: 1766189207.0
+Comment: &gt;You can't even interrupt it cleanly without risking leaving the disk in an unrecoverable state.
+
+I don't understand this. You hit control-C, it stops writing zeros, you start over with the correct options.
+
+If it's an SSD you blkdiscard the partition and then it's essentially all zeros anyway.
+
+Comment 3:
+Author: Klutzy-Condition811
+Score: 21
+Created UTC: 1766189569.0
+Comment: NTFS on linux is still in messy shape. The mkfs tools are not even built by the kernel driver people (called ntfs3), but for the FUSE driver called ntfs-3g. There is work in progress to make yet another in kernel driver called NTFSPLUS which is supposed to be more stable and more fully featured, and the developers have also stated they will be building better userspace tools to go with it (ie better chkdsk/fsck, mkfs, etc). So hopefully in time this will improve. The last release of ntfs3g, which the tools come from was 2022, it's not really that active anymore.
+
+Comment 4:
+Author: iamemhn
+Score: 19
+Created UTC: 1766191398.0
+Comment: The authors are mentioned in the `man` page. But you didn't read it. The reason it works like that is because NTFS is very poor at dealing with bad sectors once created, so you better check them before creating the filesystem.
+
+NTFS is not, and never will be, a sane and sound decision on a Linux system. It's only there to help get out of legacy systems.
+
+Read more.
+
+Comment 5:
+Author: Queueded
+Score: 19
+Created UTC: 1766189152.0
+Comment: &gt;Who decided that a full zeroing pass should be the default?
+
+Somebody who *understands the filesystem*.

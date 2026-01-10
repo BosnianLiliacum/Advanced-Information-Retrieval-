@@ -1,0 +1,66 @@
+Post Title: jrnlc – a tiny terminal journaling tool
+Author: Lone_Wolf-1279
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1q042ie/jrnlc_a_tiny_terminal_journaling_tool/
+Number of comments: 14
+Created UTC: 1767156151.0
+
+Post Content:
+I built a small terminal-based journaling tool in C++ called **jrnlc**.
+
+It’s intentionally minimal: plain-text storage, no database, no cloud, atomic writes, and designed to compose nicely with Unix tools (`grep`, `less`, pipes, etc.).
+
+Features include local vs global journals, backups, tag continuation, range &amp; time-based filtering, and optional ANSI colors via config file.
+
+It’s available on the AUR (`yay -S jrnlc`).
+
+Would love feedback from fellow Arch users—especially on UX or things that feel un-Arch-like 🙂
+
+Github repo: [https://github.com/manjunathamajety/jrnlc](https://github.com/manjunathamajety/jrnlc)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ayrr
+Score: 2
+Created UTC: 1767158722.0
+Comment: Looks very interesting!
+
+Comment 2:
+Author: eikonoklastes
+Score: 2
+Created UTC: 1767162865.0
+Comment: Reminds me of jrnl.sh, I like using that one. Will give it a go.
+
+Comment 3:
+Author: CrossFloss
+Score: 1
+Created UTC: 1767173878.0
+Comment:     jrnlc show *5 # displays first 5 entries
+    jrnlc show 5* # displays last 5 entries
+
+Isn't that a bit unintuitive? I'd read it as "skip (star) and then show 5" or "show 5 and than skip (star)" and get the opposite behaviour.
+
+Comment 4:
+Author: Keegx
+Score: 1
+Created UTC: 1767220251.0
+Comment: Not on Arch anymore but close enough (Void).
+I like, it reminds me very much of my own first program (based off todo.txt in C so very similar). Manpage very nice and clean too!
+
+It does remind a lot of that one in Python (jrnl). Imo, you could try add a little something to it to 'distinguish' it from other similar programs? (I'd imagine you wanna move to next project understandably)
+
++1 for including the -_- face. Takes me back to simpler times!
+
+Comment 5:
+Author: Lone_Wolf-1279
+Score: 1
+Created UTC: 1768043861.0
+Comment: Hey everyone, thanks again for the feedback!  
+I’ve updated `jrnlc` based on the suggestions:
+
+* Replaced the `*` shorthand range notation with `:`\-based slicing, similar to Python.
+* Added `--first` and `--last` options for easier access to the first/last entries.
+
+Appreciate any further thoughts or testing on the new version!

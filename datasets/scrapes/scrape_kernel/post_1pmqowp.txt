@@ -1,0 +1,51 @@
+Post Title: I'll rephrase the question.
+Author: coder-true
+Score: 0
+URL: /r/Ubuntu/comments/1pmq8we/ill_rephrase_the_question/
+Number of comments: 8
+Created UTC: 1765750615.0
+
+Post Content:
+I'll rephrase the question.
+
+Is there anyone competent in the Linux kernel, not just the basics, but the very deep workings of Linux? Specifically, how it routes incoming and outgoing network requests. When I say deep, I mean memory addresses. Binary. Network company, network card assembler
+
+
+Top 4 comments:
+
+Comment 1:
+Author: afr0ck
+Score: 5
+Created UTC: 1765756992.0
+Comment: What's your question 
+
+Comment 2:
+Author: Firzen_
+Score: 3
+Created UTC: 1765759844.0
+Comment: I think this link is probably what you actually need.  
+[https://en.wikipedia.org/wiki/XY\_problem](https://en.wikipedia.org/wiki/XY_problem)
+
+For what it seems like what you're trying to do the following tools/interfaces are probably sufficient, I'll list them in decreasing ease of use.
+
+wireshark, tcpdump, netlink, ebpf.  
+I highly doubt based on how you are phrasing your request that you have the understanding necessary to use netlink or ebpf effectively, so wireshark is likely what you want.
+
+Best of luck
+
+Comment 3:
+Author: BitOfAZeldaFan3
+Score: 2
+Created UTC: 1765751595.0
+Comment: Here is a list of the lead maintainers of the kernel: [https://github.com/torvalds/linux/blob/master/MAINTAINERS](https://github.com/torvalds/linux/blob/master/MAINTAINERS)
+
+Generally speaking, they should have the most detailed working knowledge of the whole subsystems they maintain. The individual programmers that submit patches may have additional implementation-specific knowledge of their code, but the maintainer should understand it well enough to integrate into the kernel as a whole.
+
+The exact memory addresses of networking components will probably vary by device. You'd need to get the datasheets for the specific model of hardware you're working on, if available, or probe the bus yourself if datasheets are unavailable. Other addresses are dynamically allocated at runtime. You don't often need to know the exact addresses because a struct is mapped onto it. You can access the struct members by #including the relevant header, if you're writing code for the kernel. If not, I don't think that kind of memory granularity is available to userland software.
+
+Comment 4:
+Author: f0ubarre
+Score: 1
+Created UTC: 1766269452.0
+Comment: The fact that you still don't want to explain why you're trying to know this is weird :')
+What's your goal ? Finding a universal way to intercept http headers so you can steal tokens ?

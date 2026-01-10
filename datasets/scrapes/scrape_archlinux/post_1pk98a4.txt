@@ -1,0 +1,46 @@
+Post Title: Distro hopping
+Author: Iknow_ImaStep
+Score: 21
+URL: https://www.reddit.com/r/archlinux/comments/1pk98a4/distro_hopping/
+Number of comments: 26
+Created UTC: 1765487747.0
+
+Post Content:
+Been on Manjaro for a couple years. From there went back to Debian. Wanted to come back to Arch. Just didn't wanna do the install process. First time took me all day and several installs to get it right. Well today I decided to use archinstall script. Was up and running with in minutes. Thank you to who ever built that script 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: No_Chard5003
+Score: 47
+Created UTC: 1765500217.0
+Comment: If you’re using arch install, you’re not a real arch user. Is what I would have said if I were extremely annoying and condescending, but no, people value their time, and I love arch install script ! Welcome !
+
+Comment 2:
+Author: archover
+Score: 11
+Created UTC: 1765494523.0
+Comment: Welcome to Archlinux.org!
+
+Good day.
+
+Comment 3:
+Author: burntout40s
+Score: 6
+Created UTC: 1765489894.0
+Comment: W archinstall script for those who just want to install and get stuff done
+
+Comment 4:
+Author: rarsamx
+Score: 5
+Created UTC: 1765509267.0
+Comment: Once you know what you are doing, arch install is great if your scenario is handled by it.
+
+Next time I do a  full install I may use it.
+
+Comment 5:
+Author: OperativeBlue
+Score: 5
+Created UTC: 1765504747.0
+Comment: Btw, I know you're likely a pro user and everything, but just in the 1% you're not, beware archinstall does not install a firewall for you, so you'd better install one.

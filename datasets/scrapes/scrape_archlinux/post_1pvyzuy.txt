@@ -1,0 +1,35 @@
+Post Title: Systemd + Timeshift restore breaks my system
+Author: Educational_Yam664
+Score: 13
+URL: https://www.reddit.com/r/archlinux/comments/1pvyzuy/systemd_timeshift_restore_breaks_my_system/
+Number of comments: 9
+Created UTC: 1766735955.0
+
+Post Content:
+Sorry for my bad english
+
+Hi, I had to restore my system to a previous snapshot due some nvidia bugs on xfce, but after reboot it droped to emergency mode saying that it couldnt mount /boot due vfat being a unknow filesystem, had to chroot into my system and run sudo pacman -Syu to fix it, but it defeated the purpose of rolling back to a previous snapshot. 
+After some research I found that it might be due a /boot and kernel mismatch but tbh I don't have it quite clear how to avoid this problem in the future. I have my /boot on sda1 and the rest of my system on sda2 btrfs, any help would be appreciated, thanks.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Confident_Hyena2506
+Score: 13
+Created UTC: 1766737291.0
+Comment: Timeshift does not backup your efi partition - because it uses fat32. You must run mkinitcpio again to make sure your boot stuff matches the rest of your system. This is what fixed your system when you ran pacman.
+
+So it does more harm than good if you use it to "fix nvidia"  - instead it just causes extra breakage.
+
+Comment 2:
+Author: yungsup
+Score: 4
+Created UTC: 1766750506.0
+Comment: /boot should be included in your timeshift snapshot. That way your kernel files are rolled back in sync with the rest of your system.
+
+Comment 3:
+Author: Hamilton950B
+Score: 2
+Created UTC: 1766739785.0
+Comment: It broke because you've got your kernel in one file system and your modules in a different one. When you chroot in you should just re-install your kernel rather than updating everything.

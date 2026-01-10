@@ -1,0 +1,67 @@
+Post Title: Are we stuck with the same Desktop UX forever?
+Author: bulasaur58
+Score: 558
+URL: https://www.reddit.com/r/linux/comments/1plxgv2/are_we_stuck_with_the_same_desktop_ux_forever/
+Number of comments: 221
+Created UTC: 1765663768.0
+
+Post Content:
+[Are we stuck with the same Desktop UX forever?](https://www.youtube.com/watch?v=1fZTOjd_bOQ)
+
+This talk focuses on that evil little term “UX/UI,” which is responsible for so much confusion and tension in open-source projects. Not only does it unnecessarily pit programmers against designers, but it also limits our vision of what we could be doing. In this talk, Scott Jenson gives examples of how focusing on UX -- instead of UI -- frees us to think bigger. This is especially true for the desktop, where the user experience has so much potential to grow well beyond its current interaction models. The desktop UX is certainly not dead, and this talk suggests some future directions we could take.
+
+About Scott Scott Jenson has been a leader in UX design and strategic planning for over 35 years. He was the first member of Apple’s Human Interface group in the late '80s, and has since held key roles at several major tech companies. He served as Director of Product Design for Symbian in London, managed Mobile UX design at Google, and was Creative Director at frog design in San Francisco. He returned to Google to do UX research for Android and is now a UX strategist in the open-source community for Mastodon and Home Assistant.
+
+  
+Edit: One reddit user send me this part of another video. And say:
+
+Your last post in r/linux makes me thing of the "GUI should be better" video by Ross Scott, specifically this part:
+
+[https://youtu.be/AItTqnTsVjA?t=2061](https://youtu.be/AItTqnTsVjA?t=2061)
+
+This is also a good video.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: euclide2975
+Score: 311
+Created UTC: 1765664461.0
+Comment: Free Software has the advantage of offering multiple visions all at once.
+
+Chances are, if you don't like the default your distribution offer, you can try something radically different.
+
+Comment 2:
+Author: imoshudu
+Score: 206
+Created UTC: 1765664905.0
+Comment: "We don't need another window manager"
+
+Funny because niri (with dankmaterialshell) just entirely changed my desktop experience.
+
+Comment 3:
+Author: DFS_0019287
+Score: 101
+Created UTC: 1765664028.0
+Comment: As someone who still runs XFCE4 and likes it: I hope so. 🙂
+
+Comment 4:
+Author: Time_Way_6670
+Score: 61
+Created UTC: 1765665319.0
+Comment: One of the most appealing things to me about Linux and other *nixes is the fact that I can pick and choose my desktop and how it works.
+
+I like KDE Plasma as someone who has primarily operated in Windows environments for most of their life. It gets updated frequently and new features are always being added. 
+
+On the other end of that spectrum you have stuff like XFCE whose desktop UI has been unchanged for at least a decade. Which is also good! I like XFCE a lot actually. I had a really cool skeuomorphic skin for XFCE and it was so much fun. 
+
+Then you have tiling WMs that really breaks the mold of what a desktop is. And I’m not really a fan of any of those projects because I’m used to a Windows/MacOS floating window style system. But they exist and that’s great. 
+
+I guess the point is. What makes the “free desktop” great is that I have choice. Which is why I don’t get people who argue about KDE vs GNOME or whatever. Just use what works for you!
+
+Comment 5:
+Author: omniuni
+Score: 58
+Created UTC: 1765665887.0
+Comment: My biggest problem with modern UX is that we've become too comfortable letting designers run amok. I don't want all these apps with their own design language. I want plain looking apps that use exactly the toolkit and color theme I choose.

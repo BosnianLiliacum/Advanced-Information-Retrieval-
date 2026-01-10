@@ -1,0 +1,72 @@
+Post Title: DaVinci Resolve users on Linux, how's it going for you?
+Author: ChamplooAttitude
+Score: 28
+URL: https://www.reddit.com/r/linuxquestions/comments/1pmqpnw/davinci_resolve_users_on_linux_hows_it_going_for/
+Number of comments: 44
+Created UTC: 1765750670.0
+
+Post Content:
+I'm aware that Hollywood studios and big companies in general, particularly in VFX-heavy pipelines where Linux workstations are a standard due to its stability and performance in multi-user environments, usually use RHEL or Rocky Linux for DaVinci Resolve and other software, especially since there's a long-standing [VFX Reference Platform as a set of strict industry guidelines](https://vfxplatform.com/platform_history.html) agreed upon by studios (Pixar, ILM, Weta...) and software vendors (Blackmagic, Autodesk, The Foundry...).
+
+However, I'm more interested in the experience of independent video editors or those who work at small studios and companies where they can choose their platform. How's it going for you on Linux?
+
+I worked professionally in IT for 12 years, so technology is not a foreign concept to me on many levels. However, I left the IT field a year and a half ago, bought a DaVinci Resolve Editor Keyboard, and started learning video editing. I'm still so busy learning and doing small gig favors/business that I haven't tried to commit to it on Linux yet. Still, I plan to use the opportunity during the upcoming winter holidays and set it up on my Linux machine (Kubuntu 24.04 LTS at the moment, Nvidia card). I'm currently using DaVinci Resolve Studio on Windows 10 with ESU (Extended Security Updates), and given where Windows 11 and Microsoft in general are heading, [plus some other creative software changes on Linux](https://techcentral.co.za/affinity-for-linux-canvas-next-big-move-could-reshape-the-desktop-software-market/274861/), I do hope I can finally ditch Windows again and use Linux only.
+
+To give you a better context, I am a passionate Linux user who's been using it for 26 years, but my other passion for creative work has led me to dual-boot for the past few years. The thought of hard-customizing Windows for the foreseeable future seriously tires me, let alone actually doing it (ironically, I enjoy it on Linux). I am aware of the AAC hustle with DaVinci Resolve on Linux, but I don't think FFmpeg conversion for imports/exports will be a problem for me, as I'm used to tinkering.
+
+The way I see it:
+
+1. I'll eventually move to Windows 11 for creative work, where I'll be constantly customizing the OS due to Microsoft's telemetry, ads, AI, always-logged-in policy, and overall privacy-intrusive practices.
+2. I'll eventually ditch Windows and move to Linux full-time again, where I'll also constantly deal with some tweaks (such as FFmpeg conversion for imports/exports).
+3. I'll eventually switch to Mac.
+
+Are we destined to customize Windows or use Macs, or is there hope for aspiring professionals who prefer Linux?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: eXistenZ_88
+Score: 12
+Created UTC: 1765753662.0
+Comment: Vfx digital compositor here. I've been using Nuke and Resolve on PopOS for the last two years and a half. It was a flawless experience. Now I'm testing on Debian for best stability and so far it worked like a charm.
+
+Comment 2:
+Author: minneyar
+Score: 6
+Created UTC: 1765759415.0
+Comment: &gt; I'll eventually move to Windows 11 for creative work
+
+Is this an AI-generated post? I find it hard to believe that anybody who already has experience using Linux would willingly go back to Windows.
+
+Like, I know there's a decent number of creative programs that don't work on Linux, and there are Linux alternatives, but if you're stuck on specific programs because you're required to use them for your job or because you just don't want to learn a new workflow... get a Mac.  If you can't use Linux for video editing for some reason, there's no situation where Win11 is better than using a Mac.
+
+Comment 3:
+Author: CompellingBytes
+Score: 1
+Created UTC: 1765765085.0
+Comment: I run a youtube channel and edit my own videos. I've tried Kdenlive but its way too frustrating to use, and render times are slow because there are absolutely no optimizations (such as using QuickSync/VAAPI). I'm working on a video and I'm about 98% certain I'm gonna boot into Windows to put it together when I'm done with the voice over recording... 
+
+I've tried Davinci on Linux, but having to convert all of my video to uncompressed .mov or whatever format was miserable, and the amount of drive space it consumed was anxiety inducing. I thought there was light at the end of the tunnel with Resolve seemingly adding support for AV1 encode/decode on Intel Arc via some people wiring Intel Compute Runtime up, but that progress seemed to have regressed in the past year.
+
+What would make this all a bit better is if one of the numerous video editors on Linux, who mostly rely on MLT, or MLT itself, supported hardware acceleration. I don't know when that will ever happen though. I won't hold my breath, but I also won't say never.
+
+What would be great is if Resolve supported one of the open backends along with CUDA, such as SYCL and/or Vulkan, then people wouldn't have to worry about the ongoing chaos with ROCM, and you may be able to use Intel gpus without a hitch (though igpus will run really slowly). 
+
+For now, I have goals for my channel, and I also have self imposed deadlines. I'll just go with the platform that just works, and I don't have to pay hundreds more dollars to be exposed to more subscription services (I don't care that I can't change the wallpaper).
+
+Comment 4:
+Author: kpmgeek
+Score: 1
+Created UTC: 1765766961.0
+Comment: I work in restoration where I have a Windows workstation running Phoenix and Resolve, but run it regularly on linux on my other machines for personal projects. Its pretty great if all your plugins are supported.  The big hangup for me is there is no VST support in the linux build, so I'd have to go out to like Reaper I guess for mixing beyond the stock plugins. I already do most of my encoding in third party ffmpeg based encoder scripts.
+
+The final hangup for me is I'm pretty heavily invested into AVID's Eucon system with their panels, their faders, and their edit controller. This is Windows only.
+
+Comment 5:
+Author: wimpydimpy
+Score: 1
+Created UTC: 1765762159.0
+Comment: As a daily driver, Linux for Resolve isn't always great with non nvidia gpus, and specific plug ins I use for certain workflows don't have a linux version. I work as a colorist, and I need to sometimes stick to a mac for specific workflows (apple VR comes to mind). I think with enough content creators working on linux, we can push BMD and other developers to treat Linux as a prime target instead of just something for the big post facilities. 
+
+For Fairlight, a lot of people rely on VST plug ins which aren't native to Linux at all. So that's a massive issue.

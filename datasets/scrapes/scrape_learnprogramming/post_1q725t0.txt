@@ -1,0 +1,44 @@
+Post Title: Learning to Code as a 15y/o worth it?
+Author: pjasksyou
+Score: 24
+URL: https://www.reddit.com/r/learnprogramming/comments/1q725t0/learning_to_code_as_a_15yo_worth_it/
+Number of comments: 93
+Created UTC: 1767846443.0
+
+Post Content:
+I am interested in Web Dev and Mobile Dev and I've been doing it over a year but people around me say that it's a waste of time, you'll get nothing. You should start programming in college and not school.
+
+What's your opinion?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mathemetica
+Score: 74
+Created UTC: 1767846881.0
+Comment: Dude, take this advice from a nearly 40 year old who wasted a lot of time not pursuing their passions when younger. Just jump into whatever you want to learn or master. The earlier you start something the better and quicker you will absorb it. You are literally never too young or old to start something. No better time than now.
+
+Comment 2:
+Author: meowvelous-12
+Score: 14
+Created UTC: 1767846665.0
+Comment: omg dont listen to them. start whenever you want, a lot of people literally just do this as a hobby and start out when they're like 10. do what makes you happy and if you enjoy programming then stick with it.
+
+Comment 3:
+Author: JustinR8
+Score: 10
+Created UTC: 1767847530.0
+Comment: I started young. I also watched people who didn’t struggle greatly in their CS programming classes, as that was their first exposure to programming. Definitely start young. It’s much nicer to have those introductory college courses feel like easy A’s.
+
+Comment 4:
+Author: acer11818
+Score: 8
+Created UTC: 1767847176.0
+Comment: i have literally zero idea as to where people get the idea that you shouldn’t learn programming until you go to college i don’t think anyone who’s ever programmed says thst
+
+Comment 5:
+Author: No-Market-4906
+Score: 4
+Created UTC: 1767847514.0
+Comment: Everyone I know who put a lot of effort into independently learning things while in high school is successful. Even if you don't end up doing web dev you'll know a lot about how code works which is good and more than that you'll know how you personally learn best which is going to pay you off whatever you decide to do.

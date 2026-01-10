@@ -1,0 +1,55 @@
+Post Title: Deniable Encryption
+Author: Th3Sh4d0wKn0ws
+Score: 26
+URL: https://www.reddit.com/r/archlinux/comments/1q5r4xr/deniable_encryption/
+Number of comments: 21
+Created UTC: 1767725198.0
+
+Post Content:
+I've been using Luks encryption for my Linux machines for as long as I can remember.  
+  
+I went down the rabbit hole recently when playing with the idea of a Luks setup that could be easily nuked and found myself looking at the "Deniable encryption" setup mentioned on [the wiki](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Plain_dm-crypt).  
+  
+I played around with a USB drive and an old Dell for a couple months to prove out that it could be reliable enough for daily use and then I finally blew away my Arch install on my Framework 13 and set this up using a Framework 250GB expansion card.  
+  
+I wrote a blog post about how I set mine up, mostly so I have steps to follow in the future.  Sharing here in case it helps anyone.
+[https://courtneybodett.com/Deniable_Encryption/](https://courtneybodett.com/Deniable_Encryption/)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Nopium-2028
+Score: 6
+Created UTC: 1767737354.0
+Comment: This doesn't provide deniability. You're adding `/etc/crypttab.initramfs` to your unecrypted initrd, which lives on the same device as the encrypted partition:
+
+`crypt /dev/nvme0n1 none header=/dev/disk/by-partuuid/15f1a4e5-940b-4a14-b48d-c7af015597d6`
+
+Comment 2:
+Author: anseremme
+Score: 6
+Created UTC: 1767792079.0
+Comment: Plausible deniability might not even be truly possible with TRIM disabled. Over time, SSD built-in [wear-leveling](https://www.truecrypt.org/docs/wear-leveling) mechanism will reveal some inconsistencies in the randomized distribution of data throughout the SSD sectors. It's highly recommended not to underestimate forensic analyst skills.
+
+As a result, it's far better to cross borders **without** the boot medium and plainly admit your laptop is encrypted, but can't boot it nor decrypt it since you never travel with the required external equipment for security reasons—which does make sense.
+
+Then, after border crossing, head to your phone, retrieve your updated boot image from a server, download EtchDroid app—uninstall it before next border crossing—and flash the image to a USB flash drive you connect to your phone. Finally, before crossing back, destroy the USB flash drive and throw it away!
+
+Comment 3:
+Author: [deleted]
+Score: 3
+Created UTC: 1767733294.0
+Comment: [deleted]
+
+Comment 4:
+Author: Toorero6
+Score: 2
+Created UTC: 1767793078.0
+Comment: Why not use a single UKI image over sd-boot? Then you can just backup the single UKI file if an update changes your kernel and only have a single file in your ESP.
+
+Comment 5:
+Author: Any_Fox5126
+Score: 1
+Created UTC: 1767803264.0
+Comment: Seeing that you use systemd-boot, I understand that the kernel is on the USB and therefore should not be removed, which is quite undesirable. I wonder, if grub were used, could this limitation be avoided?

@@ -1,0 +1,67 @@
+Post Title: I built a terminal sticky notes app for Linux users
+Author: dengob
+Score: 561
+URL: https://i.redd.it/9zo3cvo1ipbg1.gif
+Number of comments: 65
+Created UTC: 1767695422.0
+
+Post Content:
+
+After I switched to linux recently, I  started to like to get my things done in terminal so wanted a simple way to keep notes without switching to a GUI app.
+So I built a terminal-based sticky notes TUI focused on keyboard-first workflows and a clean interface.
+
+**Key Features:**
+
+* **Keyboard-Centric:** Navigate, add, edit, and delete notes without touching the mouse.
+* **Color Coding:** 9 different color themes to organize thoughts visually (Hotkeys 1-9).
+* **Priorities &amp; Pinning:** Set priorities (Trivial to Critical) and pin important notes to the top.
+* **Search Modal:** Filter notes instantly by title, content, or tags.
+* **Auto-Save:** Data is persistent and saved to your OS's standard data directory (XDG on Linux).
+* **Modern Tooling:** The project is managed with `uv` for fast and reliable dependency management.
+
+**Installation:**
+
+I included a helper script for Linux users to install it globally to `/usr/local/bin`:
+
+Bash
+
+    git clone https://github.com/dengo07/textual-sticky-notes-tui
+    cd sticky-notes-tui
+    sudo ./manage.sh install
+
+Now you can just type `stickynotes` from anywhere.
+
+I’d appreciate feedback from Linux and terminal users, especially around usability and whether this fits a real daily workflow.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dengob
+Score: 26
+Created UTC: 1767695528.0
+Comment: Link:[https://github.com/dengo07/textual-sticky-notes-tui](https://github.com/dengo07/textual-sticky-notes-tui)
+
+Comment 2:
+Author: smallspacebar
+Score: 16
+Created UTC: 1767699104.0
+Comment: This is great, you made something useful :)
+
+Comment 3:
+Author: Jarngreipr9
+Score: 12
+Created UTC: 1767698028.0
+Comment: You should probably crosspost this tool in the linuxporn sub
+
+Comment 4:
+Author: Gugalcrom123
+Score: 9
+Created UTC: 1767696136.0
+Comment: It looks good, but what's wrong with text files? Plus, it seems to be just like a GUI.
+
+Comment 5:
+Author: TheLastTreeOctopus
+Score: 5
+Created UTC: 1767696959.0
+Comment: How sticky are they?

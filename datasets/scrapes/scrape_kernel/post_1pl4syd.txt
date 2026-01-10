@@ -1,0 +1,32 @@
+Post Title: Is it possible to build a custom scheduler for a project ?
+Author: Current_Feeling301
+Score: 2
+URL: https://www.reddit.com/r/kernel/comments/1pl4syd/is_it_possible_to_build_a_custom_scheduler_for_a/
+Number of comments: 3
+Created UTC: 1765577682.0
+
+Post Content:
+Basically i’m trying to build a library that involves parallelisation of a bigger task via multi threading. I want to know if it is possible to build/modify an existing scheduler in such a way that only the threads executing tasks from this library are scheduled to run when the program is running(no other process comes until these threads are done executing). All the other threads can be run on a separate cpu core. Maximum priority should be given to these threads
+
+I am new to OS concepts. Forgive me if i’ve said anything stupid. And English is my second language
+
+
+Top 3 comments:
+
+Comment 1:
+Author: xmull1gan
+Score: 3
+Created UTC: 1765589086.0
+Comment: Yes with eBPF [https://github.com/sched-ext/scx](https://github.com/sched-ext/scx)
+
+Comment 2:
+Author: afr0ck
+Score: 2
+Created UTC: 1765585875.0
+Comment: Look at sched_ext
+
+Comment 3:
+Author: safrax
+Score: 1
+Created UTC: 1765584526.0
+Comment: https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/cpu-partitioning/isolcpus

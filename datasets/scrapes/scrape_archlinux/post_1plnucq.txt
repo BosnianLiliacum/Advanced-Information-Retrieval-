@@ -1,0 +1,75 @@
+Post Title: PSA: yay / paru updates may fail.
+Author: Gozenka
+Score: 325
+URL: https://www.reddit.com/r/archlinux/comments/1plnucq/psa_yay_paru_updates_may_fail/
+Number of comments: 116
+Created UTC: 1765639319.0
+
+Post Content:
+**Edit 4:** An [explanation](https://github.com/Morganamilo/paru/issues/1454#issuecomment-3663567951) about the issue from Morganamilo, the developer of paru.
+
+**Edit 3:** It seems `paru` may be working fine now, but not `paru-bin`.
+
+**Edit 2:** `paru` itself was updated in time, but there is still a small hiccup with its [alpm.rs](https://github.com/archlinux/alpm.rs/issues/59) dependency for libalpm Rust bindings. There are simple temporary fixes mentioned in the links below:
+
+**Edit:** `paru` is still not updated. paru users may check [github issues](https://github.com/Morganamilo/paru/issues) and AUR comments for [paru](https://aur.archlinux.org/packages/paru) and [paru-bin](https://aur.archlinux.org/packages/paru-bin).
+
+----
+
+Let's focus any discussion about this issue here on this post.
+
+There was an update to [pacman](https://archlinux.org/packages/core/x86_64/pacman/) today, which updated `libalpm` from v15 to v16. When such an update to libalpm happens, AUR helpers such as `yay` and `paru` may fail to update and work until they are fixed for the new version upstream.
+
+It seems [yay](https://github.com/Jguer/yay/releases/tag/v12.5.4) already fixed this with a new release. [paru](https://github.com/Morganamilo/paru/releases) usually takes a bit longer to fix this.
+
+The AUR packages for [yay](https://aur.archlinux.org/packages/yay) and [yay-bin](https://aur.archlinux.org/packages/yay-bin) are also already fixed for the new libalpm version. On another note, using the `-bin` versions on AUR is a good option, which lets you avoid recompiling the application every update.
+
+If you are trying to make the updates work by linking older `libalpm` libraries, be careful to handle it properly and remember to revert it when things get fixed. This is not a proper solution otherwise.
+
+**Edit:** Just using `yay` to update your entire system should work seamlessly now (without doing `pacman -Syu` before). It may only have been an issue in the first 2-4 hours after pacman got updated. Otherwise, if you still have issues:
+
+The best way to handle the update would be: First do a `pacman -Syu`. Then use `makepkg` on the manually cloned AUR repo for the respective package, just like installing it for the first time. For paru, you should wait for a new release that uses the new libalpm version. As an example for `yay-bin`:
+
+    sudo pacman -Syu
+    git clone https://aur.archlinux.org/yay-bin.git
+    cd yay-bin
+    makepkg -si
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Xu_Lin
+Score: 89
+Created UTC: 1765641424.0
+Comment: This is why I love the community. Always on the money 😎🤝😎
+
+Comment 2:
+Author: Adiker
+Score: 62
+Created UTC: 1765639974.0
+Comment: Yay was updated pretty much right away. The only catch is that you need to build it from source.
+
+Comment 3:
+Author: R4yn35
+Score: 30
+Created UTC: 1765650038.0
+Comment: This is a recurring issue with paru for me for years now, made me switch back to yay.
+
+Comment 4:
+Author: arcum42
+Score: 30
+Created UTC: 1765643752.0
+Comment: This is really one of my bigger irritants with Arch, because it always happens.
+
+The AUR helpers aren't in the arch repositories, only AUR, so you have to reinstall them manually when there's a new version of libalpm, and a copy of the old library isn't left behind when libalpm updates, breaking anything on the system that is dependent on it. 
+
+I really wish Arch as a distribution would accept that lots of people want to use the AUR, and make things easier for them...
+
+Comment 5:
+Author: forvirringssirkel
+Score: 7
+Created UTC: 1765656424.0
+Comment: I don't really get the frustration around this. AUR helpers are not officially supported, and not to be an annoying distro, because it's a safer to install manually. Installing an AUR package with an AUR-helper, without inspecting the PKGBUILD, means you're trusting a complete stranger to install a package to your computer. and ANYONE can create a package on the AUR, unlike official repositories, where only package maintainers manage packages.
+
+the rise in popularity of Arch Linux does not imply that principles established for valid reasons should be disregarded in order to appeal to the general public and provide convenience

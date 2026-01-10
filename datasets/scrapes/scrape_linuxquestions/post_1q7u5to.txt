@@ -1,0 +1,60 @@
+Post Title: Can Linux be used free of AI?
+Author: FruitFly231
+Score: 43
+URL: https://www.reddit.com/r/linuxquestions/comments/1q7u5to/can_linux_be_used_free_of_ai/
+Number of comments: 101
+Created UTC: 1767920926.0
+
+Post Content:
+Hello, I'm a windows user extremely tired of Copilot and the "try AI mode?" pop up on google. I just want it gone, and I know it's not possible. I was looking into alternatives and Linux was often mentioned, but I tried to look for information about it and I think they recently added some type of AI too? Maybe I'm mistaken, and that's what I'm asking: is it possible to use it without any AI feature whatsoever? 
+
+As you can tell, I'm a total beginner, but I'm willing to learn to stop having shady programs stealing my information, so I'm also asking for some advice on how to start, or maybe a blog to read and get more familiar before trying it. Thank you in advance!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Crash_N_Burn-2600
+Score: 124
+Created UTC: 1767921963.0
+Comment: LOL yes. 
+
+That's the whole point of Linux. Use what you like, nothing you don't. Absolutely no one is injecting AI into Linux. You may be confusing it with stories about people running local LLMs on Linux systems, but that has literally nothing to do with the operating system. 
+
+And not to dissuade you from Linux, but you know that there are one-click (kinda) ways to strip out the Copilot crap right?
+
+Look into Chris Titus Tech's WinUtil and O&amp;O ShutUp10++. You can forcibly uninstall all of that shit in one swoop.
+
+Comment 2:
+Author: Symbology451
+Score: 28
+Created UTC: 1767922544.0
+Comment: AI is not built into any Linux distribution that I know of. On an OS level, AI isn't there unless you choose to install an AI app. The OS will not go out of its way to get you to do this.
+
+However, to be fair: most Linux distributions come with Firefox preinstalled which does come with AI features out-of-the-box. As do Chrome or Edge. If you use any of these browsers you'll run into the same problems (within the browser experience, at least).
+
+There are browsers that are packaged that don't include AI features. Search for more privacy-oriented Firefox forks like Librewolf. I'm certain that my fellow commenters will be able to provide a list.
+
+Comment 3:
+Author: AutumnPurpleReddit
+Score: 16
+Created UTC: 1767921298.0
+Comment: linux isn't an OS in the way you think, in simple terms, it's a base that a desktop OS can be built on. 
+
+So people can make their own versions of Linux and include what they want, so it's up to the distribution of Linux. 
+
+so for example, Zorin OS and Linux Mint both use Linux as a base, but differ in features included, apps included and certain ways in how they look and function. 
+
+Most Linux distros shy away from integrating AI due to the way they're made, which is open source software, basically, it's open to look at and see, and people can work on it whenever they want to, it's publicly available, and the people that are into that general area of software are very anti AI for the most part.
+
+Comment 4:
+Author: skyfishgoo
+Score: 12
+Created UTC: 1767921519.0
+Comment: linux does not come with AI... you need to go out of your way to add AI to linux.
+
+Comment 5:
+Author: Aggressive_Ad_5454
+Score: 9
+Created UTC: 1767921233.0
+Comment: No AI crapola at all in my Ubuntu desktop. Zero. Unless I install something.

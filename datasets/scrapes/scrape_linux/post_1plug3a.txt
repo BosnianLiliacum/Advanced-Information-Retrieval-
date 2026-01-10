@@ -1,0 +1,92 @@
+Post Title: Linux dominating will benefit everyone.
+Author: oColored_13
+Score: 2152
+URL: https://i.redd.it/9x9s82b8117g1.png
+Number of comments: 238
+Created UTC: 1765655841.0
+
+Post Content:
+A lot of people, especially game/app devs don't know how big of a deal linux desktop is, and I know i'm stating the obvious but Hear me out.
+
+Linux is great not just for consumers, but for companies and governments too. It creates real competition instead of everyone being locked into one vendor’s ecosystem. No forced upgrades, no random license changes, no “pay more or lose support” nonsense. You actually own your stack.
+
+just imagine the power of being able to optimize for your own apps and games (bcuz most linux distros are community based), even big companies can optimize for their games. or govs making changes to distros or making their own distros to perfectly suit their needs, instead of relying on Microsoft or other big companies, saving millions of dollars in the process.
+
+and if a linux distro is screwed, companies can always jump shift to other distros, i mean Microsoft has pretty much screwed Windows 11 but people and companies will still rely on it because its just that popular. Hardware companies ship their computers with windows because its what most software is made for, software companies develop for windows because its where most consumers are, and consumers buy windows computers because its what most computers come with, if we break this stupid cycle everyone will benefit.
+
+its a power that we aren't taking advantage of, its a matter of time until RISC-V CPUs come on top, probably in a few decades, it doesn't make sense to not embrace open source in the OS department too.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: matjam
+Score: 205
+Created UTC: 1765656413.0
+Comment: I recently reinstalled Windows 11 in a VM because I needed access to visual studio's compiler to build a windows binary. Holy shit I was just not prepared for how bad it is now. The install experience is
+
+1. Windows is going to wipe everything. OK? Ok.
+
+2. Here's a bunch of ads for paid services
+
+3. Welcome to windows. Heres some more ads.
+
+4. BTW you don't have a home folder now. Thats in OneDrive. And we only give you 5GB so you're going to fill that pretty quickly if you don't know wtf you're doing.
+
+5. Start menu? oh we moved it. And made it useless. And now there's ads where you don't expect it.
+
+6. Want to turn anything off or change a setting? We hid it all or removed it. So you have to use regedit.
+
+7. don't get me started on the AI shit.
+
+You could not pay me to use it as my daily driver anymore.
+
+Contrast this with Linux
+
+1. Most distros have a flexible partitioning tool built in with easy to use defaults.
+
+2. There's no ads, few distros have paid services, they are unobtrusive.
+
+3. Your data is on your device.
+
+4. Traditional app launcher experience in most distros, or you can go wild and do things completely differently if that's your jam.
+
+5. Full featured distros like Bazzite make every setting and config option obvious. I am amazed how much Bazzite just worked out of the box on my weird Alienware laptop and that I only needed to drop to shell for a couple of package installs.
+
+There's just such a slew of distros now that range from super technical and niche for people who love to tinker, all the way to really easy to install and use day to day for people who don't.
+
+Windows 11 is garbage. Its killing itself. Year of the Linux Desktop!
+
+Comment 2:
+Author: whattteva
+Score: 104
+Created UTC: 1765658556.0
+Comment: &gt;A lot of people, especially game/app devs don't know how big of a deal linux desktop is, and I know i'm stating the obvious but Hear me out.
+
+Pretty sure they do know... that it's a small percentage. And out of that small percentage, an even smaller percentage even plays games. Trust me, if the profit motive is there, they will pay more attention.
+
+&gt;Linux is great not just for consumers, but for companies and governments too. It creates real competition instead of everyone being locked into one vendor’s ecosystem. No forced upgrades, no random license changes, no “pay more or lose support” nonsense. You actually own your stack.
+
+I agree with you there and likely this whole sub, but you're preaching to the choir. Your average Joe/Jill doesn't really care about "owning your stack". In fact, they're even happy to be inside a walled garden like Apple's. Apple, in particular, have a very fierce loyal fan base that think that Apple can do no wrong. Also, upgrades do need to be forced for your average casual users. Left to their own devices, your grandma/grandpa will never upgrade their systems, running terribly outdated insecure software. This is where Apple shines because you can guarantee that basically 90% of their userbase is on the latest update.
+
+EDIT: I find it funny that people that reply to me keeps mentioning Microsoft when I didnt even bring the up. In fact, my comments specifically singles out Apple. And frankly, as far as "trapping you in", Apple is way more evil than Microsoft is. You can at least run Windows on any PC, you cannot run MacOS outside of their hardware and Hackintosh is basically also dead with the advent of Apple Silicon. I guess Linux people loves Apple for some reason?
+
+Comment 3:
+Author: derangedtranssexual
+Score: 94
+Created UTC: 1765657285.0
+Comment: &gt; no “pay more or lose support” nonsense
+
+Linux does not come with support, you have to pay for support and it’s expensive
+
+Comment 4:
+Author: littypika
+Score: 51
+Created UTC: 1765656337.0
+Comment: Linux has always been the master race.
+
+Comment 5:
+Author: bswalsh
+Score: 42
+Created UTC: 1765657242.0
+Comment: What will \*really\* happen if the world switches to Linux is that Windows will switch to the Linux kernel and pre-install their bloatware infested "Linux Distro" on all computers sold just like they do now. Then everyone complain that Linux sucks because they still won't understand that they can just install another distro.

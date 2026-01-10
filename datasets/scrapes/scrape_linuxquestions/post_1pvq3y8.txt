@@ -1,0 +1,50 @@
+Post Title: Best tool to manage dotfiles
+Author: Fit-Knowledge2753g
+Score: 13
+URL: https://www.reddit.com/r/linuxquestions/comments/1pvq3y8/best_tool_to_manage_dotfiles/
+Number of comments: 22
+Created UTC: 1766706502.0
+
+Post Content:
+Hey everyone I'm currently testing out some dotfiles and also trying to make my own and I want to use multiple dotfiles but using stow is becoming tiring specially having to deal with files that already exist in the /.config folder and I was wondering is there a way to manage and use multiple dotfiles at once and have a graphical way to just use that session with those specific dot files like with sddm or any other lock screen can I choose hyperland and then before it starts I get to choose what dotfiles to run and possibly something similar for other window managers as well and if it doesn't exist how hard will it be to make and if none are possible just an easier way to manage dotfiles in general and thanks 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mwyvr
+Score: 3
+Created UTC: 1766708330.0
+Comment: Chezmoi
+
+Powerful but you can start simple and grow. Multi platform. Git backend by MUCH better than bare git.
+
+Comment 2:
+Author: amediocre_man
+Score: 2
+Created UTC: 1766707823.0
+Comment: Gnu stow
+
+Comment 3:
+Author: EarlMarshal
+Score: 1
+Created UTC: 1766706684.0
+Comment: I just use git. My whole home directory is a git repo. I put the git files into ~/.dotfiles
+
+Comment 4:
+Author: GenericCanadian
+Score: 1
+Created UTC: 1766722241.0
+Comment: I've used RCM for years: https://github.com/thoughtbot/rcm
+
+It system links your dotfiles from your `~/dotfiles` folder.
+
+I have different servers and computers that need different things and the tags make it super easy to manage.
+
+I clone dotfiles then run something like `rcup -B linux -t nvim -t git` and it system links everything to the appropriate places.
+
+Comment 5:
+Author: vivAnicc
+Score: 1
+Created UTC: 1766710054.0
+Comment: You can use home-manager to basically configure all your programs as nix modules, then activate whatever configuration you want at any time. But you need to learn nix and use the command line to manage it, so it's a big time investment

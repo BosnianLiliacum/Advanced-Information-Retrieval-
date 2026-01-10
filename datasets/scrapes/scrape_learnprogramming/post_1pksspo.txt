@@ -1,0 +1,83 @@
+Post Title: There are so many DSA courses (LogicMojo, Coding Ninjas, Scaler, etc.) – which one is actually worth it?
+Author: Glad_Orchid6757
+Score: 33
+URL: https://www.reddit.com/r/learnprogramming/comments/1pksspo/there_are_so_many_dsa_courses_logicmojo_coding/
+Number of comments: 17
+Created UTC: 1765548556.0
+
+Post Content:
+  
+I am preparing for a Microsoft interview. I have been doing self preparation from 6 months but still i am getting stuck on easy level LeetCode problems. I have an issue with DSA foundation concept understanding. My plan is to join a top tech IT organization in 2026 as an SDE. Which DSA course is good for working professionals like me with 5 years of experience? After searching, I found LogicMojo, Coding Ninjas, Scaler, which are good among these to join. Scaler is a bit costly as they charge 3.5 Lakh. Any other options or suggestions?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: rrss12
+Score: 13
+Created UTC: 1765551226.0
+Comment: Since you mentioned foundational DSA concepts, you should learn this properly from a textbook. Are you coding in Python? If so, there is a great textbook that teaches DSA with Python:  [https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275/](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275/)   
+This is an academic textbook used in CS undergrad courses. Rigorous, and hands on. Do the in-chapter exercises - type them out, and make them work. Then, go on to the back of chapter exercises.   
+Solutions to back of chapter questions are provided here:  
+[https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python](https://github.com/wdlcameron/Solutions-to-Data-Structures-and-Algorithms-in-Python)
+
+As always, give the problems your best efforts first, then look at the solutions. 
+
+Recently, Perplexity has come up with a "learning" mode, you can use it to give you hints and guide you as you try out the back of chapter exercises.
+
+All the best!
+
+Comment 2:
+Author: peterlinddk
+Score: 8
+Created UTC: 1765561088.0
+Comment: None of them are worth anything!
+
+DSA isn't some mysterious unobtainable secret knowledge that can only be achieved through monetary means. It is literally a collection of very well known data structures and algorithms that everyone should know, or atleast partially understand.
+
+I'd recommend a good textbook, doesn't matter how old it is, if it is older than 1968, just look elsewhere for red-black trees and A\*.
+
+You don't even need to read the book, but you can, if you like the writing style - otherwise, just go by the table of contents, and look at wikipedia-articles (or other sources if you prefer) for understanding Binary Search, Big-O, Dynamic Arrays, Linked Lists, Stacks and Queues, Trees and Graphs, Sorting (bubble, insertion, merge and quick), and look into pathfinding with Dijkstra and A\*. That'll take you through the basics. Then add-on whatever you find interesting with heaps, other kinds of trees, search-algorithms, etc. Links are at the bottom of every wikipedia-article on any data structure or algorithm.
+
+Work with implementing everything yourself - plan code on paper, and code it by hand - DO NOT USE AI to write code! Expand the algorithms to count and display iterations, and keep track of both time and space - make sure you "experience" the complexity, don't just try to remember definitions.
+
+If you need additional explanations for certain subjects, look for free videos or articles, look for university courses (MIT has exceptional free course materials available online), or ask an AI - they are good at explaining this stuff, and only rarely get it wrong!
+
+You'll be better at truly understanding DSA than anyone following any of these paid courses!
+
+Comment 3:
+Author: dialsoapbox
+Score: 4
+Created UTC: 1765566238.0
+Comment: Books &gt; yt/paid stuff.
+
+Content creator's main goal is to get views/clicks. Sure if you learn something, that's great, but that's not their main goal.
+
+DS/A are nice cause they almost never change, just need to understand the concepts and learn to implement maybe in 1-2 languages.
+
+The biggest challenges ( at least for me ) was understanding word problems and translating them to the appropriate DS/A. 
+
+
+&gt; i am getting stuck on easy level LeetCode problems
+
+Sounds like you may also have the same problem (translating what's presented into the math). Maybe you can work on that first. 
+
+You could also gather data on which types of problems you're having the most trouble with, either recognizing and/or implementing and look up ways to understand those better.
+
+Comment 4:
+Author: Grollenbrock
+Score: 2
+Created UTC: 1765551922.0
+Comment: How about the NeedCode? Try it, it is really good. He has a roadmap mentioned by one guy , he basically used that for his own roadmap....
+
+Also, for the long term you need some good thick book on DSA. smth like "Algorithms and Data Structures in C++" by M.Allen, D.Weiss...it is in C++, but great one. 
+
+Good luck!
+
+Comment 5:
+Author: grownupallwrong
+Score: 2
+Created UTC: 1765577297.0
+Comment: Princeton’s Algorithms courses on coursera (https://www.coursera.org/learn/algorithms-part1) are excellent (and free!). It will take a while to work through them, but it’s well worth the time and effort. I think MIT has an algorithms course on OCW that is supposed to be good too, but I don’t have direct experience with that. 
+
+Some discrete math would be beneficial too. Prof. Kimberly Brehm has two discrete math courses on YouTube (https://m.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz). They follow along with Rosen’s “Discrete Math and Its Applications.” I’ve used both the YouTube videos and textbook as a resource when tutoring students. MIT’s Math for Computer Science on OCW is supposed to be a good one too. 

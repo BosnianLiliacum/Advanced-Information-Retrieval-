@@ -1,0 +1,52 @@
+Post Title: What are the most valuable languages to learn in this day and age?
+Author: tieiwo
+Score: 89
+URL: https://www.reddit.com/r/learnprogramming/comments/1pxygjl/what_are_the_most_valuable_languages_to_learn_in/
+Number of comments: 84
+Created UTC: 1766946373.0
+
+Post Content:
+Title basically. Does learning and being fluent in one specific programming language make me more employable? Thank you.  
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Impressive_Barber367
+Score: 209
+Created UTC: 1766946544.0
+Comment: English.
+
+Comment 2:
+Author: _TheNoobPolice_
+Score: 98
+Created UTC: 1766947100.0
+Comment: The most valuable language will always be C, because learning it makes you a better programmer no matter what area you go into.
+
+Comment 3:
+Author: White_C4
+Score: 75
+Created UTC: 1766953533.0
+Comment: Employable? Depends where you live, but generally JavaScript and TypeScript for web development, Java and C# for backend and application development, Python for scripting, and C/C++ for systems and low level programming.
+
+Knowing the language won't be enough. You'll need to learn some frameworks that go with the language as well. For example, JavaScript frameworks such as React are everywhere in web and mobile development. For C#, you'll need to know the .NET frameworks.
+
+Personally, Java and C# will spread your knowledge very quickly to other languages. These two languages have a lot of fundamental and advanced topics that are translatable to other languages. You'll learn a lot of languages the quickest from C/C++ but the learning curve from those two languages are relatively high and difficult and requires a good understanding of hardware and OS in general. Even C++ developers with 15+ years of experience still don't know all of C++.
+
+Comment 4:
+Author: aqua_regis
+Score: 28
+Created UTC: 1766946839.0
+Comment: Demand is highly regional and can only be determined by the job advertisements in your area. That's where you need to do your research, not on reddit.
+
+Yet, there is one global thing: a good *programmer* is employable, not someone who "knows a programming language" - this is like being a novelist vs. someone who knows the words in a dictionary.
+
+Comment 5:
+Author: phoenix1984
+Score: 21
+Created UTC: 1766947107.0
+Comment: For science, math, and research, go python. For general web and app development, pick an ECMA based language, ideally type safe. Java is great for learning but I find most Java programs super boring. Typescript is a great option, especially if you’re thinking about using a front end framework like React. JavaScript is super easy to get started with and it’s related to Typescript, but it isn’t type safe. So if you learn JavaScript, you’ll likely need another language to really get custom data types. 
+
+If you want to dive into the deep end and get “close to the metal” learn C/C++ or Rust. 
+
+Really, everyone is going to recommend their favorite language. Java, JavaScript, Python, and C++ are the most commonly taught intro to programming languages in schools.

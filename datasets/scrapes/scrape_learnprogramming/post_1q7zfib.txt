@@ -1,0 +1,66 @@
+Post Title: Ditching AI
+Author: Super_Possession_337
+Score: 24
+URL: https://www.reddit.com/r/learnprogramming/comments/1q7zfib/ditching_ai/
+Number of comments: 32
+Created UTC: 1767935384.0
+
+Post Content:
+First post, so the format may not be ideal; I apologize!
+
+I am a solo dev with about a year of experience, I went through a bootcamp but no other structured curriculum.
+
+I often find myself pasting error messages, asking for assistance with new tools, algorithms, or brainstorming with AI. I never blindly copy/paste code, but I do steal the 'intro' on new tools from AI, then build on it after I ask for detailed explanations; however, I feel even this careful approach is harming my growth as a developer.
+
+I have decided to totally abandon AI 1/3 way through my biggest solo project, only reaching out if stuck longer than a few hours. Can anyone share a little light as to how I can break this habit?
+
+If anyone can maybe nudge me in the right direction in terms of learning most effectively - I would really appreciate it.
+
+Sorry to be long-winded, all answers are GREATLY appreciated!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: abrahamguo
+Score: 13
+Created UTC: 1767935645.0
+Comment: To be a successful programmer, it's important to understand things deeply.
+
+If you feel like AI is becoming too much of a crutch, then it's certainly beneficial to set it aside!
+
+Not sure what advice you're looking for to "break this habit" — if you don't want to use AI, then...just don't.
+
+Comment 2:
+Author: space_wiener
+Score: 8
+Created UTC: 1767936396.0
+Comment: I use a hybrid approach so I don’t become a brain dead drone. 
+
+I use it to ask questions and get ideas about a project. The once we start coding I usually just ask it for functions and I read them to make sure they are good, paste them in, then I wire into the main function. 
+
+This way I know pretty much exactly what’s going on and how to address bugs. There has been other projects where I get lazy and start blindly copy pasting then it’s a mess when I need to add a feature or fix something because I’m lost what I need to change.
+
+Comment 3:
+Author: Admirable_Section690
+Score: 2
+Created UTC: 1767935670.0
+Comment: Honestly respect the decision to go cold turkey - I did something similar after realizing I was basically just becoming a really good prompt engineer instead of actually learning to code
+
+  
+Try keeping a notebook (physical or digital) where you write down solutions you figure out yourself, it helps build that muscle memory way better than copy/pasting from AI ever will
+
+Comment 4:
+Author: ffrkAnonymous
+Score: 1
+Created UTC: 1767943809.0
+Comment: &gt; direction in terms of learning most effectively
+
+
+You tell us. Are you learning? 
+
+Comment 5:
+Author: TheTitanCheater
+Score: 1
+Created UTC: 1767967532.0
+Comment: Hi! I'm new here too and I'm learning the basics from IA. I ALWAYS ask "what this thing do?" Intestead of asking the entire code itself and I try to come up with my on logic to a solution but I always has that stingy question in my brain "it is the most efficient solution?" I'm trying really hard to ditch AI completely too, but it is too convenient to not use it, seems like I'm wasting too much time for not using it.

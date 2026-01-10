@@ -1,0 +1,69 @@
+Post Title: Office alternatives that support macro enabled word documents?
+Author: bigmuffpie92
+Score: 13
+URL: https://www.reddit.com/r/linuxquestions/comments/1q6wbgx/office_alternatives_that_support_macro_enabled/
+Number of comments: 25
+Created UTC: 1767830836.0
+
+Post Content:
+Sorry if it has been asked before. I know the question about alternatives to Microsoft Office has been asked a million times, but this is specific to a Office alternative that can support a macro enabled document.
+
+I have a couple word documents that are used for work that take a .xml file and auto fills information into the document.
+
+Worse case I know I can just dual boot Windows and Linux. It would just be nice if any of the alternatives had that support.
+
+Edit: Crazy to come to a subreddit that is specifically for asking questions, and to ask a question because I want to join the community to only be downvoted for asking a question. Wild.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BCMM
+Score: 10
+Created UTC: 1767831784.0
+Comment: LibreOffice has partial support for Microsoft Office macros.
+
+
+Full support is impossible - VBA macros are basically actual programs, with access to the whole win32 API and more.
+
+
+However, most macros just use a relatively small set of functions intended specifically for Office macros, so it's worth at least checking if yours work.
+
+Comment 2:
+Author: Consistent_Cat7541
+Score: 6
+Created UTC: 1767840502.0
+Comment: Word's "macros" are written in Visual Basic. Unless you're using the fields features and embedded calculations. Without more information, it's going to be hard to answer your question.
+
+What I can say is that different word processors have different macro and scripting options. WordPerfect's macro and scripting system is insanely powerful (if not a bit clunky). Lotus Smartsuite used LotusScript, which was similar to Visual Basic, but also had "powerfields", which was mostly for database merges.
+
+Please explain in more detail what you're asking about. Thanks.
+
+Comment 3:
+Author: thieh
+Score: 5
+Created UTC: 1767833961.0
+Comment: * If you are not yanking system DLL's, LibreOffice is usually sufficient.
+* If you were using system DLLs to do what you need to do, use actual programming languages with Libreoffice API ([uno](https://help.libreoffice.org/latest/en-US/text/sbasic/shared/uno_objects.html))
+
+Comment 4:
+Author: Credence473
+Score: 3
+Created UTC: 1767831332.0
+Comment: Onlyoffice
+
+Comment 5:
+Author: ptoki
+Score: 1
+Created UTC: 1767859660.0
+Comment: Libre office has some macro support.
+
+But generally on linux you do it a bit differently:
+
+You have a script which composes the text the way you like. This way you have much greater flexibility. Then you push it into word processor if you need that.
+
+What I would do is to have a perl/php/java/python script/app which will assemble the content and then either push it to doc file (java/python) or to html file and then into word processor.
+
+In your case it may be different.
+
+Your worst case is not dualboot. Its a VM with windows and office or a remote cloud instance with office (like amazon workspaces or similar)

@@ -1,0 +1,48 @@
+Post Title: Never going back to Windows.
+Author: ReferenceNatural87
+Score: 237
+URL: https://www.reddit.com/r/linux/comments/1pn1ebn/never_going_back_to_windows/
+Number of comments: 58
+Created UTC: 1765783311.0
+
+Post Content:
+After trying Linux for the first time, I do not think i can go back to Windows ever again. There's absolutely no bloat, full customization, and it can run on anything. I actually have EndeavorOS running on my shitty chromebook from 2017! And total control... I love having total control over every little thing. Linux is awesome.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ofernandofilo
+Score: 35
+Created UTC: 1765783630.0
+Comment: is this your first time using Linux? and how long have you been using EndeavourOS?
+
+I believe that rolling release is the way to go for desktop Linux, but novice users tend to have more difficulties in these scenarios.
+
+thank you for sharing your experience.
+
+_o/
+
+Comment 2:
+Author: JeffBeckwasthebest
+Score: 30
+Created UTC: 1765786332.0
+Comment: Good choice, have fun with it ! Who needs Windows anyway 😉?
+
+Comment 3:
+Author: computer-machine
+Score: 25
+Created UTC: 1765810762.0
+Comment: Wait until OP discovers that the command line doesn't suck.
+
+Comment 4:
+Author: Klapperatismus
+Score: 12
+Created UTC: 1765799924.0
+Comment: Now imagine you can have the same system on your router, TV set, phone, audio library, server …
+
+Comment 5:
+Author: OperationFriendly179
+Score: 5
+Created UTC: 1765809779.0
+Comment: 3 months now 🧘‍♀️

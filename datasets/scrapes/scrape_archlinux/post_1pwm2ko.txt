@@ -1,0 +1,46 @@
+Post Title: Firefox eats all my memory and has become totally unusable. Please help [Crossposted from /r/firefox]
+Author: MegaDeKay
+Score: 15
+URL: /r/firefox/comments/1pwm0pv/firefox_eats_all_my_memory_and_has_become_totally/
+Number of comments: 16
+Created UTC: 1766802023.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: boomboomsubban
+Score: 11
+Created UTC: 1766804287.0
+Comment: Check the Firefox task manager https://support.mozilla.org/en-US/kb/task-manager-tabs-or-extensions-are-slowing-firefox
+
+Comment 2:
+Author: Hamilton950B
+Score: 6
+Created UTC: 1766830421.0
+Comment: I would try a different kernel. If you're using the regular kernel try lts. I know there is a scheduler bug in 6.19 that they're fixing. Which doesn't exactly fit your symptoms. But it sounds like firefox itself might not be your problem, and the kernel would be one of the other usual suspects.
+
+Comment 3:
+Author: Bren1127
+Score: 3
+Created UTC: 1766822300.0
+Comment: Have you tried using this add-on? https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/
+
+You could try setting default performance settings enabled to false, then limit  dom.ipc.processCount.webIsolated to 1 process per domain to see if that helps.
+
+If all else fails you could disable fission and drop dom.ipc.processCount to a lower number (default is 8 I think)
+
+Comment 4:
+Author: Sinaaaa
+Score: 2
+Created UTC: 1766822887.0
+Comment: Check if using the firefox flatpak fixes the problem. (it should)
+
+Comment 5:
+Author: choosenoneoftheabove
+Score: 1
+Created UTC: 1766863948.0
+Comment: do you use HPET or TSC for your clock? Forcing TSC is known to crash firefox. 

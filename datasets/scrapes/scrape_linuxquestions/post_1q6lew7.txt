@@ -1,0 +1,71 @@
+Post Title: Is Zram functionally equivalent to a Swap partition, except that it lives on the RAM instead of the disk?
+Author: TenseBird
+Score: 27
+URL: https://www.reddit.com/r/linuxquestions/comments/1q6lew7/is_zram_functionally_equivalent_to_a_swap/
+Number of comments: 34
+Created UTC: 1767806434.0
+
+Post Content:
+I'm still trying to learn about how Swap works in Linux, and it seems that it's a very poorly understood topic a lot of the time. 
+
+The litmus test of whether someone actually somewhat knows how Swap works, is when they don't bring up the common misconception being *"You never need swap, if you have a big enough RAM."* That is what I thought too actually, and I'm trying to get past that. Unfortunately a lot of the discourse surrounded by this topic are purely anecdotal, like *"I never use swap, and my computer works just fine!"*.
+
+In my research, the primary argument to *always* have a swap partition, seems to originate from this article: https://chrisdown.name/2018/01/02/in-defence-of-swap.html 
+
+However, I have Fedora installed, and it seems to lack a swap partition. But instead, it seems to have something called "zram" as the swap. It has 8 GBs of it.
+
+I doubt that the good folks at Fedora Project somehow missed the memo, so I assume zram instead of a dedicated swap partition is also considered best practice.
+
+Is this true? Is zram functionally equivalent to a swap partition?
+
+Thanks
+
+
+Top 5 comments:
+
+Comment 1:
+Author: beertown
+Score: 18
+Created UTC: 1767807707.0
+Comment: I think you can look at Zram as a compromise between no swap partition and a regular on-disk swap partition.
+
+Swapping (or paging, to be more precise) on disk frees ram at the cost of the time needed to perform the paging operation. The time depends of the speed of the device containing the swap area: very slow for spinning hard disks, relatively fast for SDDs.
+
+Swapping on Zram is very fast but frees less ram, because the swapped-out data is still in... ram. It just takes less space. You're trading efficiency for speed. And less wear for SSDs, if you care about it.
+
+I guess Fedora's folks think that today's computers have plenty of ram for normal desktop usage so this compromise is worthwhile.
+
+Personally I use both: one Zram swap space with high priority and a second swap partition on SSD. I'm pretty satisfied of the final result.
+
+I read the article you linked years ago, I think it is really good.
+
+Comment 2:
+Author: BranchLatter4294
+Score: 11
+Created UTC: 1767807151.0
+Comment: There is a lot of confusion between zram and zswap. There are similarities, but they are not the same.
+
+[https://linuxblog.io/zswap-better-than-zram/](https://linuxblog.io/zswap-better-than-zram/)
+
+Comment 3:
+Author: ClubPuzzleheaded8514
+Score: 8
+Created UTC: 1767806848.0
+Comment: Yes it's the same, but zram uses compression and hosted the swap in RAM, so  its better than old partition swap way.
+
+  
+But it cannot handle hibernate, as is not a swap file nor a partition.
+
+Comment 4:
+Author: un-important-human
+Score: 7
+Created UTC: 1767806803.0
+Comment: [https://wiki.archlinux.org/title/Zram](https://wiki.archlinux.org/title/Zram)
+
+why ask when you can be sure. Yet remember some programs may need swap. Take decisions informed not by ear. Read the wiki, i would keep the swap. In fact i have and zram.
+
+Comment 5:
+Author: DecisionOk5750
+Score: 5
+Created UTC: 1767809645.0
+Comment: Zram is specially useful on a Raspberry Pi. I use it in production.

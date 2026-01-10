@@ -1,0 +1,48 @@
+Post Title: An uncomfortable but necessary discussion about the Debian bug tracker - post from the creator of the Meson build system
+Author: wiki_me
+Score: 209
+URL: https://nibblestew.blogspot.com/2025/12/an-uncomfortable-but-necessary.html
+Number of comments: 99
+Created UTC: 1767462397.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: IndependentMacaroon
+Score: 102
+Created UTC: 1767472387.0
+Comment: &gt; The email interface is 100% open. Anyone can edit any bug in any way just by sending a suitably crafted email to the control address [3]. If a 4chan script kiddie would want to screw up the entire Debian bug repository, they could do so fairly easily. 
+
+Shameful.
+
+Comment 2:
+Author: wiki_me
+Score: 54
+Created UTC: 1767462552.0
+Comment: Maybe i am being overly optimistic. but i bet if someone would start a kickstarter for modernizing the debian bug tracker it would get fully funded.
+
+Comment 3:
+Author: asm_lover
+Score: 28
+Created UTC: 1767481064.0
+Comment: Most debian web pages in general could use a touch up or a complete replacement.
+
+I'm not asking for javascript up the ass.
+
+But take for example Fedora's use of Kitty as a front end to mailing lists.
+
+Comment 4:
+Author: yo_99
+Score: 16
+Created UTC: 1767508530.0
+Comment: Whatever new interface may arise, I hope it doesn't require javascript
+
+Comment 5:
+Author: radarsat1
+Score: 3
+Created UTC: 1767532722.0
+Comment: I mean honestly, steps 1 to 3 (developing a better client) would basically solve the issue, and like he says, is doable by one person. I'm a little surprised no one has simply written a better UI for reportbug by now.

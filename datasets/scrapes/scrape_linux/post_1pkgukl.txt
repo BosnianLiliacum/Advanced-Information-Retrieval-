@@ -1,0 +1,88 @@
+Post Title: Why is the sensor support so poor compared to Windows (HWiNFO) and how do we change it?
+Author: NonL4331
+Score: 318
+URL: https://www.reddit.com/r/linux/comments/1pkgukl/why_is_the_sensor_support_so_poor_compared_to/
+Number of comments: 66
+Created UTC: 1765508109.0
+
+Post Content:
+Currently reading information about temperature, voltage, power draw, fan speed ect on Linux can be quite spotty and almost always less detailed than on HWiNFO on Windows such as with power draw (as far as I can tell there is no easy way to view the wattage consumption of different components in the system).
+
+My understanding is that sensor data is generally exposed through /sys/ files by kernel drivers which communicate with the hardware directly under the hood. Running lm\_sensors on my laptop mentions that "thermal management is \[often\] handled by ACPI rather than the OS" so this also indicates to me that some sensors are interfaced through ACPI. I'm not sure if there are any other sources of sensor data is may or may not be used.
+
+There are two parts to reaching parity with software like HWiNFO on Linux:
+
+# Sensor Data Parity
+
+The first is of course to be able to get access to all of the same sensors. Throwing around some ideas, keep in mind I know very little about what I am talking about so please correct me or provide more context:
+
+* If a kernel driver itself has the information but isn't exposing it then we can patch the driver to expose /sys/ files to userspace. This was briefly mentioned here: [https://community.frame.work/t/responded-sensors-availability-linux-vs-windows/47416/8](https://community.frame.work/t/responded-sensors-availability-linux-vs-windows/47416/8). My initial thought would be that there would be a bunch of info for components that are commonly used in enterprise (such as certain CPUs). I suspect this approach is probably more viable for components such as CPUs or GPUs.
+* In a lot of cases there may just not be any vendor support or documentation, I suspect this is the problem for a lot of things like fans. In this case we may have to make use of the work HWiNFO has done on Windows. This could be done by reverse engineering how HWiNFO works (either by snooping communication with hardware or looking at decompiled software) but I suspect this would be a tedious and manual process that is just fighting an endless uphill battle, far from a solution that could "just work" like HWiNFO does. I imagine software such as WINE is out of the question since HWiNFO likely calls Windows only drivers that do not exist on Linux or ACPI calls that probably are impossible to get working for some reason.
+* Request hardware companies to better support Linux. I think this is unlikely for most cases where there isn't already an expansive effort to support linux by these companies.
+* Some kind of communication bus fuzzy search (such as by using i2cdetect). I think lm-sensors does this to an extent but I don't think it does much in most cases and can potentially cause issues.
+* In some cases a kernel driver does exist but is obscure and not enabled by default or lacks support by frontend software. I experienced this with my laptop 7535U of which I can use the zenergy (amd\_energy fork since I couldn't figure out how to easily install amd\_energy) driver to view per core energy usage. I had to install this driver myself and no frontend software that I used seemed to support it.
+
+# A comprehensive frontend
+
+While there are a couple frontends for different sensors there is none nearly as comprehensive as HWiNFO on Linux. This is in part due to the aforementioned lack of sensor data but possibly also because the software that I've seen is often targeted at specific types of sensors rather than as a centralized hub for nearly all of them (also see point about zenergy above). Getting the above done seems to be the biggest bottleneck but I'd be willing to write a GUI (with CLI fallback) myself if it comes to it (probably in the iced toolkit).
+
+
+
+# What can we do as a community to improve the situation?
+
+Is what I said earlier correct?
+
+If so how could I or anybody else get started with say reverse engineering a sensor or creating a patch for a kernel driver. What resources are available to get started?
+
+DISCLAIMER: No, this is not LLM written. I handwrote it in VIM in like 40 minutes then spellchecked it. I also made a post in the Arch Linux subreddit with a different title which I changed in this post because I think it made people think that my post was LLM written.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: voracread
+Score: 156
+Created UTC: 1765510492.0
+Comment: This definitely needs work. Now that you have written these down, please continue on this path.
+
+Comment 2:
+Author: hackingdreams
+Score: 150
+Created UTC: 1765534040.0
+Comment: Asked and answered for yourself:
+
+&gt;  this also indicates to me that some sensors are interfaced through ACPI. 
+
+If you remember your Linux history, ACPI was one of the many inventions Microsoft made to *specifically* hamper Linux adoption. It exposes device information in an obtuse and haphazardly 'standardized' way, that basically Windows software gets for free through the Win32 API, but that Linux software has to try to get at... awkwardly. (If you think I'm being silly, go read about the [Halloween Documents](https://en.wikipedia.org/wiki/Halloween_documents).)
+
+In particular, interfacing with ACPI as Linux means one of two things: it can be honest and declare that the OS is Linux, in which case the vendor's ACPI implementation will return its Linux implementation table... which is often barren to the point of barely being enough to get the machine to boot... or Linux can pretend to be Windows... which gives better information, but... imperfectly so.
+
+Many, *many* vendor implementations of ACPI are... bad. Like, atrociously bad. So bad that they don't conform to Microsoft's own documentation, that Microsoft's internal ACPI tools spit out utter nonsense when trying to parse the ACPI data returned from the machine itself... it's an absolute crapshoot. But Microsoft doesn't care: it has relationships with those hardware vendors, and instead of relying on bad hardware data, it can look at its own quirks table internally, effectively patching what the hardware returns, and so it knows how to handle that hardware.
+
+So the game for Linux is then to reimplement that same quirks table through braille - Linux engineers are never given that data from those hardware vendors, so for essentially every new machine shipped, we're stuck trying to figure out the particular quirks for that machine and patch them into the kernel. This keeps Linux perpetually months behind Windows in ACPI implementation, and it keeps a lot of the 'goodies' like all of those weird motherboard sensors well out of reach from Linux users - there simply isn't time nor reverse engineering effort enough to go through and figure out how all of those different sensors from those different vendors are presented, then patch the kernel to support them.
+
+When I was younger and more masochistic, I cut my teeth in Linux by patching the ACPI tables for my laptops myself. I bought one of the very first "super cheap" black Friday laptops (~$400), only to learn Acer's ACPI implementation was a god damned *nightmare*, spending a couple of months thereafter learning enough ACPI for myself to remediate the machine to be a daily Linux driver. You can actually *fix* the ACPI stuff to better comply with the standards, to make Linux behave better with them... but it's difficult and arcane, and after years of doing it, I can honestly tell you: it's simply not worth the effort.
+
+Most of that stuff is "nerd info" - it's nice to know, but... ultimately doesn't mean anything to the end users. It's not immediately or expressly actionable in any meaningful way. I was just happy to get my machines to reliably boot, to be able to use my keyboard shortcut keys to dim the display or mute audio playback, or to drop into S3 sleep to save battery... I just couldn't care less about what my specific fan bus voltage is.
+
+If Microsoft really &lt;3'd Linux as much as they love to profess they do, they'd donate ACPI implementation information to the greater hardware community. But... they're never going to do that, because that's one of the few key differentiators that keeps Windows ahead of Linux, and they *definitely* don't want to improve life for Linux laptop users.
+
+Comment 3:
+Author: void_nemesis
+Score: 38
+Created UTC: 1765525698.0
+Comment: HWInfo64 is actually working on a Linux version, though it's nowhere near ready.
+
+Source: I emailed them about it when I switched from W11 to Linux.
+
+Comment 4:
+Author: robstoon
+Score: 27
+Created UTC: 1765514435.0
+Comment: You're going to have to be more specific on exactly what components you're trying to measure. There are some utilities that can get some of this information, like turbostat for Intel CPUs and various GPU vendor specific utilities for GPUs.
+
+Comment 5:
+Author: Repulsive-Philosophy
+Score: 9
+Created UTC: 1765527669.0
+Comment: The answer is very simple: all internal parsing logic in hwinfo would need to be implemented as hwmon drivers in Linux. Absolutely possible to do if you have the schemas of the protocols for each possible device/model, and match it per USB vendor/some other ID. No fuzzy search needed, it's simple matching.

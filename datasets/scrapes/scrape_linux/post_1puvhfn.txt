@@ -1,0 +1,54 @@
+Post Title: eilmeldung, a TUI RSS Reader
+Author: Tiny_Cow_3971
+Score: 254
+URL: https://i.redd.it/7barlxdpf79g1.jpeg
+Number of comments: 53
+Created UTC: 1766605013.0
+
+Post Content:
+I've been using Linux for over 20 years, mostly Gentoo, now nixOS, promoting opensource and Linux to my students (with some success I can say) and now it is time to give a little something back to the community:
+
+eilmeldung is a TUI RSS reader based on the awesome newsflash library and supports many RSS providers. It has vim-like kev bindings, is configurable, comes with a powerful query language and bulk operations.
+
+This proiect is not Al (vibe-)coded! And it is sad that I even have to say this. Still, as a full disclosure, with this proiect I wanted to finc
+out if and how LLMs can be used to learn a new
+programming language; rust in this case. Each line of code was written by myself; it contains all my beginner mistakes. warts and all. More on this at the bottom of the GitHub page:
+
+https://github.com/christo-auer/eilmeldung
+
+Let me know what you think!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: NoEconomist8788
+Score: 10
+Created UTC: 1766606764.0
+Comment: very nice, thank you
+
+[https://ibb.co/8DGr0S4D](https://ibb.co/8DGr0S4D)
+
+Comment 2:
+Author: dethb0y
+Score: 7
+Created UTC: 1766607621.0
+Comment: That is very cool, I would absolutely use this if i hadn't already set up an RSS solution - TUI stuff is great.
+
+Comment 3:
+Author: z-lf
+Score: 7
+Created UTC: 1766621117.0
+Comment: Oh my dog. Yes! That's great, thank you.
+
+Comment 4:
+Author: Fancy-Organization81
+Score: 5
+Created UTC: 1766655798.0
+Comment: It's great, i've been using it with freshrss, but i feel like the name is a bit hard to read, write and remember, especially for a CLI app, aside from that i love it.
+
+Comment 5:
+Author: Mention-One
+Score: 3
+Created UTC: 1766606715.0
+Comment: And it is supporting freshrss, amazing! Thanks

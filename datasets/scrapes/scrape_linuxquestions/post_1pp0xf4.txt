@@ -1,0 +1,75 @@
+Post Title: Linux should be used as the out-of-box operating system
+Author: NotWeakKneeSigils
+Score: 22
+URL: https://www.reddit.com/r/linuxquestions/comments/1pp0xf4/linux_should_be_used_as_the_outofbox_operating/
+Number of comments: 53
+Created UTC: 1765988860.0
+
+Post Content:
+Context: I posted this orginal on R/Linux and it got removed so if you are on there and already saw this post, hello there Kenobi.
+
+Hey all! So I have come here to ask for help on a school project, the just of it is that we have to argue for the opposite of our opinion. Now I am sort of cheating because although I believe that for someone who is not nerdy or who just wants something that works Windows is better, it just works out of box and does everything you need it to do. Now I personally use Zorin OS and I absolutely love it and would not go back to windows ever. 
+
+What is your guys opinion on this? If you have them could you maybe give me some facts to help argue my point of how Linux should be used as a out-of-box OS.
+
+Thank you so much!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 15
+Created UTC: 1765989433.0
+Comment: It does work ootb lol. I just installed nobara couple days ago and I had to tinker waaaayyyyy less (usbstick in, next next next, wait a bit, usbstick out, login, update and... Thats it) than I would have to on windows (after install: update, restart, update, restart, debloat, restart, hope that the drivers from ms update are fine so I dont have to install amd/nvidia again, look at fucking ads, figure out how to disable copilot, etc) , assuming that I care how the OS looks and functions. And if I had to for some reason install some OS to some machine as fast as possible, I really wouldnt go with windows.
+
+
+
+
+Sooo... 
+I would say "bc it works just as-is"*
+
+
+
+
+
+
+
+
+*depends on the distro ofc
+
+Comment 2:
+Author: seto_kaiba_wannabe
+Score: 10
+Created UTC: 1765989299.0
+Comment: Sure. That's how you increase adoption rates. That's how windows came to dominate the market. If we put Linux on new machines instead of windows, everyone and their mother would begin using it and acclimating to it. Soon they would all compare their prior experiences with windows, to Linux, which is fundamentally better. I'm confident people would come to see that.
+
+Comment 3:
+Author: DrBaronVonEvil
+Score: 8
+Created UTC: 1765990167.0
+Comment: If you're looking for strong arguments for why it should be used OOTB, I think you can start with:
+
+1. Android and ChromeOS are used by millions of people, both of which are Linux based. These are two success stories for a type of Linux working perfectly out of the box for consumers.
+
+2. Most people increasingly use their computers for web-based work, even in Enterprise environments where Microsoft Office is available as a web app suite on the cloud. For all of these examples, Linux is virtually identical to the web browsing experience you'd get on Windows or Mac, but arguably faster.
+
+3. Monopolies are more likely to create anti-consumer outcomes, like higher prices, reduced innovation, and poorer workplace satisfaction within the org. Microsoft Windows is and has been a monopoly for almost 3 decades now. Linux has an Anti- monopoly legal framework built into its licensure. Open Source allows anyone to add/modify/fork the existing code into new projects. Replacing Windows with Linux as the de facto standard would be an enormous win for free enterprise, open markets, and consumer rights.
+
+Comment 4:
+Author: returned_loom
+Score: 7
+Created UTC: 1766003534.0
+Comment: I'm not really sure how "should" and "out-of-box" go together. Like, if it CAN be used OOTB then it doesn't matter whether it "should." How are you defining OOTB? As opposed to what? And the word "should" carries some moral weight, like it's your responsibility to do things that you "should", so are you going to argue that people have the responsibility to use linux OOTB, as opposed to using linux... with some configuration? LIke we should not be using our own configurations?
+
+Anyway, here's my argument to apply however you want:
+
+In a highly computerized world it is the user's civic duty to learn to use Linux. If you use Windows or Mac you are handing over too much control to non-elected billionaires.
+
+Comment 5:
+Author: Powerful-Prompt4123
+Score: 5
+Created UTC: 1765989363.0
+Comment: \&gt;  If you have them could you maybe give me some facts to help argue my point of how Linux should be used as a out-of-box OS.
+
+WYM? Just use it. Companies like Dell sell PCs with Linux pre-installed. Wonderful machines (XPS).

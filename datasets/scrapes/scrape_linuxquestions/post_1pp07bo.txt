@@ -1,0 +1,59 @@
+Post Title: Basic image editing
+Author: ZedaZ80
+Score: 12
+URL: https://www.reddit.com/r/linuxquestions/comments/1pp07bo/basic_image_editing/
+Number of comments: 31
+Created UTC: 1765987192.0
+
+Post Content:
+I've switched to Linux at work, and part of my job includes creating documentation and guides. Does anybody have recommendations for \[GUI\] programs that allow basic image editing? In particular, the two functions I use are cropping, and circling parts of the image. On Windows, I just open old-school Paint.exe which is pretty much the same that I used on Win 95, and in Linux, the closest I've found is mtPaint. However, mtPaint seems to only do lines that are a single pixel wide.
+
+I'm using Linux Mint (Debian Edition), and there are some tools that let me view and crop the image (pretty much everything supports cropping), but if I want to circle a part of an image, the next best options seem to be GIMP and Krita, and that's way overkill for what I need (and they are so heavy weight compared to something like mtPaint).
+
+I don't want to reinvent the wheel if I don't have to, but if there are no better alternatives, I can try to do something in Python.
+
+Thanks for any help! I'm not a Linux pro, but I've used Debian in my non-work life for 10 years or so I can handle a little mucking about.
+
+**edit**: gwenview was easy to install and easy enough to use (I'm glad for the keyboard shortcuts!), so that's what I think I'm going with. Thanks so much for all the suggestions! I have a bunch of docs to make over the next few months, and this'll help a bunch.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Resident-Cricket-710
+Score: 7
+Created UTC: 1765987371.0
+Comment: Pinta is my favorite "in between" image editor.  its not trying to be a powerhouse, but its more capable then things like gThumb.
+
+[https://www.pinta-project.com/](https://www.pinta-project.com/)
+
+Comment 2:
+Author: scientific_railroads
+Score: 3
+Created UTC: 1765989614.0
+Comment: &gt; In particular, the two functions I use are cropping, and circling parts of the image.
+
+[Gwenview](https://apps.kde.org/gwenview/)
+
+Comment 3:
+Author: Imaginary-Corner-653
+Score: 3
+Created UTC: 1765990263.0
+Comment: If you use KDE frontend everything you need is a basic feature of the screenshot tool. You simply press 'print' and do your edits in the preview of your clipboard before you decide to save it as a file or paste it somewhere. 
+
+
+Apparently there is a package of it for mint as well, called kde-spectacle
+
+Comment 4:
+Author: IsisTruck
+Score: 3
+Created UTC: 1765987725.0
+Comment: I like Pinta, but I really wish there was something more like IrfanView on Linux. 
+
+Comment 5:
+Author: lildergs
+Score: 3
+Created UTC: 1765987478.0
+Comment: It's actually a miracle that there's no standard mspaint clone.  I've never found one for Mac or Linux.
+
+I'd just go with Gimp and use a subset of the features.

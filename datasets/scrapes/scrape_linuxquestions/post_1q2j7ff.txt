@@ -1,0 +1,49 @@
+Post Title: What part of Linux do you use daily but still don’t fully understand?
+Author: Expensive-Rice-2052
+Score: 62
+URL: https://www.reddit.com/r/linuxquestions/comments/1q2j7ff/what_part_of_linux_do_you_use_daily_but_still/
+Number of comments: 108
+Created UTC: 1767409537.0
+
+Post Content:
+This isn’t about what you don’t know.
+
+  
+It’s about those everyday Linux things we keep using and think, *“I should really dig into this someday.”*
+
+Beginners, veterans — everyone’s welcome.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dontdieych
+Score: 42
+Created UTC: 1767409899.0
+Comment: systemd, more in depth.
+
+Comment 2:
+Author: FLMKane
+Score: 34
+Created UTC: 1767409591.0
+Comment: The kernel
+
+Comment 3:
+Author: FreddyFerdiland
+Score: 27
+Created UTC: 1767410486.0
+Comment: 
+
+its all "not fully understood"...
+
+Comment 4:
+Author: Superb_Yam_5511
+Score: 18
+Created UTC: 1767417450.0
+Comment: getty, tty, vconsole, terminal. Every time I wonder why the most prominent feature of a linux based OS hasn't been updated in 20+ years, I get told I'm talking about the wrong thing. But kmscon is getting added to Fedora which potentially means RHEL in the future and I've always wondered how a modern shell on servers would change thing for data centers and what the professionals can do to automate things.
+
+Comment 5:
+Author: tinycrazyfish
+Score: 14
+Created UTC: 1767410356.0
+Comment: PAM

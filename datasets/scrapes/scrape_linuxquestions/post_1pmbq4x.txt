@@ -1,0 +1,143 @@
+Post Title: Considering making the switch, I have ignorant questions.
+Author: PoorlyEducatedFool
+Score: 20
+URL: https://www.reddit.com/r/linuxquestions/comments/1pmbq4x/considering_making_the_switch_i_have_ignorant/
+Number of comments: 54
+Created UTC: 1765710982.0
+
+Post Content:
+Hello,
+
+these are probably questions that frequenters of this Sub see FAR too often, so stop reading here if you like, but you will indubitably get some love from this random stranger that you will never meet if you choose to share some knowledge (not exchangeable for any known currency, but, maybe worth something?).
+
+Preamble: Anyways, I am considering making a switch over to Linux, or running Linux in tandem with Windows for certain programs, or at least spending hours trying to and then potentially running away in abject fear and frustration?  I've done some reading, watched some videos - and I am intrigued. I've been aware of Linux since the early 2000s but was always intimidated, and (especially back then) most my PC use was gaming. A lot of the impetus for this has been watching Windows slowly adopt the many of the things I hated most about MacOS, while coming up with new terrible things to force upon me.
+
+What I use my PC for mostly: Firefox (browsing, streaming, e-mail). Blender. Inkscape. Steam (and the games therein). Spotify. Word (but not for work, just personal writing, I'm not attached to it, just used to it).  
+\-These probably cover 98% of my PC use.
+
+Questions:  
+\#1 - Would most of these be easily transferable to Linux? (I've read/heard different things, but I think YES?)  
+\#2 - How compatible are steam games with Linux? I know this is a broad question (sorry). I rarely play multiplayer games except SC2. My recently played games: Baldur's Gate 3, Assasin's Creed:Mirage, Cyberpunk 2077, Sniper Elite 5, Anno 1800, Rimworld, Crusader Kings 3 - if that helps.  
+\#3 - I know the chosen distro can make a big difference, so given the prior information can anyone please recommend which distro might be the most appropriate/appealing for my uses, or refer materials for me to research? There are so many, I feel I need somewhere to start looking seriously, and I'd like to avoid going down the wrong road, meeting endless frustration and giving up - ultimately missing out.
+
+Notes:  
+\#1 - I have very limited programming experience, back in high school I spent playing time playing around with writing HTML and Java, then moved towards the arts did a philosophy degree, now work in biology... Life's funny yo..  
+\#2 - Very open to needing to do some learning, but I'm not trying to dive headfirst into the swimming pool before checking the depth
+
+If you're still reading:  
+Thank you so much and I am SORRY for writing so much, I thought this would be a shorter post, but my fingers kept typing. Don't worry, I'll have a stern word with them later. If you care to share some knowledge you have my heartfelt thanks, I know I'm asking questions that could be answered with enough research but there just feels like there's so much info out there, I'm kinda lost and a friendly stranger pointing in the right direction can make all the difference =D
+
+EDIT: I've received a far larger quantity of replies, with a vastly greater amount of information and effort, than I had expected from this post. THANK YOU so much.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: polymath_uk
+Score: 11
+Created UTC: 1765711562.0
+Comment: You don't need programming skills. I wish this misapprehension would go away.
+Setup a VM on your Windows machine and install Mint. See how you get on. So far as I'm aware all your software is either available for Linux or a close substitute is. I don't know anything about games but these come up regularly as unsupported in some cases.
+
+Comment 2:
+Author: Plasma-fanatic
+Score: 9
+Created UTC: 1765719943.0
+Comment: I can tell simply by your writing skills that you're going to be just fine with Linux. It's really not that hard for the average person to get Linux up and running these days if they're able to read and follow simple instructions. No shortage of YT videos and other resources if you need handholding. A few points, things with which to become familiar pre-install:
+
+\- get to know what partitions are and how you want them to be laid out. I wouldn't bother with anything more elaborate than a main partition for your distro of choice and an efi partition, which you likely already have courtesy of Windows, though it may be smaller than optimum. I like 5-10GB for that, while Windows typically goes with 100mb. Still enough for any but the more elaborate multi-OS setups. You don't need a separate /home or anything else.
+
+\- once installed, get used to the layout of the file system, which is a lot different from Windows and may take some getting used to. Plenty of resources available to help... including mc, mentioned below.
+
+\- speaking of resources, one of the best is the Arch Linux wiki. Tons of dry, matter of fact information that's mostly applicable to any Linux distro. No worrying about if what you're reading can be trusted, as it's all been vetted by the nerdiest of nerds!
+
+\- it's no longer as much of a necessity, but becoming comfortable with the command line/terminal/console can be very helpful. Early in my Linux experience I discovered a simple console based file manager called Midnight Commander (mc). It's like a Swiss Army knife full of handy tools, most of which duplicate lengthy typed out commands. Extremely versatile tool that I still use nearly every day.
+
+Bottom line? You're a smart guy/gal, you'll be able to figure it out. It's actually easier to install - and in much less time - than Windows, and you'll have most of the software you need from the get go rather than having to hunt for things after.
+
+Good luck! As a fellow loquacious person, I have faith in you!
+
+Comment 3:
+Author: diligenttillersower
+Score: 3
+Created UTC: 1765740620.0
+Comment: Your use cases sound a lot like mine. And you write like me, so this response is going to be long too!
+
+---
+
+**Answers to your questions:**
+
+1) Everything works except Word (unless you count the browser version), but LibreOffice Writer will take care of that need.
+
+2) I play mostly 10+ year old games like Skyrim and Witcher 3 and they work just fine, I assume the games you listed work too unless they have some weird anti-cheat stuff. Just set the compatibility mode on in Steam settings (Proton something) and then click to install the game and click to play, easy peasy, same as Windows.
+
+3) The whole thing with distros can be confusing, I know. ^a
+
+I'd suggest you try Linux Mint in a virtual machine or the live USB^b . It's been popular for years now and a common first (and often last) distro people install coming from Windows. It's based on Ubuntu^c which itself is based on Debian. Very easy to install and use. I've installed Mint for my mother and some other non-techy relatives and I've heard no complaints. I have it on my desktop and laptop since this year. I like how "mainstream" it is since that means an active community and a solid future for the distribution.
+
+You should also try Ubuntu itself too! Ubuntu back in 2010 was more like what Linux Mint is currently, nowadays it feels a bit... meh in my opinion.^c
+
+Fedora is also a popular choice and you should definitely try it out. I can't say much about that since I've only tried that in VMs. Like Ubuntu (and Mint) it's very polished, if even more so since it comes from a more corporate background. Feels like a commercial product, even.
+
+I wouldn't recommend Arch or its derivatives for you, since they are way more technical and more for enthusiasts. (Yes I've installed Arch multiple times before anyone asks..) Gentoo is even techier and niche. Slackware and SUSE are some weird relics, haven't really paid attention to them since the 00s.
+
+---
+
+**Annotations**
+
+^a) The amount of Linux distributions is both a blessing and a curse. [The Linux distribution family tree](https://en.wikipedia.org/wiki/Linux_distribution#/media/File:Linux_Distribution_Timeline.svg) is a sight to behold and quite intimidating. A lot of "trunks" appear on the timeline and then branches grow from them, some branch again, and then again. Some branches die, some live for a long time. The reason for these branches vary, each have/had their uses. Some branches are for specific use cases, cater to specific hardware, exist(ed) simply as someone's fun project for a time, are a semi-commercial or even commercial product, some exist simply because a development team didn't get along so they made a better distro with hookers and blackjack, etc. Terrifically human stuff, I love it.
+
+There's also the user interface aspect, some people see a screenshot of a random Linux desktop, and ask "What distro is that? I want that!" It's not the distribution you're seeing, that's the desktop environment (DE) of which there are many, often pre-configured to fit the visual aesthetic of the distribution.
+
+On Windows you get the Windows UI, you can customize that a bit, but that's your only choice. Unlike that, most Linux distributions have multiple DE choices, some more, some less. Some are simply branded based on their choice of desktop like Ubuntu/Xubuntu/Kubuntu/Lubuntu. If you find yourself in a situation where you like the look and feel of a certain UI, find out what desktop that is and then find out which distributions include that and go from there. Of course it's possible to install any DE in any distro, but straying from the supported choices usually results in a bad time. Distributions are a collection software packages that the provider says SHOULD work together nicely. Stray beyond that and you have to know a lot more about Linux and usually move closer to the trunk in the Linux distribution tree.
+
+^b) I used VMWare VirtualBox for years on Windows to try out different Linux distros and to reminisce old Windows versions. It's free and quite user-friendly. There are most likely other (better?) options too.
+
+You set up your virtual machine, a computer within your computer. You give it some processors (1-2 is fine), some memory (8 gigs or more preferrably), some storage (40 gigs should do for trying out distros) and ta-dah, you have a computer inside your computer in a window and you can try out all the Linux distros you want! Anything you do in the virtual machine cannot affect your actual computer, it's in it's own sandbox and the "guest" OS only thinks that it's running on real hardware. It cannot access your files, mess up your hard drive or anything like that. That's the whole beauty of it, you can try out stuff with or without messing anything up on your actual computer. When you're done trying out a distro or mess something up, you can just delete the VM and its storage and try again.
+
+Note that running stuff in a VM is way, way slower than on real hardware so any performance hiccups like slow window drawing and general sluggishness is mostly because of this. Things will be much faster when you install the distro for real.
+
+DO NOT use VirtualBox's automatic install option for the distros you're going to use. You need to see the installer, and see how it looks, what choices you can make, and sometimes the automatic install doesn't work quite right with some distros. You should also install the VirtualBox Guest Additions to the guest operating system (the distro you're trying out) so that stuff works a bit more like it would on real hardware. There are plenty of tutorials on that online.
+
+You can also do a test-run of a distro simply by using their install media, the USB-stick. Many distributions offer this kind of "live environment/live USB" instead of a simple installer. You boot your computer from that USB stick and the whole (or most of) operating system actually loads from it to your computer's RAM. You're inside the distro you're trying out, but it doesn't touch your storage or modify anything on your computer, it just uses the memory in the USB stick. The performance is again slower since it's running out of that slow USB stick memory, but you get a better idea how it performs otherwise and see if it recognizes your hardware correctly. If you don't write anything to your hard drive while you're in that environment, you can just shut down your computer, take the USB stick out, reboot and you're back to your old Windows install, nothing's been modified.
+
+^c) *"If it's based on Ubuntu and Debian, why not those then?"* Of course you can (and should) try those! I personally don't like Ubuntu's GNOME desktop that much, and their thing with Snap-packages, but I do like the other stuff like driver management etc. Ubuntu also feels like their (Canonical's) focus is more on server and corporate stuff nowadays, so the desktop OS has felt a bit meh in the last years. I guess a lot of people thought of that and that's how Linux Mint was born. Use the solid foundation of Ubuntu and make the top layer nice, simple and easy to use.
+
+As for Debian, it's more involved since you have to install and configure more stuff in the beginning. Mint has a lot of that stuff already done for you. Of course you can remove and install packages and configure stuff as you like, but the "good for most users"-approach works for me. Debian is also slower in their application updates and whatnot, so while the core of Mint/Ubuntu/Debian remains the same, Mint/Ubuntu might use the newer version of an application at a given time.
+
+---
+
+**Background**
+
+I'm in my late thirties, somewhat nerdy from a young age (did my first homepage in 1997!), have some comp sci education (college/uni) but no degree and only some jobs from that. I have used Linux-based operating systems in three eras on my "main" computer: in the late 90s(!), late 00s and this year. Most of my life I've used Windows as my main operating system.
+
+I ran Ubuntu as my sole operating system around 2010 for about two years, then went back to Windows on my desktop (a lot of stuff didn't work on Linux back then). After that I've used Linux on my laptops or tried out different distros in virtual machines every now and then just to keep up my skills in Linux command line stuff (for studying/work) and to see what desktop Linux looks as it developed.
+
+Since earlier this year I'm back to Linux only and I'm happy to report that hey, desktop Linux actually works now for all my needs! The biggest motivators for the final switch from Windows to Linux were the support for games (bless Valve, Proton and Gabe) and the ever increasing general crappiness of Windows. Windows 11 was the last straw, I wasn't about force it to my computer, since I already was familiar with Linux stuff and now everything I needed worked pretty much out-of-the-box on it.
+
+I'm by no means a Linux expert and only have 3-4 years of actually using a Linux based OS daily, most of it in the past. All this is just my opinions based on my "feel" based on random websites, forums, articles, videos, manuals and personal experience. I encourage everyone reading this to correct my factual mistakes.
+
+Comment 4:
+Author: MatchingBrackets
+Score: 3
+Created UTC: 1765715644.0
+Comment: ## Your Questions:
+1. Yes, most of the apps will be transferable to Linux. All for but one: Word. But you do have options. You can use your web apps instead of the downloadable ones, or you can use an app like LibreOffice or OnlyOffice to write your documents. Take a look at OnlyOffice, it has a nice familiar interface that I think you'll like. 
+2. Your steam games, as long as you access them through the steam app, there is a steam app for Linux. What I hear most players complain about is something about the cheat codes not being available. But look into this yourself. Yeah, you'll want to research your games on your own.
+3. I always tell folks who are new to Linux, to start with Linux Mint. It's familiar enough to windows users, so you'll be able to move in quickly. Then, if you want to try a different distro, you can always do that later.
+
+## Your Notes:
+1. I'm sorry, you have to be a programmer in order to use Linux. In fact, you have to pass a very detailed and difficult test before you download and install your first distro. I"M JUST KIDDING. I'm sorry, I couldn't help myself. You do not have to be a programmer at all to use Linux. Linux is a great way to brush up on your programming skills if you have them. But it's perfectly fine if you don't. 
+2. Perfect. And this is why I recommend Linux Mint as a great first distro. You probably won't have any problems with the install. And you can learn as much or as little you want before you move onto something else. But being prepared to learn new things is a great attitude when choosing to move to Linux.
+
+Thank you for asking your question. I hope my information helped at least a little.  But you're coming into a very exciting time in Linux. I wish you the best of luck, and I hope you enjoy your new Linux journey.
+
+Comment 5:
+Author: kloklon
+Score: 3
+Created UTC: 1765711790.0
+Comment: honestly from my experience gaming is great and i have never needed to boot windows again since the switch. most steam games work out of the box nowadays, and i also had no problem running games i got on GoG via heroic launcher. the most incompatible ones are some kernel-level anticheat multiplayer games, those often don't work at all, but you don't seem to play these anyway. check [protondb](http://protondb.com) and [are we anticheat yet](https://areweanticheatyet.com/) for linux compatibility!
+
+i am using CachyOS, which is based on Arch but comes with gaming drivers pre-installed. I am very happy with it. had no prior experience using the terminal, but i got used to it quickly. documentation on the cachy and arch wikis is really good, i could find everything i needed to know quickly.
+
+i don't know about blender etc. so you'll have to wait for other people's opinions, sorry.

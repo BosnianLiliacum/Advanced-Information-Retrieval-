@@ -1,0 +1,48 @@
+Post Title: Stop thinking about what project is the best to learn or for your portfolio.
+Author: YerayR14
+Score: 25
+URL: https://www.reddit.com/r/learnprogramming/comments/1px6y5g/stop_thinking_about_what_project_is_the_best_to/
+Number of comments: 7
+Created UTC: 1766865328.0
+
+Post Content:
+I have been in that place, scrolling infinitely looking for the best (if that even exist) project to learn/upskill/get hired/whatever, but today I have finally understood why people advice: "Find something that interest you". 
+
+I understand the pressure of been unemployed, undergrad or still learning and wanting to build something that becomes the key to getting out of that situation.
+
+I’m fortunate to have a job that combines IT support and some backend work. While it’s not as difficult as other situations, I still want to keep improving to reach better roles. And I’ve been there too. Day after day trying to figure out what to build to improve, and even so I believe the previous advice still applies.
+
+So, what is that project that interest me so much and made me change my mind? Just a self-hosting e-book library. Sorry if I disappointed someone (I'm not). I got a Kindle a few weeks ago and since I also like home-labs and self-hosting I looked for an app, but every one feels like artificial and not personal, and as a book lover, I want my library to feel personal, something that I truly own, so I decided to build one.
+
+You may think, what can an e-book library teach? Well, is not about the specific case of my app, but more of the concept/problem itself that needs to be implemented or solved that can be applied for many contexts. For example: what if an user have 5000 books? How should I store the covers vs basic metadata (cache vs database)? How can I process all that books in seconds (concurrency &amp; parallelism to improve performance)? How can I avoid the rate limits of an external api? How do I keep the database in sync if the user manually deletes a file? What if I implement an internal ddbb back up tool? Can I pass all the books from kindle to the library directly?
+
+And even if I knew about some of that questions before, applying it yourself will always teach you more that just theory.
+
+Some people will think that thinking about all that stuff early in the project may be over-engineering, but who cares, is your project you can do whatever you can with it according to your objectives, not someone else ideas. 
+
+So thanks to everyone who has always given that advice, and for those who are in the situation I mentioned, it’s better to build a project that seems simple on the surface, but where you really dive deep than creating something that looks good on paper but you’re not invested in.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Doommarine23
+Score: 6
+Created UTC: 1766871884.0
+Comment: You're absolutely right. Building projects is just like drawing sketches, it is the only way we'll learn. Obviously bigger projects take longer, but they'll teach you more, just as refining a sketch, inking, coloring and shading it would. Programming is a "doing" activity like most other hobbies.
+
+If someone reaches their limit of knowledge / skill while building the project? That is a good thing, that means you found an area to improve in!
+
+Glad you found an idea that interested you, and I hope it has been a good learning experience for you.
+
+Comment 2:
+Author: greyspurv
+Score: 2
+Created UTC: 1766877139.0
+Comment: The best projects are the one you actually finish lol
+
+Comment 3:
+Author: [deleted]
+Score: 1
+Created UTC: 1766874393.0
+Comment: [removed]

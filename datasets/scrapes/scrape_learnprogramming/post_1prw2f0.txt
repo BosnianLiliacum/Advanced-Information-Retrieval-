@@ -1,0 +1,52 @@
+Post Title: So, what hobby language do y'all use these days?
+Author: -VanillaKing-
+Score: 103
+URL: https://www.reddit.com/r/learnprogramming/comments/1prw2f0/so_what_hobby_language_do_yall_use_these_days/
+Number of comments: 108
+Created UTC: 1766286203.0
+
+Post Content:
+A couple things to clarify in my asking of this question...
+
+1. I'm about to get into programming again, and I know I'm gonna pick 1 of 2 languages, which I've already done the research on, so I know they both do what I wanna do, so this ain't a what-to-use question. This is an I'm-genuinely-curious-what-other-coders-use question. Just asking for fun &amp; community &amp; such. Your answers will not be informing my language choice, no offense 😅
+
+2. I don't wanna know the language you use to make a living on the job, but the language that you specifically use when you're *not* on the clock.... unless those languages just happen to be the same 😅
+
+
+Top 5 comments:
+
+Comment 1:
+Author: I_Am_Astraeus
+Score: 60
+Created UTC: 1766286966.0
+Comment: Rust.
+
+It's weakness is that quite a few of it's libraries are still maturing. Classic is it 1.0 yet?
+
+Not at all a problem outside of professional work. Enforces good coding habits. Tooling is extremely clean and easy. Fun to build new stuff with
+
+Comment 2:
+Author: MutuallyUseless
+Score: 41
+Created UTC: 1766287497.0
+Comment: C. It's the only language I enjoy programming in, if I am using something else it's certainly not by choice or for fun.
+
+Comment 3:
+Author: aleques-itj
+Score: 38
+Created UTC: 1766287114.0
+Comment: C# is great, and each dotnet release is killer.
+
+Performance is great, tooling is great, ecosystem in general is great.
+
+Comment 4:
+Author: jedi1235
+Score: 25
+Created UTC: 1766286634.0
+Comment: I've been having a lot of fun with Go for the past 10 years or so. I like the lack of "magic" and the really easy built-in concurrency.
+
+Comment 5:
+Author: Dudeshoot_Mankill
+Score: 20
+Created UTC: 1766288040.0
+Comment: Lua. I'm also introducing my son to programming with Lua

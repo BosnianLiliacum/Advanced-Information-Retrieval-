@@ -69,6 +69,7 @@ if __name__ == "__main__":
     db = helix.Client(local=True, verbose=True)
 
     data = load_all_posts("datasets/scrapes")
+
     vecs = []
     for _, _, content, _, _, _ in tqdm(data):
         vec = vectorize_text(content)

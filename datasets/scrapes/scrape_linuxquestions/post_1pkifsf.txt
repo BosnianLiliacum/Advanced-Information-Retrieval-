@@ -1,0 +1,55 @@
+Post Title: Should I switch from Windows 11 to Linux?
+Author: futureoffetus
+Score: 64
+URL: https://www.reddit.com/r/linuxquestions/comments/1pkifsf/should_i_switch_from_windows_11_to_linux/
+Number of comments: 98
+Created UTC: 1765512661.0
+
+Post Content:
+Im seriously considering switching to Linux OS on my desktop PC. I currently use Windows 11 and I honestly hate it, especially the bloat. I also have heard a lot things about Windows selling personal data to third parties companies, like AI databases. 
+Is there really any downsides to having Linux?
+
+Edit: Now I'm actually planning to install Linux, do I use mint? I mainly wanna play games more efficiently. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Norbluth
+Score: 35
+Created UTC: 1765513004.0
+Comment: Short answer - yes.
+
+But to really get in the weeds and elaborate - Yeah.
+
+jk
+
+yes there are downsides. pros and cons, depends on what programs and/or games you use/play. If you're all about Fortnite and the Adobe suite then you'll be disappointed.
+
+Comment 2:
+Author: DrBaronVonEvil
+Score: 13
+Created UTC: 1765514174.0
+Comment: The benefits and drawbacks of Linux are effectively the same as a Farmers Market vs. a Wal Mart. The food is direct from the person who grew it, it's probably healthier, and it's a whole hell of a lot more ethical. But when was the last time you saw Old Spice or Lays at the market? Sure they have *a potato chip* and *a type of body wash*, but it's not the one you're used to, and they definitely don't have the slick packaging that a massive global brand has.
+
+Look up the programs you want to use and see if they have Linux support. If they don't, then consider an alternative, dual booting or passing on Linux altogether. If you decide to take the leap, start with a popular distro that is general purpose. Linux Mint is the usual recommendation, but Zorin, Pop, Ubuntu and Fedora are also good choices. It really doesn't matter broadly what you pick, and part of the fun is trying a few out. Hope you have a good experience, welcome!
+
+Comment 3:
+Author: MansSearchForMeming
+Score: 9
+Created UTC: 1765513185.0
+Comment: Back up your data to the cloud or usb drive before you do anything.
+
+Comment 4:
+Author: PermanentLiminality
+Score: 8
+Created UTC: 1765512957.0
+Comment: As long as you don't need some piece of windows software, Linux is great.
+
+I run both.
+
+Comment 5:
+Author: SnooHesitations7489
+Score: 6
+Created UTC: 1765512904.0
+Comment: dual booting and give it a try

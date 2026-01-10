@@ -1,0 +1,41 @@
+Post Title: brow6el - terminal web browser with sixel rendering
+Author: honzucha
+Score: 10
+URL: https://www.reddit.com/r/archlinux/comments/1q3r1gf/brow6el_terminal_web_browser_with_sixel_rendering/
+Number of comments: 10
+Created UTC: 1767536310.0
+
+Post Content:
+Thanks to great ArchLinux community brow6el web browser is now packaged for ArchLinux (AUR) https://aur.archlinux.org/packages/brow6el-git
+
+
+Top 4 comments:
+
+Comment 1:
+Author: ClubPuzzleheaded8514
+Score: 2
+Created UTC: 1767539273.0
+Comment: Thanks ! Many appreciation for the AUR maintainers community. 
+
+
+Real question : what is the usage of such kind of software ? Please give me practically examples you are using irl, i am curious ! 
+
+Comment 2:
+Author: honzucha
+Score: 2
+Created UTC: 1767567690.0
+Comment: I must say I was impressed with arch community to make aur from my browser so quickly.
+
+Comment 3:
+Author: Potential-Block-6583
+Score: 1
+Created UTC: 1767557935.0
+Comment: Gotta say that this is really neat and I appreciate whomever put in the work to get this into the AUR.
+
+Comment 4:
+Author: AbdSheikho
+Score: 1
+Created UTC: 1767772700.0
+Comment: I've checked it, and it is awesome!!! I've been using w3m just because I hate opening a browser just to check some doc page... I think I have a replacement now.
+
+Would there be any vulnerabilities with running JavaScript on the terminal?

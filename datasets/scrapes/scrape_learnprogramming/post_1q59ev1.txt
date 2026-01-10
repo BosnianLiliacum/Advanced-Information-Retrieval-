@@ -1,0 +1,64 @@
+Post Title: Free certificates that are actually worth posting on LinkedIn
+Author: purvigupta03
+Score: 45
+URL: https://www.reddit.com/r/learnprogramming/comments/1q59ev1/free_certificates_that_are_actually_worth_posting/
+Number of comments: 20
+Created UTC: 1767675502.0
+
+Post Content:
+Looking for free, legit certificates that add real value on LinkedIn.
+
+Preferably from:
+- recognized platforms
+- skill-based learning (tech, data, backend, ML basics)
+- available without payment
+
+Not looking for random PDFs. Only certificates that recruiters respect.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Rain-And-Coffee
+Score: 59
+Created UTC: 1767676581.0
+Comment: None in my opinion,
+
+Most recruiters have *zero* clue about tech, and most hiring managers care about *experience*.
+
+The value you get out of a certificate is the amount of time you spent studying — the paper (or digital) certificate is pretty meaningless.
+
+A few like CKA (Certified Kubernetes Administrator) are solid, but the cost alone is $445, and you could also just self study.
+
+Comment 2:
+Author: Optimal_House_2897
+Score: 27
+Created UTC: 1767675688.0
+Comment: I'd say Harvard cs50x is a nice free one. And no certificates are of high value in programming. You need a strong portfolio. 
+
+Comment 3:
+Author: Wingedchestnut
+Score: 11
+Created UTC: 1767675936.0
+Comment: Maybe some general certifications from google, but if you're talking technical they're all paid like from the big cloud providers (Azure, AWS,GCP)
+
+Comment 4:
+Author: bocamj
+Score: 11
+Created UTC: 1767690385.0
+Comment: Certifications are sometimes required to even get an interview.  
+Sometimes they're preferred (to get a leg up on the competition).
+
+I've never heard of anyone asking for a certificate.
+
+You know the truth in today's market?  ATSs are doing all the scouring of resumes and a well written resume is more important than a solid candidate; it's more important than experience and certifications.  Your resume has to align perfectly with the job requirements, which means, copy, paste, and **lie**.  I don't care if you don't know APIs.  If they require it, you know it, so put it down.   Go take a crash course so when you get an interview, you can bullshit 'em.  That's the world today.  Get the interview, then pull out your cock.
+
+LinkedIn is used to dig up dirt, to eliminate candidates.  I'll be brief and you can ask if you want me to elaborate, but have a clean profile, recent job history, not too many jobs, remove gaps...
+
+Comment 5:
+Author: aqua_regis
+Score: 6
+Created UTC: 1767693009.0
+Comment: The only certificates that matter are proper University degrees and certificates from companies like Microsoft, Oracle, Google, Cisco, Amazon - and all these are paid (and quite expensive).
+
+The free certificates are not even worth the storage they consume. They are just *attendance/completion certificates* that don't tell anything about actual *competence*.

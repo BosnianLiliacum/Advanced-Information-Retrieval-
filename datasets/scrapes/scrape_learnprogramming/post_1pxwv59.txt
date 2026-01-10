@@ -1,0 +1,48 @@
+Post Title: Where do you personally draw the line between practice code and “GitHub-worthy” projects?
+Author: Wild-Lengthiness-220
+Score: 24
+URL: https://www.reddit.com/r/learnprogramming/comments/1pxwv59/where_do_you_personally_draw_the_line_between/
+Number of comments: 39
+Created UTC: 1766942649.0
+
+Post Content:
+I’m a CS undergraduate and use GitHub for both learning and showcasing work.I’m unsure where to draw the line between small practice projects, learning experiments, and projects that are actually worth keeping public on GitHub.Do you guys upload most things you build, or only more polished projects? From an experienced dev or recruiter perspective, what makes a project “GitHub worthy”?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DTux5249
+Score: 61
+Created UTC: 1766944829.0
+Comment: Github isn't special. It's where you put stuff you don't want rotting on a harddrive, and where you put stuff you're actively editting and working on. 
+
+The question isn't "what goes on Github", the question is "what doesn't?"
+
+Comment 2:
+Author: esaule
+Score: 33
+Created UTC: 1766943025.0
+Comment: I am a CS faculty. If I write it, it goes on github. (Unless it contains personal information, student data, or NDA information.)
+
+Comment 3:
+Author: AmSoMad
+Score: 6
+Created UTC: 1766943180.0
+Comment: I don't draw the line. Code and projects evolve - something you started for fun could be built into a real project or library later. And even small code snippets might be useful for other developers. Some of my most starred/forked projects are just stupid little things I put up - that someone liked and used.
+
+Comment 4:
+Author: Aggressive_Ad_5454
+Score: 4
+Created UTC: 1766953624.0
+Comment: My good GitHub stuff is pinned to my profile page. My less good stuff is on GitHub, but not pinned.
+
+Comment 5:
+Author: Rain-And-Coffee
+Score: 3
+Created UTC: 1766946206.0
+Comment: I upload everything as private.
+
+IMO nobody is really look at your projects on GitHub in any type of detail. 
+
+If they do, the “activity” section is enough for most recruiters.

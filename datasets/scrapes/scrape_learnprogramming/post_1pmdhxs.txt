@@ -1,0 +1,82 @@
+Post Title: import java.util.Scanner;
+Author: Complex_Froyo6378
+Score: 22
+URL: https://www.reddit.com/r/learnprogramming/comments/1pmdhxs/import_javautilscanner/
+Number of comments: 21
+Created UTC: 1765717197.0
+
+Post Content:
+    I recently started learning Java and I'm having trouble understanding how this code works -
+    
+    import java.util.Scanner;
+    
+    class Program {
+    
+    public static void main(String[] args) {
+    
+    Scanner in = new Scanner(System.in);
+    System.out.print("Input a number: ");
+    int num = in.nextInt();
+    
+    System.out.printf("Your number: %d \n", num);
+    in.close();
+    }
+    }
+    
+    Why do I need to know this?
+    
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Only-Percentage4627
+Score: 21
+Created UTC: 1765718181.0
+Comment: You will understand with time, in java everything is a class and you are creating an instance of the scanner class and passing System.in as the parameter to its constructor. 
+
+For now just know when you want the user to input something this is how you do.
+
+Comment 2:
+Author: qwerty3214567
+Score: 5
+Created UTC: 1765717760.0
+Comment: It's a simple example of a program that takes in user input and displays it as output. I would expect whatever tutorial or curriculum you're following to go on to extend it to do more things. 
+
+Most tutorials will start with command line programs like this, and knowing how to get user input is pretty important.
+
+Is there something specific about it you're struggling to understand?
+
+Comment 3:
+Author: peterlinddk
+Score: 5
+Created UTC: 1765721778.0
+Comment: First you have to come to terms with what you mean by "how it works". Do you mean that you don't know what the program does, what each line does, what specific lines do, why it is written the way that it is, how it makes the computer do what it ways, how you run it, how you are supposed to understand it, how you can write something else, and so on and on and on.
+
+Get used to writing a small sequence of steps, preferably on paper, on what you want a program to do, before you write the code - or indeed what you think a program does, when someone else has written it. Remember that most programming languages do only one thing at a time, and even fairly simple tasks like asking the user to enter a number, and printing it back, requires a lot of individual steps.
+
+The program you have written performs these steps:
+
+1. Print a message to the user, asking to "Input a number: "
+2. Reads a number entered by the user
+3. Prints a new message to the user, saying "Your number: " followed by the number the user entered
+
+Then there's a lot of additional "invisible" steps, like storing the number in a variable - creating a "Scanner" that is apparently some tool to get input from the user, and also a lot about importing that and creating a class and some magic incantation "public static void main" that probably doesn't make any sense.
+
+But keep the main focus on the steps you want the program to execute, and gradually understand how to write them, and what extra "invisible steps" you need to add!
+
+And when in doubt about something particular - ask about that particular thing.
+
+Comment 4:
+Author: aqua_regis
+Score: 3
+Created UTC: 1765718117.0
+Comment: From where are you learning? If your source doesn't explain it, it's time to change the source.
+
+Try the MOOC [Java Programming](https://java-programming.mooc.fi) from the University of Helsinki.
+
+Comment 5:
+Author: Danque62
+Score: 2
+Created UTC: 1765718291.0
+Comment: Well, the whole code snippet you shared is how you can have user input in a program. This has a lot of applications or usecases. Like a simple calculator given your input of numbers, and the operation used. Otherwise, you would rewrite the code then compile it, then rewrite then compile it again. Wouldn't it be easier for the program to let you input a number or 2, then the program just calculates based on your paramters?

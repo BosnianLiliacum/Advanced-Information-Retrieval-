@@ -1,0 +1,72 @@
+Post Title: How Come Linux Mint Can Natively Read NTFS Partition With OneDrive Files On Demand, but Other Distros Can't
+Author: CosmoCafe777
+Score: 42
+URL: https://www.reddit.com/r/linuxquestions/comments/1pv296j/how_come_linux_mint_can_natively_read_ntfs/
+Number of comments: 26
+Created UTC: 1766626129.0
+
+Post Content:
+Been through some distro hopping, currently settled with Mint because it's the only distro that can natively read the OneDrive folder I have on an NTFS partition. All other distros I tried stumble on the "invalid reparse point" error. 
+     
+On one distro I spent some time fiddling with the NTFS-3G without success. 
+   
+Currently trying out Zorin OS and the same error. 
+   
+I don't want to sync or anything (I use RClone for that), I just want to be able to read the OneDrive folder just like I can in Mint. 
+   
+What does Mint have/do different from all other distros? 
+   
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: doc_willis
+Score: 21
+Created UTC: 1766627157.0
+Comment: NTFS-3G is being replaced by NTFS3 on many distros. so perhaps thats part of the problem.
+
+Mint and Zorin are both based on and thus closely related to Ubuntu,   so it seems odd that One can do it, and the other cant. 
+
+a Quick google for "invalid reparse point"   points to the NTFS having filesystem issues. But that may be just part of the issue going on.
+
+
+There may be some extra tool or service installed on Mint.
+
+Comment 2:
+Author: abraunegg
+Score: 17
+Created UTC: 1766657171.0
+Comment: Reading the OneDrive folder on Linux - on any distribution requires a very specific version of NTFS-3G tooling.
+
+I describe this in detail here: [https://github.com/abraunegg/onedrive/blob/master/docs/advanced-usage.md#accessing-windows-onedrive-files-from-linux-dual-boot-setup](https://github.com/abraunegg/onedrive/blob/master/docs/advanced-usage.md#accessing-windows-onedrive-files-from-linux-dual-boot-setup)
+
+This is the only method to reliably read OneDrive folder data from NTFS under Linux.
+
+Comment 3:
+Author: JackDostoevsky
+Score: 5
+Created UTC: 1766644937.0
+Comment: i'd run the following command and see what the output is on all distros you've tried:
+
+```zgrep CONFIG_NTFS_FS /proc/config.gz```
+
+this will tell you the state of the native ntfs kernel driver. i can't remember the last time i even looked cockeyed at an NTFS partition (it was certainly prior to 2021 when the ntfs3 kernel driver was released) so i have no idea if this is better than NTFS-3G, but it's certainly _different_.
+
+Comment 4:
+Author: lunchbox651
+Score: 3
+Created UTC: 1766661138.0
+Comment: I can't solve the issue because I'd rather saw my legs off with an old boot than use one drive buuuut... The error refers to a reparse point, which is basically a Symlink in Windows.
+
+Paragraph 2 here may be very beneficial in your problem solving:  
+[https://en.wikipedia.org/wiki/NTFS\_reparse\_point](https://en.wikipedia.org/wiki/NTFS_reparse_point)
+
+Interestingly, OneDrive stores data locally as normal NTFS objects but marks them as a reparse anyway. Not sure I understand why unless it's require for cloud sync.
+
+Comment 5:
+Author: lolkaseltzer
+Score: 2
+Created UTC: 1766652370.0
+Comment: Are the files actually on the NTFS drive, or are they virtual file pointers?

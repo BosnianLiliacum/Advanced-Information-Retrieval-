@@ -1,0 +1,42 @@
+Post Title: Computer just crashed, lost all unsaved txt files. Freaking Kate auto save doesn't work. What is reputable autosave editor?
+Author: arairia
+Score: 16
+URL: https://www.reddit.com/r/linuxquestions/comments/1pogmqu/computer_just_crashed_lost_all_unsaved_txt_files/
+Number of comments: 71
+Created UTC: 1765926525.0
+
+Post Content:
+Title
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Fresh_Sock8660
+Score: 36
+Created UTC: 1765928945.0
+Comment: You guys don't spam ctrl s? 
+
+Comment 2:
+Author: cwo__
+Score: 27
+Created UTC: 1765930893.0
+Comment: Kate will keep your unsaved files, but only in a named session. Just save your session with a name, and set it to always use that session on startup.
+
+Comment 3:
+Author: CodeFarmer
+Score: 20
+Created UTC: 1765926658.0
+Comment: Emacs.
+
+Comment 4:
+Author: Sjsamdrake
+Score: 19
+Created UTC: 1765930103.0
+Comment: Oh good, an Editor flame war. 🍿
+
+Comment 5:
+Author: Ok_Worth_2193
+Score: 17
+Created UTC: 1765929305.0
+Comment: next time just try to save files

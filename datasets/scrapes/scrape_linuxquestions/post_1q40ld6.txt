@@ -1,0 +1,86 @@
+Post Title: waving the white flag
+Author: Dapper_Register_4558
+Score: 31
+URL: https://www.reddit.com/r/linuxquestions/comments/1q40ld6/waving_the_white_flag/
+Number of comments: 47
+Created UTC: 1767558346.0
+
+Post Content:
+windows 10 user, been for a long time, my most favorite os ever, but in its current state i fear that i migth have to switch, and you'll find me dead on the ground before you see me using windows 11
+
+i have a total of 5 questions that i need to be convinced in to switch to linux, and a flash drive but we'll get to that later
+
+1: games: wich ones wont run and wich ones will, i ussualy play very old games (ie: fallout: new vegas) and i dont know how compatability is affected, and on the same vein as that: i use microsoft visual studio code and steam  
+2: terminal: i am initiated in using terminals like cmd and powershell and i am not afraid of them, but is it true that to get anything done i am going to have to use the terminal? like to open something or download something  
+3: distributions: why is every distro attacked by every other one, such tribalism doesnt resonate with me, like what even is an arch or an ubuntu or a mint and why do people hate one and defend another, also that one pic of that really fat guy using a linux arch shirt  
+4: requisites: i have a preety old pc, I5 3210m, intel hd graphics 4000 and 12 gigs of ddr3, and i dont want to use an OS that takes half of that away for the sake of "data collection"  
+5: i am relatively thin, and i have an irl girlfriend that i love dearly, will using linux affect this?
+
+as allways: any help is greatly appreciated and i wish everyone an amazing year 2026
+
+
+Top 5 comments:
+
+Comment 1:
+Author: forestbeasts
+Score: 22
+Created UTC: 1767558827.0
+Comment: Hey welcome!!
+
+Games: you're set. Check out https://protondb.com if you want to be absolutely sure, but basically the only things that don't work these days are the hypercompetitive AAA multiplayer games that have invasive anticheat. Older games? Those'll probably be flawless.
+
+terminal: you don't have to! It's there if you want to, and it can be easier sometimes, but it's generally not _required_ (outside of some system-management stuff, like installing drivers may need it). A lot of times people explain how to do something the terminal way that's also totally possible the GUI way just because it's _easier to explain_, to say "run this command" rather than "open foo, click here, then here...".
+
+distributions: there isn't really all that much hate! Just different distros for different people. Pick one you like. Or pick a desktop environment you like and then pick a distro you like that offers that. Personally we're over in camp Debian, which seems to mostly stay out of all the "my distro is better!" fights. Just quietly sitting in the corner, never breaking, always there.
+
+Old PC, you'll be fine. 12 GB of RAM is plenty (we have 16), you having Intel graphics (and not Nvidia) means you don't have to worry about drivers.
+
+Thinness and girlfriend shouldn't be affected! :3
+
+Come on over, the water's fine!
+
+-- Frost
+
+Comment 2:
+Author: Hrafna55
+Score: 3
+Created UTC: 1767562631.0
+Comment: 1. Games should be fine via Steam. It's only competitive titles with kernel level anti-cheat that flat out won't work.
+
+2. VS Code exists for Linux. Or VS Codium if you don't want Microsoft telemetry. Many other IDEs are available.
+
+3. The terminal is not mandatory but is extremely useful. Software downloads can be done via each distributions software centre app. You can of course use the terminal for this if you prefer.
+
+4. Remember you only hear the loudest voices when it comes to distribution tribalism. Most of us don't care. Just use what's right for you. Distributions are ultimately a collection of software which express the preferred user computing experience and philosophy of the creator. Only a handful of 'parent' distributions exist. See Wikipedia for more information.
+
+5. PC specs will be fine. You can try different distributions and desktop environments at https://distrosea.com/ Even the 'heaviest' distribution will take only 2GB of RAM. Linux distributions almost universally don't do telemetry as it is a kiss of death in the community.
+
+6. Your personal life should be unaffected but this cannot be guaranteed. See below.
+
+GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+
+Comment 3:
+Author: ropid
+Score: 3
+Created UTC: 1767598791.0
+Comment: I tried looking a bit through the other comments and I think no one mentioned that Vulkan might not be working well enough with your hardware. I remember seeing somewhere that Gen 8 "Broadwell" is the first Intel graphics that's supposed to work while your graphics are Gen 7 "Ivy Bridge". You will not be happy if you don't have well enough working Vulkan, you will not be able to play that Fallout New Vegas you mentioned as an example.
+
+You'll want to somehow try out Linux without wiping your Windows installation if that's possible.
+
+Comment 4:
+Author: inkman
+Score: 3
+Created UTC: 1767562694.0
+Comment: Linux is not surrender, it is victory.
+
+Comment 5:
+Author: PerfectlyCalmDude
+Score: 2
+Created UTC: 1767560412.0
+Comment: 1. For games, I still dual boot but I would expect older games to do better than new ones, because there has been more time devoted to getting them to work. Look for Linux ports, too. The Ur-Quan Masters (a.k.a. Star Control 2), Quake 1-3, and some other old titles have Linux binaries. Some other games have been cloned with varying levels of success. Also, Battle for Wesnoth is a Linux original that was ported to Windows and eventually made it onto Steam. Steam has also been ported to Linux, though I haven't messed around with that too much.
+2. You can do a lot of things in the GUI, but if there's something you can't do or find it hard to do in the GUI, there's probably a way to do it in the CLI. Some things are done more efficiently in the CLI, not because the GUI is behind Windows or the Mac, but because a CLI is inherently the more efficient way to do them. Also, with "GUI" there are multiple options for that, whether they are full desktop environments or simple window managers that still qualify as a GUI but not as a desktop environment. The options and functionality vary with each.
+3. Distros are a personal choice, as are the GUIs and applications and shells that people like to use. I know what I like and why. I know there are others who don't like what I like, and like things that I don't. Some people are immature dicks about it, others aren't. If someone is generally respectful and knows the price of admission for their choice and takes responsibility for it, then I and many others will have no problem with them.
+4. Most Linux distros out there won't do data collection unless you opt in to it. Some desktop environments are heavier than others, but most of what eats your resources are your applications. If a browser eats up many resources on Windows for instance, it will also do so on Linux.
+5. Could go either way, honestly.
+
+What I'd recommend you do, if you have the disk space for it, is start up some virtual machines with various distros and various desktop environments in there, and see what you like. One desktop environment per VM for the best experience. Then dual boot with your favorite.

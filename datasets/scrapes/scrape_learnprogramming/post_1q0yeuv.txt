@@ -1,0 +1,79 @@
+Post Title: How do you learn "real coding"?
+Author: DoritoLord27
+Score: 53
+URL: https://www.reddit.com/r/learnprogramming/comments/1q0yeuv/how_do_you_learn_real_coding/
+Number of comments: 46
+Created UTC: 1767251959.0
+
+Post Content:
+I'm a high schooler, and I've been coding for 4-ish years, but now I don't know what to do or learn to advance my coding. I started with Python to learn all the basics, then dove into gamedev with Unity and C#, took AP CSA and scored 5 on the test, and now I even teach Python classes to kids. However, I now have no idea where to go. I did some web development courses on FreeCodeCamp and tried to learn React Native, but I was immediately lost.  Basically, I feel very confident in what I know, but I'm painfully aware that I've only scratched the surface and need to learn a lot more to work as a coder. Everyone always says to build apps and programs or to learn XXX language, but I can never think of a program to make or figure out how the language. Does anyone have advice on how to learn what I need to know for the future?
+
+  
+\*Edit\* I appreciate all the advice, but as I said, when people say "make projects," I have no idea what to make, and I'm just back at square one
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ShvettyBawlz
+Score: 43
+Created UTC: 1767252238.0
+Comment: Make a project. Something you’re interested in. Start small then build on that. The problems you come across will make you research and learn more. Iterate on that process and you’ll have learned “real coding”
+
+Comment 2:
+Author: Successful-Escape-74
+Score: 21
+Created UTC: 1767252458.0
+Comment: You don't need to learn new languages. Just learn to think like a programmer. Design an application that solves a problem or is interesting to you. Break it down into simple components and then assemble them.
+
+Comment 3:
+Author: Haunting-Dare-5746
+Score: 16
+Created UTC: 1767253384.0
+Comment: First, CS50 is a good introduction to what CS has to offer. They're doing CS50 2026 now. [https://www.youtube.com/watch?v=SlqjA04\_dpk&amp;t=4239s](https://www.youtube.com/watch?v=SlqjA04_dpk&amp;t=4239s) You learn SQL, C, Python, HTML/JS/CSS, Networking, and Flask.  
+  
+Generally, you \*alone\* decide what you need to know based on the problems you would like to solve. Nobody else does. The deep knowledge beyond 'checkboxes someone told you to fill' comes from your own independent learning. 
+
+To learn 'real coding', pick something in your life you want to automate, or you wish was better. That's the key. Toy projects are fine, but it is nice to make something someone can use. Say you are in a Discord server, why not make a bot that does some useful task? As you make the bot, let people test the commands, see if they identify errors.   
+  
+The Python classes you teach to kids, what resources do they have to learn? Wouldn't it be nice if they had a pretty website with all the information related to the course? Wouldn't it be nice if they had a Leetcode style interface to do problems at your website? Wouldn't you want to tell them, "Hey kids, look at this website \*I made\*, let me know if there are any problems with it?"
+
+Is there any software you use you think is dated? 
+
+As you make these useful projects, you get a hunger for wanting to improve it incrementally. You identify the necessary technologies to learn as you make these useful projects.
+
+if you were making my website suggestion, the learning could be like this:  
+\---
+
+1. "i wanna make a website. how do i make a barebones site?" -&gt; consult youtube, perhaps watch Harvard CS50 for an HTML introduction, watch other youtubers you like. copy down the examples the lecturers give, maybe afterwards start writing your own barebones site. when you start writing, you consult documentation for intricate questions. learning generally goes: YOUTUBE VIDEO \[brief intro\] -&gt; WRITE CODE -&gt; CONSULT DOCUMENTATION | Repeat.
+
+2. "i wish the site was pretty!" -&gt; learn css, watch a vid on css, put it in your site
+
+3. "damn, this code is getting messy... maybe i need this fancy react.js format to make the webpage snappier &amp; stop repeating myself." -&gt; learn react.js, watch a video, start writing it, consult documentation as needed
+
+4. "i wish the kids had a pretty editor they could write in... oooh what's this, monaco editor? i'll use it in my project."
+
+5. "what's this tailwind css thing i've heard about? it could make making my site prettier easy, lets try it."
+
+6. "hmmm... i want my site to have a backend so they can submit code." \*google\* "oh, what's this, Judge0 is a framework that allows me to implement a judging system for the coding problems students submit?" "hmm... flask is good for site backends? lemme try it out!"  
+\---
+
+Learn by DOING... there are 'buzzwords' to know, such as: Docker, Tailwind CSS, PostgresSQL, CI/CD, Flask, Django, pandas, numpy, scikit-learn. But the main way to learn these things is writing useful software you care about
+
+Comment 4:
+Author: wilbrownau
+Score: 8
+Created UTC: 1767254559.0
+Comment: Build a membership site with multiple priced levels and restricted content.
+
+That'll expose you to real world issues to solve like logins, profile, dashboard, content control, payment gateway, user roles and capabilities etc.
+
+Comment 5:
+Author: shadow-battle-crab
+Score: 7
+Created UTC: 1767253342.0
+Comment: What you are doing is 'real coding' as far as I am concerned, and I'm 20 years into my career as a senior developer.  Those are real, top teir skills.
+
+I would keep persisting at javascript.  You need to get your head around promises, and async/await, and the event loop to really understand javascript. As far as react, I fiind react to be too daunting of a skill to learn when you are just learning javascript from scratch - start a little simpler and learn how the DOM works in a website, and how you can manipulate the DOM to create dynamic effects on a web page such as responding to clicks and looking up autocomplete search results with ajax.
+
+What you have to understand is react is a solution to the difficulty of doing the basic DOM manipulation when programs start getting more complex, but it itself is just working with basic DOM manipulation under the hood.  When you understand what it is doing under the hood then you are able to better understand why it works the way it works.

@@ -1,0 +1,75 @@
+Post Title: Switching from MacOS to Linux (possibly Zorin or Ubuntu) - tips needed
+Author: magicdude4eva
+Score: 11
+URL: https://www.reddit.com/r/linuxquestions/comments/1pwvj45/switching_from_macos_to_linux_possibly_zorin_or/
+Number of comments: 21
+Created UTC: 1766834329.0
+
+Post Content:
+I am switching to a Framework 16 and have "de-Appled" myself to the extend that e-mail/calendaring/addressbook is already with [mailbox.org](http://mailbox.org) and I am using Thunderbird on Mac.
+
+In the next few weeks I should be getting the FW16 and plan to either install Zorin or just plain Ubuntu. I am familiar with Linux and the command-line, so no issue to go "terminal" if needed.
+
+For my main-driver on Linux I will do development and want to pick up on Godot. My FW16 will have 2x2TB NVME and 32GB RAM. I am looking for some tips:
+
+1) I want to continue using my iPhone (until something decent non-Google comes out) - how should I deal with iPhoto (just using Immich on my Synology and Photosync)?
+
+2) Currently I use TimeMachineBackup to my Synology. What are recommended "configure-and-forget" backup-tools which run in the background?
+
+3) How would you partition the drives? On my Mac I have about 300GB of documents, music, code, email etc. I am not sure if I should even dual-boot with Windows (I would hardly use it as I mostly game on Xbox anyhow - at best I would have a dualboot into SteamOS / Bazzite ....)
+
+4) What are some "must-have" apps you are using - at the moment I will just use Thunderbird for productivity/email, 1Password as I have a family-account, Brave, Signal, Telegram, Discord.
+
+5) To the iPhone users: Anything you miss / did to improve your Linux experience? (I do not care about iMessage being available on my laptop)
+
+Any other tips/tricks will help me...
+
+
+Top 5 comments:
+
+Comment 1:
+Author: beatbox9
+Score: 2
+Created UTC: 1766835754.0
+Comment: I mainly use both Ubuntu and macOS (along with some others).
+
+1. If you mean backups, Immich
+2. Deja Dup or Timeshift.  Deja dup is more for your personal files /home (like if you reinstall clean but want all your files &amp; preferences but new system files).  Timeshift is a bit more complete for the system itself.  IIRC, I use Deja Dup?  I dunno, I've configured it, it works in the background, and I've already forgotten.
+3. Up to you.  I'd suggest root and home on separate partitions.  Beyond that, it's whatever.  There are some interesting options too, like lvm, where you can expand disks across multiple physicsl disks (eg. you add a hard drive and just want to expand).  Pros &amp; cons to each.
+4. Really depends on what you use the computer for.  Because I actively use both MacOS and Ubuntu, I've configured gnome to look &amp; feel almost identical to macOS, with the exception of global menu (see screenshot below).  I also do a lot of cross-platform work so interoperability, path mapping to servers, etc. are all important to me.  I tend to prefer flatpaks for installs; and I try to use apps that are available on both mac and linux.  YMMV
+5. LocalSend is essentially AirDrop and works cross platform, across pretty much every OS/platform I use.  it's at least: Linux/Mac/Windows/iphone/ipad/android.  You can send/receive files, copy/paste text, etc.
+
+https://preview.redd.it/m0y8epr9iq9g1.jpeg?width=1279&amp;format=pjpg&amp;auto=webp&amp;s=8295bc4ae3c4586ae1d3d3947ec542efb7dbb4b4
+
+Comment 2:
+Author: buttershdude
+Score: 1
+Created UTC: 1766863413.0
+Comment: Congratulations on de-appling.  We did it in 2012 and never looked back.  I wish we hadn't wasted all the money and time we did with them in the first place.
+
+2. Deja Dup is good, but make sure you are using a newer version that uses Restic in the background.
+
+4. And as far as commercial software goes, Zoom, Spotify and Obsidian all have native native linux apps, which are things I use.
+
+Tips:  Stick with a Debian-based distro (which Zorin and Ubuntu are, so good).  But separately from the distro, consider which DE you like best and beofre you nest in a particular distro with a particular DE, put live installs on a thumb drive and try out all the DE's to see which one you like best before you nest.
+
+Comment 3:
+Author: gboone42
+Score: 1
+Created UTC: 1766846430.0
+Comment: For Photos, I back up my entire library to iCloud and use the web client on my Linux computer. Not perfect but I don’t use it for much beyond browsing and sharing.
+
+Comment 4:
+Author: zeeee6
+Score: 1
+Created UTC: 1766834774.0
+Comment: Zorin is for people coming from windows. So does not make much sense for you. You will propably like best something with gnome like Ubuntu or fedora.
+
+Comment 5:
+Author: 1800-5-PP-DOO-DOO
+Score: 1
+Created UTC: 1766868462.0
+Comment: If you are a dev seriously consider Universal Blue
+
+
+It's specifically made for devs coming from Apple. Has Homebrew even. 

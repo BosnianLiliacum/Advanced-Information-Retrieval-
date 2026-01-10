@@ -1,0 +1,64 @@
+Post Title: Fonts for Linux
+Author: Merthod
+Score: 21
+URL: https://www.reddit.com/r/linuxquestions/comments/1q63ufm/fonts_for_linux/
+Number of comments: 11
+Created UTC: 1767754887.0
+
+Post Content:
+Hi, I recently moved into Debian 13 / KDE from Win11, and I'm adapting into its ways.
+
+I wonder, is there a cool font selection pack that has equivalents for the classic Windows fonts and maybe some extra cool fonts, especially for document creation.
+
+I know I can go to Google Fonts or whatever and download each one, but here in Linux someone seems to already curated and packed stuff for us, so I wonder if there's anything worthwhile in this area.
+
+Thanks.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ipsirc
+Score: 12
+Created UTC: 1767755116.0
+Comment: &gt;I wonder, is there a cool font selection pack that has equivalents for the classic Windows fonts 
+
+[https://packages.debian.org/trixie/ttf-mscorefonts-installer](https://packages.debian.org/trixie/ttf-mscorefonts-installer)
+
+&gt;I know I can go to Google Fonts or whatever and download each one, but here in Linux someone seems to already curated and packed stuff for us
+
+[https://packages.debian.org/trixie/fonts-roboto](https://packages.debian.org/trixie/fonts-roboto)
+
+Comment 2:
+Author: Barafu
+Score: 4
+Created UTC: 1767772689.0
+Comment: Many fonts are available in your distro's repositories, and if you are not a designer you are unlikely to need others. Some concepts you should know about: 
+
+* Noto is a family of fonts that cover all languages in the world. Install them if you don't want to see blank squares instead of Vietnamese characters on the Web. 
+
+* Metric-replacement fonts are fonts where every letter has the same size as in a popular but private fonts. You need those to make sure that when you open a complex document written in restricted fonts, the formatting don't shift because words have different size now. Croscore family of fonts replace old fonts as well as Calibri (the default M$ font). Liberation family is more popular but only has old fonts. 
+
+* Nerd fonts are fonts with extra IT-related glyphs. Usually made by taking an existing font and adding symbols to it and "Nerd" suffix to the name. You need one if you want to have some text-based toolbars or complex console decorations. Meslo is among the popular. 
+
+* From me, a recomendation: Academia font for reading large texts, like books. It seems really weird at first, but get used and you will see that its tendency to form conrast thick black lines of text really helps eyes to follow the lines. I have it on e-book reader.
+
+Comment 3:
+Author: Nollie37
+Score: 3
+Created UTC: 1767777602.0
+Comment: What you could have done is to simply make a copy of the fonts folder in windows and put that in the .local/share/fonts directory in debian.
+
+Comment 4:
+Author: jr735
+Score: 3
+Created UTC: 1767756361.0
+Comment: In addition to what u/ipsirc points out, there are many fonts available in the repositories and elsewhere. Fonts can be added as needed. For a lot of printing, I use Courier Prime, since MS's version of Courier is crap and, contrary to their claim, doesn't belong to them.
+
+Comment 5:
+Author: aieidotch
+Score: 3
+Created UTC: 1767761044.0
+Comment: create you own. apt install fnt will help you
+
+my favourite for terminal: fonts-agave

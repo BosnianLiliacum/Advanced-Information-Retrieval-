@@ -1,0 +1,56 @@
+Post Title: In which ways does operating Linux in the cloud differ from Linux on prem?
+Author: StatementOwn4896
+Score: 14
+URL: https://www.reddit.com/r/linuxquestions/comments/1q6t9bg/in_which_ways_does_operating_linux_in_the_cloud/
+Number of comments: 6
+Created UTC: 1767823630.0
+
+Post Content:
+Looking for general advice since I was today years old when I found out you’re not supposed to use LVM in cloud and I’m still trying to wrap my head around that one since I love LVM (I know I know; duplicate volume groups are bad). Are there any other general things you should or shouldn’t do?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: lunchbox651
+Score: 7
+Created UTC: 1767841539.0
+Comment: Cloud instances are just VMs at the end of the day.  
+   
+The same pros and cons apply to cloud as virtualization. I've never heard that you shouldn't use LVM in cloud (couldn't find anything in Azure/AWS/OCI docs but happy to be corrected if you have something) and I've definitely seen people do it, but there's not as much benefit with LVM in cloud due to being on virtual disks.
+
+Comment 2:
+Author: inkman
+Score: 6
+Created UTC: 1767841804.0
+Comment: Isn't LVM for managing hardware partitions?  If I'm paying for cloud storage, I'm not doing that work.   Let them worry about it.
+
+Comment 3:
+Author: PaintDrinkingPete
+Score: 2
+Created UTC: 1767839927.0
+Comment: I’ve never really thought much about it…when running in cloud you’re usually working a lot more with vm images, and lot of the advantages of using LVM are somewhat rendered moot…and depending on your cloud provider, you’re usually not even able to setup LVM at launch because you’re not running through the traditional installer, but just providing configuration options that are applied at first boot.
+
+From my point of view though, there’s not so much a huge difference in the operation of a Linux server itself in the cloud vs on-prem…the bigger differences are in how you’re managing the virtual infrastructure they’re running on and interacting with.
+
+Comment 4:
+Author: ptoki
+Score: 2
+Created UTC: 1767859334.0
+Comment: There may be hidden aspects of a vm running in the cloud.
+
+Memory balooning, overprovision, occassional freezes, low spec cpu or micro stuttering.
+
+LVM on a VM may add additional layer of complexity making the io operations marginally slower. But that is usually not a reason to not use it.
+
+There is no big dont do reasons/aspects for VM use in cloud.
+
+Just remember, its not under your control. If someone fucks up your vm and you dont have a backup you have nothing.
+
+Comment 5:
+Author: stormdelta
+Score: 2
+Created UTC: 1767855015.0
+Comment: There's a bunch of different ways Linux gets used in a cloud environment.
+
+E.g. for me, professionally almost everything is just kubernetes these days so it's not even a VM, it's containers.

@@ -1,0 +1,50 @@
+Post Title: Rust Coreutils 0.5.0: 87.75% compatibility with GNU Coreutils
+Author: TheTwelveYearOld
+Score: 512
+URL: https://github.com/uutils/coreutils/releases/tag/0.5.0
+Number of comments: 133
+Created UTC: 1765738541.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: jkpeq
+Score: 198
+Created UTC: 1765741889.0
+Comment: That's been crazy fast, kudos to them
+
+Comment 2:
+Author: Megame50
+Score: 124
+Created UTC: 1765743620.0
+Comment: Maybe they'll figure out how to sort soon.
+    
+    $ print -l a e i o u á é í ó ú | sort | paste -sd$'\x20'
+    a á e é i í o ó u ú
+    $ cargo build --release
+    $ print -l a e i o u á é í ó ú | ARGV0=sort ./target/release/coreutils | paste -sd$'\x20'
+    a e i o u á é í ó ú
+
+Comment 3:
+Author: HieladoTM
+Score: 41
+Created UTC: 1765742625.0
+Comment: I wonder if, when the time comes, Linux Mint will adopt Uutils or stick with GNUutils.
+
+What do you think?
+
+Comment 4:
+Author: ad-on-is
+Score: 37
+Created UTC: 1765750175.0
+Comment: If distros adopt Rust Coreutils, will we have to call it Rust/Linux or Ruinux in the future?
+
+Comment 5:
+Author: lKrauzer
+Score: 21
+Created UTC: 1765740772.0
+Comment: Been using it on Kubuntu 25.10, no issues so far.

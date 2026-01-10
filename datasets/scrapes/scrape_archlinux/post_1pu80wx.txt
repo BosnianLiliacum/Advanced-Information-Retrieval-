@@ -1,0 +1,64 @@
+Post Title: Arch Best Practices?
+Author: StockSalamander3512
+Score: 35
+URL: https://www.reddit.com/r/archlinux/comments/1pu80wx/arch_best_practices/
+Number of comments: 43
+Created UTC: 1766531536.0
+
+Post Content:
+Hi all, new to Arch, installed a few days ago, and so far (knock on wood), it’s going great.  I’ve got the system set up with i3/polybar/picom/alacritty, Timeshift takes a snapshot every time I update, which will probably be once or twice a week, and Restic is saving my /home to a remote file server.   It’s on a MBP a1502, and the wifi card crapped out, so it’s running WiFi off of a USB dongle.  I had to sort out a few of the normal Apple hurdles, and disabled the WiFi adapter, but it feels pretty sturdy out of the gate.
+
+Is there anything I’m missing, or any advice that anyone has beyond what I’ve already set up?  It feels like, if you take the time and set it up properly, you can manage some of the future problems in advance?
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: intulor
+Score: 47
+Created UTC: 1766531639.0
+Comment: Never sit down at your computer with your pants on.
+
+Comment 2:
+Author: boomboomsubban
+Score: 43
+Created UTC: 1766531716.0
+Comment: https://wiki.archlinux.org/title/General_recommendations
+
+Comment 3:
+Author: archover
+Score: 16
+Created UTC: 1766533357.0
+Comment: Kudos for restic against a remote target. 
+
+Key wiki articles to read: general recs, pacman, security, general troubleshooting, chroot. Avoid partial updates. 
+
+Impressed! Welcome to Arch and good day.
+
+Comment 4:
+Author: TwoWeaselsInDisguise
+Score: 15
+Created UTC: 1766538532.0
+Comment: https://wiki.archlinux.org/title/General_recommendations
+
+
+https://wiki.archlinux.org/title/System_maintenance
+
+
+https://wiki.archlinux.org/title/General_troubleshooting
+
+
+https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported
+
+
+Happy reading and welcome to Arch.
+
+Comment 5:
+Author: luthis
+Score: 8
+Created UTC: 1766543597.0
+Comment: If you don't understand systemd yet, put that on your list. 
+
+Also make sure you have a usb with arch on it, so when things break you can still arch-chroot in and fix things.

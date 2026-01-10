@@ -1,0 +1,54 @@
+Post Title: Why is arch wiki so… complete?
+Author: epicnicity
+Score: 505
+URL: https://www.reddit.com/r/archlinux/comments/1pnk5t9/why_is_arch_wiki_so_complete/
+Number of comments: 110
+Created UTC: 1765835561.0
+
+Post Content:
+Whenever I need help with something about any program, I refer to the arch wiki, and I don’t even use arch, I use NixOS.
+
+How come the arch wiki has usage, documentation, troubleshooting and faq about programs, when the programs themselves should have provided this documentation? For example, Waydroid has its own wiki, but if you go to arch wiki page of Waydroid, it not only shows how to install it, but also its different commands, arguments and features that can be enabled. And I’m not complaining, I’m amazed how much work the community has put into it!
+
+You’d expect for a distro’s wiki to only tell you how to install the program on the distro and some workarounds that you might run into (kinda like NixOS wiki), but the arch wiki does more than that, and that’s why it ends up feeling like the default Linux wiki.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: combinatorial_quest
+Score: 302
+Created UTC: 1765835749.0
+Comment: Because its an actual wiki, anyone can submit additions/changes to it for consideration. So after 2 decades of contributions, its become rather good :)
+
+note: arch is about 23 years old, I honestly don't know when the wiki was introduced 😅
+
+Comment 2:
+Author: AnsibleAnswers
+Score: 131
+Created UTC: 1765836001.0
+Comment: Nerds do nerd things, like write documentation for free.
+
+Comment 3:
+Author: Lord_Of_Millipedes
+Score: 95
+Created UTC: 1765836255.0
+Comment: two decades of concentrated autism. While Linux is growing recently it is still a nerd thing, and arch is even nicher and wikis by having a formal language and free editing favor the type of person that likes to infodump. The Arch wiki being big led to people who want to infodump about Linux favoring it over others, which made it even bigger and that cycle grew it to one of the best, most comprehensive resources on Linux in general.
+
+Comment 4:
+Author: mips13
+Score: 41
+Created UTC: 1765837153.0
+Comment: That's just the way Arch is, Debian recently said they are taking lessons. There has been two awesome wikis, Arch &amp; Gentoo, gentoo unfortunately suffered a big data loss some time ago. The old Ubuntu forums were good back in the day but they killed that off properly.
+
+Comment 5:
+Author: Plasma-fanatic
+Score: 34
+Created UTC: 1765836889.0
+Comment: 1. It's free of AI
+2.  Actual humans with actual experience using Arch and other distros contribute. Lots of them.
+3. It's free of AI
+4. They (the lots of contributors)  know that Arch is just a collection of software like any other distro and write specifically about the thing(s) they know best, not about anything Arch-specific unless that's their area of expertise. There isn't much that even is Arch-specific when you get right down to it.
+5.  It's free of AI
+6.  It's been around for a long long time, so the accuracy and quality of information has been distilled to an unmatched level of usefulness.
+7.  It's free of AI

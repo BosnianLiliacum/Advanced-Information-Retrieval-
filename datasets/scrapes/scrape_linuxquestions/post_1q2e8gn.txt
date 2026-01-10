@@ -1,0 +1,63 @@
+Post Title: Linux projects
+Author: Fabulous-Remote8050
+Score: 11
+URL: https://www.reddit.com/r/linuxquestions/comments/1q2e8gn/linux_projects/
+Number of comments: 16
+Created UTC: 1767396567.0
+
+Post Content:
+Familiar with various flavours of Linux, but wondering what projects people recommend to progress further in general. Thanks
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AvailableGene2275
+Score: 6
+Created UTC: 1767397518.0
+Comment: I mean it dependes but in general most diestros are bout 80% the same
+
+Comment 2:
+Author: tahaan
+Score: 5
+Created UTC: 1767398188.0
+Comment: \#1:  
+Prometheus + Grafana and then set up all kinds of monitoring and alerting
+
+\#2:  
+Wazuh - and learn about vulnerabilities and move the configuration beyond just the basic default you get with installation.
+
+\#3: Harden security further.  rkhunter, tripwire, and lynis.  Fix everything you can that is highlighted in the lynis report and you will learn more about linux than any other way.
+
+Comment 3:
+Author: WendlersEditor
+Score: 5
+Created UTC: 1767401603.0
+Comment: It depends on your goals and what you want to use Linux for. If you just want to be a desktop linux user then simply install a distro and use it and configure/fix things as you go.
+
+
+I'm not a sysadmin or networking expert by any means, but to develop some general Linux sysadmin skills you might check out the Linux Bible by Christopher Negus: 
+
+
+https://www.wiley.com/en-us/Linux+Bible%2C+11th+Edition-p-9781394317462
+
+
+I used an earlier version of this years ago, it will take you through the basics of installation, using the command line, local admin, and server admin/security.
+
+Comment 4:
+Author: jerrygreenest1
+Score: 4
+Created UTC: 1767396954.0
+Comment: What do you mean «further progress»
+
+Comment 5:
+Author: Adept-Paper9337
+Score: 3
+Created UTC: 1767422463.0
+Comment: if you are already aware on linux basics, i'd suggest these
+
+* run your own home server
+* write a systemd service from scratch and manage its lifecycle properly
+* stress test a machine (cpu, memory, io)
+* build a simple logging + alerting setup and trigger failures
+* tune kernel / sysctl settings

@@ -1,0 +1,56 @@
+Post Title: Not an endorsement, but Ableton making a hackable Linux-based portable DAW and even outright showcasing it as a use case for the RPi CM wasn't exactly on my bingo card
+Author: Practical-Hand203
+Score: 507
+URL: https://i.redd.it/h5i8dyr0jmag1.png
+Number of comments: 48
+Created UTC: 1767224155.0
+
+Post Content:
+You don't even need to crowbar your way into it, you can [add an ssh key directly via the web UI of the device](https://imgur.com/a/c2MOCK8), root into it, and install community-supplied software (may void the warranty).
+
+As noted, not an endorsement, just appreciation; I don't own the device and can't comment on how well it works or whether it is worth the $449 price tag. It's just cool to see this outside of squarely open products where modularity, open software, etc. is the entire selling point.
+
+[Raspberry Pi CM showcase video](https://www.youtube.com/watch?v=G85AzOSbs7M)
+
+[GitHub of extending-move tools](https://github.com/charlesvestal/extending-move)
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Straight-Opposite-54
+Score: 106
+Created UTC: 1767236564.0
+Comment: &gt; may void the warranty
+
+It's been ruled (in the US at least) that software modification cannot void warranty unless it objectively results in hardware damage (which in itself is nearly impossible to prove).
+
+"Installing software" can barely be considered software modification as it is lol
+
+Comment 2:
+Author: oneword_dev
+Score: 38
+Created UTC: 1767232547.0
+Comment: That's dope! Literally just switched to Linux for music production using Reaper. No complaints so far! I do have to see if some of my plugins will install out of curiosity, but I really plan on switching to open source plugins completely at some point.
+
+Very happy that big companies like Ableton and Valve are taking Linux seriously in challenging computing tasks like DSP and 3D Graphics respectively.
+
+Comment 3:
+Author: Irsu85
+Score: 25
+Created UTC: 1767229158.0
+Comment: Wait does that mean Ableton will be able to be running on Linux soon? If thats the case my ex-teacher would love this
+
+Comment 4:
+Author: jikt
+Score: 19
+Created UTC: 1767224347.0
+Comment: Woah!
+
+Comment 5:
+Author: non-existing-person
+Score: 15
+Created UTC: 1767229007.0
+Comment: It's always worth to promote companies that treat user with respect. I have no need for it but it's nice to see some companies do make products that are YOUR upon purchase.

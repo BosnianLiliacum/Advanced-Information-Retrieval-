@@ -1,0 +1,97 @@
+Post Title: How to make Linux more safe for the average user?
+Author: flomuc2024
+Score: 68
+URL: https://www.reddit.com/r/linuxquestions/comments/1pqmtyo/how_to_make_linux_more_safe_for_the_average_user/
+Number of comments: 107
+Created UTC: 1766155450.0
+
+Post Content:
+I have just watched a youtube video about Linux safety that comes with a standard out-of-the-box installation.
+
+[https://youtu.be/4heoDsEPKvk?si=wGUPPOPbvbFijX2D](https://youtu.be/4heoDsEPKvk?si=wGUPPOPbvbFijX2D)
+
+"This video delivers a brutal but honest verdict: for the average user, Linux security is a dangerous illusion. We expose how the very tools meant to protect — from iptables to LSM — are often too complex, too fragile, and architecturally outdated. It's not just about misconfigurations: it's about flawed design choices baked into the system. **Security in Linux isn't automatic — it demands deep expertise. And that makes it inaccessible and unsafe for most**."
+
+Some arguments in the video and the last sentence I highlighted resonated with me. Unfortunatley the video does not offer solutions / advice for the average user - like me - to make Linux more secure.
+
+Therefore I am asking this group what your advice would be for an average Linux user without deep expertise? What steps could I take to make my Linx system more secure that can be performed by someone like me who has no deep technical expertise.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 68
+Created UTC: 1766157269.0
+Comment: &gt;Therefore I am asking this group what your advice would be for an average Linux user without deep expertise? What steps could I take to make my Linx system more secure that can be performed by someone like me who has no deep technical expertise.
+
+Linux is reasonably secure out-of-the-box, but anyone who delegates security to an operating system, thinking that the operating system is a substitute for common sense, is a fool.
+
+I suggest that you follow standard best practices:
+
+* Keep your system updated to patch known vulnerabilities.
+* Set up a firewall to allow only necessary traffic.  Use the "uncomplicated firewall" settings.
+* Use strong passwords and don't repeat the passwords.
+* Use a password manager.
+* Enable 2FA.
+* Download/install applications from *vetted* repositories.
+* Don't click on untrusted links or open attachments from ads or unknown senders.
+* Disable any services that you don’t use to reduce the attack surface of your system.
+* Use 3-2-1 backup (three data sets, two of which are backups, one of which is offsite or online).
+* Keep an eye out for suspicious activity, and check anything that seems abnormal.
+
+I personally think that setting up my system so that my user account does not have root/administrator privileges is a good practice, so I do so.  I don't encrypt my drives; others recommend doing so.  I assume that you are using a router for internet access and that you are using the router's firewall.
+
+The bottom line is that keeping a system secure is 99% common sense.  If you follow best practices, chances are that you will never have an issue. If you don't follow best practices, well, have fun.
+
+My best and good luck.
+
+Comment 2:
+Author: GhostInThePudding
+Score: 44
+Created UTC: 1766156380.0
+Comment: I stopped listening when it claimed that Debian sacrifices timely security updates for stability. Debian doesn't provide FEATURE updates, which is what makes it stable. Debian has an excellent record of timely security updates.
+
+Base Linux is going to be more secure than base Windows for most users. But if you intentionally go around running random scripts and stuff, sure, like Windows you can be in trouble and Linux doesn't have a default AV service to catch the dumbest of mistakes for you.
+
+Comment 3:
+Author: SufficientAbility821
+Score: 40
+Created UTC: 1766157590.0
+Comment: Here is a good learning curve / efficacy proposal for the average Linux user.  
+\- **ufw** (a.k.a uncomplicated firewall). Easy to install and to configure.  
+\- **AppArmor**. Some distribution comes preinstalled with it, for the others, the installation process together with the installation of shared generic profiles for the most common desktop applications is fairly easy.
+
+This with an updated system should guarantee a decent level of protection
+
+Comment 4:
+Author: doc_willis
+Score: 35
+Created UTC: 1766156262.0
+Comment: "brutal but honest", but is it actually true?
+
+
+I see way way too many click bait videos about Linux over the years.
+
+
+&gt; Unfortunatley the video does not offer solutions / advice for the average user - like me - to make Linux more secure.
+
+
+
+
+all I can say is that makes me question the accuracy of the video.
+
+
+-----
+
+
+personally, I basically stay with the defaults for my distribution, I rarely see the need to do anything else to secure the system further.
+
+
+But my use case is not the same as yours..
+
+Comment 5:
+Author: Asland007
+Score: 31
+Created UTC: 1766157632.0
+Comment: LOL. You should not believe everything you watch on YouTube.

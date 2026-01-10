@@ -1,0 +1,64 @@
+Post Title: PC crashes instantly when connecting Bluetooth headphones
+Author: Kcpr2137
+Score: 7
+URL: https://www.reddit.com/r/archlinux/comments/1q536im/pc_crashes_instantly_when_connecting_bluetooth/
+Number of comments: 21
+Created UTC: 1767658995.0
+
+Post Content:
+[FIXED] problem is related to gnome upgrade, after switching to different graphical interface (plasma in my case) both headphones and microphone are usable. Also, downgrading wireplumber and libwireplumber to 0.5.12 solves the issue. 
+
+Hi everyone, I have a persistent issue with my Bluetooth headphones (Sony WH-1000XM5) since few hours. The moment I connect them, my PC hard crashes / freezes, no logs are written, no journal entries, it’s like an instant kernel panic. It used to work before 
+
+System info:
+- Kernel: 6.18.2-arch2-1 (tried downgrading from newer 6.18.3 and LTS 6.12.60, still crashes)
+- PipeWire / WirePlumber: running latest versions
+- Intel Bluetooth hardware with linux-firmware 20251125-2
+
+What I’ve tried:
+- Downgrading PipeWire / WirePlumber
+- Downgrading kernel (both latest and LTS versions)
+- Reinstalling Intel Bluetooth firmware (linux-firmware)
+- Checking journalctl -b -1 (no logs are recorded before the crash)
+- Booting with different kernels (still crashes)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Responsible-Sky-1336
+Score: 3
+Created UTC: 1767659256.0
+Comment: Halo
+
+Do you have both of these 'bluez', 'bluez-utils'
+
+Comment 2:
+Author: Epistaxis
+Score: 3
+Created UTC: 1767711710.0
+Comment: I had exactly the same problem a few days ago, on two different machines, but downgrading pipewire and wireplumber to 0.5.7-1 resolved it for me twice.
+
+Sorry if this doesn't help OP, but maybe others with the same problem can try it first.
+
+LATE EDIT: 0.5.12-1 also works for me, just not 0.5.13-1
+
+Comment 3:
+Author: DevilGeorgeColdbane
+Score: 3
+Created UTC: 1767714482.0
+Comment: I had the same yesterday, glad to hear I'm not the only experiencing this.
+
+Comment 4:
+Author: ang-p
+Score: 2
+Created UTC: 1767660676.0
+Comment: Can you connect any other audio device?  
+
+What does the journal say about the bluetooth hardware / software stack?
+
+Comment 5:
+Author: xFreeZeex
+Score: 2
+Created UTC: 1767706353.0
+Comment: Just had the same happen to me on my work laptop after running an update (momentum wireless 4 headphones), so it seems to be a recent change since I last updated that laptop shortly before christmas. Haven't had the time to look into it further yet, but wondering, are you using gnome? That update broke some other gnome related stuff for me at least, I use arch with bspwm and no DE on my home PC, will try how it looks there after updating later.

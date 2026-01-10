@@ -1,0 +1,34 @@
+Post Title: Inkscape 1.4.3 is out!
+Author: litelinux
+Score: 724
+URL: https://i.redd.it/wwjhkpro2l9g1.png
+Number of comments: 23
+Created UTC: 1766770184.0
+
+Post Content:
+**Inkscape 1.4.3 is out!** Update to benefit from over 120 bug and crash fixes, and more than 20 improved translations.
+
+To learn more, visit
+
+[https://inkscape.org/news/2025/12/26/bugs-banished-inkscape-143-is-out/](https://inkscape.org/news/2025/12/26/bugs-banished-inkscape-143-is-out/)
+
+
+Top 3 comments:
+
+Comment 1:
+Author: ripndipp
+Score: 87
+Created UTC: 1766775867.0
+Comment: Thank you for your hard work fellow developers
+
+Comment 2:
+Author: lonelyroom-eklaghor
+Score: 1
+Created UTC: 1766876552.0
+Comment: Cool stuff; made a keyboard layout design right now using Inkscape
+
+Comment 3:
+Author: [deleted]
+Score: -29
+Created UTC: 1766773046.0
+Comment: [removed]

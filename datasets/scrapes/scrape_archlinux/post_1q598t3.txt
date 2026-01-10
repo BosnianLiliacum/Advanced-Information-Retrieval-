@@ -1,0 +1,45 @@
+Post Title: 6.18 RT kernel?
+Author: This-Award-3850
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1q598t3/618_rt_kernel/
+Number of comments: 7
+Created UTC: 1767675008.0
+
+Post Content:
+Hey there! I want to use the RT kernel on my system for low latency audio and stuff. I installed the linux-rt package on the repos, but the latest version of that is 6.14 (which for me is enough to \*not\* use it). Is there any way to patch the kernel so I get 6.18 with RT? Or is there just no point in using it, that being the reason why it is not updated to 6.18?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Gozenka
+Score: 12
+Created UTC: 1767676847.0
+Comment: https://gitlab.archlinux.org/archlinux/packaging/packages/linux-rt/-/issues/2
+
+It seems to be just maintainer time, unless there is a more technical blocker for packaging the 6.18 realtime patchset on Arch. 6.18 is currently in the extra-testing repo though and I guess would be out some time soon.
+
+I personally do not know about audio use-case, but Pipewire, Jack and specific applications can run realtime too, and this is even recommended for Pipewire as an optional dependency.
+
+Perhaps the realtime kernel is not that useful? And it comes with drawbacks too; probably higher power usage, less throughput. All to get better latency, which may not even be noticeable. But perhaps it is noticeable; as I mentioned I have no experience with it.
+
+Then, using an older kernel version is no big deal neither. If you think you want `linux-rt`, you may go with 6.14. It is currently less than 1 month old. An older kernel version would mainly be a concern for security, and that does not apply to every user in a serious way. I personally go without a `pacman -Syu` for more than a month sometimes.
+
+https://wiki.linuxfoundation.org/realtime/start
+
+To add, it seems 6.12 is the "stable version" for the kernel realtime patchset right now. I guess it comes delayed, and the maintainer may be deciding when to package a new `linux-rt` depending on the state of the development version. (Just my speculation.)
+
+Comment 2:
+Author: Grand-Rice8331
+Score: 11
+Created UTC: 1767681138.0
+Comment: The realtime kernel has been an option in the mainline kernel since 6.12. This means that you can compile your own kernel using that option and get the feature:
+https://wiki.archlinux.org/title/Kernel/Arch_build_system
+
+I recommend using make menuconfig to edit the config and searching for CONFIG_PREEMPT_RT to find and enable it.
+
+Comment 3:
+Author: Jristz
+Score: 3
+Created UTC: 1767681226.0
+Comment: There is a lts version of the rt too

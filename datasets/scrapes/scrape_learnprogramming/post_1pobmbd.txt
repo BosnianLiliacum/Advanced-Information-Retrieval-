@@ -1,0 +1,94 @@
+Post Title: Programming is a trade. We make programs for people.
+Author: Aggressive_Ad_5454
+Score: 166
+URL: https://www.reddit.com/r/learnprogramming/comments/1pobmbd/programming_is_a_trade_we_make_programs_for_people/
+Number of comments: 29
+Created UTC: 1765914455.0
+
+Post Content:
+I've answered a few questions in the last few days about stuff like "what language should I learn" and "should I learn to code?"
+
+With respect to the askers, those questions are wrong-headed. Code isn't the hard part. On this topic, here is my
+
+&lt;rant&gt;
+
+I reply that we programmers use languages as tools. We use those tools to create programs. We test those programs. We package those programs. We sell those packages, or publish them as open source, or deliver them to an employer, or whatever. We get bug reports from users. We fix (some of) those bugs. We repackage and republish.   
+
+Code is only part of the trade of programming. 
+
+Professional programmers understand what our users need. We have clear vision for what a finished software package is and does and looks like. We get our work tested, packaged, and across the finish line. 
+
+Along the way we write some code.  The thing is, if we can do the other things well, the code is (usually) pretty easy, comparatively. 
+
+At the same time, pure code isn't finished and doesn't have any users. That gets very boring very fast.
+
+Wanna see some examples of software packages of a scale that one person -- you -- can make and publish and try to attract live people as users?
+
+* These are Javascript utility packages. https://www.npmleaderboard.org/
+* These are plugins for WordPress:  https://wordpress.org/plugins/
+* ...for Python.  https://pypi.org/search/?q=&amp;o=&amp;c=Topic+%3A%3A+Artistic+Software 
+* Indie games. https://itch.io/
+
+There are other lists and repositories of packages out there for the searching. 
+
+Laying down lines of code is just a part of our trade. The programmers of many of those packages did the whole job: explanation, instructions, code, testing, packaging, publishing, and then bug fixing.  Read through some of the package descriptions; they'll give you a feel for what a piece of finished software looks like.
+
+Don't be too intimidated by the packages that turn up on the first page of these lists. The best of them have been around for many years, and have been through a lot of changes to perfect them. 
+
+But those packages started somewhere. Yours can too.
+
+&lt;/rant&gt;
+
+Make good software and stay in touch.
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: yipeedodaday
+Score: 27
+Created UTC: 1765916329.0
+Comment: This is an excellent post. Great contribution. Could be pinned or part of a sub faq/wiki.
+
+Comment 2:
+Author: nero_djin
+Score: 25
+Created UTC: 1765917598.0
+Comment: &lt;s&gt;So you are saying WordPress is a good language to learn?&lt;/s&gt;
+
+Comment 3:
+Author: FlashyResist5
+Score: 7
+Created UTC: 1765930151.0
+Comment: I don't see how going on a rant about how professional programmers package software and understand users is at all helpful for someone asking "what language should I learn" or "should I learn to code?"   
+  
+That rant is more for a junior dev at a company that can already code. Yeah you can code, but you aren't understanding business reqs, aren't doing the ops work, aren't writing good test etc. But again, this person can already code. For someone who hasn't learned to code this rant is useless.  
+
+&lt;rant&gt;
+
+Links to npm? Really? My guy someone asking what language they should learn likely doesn't know about loops or variables. They don't what a text editor is or how to run a single python file. You are giving a kindergartner the Illiad in Greek as their first book instead of Spot. 
+
+&lt;/rant&gt;
+
+Comment 4:
+Author: jeffrey_f
+Score: 6
+Created UTC: 1765930602.0
+Comment: Also depends on WHAT you are doing on WHAT operating system.
+
+Building a system to take care of a Windows OS, please do that in PowerShell.  That is exactly what PS was made for.  Has been ported to, but I don't thing it is fully funcional on Linux or MAC as it is on Windows
+
+Same thing, but for Linux, you will find that bash is made exactly for that.
+
+Want to crunch numbers, while not the fastest car on the track, it is likely the easiest to learn and aside from file paths, you can use it on windows, linux and mac with very little change.
+
+You need near real-time computation, C/C++/C# is the better option, but comes with a very steep learning curve.
+
+It really doesn't matter the language because it is only a tool.  Learn logic.  Once you learn logic, you can take THAT logic and apply it to ANY language old, new and future. Logic doesn't change.  Logic, loosly, means the steps necessary to go from the idea to the product.
+
+Comment 5:
+Author: TaintM3
+Score: 6
+Created UTC: 1765915179.0
+Comment: I dig the html opening and closing tags lol

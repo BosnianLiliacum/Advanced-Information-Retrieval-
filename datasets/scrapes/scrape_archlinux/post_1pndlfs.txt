@@ -1,0 +1,154 @@
+Post Title: Root NVMe disappears from the system after long periods of operation
+Author: Magicrafter13
+Score: 12
+URL: https://www.reddit.com/r/archlinux/comments/1pndlfs/root_nvme_disappears_from_the_system_after_long/
+Number of comments: 27
+Created UTC: 1765820212.0
+
+Post Content:
+I've had this problem for over a year but it happens infrequently enough (largely due to my own habits of using sleep mode and rebooting after updates) that I've not invested much time in it. After several hours (&gt;24) of run time (i.e. time spent in sleep mode don't count), suddenly all the files on my main NVMe stop being readable. As far as I know it's as if the drive were physically disconnected.
+
+The reason I can't give more detail is because... it's literally impossible (afaik) to get any info once it happens.
+
+"Just run dmesg" but dmesg is on /, and can no longer be read and thus executed.
+
+"Store dmesg in /tmp before the issue occurs" that still won't work because the system libraries aren't readable. I'd effectively need basic, full system in RAM that I can chmod into (plus chmod would need to be easy to run.
+
+There's no visible consistency. The system could be left "idling" or I could be browsing the web, or gaming. The result is the same. Suddenly new apps fail to launch, and over time most running apps start having failures as they try to read data from the system.
+
+Once you're in this state it seems impossible to do anything about it.
+
+The only reason I'm posting is that, for the first time, as best I can tell, this same issue led to a kernel panic, and I was able to scan the QR code and get some form of systemd output which may help a more knowledgeable soul. That URL encoded the following data:
+
+```
+
+Panic Report
+Arch: x86_64
+Version: 6.16.10-arch1-1
+
+[603373.004527] I/O error, dev nvme1n1, sector 951431432 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[603373.004527] I/O error, dev nvme1n1, sector 3782592 op 0x0:(READ) flags 0x1000 phys_seg 4 prio class 2
+[603373.004528] I/O error, dev nvme1n1, sector 538581744 op 0x0:(READ) flags 0x0 phys_seg 5 prio class 2
+[603373.004528] I/O error, dev nvme1n1, sector 291725472 op 0x0:(READ) flags 0x1000 phys_seg 4 prio class 2
+[603373.004532] I/O error, dev nvme1n1, sector 135516640 op 0x0:(READ) flags 0x1000 phys_seg 4 prio class 2
+[603373.004532] I/O error, dev nvme1n1, sector 1240085440 op 0x0:(READ) flags 0x1000 phys_seg 4 prio class 2
+[603373.004532] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 3, flush 0, corrupt 0, gen 0
+[603373.004533] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 6, flush 0, corrupt 0, gen 0
+[603373.004533] I/O error, dev nvme1n1, sector 1260610336 op 0x0:(READ) flags 0x0 phys_seg 12 prio class 2
+[603373.004534] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 7, flush 0, corrupt 0, gen 0
+[603373.004533] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 6, flush 0, corrupt 0, gen 0
+[603373.004536] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 8, flush 0, corrupt 0, gen 0
+[603373.004537] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 10, flush 0, corrupt 0, gen 0
+[603373.004532] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 3, flush 0, corrupt 0, gen 0
+[603373.004532] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 3, flush 0, corrupt 0, gen 0
+[603373.004537] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 9, flush 0, corrupt 0, gen 0
+[603373.004532] BTRFS error (device nvme1n1p2): bdev /dev/nvme1n1p2 errs: wr 0, rd 4, flush 0, corrupt 0, gen 0
+[603373.004909] BTRFS error (device nvme1n1p2): run_delalloc_nocow failed, root=259 inode=5175 start=1269760 len=4096: -5
+[603373.004915] BTRFS error (device nvme1n1p2): failed to run delalloc range, root=259 ino=5175 folio=1269760 submit_bitmap=0 start=1269760 len=4096: -5
+[603373.005045] coredump: 123149(systemd-machine): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005239] BTRFS error (device nvme1n1p2): run_delalloc_nocow failed, root=259 inode=5175 start=3743744 len=20480: -5
+[603373.005243] BTRFS error (device nvme1n1p2): failed to run delalloc range, root=259 ino=5175 folio=3743744 submit_bitmap=0 start=3743744 len=20480: -5
+[603373.005303] coredump: 1486598(systemd-userwor): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005317] coredump: 1486597(systemd-userwor): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005361] coredump: 1486596(systemd-userwor): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005594] coredump: 2293(upowerd): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005614] coredump: 1664(systemd-logind): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.005738] coredump: 795524(dolphin): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.006632] coredump: 66489(dirmngr): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.006676] coredump: 1226(systemd-userdbd): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.006851] coredump: 1854(crond): |/usr/lib/systemd/systemd-coredump pipe failed
+[603373.008044] libinput-connec[2285]: segfault at 0 ip 0000000000000000 sp 00007fa32dffa738 error 14 likely on CPU 10 (core 12, socket 0)
+[603373.008049] Code: Unable to access opcode bytes at 0xffffffffffffffd6.
+[603373.008334] systemd[1]: cronie.service: Main process exited, code=killed, status=7/BUS
+[603373.008342] systemd[1]: cronie.service: Failed with result 'signal'.
+[603373.009392] BTRFS: error (device nvme1n1p2) in btrfs_commit_transaction:2535: errno=-5 IO failure (Error while writing out transaction)
+[603373.009397] BTRFS info (device nvme1n1p2 state E): forced readonly
+[603373.009401] BTRFS warning (device nvme1n1p2 state E): Skipping commit of aborted transaction.
+[603373.009403] BTRFS error (device nvme1n1p2 state EA): Transaction aborted (error -5)
+[603373.009406] BTRFS: error (device nvme1n1p2 state EA) in cleanup_transaction:2023: errno=-5 IO failure
+[603373.009410] BTRFS: error (device nvme1n1p2 state EA) in btrfs_sync_log:3183: errno=-5 IO failure
+[603373.020268] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156671] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020280] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156673] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020287] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156675] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020294] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156676] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020302] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156677] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020309] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156684] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020315] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156688] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020322] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156717] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020329] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156875] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.020337] ptrace attach of "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1156914] was attempted by "/home/matthew/.local/share/Steam/ubuntu12_32/steam -srt-logger-opened"[1486615]
+[603373.038419] amdgpu 0000:03:00.0: amdgpu: VM memory stats for proc (0) task (0) is non-zero when fini
+[603373.042196] Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+[603373.042203] CPU: 5 UID: 0 PID: 1 Comm: systemd Tainted: P        W  OE       6.16.10-arch1-1 #1 PREEMPT(full)  9e32548bbde42002c037aa91d269bef346d38353
+[603373.042208] Tainted: [P]=PROPRIETARY_MODULE, [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+[603373.042209] Hardware name: ASRock X670E Steel Legend/X670E Steel Legend, BIOS 3.50 09/18/2025
+[603373.042212] Call Trace:
+[603373.042215]  &lt;TASK&gt;
+[603373.042219]  dump_stack_lvl+0x5d/0x80
+[603373.042226]  panic+0x119/0x2de
+[603373.042231]  ? do_coredump+0x6b1/0x1ed0
+[603373.042236]  do_exit.cold+0x58/0x58
+[603373.042239]  do_group_exit+0x2d/0xc0
+[603373.042244]  ? srso_alias_return_thunk+0x5/0xfbef5
+[603373.042247]  get_signal+0x81c/0x840
+[603373.042250]  ? x64_setup_rt_frame+0x6b/0x2f0
+[603373.042255]  arch_do_signal_or_restart+0x3f/0x280
+[603373.042258]  ? srso_alias_return_thunk+0x5/0xfbef5
+[603373.042262]  irqentry_exit_to_user_mode+0x1c6/0x250
+[603373.042265]  asm_exc_page_fault+0x26/0x30
+[603373.042268] RIP: 0033:0x55efbf178910
+[603373.042300] Code: Unable to access opcode bytes at 0x55efbf1788e6.
+[603373.042301] RSP: 002b:00007ffd9e8c02b8 EFLAGS: 00010202
+[603373.042304] RAX: 0000000000000000 RBX: 000055efcd7b6c10 RCX: 0000000000000003
+[603373.042306] RDX: 00007ffd9e8c02c0 RSI: 00007ffd9e8c03f0 RDI: 0000000000000007
+[603373.042307] RBP: 00007ffd9f0bd720 R08: 0000000000000001 R09: 0000000000000050
+[603373.042309] R10: 0000000000000051 R11: 0000000000000000 R12: 000055efcd7f77d0
+[603373.042310] R13: 000055efcd5472e0 R14: 0000000000000000 R15: 0000000000000001
+[603373.042315]  &lt;/TASK&gt;
+[603373.043138] Kernel Offset: 0x15200000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
+```
+
+Update 1:  
+Did some temperature logging (10 second intervals, sent to my server so that loss of root didn't really matter). Was at 70 C with its last log, and had been at that temp for a while. `nvme-cli` also showed `0` for both Warning and Critical Composite temperature times. I'm lead to believe that this is not a temperature related issue (sadly - that would have made this an easy fix).
+
+
+Top 5 comments:
+
+Comment 1:
+Author: klaasbob88
+Score: 15
+Created UTC: 1765821107.0
+Comment: Had this when my dad (edit: ssd...stupid auto correct) died due to wear (had accidentally been writing TB's of data daily when doing ML training). Other than that, have heard of temp-issues causing this
+
+Comment 2:
+Author: i-hate-birch-trees
+Score: 6
+Created UTC: 1765821806.0
+Comment: Sounds like overheating to me, you should monitor its temperature. There's a chance it needs active cooling, my gen5 SSD does.
+
+Comment 3:
+Author: kitanokikori
+Score: 3
+Created UTC: 1765826952.0
+Comment: This is almost certainly hardware related - the nvme driver is seeing the device fall off, it's sending a bunch of controller resets, those don't work, then it says "welp, it's gone, better remove it". Every modern OS will do the same thing - the others guessing thermal issues are good guesses (especially if it seems to happen more often once it initially happens)
+
+Comment 4:
+Author: Gozenka
+Score: 3
+Created UTC: 1765820539.0
+Comment: I used to get this issue exactly like you for years, very infrequently and randomly, like once a month. It has not happened for months now. I also could not find any insight. And I suspect it is just a hardware thing about the nvme or its slot, but otherwise my nvme is just fine. I am on a Lenovo laptop.
+
+I would first notice it when a file I have open fails to save, saying "read-only filesystem". Root filesystem got unmounted somehow. Things already in RAM continued working, for a while. Chromium continued to work for some time (I have its cache set inside RAM, in `/tmp`.) I could enter commands in an already open terminal, and I could check `lsblk` one time (I had used the command recently and I guess it was cached in RAM) to see that root was unmounted. No journal, as you mentioned. I never got a kernel panic, that could be something tangentially related, as things stop working with no access to root. Switching to another tty worked, but then no login there.
+
+- nvme drive is otherwise fine.
+- root device gets unmounted randomly.
+- ext4 filesystem with LUKS, single root partition including home.
+- No high temperature.
+- No particular trigger to this issue I can think of, just using the computer as normal, in a low load state.
+- Nothing in journal when checking it after a restart. Naturally, the journal stops writing when root is unmounted.
+
+Comment 5:
+Author: fullmetaljackass
+Score: 2
+Created UTC: 1765825101.0
+Comment: I had a similar issue with an SSD, and it ended up being my PSU. The 3v3 rail would begin slowly dropping after it'd been powered on for a while, and the SSD was the first component to malfunction due to the low voltage.

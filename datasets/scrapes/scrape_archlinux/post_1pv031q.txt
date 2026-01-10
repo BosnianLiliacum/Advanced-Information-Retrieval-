@@ -1,0 +1,44 @@
+Post Title: Why Arch?
+Author: StockSalamander3512
+Score: 98
+URL: https://www.reddit.com/r/archlinux/comments/1pv031q/why_arch/
+Number of comments: 285
+Created UTC: 1766618767.0
+
+Post Content:
+I started using it as a challenge, and it has not disappointed, but I’m curious as to why everyone else is using it?  
+
+
+Top 5 comments:
+
+Comment 1:
+Author: lordrolee
+Score: 199
+Created UTC: 1766618955.0
+Comment: Why not?
+
+Comment 2:
+Author: Edzomatic
+Score: 130
+Created UTC: 1766619089.0
+Comment: I was told arch users get all the bitches
+
+Comment 3:
+Author: OpabiniaRegalis320
+Score: 90
+Created UTC: 1766620368.0
+Comment: Pacman. Haha progress bar go wacawacawaca
+
+Comment 4:
+Author: euclide2975
+Score: 89
+Created UTC: 1766618931.0
+Comment: On my personal system : because I wanted more bleeding edge software.
+
+I still use debian or ubuntu on all my servers and don't intend to migrate them
+
+Comment 5:
+Author: No-Dentist-1645
+Score: 52
+Created UTC: 1766619142.0
+Comment: Because I want a system that has what I need, and doesn't have what I don't?

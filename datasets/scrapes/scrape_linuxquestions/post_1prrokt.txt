@@ -1,0 +1,102 @@
+Post Title: Looking to switch towards Linux...what to do?
+Author: Tim-White21
+Score: 15
+URL: https://www.reddit.com/r/linuxquestions/comments/1prrokt/looking_to_switch_towards_linuxwhat_to_do/
+Number of comments: 12
+Created UTC: 1766272903.0
+
+Post Content:
+Hello,
+
+So currently i am waiting on some Petg to come in to build a new PC for myself with some better specs and as of late i have become comepletelty fed-up with windows and its updates that make the OS less favourable to use...
+
+i have a little bit of experience with linux with my associates degree using a little bit of Ubuntu, Ubuntu mint (or linux mint,i can't recall correctly) &amp; redhat to experiment and learn how to use VM's.
+
+last i used it was back in 2023 and i want to get back into it and learn linux again as a daily driver to game, learning to 3D model, draw similar things , and use slicers so i can continue using my 3D printer.
+
+i also want to look what i can use my other pc in the meanwhile as i find it a shame to leave it to collect dust as i use my new PC, i was thinking of turning it into a NAS but i don't really need to use such as thing and as i currently live with my father he doesn't want a pc to run 24/7, so some creative advice to utilize my new PC build and old one would be very much appreciated.
+
+New PC specs:  
+  
+Ryzen 5 9600X  
+NH-L9A AMD  
+B850 Asrock Lightning Wifi  
+DDR5 SILICONE POWER Zenith Gaming DDR5 32x GB CL30 6000  
+Western digital WD\_Black SN850x 2tb  
+Sapphire Pulse RX 9060XT 16gb  
+Corsair SF750 80+ Platinum  
+Case: Backpack-friendly ITX PC case v2.0 by MakerUnit on [https://www.printables.com/model/1443219-backpack-friendly-itx-pc-case-v20](https://www.printables.com/model/1443219-backpack-friendly-itx-pc-case-v20)
+
+Pre-build PC (Azerty):  
+  
+Ryzen 5 2600  
+AMD Wraith cooler (Stock)  
+B450 Asrock Fatal1ty K4  
+DDR4 Ripjaw 16x GB CL38 3200  
+Kingston AAA 500gb  
+Gigabyte 1660TI OC 6GB  
+Cooler Master V550 Gold V2 550 80+ Gold  
+Case: Cooler Master MasterBox MB510L ATX Mid Tower Case
+
+  
+Hopefully these specs will give you a perspective i am working with.   
+Thank you for your time and have a very nice day,  
+  
+Tim.
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ipsirc
+Score: 9
+Created UTC: 1766273458.0
+Comment: &gt;Looking to switch towards Linux...what to do?
+
+Download an installer then install it.
+
+Comment 2:
+Author: djandiek
+Score: 2
+Created UTC: 1766274778.0
+Comment: An option for your old PC would be as a Streaming device for your gaming.
+
+If you use Steam for example, you could have the old PC linked up to your TV in the living room and your new PC in your bedroom or where ever. Then, you could have the new PC be the host for streaming games and the old PC the client to play them. This is pretty easy to setup with steam link / remote play.
+
+You'd just have to turn on the old PC when you wanna play. You could also use it as a media device and install [Kodi](https://kodi.tv/), [Emby](https://emby.media/), or other such software.
+
+You could even try installing [Waydroid](https://waydro.id/) on your old PC and turn it into an Android box plugged into your TV. It could then use Netflix and other streaming apps.
+
+There are many things you could use it for...
+
+Comment 3:
+Author: illusory42
+Score: 2
+Created UTC: 1766273595.0
+Comment: What to do? Do not use Petg and switch to acrylic.
+
+Comment 4:
+Author: proverbialbunny
+Score: 1
+Created UTC: 1766279192.0
+Comment: Start with exploring the different desktop environments and see what you like. Linux Mint’s DE is called Cinnamon. The other two most popular DEs are Gnome and KDE. You can do a live thumb drive of them. I recommend Fedora for this live thumb drive because it shows off the DEs in a vanilla way. No special theme or anything special, just the DEs. 
+
+Note that DEs are highly modifiable. E.g. you can replace a task bar with a dock or replace it with a top bar. So playing around with the settings for a while can be worth it and fun. 
+
+After you know what DE you like it helps to know a distro is what apps come installed on your computer with the operating system, including themes and DE customizations. So just find a distro that meets what you’re looking for at that point. E.g. one that uses a dock if that is your jam. 
+
+Once you’ve got the distro you like it helps to know to install gui software your computer will have an App Store. Go there and search for your apps there. Don’t Google for your app. Your software store should default to Flatpak for your app installs. This way the app doesn’t mess with the system. I highly recommend this. 
+
+Comment 5:
+Author: missionmeme
+Score: 1
+Created UTC: 1766273883.0
+Comment: The specs don't really matter, Linux needs less specs then windows. 
+
+If you're ready to go for it I would keep windows on your old machine and install Linux on the new one. Its nice to have a second machine to install boot drives and look up errors if you bork the system while learning it.
+
+Your next steps are to pick which Linux distro you want to use and look up how to make a boot drive on a flash drive.
+
+Out of the ones you listed I would go with Linux mint

@@ -1,0 +1,57 @@
+Post Title: udev-worker hang causes Hyprland freeze (Intel + NVIDIA)
+Author: Iiam__
+Score: 0
+URL: https://www.reddit.com/r/archlinux/comments/1pw239i/udevworker_hang_causes_hyprland_freeze_intel/
+Number of comments: 1
+Created UTC: 1766748185.0
+
+Post Content:
+My system:
+- Latest Linux
+- Kernel: 6.18.2-arch2-1
+- Boot: rEFInd +systemd (dual boot with Windows)
+- WM: Hyprland (Wayland)
+- GPU: Intel i915 + NVIDIA RTX 4060 (nvidia-open-dkms)
+
+After updating Arch, I'm running into these problems:
+- Every ~2-5 minutes, kernel reports a hung udev worker:
+
+```
+INFO: task (udev-worker): 464 blocked for more than 614 seconds.
+Tainted: P             W   OE       6.18.2-arch2-1 #1
+"echo 0 &gt; /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+INFO: task (udev-worker): 464 &lt;writer&gt; blocked on an ru-semaphore likely owned by task kworker/14:2:412 &lt;writer&gt;
+```
+
+- Hyprland hangs indefinitely on startup.
+- Normal shutdown fails; system blocks on `systemd-udevd`.
+- Forced power-off required.
+
+Shutdown logs:
+```
+watchdog: watchdog0: watchdog did not stop!
+systemd-shutdown[1]: Waiting for process: 444 (systemd-udevd), 464 ((udev-worker))
+INFO: task (udev-worker): 464 blocked for more than 1228 seconds.
+Tainted: P               W       OE         6.18.2-arch2-1 #1
+"echo 0 &gt; /proc/sys/kernel/hung_task_timeout_secs" disables this message. 
+INFO: task (udev-worker): 464 &lt;writer&gt; blocked on an ru-semaphore likely owned by task kworker/14:2:412 &lt;writer&gt;
+systend-shutdown[1]: Waiting for process: 464 ((udev-worker))
+```
+
+TLDR:
+
+udev-worker consistently deadlocks on this Intel/NVIDIA hybrid system using `nvidia-open-dkms`, causing Hyprland to freeze and preventing clean shutdowns.
+
+Please, if anyone could help me with this, I've stuck with this for the last 3 days.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: No_Shift_8472
+Score: 1
+Created UTC: 1767025806.0
+Comment: Had something similar on my hybrid setup a while back. Try switching to \`nvidia-dkms\` instead of the open driver - the open one still has some weird udev interactions that can cause deadlocks. Also check if you have any custom udev rules that might be conflicting, especially anything GPU-related
+
+  
+If that doesn't work, you might need to temporarily blacklist the nvidia module and see if the hangs stop, just to confirm it's actually the nvidia driver causing the udev worker to get stuck

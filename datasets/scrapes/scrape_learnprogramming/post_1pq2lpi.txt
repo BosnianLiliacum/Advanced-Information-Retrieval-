@@ -1,0 +1,64 @@
+Post Title: Best practices for writing Git commit messages?
+Author: -Excitement-971
+Score: 84
+URL: https://www.reddit.com/r/learnprogramming/comments/1pq2lpi/best_practices_for_writing_git_commit_messages/
+Number of comments: 27
+Created UTC: 1766092888.0
+
+Post Content:
+Hi developers,
+
+ I’m learning Git and GitHub, and I’m wondering about best practices for writing commit messages. I often write things like “I did XYZ, or I added image of cow with changes to xyz” but in a real production or work environment, what’s the recommended way to write clear, professional commit messages?
+
+  
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mandzeete
+Score: 65
+Created UTC: 1766094601.0
+Comment: Often commit messages are tied to one or another Jira ticket or such. For example "ZOO-123: Fix to RabbitMQ binder names." This ties that commit with Jira ticket ZOO-123 that either is about changes to RabbitMQ messaging or about fixing an issue with said messaging.
+
+Also, some companies use conventional commits. It is just a way of formatting your commit message so that automated tools can process commits in an easier way. Read about it from [https://www.conventionalcommits.org/en/v1.0.0/](https://www.conventionalcommits.org/en/v1.0.0/) An example would be "fix(ZOO-123): Fix to RabbitMQ binder names." There the fix() keyword shows that the commit was for fixing something. A feat() keyword can be for adding a new feature or for working with some new functionality. For example "feat(SCHOOL-23): Add Japanese language."
+
+The commit message itself is often in imperative present tense. For example "Fix to" instead of "Fixed". The commit should give a summary of the change. What was done. Keep it concise and clear. Do not add a whole essay. But also do not just write "Added more changes." Which changes? Why? Read about it from [https://blog.devgenius.io/make-a-meaningful-git-commit-message-with-semantic-commit-message-b39a79b13aa3](https://blog.devgenius.io/make-a-meaningful-git-commit-message-with-semantic-commit-message-b39a79b13aa3) 
+
+Avoid frustration and all kind of nonsense in the commits. Yes, when the stuff does not work and your earlier commit did not fix it then writing "Get working already!!!!!" or "wgo8g7tfwo82w37fdto238gd" is not a rational way how to deal with the issue. It is unprofessional. In the previous company I worked at, we had one guy who raged in his commit messages.
+
+Avoid adding too many details. Instead of writing "Fix to UserNotificationIntegrationTest, BillingIntegrationTest, BaseIntegrationTest, RabbitMQPublisherIntegrationTest" better pick "Fix to integration tests". Which tests, that can be seen from the git commit itself. Neither go with "Added an email support to UserNotificationService by introducing emailSender() method that uses angus-mail library" just write "Add support to send user notifications via email" Some good and bad examples are in [https://chris.beams.io/git-commit](https://chris.beams.io/git-commit) 
+
+Also, it does not really help when you finish your whole project and then add it via a single commit that has a commit message of "Initial commit".
+
+Comment 2:
+Author: Loves_Poetry
+Score: 14
+Created UTC: 1766093346.0
+Comment: What's professional really depends on the workflow used at a job. If the workflow requires pull requests to get anything to the main branch, then you need to make clear PR descriptions while the commit messages are mostly for yourself
+
+Comment 3:
+Author: kagato87
+Score: 4
+Created UTC: 1766106094.0
+Comment: I just put in what I want the reviewers to know when they go to review it.  What I intended to do, and why.
+
+I haven't had any complaints yet so I guess it's good enough?
+
+We do have a template for PRs though - title, description, jira, special notes, and a checklist.
+
+Comment 4:
+Author: gmes78
+Score: 3
+Created UTC: 1766126204.0
+Comment: [This article](https://cbea.ms/git-commit/) is a mandatory read for anyone using Git.
+
+Comment 5:
+Author: Zerodriven
+Score: 2
+Created UTC: 1766120324.0
+Comment: "Refactored codebase because I found a memory leak, then a typo, and now you need to feel the pain I'm in" 
+
+-1,100  
++2,182

@@ -1,0 +1,50 @@
+Post Title: Is it normal that when working on a project I am excited at first but start losing interest half way through?
+Author: justjustin10
+Score: 86
+URL: https://www.reddit.com/r/learnprogramming/comments/1pp2po7/is_it_normal_that_when_working_on_a_project_i_am/
+Number of comments: 26
+Created UTC: 1765992999.0
+
+Post Content:
+For some reason most projects I start the first 2 weeks I’m excited, working on it constantly, trying to go above and beyond but after the 2 week mark it goes from being fun to being a chore and I definitely feel like I start slacking on it and being more annoyed to do it.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: CrAzYmEtAlHeAd1
+Score: 42
+Created UTC: 1765993438.0
+Comment: That’s just the nature of personal projects in every medium! 
+
+You either want to make smaller, more approachable projects, or learn to be ok with abandoning projects. If you have a project that you really want to finish, then it’ll need to become a habit instead of thriving on motivation because that will always go away. 
+
+Good luck! 👍
+
+Comment 2:
+Author: ffrkAnonymous
+Score: 26
+Created UTC: 1765994027.0
+Comment: Just imagine it being your job where it was never fun and a chore from the start
+
+Comment 3:
+Author: Affectionate-Lie2563
+Score: 14
+Created UTC: 1765998675.0
+Comment: yeah, super normal. the excitement wears off once the “fun” problems are solved and the boring glue work starts. finishing despite that phase is basically the real skill.
+
+Comment 4:
+Author: JohannKriek
+Score: 9
+Created UTC: 1765995656.0
+Comment: Happens all the time with online PluralSight and OReilly courses and with any textbook I open. You are enthused with the idea of mastering a subject and the initial lessons and readings are easy. Then the difficult parts start to seep in, the coursework becomes mentally tedious and you lose your fervor to learn the subject because YouTube shorts about people falling flat on their faces beckon.
+
+The idea is to keep plugging away with the project, find ways to be motivated and not give up. Ensure that everyday you have learnt more than the day before. Try and keep unnecessary browser windows closed and any other distractions away.
+
+Comment 5:
+Author: AlSweigart
+Score: 6
+Created UTC: 1766012237.0
+Comment: The first 90% of the project is 90% of the work. The last 10% of the project is the other 90% of the work.
+
+(All projects, not just programming...)

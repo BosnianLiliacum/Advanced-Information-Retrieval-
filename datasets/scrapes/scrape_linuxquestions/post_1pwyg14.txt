@@ -1,0 +1,89 @@
+Post Title: Need help choosing my first distro
+Author: Grouchy_Sky9931
+Score: 14
+URL: https://www.reddit.com/r/linuxquestions/comments/1pwyg14/need_help_choosing_my_first_distro/
+Number of comments: 31
+Created UTC: 1766843908.0
+
+Post Content:
+With Win 10 is starting its slow death, and the privacy and device ownership violations on Win 11, of which you can't even opt out, being just too much to bear (and \*insert list of other Microsoft shenanigans\*) I have finally decided to make the move to Linux.
+
+...And have immediately run into difficulties trying to pick an appropriate distro. The ones my research has so far come up with Being Mint and Nobara with secondary options of Bazzite and CachyOS. Unfortunately, since my PC is dual use, it has proven difficult to find relevant comparisons, also it means that I'm not even sure if I have picked appropriate distros in the first place, or if there are some which I haven't considered. Below are details pertaining to my system, tech knowledge, use case, which I believe to be pertinent. I have also included any doubts/thoughts I have about each of the distros listed above. If anyone has personal experience with a similar situation or knowledge of any distros that might meet my needs, or indeed any input which might be useful I would be very grateful.  
+  
+My Tech Background
+
+I'm fairly tech savvy for a normie on windows, but still squarely a normie. I've been able to fix every problem that I have so far encountered with any of my systems starting with a Win XP rig up until My current desktop and laptop which run Windows the Last (10) (with some help from online guides of course). Highlights include even successfully poking around in the registry editor a couple of times and dealing with system breaking viruses from pirating games and viewing por... \*khm\* ...litical commentary as a teenager in the 00s. 
+
+This would be my first foray into Linux. I don't mind if i have to do some work and learn some stuff to get my OS set up, but once that's done, I want it to run on the background without having to constantly fiddle around with it to keep it working. Also I have periods of a few months at a time when I am away from home, and can't update anything, and i would still like for everything to run without breaking when I return.
+
+
+
+My system
+
+Lenovo Legion T5 26AMR5 (AMD Ryzen 9 5900X; GeForce RTX 3070) Desktop. Changes from the original: switched to a Corsair PSU and Noctua D15 or D15S CPU fan (can't remember which one). Input devices are either Logitech or Razer.
+
+
+
+My use case
+
+I use my desktop both for gaming and work.
+
+Gaming wise, I rarely play any competitive multiplayer games so I don't really care about anti-cheat compatibility, but it would be nice if i could occasionally play a co-op/non-competitive Multiplayer game with my fiancée. I do pirate games before buying them, to determine how much of my hard-earned money I'm willing to part with for them, and i would like to keep doing that. When I buy its either through Steam or GOG.
+
+On the work side of things, I need to be able to write academic papers, so word processing tools with built-in referencing and bibliography generation are a must. I don't usually need to edit PDFs (very basic edits if any) but I do need to be able to convert text files into PDF fairly often, and i do need to be able to read e-books (currently using Calibre). I also need to do some fairly simple data analytics and spreadsheet work, so something excel like is also necessary. It would be great, if the system would allow me to open documents in split screen like it does on Windows and I am considering adding on a second display in the future.
+
+Other than that, my computer use is fairly basic, I want to watch some movies/tv series, listen to music, look at photos and use a couple of IM apps (Discord and Signal mostly)
+
+
+
+Thoughts on distros  
+Mint: Seems like an all around safe option, especially regarding my work requirements. On the gaming end, as far as i've been able to gather peoples gaming experience varies from seamless to problematic. I also don't know how much its slower update cycle due to its debian/ubuntu base would affect my ability to play newer games.
+
+Nobara: Seems like a good option for gaming, but its hard to find any info on using it for workstation purposes. Also i've understood that it has a fairly small development team so it updates slightly slower than some other distros. Again, similarly to Mint, I don't really know how much of an issue this is in practice if its an issue at all.
+
+Bazzite: Seems to be the most gaming focused, somewhat scarily so, there's very little info on using this distro for work purposes, or how it is for use in anything other than steam based gaming. I absolutely detest console/smart TV like interfaces, so I'm afraid that trying to do any work on this might prove so annoying that I'll pull a Ron Swansson and bin my computer.
+
+CachyOS: People who are fans, seem to be superfans, and I do underestand that it's not quite as touchy as Arch it self. Nevertheless the Arch base seems somewhat daunting since I have no interest in becoming a femboy, and because as said before, there are periods of several months where I will be away from my desktop, which, as far as I understand, doesn't really work well with arch based systems.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ZagiFlyer
+Score: 4
+Created UTC: 1766854830.0
+Comment: I've used over a dozen distros since I started with Linux with Yggdrasil. IMHO, you're overthinking this. For your first foray into Linux I would just (try to) make sure the distro has good driver support.
+
+Personally, I've kind of settled on Linux Mint at this point. The hardware support is really good and they update often enough to stay current, but not so often that it's irritating (also, you don't *have* to upgrade).
+
+Comment 2:
+Author: OldCanary
+Score: 3
+Created UTC: 1766848402.0
+Comment: Cachyos!    Full migration from Mint was quick and easy.    The Arch User Repository (AUR) is amazing and easy to use.
+
+https://preview.redd.it/gxm1ijwejr9g1.png?width=802&amp;format=png&amp;auto=webp&amp;s=8bddd638666d076fb89f0705b810b5d34acb401d
+
+Comment 3:
+Author: funbike
+Score: 2
+Created UTC: 1766844389.0
+Comment: Go with Mint.  After a year, consider Nobara.
+
+Nobara is a Fedora spin.  Fedora is slightly harder to maintain than Mint for a beginner.
+
+Mint is beginner friendly.  AMD GPUs have great Linux support, but NVidia can sometimes be problematic.    Ensure you are installing the proprietary driver the way the Mint documentation says.  Do NOT download drivers directly from NVidia.
+
+Bazzite is also a Fedora spin, but it's an immutable distro.  As a developer and someone that likes to customize their system, it's not for me.  But many people rave about it.  Again, go with Mint first.
+
+Comment 4:
+Author: Specialist-Time-8458
+Score: 2
+Created UTC: 1766858610.0
+Comment: HANNAH MONTHANA is a solid choice .
+
+Comment 5:
+Author: ipsirc
+Score: 2
+Created UTC: 1766844272.0
+Comment: https://preview.redd.it/sk118rb37r9g1.png?width=500&amp;format=png&amp;auto=webp&amp;s=c1ea3d5e96c9fc2e9daf4cd34d7b47977261bc6a

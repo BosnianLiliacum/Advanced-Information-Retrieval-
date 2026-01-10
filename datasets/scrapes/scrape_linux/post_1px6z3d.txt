@@ -1,0 +1,47 @@
+Post Title: Arch Linux Powered CachyOS To Develop A Server Edition
+Author: TheNavyCrow
+Score: 382
+URL: https://www.phoronix.com/news/CachyOS-Server-Edition-Coming
+Number of comments: 105
+Created UTC: 1766865395.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mistahspecs
+Score: 249
+Created UTC: 1766869891.0
+Comment: Been on arch since 2008. Every personal computer of mine has ran it since then and I havent broken a system (even minorly, like live USB -&gt; chroot -&gt; regen init) in ~5+ years
+
+
+...and all of my servers run Debian, because I'm rational and not driven by hype.
+
+Comment 2:
+Author: manobataibuvodu
+Score: 180
+Created UTC: 1766865575.0
+Comment: why would you want to base your server's distro on arch?
+
+Comment 3:
+Author: FLMKane
+Score: 64
+Created UTC: 1766866120.0
+Comment: That's like trying to use a drift car for pizza delivery.
+
+Edit: would totally work for tofu delivery
+
+Comment 4:
+Author: pantaloser
+Score: 32
+Created UTC: 1766865819.0
+Comment: This makes no sense but ight.
+
+Comment 5:
+Author: k3rrshaw
+Score: 19
+Created UTC: 1766871079.0
+Comment: Another “people need it, people build it, people use it” situation - I personally don’t need this edition, but I like the spirit. 

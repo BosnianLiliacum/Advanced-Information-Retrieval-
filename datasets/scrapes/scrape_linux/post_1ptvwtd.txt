@@ -1,0 +1,46 @@
+Post Title: Meta Is Using The Linux Scheduler Designed For Valve's Steam Deck On Its Servers
+Author: sash20
+Score: 1686
+URL: https://www.phoronix.com/news/Meta-SCX-LAVD-Steam-Deck-Server
+Number of comments: 73
+Created UTC: 1766501709.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SUPREMACY_SAD_AI
+Score: 610
+Created UTC: 1766501984.0
+Comment: company builds tool and open sources it
+
+other company uses tool
+
+amazing
+
+Comment 2:
+Author: ToastyComputer
+Score: 324
+Created UTC: 1766503415.0
+Comment: For regular desktop use, is there any particular downside/reason not to use Valve's scheduler?
+
+Comment 3:
+Author: mccord
+Score: 183
+Created UTC: 1766506919.0
+Comment: I prefer [scx_horoscope](https://github.com/zampierilucas/scx_horoscope) for my Hannah Montana Linux servers, it's a better vibe.
+
+Comment 4:
+Author: lKrauzer
+Score: 41
+Created UTC: 1766504710.0
+Comment: What is so special about its scheduler?
+
+Comment 5:
+Author: CptSpeedydash
+Score: 19
+Created UTC: 1766502954.0
+Comment: Just shows how good the Steam Deck is.

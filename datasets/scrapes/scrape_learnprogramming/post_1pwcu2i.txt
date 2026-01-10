@@ -1,0 +1,224 @@
+Post Title: What is MongoDB actually good for?
+Author: C2forex
+Score: 219
+URL: https://www.reddit.com/r/learnprogramming/comments/1pwcu2i/what_is_mongodb_actually_good_for/
+Number of comments: 133
+Created UTC: 1766777666.0
+
+Post Content:
+Hi everyone,
+
+I keep seeing MongoDB mentioned in a lot of projects, but I want to better understand when it actually makes sense to use it.
+
+From what I know:
+	•	it’s a NoSQL, document-based database
+	•	schema-less / flexible compared to SQL
+
+My questions:
+	•	What are real-world use cases where MongoDB clearly shines?
+	•	When would you avoid MongoDB and prefer SQL (MySQL/Postgres)?
+	•	Is MongoDB a good choice for self-hosted projects (APIs, bots, monitoring, configs)?
+	•	Any lessons learned from running it long-term?
+
+Looking for practical experiences, not marketing answers.
+Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: huuaaang
+Score: 158
+Created UTC: 1766778086.0
+Comment: It's an OK document dump. Like I used it at one place to store copies of all emails sent out for auditing purposes. Rarely ever queried it. Didn't need relationships with other documents. Wasn't nested. 
+
+But I'd personally rather use ElasticSearch for it's indexing capabilities. I truly don't know what I'd use MongoDB for now. 
+
+I think the company that sells MongoDB is overselling its usefulness and application. Like a Chiropractor.
+
+If you have relational data (deeply nested), then sit down and plan a relational schema. And use a relational database.
+
+Comment 2:
+Author: mxldevs
+Score: 91
+Created UTC: 1766778495.0
+Comment: [MongoDB is web scale.](https://www.youtube.com/watch?v=b2F-DItXtZs)
+
+Comment 3:
+Author: BoltKey
+Score: 48
+Created UTC: 1766785371.0
+Comment: Maybe if you are prototyping and need to change the schema multiple times per day, and the overhead of keeping track of the schema would slow you down. But even then, after you have your prototype running, you should build a relational database based on your MongoDB database.
+
+I was led astray. I was one of those naive newbies. I chose MongoDB for my project. At first, I liked it: when I needed to add a field to an object, I add it in my code and it just worked. It felt like magic at first.
+
+But after a while, I found out any query more complex than a basic join is a nightmare. Unreadable mess. Absolute degeneracy. My code was full of 100+ lines long unreadable queries decorated with comments like 
+
+    // no way in hell this is the correct way to write this, but it works so DON'T TOUCH IT
+
+I thought "surely I am missing something. Surely there's a way to write the queries more nicely. Surely with more practice, it will get more readable". But after a while, I realized this was not happening.
+
+And the indexing. If you don't have properly set up indexes, the costs skyrocket. And you don't get any sort of warning that the database is manually searching through the millions of entries, checking them one by one for a match, multiple times per query. And even if you have indexes that by all means should have been used, sometimes they just don't get used, without any apparent reason. Optimizing queries is hell.
+
+At one point, I had to bite the bullet. I knew I could not keep it at this state much longer. It took me 2 months of tedious work, rewriting everything to Postgres, migrating all the data that accumulated over time. It sucked. But the relief of finally deleting the wasteland that my MongoDB has become was like getting that really bad tooth that has been decaying for 5 years finally pulled. It was awesome.
+
+Just use Postgres. If you are working with data of undefined structure, just use JSONB.
+
+And to show you a concrete example, here's a query from my codebase back when it used MongoDB (yes, all this is a single query). Don't try to understand it. Just marvel at it. 
+
+    // sorry. This cannot possibly be the correct way to do this, but it works.
+    let tables = await db.collection("tables")
+      .aggregate(
+        [
+          {
+            '$match': baseMatch
+          },
+          {
+            '$project': projection
+          }
+
+          , {
+            '$sort': {
+              'createdTime': -1
+            }
+          },
+          {'$skip': pageSize * targetPage},
+          {'$limit': pageSize},
+           {
+            '$project': {
+              'tableId': 1,
+              'version': 1,
+              'createdTime': 1,
+              "options": optionObject,
+              "stats": globalStatsObject,
+
+              'playerStats': {
+                '$objectToArray': '$playerStats'
+              },
+              'feedbackAnswers': {
+                '$map': {
+                  'input': '$feedbackAnswers',
+                  'as': 'feedbackAnswer',
+                  'in': {
+                    'k': '$$feedbackAnswer.k',
+                    'v': {
+                      '$ifNull': [
+                        {
+                          '$mergeObjects': [
+                            {
+                              'color': {
+                                '$getField': {
+                                  'input': {
+                                    '$first': {
+                                      '$filter': {
+                                        'input': '$playerColors',
+                                        'as': 'playerColor',
+                                        'cond': {
+                                          '$eq': [
+                                            '$$playerColor.username', '$$feedbackAnswer.k'
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  'field': 'color'
+                                }
+                              }
+                            },
+                            '$$feedbackAnswer.v'
+                          ]
+                        }, null
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }, {
+            '$project': {
+              'feedbackAnswers': {
+                '$map': {
+                  'input': '$feedbackAnswers',
+                  'as': 'feedbackAnswer',
+                  'in': {
+                    'k': '$$feedbackAnswer.k',
+                    'v': {
+                      '$mergeObjects': [
+                        {
+                          'tableId': '$tableId',
+                          'version': '$version',
+                          createdTime: "$createdTime"
+                        },
+                        {
+
+                          '$arrayToObject': {
+                            '$map': {
+                              'input': '$playerStats',
+                              'as': 'playerStat',
+                              'in': {
+                                'k': '$$playerStat.k',
+                                'v': {
+                                  '$ifNull': [
+                                    {
+                                      '$getField': {
+                                        'field': 'v',
+                                        'input': {
+                                          '$first': {
+                                            '$filter': {
+                                              'input': {
+                                                '$objectToArray': '$$playerStat.v'
+                                              },
+                                              'as': 'playerColor',
+                                              'cond': {
+                                                '$eq': [
+                                                  '$$playerColor.k', '$$feedbackAnswer.v.color'
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }, 'n/a'
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        '$$feedbackAnswer.v',
+
+                        optionResult,
+                        globalStatsResult
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }, {
+            '$project': {
+              'feedbackAnswers': {
+                '$arrayToObject': '$feedbackAnswers'
+              }
+            }
+          }
+        ], { "allowDiskUse": true }).toArray();
+
+Comment 4:
+Author: AlarmedNegotiation18
+Score: 42
+Created UTC: 1766778784.0
+Comment: 1. It’s a good alternative in almost every case for beginner projects. It really shines in cases when you don’t “control” the object model of a problem you work with. Somebody else controls it. Example is a web scraper - you’re not in charge of the website you are scraping. Schema-less is a big thing here because it lets you store “anything” in the DB. Also, NoSQL is much more beginner-friendly, which is why you see it so much in courses and tutorials.
+Of course, it has some great horizontal scalability features and a lot of other stuff, but that's not important for beginners in this field (at least, not yet).
+
+2. If I have complete control over my object model, I would always use a relationship database since I’m already familiar with SQL. Also, if I have a lot of data to process (like GBs or TBs), I’ll avoid MongoDB or any NoSQL database.
+
+3. It's usually a great choice. It lets you shift your focus to the app and its logic, spending less time on data structures, schemas, etc. In real life, at some point, you'll need to learn SQL because it’s much more common than NoSQL, but for personal projects and learning Mongo, it's a great start. 
+MongoDB and Atlas created one of the best developer experiences I have seen
+
+Comment 5:
+Author: serverhorror
+Score: 27
+Created UTC: 1766778722.0
+Comment: 1. To be replaced with other (mostly relational) databases
+2. There is no number two

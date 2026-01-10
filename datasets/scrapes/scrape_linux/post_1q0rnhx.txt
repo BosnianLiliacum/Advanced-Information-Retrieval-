@@ -1,0 +1,74 @@
+Post Title: I'm using Linux again after an 15 year break. Wow
+Author: elac
+Score: 820
+URL: https://www.reddit.com/r/linux/comments/1q0rnhx/im_using_linux_again_after_an_15_year_break_wow/
+Number of comments: 229
+Created UTC: 1767228093.0
+
+Post Content:
+I started using linux when I was in middle school. My first install was redhat that I installed with floppy disks (no joke). I quickly moved onto Slackware and FreeBSD (i know, not linux), which I used for years and then Arch. I used it as my primary OS, if something was broken I figured it out. I read slashdot, wrote my own iptables, did my own shell scripting, absolutely loved it. Everything took a ton of work though. I would spend days troubleshooting at times. Then I got decided on a massive career change from IT security to healthcare. I got an iphone and mac and left linux in the past.
+
+I got bored and decided to install ubuntu LTS on an XPS i bought just for it. Wiped the drive clean and just went for it. Wow, shit just works now. The drivers for everything work perfectly. All the keyboard keys work. Gaming on steam is even better than windows! The UI is sooo clean. Wayland is a HUGE upgrade from x11. Linux is truly ready for prime time now, though I guess people just don't care as much about using a PC now.
+
+Sorry, just had to share. All my linux nerd friends long ago quit and went to OSX and had families same as me. I'm very impressed so far, though I feel kind of like a tool using ubuntu. I'll probably get my feet wet and go back to Arch. Anything anyone else would suggest? What else did I miss over these 15 years?
+
+edit: 1/1/26. installed endeavouros. this is what i wanted, i just didnt know it yet. thanks for the suggestions everyone.
+
+edit: found wayland bugs. why is copy and paste broken from browsers to terminal??
+
+
+Top 5 comments:
+
+Comment 1:
+Author: bubblegumpuma
+Score: 158
+Created UTC: 1767232504.0
+Comment: Another big change that happened while you were gone is the changeover from old-style sysv shell script-driven init to 'systemd' as init, which is a much more centralized system management tool. I completely skipped over the transitional period myself due to taking a shorter hiatus from Linux, so I've been learning about it a lot since I came back, since it's very nearly universal now. This is where programs like 'systemctl' come from, among many, many others. 
+
+A lot of people who have been using Linux as long as you have don't like the way that it folds a lot of functionality that was formerly handled by multiple programs into its domain, but if you come at it with an open mind, it can be a very powerful set of tools. I do admit that a lot of that functionality probably isn't relevant for a single user desktop type setup, but they do provide some replacements for other tools that you might run into, like their 'timers' as a replacement for cron.
+
+Comment 2:
+Author: beatbox9
+Score: 52
+Created UTC: 1767231478.0
+Comment: Here's been my experience of continuously using both Linux and OSX during your 15 year break:
+
+[https://www.reddit.com/r/linux/comments/1j8j2ud/distros\_my\_journey\_and\_advice\_for\_noobs/](https://www.reddit.com/r/linux/comments/1j8j2ud/distros_my_journey_and_advice_for_noobs/)
+
+Yes, I agree that Linux (the entire ecosystem, not just the kernel) has matured quite a bit in that time.  Some of the biggest fundamental improvements for me as a "normal" user who uses both OSX and Linux who hates hacking away at the command line:
+
+* There appears to be a shift away from only using distro-specific packages (.deb, rpm, etc) or adding random repositories to attempt to get the latest versions of the apps...
+* ...toward sandboxed containers, such as flatpaks (and snaps, AppImages, etc).  It's all 1-click installs, no debate on "do I go with the 2-year-old version that will never be updated or add some random repository for the newest versions"; and this is also essentially how OSX feels to install apps.  You can also control containerized app permissions (eg. through flatseal)--again similar to OSX.
+* Audio has been vastly improved via pipewire.  Previously, there was pulseaudio and jack, which didn't play well together and required a lot of hacking, creating bridges, etc.  Pipewire essentially [combines those into one](https://www.reddit.com/r/linuxaudio/comments/1jkvwb6/alsa_vs_pulseaudio_vs_jack_vs_pipewire/) seamlessly.  It's great.
+* DE's have improved and stabilized--no drastic, breaking changes every few years.  Eg. Gnome has improved a lot (as has KDE).  It's simplified and more minimalist with fundamentals; and it now has a great system of extensions to really make it shine--almost as though extensions are expected (and I like it this way).  Previously, there was a lot of hacking to get things working; and what are extensions today were entire applications previously, which had their own dependencies, patches, etc.  A good example I can think of I use all the time is Dash2Dock Animated + Search-Light (today) vs. [docky + gnome-do (15 years ago)](https://askubuntu.com/questions/5790/gnome-do-in-doesnt-have-the-docky-appearance-anymore)\--these would frequently break, or require a flashback session or whatever.  Not that it's perfect, but it is improving.
+* The ecosystem in general has improved.  Lots more applications make Linux versions that are on par with OSX versions.  Fewer limitations than previously.  Even though it still has a tiny user base (relatively), it generally feels like Linux is treated more as a mainstream normal user's desktop OS than previously.
+* The apps have improved UX.  Previously, even things like the file browsers felt behind (even for back then); and now they're essentially the same thing you'd find on OSX.
+* It feels as though there has been more coalescing in standards in general (not just for Linux), which has improved UX for everyone.  15 years ago, it felt like we were back in a betamax vs VHS war for standards; and now, we're in the smooth "VHS won" phase.  This is in regards to codecs, websites, formats, etc.  Not perfect, but getting there.
+
+Taken all together, 15 years ago, it was really daunting to think about using Linux as a primary or exclusive OS--especially if you weren't technical or actually wanted to use your desktop instead of living in the command line.
+
+But today, I use my linux and OSX machines interchangeably; and I have a similar--even almost identical--experience on both.  Really, the only major difference I actually notice is that OSX has a global menu while gnome doesn't--and this is pretty minor.  Also, Davinci Resolve Studio doesn't support AAC audio in Linux, but it does on Mac.  But the fact that I am talking about using Davinci Resolve Studio on Linux, with the only difference being a single codec, is itself a testament to the above.
+
+Comment 3:
+Author: fek47
+Score: 51
+Created UTC: 1767229409.0
+Comment: &gt; Wayland is a HUGE upgrade from x11
+
+Yes, indeed. Some people report having issues with Wayland  but I'm not having any problem whatsoever. 
+
+As you have been away from Linux for quite some time it's especially interesting to hear your thoughts.
+
+Comment 4:
+Author: imtoowhiteandnerdy
+Score: 33
+Created UTC: 1767252586.0
+Comment: I used to use Linux.
+
+I still use Linux, but I used to too.
+
+Comment 5:
+Author: nahman201893
+Score: 29
+Created UTC: 1767228335.0
+Comment: I was shocked at how well Bazzite ran games. It was one of the things holding me back from switching. Now I run a few different distros. I really enjoy it!

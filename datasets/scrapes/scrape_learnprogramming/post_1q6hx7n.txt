@@ -1,0 +1,96 @@
+Post Title: How do I transition from "code that works" to "production-ready code"?
+Author: Amr_Yasser
+Score: 33
+URL: https://www.reddit.com/r/learnprogramming/comments/1q6hx7n/how_do_i_transition_from_code_that_works_to/
+Number of comments: 28
+Created UTC: 1767798778.0
+
+Post Content:
+I'm a backend developer with about 3 years of experience. I can solve problems and write code that works, but when I look at code written by senior engineers, there's a clear gap. Mine works but feels fragile in comparison.
+
+In a recent interview, I implemented a simple inventory system. It worked fine for the happy path, but I realized afterward that I hadn't considered concurrent access, didn't validate inputs, returned mixed types from methods, and used raw dictionaries instead of proper data structures.
+
+For those who've made this transition:
+
+* How did you develop the instinct to think about edge cases, error handling, and API design automatically?
+* Were there specific resources, projects, or experiences that accelerated your growth?
+* How long did it take before writing "senior-level" code became natural?
+
+What I'm really asking is how to internalize the software engineering mindset so it becomes second nature.
+
+Any advice or resources appreciated.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: desrtfx
+Score: 42
+Created UTC: 1767798988.0
+Comment: One word: experience
+
+Really, that's all that differentiates. The more experience you obtain, the more natural it will become to handle edge cases, etc. It becomes second nature.
+
+There is no speedrun, nor tricks. It is just consciously observing and experience.
+
+You don't actually *make* this transition. You *grow into it*.
+
+By realizing your shortcomings, you have already taken the first and most important step. Now, consciously force yourself to handle these things in your next project. Rinse and repeat.
+
+Comment 2:
+Author: GlKar
+Score: 13
+Created UTC: 1767799931.0
+Comment: My first year as a fullstack dev is about to come to a close. And I recognize a lot of myself in your question. I'm lucky to work with a few very experienced seniors and that they show me a lot of tips and tricks. But it all comes down on experience. 
+
+They know the bottlenecks when writing code, things that junior/medior people look over. I learned a lot this past year and still learning everyday. 
+
+A stupid example is null-checking. In my first months I never considered null-checking, the ignorant believe that an object with a certain id or property would exist was holy. By now I check up on everything, because the first bugs that come to mind are nullreference errors.
+
+Comment 3:
+Author: MrJesusAtWork
+Score: 6
+Created UTC: 1767801459.0
+Comment: I believe I am going through the exact same feeling in my career and trying to get these answers as well.
+
+
+As for your example given, I happen to nail what I think is a good answer: 
+
+
+&gt;It worked fine for the happy path, but I realized afterward that I hadn't considered concurrent access, didn't validate inputs, returned mixed types from methods, and used raw dictionaries instead of proper data structures.
+
+
+You said it yourself, one aspect of the solution is when you think only about the happy path, instead the real world is imperfect and it will behave in unpredictable ways, so that's something to think about when trying to design a solution.
+
+
+Another aspect that seems to be coming up everytime I look for answer is that I was not thinking in terms of _domain_ .
+
+
+&gt;I hadn't considered concurrent access,
+
+
+I had something similar happen to me recently, and it was because I wasn't thinking in terms of use cases, I was purely thinking in mechanical terms of how to implement the solution.
+
+
+Once I started to look into problems as use cases and the domain problem, then things like these became more 'obvious'.
+
+
+I don't have much else to add but want to leave this stackoverflow answer that sparked this whole insight, hope it helps you as well: https://stackoverflow.com/a/21694054
+
+Comment 4:
+Author: Pyromancer777
+Score: 5
+Created UTC: 1767834067.0
+Comment: Everyone says experience, but you also need to realize that experience also includes reading through codebases setup by senior devs.
+
+I went through trial by fire, going from tutoring students to being dumped into a codebase from some of the fortune 100 companies. Spent countless hours exploring the codebase to understand the toolsets we had to be familiar with, so I got to see a ton of different ways to solve very similar problems. Old methodologies combined with more recent standards and practices all cobbled together to create robust pipelines that ran at scale.
+
+You get experience both by seeing how complex systems run, but also by stepping up to the design challenge when opportunity presents itself.
+
+I still write bad code, but I'll iterate on that bad code until it isn't so bad any more. Make it work &gt; make it efficient &gt; abstract what you can &gt; then make it pretty so others can follow the logic.
+
+Comment 5:
+Author: AgentDutch
+Score: 3
+Created UTC: 1767802364.0
+Comment: As someone else said, experience, and also ask a question to ask yourself: how did you know what you could’ve differently in your interview? Were you told directly in a rejection letter? Did you take the time to learn this information later? Maybe you were nervous and didn’t think about it at the moment, in which case experience and practice make the difference. In Python for example you have people that naturally sugar things up/use decorators and it seems unintuitive (especially coming into an ongoing project) until you’re forced into edge cases/collaboration and start doing it regularly. Senior level code is a YMMV kind of thing imo, as you will work with people that understand everything but document nothing.

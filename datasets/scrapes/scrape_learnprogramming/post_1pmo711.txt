@@ -1,0 +1,50 @@
+Post Title: I want to call an API every minute 24/7 and save the results - what's the easiest cloud-based way to do this?
+Author: SkyBlueNylonPlank
+Score: 29
+URL: https://www.reddit.com/r/learnprogramming/comments/1pmo711/i_want_to_call_an_api_every_minute_247_and_save/
+Number of comments: 26
+Created UTC: 1765744363.0
+
+Post Content:
+I googled and people suggested AWS lambda, but I am getting frustrated after having to learn boto3 to save to s3, how to set up a VPC and all these other things just to get internet connectivity and the ability to save, and it's a new toolset, development environment, etc. I have a python script that runs locally fine, I just don't want to have a laptop running it 24/7 and if it goes down to lose a chunk of data (it's an API for transit vehicle tracking). I've made a pythonanywhere account but is there something I'm missing? What's the easiest way to:
+
+* Run a python script 24/7 regardless of my local machine
+* Have internet access to make an API call
+* Have the ability to save the results of the API call
+
+Is there an easy setup for AWS lambda I'm missing? Or a step-by-step tutorial or something? Or another service that would be easier?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: e57Kp9P7
+Score: 35
+Created UTC: 1765746456.0
+Comment: At home, a Raspberry Pi or anything that can host apps (Python, Java, Docker, etc.), or a cheap VPS.
+
+Comment 2:
+Author: desrtfx
+Score: 31
+Created UTC: 1765744573.0
+Comment: Get yourself a Raspberry Pi (3B+ up) and run your script there. They are built for 24/7 operation. Easiest and cheapest way. No cloud involved.
+
+Comment 3:
+Author: ReddiDibbles
+Score: 9
+Created UTC: 1765751451.0
+Comment: I think whatever guide you're following for lambda is making things way more complicated. You can go to lambda, create a new lambda with your script or compiled executable depending on your language of choice, and then set a schedule in aws eventbridge to invoke it every minute. You don't need to configure a vpc for this.
+
+Comment 4:
+Author: teraflop
+Score: 4
+Created UTC: 1765745777.0
+Comment: There are many ways to do this, but one easy option is to just start an EC2 instance, copy over your Python script, and run it there.  A GCE instance or a VPS would work just as well.
+
+The quick-and-dirty way is to log in with SSH and run it manually, using a `screen` or `tmux` session to keep it running after you log out. A cleaner way is to create a systemd unit file to automatically run the script on boot and restart it if it crashes.
+
+Comment 5:
+Author: Guideon72
+Score: 3
+Created UTC: 1765745511.0
+Comment: How are you retrieving/consuming the data that gets saved?

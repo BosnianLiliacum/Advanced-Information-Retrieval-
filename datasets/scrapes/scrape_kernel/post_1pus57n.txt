@@ -1,0 +1,50 @@
+Post Title: Booting on a e-core
+Author: galibert
+Score: 26
+URL: https://www.reddit.com/r/kernel/comments/1pus57n/booting_on_a_ecore/
+Number of comments: 13
+Created UTC: 1766596059.0
+
+Post Content:
+I have a 12th Gen Intel(R) Core(TM) i7-12700H with 12 threads on p-cores and 8 on e-cores.  From time to time, for instance on battery, I'd like to completely shut down the p-cores.  But the system always boot with cpu 0 being a p-core, making that impossible afaict.  Is there a way to ensure that cpu #0 is a e-core?
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Pleasant-Form-1093
+Score: 18
+Created UTC: 1766596444.0
+Comment: As far as I know, the firmware and the underlying CPU decide which core is allowed to be the BSP (the Bootstrap processor i.e the core that starts when power is applied). 
+
+While Linux does allow you to start and stop cores as needed (through the /sys hierarchy), Linux itself cannot change which core and of what type it is, gets to run at startup.
+
+I may be wrong so feel free to correct me.
+
+Comment 2:
+Author: ultrahkr
+Score: 4
+Created UTC: 1766598783.0
+Comment: Also take into consideration that some P-cores don't have the same instructions as E-cores. (Heavily depends on the generation)
+
+Comment 3:
+Author: nikomo
+Score: 2
+Created UTC: 1766597284.0
+Comment: Worthwhile to test how much the cores consume power with a workload of a set size before going further.
+
+A performance core easily beating the race to powering down might beat an efficiency core having to spend a lot longer doing the same thing.
+
+Comment 4:
+Author: codeguru42
+Score: 2
+Created UTC: 1766608536.0
+Comment: Maybe write your own bootloader and kernel?
+
+Comment 5:
+Author: mbartosi
+Score: 1
+Created UTC: 1766602824.0
+Comment: [https://forum.asrock.com/forum\_posts.asp?TID=25302&amp;title=why-z790-pro-rs-bios-lets-you-disable-all-pcores](https://forum.asrock.com/forum_posts.asp?TID=25302&amp;title=why-z790-pro-rs-bios-lets-you-disable-all-pcores)

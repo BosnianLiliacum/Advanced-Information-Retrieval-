@@ -1,0 +1,32 @@
+Post Title: D7VK 1.1 adds experimental Direct3D 6 support for classic PC games on Linux
+Author: RenatsMC
+Score: 515
+URL: https://videocardz.com/newz/d7vk-1-1-adds-experimental-direct3d-6-support-for-classic-pc-games-on-linux
+Number of comments: 18
+Created UTC: 1767090310.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 3 comments:
+
+Comment 1:
+Author: bawng
+Score: 39
+Created UTC: 1767100838.0
+Comment: Is the benefit here (compared to Wine) that it translates to Vulkan instead of OpenGL?
+
+Comment 2:
+Author: murlakatamenka
+Score: 24
+Created UTC: 1767122201.0
+Comment: I remember having and reporting issues in Rayman Origins' rendering like 5 years ago when D9VK was not integrated into DXVK. Time flies, now there is D7VK and DX6 support is in the works, amazing.
+
+The spice must flow, compatibility must grow!
+
+Comment 3:
+Author: SEI_JAKU
+Score: 9
+Created UTC: 1767105243.0
+Comment: Still need to investigate certain DX6/7/8 games with these newer tools. It might be experimental, but maybe now is the time. I also need to look into 86Box/PCBox more.

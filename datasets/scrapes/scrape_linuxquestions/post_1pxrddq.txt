@@ -1,0 +1,142 @@
+Post Title: How can I view the source code of a program that runs on the command line?
+Author: Nubspec
+Score: 34
+URL: https://www.reddit.com/r/linuxquestions/comments/1pxrddq/how_can_i_view_the_source_code_of_a_program_that/
+Number of comments: 60
+Created UTC: 1766928559.0
+
+Post Content:
+I would like to examine the source code of programs like `wc` or `ls`, but I’m not sure where to find it. I’m trying to gain a better understanding of how they work behind the scenes. Any help would be greatly appreciated.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Resident-Cricket-710
+Score: 46
+Created UTC: 1766928678.0
+Comment: [https://github.com/coreutils/coreutils/tree/master/src](https://github.com/coreutils/coreutils/tree/master/src)
+
+Comment 2:
+Author: Klapperatismus
+Score: 33
+Created UTC: 1766932229.0
+Comment: If you want to take a look at the source code of that version of the program that runs on your machine, install its source package.
+
+First, find out which package the tool is in. On OpenSUSE for example, you can do that with the RPM package manager:
+
+    $ rpm -qf $(which wc)
+    coreutils-9.9-1.1.x86_64
+    $
+
+So, let’s install the sources of the coreutils package. On OpenSUSE, you do it this way:
+
+    $ sudo zypper si coreutils
+    …
+
+Zypper is going to install that source package and even better, also everything that is required to rebuild that package from the sources. So you can patch “wc” and rebuild and install your private version.
+
+The sources itself are then put into /usr/src/packages/SOURCES. You can unpack the coreutils tar archive there, look into it, change it, make a patch and so on:
+
+    $ cd /usr/src/packages/
+    $ sudo chown -R $USER SOURCES SPECS
+    $ cd /usr/src/packages/SOURCES
+    $ tar xf coreutils-9.9.tar.xz
+    $ mv coreutils-9.9 coreutils-9.9.orig
+    $ tar xf coreutils-9.9.tar.xz
+
+Now let’s change something in the sources of “wc”.
+
+    $ vi coreutils-9.9/src/wc.c
+
+For example add FOOBAR at the begin of the built-in help in line 176. Let’s diff that:
+```
+$ diff -urN coreutils-9.9.orig coreutils-9.9 
+diff -urN coreutils-9.9.orig/src/wc.c coreutils-9.9/src/wc.c
+--- coreutils-9.9.orig/src/wc.c 2025-09-30 12:24:16.000000000 +0200
++++ coreutils-9.9/src/wc.c      2025-12-28 15:39:07.673866772 +0100
+@@ -173,7 +173,7 @@
+ "),
+               program_name, program_name);
+       fputs (_("\
+-Print newline, word, and byte counts for each FILE, and a total line if\n\
++FOOBAR Print newline, word, and byte counts for each FILE, and a total line if\n\
+ more than one FILE is specified.  A word is a nonempty sequence of non white\n\
+ space delimited by white space characters or by start or end of input.\n\
+ "), stdout);
+```
+Make a proper patch:
+
+    $ diff -urN coreutils-9.9.orig coreutils-9.9 &gt;FOOBAR.patch
+
+Let’s then add the patch to the package specs.
+
+    $ cd /usr/src/packages/
+    $ vi SPECS/coreutils.spec
+
+Change the release
+
+    Release:        1.1foobar
+
+around line 34. Then add
+
+    Patch999:       FOOBAR.patch
+
+around line 65, and
+
+    %patch -P 999
+
+around line 165. Save it. Then rebuild the package:
+
+    $ rpmbuild -bs SPECS/coreutils.spec
+    …
+    $ rpmbuild --rebuild SRPMS/coreutils-9.9-1.1foobar.src.rpm
+
+Install your modified package:
+
+    $ sudo rpm -U --force RPMS/x86_64/coreutils-9.9-1.1foobar.x86_64.rpm
+
+Enjoy your patch:
+
+```
+$ LANG=C wc --help
+Usage: wc [OPTION]... [FILE]...
+  or:  wc [OPTION]... --files0-from=F
+FOOBAR Print newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified.  A word is a nonempty sequence of non white
+```
+
+(You likely need that LANG=C so the program internal help strings are shown rather than those from internationalization. Those are defined in the „po“ subdirectory of the source archive.)
+
+ISN’T LINUX GREAT?
+
+Comment 3:
+Author: fellipec
+Score: 7
+Created UTC: 1766933941.0
+Comment: You can get on Github the repos of the programs, is easier as you don't need to install a thing, you see in your browser.
+
+But the traditional way (for Debian based) is to enable the source repos and install the source package for the software you want:
+
+`apt source coreutils`
+
+And it will download the source for your from the official repos of  your distribution.
+
+Comment 4:
+Author: lucasrizzini
+Score: 6
+Created UTC: 1766928697.0
+Comment: Sorry, I can't control myself: 
+
+* [https://www.google.com/search?q=wc+command+github+source+code](https://www.google.com/search?q=wc+command+github+source+code)
+* [https://www.google.com/search?q=ls+command+github+source+code](https://www.google.com/search?q=ls+command+github+source+code)
+
+Comment 5:
+Author: ohohuhuhahah
+Score: 3
+Created UTC: 1766928688.0
+Comment: As far as I know these tools are called coreutils.
+
+There are different versions of them, on most of Linux distris there are GNUutils
+
+Also check BSD version of them

@@ -1,0 +1,66 @@
+Post Title: Is there any command-line tool to run multiple commands simultaneously in the *foreground*?
+Author: God_Hand_9764
+Score: 26
+URL: https://www.reddit.com/r/linuxquestions/comments/1prdk94/is_there_any_commandline_tool_to_run_multiple/
+Number of comments: 44
+Created UTC: 1766234832.0
+
+Post Content:
+I know about sending jobs into the background and job control.
+
+What I'm wanting is some way to execute a single command, launch multiple processes simultaneously... but instead of them going into the background, the terminal maybe splits into 4 panes and I can watch all 4 jobs output that way as they're running.
+
+The jobs that I'm wanting to run would be nice to see their output as it's running.  I am sure that I could put something together with tailing the logs and updating every few seconds, but I was hoping there is some already existing solution to this.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Sshorty4
+Score: 43
+Created UTC: 1766234989.0
+Comment: You’re describing tmux
+
+Here’s a short description of tmux:
+
+It lets you create sessions, windows (tabs basically) and panes (split screens)
+
+You can run commands on them, detach, close terminal, open terminal again, re attach and all your commands are running with all their logs.
+
+It’s one of the best tools I was putting off for years until I tried it and realized it’s the core tool that lets me use terminal in a comfortable way
+
+Comment 2:
+Author: JohnHue
+Score: 9
+Created UTC: 1766237081.0
+Comment: I've never really used the feature but GNU Screen can do this by splitting the terminal window 
+
+https://www.gnu.org/software/screen/manual/html_node/Split.html
+
+Comment 3:
+Author: doc_willis
+Score: 5
+Created UTC: 1766238959.0
+Comment: tmux, screen, zellij, twin, byobu,Dvtm   and I seem to recall at least 2 others who names I cant remember...  
+
+all are basically terminal 'multiplexors' that let you do similar things as you mention.
+
+https://zellij.dev/documentation/installation.html
+
+https://www.howtogeek.com/this-terminal-multiplexer-is-so-much-better-than-tmux-for-beginners/
+
+https://rocketfiles.com/blog/tmux-alternative
+
+Then theres various detatch-reattatch tools like  dtach and diss
+
+Comment 4:
+Author: ipsirc
+Score: 4
+Created UTC: 1766235027.0
+Comment: [https://linux.die.net/man/1/parallel](https://linux.die.net/man/1/parallel)
+
+Comment 5:
+Author: Classic-Rate-5104
+Score: 3
+Created UTC: 1766239758.0
+Comment: You can try the "parallel" command, however this is in fact one foreground process (parallel) managing multiple background processes. It's a question of definition whether you call these processes "foreground" or not

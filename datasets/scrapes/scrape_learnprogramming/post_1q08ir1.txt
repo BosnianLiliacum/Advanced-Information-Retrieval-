@@ -1,0 +1,72 @@
+Post Title: Senior devs, what’s your no. 1 advice to young developers?
+Author: Luca-Fly
+Score: 205
+URL: https://www.reddit.com/r/learnprogramming/comments/1q08ir1/senior_devs_whats_your_no_1_advice_to_young/
+Number of comments: 58
+Created UTC: 1767171567.0
+
+Post Content:
+Let me share my own story first. I’m seventeen now, and I’ve been tinkering with programming since I was eleven. Right now, I’m at a point where I can tackle various projects and have plenty of free time to do so. I suspect I’m not the only person on Reddit (or anywhere else) in this situation. So, I’m curious: **what were your experiences during this time, and what steps did you take to move forward?**
+
+
+Top 5 comments:
+
+Comment 1:
+Author: symbiatch
+Score: 228
+Created UTC: 1767172052.0
+Comment: Just keep building stuff. New stuff. Stuff that requires you to read up on things and learn new things. Even if it’s something “useless” to you right now.
+
+Just do stuff. Get some level of understanding of everything. Because one big thing experienced people have is knowledge. Not in-depth knowledge of everything but the kind of “oh I remember there’s a thing X that can be used to do the thing I need and I can look it up if it really works here.” A lot of approximate knowledge somewhere in the brain.
+
+Comment 2:
+Author: funkvay
+Score: 160
+Created UTC: 1767175262.0
+Comment: I'm gonna tell you something that took me way too long to figure out and honestly still pisses me off that nobody just said it to me directly when I was your age.
+
+Stop building shit to impress other programmers. Start building shit that actual people need.
+
+You're seventeen, and coded for like 6 years? Cool. I was similar. And I wasted years, like genuinely wasted them building technically complicated garbage that nobody used. I'd make elaborate systems with clean architecture and clever algorithms and other developers would be like "wow nice" and I felt smart. But you know what? That's just jerking off. Nobody outside of programmer circles gave a shit because none of it solved actual problems.
+
+The real turning point isn't learning another framework or getting better at leetcode or whatever (ofc that's important too at some point). It's when you stop asking "what's a hard technical challenge I can tackle" and start asking "who around me has an annoying problem I could maybe fix". And I mean really asking. Not imagining problems, not building solutions looking for problems, actually talking to real humans about real annoying shit in their lives.
+
+I wish I'd done at seventeen instead of building my tenth todo app with a new fancy tech stack. Go find someone, it can be your parents, a teacher, local business owner, literally anyone, and ask them what repetitive annoying thing they deal with. Then build the dumbest, simplest possible thing that makes that less annoying. Not elegant. Not impressive to other devs. Just useful.
+
+For an Example, my friend used to manually copy-paste data from emails into spreadsheets for her work every morning. Took her like 45 minutes. I could've built a script that parsed those emails and dumped it into a CSV in literally an afternoon. But I didn't, because that wasn't "interesting" to me. I was too busy implementing a custom database engine for a project nobody would ever use because I wanted to understand B-trees. See the problem? She had a real problem that cost her actual time every single day. I had the skills to fix it in hours. But I never even asked because I was focused on impressing myself and other programmers.
+
+This will humble you hard. All that clean code and design patterns everyone is proud of... Nobody cares when they can't figure out how to log in. The clever optimization doesn't matter when they just need a button that exports to Excel because that's what their boss wants. 
+
+You know what's funny? Even Linus Torvalds had to learn this lesson. When he built Git, he didn't start by designing the perfect distributed version control system architecture. He started because he was pissed off at BitKeeper and needed something that worked for the Linux kernel workflow, specifically handling huge numbers of patches from contributors he didn't fully trust. Git's internals are actually kind of ugly if you look at them. It's basically a content-addressable filesystem with some scripting on top. But it solved the actual problem he had, which was managing kernel development. All the elegant design came later after people were already using it. He built for the problem, not for the architecture. That's why Git won and all those "better designed" version control systems nobody remembers lost.
+
+Or another time, built an inventory system with proper relational database design, normalized tables, foreign keys, the works. User wanted to bulk-edit 50 items at once. Couldn't do it because I'd built individual edit pages and never thought about bulk operations. They just stopped using it and went back to Excel where they could edit multiple rows. My database design was objectively better than Excel. But Excel let them do their actual job faster, so Excel won.
+
+You'll realize pretty quick that like 80% of what you thought was important is completely irrelevant and all the boring stuff you ignored is what actually matters. Authentication, error messages that actually tell you what went wrong, handling edge cases like what if they upload a file that's too big, making sure it works on their old laptop with Chrome from 2019, having an undo button, that's the stuff that makes or breaks whether someone actually uses your thing.
+
+This field is packed with people who started young. I've met self-taught developers who picked it up at 25 and they're way better than me at a lot of things because they focused on solving problems instead of collecting technical skills like they're achievements in a video game. There's a guy I used to work with who switched from being a chef at 28, learned to code at a bootcamp, and he's one of the best developers I know. Why? Because he spent 10 years in restaurants learning how to handle stress, communicate with difficult people, and deliver under pressure. Those skills transferred. His code isn't always the prettiest but he ships things that work and people actually **want** to use them.
+
+[continuation in the replies]
+
+Comment 3:
+Author: eh_it_works
+Score: 25
+Created UTC: 1767172091.0
+Comment: There will be a lot of advice on optimizing for a career, money, and all of that is important. 
+
+But always make some time for passion projects that have you learning for fun.
+
+I learned programming on my spare time, back then, I never thought I would work in it. It's wild. 
+
+Back then I just kept learning, making programs to do engineering math and stuff.
+
+Comment 4:
+Author: Interesting_Dog_761
+Score: 22
+Created UTC: 1767172267.0
+Comment: (1) Do, don't just talk about what you want to do or are going to do. Do it. (2) Don't do what everyone else does. There's more than webdev. (3) Do not worry about what you think the market wants, fulfill your interests. (4) That said ,  consider writing part or all of a compiler. Each part is a project in itself, and you don't need to do everything to accomplish a lot. (5) Learn how to learn. Do not be like the other kids who expect to get spoonfed. Taking a problem as far as you can and then bringing your detailed problem to us marks you as someone worth helping
+
+Comment 5:
+Author: Immediate_Form7831
+Score: 16
+Created UTC: 1767176726.0
+Comment: If I've learned anything from 25+ years of experience working as a software engineer, it is that **every problem is, to some extent, a "people" problem**. People skills come into every single aspect of software engineering, and honing your people skills is one of the things which will make you a better engineer in every aspect. Sure, technical knowledge and experience is also needed, but they will get you nowhere if you don't know how to communicate with other people.

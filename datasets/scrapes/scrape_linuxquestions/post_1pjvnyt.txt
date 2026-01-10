@@ -1,0 +1,73 @@
+Post Title: Hi guys, I want to move to linux
+Author: Adro244
+Score: 25
+URL: https://www.reddit.com/r/linuxquestions/comments/1pjvnyt/hi_guys_i_want_to_move_to_linux/
+Number of comments: 36
+Created UTC: 1765454026.0
+
+Post Content:
+I'm an average gamer with little knowlage about coding and stuff tbh. I was a hardcore windows man, but recent news shattered my delusions  (especially AI and ads literally in windows lmao) How do I switch to linux? What should I do, any suggestions with it?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 24
+Created UTC: 1765455274.0
+Comment: &gt;How do I switch to linux? What should I do, any suggestions with it?
+
+The most important thing to understand is that Linux is not Windows.  The two are different operating systems, using different applications and workflows.
+
+As a starting point, check your use case (the things you do with your computer, the applications you use to do whatever it is you do, and the workflows you use to do what you do) to make sure that Linux is a good fit for you.
+
+Check your applications.
+
+If, for example, many Microsoft applications -- Microsoft Office, Adobe Photoshop, AutoCAD/SolidWorks) don't run natively on Linux or run (well or at all) using Linux.
+
+In some cases, the applications you use will have Linux versions or will run acceptably in compatibility layers. In other cases, you might need to identify and learn alternative Linux applications, In a few cases, you may not find acceptable alternatives, in which case you will need to find a way to run Windows alongside Linux (VM, dual-boot, separate computer).
+
+Similarly, check the games that you use.  Gaming has improved on Linux, but not all games run or run well on Linux.  If you use Steam, check the games you play against ProtonDB.  If you use methods of playing games, check the appropriate databases for those methods.
+
+If you are in school, check to see if your school requires any Windows-only applications, such as testing applications.
+
+If Linux looks like a good fit for you and your use case, then select a distribution (Linux Mint is commonly recommended for new Linux users) and run the distribution in a "Live" session to make sure that your hardware works with Linux.  Many component manufacturers don't do a good job of providing working drivers to the kernel.  Touchpads, fingerprint readers, NVIDA graphics cards and peripherals are the usual culprits.
+
+A lot to think about as you consider migrating from Windows to Linux. Don't jump in assuming that everything will work out.  Take your time, check thngs, and use your head.
+
+In terms of actual migration, follow the installation instructions for the distribution you select.  All mainstream distributions follow a similar pattern, but the devil is in the details.
+
+My best and good luck.
+
+Comment 2:
+Author: Adro244
+Score: 11
+Created UTC: 1765457856.0
+Comment: Hi guys, this is OP, thank you all for the information and suggestions, I'll look into it and will finally move to linux, it's not  that hard as I thought tho.
+
+Best of luck all of ya, I'll update the post when I succeed
+
+Comment 3:
+Author: Mother-Pride-Fest
+Score: 9
+Created UTC: 1765454277.0
+Comment: It's gotten a lot simpler to install in the past few years, just check out the [installation guide for Linux Mint](https://linuxmint-installation-guide.readthedocs.io/en/latest/) or your preferred distro. You'll need a spare USB drive for install media and another to back up your data.
+
+Comment 4:
+Author: Siarzewski
+Score: 7
+Created UTC: 1765454530.0
+Comment: Before everything make a backup of everything you don't want to lose
+
+Comment 5:
+Author: Wally-Gator-1
+Score: 4
+Created UTC: 1765455638.0
+Comment: 1) Windows is not Linux. You will have to learn and research.  
+2) Start first by checking that your hardware is compatible : [https://linux-hardware.org/](https://linux-hardware.org/)  
+3)  Check that your games are supported on ProtonDB (https://www.protondb.com/). Some games won't work in Linux due to anti-cheat being Windows only.   
+4) Find the right distribution (gaming oriented, with sufficiently long support) and desktop environment (GNOME, KDE, others). Try them from a USB without installing first.  
+5) Backup your data on a drive.  
+6) Move to Linux.
+
+As for distributions, beginners should not use Arch derivatives. I would recommend Bazzite in your use case.

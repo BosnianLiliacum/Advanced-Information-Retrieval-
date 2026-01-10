@@ -1,0 +1,61 @@
+Post Title: Which is the best way to learn Linux?
+Author: esteban11632
+Score: 16
+URL: https://www.reddit.com/r/linuxquestions/comments/1pv14cr/which_is_the_best_way_to_learn_linux/
+Number of comments: 35
+Created UTC: 1766622186.0
+
+Post Content:
+Hi, recently I have been wanting to learn how to use Linux and I have been looking for ways to learn how to use it, the best way that I found was to go through the Linux foundation education but I’m still not sure if it’s a good way to start.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: WonderfulViking
+Score: 22
+Created UTC: 1766622624.0
+Comment: Start using it, eiter on an old computer or in VirualBox or other virtual environment.  
+It's like if you take the theory exam to drive a car you have no clue how to drive in winter conditions on icy roads.
+
+Comment 2:
+Author: blargathonathon
+Score: 14
+Created UTC: 1766623679.0
+Comment: Repeating for emphasis. Learn by doing. Be it VirtualBox or an old machine. No better way to learn.
+
+Install it and start doing computer things.
+
+Comment 3:
+Author: zardvark
+Score: 11
+Created UTC: 1766623108.0
+Comment: Install it and use it ... just like you did with Windows.
+
+Comment 4:
+Author: ofernandofilo
+Score: 5
+Created UTC: 1766626963.0
+Comment: forget VM.
+
+you need to use Linux to know it, and you need to use it on real hardware, with a real video card, with real wifi, bluetooth, sound card, and everything else.
+
+however, before installing, the best thing is to use a thumbdrive formatted with VENTOY in GPT mode and move several Linux distros to it and try them out without installing anything, all in liveUSB mode.
+
+Linux has real difficulties on real hardware and using the system necessarily involves experimenting and overcoming these difficulties.
+
+this is what you need to expose yourself to and learn to deal with.
+
+the rest is application. and the vast majority of applications can be used on any operating system with greater or lesser effort.
+
+also read:
+
+https://distrowatch.com/dwres.php?resource=major
+
+_o/
+
+Comment 5:
+Author: speyerlander
+Score: 5
+Created UTC: 1766622341.0
+Comment: Watch “Learn Linux TV” on YouTube, this guy does an amazing job making everything accessible and easy for beginners.

@@ -1,0 +1,68 @@
+Post Title: European Commission issues call for evidence on open source
+Author: sporesirius
+Score: 282
+URL: https://lwn.net/Articles/1053107/
+Number of comments: 38
+Created UTC: 1767954421.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Grouchy-Apartment156
+Score: 113
+Created UTC: 1767962568.0
+Comment: For the lazy: 
+
+The EU Commission is seeking feedback on how to boost open source in Europe.
+
+
+They're specifically asking the open-source community (contributors, companies, foundations), public admins, industry, and academia for input on:
+
+- Strengths/weaknesses of the EU OSS sector and barriers to adoption/maintenance.
+
+
+- Benefits of OSS for public/private sectors (cost savings, avoiding lock-in, security, innovation).
+
+
+- What EU-level actions could help growth, sovereignty, and cybersecurity.
+
+
+- Priority tech areas and sectors where more OSS could improve competitiveness/resilience.
+
+Feedback period is short: Ends midnight Brussels time on February 3, 2026.
+
+Comment 2:
+Author: githman
+Score: 83
+Created UTC: 1767956188.0
+Comment: The idea is great as long as it does not mean that government-controlled software becomes mandatory on private systems in EU too, business and home both.
+
+Government itself is welcome to use the software it makes and controls - this is how the major independent countries like Brazil, China, India, Russia have it. (Listed in alphabetical order, don't read much into it.)
+
+Comment 3:
+Author: sporesirius
+Score: 26
+Created UTC: 1767954695.0
+Comment: If you want to give feedback:  
+[https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems\_en](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16213-European-Open-Digital-Ecosystems_en)
+
+[https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=intcom%3AAres%282026%2969111](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=intcom%3AAres%282026%2969111)
+
+Comment 4:
+Author: WSuperOS
+Score: 13
+Created UTC: 1767980626.0
+Comment: This is really cool.
+I still find hilarious that the EU is, at the same time, one of the biggest pushers of FLOSS and openness (supporting GNU Taler, gdpr, dma, etc.) and then comes Denmark proposing ChatControl.
+
+HARASS YOUR REPRESENTIVES! Let's be the EU that supports digital rights and FLOSS, not an orwellian police state!
+
+Comment 5:
+Author: Past-Crazy-3686
+Score: 5
+Created UTC: 1767980422.0
+Comment: the main problem with open source is that there is no money to bribe politicians(or to lobby if you are that naive)

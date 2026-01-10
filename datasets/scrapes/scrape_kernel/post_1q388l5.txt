@@ -1,0 +1,18 @@
+Post Title: "Sort" to insert text
+Author: coder-true
+Score: 0
+URL: https://www.reddit.com/r/kernel/comments/1q388l5/sort_to_insert_text/
+Number of comments: 3
+Created UTC: 1767479419.0
+
+Post Content:
+Hello, I'm making a bash script and I have to insert text after a certain string, I thought that "sort" would be the command to use but I'm having trouble getting it to work, I think I should also use maybe a little regex. Thank you for your help
+
+
+Top 1 comments:
+
+Comment 1:
+Author: BraveNewCurrency
+Score: 4
+Created UTC: 1767479907.0
+Comment: You probably want to use sed or perl.

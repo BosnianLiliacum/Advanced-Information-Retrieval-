@@ -1,0 +1,67 @@
+Post Title: The device that controls my insulin pump uses the Linux kernel. It also violates the GPL.
+Author: Lost-Entrepreneur439
+Score: 3586
+URL: https://www.reddit.com/r/linux/comments/1puojsr/the_device_that_controls_my_insulin_pump_uses_the/
+Number of comments: 540
+Created UTC: 1766586324.0
+
+Post Content:
+I just need to vent about this here, and maybe talking about it here will get some change.
+
+I am type 1 diabetic and depend on insulin to survive, since 2021 I've been using Insulet's OmniPod Dash pump just because using needles got annoying. It uses a device called the "PDM" to control it, and I have some spare ones (had to get replacements after certain ones had issues, had a replacement after a battery recall, all of that) and about two years ago I got into custom ROM development for old phones, and I decided to take a look into one of my spare Dash PDMs, and I realized something
+
+They run Android. Which uses the Linux kernel. Running `uname -r`, I was able to see it was 3.18.19, which is very ancient and kinda surprising for a medical device, but whatever, I then decided to contact Insulet to get the kernel source code for it, being GPLv2 licensed, they're obligated to provide it. I tried at several emails, no response. The PDM hardware is a rebranded Chinese phone, a Nuu A1+, so I decided to try to go to Nuu to see if they could provide it. They gave me a simple one line response: "Thank you for contacting NUU Support.  I am sorry but we wouldn't be able to at this time.". I replied again saying they're obligated to, it's GPLv2 licensed, and got the response "Again, would not be able to send that to you at this time. I can reach to our engineers but I would not hear anything back from them about that until mid next week.", I agreed, then a week later got the email "Unfortunately, it can not be sent.". That was nearly two years ago, and despite multiple attempts, I haven't managed to get any further response from Nuu or Insulet.
+
+This honestly disgusts me. GPL violations are already bad on their own, but on a medical device? That me, and thousands of people rely on to stay alive? It's absolutely inexcusable behaviour. It takes 30 seconds to just create a .tar.gz file with the kernel source, host it somewhere, and send it to me, but for some reason, Insulet and their ODM Nuu have a hard refusal for it. Being on kernel 3.18 too, something that's been EOL for over 8 years, and on top of that it's also Android Marshmallow, EOL for 7 years, and it communicates to the actual pump itself over Bluetooth, everything about this device is a massive security hole and the fact they're refusing to share the kernel source makes it even sketchier. What is so bad about this kernel source that Insulet cannot provide it at any cost?
+
+Also, kinda unrelated to the kernel source, but this thing also has no AVB or any form of partition verification at all. As if the 8 years of missing security patches weren't bad enough, anyone with access to your PDM, a MicroUSB cable, and a copy of mtkclient can flash whatever the hell they want on it. On another subreddit I've shown me rooting the PDM, it's ridiculous that a 21 billion dollar company can't put security measures in their device that $50 phones have.
+
+Please, if anyone is able, spread awareness about Insulet and their GPL violations. It's absolutely disgusting that I'm still fighting for this nearly 2 years after my initial contact attempt and still haven't gotten anywhere. Honestly, I am completely out of ideas for what to do.
+
+EDIT: A lot of people are saying I'm out of luck since the ODM (Nuu) is a Chinese company, I don't believe this is true. I believe Insulet also has access to the kernel source, as they made a ton of modifications to the software, and in a hardware revision that happened \~2022 (i have enough pdms to know this), there was a modification made that caused the boot.img from the original Nuu A1+ to stop working on a PDM, indicating Insulet made some sort of bootloader and kernel modification. Insulet is American.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DFS_0019287
+Score: 1141
+Created UTC: 1766586639.0
+Comment: If you really want to up the ante, you could get a lawyer's letter sent to the company.  But that will cost money and is also uncertain to succeed.
+
+Also, you might want to read this story: [https://www.geekwire.com/2017/health-tech-podcast-one-woman-built-artificial-pancreas-started-diy-movement/](https://www.geekwire.com/2017/health-tech-podcast-one-woman-built-artificial-pancreas-started-diy-movement/)
+
+Comment 2:
+Author: [deleted]
+Score: 649
+Created UTC: 1766589758.0
+Comment: [deleted]
+
+Comment 3:
+Author: deviled-tux
+Score: 272
+Created UTC: 1766587389.0
+Comment: &gt;which is very ancient and kinda surprising for a medical device, but whatever,
+
+It’s not surprising at all. A medical device is very clearly a mission critical system that cannot be upgraded without _extensive_ testing, validation and certification.
+
+Aside from that the drivers provided by the hardware manufacturers are probably not open source and also not really being kept up to date with the pace of kernel development. 
+
+This was quite normal even for android phones, though I believe Google has put a massive amount of effort to enable newer android phones to not run 2-3 year old kernels on release day. 
+
+
+Lastly, it seems you have chased down the Chinese company that makes the hardware. Why do you think they would give half a fuck about the GPL? They operate in China, under Chinese law and jurisdiction. Trying to win a legal case against a Chinese company in China seems literally impossible to me. (Not that I know much about the chinese legal system)  So what is there to do?
+
+Comment 4:
+Author: oldlinuxguy
+Score: 264
+Created UTC: 1766586522.0
+Comment: https://www.gnu.org/licenses/gpl-violation.en.html
+
+Comment 5:
+Author: FourDimensionalTaco
+Score: 106
+Created UTC: 1766587614.0
+Comment: In addition to what u/deviled-tux said, Android kernels often are based on ancient Linux ones. The modifications made to the Linux kernel are quite extensive. Android itself also sandboxes the apps, so kernel vulnerabilities do not have the same severity as regular Linux userspace has (but they are still not good).
+
+That said, if you know the codename for that Nuu A1+ phone, you might get lucky and find the kernel here: [https://android.googlesource.com/kernel/msm/+refs](https://android.googlesource.com/kernel/msm/+refs)

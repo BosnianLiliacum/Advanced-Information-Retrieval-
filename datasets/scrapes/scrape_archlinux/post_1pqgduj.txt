@@ -1,0 +1,50 @@
+Post Title: Why does Arch not provide or stick with the latest recommended/certified branch of nvidia drivers, instead of the new feature branch?
+Author: voidscaped
+Score: 17
+URL: https://www.reddit.com/r/archlinux/comments/1pqgduj/why_does_arch_not_provide_or_stick_with_the/
+Number of comments: 25
+Created UTC: 1766134394.0
+
+Post Content:
+The current nvidia drivers `580.119.92` are of the *Recommended/Certified* branch (RCB). But it will soon be updated to the `590.48.01` drivers which are of the *New Feature Branch* (NFB). The NFB drivers are according to Nvidia, bleeding edge and not as well tested as the RCB drivers. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Yamabananatheone
+Score: 153
+Created UTC: 1766134500.0
+Comment: Because Arch is an bleeding edge distro.
+
+Comment 2:
+Author: MrElendig
+Score: 65
+Created UTC: 1766136737.0
+Comment: one reason is because the "stable" Nvidia driver doesn't always work with new kernes/glibc/etc and would potentially hold those up for weeks
+
+Comment 3:
+Author: HenrikJuul
+Score: 19
+Created UTC: 1766135353.0
+Comment: If it's not in AUR, you can make the package yourself.
+
+Comment 4:
+Author: Wild_Penguin82
+Score: 13
+Created UTC: 1766136119.0
+Comment: You could always put nvidia in `IgnorePkg` in `pacman.conf`. Partial upgrades are not recommended / supported, but especially in the context of binary blobs, it's probably not a problem. Then upgrade manually (only) when you wish, to a version you like.
+
+As for why / why not, I don't see any reason why Arch couldn't provide, say, two packages (for example, we could call them `nvidia-production` and `nvidia-feature`, which would both *provide* `nvidia`), but if it's only one to choose, it makes most sense to follow the NVidia Feature branch IMHO. You could also make this locally on your system.
+
+You could also make a feature request for the above change and explain why it would be necessary and what are your problems with the feature branch. If you give good enough reasoning (not saying such reasoning exists and makes sense), it might get implemented.
+
+Comment 5:
+Author: barnaboos
+Score: 9
+Created UTC: 1766143012.0
+Comment: Kernels. When a kernel updates it needs packages to update with it in a lot of cases. New kernels bring new features, removes features and/or updates the way things interact with the kernel. Cuda is a big one that changes regularly. 
+
+In order to keep everything rock solid and happy everything needs to be updated to the most recent versions. You really have two choices when approaching Linux. One is bleeding edge where everything must be bleeding edge and one is stable where everything must be stable.
+
+Distros that try to tread the line between those two are the ones that regularly have issues (Manjaro for example).

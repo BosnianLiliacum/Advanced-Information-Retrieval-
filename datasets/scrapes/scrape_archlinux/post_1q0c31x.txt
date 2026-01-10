@@ -1,0 +1,49 @@
+Post Title: Archinstall: v3.0.15 is out !
+Author: Responsible-Sky-1336
+Score: 207
+URL: https://www.reddit.com/r/archlinux/comments/1q0c31x/archinstall_v3015_is_out/
+Number of comments: 62
+Created UTC: 1767184754.0
+
+Post Content:
+Hi sheeople,
+
+Just wanted to share! And happy new year in advance.
+
+See \[[releases](https://github.com/archlinux/archinstall/releases/tag/3.0.15)\](https://github.com/archlinux/archinstall/releases/tag/3.0.15)
+
+Love you all and please keep sending in ideas/issues/contribs 💙
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mishrashutosh
+Score: 111
+Created UTC: 1767186251.0
+Comment: archinstall is lowkey one of the best distro installers out there
+
+Comment 2:
+Author: Pink_Slyvie
+Score: 13
+Created UTC: 1767209507.0
+Comment: Does it finally come with a spinny skirt and estrogen, or do you still need to manually install to get those?
+
+Comment 3:
+Author: Temporary_Ad4903
+Score: 12
+Created UTC: 1767185256.0
+Comment: Good news everyone)
+
+Comment 4:
+Author: [deleted]
+Score: 6
+Created UTC: 1767188956.0
+Comment: systemd-boot or grub??  
+I use UEFI
+
+Comment 5:
+Author: lemmiwink84
+Score: 5
+Created UTC: 1767206584.0
+Comment: Some great additions! CUPS and the ZRAM is very handy.

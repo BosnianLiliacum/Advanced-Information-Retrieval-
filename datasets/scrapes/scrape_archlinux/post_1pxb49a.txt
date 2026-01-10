@@ -1,0 +1,43 @@
+Post Title: ohoh the wiki is down, where to find mirrors of the wiki content?
+Author: SandwichCold5107
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1pxb49a/ohoh_the_wiki_is_down_where_to_find_mirrors_of/
+Number of comments: 17
+Created UTC: 1766876168.0
+
+Post Content:
+Are there any mirrors of the wiki content? And where can I find them?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Holiday-Ad7017
+Score: 70
+Created UTC: 1766876517.0
+Comment: `sudo pacman -S arch-wiki-docs`  
+you're welcome
+
+Comment 2:
+Author: Repulsive-Bison-6821
+Score: 17
+Created UTC: 1766876448.0
+Comment: I always use Internet Archive for situation like this.  For example, to get to the VirtualBox wiki: [https://web.archive.org/web/20251204222526/https://wiki.archlinux.org/title/VirtualBox](https://web.archive.org/web/20251204222526/https://wiki.archlinux.org/title/VirtualBox)
+
+Comment 3:
+Author: falxfour
+Score: 9
+Created UTC: 1766877703.0
+Comment: Kiwix
+
+Comment 4:
+Author: TheEbolaDoc
+Score: 6
+Created UTC: 1766879547.0
+Comment: The wiki should be back online again :)
+
+Comment 5:
+Author: intulor
+Score: 2
+Created UTC: 1766881957.0
+Comment: Archive.org

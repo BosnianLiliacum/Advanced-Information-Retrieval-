@@ -1,0 +1,68 @@
+Post Title: Beginner, Intermediate, and Advanced Programming Projects
+Author: Same-Replacement-938
+Score: 75
+URL: https://www.reddit.com/r/learnprogramming/comments/1q4d36z/beginner_intermediate_and_advanced_programming/
+Number of comments: 12
+Created UTC: 1767590546.0
+
+Post Content:
+First of all have a nice day everyone 
+So I am currently in my 4thsem(cse) and I have just starred programming seriously, before this I was just exploring yt videos, tried cyber too(learning linux kali in VMware and some tools) currently I am learning java from mooc helensky and I don't want to make previous mistakes I want to make projects please suggest some projects from beginner to advanced and the stuff I need to have to build these projects. I want to be a good programmer/engineer, I am ready to put in the work as for now all of the projects I have made are with the help of ai, but I have decided I will not use ai, as of now  I have made a cli todolist (without help of ai)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ok-Structure-6911
+Score: 23
+Created UTC: 1767601381.0
+Comment: Beginner: simple crud app - 
+Intermediate: implement your own auth logic with simple cookie-session strategy - 
+Advanced: build an account confirm flow, mfa confirm flow, pwd reset flow
+
+Comment 2:
+Author: EmeraldxWeapon
+Score: 10
+Created UTC: 1767593550.0
+Comment: Beginner projects are probably the really common ones. A TODO app. A Calculator. Call a simple API like the Pokemon API and display the Pokemon stats. 
+
+
+For web development, beginner projects like these are suggested all the time
+
+Comment 3:
+Author: rustyseapants
+Score: 9
+Created UTC: 1767607990.0
+Comment: [Beginner Java Projects](https://www.google.com/search?q=beginner+java+projects&amp;rlz=1C1VDKB_enUS1161US1161&amp;oq=beginner+java+projects&amp;gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDUwOTRqMGo3qAIIsAIB8QWu6uo8ziZElA&amp;sourceid=chrome&amp;ie=UTF-8)
+
+This is the 21st century, if you plan to have a career in anything, you have to learn to search.
+
+Comment 4:
+Author: Odd_Firefighter_9125
+Score: 5
+Created UTC: 1767603664.0
+Comment: Hey there and you have a nice day too! Doing it yourself is exactly how you build the logic muscles that AI usually skips. MOOC Helsinki is gold so definitely stick with that.
+
+Here is a solid progression path with the specific skills you need for each stage.
+
+**Beginner Skills**
+
+* **Core Logic** You need to master `if` `else` statements and loops like `for` and `while` to control the flow.
+* **Data Handling** Get comfortable with `int` `double` and `String` types and using the `Scanner` class to get input from the user.
+* **OOP Basics** For things like a Bank Simulator you specifically need to understand Classes Objects and Constructors. You also need to learn Encapsulation which just means using `private` variables and `public` getter and setter methods to protect your data.
+
+**Beginner Project Ideas**
+
+* **Number Guessing Game** This is a classic for a reason. It forces you to use random number generation loops and conditional logic to tell the user if they guessed too high or too low.
+* **Console Calculator** Build a calculator that runs in the terminal. It helps you practice breaking your code into separate methods for addition subtraction multiplication and division.
+* **Simple Quiz** Create a multiple choice quiz. You will need to use arrays to store the questions and answers and a loop to cycle through them while keeping score.
+
+**What you need** You really just need a good IDE like IntelliJ IDEA or Eclipse and you should absolutely start using Git for version control right now. 
+
+Good luck and keep putting in the work!
+
+Comment 5:
+Author: Different_Pain5781
+Score: 4
+Created UTC: 1767591197.0
+Comment: Solid mindset already.

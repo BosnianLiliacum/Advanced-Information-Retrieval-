@@ -1,0 +1,40 @@
+Post Title: Is there a way to use my old laptops hardisk for storing from windows i have linux on that laptop
+Author: Evergreenpr0
+Score: 14
+URL: https://www.reddit.com/r/linuxquestions/comments/1pzmvp3/is_there_a_way_to_use_my_old_laptops_hardisk_for/
+Number of comments: 9
+Created UTC: 1767112957.0
+
+Post Content:
+So I have an old laptop with an hdd which has around 256 gb and I want to use it for storing. It has Bodhi Linux on it, and my normal laptop is Windows 11. I want to use the Linux laptop as a storage device and plug it into my Windows laptop. I do not want to buy an enclosure, and it would be best if i didnt need to download any third-party app on my Windows laptop. Thanks!
+
+
+Top 4 comments:
+
+Comment 1:
+Author: doc_willis
+Score: 6
+Created UTC: 1767114656.0
+Comment:  &gt; I want to use the Linux laptop as a storage device and **plug it into** my Windows laptop. 
+
+You mean you want to do a USB-to-USB cable connection? 
+
+otherwise, just setup network (samba) shares.
+
+Comment 2:
+Author: speedyundeadhittite
+Score: 4
+Created UTC: 1767113155.0
+Comment: Use Samba.
+
+Comment 3:
+Author: OneEyedC4t
+Score: 2
+Created UTC: 1767116654.0
+Comment: Yes, you can configure the Linux machine to be a network share like via samba
+
+Comment 4:
+Author: GoodHoney2887
+Score: 2
+Created UTC: 1767114667.0
+Comment: You network windows and Linux together. Transfer files back and forth as you like

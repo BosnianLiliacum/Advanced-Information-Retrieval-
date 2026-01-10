@@ -1,0 +1,49 @@
+Post Title: Realtek RTL8188CE WiFi Adapter 5x slower on Arch Linux compared to Windows 10
+Author: miguel04685
+Score: 19
+URL: https://www.reddit.com/r/archlinux/comments/1pz18f9/realtek_rtl8188ce_wifi_adapter_5x_slower_on_arch/
+Number of comments: 10
+Created UTC: 1767049640.0
+
+Post Content:
+So, I am using the Realtek RTL8188CE WiFi Adapter with both `linux-firmware` and `linux-firmware-realtek` packages installed, `rtl8192ce` driver is loaded but I only get at most 10 Mbps internet speed on Speedtest website. Both `linux` and `linux-lts` kernels have the same issue. While on Windows 10, I get up to 50 Mbps internet speed on Speedtest with the stock network driver. Any help on how to make my network driver faster for Linux? This slow speed is unbearable for watching videos, downloading large files and the `sudo pacman -Syu` command for huge updates.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: deathbypandah
+Score: 17
+Created UTC: 1767050460.0
+Comment: Intel ax210 (non pro) is the Linux g.o.a.t.  I'm afraid even with the "right" drivers reaktek/mediatek cards are going to give you a hard time. Dropped signals, bad connections, slow speeds etc.  or at least that was my experience with them. 
+
+You can get one from eBay for less than $16,  it's super worth the tiny investment
+
+Comment 2:
+Author: Portbragger2
+Score: 1
+Created UTC: 1767066845.0
+Comment: can you somehow see what MCS the connection is running at?
+
+Comment 3:
+Author: Gorsling
+Score: 1
+Created UTC: 1767084081.0
+Comment: I had a similar issue with an Intel adapter. Turned out it was not related to the hardware at all but with my ISP not providing proper IPv6 support. (Somehow Win 11 didn't care, probably didn't use IPv6 for some weird reason) 
+From that experience I'd recommend checking if the issue persists after disabling IPv6 for your connection.
+If this solves the issue, get in contact with your ISP and request full dual stack if possible.
+If it doesn't change anything this is most likely unrelated :D
+
+Comment 4:
+Author: Responsible-Sky-1336
+Score: 1
+Created UTC: 1767089588.0
+Comment: Halo in Archinstall we just added iwd support which might help. [https://github.com/archlinux/archinstall/pull/4025](https://github.com/archlinux/archinstall/pull/4025)
+
+Other than that ive seen some realtek cards have official setup scripts on their website but has to be built against LTS kernel/headers. The wiki and realtek website should guide you to find how to properly setup provided you search your exact model.
+
+Comment 5:
+Author: KoalaAlternative1038
+Score: 1
+Created UTC: 1767182753.0
+Comment: It might be set to low power mode. I know that's the default for a lot of configs. 

@@ -1,0 +1,68 @@
+Post Title: What's the best and the fastest way to learn a language?
+Author: Aethernoxx
+Score: 57
+URL: https://www.reddit.com/r/learnprogramming/comments/1q6goc7/whats_the_best_and_the_fastest_way_to_learn_a/
+Number of comments: 40
+Created UTC: 1767795864.0
+
+Post Content:
+I want to know how you guys learn a language? like by watching tutorials in youtube or through documents available in various websites(like geekforgeeks) or through books.
+
+Till now i have only tried learning through courses available in youtube but I found it too boring and slow. And also its not too productive for me. I tend to forget things after few days or weeks. And now i want to try other ways to learn language. 
+
+If i want to learn Python/C++, tell me how can i learn it without getting bored and in short period of time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Achereto
+Score: 28
+Created UTC: 1767796168.0
+Comment: Step 1: set up a "Hello World" project.
+
+Step 2: Write FizzBuzz
+
+Step 3: prime factor kata
+
+Step 4: quicksort kata
+
+Step 5: roman numeral kata
+
+After that you should be quite comfortable using the language. Everything else can be learned by reading error messages and looking things up whenever you need them.
+
+Comment 2:
+Author: johlae
+Score: 9
+Created UTC: 1767797063.0
+Comment: I never got why people would watch videos to learn about programming.  You can't cut &amp; paste from a youtube video, you can from written text on a website.  Second, searching for certain parts in a video is often impossible, while you can use bookmarks on websites and you can always cut &amp; paste the interesting bits into your own notes.  Google around.  There's lot of free material on the web.
+
+And books, paper or online, do still exist!  Google around for what you find interesting.
+
+Comment 3:
+Author: AssiduousLayabout
+Score: 7
+Created UTC: 1767796380.0
+Comment: Mostly I jump in and start trying to write something. I'll often just pull up someone else's code and reference basic things like syntax, commonly-used libraries, etc. but there is no teacher like trial and error, especially since you get very quick feedback on what you did right or wrong.
+
+**Edit**: To give an example, I recently had to learn a new language for work. The first thing I did was get assigned as an extra code reviewer for an MR that was written by a developer experienced in the language. I did my review first, and I had to spend time reading through his code, cross-referencing documentation for the libraries being used, and generally just building my understanding of the code. When the other code reviewers and testers also did their passes, I read their issues to see what I had missed. (Which is a good habit that I do for everything I review, not just this).
+
+After that, I did an MR of my own and had it reviewed by the person who had done the previous MR. There was still a ton of referencing documentation but I had a fairly good idea of what I needed to do.
+
+It gets substantially easier the more experience you have under your belt. I've coded in more than a dozen languages, so at this point picking up a new one is pretty simple as I already know how to "think like a programmer" which is the core skill that we need.
+
+Comment 4:
+Author: Draggul
+Score: 4
+Created UTC: 1767796471.0
+Comment: to build your own project, even if a small one
+
+Comment 5:
+Author: Beneficial-Panda-640
+Score: 4
+Created UTC: 1767798312.0
+Comment: A lot of people get stuck because they treat learning a language like consuming content instead of solving problems. Tutorials feel productive, but there’s nothing forcing your brain to retrieve or apply anything, so it fades fast.
+
+What usually works better is picking a very small goal and letting that goal pull the language in. Something concrete like parsing a file, building a tiny game, automating a task you already do, or reimplementing a simple tool you use. Then you learn just enough syntax to make the next thing work, look things up constantly, and accept that forgetting is part of the process. That cycle is what actually builds memory.
+
+Docs and references are great once you’re actively coding, because you approach them with a question instead of passively watching. If boredom is the problem, reduce scope, increase feedback, and write code every day even if it’s messy. Speed comes from doing, not from finding the perfect resource.

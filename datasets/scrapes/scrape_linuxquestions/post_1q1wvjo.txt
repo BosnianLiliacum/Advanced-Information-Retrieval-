@@ -1,0 +1,54 @@
+Post Title: File system for HDD
+Author: Independent-Coat-685
+Score: 18
+URL: https://www.reddit.com/r/linuxquestions/comments/1q1wvjo/file_system_for_hdd/
+Number of comments: 39
+Created UTC: 1767355281.0
+
+Post Content:
+Hello. I bought an 2TB HDD for my PC. After installing it I was met with a choice between different filesystems to use on a drive. At first I decided to use FAT32 because I had the same file system on my NVME drive. After some thought I decided to check if my choice was correct and learned that FAT32 is used mostly for solid state drives and also outdated. I decided to read what filesystem is more appropriate for HDD and next thing I decided to try was ext4. Unfortunately ext4 uses 5% of my drive for root privileges which I think is too much for 2TB of storage. Next thing I was going to try was Btrfs but there's also ZFS and others.
+
+Which filesystem is a good choice for an HDD drive that doesn't require 100gb of my storage to function?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: PixelBrush6584
+Score: 19
+Created UTC: 1767356269.0
+Comment: I‘d recommend EXT4 for your use-case. As for the 5% it reserves for root, you can disable that. I made a blogpost about it too lol https://pixelbrush.neocities.org/entries/2025/05/30.html
+
+TL;DR:
+
+`sudo tune2fs -m 0 /dev/partition`
+
+(Replace `/dev/partition` with the relevant ext4 partition, you can find it via `lsblk`)
+
+Comment 2:
+Author: candy49997
+Score: 8
+Created UTC: 1767356088.0
+Comment: &gt;FAT32 is used mostly for solid state drives
+
+Uh, no. SSDs can use any filesystem HDDs can. And it's also not really outdated? It's still commonly in use, but only for applications where maximal compatiblity across devices is required. E.g. a USB flash drive might be FAT32. Your EFI bootloader partition is definitely FAT32, because that's guaranteed to be supported by all UEFI motherboards.
+
+Also, pretty much all filesystems will take some overhead. Linux filesystems take it for Unix features like permissions. ext4 is actually lean, because it's a comparatively simpler filesystem than the other ones you listed.
+
+Comment 3:
+Author: RevolutionaryHigh
+Score: 8
+Created UTC: 1767355860.0
+Comment: based on your post, ext4 would be the best option for you. Information about 5% quota is false, in worst case you can disable it any time
+
+Comment 4:
+Author: gmthisfeller
+Score: 7
+Created UTC: 1767356372.0
+Comment: ext4 is a good choice. It is lean, fast, and above all robust.
+
+Comment 5:
+Author: linux_enthusiast1
+Score: 7
+Created UTC: 1767356318.0
+Comment: Use ext4, dont over complicate it

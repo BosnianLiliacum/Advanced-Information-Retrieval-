@@ -1,0 +1,76 @@
+Post Title: Considering switching to Linux
+Author: vraetzught
+Score: 17
+URL: https://www.reddit.com/r/linuxquestions/comments/1pxczji/considering_switching_to_linux/
+Number of comments: 14
+Created UTC: 1766881175.0
+
+Post Content:
+Hi Linux community. 
+
+As most people, I have primarily used Windows in my lifetime, but lately I'm more seriously considering switching to a Linux based system. Before I do that though, I wanted to get some info/feedback from you people to start this journey as informed as I can be. 
+
+The main workloads for this system would be internet access (to manage my life, finances, etc), some occasional gaming and some programming from time to time. 
+
+Some background on me: I've used Ubuntu Desktop for a few years (before 2010) and have some very limited experience with Mint. More recently I've been playing around with an Ubuntu server VM, running a couple of docker containers with tools for my workplace. I'm a programmer, so I'm not afraid of the terminal, but I like a nice UI just as much as the next guy. 
+
+My desktop pc is currently running Windows 10 and has a lot of software and date collected over the past 13 years. I want to make sure I don't loose any of my music, foto's and important documents while switching to a Linux distro (6TB of hard drive space). 
+
+The hardware:
+Intel I5 6600K
+MSI motherboard (I'm not sure witch at this moment)
+16GB of Corsair DDR4 RAM
+Nvidia GTX1060 GPU 
+850W PSU
+DVD-RW drive (which I still use regularly)
+256GB Crucial SSD
+126GB Crucial SSD 
+2TB WD Blue HDD
+4TB WD Blue HDD
+
+Most of my games are on steam, although I also have considerable collection on GOG, and some games on Epic and Amazon. 
+
+I've heard great things about Nobara, but I'm open to suggestions, tips and advice.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: chris32457
+Score: 3
+Created UTC: 1766885401.0
+Comment: Fedora or Linux Mint Debian Edition if you wanted something generally more stable.
+
+Comment 2:
+Author: japzone
+Score: 2
+Created UTC: 1766882829.0
+Comment: With your experience, you'd probably be more comfortable on an Ubuntu/Debian based Distro, so you could try Mint again, or mess with Ubuntu's many flavors(Kubuntu if you want to try KDE for example). 
+
+For gaming focused Distros, Nobara could be interesting if you want to try Fedora, or you can try the popular Bazzite, for a dabble at atomic Distros. Alternatively, if you're interested in dabbling in Arch, CachyOS is a popular option these days and I haven't had any major issues with it. 
+
+All the tasks you've listed will work fine on Linux. Browsers, IDE, and gaming, are all basically solved. Only online multiplayer games really have issues at this point, because of restrictive multiplayer many of those games have. Check ProtonDB and AreWeAntiCheat for any important games if you're worried. 
+
+As for how to preserve your data. Move all your Data off one of the SSD, and install your chosen Linux Distro on it. If you want to be safe, unplug the other SSD and HDD while installing so you don't mistake what drive you're installing to. Afterwards you can plug the drives back in and they should show up in Linux without much issue. 
+
+It's worth noting, if you have your Steam games on the HDD, for example, if it is formatted NTFS, don't play your games directly from it. On Linux that can cause issues. You'll want to at least temporarily move the game to a Linux EXT4/BTRFS partition while you're playing it, and then move it back for storage later.
+
+Comment 3:
+Author: artlessknave
+Score: 2
+Created UTC: 1766883183.0
+Comment: The most reliable way to avoid data loss is to have a backup, especially before you do anything major, like setup dual boot or replace the OS entirely.
+
+Comment 4:
+Author: Kitayama_8k
+Score: 1
+Created UTC: 1766905362.0
+Comment: Nvidias mainline drivers dropped pascal.  So you may wanna replace your GPU with an AMD Polaris card.  They're prolly under 50$ at this point, or maybe a 6600xt as an upgrade. 
+
+Idk.  I'm not sure how epic support is but you may have to give up a few games.  The biggest problems are with certain anti cheat games.  Check lutris and protondb for information.  Keeping your files is just a matter of your own diligence.  I'd recommend to add another drive, then mount your windows drive and move the files.
+
+Comment 5:
+Author: Sensitive-Phase61
+Score: 1
+Created UTC: 1767134660.0
+Comment: Just install Ubuntu (Kubuntu for similar to Windows experience). I think Kubuntu is more preferable because of less hardware requirements. Steam and other apps could be installed from Store app or deb could be downloaded from developer's site. Other distributives are more or less the same (usually the package managment is different). Mint, Debian and others are more or less the same but every manufacturer or developer has versions for Ubuntu. Testing on linux also happen on Ubuntu mostly.

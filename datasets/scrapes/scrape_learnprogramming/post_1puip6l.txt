@@ -1,0 +1,52 @@
+Post Title: Feel like I can't even learn.
+Author: unavaca
+Score: 40
+URL: https://www.reddit.com/r/learnprogramming/comments/1puip6l/feel_like_i_cant_even_learn/
+Number of comments: 14
+Created UTC: 1766565719.0
+
+Post Content:
+I'm a computer science major in college, second year. I do well in my classes, but I feel like everytime I actually try to code outside of assignments I just get random errors that make it impossible. It feels like the universe doesn't want me coding. For instance, I'll go on eclipse, and I'll make some new project and immediately nothing fucking works. I don't even remember what the error was, but I couldn't do anything and I searched up the answer everyone was just saying to use intellij so like, fair; I deleted eclipse. Anyway I'm trying to get back into unity and I can't even make a fucking script. I make a fresh new project and I do such basic things like add a script and it's like "cannot find entry points" like what the fuck am I supposed to do with that info. I search up the answer and it's another dead end like restart ur whole computer or something. kms. Like why is the barrier of entry so high? Am I supposed to reverse engineer the whole program just to make a cube bounce? I've been programming since I was 11 years old, I can't even make a functional game at this point. Like every time I try to learn, I immediately get blocked from doing anything. What am I not getting? So frustrating. I'm not even exaggerating, like every time I try learning something new it just doesn't work like the tutorial, or like it should. My computer runs fine, it's just a universal me problem.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Total-Box-5169
+Score: 29
+Created UTC: 1766566172.0
+Comment: You better start loving that feeling because it will be just another Tuesday, even after decades of working in the field. That is why there are tools that are loved and others hated. Some stuff just works from the get go, other stuff gives nothing but problems.
+
+Comment 2:
+Author: PartyParrotGames
+Score: 22
+Created UTC: 1766568390.0
+Comment: \&gt; What am I not getting?
+
+That this is programming. Encountering errors, figuring them out, and unblocking yourself to get computers to do what you want is the very essence of programming. That's not a barrier to entry, that's the act. You're doing it but the missing piece is staying with it and figuring out the errors. Debugging difficult errors is where you really learn, more than tutorials for making a cube bounce will teach you.
+
+Comment 3:
+Author: The__King2002
+Score: 7
+Created UTC: 1766580648.0
+Comment: Ngl I would switch majors cause I do feel like you have to enjoy the problem solving aspect of getting through these errors to make it through the degree. At least for me part of what keeps me going is the satisfaction after you are stuck on something for awhile and finally get it working.
+
+Comment 4:
+Author: DonFurioso
+Score: 4
+Created UTC: 1766575065.0
+Comment: Programming is problem solving. Your brain hates the fact it’s not getting instant gratification, so you need to train your discipline to stick out the errors. It will feel good once you overcome a hurdle because you solved it.
+
+To properly unpack this, I suggest the following book: Think Like a Programmer by V. Anton Spraul.
+
+Comment 5:
+Author: Significant-Syrup400
+Score: 3
+Created UTC: 1766580221.0
+Comment: You have to learn your IDE along with learning your language.  I got my degree on a Mac, which created some fun scenarios for me where I had to change things to get my programs to function within the IDE because.. Mac uses a different file structure.
+
+  
+My favorite was when my program worked perfectly on my computer, but not on the assessor's.  My first taste of a bug that I wouldn't be able to recreate to fix.  
+
+  
+From what I've seen/learned, programmers are not paid to write code.  Writing code is actually very simple, and even children can do it.  We get paid to solve difficult problems, and design systems that will help to reduce them.

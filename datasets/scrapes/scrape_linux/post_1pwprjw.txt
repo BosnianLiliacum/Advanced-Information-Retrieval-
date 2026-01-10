@@ -1,0 +1,42 @@
+Post Title: FFmpeg issued a DMCA takedown of a Rockhhip Linux repo, after 2 years of violation
+Author: TheTwelveYearOld
+Score: 712
+URL: https://x.com/FFmpeg/status/2004599109559496984
+Number of comments: 33
+Created UTC: 1766813089.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: cyb3rofficial
+Score: 246
+Created UTC: 1766821077.0
+Comment: 2 years is plenty of time to rewrite stuff, I am shocked it wasnt done sooner. Though nothing is going to stop them from hosting another offsite git repo in mainland. They arent going to let their repo die as easily.
+
+Comment 2:
+Author: HomsarWasRight
+Score: 158
+Created UTC: 1766813764.0
+Comment: Good on them. They were more than patient.
+
+Comment 3:
+Author: matt-x1
+Score: 93
+Created UTC: 1766855867.0
+Comment: I think this is the primary source: https://github.com/github/dmca/blob/master/2025/12/2025-12-18-ffmpeg.md Just linking it here for convenience as I think more people other than me have a problem with links to X which is a problematic network in general and harmful to users.
+
+Comment 4:
+Author: [deleted]
+Score: 40
+Created UTC: 1766852485.0
+Comment: Good. Fuck any company that takes and doesn't return the code, or follow the license of the code.
+
+Comment 5:
+Author: gmes78
+Score: 15
+Created UTC: 1766838421.0
+Comment: Good.

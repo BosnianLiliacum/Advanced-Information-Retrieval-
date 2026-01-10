@@ -1,0 +1,67 @@
+Post Title: Is There a File Manager That Groups Files By Date For Linux Mint Cinnamon?
+Author: octifakker
+Score: 11
+URL: https://www.reddit.com/r/linuxquestions/comments/1pryc9l/is_there_a_file_manager_that_groups_files_by_date/
+Number of comments: 26
+Created UTC: 1766293503.0
+
+Post Content:
+I'm new to using Linux and decided to go with Mint since I'm used to using Windows. I have a bunch of files in my downloads folder and want to try to clear it.
+
+The issue is that because there's a lot of files, it's hard to go through since everything isn't separated in groups.
+
+In Windows File Explorer, my files in download is separated by date and grouped by date. Making it easier for me to navigate through, especially for quickly looking for newer files.
+
+In Linux Mint default file manager, there is an option to sort it by date, but, from my limited experience, no way to group files by date like in File Explorer.
+
+
+
+I know that there's other file managers but is there one that can group files separately from the date they are created?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AnymooseProphet
+Score: 9
+Created UTC: 1766301119.0
+Comment: um, every GUI file manager I've seen lets you sort by date. What do you mean by group files by date?
+
+Comment 2:
+Author: WorkingMansGarbage
+Score: 6
+Created UTC: 1766308405.0
+Comment: Dolphin has this feature. Go to Menu &gt; More &gt; Display &gt; Display in Groups and you'll have the display you'll expect. I don't know if you can set it by folder, sadly, but you can set a hotkey or a toolbar button to turn it on or off.
+
+Caveat. Dolphin is part of the KDE suite, so installing it means also installing a bunch of KDE libraries if you're not already using the KDE Plasma desktop environment. Sorry about that. 
+
+As far as I can tell, other file managers don't seem to have a grouping feature, probably because it's pretty standard to just straight up group your files into different folders instead. It's also less volatile. This is probably something you could do fairly easily with a script if you're so inclined; one major strength of Linux.
+
+Comment 3:
+Author: Plasma-fanatic
+Score: 2
+Created UTC: 1766298880.0
+Comment: I'm not on Mint right now so can't check, but is there not a column in the file manager (its name escapes me) that you can click to sort things? If not, the dolphin file manager (my favorite of course!) can do that, and lots of other handy things. You can install dolphin easily.
+
+Comment 4:
+Author: Munalo5
+Score: 1
+Created UTC: 1766333359.0
+Comment: Depending on what DE you have your file manager will be:
+Nemo (Cinnamon)
+Caja (MATE)
+
+Thunar (Xfce)
+Knowing which specific file manager you are using will help you narrow down your Google search. 
+
+
+Any one of them should let you do what you are asking.
+
+
+I prefer Dolphin and I don't have problems with it on Mint. If you have Dolphin on your Mint system you installed it. If you did there is no reason you cant use it to do what you want.
+
+Comment 5:
+Author: RandoMcGuvins
+Score: 1
+Created UTC: 1766308201.0
+Comment: open up your file manager &gt; on the columns like name right click &gt; select what date type you want &gt; once the column show up click on it once that will be oldest first, click on it again and it will be newest first. You can have it remember by folder eg have your downloads by newest first while other folders are A-Z

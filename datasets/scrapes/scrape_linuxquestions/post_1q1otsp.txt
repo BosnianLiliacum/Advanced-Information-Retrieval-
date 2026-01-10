@@ -1,0 +1,55 @@
+Post Title: What did Torvalds dislike about ntfs-3g?
+Author: ThrowAway237s
+Score: 71
+URL: https://www.reddit.com/r/linuxquestions/comments/1q1otsp/what_did_torvalds_dislike_about_ntfs3g/
+Number of comments: 24
+Created UTC: 1767327396.0
+
+Post Content:
+The two most well-known NTFS drivers on Linux are `ntfs-3g` (FUSE driver, used for over a decade) and `ntfs3` (kernel driver since 2021, replaced read-only `ntfs` kernel driver).
+
+[A comment](https://old.reddit.com/r/linux_gaming/comments/1obgrxx/ntfsplus_announced_a_new_linux_driver_for_ntfs/nkh80mn/) by /u/Joe-Cool on /r/linux_gaming:
+
+&gt; I usually always remember to `-t ntfs-3g` in my mount parameters. The Tuxera userspace driver is a lot more stable, imho.
+&gt;
+&gt; Something about it bothered Linus and he merged ntfs3 into the kernel instead. I can't really remember what is was though.
+
+This got me curious and I decided to research it a bit, but couldn't find a definitive answer. Does any of you know what bothered Torvalds about ntfs-3g? 
+
+Was it something licensing/bureaucracy-related or actually a technical reason?
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Muddybulldog
+Score: 92
+Created UTC: 1767327830.0
+Comment: That recollection has to be completely wrong for one simple reason, ntfs-3g is a userspace driver. It doesn't go near the kernel. Linus would never have "merged ntfs3 into the kernel instead" because ntfs-3g would never be part of the kernel.
+
+Paragon submitted NTFS3 and it was accepted into the kernel. It's that simple.
+
+Comment 2:
+Author: dkopgerpgdolfg
+Score: 19
+Created UTC: 1767333104.0
+Comment: &gt; Something about it bothered Linus and he merged ntfs3 into the kernel instead
+
+Just by merging something in the kernel, there's no implication that Torvalds was bothered about the userland alternatives.
+
+Comment 3:
+Author: isabellium
+Score: 2
+Created UTC: 1767892665.0
+Comment: Nothing, why can't we have both?
+
+ntfs3 was accepted because there was simply not a driver for NTFS available at the time.  
+ntfs-3g is a FUSE driver, not the same.
+
+Comment 4:
+Author: ThrowAway237s
+Score: 1
+Created UTC: 1767327638.0
+Comment: From my experience, ntfs3 reads much faster than ntfs-3g (ntfs-3g sometimes is in the single-digit MB/s), and it can show birth times (`stat` command) thanks to the statx syscall, probably owing to ntfs-3g running as FUSE, not kernel driver.
+
+But sometimes when trying to make changes, ntfs3 gives me a "permission denied" error even with correct `uid` and `gid` mount options. ntfs-3g does not have this glitch. If correctly mounted, it just does what I ask it to.

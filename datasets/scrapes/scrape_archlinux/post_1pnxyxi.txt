@@ -1,0 +1,82 @@
+Post Title: Pacboof — a keyboard-first pacman/AUR workflow using rofi + fzf
+Author: Fit-Ambition-6385
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1pnxyxi/pacboof_a_keyboardfirst_pacmanaur_workflow_using/
+Number of comments: 20
+Created UTC: 1765878268.0
+
+Post Content:
+I built a small, keyboard-first package management workflow for Arch using rofi + fzf.
+
+
+
+It’s not meant to replace pacman or reinvent anything — just a fast, minimal way
+
+to browse, install, and remove packages when I’m already living in the keyboard
+
+  
+Demo: [https://youtu.be/nhDmGUmdV0I](https://youtu.be/nhDmGUmdV0I)
+
+Repo: https://github.com/benevolentshrine/pacboof
+
+
+Key points:
+
+\- Native pacman + AUR support
+
+\- fzf-powered search with package info
+
+\- Curated menus (IDEs, languages, TUI tools)
+
+\- Structured error handling + logs
+
+\- Minimal, opinionated workflow
+
+
+
+Heavily inspired by the Omarchy installer menu.
+
+
+
+Sharing for feedback from folks who prefer keyboard-centric workflows.
+
+
+Comment what yall think , appreciated a lot
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: intulor
+Score: 6
+Created UTC: 1765892474.0
+Comment: Great name.  Because I've always wanted to put pacman packages in my bum.
+
+Comment 2:
+Author: YT__
+Score: 3
+Created UTC: 1765879177.0
+Comment: Is CLI not keyboard-firsy?
+
+(Haven't looked at your link yet)
+
+Comment 3:
+Author: donnaber06
+Score: 3
+Created UTC: 1765893704.0
+Comment: Is this satire? You want us to boof pac?
+
+Comment 4:
+Author: RFcoupler
+Score: 2
+Created UTC: 1765878886.0
+Comment: That looks very neat! I should give this a try if you share the repo.
+
+Comment 5:
+Author: ximenesyuri
+Score: 2
+Created UTC: 1765926249.0
+Comment: I use a personal short `bash` script that works as a universal package manager for the most used distributions, which has an integration with `fzf` to install, uninstall, get information, purge, and so on. Just source it in your `.bashrc` em use `pm i/install`, `pm u/uninstall`, `pm U/update`, `pm ls/list`, and so on... It also comes equipped with a completion script (`bash-completion` is not required [I hate that]).
+
+https://github.com/ximenesyuri/drafts/blob/main/sh/pm/pm

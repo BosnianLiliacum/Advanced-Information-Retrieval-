@@ -1,0 +1,61 @@
+Post Title: Beginner in Coding
+Author: PaintingOwn732
+Score: 34
+URL: https://www.reddit.com/r/learnprogramming/comments/1q6d46n/beginner_in_coding/
+Number of comments: 19
+Created UTC: 1767785860.0
+
+Post Content:
+Hi guys, I am starting my coding journey today from Angela course in Udemy. I am complete beginner at this and super excited. I would be grateful if you could share your experience, key learnings, and any suggestions that might help guide me as I begin my journey in this field.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: desrtfx
+Score: 12
+Created UTC: 1767786856.0
+Comment: Which Angela Yu course? If it is the 100 days of Python, use it as supplement only. Do the MOOC [Python Programming 2025](https://programming-25.mooc.fi) from the University of Helsinki as main course. Much better. The course is free, textual, extremely practice oriented with actually checked exercises, and a proper first semester of "Introduction to Computer Science").
+
+The key to learning programming is to practice as early as possible and as much as possible. Play around with the code, break it, fix it. Learn to read the error messages. Learn to work with the documentation for your language. These are all key points.
+
+Stay away from AI for the start. At the very utmost (and even that should be the ultima ratio) use it to give you explanations. Never use it to give you solutions nor code. AI is tempting. Still, it is far superior to pretend it doesn't even exist.
+
+Don't be afraid of making mistakes. We all do (even with decades of experience). Mistakes  and failures are what teach us, from what we actually *learn*. You need to struggle to learn (and that's why I said to avoid AI - it will take the struggle away).
+
+Comment 2:
+Author: InspectorFeeling3892
+Score: 2
+Created UTC: 1767786953.0
+Comment: I’m a beginner as well, even though I started a while ago. A few weeks back I was asking the same kind of questions, and the advice I kept getting was to pick a project and learn by doing.
+
+That’s what I’m doing now, and it really helps you see how things actually work instead of just understanding them in theory. A lot of concepts start to make sense once you try to build something real, even if it’s small. So if I can share one thing, it would be to learn by working on a real project alongside the course.
+
+Comment 3:
+Author: Tall-Introduction414
+Score: 2
+Created UTC: 1767788972.0
+Comment: Don't be afraid to make stupid and useless stuff, Sometimes you just want to see a funky pattern on the screen, or generate a weird sound, or make a simple animation, or something equally pointless.  The computer is the most powerful creative tool we have, so don't be afraid to be creative and have fun.
+
+Solve tiny problems.  Sometimes you just want to batch rename some files, or convert some data, or automate something simple.  Writing lots of programs is how you get better.
+
+On that note, one-offs are fine. Not everything needs to be a "showcase project" (but eventually have those, too).
+
+Not everything needs a framework, either. Start simple.
+
+When people criticize your code, try to understand and learn from the criticisms, but don't be discouraged. It will probably be a while before you make something that other people will be interested in, even if you think you've made the coolest thing ever.
+
+Get a good book on the language you are learning, and read it.
+
+Comment 4:
+Author: OutsidePatient4760
+Score: 2
+Created UTC: 1767801227.0
+Comment: honestly the biggest mistake beginners make is trying to understand everything before building anything. just let yourself be messy. finish the lessons, then immediately try to break what you made or tweak one small thing. that awkward phase where nothing feels obvious is where the real learning happens.
+
+Comment 5:
+Author: OkInstruction432
+Score: 1
+Created UTC: 1767789313.0
+Comment: I've started with a really beginner course on python. I've used ai to configure python on vss, but farther than that I've not found any use for it, nor would I look forward to using it. I'll look forward to learning a bit and start messing around on my own.
+Thanks!

@@ -1,0 +1,54 @@
+Post Title: What Linux behavior felt like a bug — until you learned it was actually a feature?
+Author: Expensive-Rice-2052
+Score: 156
+URL: https://www.reddit.com/r/linuxquestions/comments/1pzc6z3/what_linux_behavior_felt_like_a_bug_until_you/
+Number of comments: 94
+Created UTC: 1767081063.0
+
+Post Content:
+For me, deleting a file didn’t free disk space because a process was still holding it open.
+
+At first it felt broken — later it made perfect sense.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: WishboneNo456
+Score: 117
+Created UTC: 1767090003.0
+Comment: When you shake the mouse in Plasma the cursor gets large to make it easier to find. My dumb ass thought it was a bug for far too long.
+
+Comment 2:
+Author: DenturedServant1024
+Score: 42
+Created UTC: 1767102047.0
+Comment: Clicking the mouse wheel (or both mouse buttons) to paste selected text. I always wondered why in the word the OS would randomly paste copied text into my documents, and it was just me inadvertently pressing the MMB and pasting the previously-selected text.
+
+Comment 3:
+Author: funbike
+Score: 22
+Created UTC: 1767112502.0
+Comment:     rm -rf "$DIR"
+
+It still scares the crap out of me, but I understand the reasoning for the CLI design.  I use several mitigations to prevent mistakes (Git, `shellcheck`, trash cli, `rm -i`).
+
+&gt; For me, deleting a file didn’t free disk space because a process was still holding it open.   At first it felt broken — later it made perfect sense. 
+
+It actually *prevents* broken behavior.  Another process with the file open doesn't suddenly crash or error, or block you from deleting.  You can even move a file, and Linux does the right thing.  One of the most annoying things about windows is the hard file lock.  Sometimes my company's AV will get a kernel-level lock on a file, and the only way to fix is to reboot Windows.  I consider it a necessity to have a file unlocking utility when forced to use Windows at work.
+
+Comment 4:
+Author: cowbutt6
+Score: 18
+Created UTC: 1767111571.0
+Comment: Not Linux, but my first encounter with UNIX was using ports of https://en.wikipedia.org/wiki/Netpbm on my Amiga in the early 90s. The tools generally took input from stdin and sent their output to stdout, which seemed incredibly awkward compared with taking source and destination filenames as parameters like most of the AmigaDOS (and MS-DOS) tools I had used up to that point. 
+
+Eventually, I learnt the power of chaining tools with piping.
+
+Comment 5:
+Author: Expensive-Rice-2052
+Score: 11
+Created UTC: 1767109477.0
+Comment: Reading through these replies, a common theme seems to be Linux doing something helpful but not obvious until we understand the context.
+
+A lot of “bugs” here are really just features with zero explanation until we stumble on the reason.

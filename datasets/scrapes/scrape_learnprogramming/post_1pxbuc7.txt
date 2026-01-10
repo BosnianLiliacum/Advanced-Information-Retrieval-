@@ -1,0 +1,82 @@
+Post Title: I realized through my internship that I'm dumber than I thought
+Author: 20_The_Mystery
+Score: 155
+URL: https://www.reddit.com/r/learnprogramming/comments/1pxbuc7/i_realized_through_my_internship_that_im_dumber/
+Number of comments: 54
+Created UTC: 1766878089.0
+
+Post Content:
+I did an associate degree in web and android and got an internship of 6 months and let's just day that it went terrible. Everytime I was stuck on something and had tried every method to solve it my senior would explain to me what was wrong and why but I just couldn't follow it, cause I was too dumb to understand what he was saying or sometimes I could understand but not be able to correct the mistake and then he would spell the solution for me (yes literally spell it letter by letter).
+
+I always knew that I was "slow" but I tried my best to learn but maybe I'm just too dumb for this. When someone smart tries to talk to me about a project ideia for instance, I just "break" and even ask them to repeat it 4 times until they give up. On the internship it was the same he needed  explain to me 10x  the same thing untill I half got it (he had a lot of patience) it took me months to even understand completly what the project was really about.
+
+Should I just give up?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: immediate_push5464
+Score: 82
+Created UTC: 1766878355.0
+Comment: Hey man, don’t panic. 
+
+I had a similar experience with an unpaid internship. I got no help when I needed it, *at all*.
+
+Just wanted to emphasize that you’re not alone
+
+Comment 2:
+Author: winnie_the_ouhhh
+Score: 55
+Created UTC: 1766878920.0
+Comment: Definitely no, you got all the way through to get an internship and in this market it's a good sign that you are doing everything right. Just keep grinding
+
+Comment 3:
+Author: WanderingGalwegian
+Score: 12
+Created UTC: 1766890583.0
+Comment: Don’t be so hard on yourself.
+
+I have a CS degree from an above medium tier school, been working in industry for years now, currently I’m pretty deep in consultancy for AI automation solutions Id consider myself somewhat competent at my professions and fairly well compensated for my work when stacked against my peers 
+
+That said the first 2 or so years of my career is exactly like you described for your internship. I could pull down simple tickets and knock them out sure… but when my seniors would start showing me the more complex solutions I swear to go those guys were doing some kind of electronic witchcraft.   I had the exact same thoughts of you. “Damn I must be fucking dumb as shit” … but I stuck around due to sunk cost fallacy of obtaining my degree and worked diligently in my off time to understand my career of choice.  Things started to really click in year 2-3 and it’s been pretty smooth sailing since.
+
+I will say though.. it never fully goes away.. I still encounter some developers code that I may be reviewing and I’m unsure if I’m to dumb to understand what the person is doing or they’re just fucking out of their mind in what they’ve decided to do… 
+
+But oh well.
+
+Comment 4:
+Author: HolyPommeDeTerre
+Score: 7
+Created UTC: 1766917144.0
+Comment: My opinion alone: There is a mindset shift that hasn't happened yet in your brain.
+
+Learning to write isn't the same as learning to express yourself. I can teach a toddler to write letters, doesn't mean the toddler can write words. And it doesn't mean the toddler can write a syntactically right and meaningful sentence.
+
+Writing is easy. You just put letters one after another. Learning the words is harder, you have to know the words. Making a meaningful sentence is very hard.
+
+It requires you to have an idea to express, then choose the right words, in the right orders, with the right nuances to get your listener to understand you.
+
+This is all about code here. Learning "for", "if", "while", "switch", "function", "null"... All those keywords that have a specific meaning. You know most of them.
+
+I guess that if I asked you to write a loop over an array you could achieve it. The issue comes with complexity.
+
+You don't know what to express and even if you know what to express, you aren't experienced enough to know how to express it if the complexity rises.
+
+From my point of view, if my take makes sense to you, you'll have to work through that. It took me 2 years to get that mindset. It takes more or less time for different people depending on where they start and how efficient their learning process is. You need more time, more practice.
+
+Make projects, complex ones. Do some more DSA. Work the problems in your brain, try your solution on the computer, get the result, fix and restart the process. Look on the internet for information and solutions, but don't copy directly, understand and inject the solution in your code, try it, see it, feel it, deeply.
+
+On another note: feeling dumber than you thought. 
+
+I don't think you are stupid, but I don't know you. It's relative to what you think and expect here. I think you just had a revelation on the Dunning Kruger effect. Feels like science, not sure it is, but the intuition is pretty on point IMO. 
+
+The less experienced in something, the more confident you are in it. 
+
+You hit the reality check. And you placed yourself on "the mountain of stupidity". But it doesn't mean you are stupid, it's just a biased view. Something we all do. Don't blame yourself. Being aware of that make you smarter than a lot of people. Use this to understand where you stand more than trying to blame yourself.
+
+Comment 5:
+Author: InevitableView2975
+Score: 6
+Created UTC: 1766879448.0
+Comment: I think if you were actually "slow", you wouldnt really be able to comprehend it. Do you have adhd or something? Maybe you are just thinking about how you are not a good fits etc while he explained.

@@ -1,0 +1,46 @@
+Post Title: Installing with no vision
+Author: moded-data8645
+Score: 31
+URL: https://www.reddit.com/r/archlinux/comments/1psf1sb/installing_with_no_vision/
+Number of comments: 25
+Created UTC: 1766345915.0
+
+Post Content:
+Interested in installing this for a while now. I want to know if there is way I can install this completely blind completely no vision
+
+
+Top 5 comments:
+
+Comment 1:
+Author: snake_case_captain
+Score: 40
+Created UTC: 1766346405.0
+Comment: I remember the install boot menu having an option for the visually impaired.
+
+The [wiki page](https://wiki.archlinux.org/title/Install_Arch_Linux_with_accessibility_options) says it supports braille output and speech.
+
+So, I guess you can.
+
+Comment 2:
+Author: moded-data8645
+Score: 12
+Created UTC: 1766347341.0
+Comment: I will use the arch install thing. Also, I will be running it in a virtual machine, running on windows. Using VMware workstation 17, NVDA. Sure, I could use NVDA optical character recognition but that can get things wrong.
+
+Comment 3:
+Author: ieatdownvotes4food
+Score: 11
+Created UTC: 1766349287.0
+Comment: Wow, if you pull it off that would be amazing. Hell id like to install Linux with my eyes closed, that sight thing is overrated.
+
+Comment 4:
+Author: moded-data8645
+Score: 5
+Created UTC: 1766350857.0
+Comment: They could definitely do that. I might make a tutorial on how to do it in VMware.
+
+Comment 5:
+Author: moded-data8645
+Score: 5
+Created UTC: 1766352171.0
+Comment: The thing that made me want to choose arch LINUX is the fact that it is definitely faster than Deben or Fedora. I have tested it on my chrome book and it is very very fast. Except I didn’t get a full VM I tested it in Dockham. You may have heard of it. And also because Archie LINUX has the latest software well Debbie and is stuck on like python 3.11. And two is slowly getting worse with accessibility. I’ve heard after installation arch LINUX is really good for accessibility especially when you have the mate desktop environment installed. Although Fedora does have some good accessibility features it takes up to 15 to 20 GB of storage. The store is that all made for accessibility are actually not good. Accessible coconut, hasn’t been updated in three years. Slit, no VMR support. LINUX mint is okay but it is quite bloated in my opinion, and I just want a simple distro with only a few apps installed as lint also has like 40 apps installed which I don’t even need especially since it doesn’t have a package manager, so I can’t really uninstall them. I can also play Windows games if I decide to fully switch to arch LINUX. At least audio games as there is something called audio game manager

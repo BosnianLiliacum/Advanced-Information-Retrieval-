@@ -1,0 +1,65 @@
+Post Title: How “bleeding edge” are you?
+Author: Xu_Lin
+Score: 23
+URL: https://www.reddit.com/r/archlinux/comments/1pyx3yz/how_bleeding_edge_are_you/
+Number of comments: 105
+Created UTC: 1767039911.0
+
+Post Content:
+Have had my install for a few years now, and all is good. Though, I’ve noticed newer tools being added to the installation process: Limine, Dracut, etc. 
+
+How many of you have adopted new tech, and how many are used to the old ways?
+
+Interesting to see what your rocking on your system, and what made you give it a try. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: El_McNuggeto
+Score: 85
+Created UTC: 1767040219.0
+Comment: I still use ext4, apparently that's controversial nowadays
+
+Comment 2:
+Author: dramake
+Score: 22
+Created UTC: 1767043279.0
+Comment: After a few years I did a new installation a couple weeks ago.
+
+I tried to use all the new things there are to use, although not sure if all of them are "bleeding edge", probably not:
+
+- BTRFS, everything encrypted with LUKS2.
+- Removed Windows 11, that's super bleeding edge lol
+- Secure boot enabled.
+- LUKS2 unlock  with TPM2.
+- sytemd-boot (definetly bot bleeding edge, but it's new for me after using reFINd
+
+Aside from that.. I update almost daily, so always at the latest versions of everything.
+
+Comment 3:
+Author: _Carth_Onasi
+Score: 18
+Created UTC: 1767041581.0
+Comment: Idk honestly how to answer your question, but I'll say I simply add what I need and remove what I don't, update once a week, and enjoy playing games or whatever.
+
+Comment 4:
+Author: PlainBread
+Score: 10
+Created UTC: 1767040874.0
+Comment: I'm tolerating amdgpu firmware crashes so there's that.
+
+Comment 5:
+Author: MuggleWorthy
+Score: 7
+Created UTC: 1767044086.0
+Comment: Unified Kernel Images + GPT partition automounting is a pretty nice setup
+
+If you're on a single disk system you can have an empty `/etc/fstab` everything just automatically loads
+
+It all works with LUKS too.
+
+[https://wiki.archlinux.org/title/Systemd#GPT\_partition\_automounting](https://wiki.archlinux.org/title/Systemd#GPT_partition_automounting)  
+[https://wiki.archlinux.org/title/Unified\_kernel\_image](https://wiki.archlinux.org/title/Unified_kernel_image)
+
+EDIT: This also means you can cut down your kernel cmdline to `quiet rw` if you have no additional requirements

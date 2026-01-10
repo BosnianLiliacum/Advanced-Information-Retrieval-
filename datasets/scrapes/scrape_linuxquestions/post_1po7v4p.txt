@@ -1,0 +1,50 @@
+Post Title: Anyone knows a good GUI Linux task manager?
+Author: Darkhog
+Score: 16
+URL: https://www.reddit.com/r/linuxquestions/comments/1po7v4p/anyone_knows_a_good_gui_linux_task_manager/
+Number of comments: 31
+Created UTC: 1765905904.0
+
+Post Content:
+I know there's htop and btop, but I want something that also looks good. Should be also lightweight.
+
+SOLVED. Okay, you can stop making suggestions, I've decided on lxtask.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 7
+Created UTC: 1765908870.0
+Comment: There are many options out there but if they need to fit the good looking **and** lightweight classification then i'm afraid there's nothing.
+
+The classic desktop environments have fairly heavy weight task manager. Especially Plasma.
+
+You might want to look at task managers from the alternative desktop environments (cosmic, xfce, ...). [Mission Center](https://gitlab.com/mission-center-devs/mission-center) is probably the only one that gives a very familiar windows feel if you liked that. Don't know about it's performance though.
+
+Comment 2:
+Author: Charming_Mark7066
+Score: 7
+Created UTC: 1765910441.0
+Comment: System Monitor from KDE looks fine
+
+Comment 3:
+Author: JohnyMage
+Score: 6
+Created UTC: 1765906562.0
+Comment: I think both gnome and kde have pretty decent Task Managers.
+
+Comment 4:
+Author: stevebehindthescreen
+Score: 6
+Created UTC: 1765908077.0
+Comment: Mission Center works good for me when I want a gui task manager, however a terminal option is my first port of call usually.
+
+Comment 5:
+Author: ipsirc
+Score: 5
+Created UTC: 1765906339.0
+Comment: &gt;I want something that also looks good. Should be also lightweight.
+
+Unfortunately, you can only choose one of these. :-/

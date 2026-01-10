@@ -1,0 +1,90 @@
+Post Title: Whats something beginners worry about that doesnt matter as much as we think?
+Author: Bmaxtubby1
+Score: 94
+URL: https://www.reddit.com/r/learnprogramming/comments/1pyjq8e/whats_something_beginners_worry_about_that_doesnt/
+Number of comments: 80
+Created UTC: 1767006837.0
+
+Post Content:
+As a beginner, it feels like *everything* matters. language choice, tools, frameworks, best practices, etc. It can get overwhelming fast.
+
+Looking back, what did you stress about early on that turned out not to be that important?  
+  
+And what *was* more important than you realized at the time?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Chucknorriscake99
+Score: 106
+Created UTC: 1767007251.0
+Comment: The first language
+
+It doesn’t matter if you ‘learn C or python or Fortran’.  
+
+You learn a certain way to solve problems. The language is just a way to communicate these thoughts. 
+
+Choose something you want to learn and then pick the language from there. You won’t stay at one language anyways
+
+Comment 2:
+Author: vegan_antitheist
+Score: 30
+Created UTC: 1767009323.0
+Comment: Being good at programming.   
+  
+It's just not that important. For your success it's a lot more important that you:  
+\- are good at communication with others (programmers, team leads, stakeholders)  
+\- are a good team player, know how agile programming is done successfully  
+\- know how to do good requirements engineering (even if that is not your job you need to understand how requirements are used to be successful)  
+\- deliver solutions that actually work, are not over-engineered and can be maintained by others  
+\- make use of well-tested standard libraries and frameworks
+
+Unless you are specifically hired for it, you don't have to be all that good at:  
+\- writing performance-critical, hardware-adjacent code  
+\- knowing all the features of all the languages and tools you use  
+\- Hoare logic
+
+Nobody cares if you manually programmed a replica of the first Turing machine to balance red-black trees for your Master's thesis.   
+They care about readable pull requests and successful deployments.
+
+however, you should still learn all the theory of CS at school because learning how SCRUM works is easier at a company, while the theory stuff is easier to learn at school. And it does help a lot to know about all of this.
+
+Comment 3:
+Author: ShoulderPast2433
+Score: 23
+Created UTC: 1767016457.0
+Comment: Inheritance.
+
+
+Given how much focus is put on it at the beginning it creates perception that to build a professional application you need to design a complicated tree of extending classes.
+
+
+Nope.
+It's even better to avoid it unless it REALLY makes sense.
+
+Comment 4:
+Author: AlSweigart
+Score: 19
+Created UTC: 1767017456.0
+Comment: As an instructor and author, here's what I've found (along with my opinionated answer.) A lot of these are in the [subreddit FAQ](https://www.reddit.com/r/learnprogramming/wiki/faq)
+
+* "Am I too old to learn to program?" (No.)
+* "Do I have to be good at math to program?" (No, but you should be comfortable with basic arithmetic. You don't need algebra, calculus, etc unless you're working on software that uses that stuff.)
+* "Am I learning the right language?" (Learn Python to start. But if you're learning something else, that's fine.)
+* "Do I need to get a new, more powerful computer to learn to code?" (Absolutely not. The cheapest desktop or laptop is more than enough.)
+* "I want to learn a second language at the same time but I've heard that's bad." (It's fine. You can learn more than one thing at a time. There's no actual research or studies that state that learning.)
+* "I feel like I always have to look stuff up. I can't memorize everything." (That's fine. Everyone is constantly looking stuff up.)
+* "I heard X is slow." (That's not really a concern for your needs, and probably isn't even true in the first place anyway.)
+
+Comment 5:
+Author: KahnHatesEverything
+Score: 8
+Created UTC: 1767023690.0
+Comment: I have a few. The first is thinking that you should learn all of this without a mentor or a group. Self learning is slow and leads to bad habits.
+
+The second is thinking you need to know every element of a tool or have a depth of understanding that really needs to be developed over time. 
+
+Not appreciating the value of mistakes.  Get your hands dirty. Break things. Learn why certain things aren't done. You'll better appreciate why things are done the way they are.
+
+Finally, thinking that you've failed because you are relearning something you thought you already knew. Be patient with yourself. Be a bad but actively learning programmer with enthusiasm for a long time and you'll be a far better programmer than the theoretical prodigy who isn't building stuff.

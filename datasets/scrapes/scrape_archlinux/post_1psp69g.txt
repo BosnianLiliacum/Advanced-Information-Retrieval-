@@ -1,0 +1,92 @@
+Post Title: You also have an old nvidia GPU (I have a 1080) Try this before your next update
+Author: hernandoramos
+Score: 100
+URL: https://www.reddit.com/r/archlinux/comments/1psp69g/you_also_have_an_old_nvidia_gpu_i_have_a_1080_try/
+Number of comments: 48
+Created UTC: 1766373825.0
+
+Post Content:
+I read yesterday about this. From informant:
+
+    NVIDIA 590 driver drops Pascal and lower support; main packages switch to Open Kernel Modules
+    Sat, 20 Dec 2025 18:53:42 +0000
+    
+    With the update to driver version 590, the NVIDIA driver no longer supports Pascal
+    (GTX 10xx) GPUs or older. We will replace the `nvidia` package with `nvidia-open`,
+    `nvidia-dkms` with `nvidia-open-dkms`, and `nvidia-lts` with `nvidia-lts-open`.
+    
+    **Impact:** Updating the NVIDIA packages on systems with Pascal, Maxwell, or older
+    cards will fail to load the driver, which may result in a broken graphical
+    environment.
+    
+    **Intervention required for Pascal/older users:** Users with GTX 10xx series and
+    older cards must switch to the legacy proprietary branch to maintain support:
+    
+     * Uninstall the official `nvidia`, `nvidia-lts`, or `nvidia-dkms` packages.
+     * Install `nvidia-580xx-dkms` from the AUR
+    
+    Users with Turing (20xx and GTX 1650 series) and newer GPUs will automatically
+    transition to the open kernel modules on upgrade and require no manual intervention.
+
+I tried to update my system following this instructions but some issues arose. After some google searches I found this video:  
+[https://www.youtube.com/watch?v=GCCVn9qglqY](https://www.youtube.com/watch?v=GCCVn9qglqY)
+
+In the video details you can find instructions:
+
+    sudo pacman -Rns nvidia nvidia-dkms nvidia-utils lib32-nvidia-utils
+    yay -S nvidia-580xx-dkms nvidia-580xx-utils lib32-nvidia-580xx-utils
+    yay -S nvidia-580xx-settings
+    yay -S opencl-nvidia-580xx lib32-opencl-nvidia-580xx
+
+I have to also uninstall steam because dependencies but evething workes as spected after reinstalling. 
+
+So, if you Mr. LinSwitch read this
+
+Большое спасибо. Я пытался следовать инструкциям на ArchWiki, но ваши гораздо понятнее.
+
+Привет из Мексики.
+
+Cheers!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: sequesteredhoneyfall
+Score: 40
+Created UTC: 1766381941.0
+Comment: You didn't have to uninstall steam - you can forcefully remove packages without removing dependencies with `-Rdd` which would be appropriate for a use case such as this.
+
+Comment 2:
+Author: SureDay29
+Score: 11
+Created UTC: 1766381414.0
+Comment: That's why you always need to check [archlinux.org](http://archlinux.org) frontpage before updating
+
+Comment 3:
+Author: varble
+Score: 10
+Created UTC: 1766422246.0
+Comment: Don't need to uninstall anything, just install them in the proper order. Did it this morning, no issues. Basically, try to install everything, then only install whatever gives the "dependency failed" error, then the rest. I believe the order is:
+
+*  lib32-nvidia-580xx-utils
+*  nvidia-580xx-utils
+*  the rest
+
+Comment 4:
+Author: Tontie-knights
+Score: 8
+Created UTC: 1766426098.0
+Comment: I just ran pacman -Qss nvidia, and confirmed I had these three installed: nvidia, lib32-nvidia-utils, nvidia-utils
+
+All I had to run was the following
+
+    yay -Syu nvidia-580xx-dkms nvidia-580xx-utils lib32-nvidia-580xx-utils
+
+Everything installed without a problem.
+
+Comment 5:
+Author: Caperplays
+Score: 7
+Created UTC: 1766377574.0
+Comment: This needs to be pinned everywhere!!! Thank you so much i finally got my games working again

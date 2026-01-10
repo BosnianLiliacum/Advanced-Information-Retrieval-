@@ -1,0 +1,96 @@
+Post Title: Student wanting to reach Linux kernel contribution level – please tell me the correct step-by-step path in 2025
+Author: Impressive_Big5342
+Score: 54
+URL: https://www.reddit.com/r/linuxquestions/comments/1pkrrw8/student_wanting_to_reach_linux_kernel/
+Number of comments: 59
+Created UTC: 1765545824.0
+
+Post Content:
+I’m a 2nd year CSE student with decent C knowledge.  
+My final goal is to contribute real patches to the Linux kernel (not just “hello world” modules).
+
+Current setup: Windows 11 + WSL2 with Ubuntu 24.04 freshly installed.
+
+Please tell me the exact, no-BS learning order that actually works in 2025.  
+I want the path that most real kernel contributors actually followed (or wish they had followed).
+
+Specifically, I want answers to these:
+
+1. Best resources/books/courses in correct sequence (from zero Linux knowledge → first accepted patch)
+2. At what point should I switch from WSL2 to native Linux or a VM?
+3. Which books are still relevant in 2025 and which are outdated?
+4. Realistic timeline for a college student who can give 15–20 hours/week
+5. First subsystem / area that is actually beginner-friendly right now
+
+I don’t need motivation posts, just the correct technical roadmap from people who have already done it or are mentoring others.
+
+Thanks in advance!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 55
+Created UTC: 1765548989.0
+Comment: &gt;I don’t need motivation posts, just the correct technical roadmap from people who have already done it or are mentoring others.
+
+The kernel has grown from roughly 5 million lines of code when I started using Linux two decades ago to about 40 million lines of code today.  Because the kernel is large, contributors specialize, for the most part, on specific areas of the kernel rather than on the kernel as a whole.
+
+Within that context, almost all code submitted to the kernel is contributed by corporations. Half of the code is contributed by just seven corporations.  Although quite a number of individuals contribute, most are maintainers working for, with or under the auspices of contributing corporations and/or The Linux Foundation and TLF members.
+
+My observations are not meant to discourage you, but to suggest a path.
+
+Find an area of kernel development/maintenance that appeals to you (say process scheduling, memory management, device drivers, network stack and so on) and focus on developing expertise in that area.  The deeper the expertise, the better.
+
+Then find a way to use those skills to contribute to the kernel, perhaps in conjunction with or under the auspices of a then-current corporation or institution already contributing.
+
+&gt;Please tell me the exact, no-BS learning order that actually works in 2025. I want the path that most real kernel contributors actually followed (or wish they had followed).
+
+At this point, as a college student just starting out, focus on taking general Linux courses with an eye to identifying an area in which you would like to develop expertise, and then start focusing on that area.  Learn as much as you can while in school and then find a job in the area in which you are interested.
+
+When you get to that point, keep learning, taking TLF and/or related courses, keep developing your capabilities and knowledge.  In time you will find opportunities to contribute to the kernel.
+
+I understand that this is "Dutch Uncle" -- and probably unwanted -- advice but I think that the advice is sound.  The days when the kernel was developed and maintained by a handful of individuals working in their spare time are gone.  Long gone.
+
+My best to you in your studies, and good luck to you.
+
+Comment 2:
+Author: Klapperatismus
+Score: 11
+Created UTC: 1765547355.0
+Comment: 0. You have an itch that you need to scratch. In my case, it was a certain I/O chip that wasn’t supported.
+1. You read the chip’s datasheet. You read that part of the kernel sources that is relevant for interfacing that chip.
+2. Yesterday. You should also set up a second computer for tests. It’s actually great if that second computer is non-x86_64 e.g. a Raspberry Pi, and even greater if you cross-compile your kernel for it on your developer machine. Actually, throw out the MS-Windows crap on your developer machine, too. That’s a good exercise for you. Start with that.
+3. All books had been outdated the moment they went into print. That’s why no technical author writes books about computer topics any more. Read the source code and its attached documentation. Imitate what other kernel developers have done. Even if that’s wrong, it’s consistently wrong and Linus or one of his deputies will eventually clean it up.
+4. I’ve completed a full driver in two weeks. But I had been an electrical engineer at that point and had more than 25 years of programming practice. You likely need six to eight weeks for a working prototype.
+5. Anything that connects hardware with a reliable datasheet.
+
+Comment 3:
+Author: Kvnstrck
+Score: 11
+Created UTC: 1765546475.0
+Comment: If you really want in depth understanding of Linux and contribute then the first step would be to switch to using Linux as your daily driver(meaning install it and use it for your daily tasks).
+Only when really using the OS you can learn how it works and what parts do what tasks.
+If you want real in depth understanding, arch Linux is a great place as it is well documented and it gives you a large degree of control over the innerworkings of the OS.
+Please keep in mind though that to use arch effectively you need to invest the time to set it up and understand it. If you want something more straight forward I recommend Linux mint.
+
+Comment 4:
+Author: sageofredondo
+Score: 10
+Created UTC: 1765549753.0
+Comment: First technical point, have a system that can actually run a Linux kernel. Last I checked WSL2 is just containers and user-space virtualization. Study OS and hardware topics and setup a proper environment on bare metal or full virtualization with virtualbox for kernel development if you can't afford a second ssd to put Linux on bare metal. You need to study those topics anyway-look up your hardware/os class's syllabus and get that textbook early.
+
+After that, learn how to build a kernel: https://gitlab.com/jbwyatt4/vim-megarepo/-/blob/main/neo-elk/Workflow.md?ref_type=heads
+
+You need to decide what you want to do or what you can break into. Sign up for the mailing lists and study the patchsets being sent in: https://subspace.kernel.org/subscribing.html
+
+Ask for mentorship. Also ask around your professors to see if you can self study for credit in this.
+
+Learn the process for communicating and sending in patchsets: https://kernelnewbies.org/
+
+Comment 5:
+Author: Cynyr36
+Score: 5
+Created UTC: 1765550973.0
+Comment: Greg KH recently mentioned one of the best ways to get into the kernel is to read the style guide, and update comments and docs. It has all the how to submit a patch with none of the reviewer concerns about you sticking around or risk of breakage.

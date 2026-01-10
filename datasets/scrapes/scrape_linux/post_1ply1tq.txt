@@ -1,0 +1,48 @@
+Post Title: With Linux generating mainstream support, would it be helpful to launch an initiative similar to Ubuntu's "One Hundred Papercuts" mission?
+Author: returnofblank
+Score: 284
+URL: https://i.redd.it/k7xp8i1nr17g1.png
+Number of comments: 9
+Created UTC: 1765665343.0
+
+Post Content:
+From [Ubuntu](https://wiki.ubuntu.com/One%20Hundred%20Papercuts/Mission)
+
+&gt;Papercuts are fast to fix, but annoying bugs. Our mission is to make Ubuntu shine by reducing them.
+
+100 Papercuts focused on cleaning up these low priority bugs that developers were too otherwise busy to fix. The idea is that at least 100 papercut bugs would be fixed by each release.
+
+Unfortunately, this initiative died a long time ago and there hasn't been much response to bringing it back.
+
+I believe the revival of such an initiative (albeit maybe not limited to Ubuntu) would be beneficial for Linux on the desktop. While these bugs alone don't seem to matter, enough of them can kill a person.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: DueAnalysis2
+Score: 110
+Created UTC: 1765665461.0
+Comment: I believe KDE has a 15 minute bug initiative which is something similar? 
+
+[https://pointieststick.com/2025/03/25/2025-15-minute-bug-initiative-update/](https://pointieststick.com/2025/03/25/2025-15-minute-bug-initiative-update/)
+
+Comment 2:
+Author: Business_Reindeer910
+Score: 105
+Created UTC: 1765665559.0
+Comment: It was always a good idea to have it and a bad idea to stop it.
+
+Comment 3:
+Author: DuendeInexistente
+Score: 25
+Created UTC: 1765678507.0
+Comment: Obviously it would be good, that's not questionable. Imo the issue and the reason it died (Without bothering to check up anything) is how often a extremely tiny, minute seeming task turns out into anywhere from several days of looking for where that behavior comes from to needing to rebuild the entire car to fix a leaky pipe because the leaky pipe turns out to come from every other piece before it pumping just a bit too much pressure into it.
+
+It still should be encouraged and it's good to find out those car rebuilding knots of compounded errors, but well, just yesterday I spent all evening on a 15 minute task, and everyone has had those.
+
+Comment 4:
+Author: MaximumMarionberry3
+Score: -12
+Created UTC: 1765736576.0
+Comment: That sounds like a great idea. Initiatives like "One Hundred Papercuts" can really help improve user experience by tackling those small but annoying issues. It could also foster community involvement, similar to how KDE's 15-minute bug initiative engages users to contribute actively. Encouraging contributions for minor fixes can make a significant difference over time.

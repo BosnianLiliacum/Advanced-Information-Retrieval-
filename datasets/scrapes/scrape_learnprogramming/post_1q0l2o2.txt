@@ -1,0 +1,48 @@
+Post Title: I just wrote my first simple but meaninful program!
+Author: Eva_addict
+Score: 54
+URL: https://www.reddit.com/r/learnprogramming/comments/1q0l2o2/i_just_wrote_my_first_simple_but_meaninful_program/
+Number of comments: 8
+Created UTC: 1767208690.0
+
+Post Content:
+After all this years learning and giving up, I finally made my first program that does something meaningful! And even better, I know how it works! It was not copy and paste. I actually understood every part of it. 
+
+It's just a simple SDL window that shows sprites of Link from one of the old Legend of Zelda games. The sprites change directions depending on which key I press. Up, down, left and right. Now I  will try to figure out how to make the sprites change while I hold the key so I can make it look like Link is walking towards the direction I am holding. 
+
+Again, it's very simple for most people here but I just wanted to share because I think it's the first time I felt like I had fun with it instead of just being frustrated. 
+
+Hope you all have a happy new year!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Haunting-Dare-5746
+Score: 10
+Created UTC: 1767210176.0
+Comment: Great work. Maybe put it on GitHub to show off for the world to see? :)
+
+Comment 2:
+Author: OkLeg1325
+Score: 3
+Created UTC: 1767234474.0
+Comment: Good luck 
+
+Comment 3:
+Author: [deleted]
+Score: 3
+Created UTC: 1767266465.0
+Comment: [removed]
+
+Comment 4:
+Author: KC918273645
+Score: 2
+Created UTC: 1767268908.0
+Comment: That's a great early step which will make it easier to gradually take further steps into bigger software architectures. Keep going! :) That's how we all learned.
+
+Comment 5:
+Author: Dramatic-Lobster-969
+Score: 0
+Created UTC: 1767241094.0
+Comment: That's great...

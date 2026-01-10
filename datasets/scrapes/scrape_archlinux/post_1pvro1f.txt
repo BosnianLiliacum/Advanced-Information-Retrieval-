@@ -1,0 +1,66 @@
+Post Title: Academics / Scholars using Arch - What's Your Workflow?
+Author: TECHNO_JESTER
+Score: 27
+URL: https://www.reddit.com/r/archlinux/comments/1pvro1f/academics_scholars_using_arch_whats_your_workflow/
+Number of comments: 36
+Created UTC: 1766711229.0
+
+Post Content:
+Hi everyone,
+
+I've been playing with Linux and trying out various distros on my laptop for a while now. Now I'm on Arch, and I'm really enjoying it, I really appreciate the experience of picking out every piece of your OS yourself to your specific needs. Outside of practicing IT and Linux principles, I'm interested in using this as an academia machine - note-taking, researching, writing (with LaTeX or otherwise), some amount of programming, etc.
+
+I was wondering if there are any other academics who have integrated Arch into their workflow and what works for you? I'm open to basically any suggestions here - just any way you use Arch that you feel benefits your academic workflow, be it tools for keeping focused, note-taking and organizing, fun presentational elements, or anything else. In truth I just want people to give me ideas for ways I can play with and get used to the system a bit more!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GloveExact393
+Score: 23
+Created UTC: 1766728123.0
+Comment: For writing documents, I use Quarto (.qmd) because it supports Python, Julia, R, Markdown, and LaTeX. It's better than Jupyter Notebook because it doesn't have all the JSON and improves diffing and Git operations. It also integrates with Zotero. You can export to any format you want using Pandoc. To separate Python environments, I use Pixi in each project to avoid library conflicts. I use Calcurse for my daily schedule and have connected it with a keyboard shortcut for Rofi using Qtile. For social media, I only created a web app that redirects me to the chat to avoid distractions. If I want to enhance the Quarto document, I use Obsidian and a theme I like with a template. Since I'm still tied to Microsoft Office, I use OnlyOffice, which works quite well. The only thing I miss is Adobe Illustrator or Corel, but I'm currently testing an Affinity option on Linux. For bibliographic research, I'm using a combination of Consensus.app and NotebookLM for browsing, then I import my notes into Obsidian. If I don't have those, I extract the notes from the PDFs as Markdown notes.
+
+For file browsing, I use fzf and z to quickly navigate to directories; I rarely use yazi. Finally, I use grep and ripgreppall to search for text in PDFs in bulk.
+
+Greetings from Chile, my friend.
+
+Ps:I use Debian btw
+
+Comment 2:
+Author: danflood94
+Score: 19
+Created UTC: 1766711690.0
+Comment: Honestly anything I do in arch would work in any distro, mac or windows there isn't anything magic in here. 
+
+So arch isn't part of the workflow it just allows my OS to be minimal.
+
+Comment 3:
+Author: [deleted]
+Score: 11
+Created UTC: 1766736423.0
+Comment: [removed]
+
+Comment 4:
+Author: Gozenka
+Score: 6
+Created UTC: 1766720731.0
+Comment: [neovim](https://neovim.io/) as text editor. Plain-text is simple and awesome. You can take markdown notes. And write LaTeX. And any code. Then you may view the notes and LaTeX in pdf previews, there are tools to set it up too. Neovim is a deep hole to get into, but it is easy to start with, just learning the basic keys at first. But it depends on whether you are interested or not.
+
+It is nice to keep things in plain-text form. You can use any backup and sync strategy with that, and it would be compatible on other devices, without needing specific software.
+
+You can use `git` for versioning, and perhaps for backup and sync. `git` is an awesome tool.
+
+For organizing, go with whatever you feel like. It is nice to keep your home directory clean and tidy. I personally only have my notes and code (git repos) in my home. I then have my large media and data in another partition that is mounted at `/d/`, organized into categories in there.
+
+There was a nice medical doctor student on Youtube showing their own setup with Neovim but I could not find it now. These and similar videos may be of insight:
+
+https://www.youtube.com/watch?v=DOtM1mrWjUo
+
+https://www.youtube.com/watch?v=HVcTPeitxmw
+
+Comment 5:
+Author: cwebster2
+Score: 3
+Created UTC: 1766715527.0
+Comment: Any responses you get here will not be unique to Arch. From my time in grad school I just needed conda, a Fortran compiler, support for HDF5, netCDF, BLAS, and a LATeX variant that could compile to PDF. At the time (15 years ago) I used Gentoo as making sure all my tools had the library support I needed made a source-based distro advantageous.

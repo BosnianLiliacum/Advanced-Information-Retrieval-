@@ -1,0 +1,137 @@
+Post Title: Drive Partitioning re: System Organization: Please Share Your Setup
+Author: SaphireKitsuKat
+Score: 10
+URL: https://www.reddit.com/r/archlinux/comments/1pkd85s/drive_partitioning_re_system_organization_please/
+Number of comments: 16
+Created UTC: 1765497992.0
+
+Post Content:
+Hello! I was wondering how you all have your drives partitioned/mounted and how that relates to your system's organization or maintenance? 
+
+I switched from windows to arch recently and realized only after setup that the way I used to organize my drives and programs doesn't work on the linux filesystem paradigm, so I'm hoping a more diverse set of examples will help me better understand what the different options are.
+
+I read the archwiki's suggestions of course, but they don't seem optimized for a data hoarder with six hard drives and a billion hobbies.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: TizzleToes
+Score: 11
+Created UTC: 1765500973.0
+Comment: My advice, don't overthink it.
+
+There are reasons to split stuff up, but if this is for your stuff at home, most of them likely don't apply and you're just creating more work and headache for yourself. Just use directories.
+
+I do FDE on most on my machines, and my standard setup usually has the boot partition(s), followed by one partition for the remainder which is usually dm-crypt, with LVM on top of that, and then usually a root and swap logical volume on that.
+
+I have a large file server that is a bit more complicated, the main thing there being I have 2x drives in a RAID 1 as the OS drives, and the remainder are in a RAID6 (md &gt; dm crypt &gt; lvm &gt; single large volume that is mounted and shared out via NFS and SAMBA).
+
+Comment 2:
+Author: rarsamx
+Score: 8
+Created UTC: 1765506933.0
+Comment: I've been meaning tondo a blogpost or video about my set up so, here the high level:
+
+I use Btrfs. My drive has three partitions
+
+- EFI - Vfat
+- Boot - Ext3
+- All the rest - BTRFS (LUKS encrypted)
+
+I separate boot and the rest to have all the rest encrypted.
+
+The magic happens in the third partition.
+
+In Btrfs you can have Subvolumes which behave as partitions but share the same space.
+
+Let's say it's a 1 TB drive. EFI and boot are tiny so I will assume the hole 1TB is for the OS.
+
+In that partition I have two different distributions each with their Subvolumes so here is the structure of that btrfs partition. (By convention Subvolumes are named with @ but don't have to and you can mount them wherever
+
+/
+/arch
+/arch/@  ----&gt; arch root file system
+/arch/@home ---&gt; mounted under /home
+/arch/@log ----&gt; mounted under /var/log 
+/fedora
+/fedora/@ ---&gt; Fedora root file system
+/fedora/@home ---&gt; mounted under /home
+/fedora/@log ---&gt; mounted under /var/log
+@Documents ---&gt; mounted under /home/&lt;user&gt;/Documents
+@Music ---&gt; same as above but to Music
+@Videos  ---&gt; same as above
+@Pictures ---&gt; same as above
+
+All those Subvolumes share the same 1 TB partition. They can use as little or as much as they need. Although I can put caps to avoid growing to much as is the case with the @log Subvolumes.
+
+In this set up when I boot into Arch, I have a home folder with my arch configurations but access all my files.
+
+Same happens when I boot in Fedora
+
+This set up removed the anguish of trying to guess how much I need to allocate to each partition. What if it's not enough? What if I waste space?
+
+If course you can do the same with only one distribution.
+
+/
+/@
+/@home
+/@log
+
+In this set up you could have other subvolumes as you see fit.l and mount them where you need.
+
+Another advantage is that I can take snapshots of my system independently than the data.
+
+Inside my data folder I have a very meticulous organization
+
+- Taxes (with subfolders by year)
+- Financial planning (with subfolders by topic)
+- Statements (with subfolders per statement group. For example bank/account/year
+- Homes (with subfolders for each current and past home)
+- Cars
+- Languages (with subfolders per language)
+
+Etc. 
+
+By the way, file names which are date sensitive (e.g. Statements) have a standard naming convention: YYYYMMDD-&lt;whatever it is&gt;
+
+Note: in Linux I don't see logical reason to split apps in their own folders. Programs install components to the logical place: executablemin /usr , global configuration into /etc, and so on
+
+It's worth also understanding the XDG specification: 
+
+https://specifications.freedesktop.org/basedir/latest/
+
+Comment 3:
+Author: onefish2
+Score: 7
+Created UTC: 1765507970.0
+Comment: ext4 with /boot/efi and /. What else do you really need? Keep it simple.
+
+Comment 4:
+Author: archover
+Score: 3
+Created UTC: 1765513558.0
+Comment: &gt;  six hard drives and a billion hobbies.
+
+A good case can be made for a [Volume Management](https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux) solution. Examples are [LVM](https://wiki.archlinux.org/title/LVM), and [subvols](https://btrfs.readthedocs.io/en/latest/Subvolumes.html) you get in btrfs. btrfs seems more popular now, so concentrate on that. In LVM, the units are PV, VG, and LV.
+
+* Essentially, Volume Management lets you pool your physical  drive storage so it acts as one virtual drive. That pool space can then be assigned to subvols (btrfs), or VG + LV in LVM. 
+
+
+* Of course, Volume Management adds another layer of complexity to your system, that only you can say if that cost is worth the benefit. 
+
+A case can be made to just mount each drive and reference them that way. This layout is typically expressed in /etc/fstab. The advantage is simplicity, and the disadvantage is no pools. I would suggest you go this way until you attain some Linux skill.
+
+Personally, I use the wiki recommended  [KISS Partition Scheme "Singe Root Partition"](https://wiki.archlinux.org/title/Partitioning#Single_root_partition) which would not be interesting to you. :-) 
+
+Hope that helps and good day.
+
+Comment 5:
+Author: SaphireKitsuKat
+Score: 2
+Created UTC: 1765498139.0
+Comment: Further Context: On windows I had an entire drive dedicated just to the operating system and a few critical programs. Then I would organize programs and data into folders and drives by subject. So I'd have a drive for long term archives, one for games, one for hobby work.
+
+It seems like this isn't how it's done on linux. I generally can't install programs in the user directory, and instead they are installed all mixed together in /bin, or in /var/lib/flatpak. So having a partition for a particular type of program is pointless. Also, I originally mounted /var on a dedicated 30 GB partition, but I probably want more space than that, or for it not to be its own partition at all, if it's going to have all the flatpaks installed there.
+
+The linux structure does leave me worried about having to reinstall and reconfigure all of my programs if I ever need to do a major system update or reinstall though. On windows I could trust that even if my C drive broke, all the art programs in the art folder on the hobby drive would be just fine, and could be used instantly if connected to a new system. I don't know how to replicate that sort of thing on linux yet.

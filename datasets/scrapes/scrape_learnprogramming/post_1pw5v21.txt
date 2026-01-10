@@ -1,0 +1,59 @@
+Post Title: If not C/C++/Java/Python, which language would you learn and why?
+Author: idont_need_one
+Score: 92
+URL: https://www.reddit.com/r/learnprogramming/comments/1pw5v21/if_not_ccjavapython_which_language_would_you/
+Number of comments: 111
+Created UTC: 1766760175.0
+
+Post Content:
+We all hear the same “big four” recommendations over and over: C/C++, Java, Python. They’re solid, no doubt. But I’m curious about what comes after that.
+
+If you were starting today, which non-mainstream language would you choose to learn, and why?  
+I’m thinking about languages that might be in higher demand in the future or already quietly growing in importance.
+
+Some examples people often mention:
+
+* Go reminded me of simplicity + backend/cloud use
+* Rust seems huge for systems programming and safety
+* Zig, Nim, Julia, Kotlin, Elixir, etc.....
+
+Questions I’m curious about:
+
+* Which language do you think has the best long-term career value?
+* Is it better to pick something industry driven (cloud, infra, embedded) or niche but powerful?
+* Any regrets learning (or not learning) a certain language earlier?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AcanthaceaeOk938
+Score: 87
+Created UTC: 1766760497.0
+Comment: c#
+
+Comment 2:
+Author: QotsaFINEST
+Score: 24
+Created UTC: 1766761956.0
+Comment: A programming language is a tool. You don't ask yourself which tool to use and then choose which problems to solve. A problem comes your way, and you select the appropriate tool.   
+  
+Tontolin.
+
+Comment 3:
+Author: Helpjuice
+Score: 13
+Created UTC: 1766764674.0
+Comment: Assembly
+
+Comment 4:
+Author: countsachot
+Score: 11
+Created UTC: 1766760593.0
+Comment: Rust, elixir. They are a bit different.
+
+Comment 5:
+Author: speedyrev
+Score: 9
+Created UTC: 1766763725.0
+Comment: C# and Javascript. 

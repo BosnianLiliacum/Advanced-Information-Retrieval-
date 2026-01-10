@@ -1,0 +1,52 @@
+Post Title: Your beginning.
+Author: Neverlast0
+Score: 127
+URL: https://www.reddit.com/r/linuxquestions/comments/1pnx1gm/your_beginning/
+Number of comments: 314
+Created UTC: 1765874439.0
+
+Post Content:
+What made you decide to switch to Linux, whether it be a single moment or event, or it be a series of events, or rollout that rubbed you the wrong way? I wanna know. Go on about it as long as you can.
+
+Edit: thank you for all your responses.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SportTawk
+Score: 24
+Created UTC: 1765875320.0
+Comment: I used it at work! So it made sense to use it at home
+
+Comment 2:
+Author: BlizzardOfLinux
+Score: 22
+Created UTC: 1765875418.0
+Comment: I have a feeling I'm not unique, but when my computer couldn't update to Windows 11 because it was missing a TPM chip. That was the final straw. I still have a computer that runs windows for games. My laptop and my older desktops were all switched to some form of Linux Mint. The second all the games I play are compatible with Linux I will make the full switch. I dream of this day lol
+
+Comment 3:
+Author: Away_Combination6977
+Score: 14
+Created UTC: 1765875519.0
+Comment: I got my first computer at age 8 or so (Atari 800XL). I started working in IT at about 15 years old (1994ish). I got free copies of every MS home OS from that point forward. It was the massive bloat (among other things) between Windows 95 and Windows 7 that made me (finally) switch full time. 
+
+Yes, I understand that Win7 got better. A lot better, honestly. I use Windows every day for work. But at the start? Win7 was a hot mess and slow af. 
+
+To be fair, though, my *beginning* was when I installed Slack for the first time in 95 or so. Though that install didn't last long. OS/2 was way better. 😂😂
+
+Comment 4:
+Author: invalidbehaviour
+Score: 13
+Created UTC: 1765876880.0
+Comment: I did not switch. I use Windows, Mac OS and Linux daily.  Each has features that I find valuable so why would I want to lose that?
+
+I started to use Linux regularly from the first time I became aware of it. A friend gave me a PC World cover disk (remember those?) with Slackware 2.0, I think, in 1994.  It was in the form of many 1.44MB floppy images that had to be copied to disks and used to install. 
+
+My past experience with "real computers" was VMS on a VAX 11/780 in school, and this created a love for powerful command line operating systems. Being able to run one on my home machine hooked me from day 1.
+
+Comment 5:
+Author: ZonePleasant
+Score: 10
+Created UTC: 1765875114.0
+Comment: Had been sick of Windows for a while, didn't want 11 and then had an SSD failure in June. Stuck Linux on just because and 40 minutes later had a fully functional PC again. Never went back to Windows, haven't missed it, everything is easier, penguin supremacy, etc.

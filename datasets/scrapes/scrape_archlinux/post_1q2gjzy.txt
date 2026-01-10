@@ -1,0 +1,53 @@
+Post Title: Best way to manage Dotfiles ?
+Author: Medical_Toe2877
+Score: 49
+URL: https://www.reddit.com/r/archlinux/comments/1q2gjzy/best_way_to_manage_dotfiles/
+Number of comments: 111
+Created UTC: 1767402480.0
+
+Post Content:
+Simple question.   
+  
+**What do you guys think is the best ways to manage dotfiles?**  
+  
+**-**  I have tried GNU Stow and Chezmoi, they both have their pros and cons.  
+  
+\- Right now, I am looking for something that makes it easy to get my *dotfiles* ready for a new installation and makes them easier to manage.
+
+Thanks ahead!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: StockSalamander3512
+Score: 56
+Created UTC: 1767403058.0
+Comment: I’ve been putting them in a GitHub repository, and then pulling them down on fresh installs, but if there are better/more efficient ways to do this, I’d like to hear them…
+
+Comment 2:
+Author: Individual_Good4691
+Score: 23
+Created UTC: 1767417971.0
+Comment: stow + git, have been using it for years.
+
+Unless you can describe exactly what you're missing, nobody can really tell you how to improve your setup.
+
+Comment 3:
+Author: KortharShadowbreath
+Score: 14
+Created UTC: 1767407857.0
+Comment: I use stow with a custom script to automate conflicts etc.  
+\[Script\]([https://github.com/Firstp1ck/mydotfiles/blob/main/.local/scripts/Start\_stow\_solve.sh](https://github.com/Firstp1ck/mydotfiles/blob/main/.local/scripts/Start_stow_solve.sh))
+
+Comment 4:
+Author: CarryOnRTW
+Score: 12
+Created UTC: 1767419062.0
+Comment: I'm using chezmoi with a private github repo and it works well.
+
+Comment 5:
+Author: relopezil
+Score: 11
+Created UTC: 1767410371.0
+Comment: I really like the method described [here](https://www.atlassian.com/git/tutorials/dotfiles). This involves keeping dotfiles in a git repo, but configuring the repo to have your home directory as the root, and to not show files that you don't explicitly add. You can push the config repo to a local server or somewhere like gitlab. I've tried several methods and this is the best for me.

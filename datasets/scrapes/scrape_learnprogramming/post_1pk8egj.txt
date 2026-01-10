@@ -1,0 +1,52 @@
+Post Title: Please reassure me that you don't have to know everything by heart to work in programming?
+Author: Electrical-Hand-7723
+Score: 134
+URL: https://www.reddit.com/r/learnprogramming/comments/1pk8egj/please_reassure_me_that_you_dont_have_to_know/
+Number of comments: 75
+Created UTC: 1765485770.0
+
+Post Content:
+I am quite frustrated after my first semester in programming. Sure, my community college is not exactly well rated, but the experience so far has me questioning my career choice, even if I enjoy it a lot.
+
+  
+We were asked, after barely 3 months and a week, to almost fully code a website using HTML and CSS (no bootstrap or else), fully from memory, including flex and grid, forms, making everything work responsively. Again, no notes, no documentation, no references.
+
+  
+Is that how it is on the job market? Am I expected to show up, learn stuff real fast, and be treated like a dummy if I consult documentation? I chose this career path partly because I like it, but also because I thought I could consult documentation until it becomes second nature down the line. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: sneakin-sally
+Score: 189
+Created UTC: 1765485944.0
+Comment: No absolutely not. In the real world, 99.999% of engineers refer to documentation constantly
+
+Comment 2:
+Author: retroroar86
+Score: 53
+Created UTC: 1765486024.0
+Comment: I have worked profesionally for five years and I sometimes google basic syntax of my *most used* language.
+
+Comment 3:
+Author: ParadoxicalPegasi
+Score: 25
+Created UTC: 1765486040.0
+Comment: You basically don't have to know *anything* by heart. You just have to be able to figure it out in a reasonable time frame to get things done and tested before a deadline.
+
+Comment 4:
+Author: disposepriority
+Score: 17
+Created UTC: 1765486020.0
+Comment: I consult docs, my own notes, or quick google searches every day and I also make a point of doing it while sharing my screen during training/pair programming with juniors just to hammer the point home that it's completely normal and no one should be afraid of saying that they don't know something.
+
+On the other hand - it is important to internalize *concepts*, and generally a quick google search wouldn't help you instantly grasp a concept either.
+
+Comment 5:
+Author: saffash
+Score: 13
+Created UTC: 1765489077.0
+Comment: I have been programming for a living since the late 1980s. Immediately before reading this post, I spent a good 30 minutes looking up a bunch of stuff in order to finish some work I was doing. 
+
+You'll be looking up stuff forever. Don't stress.

@@ -1,0 +1,57 @@
+Post Title: After almost 2 years, it finally started to click all at once.
+Author: Full-West-8608
+Score: 427
+URL: https://www.reddit.com/r/learnprogramming/comments/1q2p2md/after_almost_2_years_it_finally_started_to_click/
+Number of comments: 39
+Created UTC: 1767427585.0
+
+Post Content:
+I’ve been programming for almost two years, completely self taught, and for a long time I was convinced the “aha” moment people talk about just wasn’t going to happen for me. Coding anything felt like nonstop friction.  Forgetting syntax, confused about how to use a given framework, not knowing why something works even when I'm able to get it working, and constantly needing help just to move forward, it felt like this every step for a long time.
+
+
+
+Recently, something finally clicked. I can sit down, think through a problem, and actually build the solution without feeling like I’m fighting the language or tools the entire time. One of the biggest changes is how I use documentation now. What used to feel unreadable suddenly makes sense, and I almost always prefer reading docs over asking GPT because it’s faster and clearer.
+
+
+
+I’m still very much a beginner at the end of the day, but programming is finally fun.  I can move past small toy programs that are under a thousand lines of code and start building things that feel real and challenging in a good way. Posting this for anyone who’s been stuck wondering if things ever start to feel natural, they do, even if it takes longer than you expect.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: The_alfa00
+Score: 55
+Created UTC: 1767432399.0
+Comment: Thanks. This gave me some hope. 
+Been struggling with flutter for a while now and I wasn’t understanding why. It felt like I’m the only person in my very small circle of friends who wasn’t serious enough. 
+This has given me some hope. I won’t give up.
+
+Comment 2:
+Author: thingerish
+Score: 15
+Created UTC: 1767430510.0
+Comment: Nice work.
+
+Comment 3:
+Author: Charming_Art3898
+Score: 13
+Created UTC: 1767439090.0
+Comment: Free Python Mentor Here - I often tell my students, the reason it seems like I'm so good at what I do is not because I memorized all Python syntax but simply because of repitition. Repitition they say is the key to a lasting impression. 
+What's happening to you after 2 years of coding is the power of repetition. This is why I discourage beginners from building complex projects at the start.  Start with basic stuff, repeat it well enough until you're familiar with the patterns and process, then move on to more complex things.
+
+Congratulations 🎉
+
+Comment 4:
+Author: sr_maxima
+Score: 12
+Created UTC: 1767450535.0
+Comment: No such "clicking" for me in 40 years, just slow improvement over time. I guess everyone's different.
+
+Comment 5:
+Author: DoubleTea
+Score: 9
+Created UTC: 1767433479.0
+Comment: Nice! I'm still way early in the process of learning but I do now feel like reading documentation is a little less like looking at ~~hyroglifics~~ hieroglyphics. Still though, there is still some friction when it comes to tackling problems on my own
+
+edit: spelling

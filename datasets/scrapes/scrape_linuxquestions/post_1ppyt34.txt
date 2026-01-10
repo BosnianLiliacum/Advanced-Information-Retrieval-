@@ -1,0 +1,46 @@
+Post Title: Are you able to run Counter Strike 2 on Linux?
+Author: thrashingjohn
+Score: 38
+URL: https://www.reddit.com/r/linuxquestions/comments/1ppyt34/are_you_able_to_run_counter_strike_2_on_linux/
+Number of comments: 38
+Created UTC: 1766083892.0
+
+Post Content:
+Making a switch to Linux, is it able to run on it?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: l3esitos
+Score: 84
+Created UTC: 1766084097.0
+Comment: Yes, it’s not even under a comparability layer there’s a full Linux version of CS2. 
+
+In the future just look up the game you wanna know about on protondb.com
+
+Comment 2:
+Author: danGL3
+Score: 28
+Created UTC: 1766084232.0
+Comment: Well, Counter Strike 2 is made by the biggest Linux supporting company in the gaming space (Valve)
+
+So yeah it runs
+
+Comment 3:
+Author: Unfortunya333
+Score: 16
+Created UTC: 1766084835.0
+Comment: Valve has been all in on Linux gaming for like a decade.... They are like the biggest industry backer for Linux gaming. Yes. It runs.
+
+Comment 4:
+Author: DoubleOwl7777
+Score: 7
+Created UTC: 1766084331.0
+Comment: of course. its made by valve, who also make the Steam deck, steam machine and steam frame. all of which run steamos which is linux.
+
+Comment 5:
+Author: sidusnare
+Score: 7
+Created UTC: 1766083954.0
+Comment: Yes

@@ -1,0 +1,58 @@
+Post Title: Any non-ai sources for Linux knowledge?
+Author: Legitimate-Record951
+Score: 44
+URL: https://www.reddit.com/r/linuxquestions/comments/1pxnl8o/any_nonai_sources_for_linux_knowledge/
+Number of comments: 68
+Created UTC: 1766915237.0
+
+Post Content:
+I have sort of given up web search. So much slop! Any sites I can trust? I'm on Linux Mint.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: neckyo
+Score: 55
+Created UTC: 1766915465.0
+Comment: the archwiki, even if you don't use arch
+
+Comment 2:
+Author: ipsirc
+Score: 42
+Created UTC: 1766915522.0
+Comment: [https://linux.die.net/](https://linux.die.net/)
+
+[https://wiki.archlinux.org/](https://wiki.archlinux.org/)
+
+[https://www.linuxfromscratch.org/](https://www.linuxfromscratch.org/)
+
+Comment 3:
+Author: tomscharbach
+Score: 28
+Created UTC: 1766915663.0
+Comment: &gt;I have sort of given up web search. So much slop! Any sites I can trust? I'm on Linux Mint.
+
+Depending on the issue, Ubuntu forums/support and Mint forums/support might be useful resources.
+
+You might also do an old-fashioned, targeted internet search with a reasonable description of the issue, and then see what turns up.  My experience is that a few sites (Techmint, ITS FOSS, XDA, and so on) show up consistently and often have decent answers.  The beauty of an old-fashioned internet search is that you can get context and alternatives, rather than just AI instructions.
+
+You might also look into the Arch Wiki.  I've found that the Wiki, although about a completely different distribution, often provides in-depth context and background.
+
+My best and good luck.
+
+Comment 4:
+Author: lildergs
+Score: 12
+Created UTC: 1766915706.0
+Comment: You can't give up on web searches.  It's always been full of trash.
+
+There's no single site that's going to answer the questions you'll have exactly.
+
+You'll just have to bone your system a bunch of times.  With enough experience, you'll learn to realize what's slop and what isn't.
+
+Comment 5:
+Author: TehGogglesDoNothing
+Score: 6
+Created UTC: 1766927085.0
+Comment: man pages

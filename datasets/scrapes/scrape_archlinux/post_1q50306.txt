@@ -1,0 +1,87 @@
+Post Title: Coming back to linux after 6-7 years
+Author: Emergency-Row7406
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1q50306/coming_back_to_linux_after_67_years/
+Number of comments: 44
+Created UTC: 1767651634.0
+
+Post Content:
+I’m planning to install Arch Linux again after about 6–7 years, and I’d love to get your thoughts and advice on what’s changed since then.
+
+What I’m curious about:
+
+1. Wayland + NVIDIA
+   * Is it stable now?
+   * Does it work well with modern toolkits and compositors?
+   * Any noticeable improvements since a few years ago?
+2. Daily-drive experience
+   * My goal is a stable daily-driver OS for student life.
+   * In the past, animations felt buggy/laggy and NVIDIA on Linux was a real pain.
+3. Desktop environments
+   * How do KDE Plasma and GNOME behave on hybrid/dual-GPU laptops?
+   * Which one handles battery life and performance better?
+   * *I remember, that the animations(especially in KDE Plasma) were somewhat buggy/laggy*
+4. Battery life
+   * When I previously dual-booted with Windows 10 (especially with GRUB), I noticed worse battery life than using the Windows bootloader.
+   * Any tips for optimizing power usage on Linux (TLP, powertop)?
+5. External monitor experience
+   * How well are animations and performance when using external monitors, especially on Wayland?
+
+My setup:
+
+* Laptop: Lenovo Legion 5 16IRX9
+* CPU: Intel i5-13450HX
+* GPU: NVIDIA RTX 4060 Mobile
+* External Monitor: Connected via USB-C -&gt; DisplayPort
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Glum-Airport-4701
+Score: 23
+Created UTC: 1767654455.0
+Comment: 6-7
+
+Comment 2:
+Author: Holiday_Inspector791
+Score: 10
+Created UTC: 1767651799.0
+Comment: Wayland + NVIDIA is actually pretty solid now, especially with the newer drivers - you should have a much better time than 6-7 years ago
+
+  
+KDE Plasma animations are way smoother these days and the power management is leagues better, plus it handles hybrid graphics pretty well out of the box. For your Legion 5 setup I'd probably lean towards Plasma over GNOME for better NVIDIA integration
+
+  
+TLP + auto-cpufreq will sort your battery life, and external monitor stuff on Wayland is finally not a complete nightmare
+
+Comment 3:
+Author: matmagic1971
+Score: 3
+Created UTC: 1767680456.0
+Comment: I'm just saying, install Endeavouros Linux. It's an Arch derivative, more user-friendly, and has everything you need from Arch! Try it and you'll love it!
+
+
+Cheers
+
+Comment 4:
+Author: S1rTerra
+Score: 2
+Created UTC: 1767658168.0
+Comment: yes good kde itsfinenow good
+
+Comment 5:
+Author: NameStill930
+Score: 1
+Created UTC: 1767661240.0
+Comment: I can talk to you about hybrid laptops, because that's the reason I haven't switched to Linux.
+
+If your workflow involves using an external monitor, you're going to have [severe fps drops](https://forums.developer.nvidia.com/t/nvidia-please-get-it-together-with-external-monitors-on-wayland/301684/90) in Wayland to the point it's a pretty bad experience. Supossedly it's [gonna be fixed ](https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/4725)in GNOME 50, but it remains to be seen whether it's actually fixed and gives us an equal experience to X11.
+
+X11 works fine, gpu switching works, external monitors are buttery smooth (even more than Windows) but there's no per monitor fractional scaling, so everything on my laptop screen will took tiny. The majors DEs GNOME/KDE are gonna stop supporting X11 too. 
+
+Cinnamon could fill in this gap, but if you scale your laptop monitor to 150% and play any game, The game will run at a weird resolution and have a huge performance loss. You have to be turning the fractional scaling on and off every single time you want to play. 
+
+This is all using the dGPU mode on both Wayland/X11. The hybrid mode will be an order of magnitude more laggy, although it works fine on Windows.
+
+This + the fact that DX12 games have a performance hit of 20-30% compared to Windows, made me not use Linux as I'm going to be relying on Windows everytime anyways.

@@ -1,0 +1,99 @@
+Post Title: A short guide on how to set up an HP network printer
+Author: Mama_iii
+Score: 15
+URL: https://www.reddit.com/r/archlinux/comments/1ptajvc/a_short_guide_on_how_to_set_up_an_hp_network/
+Number of comments: 9
+Created UTC: 1766436522.0
+
+Post Content:
+Hello,
+Today, I wanted to connect my HP printer to my Arch Linux installation, but there isn’t a clear wiki for this. I found the setup process quite complicated, so I decided to write a short guide to help others. Note that your printer should already be connected to the Wi-Fi network.
+
+**First, install the following utilities:**
+
+```bash
+sudo pacman -S cups system-config-printer hplip python-pyqt5
+```
+
+- **cups**: service for connecting a printer
+- **hplip**: drivers for HP printers
+- **system-config-printer**: graphical tool for managing printers
+- **python-pyqt5** (optional): dependency for the HP utilities’ graphical interface
+
+**Next, enable the CUPS service:**
+
+```bash
+systemctl enable --now cups.service
+```
+
+Or
+
+```bash
+systemctl enable --now cups.socket
+```
+
+**Turn on your printer**, then run in the terminal:
+
+```bash
+system-config-printer
+```
+
+Click **"Add"**, then **"Network Printer"**, select your printer, and choose **"Appsocket/HP JetDirect"**. Try printing a test page—it should work!
+
+
+
+**Installing Plugins (Optional)**
+
+Some features, like scanning, require additional plugins. To install them, use the AUR package **hplip-plugin**:
+
+```bash
+yay -S hplip-plugin
+```
+or
+```bash
+paru -S hplip-plugin
+```
+
+After installation, you’ll be able to scan and use other features.
+
+
+
+I hope this guide helps! Feel free to share your tips, as this is my first tutorial. :)
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: -i0f-
+Score: 10
+Created UTC: 1766439076.0
+Comment: There is also the option to enable the cups.socket instead of the service. That way cups only starts if a program needs it. I orefer that personally.
+
+Comment 2:
+Author: Negative_Round_8813
+Score: 7
+Created UTC: 1766463069.0
+Comment: &gt; system-config-printer
+
+You can just add a printer through a web browser. You get much more control of printer options doing it through https://localhost:631
+
+Comment 3:
+Author: falxfour
+Score: 5
+Created UTC: 1766436913.0
+Comment: You might consider adding a Wiki page for this. Thanks for contributing to the community!
+
+Comment 4:
+Author: illeviumzectet
+Score: 1
+Created UTC: 1766572020.0
+Comment: Appreciate this guide, I had trouble figuring out why my printer wasn't working after following [https://wiki.archlinux.org/title/CUPS](https://wiki.archlinux.org/title/CUPS), but I just needed hplip-plugin
+
+Comment 5:
+Author: v3d
+Score: -1
+Created UTC: 1766531840.0
+Comment: Here's a video tutorial on how to setup any printer on any OS.
+
+[https://youtu.be/qJg\_i24w174?t=49](https://youtu.be/qJg_i24w174?t=49)

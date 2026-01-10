@@ -1,0 +1,34 @@
+Post Title: Lagging/Stuttering on Desktop
+Author: Shibatora
+Score: 9
+URL: https://www.reddit.com/r/archlinux/comments/1po1t5k/laggingstuttering_on_desktop/
+Number of comments: 9
+Created UTC: 1765891371.0
+
+Post Content:
+I'm on KDE/Wayland/Nvidia and I've noticed that during normal Desktop usage it lags/stutters sometimes. It tends to disappear when doing more "demanding" stuff like continuously opening and closing windows triggering animations and I think it might have something to do with the pstate of the GPU. I've observed it bouncing between P8 and P5 very frequently when doing this. On P8 it seems to lag and it's smooth when it switches to P5.
+
+When manually setting the clock using nvidia-smi it permanently raises it to P5 at minimum, and that seems to fix the issue, but I feel like that's not the correct way to solve it. I should not have to raise the minimum clock just to stop the desktop environment from lagging.
+
+Is there a better way to fix it?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: stoppos76
+Score: 3
+Created UTC: 1765892892.0
+Comment: Check if nvida-open or the closed works better. Maybe the other one is not that aggressive with powering down the gpu.
+
+Comment 2:
+Author: anthonykaram7
+Score: 3
+Created UTC: 1765895330.0
+Comment: Have you tried adjusting Nvidia's power settings, and especially the "PowerMizer" settings, using nvidia-settings? This may allow you to control the GPU's behavior in terms of switching between P-states. nvidia-settings &gt; PowerMizer &gt; There you can either set the "Preferred Mode" to "Maximum Performance" (this forces the GPU to stay at a higher performance level) or choose a different setting that could make the transitions smoother.
+
+Comment 3:
+Author: Lostlessln
+Score: 1
+Created UTC: 1765956059.0
+Comment: You should install LACT and set minimum frequency to 1100 Mhz

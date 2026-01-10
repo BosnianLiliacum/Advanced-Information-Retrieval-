@@ -1,0 +1,60 @@
+Post Title: Finally, I am free.
+Author: kkreinn
+Score: 875
+URL: https://i.redd.it/h1jxtk04287g1.png
+Number of comments: 84
+Created UTC: 1765740852.0
+
+Post Content:
+So today I turned on my computer (Windows 10) and when the desktop appeared the screen started flickering, I couldn't click, I couldn't do anything, I was doing checks through the task manager and commands, I'm not an expert on it I only knew that there were errors that were fixed by running the commands, but when I restarted Windows, the screen was black.
+
+Upon restarting, the screen began flickering continuously again, luckily, I had a USB drive with Linux Mint that I intended to install in the near future.
+
+I booted from the USB drive and there is no blinking, now I know the problem wasn't the graphics card, nor the hard drive, it was that damn Windows with some update that corrupted part of the system.
+
+So, I can't recover the files anymore (if you know of any simple method to recover the files, I'll read it), but this time, Microsoft, you're going to be screwed, you've only brought forward what I've postponed for so long, no more updates or stupid notifications, no more restarts while I'm doing important shit, no more Microsoft accounts, no more junk installations on my PC, no more crap running in the background slowing it down, no more stolen data, no more paying for your crappy operating system, etc.
+
+I'm going to suffer learning this operating system from scratch; I'll have to dedicate hours or days of my life to this, but let me tell you something I've kept to myself my whole life.
+
+Fuck you, Microsoft 🖕🏻
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ch4rl13-Sh13ld
+Score: 58
+Created UTC: 1765764648.0
+Comment: Welcome to Linux and FOSS (free open source software)
+
+Comment 2:
+Author: kkreinn
+Score: 40
+Created UTC: 1765741609.0
+Comment: Okay, I found a way to recover the files if anyone is interested ... Through Linux Mint, which displays files on the internal hard drive In the file explorer, on the left side...even if they're located in Windows... It's so simple I look like I'm retarded. So fuck you Microsoft, I win again.
+
+Comment 3:
+Author: DarkoSchizo
+Score: 18
+Created UTC: 1765770210.0
+Comment: Congrats!
+
+How is Cinnamon desktop (Linux Mint's desktop environment)? How does its GUI appear to you without any tweaking? Its GUI is the main thing keeping me away from it.
+
+I don't wanna rice my distro (too much time consuming), I want something that looks good as it is, or with very minimal ricing, so KDE isn't for me. 
+
+At first I used Ubuntu, didn't like it, then a few days ago, switched to Fedora, but now I find fedora too restrictive, firejail and bwrap don't seem to work well.
+
+So how is Linux Mint, its GUI mainly?
+
+Comment 4:
+Author: Content_Chemistry_44
+Score: 9
+Created UTC: 1765781543.0
+Comment: "Windows Bugdate"
+
+Comment 5:
+Author: GloriousExtra
+Score: 9
+Created UTC: 1765766038.0
+Comment: Welcome to the Linux family! Linux Mint is a terrific distro, easy to use, puts fun back into using your computer, and gives your system new life you didn't know it had. :)

@@ -1,0 +1,32 @@
+Post Title: LTS Kernel
+Author: tonkatsu-leek-y
+Score: 13
+URL: https://www.reddit.com/r/archlinux/comments/1poqyoc/lts_kernel/
+Number of comments: 6
+Created UTC: 1765958324.0
+
+Post Content:
+Kernel 6.18 is currently in test to replace linux. Will it replace linux-lts at the same time or only when 6.19 becomes linux? 
+
+
+Top 3 comments:
+
+Comment 1:
+Author: ropid
+Score: 10
+Created UTC: 1765958837.0
+Comment: It's usually the newest "longterm" version you see when you visit https://kernel.org/.
+
+Comment 2:
+Author: mishrashutosh
+Score: 10
+Created UTC: 1765964579.0
+Comment: linux-lts will likely switch to 6.18 after the 10th patch release (6.18.10)
+
+Comment 3:
+Author: FryBoyter
+Score: 4
+Created UTC: 1765959144.0
+Comment: Since 6.18 is an LTS version, I believe the linux-lts package will also receive an update.
+
+Because if you look at https://gitlab.archlinux.org/archlinux/packaging/packages/linux-lts/-/commits/main, an update from kernel 6.6 to 6.12 was released in January 2025, even though version 6.6 will still be supported until December 2026 (https://www.kernel.org/category/releases.html).

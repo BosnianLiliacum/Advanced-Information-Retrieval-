@@ -1,0 +1,63 @@
+Post Title: What Linux habit are you consciously trying to improve this year?
+Author: Expensive-Rice-2052
+Score: 19
+URL: https://www.reddit.com/r/linuxquestions/comments/1q0w79d/what_linux_habit_are_you_consciously_trying_to/
+Number of comments: 37
+Created UTC: 1767243645.0
+
+Post Content:
+New year reflection question.
+
+Not about distros or tools - more about habits.
+
+Could be troubleshooting approach, documentation, scripting, security, or anything else.
+
+Curious:  what others are focusing on.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: pretendimcute
+Score: 8
+Created UTC: 1767247067.0
+Comment: My habit is pretending I can accomplish everything I want in the same point and click fashion as windows. The terminal is there and there is a point where there's no avoiding it if actually want to use your OS the way that you want. So my resolution is to actually learn the freaking thing properly.
+
+Comment 2:
+Author: kadoskracker
+Score: 6
+Created UTC: 1767243971.0
+Comment: Focusing on learning more about underlying configuration so I'm able to diagnose and repair minor issues. With the hopes of higher uptime and less need to reinstall. 
+
+And maintaining proper backups.
+
+Comment 3:
+Author: ziksy9
+Score: 6
+Created UTC: 1767244517.0
+Comment: Always have a 'last' as part of your login shell to see who logged in last..
+
+Always have a smtp set up to send you security alerts.
+
+Never go a week without an upgrade of your package s.
+
+I do this, you should too unless you already are.
+
+Comment 4:
+Author: AaronEbert
+Score: 6
+Created UTC: 1767245767.0
+Comment: Shell scripting and backups
+
+Comment 5:
+Author: doc_willis
+Score: 2
+Created UTC: 1767277436.0
+Comment: "Stop wasting so much time on reddit"  
+
+:) 
+
+Whats funny is its truely something I plan on doing.
+
+Currently unsubscribing from most subs i rarely visit, or that have any value for me any longer.  
+I dont NEED to be subscribed to every Distro specific sub, for all distros i ever used, but no longer use.

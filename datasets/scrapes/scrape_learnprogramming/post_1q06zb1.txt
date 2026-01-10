@@ -1,0 +1,56 @@
+Post Title: How did you all learn Python, SQL, and Power BI? Any recommendations?
+Author: Greedy-Run7923
+Score: 41
+URL: https://www.reddit.com/r/learnprogramming/comments/1q06zb1/how_did_you_all_learn_python_sql_and_power_bi_any/
+Number of comments: 13
+Created UTC: 1767165710.0
+
+Post Content:
+Hi everyone...
+I’m just starting out with Python, SQL, and Power BI and wanted to know how others here learned these skills.
+What resources actually helped you the most?
+Any YouTube channels, courses, or websites you’d recommend?
+Did you follow a structured roadmap or learn while doing projects?
+
+I’m looking for beginner-friendly but practical resources. Any suggestions would be really appreciated. Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Nightlow21
+Score: 8
+Created UTC: 1767166236.0
+Comment: Honestly I started here [https://developers.google.com/edu/python](https://developers.google.com/edu/python) and YouTube
+
+Comment 2:
+Author: Haunting-Dare-5746
+Score: 7
+Created UTC: 1767167065.0
+Comment: Learned SQL here https://www.youtube.com/live/ZA25WHO62ZA?si=I6b8neCDMk2SplPF
+
+Comment 3:
+Author: Luca-Fly
+Score: 5
+Created UTC: 1767172151.0
+Comment: After getting the basics of Python down, I wrote a small program, which uses the public Binance API to get some data with rest api and websockets. At first I just stored the data in a pandas dataframe (a super easy way to create tables in Python). Later I figured out how to put the data in a SQLite3 database. As I continued I learnt how to create plots and test trading strategies.
+
+I believe it’s a good starting point if you know a little python beforehand. The project will grow with you as you improve. When you have some basic code down you can start to implement databases, JIT compilation, asynchronous code, genetic algorithms and other concepts.
+
+Comment 4:
+Author: kapil9123
+Score: 2
+Created UTC: 1767182977.0
+Comment: What helped me most early on was not trying to learn everything at once.
+For Python → focus on basics + small scripts.
+For SQL → practice querying real tables (even SQLite is fine).
+Power BI makes much more sense after you’re comfortable with SQL.
+Mixing light projects with learning tends to stick better than following a long roadmap blindly.
+
+Comment 5:
+Author: DiscipleOfYeshua
+Score: 1
+Created UTC: 1767183607.0
+Comment: Read “think like a computer scientist”. Got some of it, but not much. Should have done more coding hands on. 
+
+Did cs50x, p, ai. Started thinking like a coder.

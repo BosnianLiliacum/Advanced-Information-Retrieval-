@@ -1,0 +1,63 @@
+Post Title: I don't want to go back to Windows, but I need a "Nuclear" distraction blocker (like Cold Turkey). Does it exist?
+Author: Twiky555
+Score: 12
+URL: https://www.reddit.com/r/linuxquestions/comments/1pvj7cv/i_dont_want_to_go_back_to_windows_but_i_need_a/
+Number of comments: 36
+Created UTC: 1766686525.0
+
+Post Content:
+Hi everyone,
+
+I switched to Ubuntu 6 months ago and I genuinely love it. It feels far better than Windows, and for the first time, I feel like I actually "belong" to the Linux world.
+
+However, I have a major productivity issue. On Windows, I used "Cold Turkey" to block distracting websites. It was perfect because it is extremely hard to bypass (system-level blocking, no easy "off" switch).
+
+On Ubuntu, I haven't found a true alternative.  
+**- I tried /etc/hosts:** It's too easy for me to just `sudo nano` and revert it when I have an urge.  
+**- I tried Pluckeye:** It seems to struggle with the default Ubuntu Firefox (likely due to Snap/sandboxing issues).   
+**- Extensions:** LeechBlock/StayFocusd are too easy to disable.
+
+I am seriously considering moving back to Windows just for Cold Turkey, which makes me really sad because I love my current setup.
+
+**My Question:** Is there a "hardcore," impossible-to-bypass tool for Ubuntu? I need something that can block domains system-wide (or lock down Firefox policies) and cannot be easily reversed during a focused session.
+
+I’m looking for a technical solution, ideally something that persists even if I try to cheat. I really want to stay on this OS.
+
+Thanks in advance.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: schwarzzu
+Score: 77
+Created UTC: 1766687231.0
+Comment: This seems like something a therapist can be more helpful with, on linux you are given control over everything, every obstacle you set yourself you can easily undo.
+
+Could maybe make a secondary user with very specific permissions to software access, no sudo access, let a partner or friend set the root password.
+
+Comment 2:
+Author: blankman2g
+Score: 19
+Created UTC: 1766691000.0
+Comment: This sounds like a personal problem for which you should treat the root cause.
+
+Comment 3:
+Author: WokeBriton
+Score: 16
+Created UTC: 1766690579.0
+Comment: Make a boot option which doesn't start your gui AND which disallows running of anything which starts one.
+
+Or get therapy to help you learn how to control distracting urges - and seek an assessment for ADHD and resources to help you learn to cope if diagnosed; if not diagnosed, learn how to control your impulses.
+
+Comment 4:
+Author: [deleted]
+Score: 11
+Created UTC: 1766691267.0
+Comment: [deleted]
+
+Comment 5:
+Author: MooseBoys
+Score: 9
+Created UTC: 1766688960.0
+Comment: Create a systemd service set that (1) watches /etc/hosts and reverts attempts to remove blocks, and (2) ensures at least N instances of the service are running at all times, launching/unmasking the service as necessary. It should be possible to make it so that even with sudo permissions, the service continually restarts itself despite your best attempts to kill it. I think the easiest way to bypass would be to create a new service that runs before the blocking service launches, and make sure this runs at boot, and then reboot the device.

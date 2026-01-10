@@ -1,0 +1,28 @@
+Post Title: The official unofficial aarch64 port
+Author: solskogen
+Score: 20
+URL: https://www.reddit.com/r/archlinux/comments/1pow8vn/the_official_unofficial_aarch64_port/
+Number of comments: 6
+Created UTC: 1765977370.0
+
+Post Content:
+[https://ports.archlinux.page/aarch64/](https://ports.archlinux.page/aarch64/)
+
+Please join us on either IRC (#archlinux-ports or on Matrix #ports:archlinux.org) if you want to help or test!
+
+
+Top 2 comments:
+
+Comment 1:
+Author: mymainunidsme
+Score: 19
+Created UTC: 1765978483.0
+Comment: This strikes me as sketchy. archlinux.page?
+
+[archlinuxarm.org](http://archlinuxarm.org) has been the ARM port for years.
+
+Comment 2:
+Author: spikerguy
+Score: 2
+Created UTC: 1766019524.0
+Comment: Why not just contribute to alarm?

@@ -1,0 +1,48 @@
+Post Title: What are professionals using?
+Author: Imunsureaf
+Score: 32
+URL: https://www.reddit.com/r/learnprogramming/comments/1pk5phr/what_are_professionals_using/
+Number of comments: 67
+Created UTC: 1765479386.0
+
+Post Content:
+I'm new to programming and currently deciding for what IDE to use. Just tried vs code and found out it's missing a lot of features Intellij has. As a beginner I like the diagrams in Intellij and also code navigation is much easier there (Data flow to/from here helps, find usages etc.).  
+So my question is are this features like UML diagrams, sequence diagrams, dependency matrices and all the code navigation features just a gimmick that I find useful for my small/medium codebases and will break when the codebase gets larger or are professionals also use them?  
+Thank you.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mredding
+Score: 41
+Created UTC: 1765483610.0
+Comment: &gt; What are professionals using?
+
+After 30 years, I don't care what the IDE is. I've used `notepad.exe` for a while, ed, vim, emacs, Visual Studio, Code Blocks, Eclipse, Jet Brains, Notepad++, Atom, Sublime, JOE, KEdit, KWrite, TextPad, xcode... It's all the same. Just get text into file however you can. There's no silver bullet. No religion. No editor war. The tool is a means to an end. It does not define you.
+
+Comment 2:
+Author: _Atomfinger_
+Score: 29
+Created UTC: 1765480013.0
+Comment: &gt; are professionals also use them?
+
+Professionals use them.
+
+Comment 3:
+Author: ColoRadBro69
+Score: 21
+Created UTC: 1765481246.0
+Comment: Visual Studio. 
+
+Comment 4:
+Author: AbrahelOne
+Score: 14
+Created UTC: 1765480731.0
+Comment: Try all the editors out there and stick with the one you feel the most comfortable with.
+
+Comment 5:
+Author: EarlyFig6856
+Score: 14
+Created UTC: 1765479623.0
+Comment: vim

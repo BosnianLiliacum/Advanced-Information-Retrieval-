@@ -1,0 +1,58 @@
+Post Title: Tell me if i am 5 yo whats wayland for
+Author: Karmoth_666
+Score: 61
+URL: https://www.reddit.com/r/linuxquestions/comments/1q5d7zv/tell_me_if_i_am_5_yo_whats_wayland_for/
+Number of comments: 70
+Created UTC: 1767688486.0
+
+Post Content:
+Like title says. I am new to linux and love it. I saw some videos discussing wayland an x11 or smth.   As i understand it has something to do with monitor displays? Or am i wrong. English is not my first language therefore i ask you guys. Thank you
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GreedyGerbil
+Score: 112
+Created UTC: 1767692240.0
+Comment: Imagine you are in your classroom and all the kids are "apps", they yell at the teacher what to draw and how it should look on the board. The board is the computer screen.
+
+The teacher is wayland.
+
+So one kid (app) yells: "I need a blue button exactly in these pixels but user is moving me around so the button must move with the mouse"
+
+The teacher (Wayland) does the calculations according to the user moving the window, measures the mousespeed and adapts their drawing.
+
+That's wayland. Before wayland in the 1980s another teacher named X worked in that class. X still works in other classes and will probably not retire anytime soon. Many people prefer X because they think that teacher understands them better when they yell what to draw.
+
+Comment 2:
+Author: mcvos
+Score: 39
+Created UTC: 1767691074.0
+Comment: From what I understand (I'm no expert), it's basically this:
+
+If you've got a big 4K screen with 140Hz refresh rate, and a smaller screen on the side with a 60Hz refresh rate, X will treat them as a single larger screen with a 60Hz refresh rate, and part of the screen is not shown. Wayland will treat them as two different screens with different refresh rates.
+
+If you only have a single screen, the difference is much less interesting. If you've got multiple identical screens that you want to treat like a single screen, X might be better for you.
+
+Comment 3:
+Author: JohnyMage
+Score: 25
+Created UTC: 1767689178.0
+Comment: It's graphical server, runs under your desktop environment and makes sure it has everything it needs to run.
+
+X server is the old one, very capable and still very much in use. Wayland is the new cool kid in the neighborhood and everyone is apparently going crazy about it. 
+
+In the end. If you have everything you need and your system and desktop environment is running smoothly, you can ignore this childish rumbling.
+
+Comment 4:
+Author: RonHarrods
+Score: 19
+Created UTC: 1767688885.0
+Comment: I'm no expert but I think it's the elves in the OS that deliver the mail between the applications and display.
+
+Comment 5:
+Author: eR2eiweo
+Score: 17
+Created UTC: 1767689421.0
+Comment: This is necessarily a simplification: A typical desktop computer has one set of input devices (keyboard, mouse) and one set of output devices (gpu, display). But it should be possible to run multiple apps at the same time. The purpose of a display server is to make that possible. It gets input data from the input devices, decides which app(s) should get that data, and then sends it to them. And it gets graphics data from the apps, combines that in some way to a single image (or one per display), and sends that to the output devices. Wayland is one example of a display server protocol, i.e. a protocol for the communication between apps and a display server. X11 is another such protocol.

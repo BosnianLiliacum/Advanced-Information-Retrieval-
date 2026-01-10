@@ -1,0 +1,56 @@
+Post Title: Do you believe personal projects is still the best way for entry-level candidates to get their foot in the door?
+Author: dExcellentb
+Score: 188
+URL: https://www.reddit.com/r/learnprogramming/comments/1psofhr/do_you_believe_personal_projects_is_still_the/
+Number of comments: 89
+Created UTC: 1766371613.0
+
+Post Content:
+A few years back, the best thing folks could do to break into tech was to demonstrate competence by building personal projects. Do you still believe this is the case in an AI era?
+
+Would love to hear your thoughts!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Slow-Bodybuilder-972
+Score: 112
+Created UTC: 1766372246.0
+Comment: Realistically, it might be the ONLY way.
+
+A CS degree is table stakes these days, it doesn't make you special, it makes you average.
+
+Work experience is better, internships are better, but this isn't available to everyone.
+
+I hire occasionally, an entry level candidate without some kind of code to show me would get rejected, no question.
+
+Comment 2:
+Author: yummyjackalmeat
+Score: 102
+Created UTC: 1766372324.0
+Comment: By "break into tech" I assume you mean you are working but not in tech and you want to transition into tech. 
+
+I feel like the best foot in the door is horizontal movement within companies, then it's good networking. Personal projects don't play a part until the foot is already in the door.
+
+Comment 3:
+Author: disposepriority
+Score: 22
+Created UTC: 1766371820.0
+Comment: Here's the thing, the *hardest* part is getting through HR. HR will never look at your github.
+
+Once you're speaking to a technical person, they also will most likely not have time to look at your github (I rarely do, though sometimes I do  on my own time out of curiosity) - BUT (!!!) they will read your CV and probably ask you about it. How you talk about the project is not affected by AI - so I would say they don't matter *less* than before, however I do think their importance was slightly exaggerated in previous years.
+
+EDIT: Sorry forgot to mention this is from a backend perspective, a FE portfolio is much easier to grok quickly for someone who knows their shit, so I assume it would be much more common for the person interviewing you having to taken a glance at the actual project.
+
+Comment 4:
+Author: kennlemy
+Score: 6
+Created UTC: 1766376644.0
+Comment: Yes
+
+Comment 5:
+Author: blablahblah
+Score: 5
+Created UTC: 1766372755.0
+Comment: The best way has always been to major in computer science and get internships while in school. Having personal projects is better than having nothing relevant on your resume. It's more likely to get you a job than showing up to the front desk and demanding to see the boss so you can give him a smile so confident and a handshake so firm he'll hire you on the spot. The hard part of software development- the part that having projects would show over getting a certification- is not the part that AI is good at, so that doesn't change anything here.

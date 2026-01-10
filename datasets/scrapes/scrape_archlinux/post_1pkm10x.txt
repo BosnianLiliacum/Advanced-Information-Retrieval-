@@ -1,0 +1,60 @@
+Post Title: Brand new to Linux on SteamOS. Need advice about switching to Arch.
+Author: devleo
+Score: 22
+URL: https://www.reddit.com/r/archlinux/comments/1pkm10x/brand_new_to_linux_on_steamos_need_advice_about/
+Number of comments: 39
+Created UTC: 1765524843.0
+
+Post Content:
+I'm a first-time Linux user, using SteamOS on my desktop PC. I normally use MacOS for work and Windows for gaming. However I now feel that Windows 11 has crossed a line. It's been a month now and I haven't had to go back. So now I'm convinced that Linux is my future. I love this version of Arch and I'm slowly picking up what I need to do. But I need advice on what to do next:
+
+I want more control. I want the ability to install Arch on my own, no matter how difficult that is, and then have full control over what is on my system. But I don't know how much of SteamOS is uniquely customized for Steam. Would it be easier to stay on SteamOS and then try to make the rest of the OS my own, or would it be easier to install Arch and then customize Steam to work as well as it does now? Would Arch have the same level of hardware support? Everything just seemed to work out of the box with SteamOS, even my controller! Also, while I'm here, I saw on [Learn Linux TV](https://www.youtube.com/watch?v=FxeriGuJKTM) that Arch has an installer now! That seems great. Is there any serious downside to using it?
+
+Thank you for your time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: C0rn3j
+Score: 46
+Created UTC: 1765525391.0
+Comment: &gt; Arch has an installer now! That seems great. Is there any serious downside to using it?
+
+Yes actually, you'll miss out on very important learning steps, do one install manually via the Installation Guide, then do whatever you want after that.
+
+Comment 2:
+Author: ArjixGamer
+Score: 13
+Created UTC: 1765531424.0
+Comment: Archinstall is great, don't listen to the others mandating you do a manual install first, you can learn arch on the fly, which will be much better than struggling to do a manual install and possibly not learning anything from the process.
+
+Take your time to learn, if you still wish to do a manual install after you've learnt, go for it.
+
+Comment 3:
+Author: AvarageAmongstPeers
+Score: 11
+Created UTC: 1765524979.0
+Comment: I'd have a look at cachyOS. It is an arch based distro, lightweight and easy to install. Same desktop environment as SteamOS, same package manager.
+
+Comment 4:
+Author: linhusp3
+Score: 4
+Created UTC: 1765532895.0
+Comment: There is no need to use arch if all you do is turn on the machine and open steam. Infact installing arch is going to cut a lot of your precious playtime because now you have to and will want to spend time on a bunch of other things instead.
+
+Comment 5:
+Author: YingziXue
+Score: 4
+Created UTC: 1765543516.0
+Comment: I highly recommend installing Arch on a virtual machine, another drive (pull your current OS drive), or a secondary PC first.  You can practice installing Arch all you want without affecting your primary PC.  Take notes.  Once you've done a manual install a few times it clicks.
+
+Long time gamer here.  I could be using Arch, but I don't.  I could be using one of the "gaming" distros like Bazzite, Nobara or CachyOS, but I don't.  I use Linux Mint because I want to spend as little time troubleshooting as possible.  More time for productivity and gaming.  That's not a knock on Arch, by the way.
+
+I use my PC for a lot of different things.  I've spent decades troubleshooting, from DOS to Windows to Linux, and I don't care to do it anymore.  I would rather be doing what I want to do, and not have to stop to fix something that another distribution simply does out of the box.
+
+Now don't get me wrong, I do love Arch.  I do use it on some of my other PC's, just not my main one.  That is my personal preference.
+
+Regarding the "gaming" distributions, yes they're optimized for gaming, but the overall experience isn't as polished (vs say a polished desktop distro like Linux Mint).  I have no issues with gaming, my performance is just fine.  It's all in what you want in an OS.  I have a friend who only uses his computer for gaming, so he installed Bazzite.  He seems to be happy with it.  I say choose what best fits your needs.  Definitely try Arch and other distributions in a test environment first, before deciding to overwrite your main OS/hard drive.  Use another drive.  Use a virtual machine.  Use another PC.
+
+Have fun!

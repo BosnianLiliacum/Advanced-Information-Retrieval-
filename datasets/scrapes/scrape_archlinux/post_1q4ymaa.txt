@@ -1,0 +1,50 @@
+Post Title: What bootloader to use if I’m only going to run arch
+Author: JoiBoie
+Score: 53
+URL: https://www.reddit.com/r/archlinux/comments/1q4ymaa/what_bootloader_to_use_if_im_only_going_to_run/
+Number of comments: 123
+Created UTC: 1767648348.0
+
+Post Content:
+I’ve been solely using Linux for a while now but I’d just use grub since that’s what my previous distro used (fedora). However I’ve heard that grub is kind of deprecated these days in favor of systemd-boot, should i just use that or one of the other options listed on the wiki like rEFInd or Limine? I do not plan to dual boot ever but i do plan on using btrfs snapshots of some kind (either snapper or timeshift, still researching this). Anyone got any opinions or tips?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: zerpa
+Score: 108
+Created UTC: 1767648637.0
+Comment: I matters very little. If you want minimalism, systemd-boot covers 98% of use cases on modern PCs, and can even dual boot.
+
+Comment 2:
+Author: Gozenka
+Score: 31
+Created UTC: 1767648831.0
+Comment: I would recommend *no* bootloader. [UKI](https://wiki.archlinux.org/title/Unified_kernel_image). Your entire ESP (EFI System Partition) can be just one file; BOOTX64.EFI, the initramfs+kernel that is directly booted, taking the bootloader step out of the way. It is just a one line setup in mkinitcpio to configure this.
+
+But if you want the ability to manage btrfs snapshots from the bootloader, then this is not a good option. However, I would think you do not need the snapshots often. And you can manage them from the archiso USB or somewhere else if you ever have issues or an unbootable system.
+
+In any case, I **personally** do not recommend btrfs anyway... Snapshots are **not backups**, they are just a convenient way to travel in time, and I do not understand why many people think they need it.
+
+Comment 3:
+Author: usr-anon
+Score: 20
+Created UTC: 1767649043.0
+Comment: on one of my laptop i went with UKI. skips the bootloader.
+
+[https://wiki.archlinux.org/title/Unified\_kernel\_image#Directly\_from\_UEFI](https://wiki.archlinux.org/title/Unified_kernel_image#Directly_from_UEFI)
+
+Comment 4:
+Author: King_Brad
+Score: 16
+Created UTC: 1767648946.0
+Comment: systemd-boot or uki
+
+Comment 5:
+Author: NeonVoidx
+Score: 15
+Created UTC: 1767648696.0
+Comment: if you're only ever going to use arch and no dual booting, systemd is fastest, but idk how good support is if any for snapshot listing.
+
+limine is really nice though and does

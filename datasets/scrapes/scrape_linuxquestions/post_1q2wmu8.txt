@@ -1,0 +1,50 @@
+Post Title: What are the best practices for securing a Linux server against unauthorized access?
+Author: MOUSETITTY
+Score: 13
+URL: https://www.reddit.com/r/linuxquestions/comments/1q2wmu8/what_are_the_best_practices_for_securing_a_linux/
+Number of comments: 15
+Created UTC: 1767452335.0
+
+Post Content:
+I'm currently setting up a Linux server and want to ensure it is secure from unauthorized access. I've read about various methods such as configuring firewalls, using SSH keys instead of password authentication, and setting up fail2ban to protect against brute-force attacks. However, I'm unsure about the most effective combination of practices to implement. What are some best practices for securing a Linux server? Are there specific tools or configurations you would recommend? Also, how important is it to regularly update the system and applications in terms of security? I'd appreciate insights from both beginners and experienced users on what has worked best for them.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Due-Memory2495
+Score: 7
+Created UTC: 1767453721.0
+Comment: You can also consider port knocking for ports not for public use, like ftp, ssh, vpn and so on as alternative f2b. Create unprivileged user and configure sudo, than disable ssh as root. The vulnerabilities may be located in incorrectly configured services that you deployed on the server. Avoid using weak and default passwords on your services. Update system regularly. Configure notification.
+
+Comment 2:
+Author: skweresp
+Score: 4
+Created UTC: 1767452789.0
+Comment: Firewall, crowdsec, change ssh port, disable root and password login. 
+
+Comment 3:
+Author: tuxsmouf
+Score: 3
+Created UTC: 1767460824.0
+Comment: You can use ossec or fail2ban as ips. 
+Receive e-mail notifications of succesfull login.
+If you have ipv4 and ipv6, dont forget to manage ipv6 by your fw. 
+
+Comment 4:
+Author: Linuxmonger
+Score: 2
+Created UTC: 1767452930.0
+Comment: Start with the ones you mentioned, pay attention to your logs and harden against what you see there.
+
+Personally, I update weekly, and almost all of my builds are scripted, so I can redeploy just about anything in a few minutes.
+
+All storage is NFS mapped and backed up off-site but close enough that I can drive there and back in less than an hour. I haven't needed to do that yet.
+
+Comment 5:
+Author: Hellas-z3r0_X
+Score: 2
+Created UTC: 1767460391.0
+Comment: Physical or network? WAN or LAN only? Application or system?
+
+Some of the network and system tweaks have been mentioned, but advice can vary wildly depending on which attack vectors you are exposed to.

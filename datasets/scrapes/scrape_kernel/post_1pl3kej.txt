@@ -1,0 +1,44 @@
+Post Title: Finally ! i made my own OS from scratch ^_^
+Author: G_Detective
+Score: 39
+URL: https://www.reddit.com/r/kernel/comments/1pl3kej/finally_i_made_my_own_os_from_scratch/
+Number of comments: 8
+Created UTC: 1765574545.0
+
+Post Content:
+**Check github :** [**https://github.com/SonicExE404/FastOS**](https://github.com/SonicExE404/FastOS)
+
+https://reddit.com/link/1pl3kej/video/9gx92ii3bu6g1/player
+
+
+Top 5 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 8
+Created UTC: 1765575176.0
+Comment: Just a thing this subreddit is about the Linux kernel you're probably looking for r/kerneldevelopment or r/osdev
+
+Comment 2:
+Author: jjjare
+Score: 3
+Created UTC: 1765583060.0
+Comment: An yes, my fave, a copy and paste from osdev wiki!
+
+Comment 3:
+Author: Skollwarynz
+Score: 1
+Created UTC: 1765672525.0
+Comment: Where and did you study to create this project?
+
+Comment 4:
+Author: Intelligent_Bee_9565
+Score: 1
+Created UTC: 1765891472.0
+Comment: This would have been very impressive back in the day without OSDev and AI. Today though it isn't in the slightest.
+
+Comment 5:
+Author: lantz83
+Score: 1
+Created UTC: 1765617705.0
+Comment: Doesn't count if you don't make your own boot loader dude

@@ -1,0 +1,100 @@
+Post Title: Is it secure to use this kernel ?
+Author: MakeTopSite
+Score: 0
+URL: https://www.reddit.com/r/kernel/comments/1plj6tj/is_it_secure_to_use_this_kernel/
+Number of comments: 0
+Created UTC: 1765625036.0
+
+Post Content:
+I get some errors with latest kernel-longterm (6.12.61-200.fc42.x86\_64 #1 SMP PREEMPT\_DYNAMIC Sun Dec 7 11:59:15 UTC 2025):
+
+`journalctl -r --priority=err`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e75e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e76e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e76e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e77c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e77c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e76e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e76e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e75e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e75e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e774`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e77c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e77c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e75c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e76e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e766`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2013e77c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2014abdc`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c97e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c93c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x20034ece`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c9a6`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x201453a2`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2002d98e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c9fe`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c93c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2002db4c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2014544e`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x20140b32`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x20030efe`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2003c98c`  
+`Dec 09 13:31:18 maketopsite kernel: rtw89_8852ce 0000:62:00.0: [ERR]fw PC = 0x2014abc6`
+
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU23: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU22: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU21: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU20: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU19: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU18: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU17: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU16: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU15: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU14: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU13: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU12: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU11: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU10: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU9: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU8: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU7: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU6: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU5: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU4: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU3: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU2: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: CPU1: update failed for patch_level=0x0b204037`  
+`Dec 09 08:18:59 maketopsite kernel: microcode: No sha256 digest for patch ID: 0xb204037 found`
+
+  
+I’ve been using 6.12 kernel since 6.12.49-200.fc41 but problem appears in 6.12.61-200 only.
+
+
+Top 0 comments:

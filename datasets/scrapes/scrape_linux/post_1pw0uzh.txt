@@ -1,0 +1,42 @@
+Post Title: Linus Torvalds on recent Vizio vs. SFC
+Author: ilep
+Score: 266
+URL: https://social.kernel.org/notice/B1aR6QFuzksLVSyBZQ
+Number of comments: 81
+Created UTC: 1766743443.0
+
+Post Content:
+tl;dr; Vizio has corrected their behaviour, while SFC has not. Direct quote: "The only party that looks competent here is the judge".
+
+
+Top 4 comments:
+
+Comment 1:
+Author: FlukyS
+Score: 144
+Created UTC: 1766743979.0
+Comment: The TDLR kind of misses the point of his post. A more clear TLDR:
+
+Vizio were in violation of the license by shipping a custom kernel on their devices and the judge ordered the release of the code but disagreed (and Linus too) as to the argument that other parts of the system also are required to be open sourced.
+
+Comment 2:
+Author: Rocketman7
+Score: 53
+Created UTC: 1766747042.0
+Comment: SFC is pushing for hardware manufacturers to allow users to install their own software, which imho is a great pursuit. However, gplv2 compliance does not require that, and using it in legal battles is a waste of resources. Not sure why Linus is so ticked off by SFC’s tactics tho. Is he being summoned to testify on these lawsuits? (that would explain it)
+
+Comment 3:
+Author: TRKlausss
+Score: 30
+Created UTC: 1766749056.0
+Comment: Well, this exact same thing Linus said is the reason why GPLv3 exists, and why he explicitly doesn’t want to release the code as GPLv3.
+
+SFC hasn’t apparently understood the difference between the two…
+
+Comment 4:
+Author: torsten_dev
+Score: 4
+Created UTC: 1766746669.0
+Comment: They do have to include the install scripts as per the license.
+
+I don't fault the SFC for arguing that that should include the keys that lock the hardware, it was worth a shot.

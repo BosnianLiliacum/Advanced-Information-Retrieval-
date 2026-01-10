@@ -1,0 +1,63 @@
+Post Title: Free APIs to use in your next project!
+Author: bullmeza
+Score: 70
+URL: https://www.reddit.com/r/learnprogramming/comments/1pog6z2/free_apis_to_use_in_your_next_project/
+Number of comments: 9
+Created UTC: 1765925411.0
+
+Post Content:
+I read this blog the other day: [https://manthanguptaa.in/posts/proof\_of\_work](https://manthanguptaa.in/posts/proof_of_work) and it inspired me to make this post.
+
+The first ever internship I got was when an engineer reached out to me after seeing my project on Reddit. So here are some free APIs that you can use to build your next project that actually stands out!
+
+* OpenAI API (First 2.5M tokens per day are free, [tutorial here](https://www.reddit.com/r/n8n/comments/1oa4kbp/openais_hidden_trick_get_up_to_10m_free_tokens/))
+* Web Speech API
+* SpaceX API
+* NASA APIs
+* Google Maps API (This is what got my my first job)
+* Wikipedia API
+* US Census API
+* [Data.gov](http://Data.gov) APIs
+* Spotify Web API
+* YouTube Data API
+* Discord API
+* FDA Open Data
+* Crossref API
+
+  
+Comment some other cool free APIs!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Adstar123
+Score: 24
+Created UTC: 1765927516.0
+Comment: There is an existing repo of free apis:  
+  
+[https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis)
+
+Comment 2:
+Author: ValentineBlacker
+Score: 3
+Created UTC: 1765939079.0
+Comment: Public transit generally has free data feeds, APIs, or both.
+
+Comment 3:
+Author: jdoncadm
+Score: 1
+Created UTC: 1766095594.0
+Comment: Binance and guess other exchange/brokers have free api. Plenty to have fun with if you want to build a typical finance app.
+
+Comment 4:
+Author: Intelligent-Stop-924
+Score: 1
+Created UTC: 1767428098.0
+Comment: what about cerebras API?
+
+Comment 5:
+Author: Intelligent-Stop-924
+Score: 1
+Created UTC: 1767428227.0
+Comment: Btw what was your first job?

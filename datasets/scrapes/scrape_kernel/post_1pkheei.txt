@@ -1,0 +1,42 @@
+Post Title: Meta replaces SELinux with eBPF
+Author: xmull1gan
+Score: 103
+URL: https://i.redd.it/1yy6vmpukj6g1.png
+Number of comments: 10
+Created UTC: 1765509670.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Rich-Engineer2670
+Score: 17
+Created UTC: 1765512785.0
+Comment: This is interesting -- while most users will never see it (most users don't even touch SELinux or Apt Armor), once EBPF is a full class citizen, there are lots of special things we can do.   With proper toolsets, I can write very interesting "policies" such as "This user is allowed to use these applications, but these features are blocked".
+
+Comment 2:
+Author: roflfalafel
+Score: 15
+Created UTC: 1765522238.0
+Comment: I’m curious about “slow”, and if AppArmor has the same performance issues. Ive seen folks complain a lot about SELinux over the years, but slow is not a theme I’ve heard. I know Red Hat has put their heart and soul into SELinux (even hiring Dan Walsh), since it also implements security controls on Openshift.
+
+Comment 3:
+Author: LeChatP
+Score: 9
+Created UTC: 1765522690.0
+Comment: lsm-bpf is kinda cool but honestly it’s super limited compared to a real LSM. selinux gets a rep for being slow, but that’s mostly when you’ve got massive policies with thousands of rules. that’s just the cost of doing full-system MAC with a huge rulebase.
+
+bpf-lsm on the other hand has its own issues. biggest one for me is that it depends on userland to load the programs, which is a pretty big security footgun by design. yeah you can lock things down, disable certain caps, whatever… but it’s never gonna be the same trust model as a built-in LSM loaded directly in the kernel, by the kernel.
+
+and because of the instruction limits + verifier constraints, you can only do pretty tiny policies anyway. so realistically the only cases where it shines are stuff like: quick prototyping, small targeted checks, temporary enforcement for a specific service, etc. not system-wide policy. you’re not gonna replace something like selinux with it unless your "policy" is tiny.
+
+and honestly, if you ever reach the point where your hundreds of bpf-lsm setup is big enough to be a system-wide policy, you’d get way better perf (and security guarantees) just writing a proper LSM and compiling it in. bpf is great for experiments and adding a security layer on top of the main MAC engine, not for being the main MAC engine.
+
+Comment 4:
+Author: edthesmokebeard
+Score: 1
+Created UTC: 1765633529.0
+Comment: Everywhere I've been has disabled SELinux, not because its slow, but because it's a pain in the ass.

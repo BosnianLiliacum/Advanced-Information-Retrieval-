@@ -1,0 +1,45 @@
+Post Title: kernel merge acquired. adult linux contributor unlocked.
+Author: HelloBloop
+Score: 2871
+URL: https://i.redd.it/tdgrnt159w9g1.png
+Number of comments: 96
+Created UTC: 1766905498.0
+
+Post Content:
+just got my first pull request merged into mainline linux (v6.19 cycle). i will be riding this high for at least a week. i didn't contribute much of meaningful value, but it still feels good! i feel like a real linux girl now.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: unlikely-contender
+Score: 399
+Created UTC: 1766905762.0
+Comment: Good that there's finally an adult contributor
+
+Comment 2:
+Author: Owndampu
+Score: 307
+Created UTC: 1766909576.0
+Comment: Congrats! I got my first one in pretty much exactly a year ago now! Keep it up!
+
+
+My first couple of commits weren't very interesting either, but I'm upstreaming my first driver now!
+
+Comment 3:
+Author: hackiv
+Score: 88
+Created UTC: 1766906057.0
+Comment: What's it do?
+
+Comment 4:
+Author: Smasher3825
+Score: 53
+Created UTC: 1766906020.0
+Comment: This is your peak, it all goes downhill from here
+
+Comment 5:
+Author: ultrafop
+Score: 42
+Created UTC: 1766906631.0
+Comment: That’s really cool! Congrats!

@@ -1,0 +1,46 @@
+Post Title: tried “code daily” and realized i was doing it wrong
+Author: Ok-Message5348
+Score: 34
+URL: https://www.reddit.com/r/learnprogramming/comments/1psc760/tried_code_daily_and_realized_i_was_doing_it_wrong/
+Number of comments: 29
+Created UTC: 1766338802.0
+
+Post Content:
+i thought coding daily meant grinding leetcode till my brain melted, turns out i was just stressing myself out. had a short session with a mentor i found on wiingy and he literally told me to spend 20 mins breaking my own code and fixing it. felt stupid at first but it made way more sense than endless tutorials. what does “daily practice” look like for you guys
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AlarmedLevel4582
+Score: 17
+Created UTC: 1766356458.0
+Comment: Can you tell me what breaking ur code means
+
+Comment 2:
+Author: [deleted]
+Score: 12
+Created UTC: 1766357072.0
+Comment: I don't have a strict routine (other than doing something daily), I seem to follow a cycle:
+
+Work on side project until I hit a brick wall, then do some tutorials and watch youtube videos regarding that brick wall, do some even smaller projects (really basic stuff), then return to side project and sooner or later hit another brick wall. 
+
+I am making progress on my side project and learning stuff though, which for me is what counts.
+
+Comment 3:
+Author: _BruhJr_
+Score: 5
+Created UTC: 1766339351.0
+Comment: All part of the process
+
+Comment 4:
+Author: DrShocker
+Score: 3
+Created UTC: 1766349680.0
+Comment: Try to spend some time on projects. it's more interfering than leetcode and is more likely to lead to you having interesting answers to questions in interviews than pure grinding out leetcode will.
+
+Comment 5:
+Author: Utopicnightmare24
+Score: 2
+Created UTC: 1766371463.0
+Comment: I've literally been learning on Sololearn (like duolingo but for code) and I do at least 1 lesson task a day to keep my streak up but if I dont understand the lesson I just repeat it until I get what's going on.

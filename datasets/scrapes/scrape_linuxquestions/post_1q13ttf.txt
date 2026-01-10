@@ -1,0 +1,46 @@
+Post Title: I’m looking at ripping my DVDs and Blu Rays- what’s an external Blu Ray drive that works under Linux?
+Author: thunderborg
+Score: 30
+URL: https://www.reddit.com/r/linuxquestions/comments/1q13ttf/im_looking_at_ripping_my_dvds_and_blu_rays_whats/
+Number of comments: 22
+Created UTC: 1767272892.0
+
+Post Content:
+He folks, I’m embarking on a journey to rip my dvds and Blu rays and was looking for advice for a Blu Ray drive that works under Linux. I’m rocking Fedora Workstation under gnome and was looking for advice on the hardware. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: divestoclimb
+Score: 15
+Created UTC: 1767277273.0
+Comment: If you want to do 4k discs you need specific drives, which last I checked are not all internal but you can get a USB enclosure for the ones that are. https://forum.makemkv.com/forum/viewtopic.php?f=16&amp;t=19634
+
+Comment 2:
+Author: PhotoJim99
+Score: 13
+Created UTC: 1767273379.0
+Comment: Pretty much anything will work - Linux won’t be your limiting factor.
+
+Comment 3:
+Author: TomDuhamel
+Score: 10
+Created UTC: 1767274894.0
+Comment: Let us know if you ever find one that doesn't
+
+Comment 4:
+Author: doomcomes
+Score: 7
+Created UTC: 1767281797.0
+Comment: At some point you should think if it'd be easier to just download copies. I ripped like a thousand movies over a couple weeks and ended up just torrenting a lot because it was faster.
+
+That aside and like, it's something like 10 to get an external enclosure and probably the same for a drive someone pulled from a laptop. I've never seen a Linux distro that didn't read my dvd drive hooked through usb.
+
+Comment 5:
+Author: japzone
+Score: 5
+Created UTC: 1767283492.0
+Comment: Pretty much anything that works with MakeMKV will work on Linux. The challenge is sometimes getting MakeMKV to work. I recommend going to the MakeMKV forums and checking the guides people make there for setting up MakeMKV on your Linux Distro. Also helps if you purchase a key, as then you don't have to worry about Beta key expiry and trying to get the latest version running all the time. 
+
+For 4K ripping though, if you can find flashed Panasonics, they are the most reliable. There's a seller, Billycar11, who sells pre flashed Panasonic models in the US. Not the cheapest option, but the most reliable way to get into ripping 4K. You can also look into flashing your own drives too, but you'll need to do the research for it on the forums.

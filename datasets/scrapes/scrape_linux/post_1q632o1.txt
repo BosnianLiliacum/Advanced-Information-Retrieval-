@@ -1,0 +1,55 @@
+Post Title: Breaking: Google will now only release Android source code twice a year
+Author: SpecialistPlan9641
+Score: 1516
+URL: https://www.androidauthority.com/aosp-source-code-schedule-3630018/
+Number of comments: 280
+Created UTC: 1767752872.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: elatllat
+Score: 690
+Created UTC: 1767753580.0
+Comment: Down from 4 updates a year to 2 updates a year
+(Security is still 12 times a year).
+
+Comment 2:
+Author: EpicQuackering437
+Score: 434
+Created UTC: 1767753756.0
+Comment: Android keeps trying to become a worse version of IOS which is also trying to become a worse version of itself.
+
+They're really racing to the bottom here.
+
+Comment 3:
+Author: CaptainStack
+Score: 381
+Created UTC: 1767753178.0
+Comment: Will non-Google Android ROMs still be viable? Will they be able to receive security updates?
+
+Big picture, this is why a fully non-Google controlled mobile operating system is so needed. Maybe SailfishOS or PureOS, or maybe there could be a hard fork of AOSP with FOSS replacements for the proprietary components.
+
+Comment 4:
+Author: pligyploganu
+Score: 228
+Created UTC: 1767754033.0
+Comment: Valve is making linux viable, and with their Steam Decks and Steam machines they are killing it, and keeping the hardware fully open with full schematics and everything online.
+
+Steam Phone when? Because Valve is pretty much the only corporation I trust these days.
+
+Comment 5:
+Author: IngwiePhoenix
+Score: 161
+Created UTC: 1767761051.0
+Comment: Ohhh the peeps at Graphene will not like this. :/ Reminds me how Apple still releases XNU sources.
+
+But, this significantly slows down ROM development. Like, by a good amount. Mostly in the sense of feature parity - because with only two instead of four releases, there are two fewer points-in-time where the behind-the-doors code gets shared with the public.
+
+Not a fan of this. At all. :/
+
+But calling for an "Alternative" is also not exactly an option due to adoption and support. There is one, HarmonyOS, but... yeah... Huawei can't even properly distribute their own Ascend NPU drivers properly. x.x And those are for the slopindustry...! So don't bet on that horse x)

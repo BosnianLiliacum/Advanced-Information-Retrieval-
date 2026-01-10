@@ -1,0 +1,50 @@
+Post Title: Is there a linux alternative for acrobat reader?
+Author: SanSenju
+Score: 32
+URL: https://www.reddit.com/r/linuxquestions/comments/1pw03kx/is_there_a_linux_alternative_for_acrobat_reader/
+Number of comments: 80
+Created UTC: 1766740364.0
+
+Post Content:
+Preferably one with an advanced text search option that provides me a list of all matches instead of having through them one at a time.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 59
+Created UTC: 1766741961.0
+Comment: You might take a look at Evince (default Gnome PDF reader) or Okular (default KDE Plasma PDF reader).  Both have become "standards".
+
+Lots of other options are available.  You might find [Best PDF Reader for Linux](https://linuxconfig.org/best-pdf-reader-for-linux) a useful resource.
+
+My best and good luck.
+
+Comment 2:
+Author: yungwiz
+Score: 7
+Created UTC: 1766741009.0
+Comment: I'm not really into PDF world, I Just use at base level to study. I use on arch (and on win on my other PC) Okular. Has some nice features, give it a try.
+
+Comment 3:
+Author: thesamenightmares
+Score: 6
+Created UTC: 1766740645.0
+Comment: There are a million PDF readers. Search your package manager. I'm partial to evince.
+
+Comment 4:
+Author: NoEconomist8788
+Score: 5
+Created UTC: 1766740766.0
+Comment: You must distinguish between PDFs created from text and those simply containing images. In the second case, searching is impossible anyway.
+
+Comment 5:
+Author: u-give-luv-badname
+Score: 4
+Created UTC: 1766751602.0
+Comment: I know exactly the feature you are looking for, I used it a lot.
+
+I was going to chime in here with "Just use Adobe Acrobat for Linux" which I always found stable and capable. But I googled first and found out that Acrobat no longer supports that. That is a bummer since it was so good.
+
+Maybe someone knows of a site that still has the download. (it was not installed as a package, but rather it was a install script)

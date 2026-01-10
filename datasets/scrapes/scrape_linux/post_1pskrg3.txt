@@ -1,0 +1,44 @@
+Post Title: What are your Linux hot takes?
+Author: AdventurousFly4909
+Score: 227
+URL: https://www.reddit.com/r/linux/comments/1pskrg3/what_are_your_linux_hot_takes/
+Number of comments: 780
+Created UTC: 1766360986.0
+
+Post Content:
+We all have some takes that the rest of the Linux community would look down on and in my case also Unix people. I am kind of curious what the hot takes are and of course sort for controversial.
+
+I'll start: syscalls are far better than using the filesystem and the functionality that is now only in the fs should be made accessible through syscalls.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: alchemi80
+Score: 504
+Created UTC: 1766363267.0
+Comment: People who distro hop every few weeks would be better off just picking a distro and learning it well.
+
+Comment 2:
+Author: SirGlass
+Score: 433
+Created UTC: 1766361828.0
+Comment: It's not a Linux issue if you can't run a program made for Windows
+
+Comment 3:
+Author: ImNotThatPokable
+Score: 394
+Created UTC: 1766361478.0
+Comment: systemd is better than sysv init and using random shell scripts for init was unsustainable.
+
+Comment 4:
+Author: Confusatronic
+Score: 222
+Created UTC: 1766364054.0
+Comment: That Linux Mint is so often recommended as a newcomer's distro might harm Linux adoption because people see the Cinnamon DE and it looks like an amateurish, outdated toy floating in a dark void.
+
+Comment 5:
+Author: RhubarbSpecialist458
+Score: 191
+Created UTC: 1766361605.0
+Comment: There's a lot of malware out there but we suck at actually finding it.

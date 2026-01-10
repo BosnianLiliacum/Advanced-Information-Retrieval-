@@ -1,0 +1,114 @@
+Post Title: Read the docs, yes, but a little kindness goes a long way.
+Author: Fit-Roof3993
+Score: 474
+URL: https://www.reddit.com/r/linux/comments/1pp221p/read_the_docs_yes_but_a_little_kindness_goes_a/
+Number of comments: 177
+Created UTC: 1765991488.0
+
+Post Content:
+I want to preface this by saying that this isn’t a “Linux is too hard” post. I generally don’t like engaging in this type of discussion, but I’ve seen this issue too often, and I think it needs to be addressed.
+
+I read documentation. I research issues. I watch tutorials when needed. Because of that, I personally haven’t run into this problem much, but I’ve repeatedly seen it happen to *other* people who are trying to switch to Linux for the first time.
+
+When new users ask for help on forums, subreddits, or distro-specific communities, a very common response is simply:  
+“Go read the documentation.”
+
+To be clear: pointing someone to the docs is not wrong. Documentation is important, and learning how to use it is a valuable skill on Linux. The issue isn’t *that* people say this; it’s *how* it’s often said and what comes with it.
+
+Very often:
+
+* The person responding clearly knows the answer because they know it’s in the docs
+* They refuse to give even a brief explanation
+* The tone becomes condescending when the user didn’t already know where to look
+
+Follow-up replies often turn into things like:
+
+* “If you did a bit more research, you’d figure it out”
+* “If you didn’t bother to read the documentation, you don’t deserve an answer”
+
+At that point, it stops being about teaching or encouraging learning and starts feeling like gatekeeping knowledge.
+
+Part of the reason for this is that Linux culture still carries a “prove yourself” mindset.  
+A lot of this comes from Linux’s roots:
+
+* UNIX culture
+* Academic environments
+* Early hobbyists *had* to struggle because there was no alternative
+
+For many people, that struggle became a **rite of passage**, and unconsciously, they expect newcomers to “pay the same price.” That’s where the gatekeeping comes from.
+
+The problem is:
+
+&gt;What was once necessity has turned into ideology.
+
+New users aren’t wrong for seeking\* help. The ecosystem has changed, and communities that cling to this old “prove yourself” mindset risk driving new users away.
+
+This type of behaviour negatively impacts Linux adoption. If we want better software support, better hardware compatibility, and better game support, we *need* new users to stick around. Being dismissive or condescending doesn’t push people to learn; it pushes them away.
+
+There’s also an irony here: many of the same people complain about users turning to AI tools for help with Linux issues. But if the community response is often unwelcoming or dismissive, can we really be surprised? AI explains things without judgment, sarcasm, or attitude.
+
+Documentation and community support don’t have to be mutually exclusive. A response like:
+
+&gt;“This is covered in the docs under X, but the short answer is Y. If you want more detail, check section Z.”
+
+Still encourages self-learning without shutting people out.
+
+This isn’t an attack on Linux or its documentation. It’s a call for helpful community behaviour.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Mediocre-Struggle641
+Score: 232
+Created UTC: 1765992434.0
+Comment: As a former member of the old, old forums, I have this advice...
+
+In order to join a community some people ask very simple questions. You might have heard them before, and that's good because it means it is easy to answer. 
+
+You are hardly going to wear your keyboard out. 
+
+HOWEVER. 
+
+There is a real tendency lately to treat Reddit like Google. Just asking questions and not participating in the community. Not up voting the people that answer your question. Not saying thank you. 
+
+Over on the photography forums they are spammed with daily posts of "what's wrong with my pictures". 
+
+It is *always* under exposure. And they'd know that if they had followed the sub for 24 hours. But instead they go full main character in it and treat the sub as their own butler. 
+
+So that's the thing. Community. Welcome people in, even with the easy questions, but if they take liberites, tell them to jog on.
+
+Comment 2:
+Author: WoodenPresence1917
+Score: 69
+Created UTC: 1765992287.0
+Comment: I have seen both sides of this.
+
+
+I maintain open source software and I often get bug reports that are literally addressed first thing in the documentation, or explained in the error message being reported.
+
+
+Conversely, I have requested help on issues, having done my best to research the causes and offering help in improving documentation/making a fix and been absolutely shit on by experienced people and told to rtfm.
+
+
+Basically, there are entitled lazy users, and annoying impatient experienced users who seem to value a sense of superiority over actually improving things. Neither is good, and I think they do a bit to perpetuate each other
+
+Comment 3:
+Author: mrtruthiness
+Score: 59
+Created UTC: 1765992035.0
+Comment: &gt; “Go read the documentation.”
+
+TBH IMO it's the best advice as long as you say **which documentation**.  Specifically, a new person might not understand that they need to read the documentation for LUKS to understand encryption issues.  And a URL is never amiss.  Or, for example, if they are having a problem mounting a disk image instead of a partition image, advice to read the kpartx documentation would be perfect.
+
+Comment 4:
+Author: SoftwareArchitect101
+Score: 45
+Created UTC: 1765992549.0
+Comment: The thing is: reading man pages isn't that easy. They are verbose ​​​​, and overwhelming for beginners ​
+
+Comment 5:
+Author: Accurate_Hornet
+Score: 22
+Created UTC: 1765991962.0
+Comment: Totally valid, but the average redditor is too busy feeling superior to realise we all started from scratch at some point

@@ -1,0 +1,73 @@
+Post Title: AUR maintainer analysis shows +100% growth in 6 years and proves community-driven packaging actually scales
+Author: MeLThRoX
+Score: 126
+URL: https://gg-solutions.hashnode.dev/linux-the-silent-revolution
+Number of comments: 32
+Created UTC: 1767525718.0
+
+Post Content:
+Lately I've been feeling that Arch Linux is becoming more mainstream. More people are switching to Linux as their main OS and considering Arch as a viable option.
+
+This is a big win for the open-source Linux community, and an even bigger win for the Arch community.
+
+I still remember when Arch was considered "experts only." There were no installation scripts yet - if you wanted to use it, you had to manually install everything. But the Wiki was incredible and helped me understand Linux fundamentals. For me, it was the perfect entry point into Linux.
+
+A lot has changed since then. This feeling of Arch trending motivated me to analyze historical statistics to find out how much the community has actually grown.
+
+**The results were surprising:**
+
+I scraped 6 years of maintainer data from Repology.org (Q4 2019 - Q4 2025):
+
+* **AUR: +100%** (8,446 → 16,903 maintainers)
+* Nix: +264% (1,205 → 4,382 maintainers)
+* Alpine: +84% (375 → 691 maintainers)
+* Debian: +2.3% (4,111 → 4,233 maintainers)
+
+Notice the pattern: community-driven systems (AUR, Nix) are exploding, while traditional centralized ones (Debian) barely grow.
+
+**What makes the AUR special:**
+
+The AUR doubled its maintainers while proving that **community-driven, decentralized package management works at scale**. No corporate oversight, no formal governance - just people maintaining packages they need.
+
+It's what blockchain people promise but never deliver: truly decentralized, community-governed, and it actually works.
+
+The data suggests we're witnessing a paradigm shift in Linux: specialized, community-driven tools are exploding while traditional centralized systems stagnate.
+
+I found this so interesting that I wrote my first blog post about it with all the charts and data: [My Blog](https://gg-solutions.hashnode.dev/linux-the-silent-revolution)
+
+When did you start using Arch? What was your first install experience like?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: loozerr
+Score: 72
+Created UTC: 1767528244.0
+Comment: Also perfect for supply chain attacks.
+
+Comment 2:
+Author: El_McNuggeto
+Score: 31
+Created UTC: 1767526352.0
+Comment: I'd be curious what the number would be if we removed the inactive and malicious maintainers
+
+Comment 3:
+Author: NocturneSapphire
+Score: 16
+Created UTC: 1767552779.0
+Comment: &gt; Notice the pattern: community-driven systems (AUR, Nix) are exploding, while traditional centralized ones (Debian) barely grow.
+
+I don't think that's the right conclusion at all. Debian isn't less community driven than Arch is. They're both fully community driven. The difference is that Debian is much more mature. It didn't see much growth in maintainership in the last 6 years because it already had as many maintainers as it needed in 2019. Arch did not.
+
+Comment 4:
+Author: backsideup
+Score: 12
+Created UTC: 1767529688.0
+Comment: The part that didn't scale at all over the years is the number of PMs that handle aur-requests. The ~dozen that is active at any given time is overworked and at risk of burnout.
+
+Comment 5:
+Author: ABotelho23
+Score: 11
+Created UTC: 1767541097.0
+Comment: There's also been an increase in malicious maintainership. It's obvious that bad actors see it as a viable target.

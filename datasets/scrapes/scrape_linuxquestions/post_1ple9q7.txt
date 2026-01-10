@@ -1,0 +1,64 @@
+Post Title: Can Linux "Save" an Admin Level Hacked Windows Laptop?
+Author: Thin_Book2584
+Score: 22
+URL: https://www.reddit.com/r/linuxquestions/comments/1ple9q7/can_linux_save_an_admin_level_hacked_windows/
+Number of comments: 40
+Created UTC: 1765605833.0
+
+Post Content:
+A few years ago, a hacker called a friend of mine (who had dementia) and convinced him to grant full admin access to his laptop. I was concerned that the hacker could have installed hardware level persistent malware. I made my friend buy a new computer, and the old one got shoved in a closet.
+
+His wife just gave me that laptop to repurpose for my church. I would convert it to Linux, but I am concerned that doing so might not render the machine safe. I have no evidence of any infection, but I do have a very low risk tolerance when it comes to computer security.
+
+So: Is there any way to be sure that this machine will be safe if I converted to Linux?
+
+EDIT: WOW! I just got out of bed and there are a ton of excellent suggestions and information here. I'm going to spend a bit of time working on the computer and then I'll come back with an update. THANK YOU VERY MUCH.
+
+EDIT 2: Thanks everyone. I managed to get into system setup and it turns out to be a Toshiba Satellite from 2014, running Windows 8.1 with 2 GB of memory. Comments below that about any threats being too old at this point are spot on. Toshiba did not offer a firmware update, which is understandable 11 years down the road. I'll take the suggestions below, wipe the disc, and then install a new lightweight operating system. The only thing I really needed it to do is to boot up Sunday morning and run a very basic PowerPoint deck, so I'll have a bit of fun poking around lightweight distributions. Fun times!
+
+ Thank you all very much for the help and insights.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: HablarYEscuchar
+Score: 45
+Created UTC: 1765607280.0
+Comment: Depending on your level of paranoia, besides formatting and reinstalling, you can try updating the BIOS/UEFI firmware from the manufacturer's website.
+
+Comment 2:
+Author: Sinaaaa
+Score: 25
+Created UTC: 1765609643.0
+Comment: &gt;So: Is there any way to be sure that this machine will be safe if I converted to Linux?
+
+Complete certainty does not exist in this genre. Even if you overwrite the bios memory chip with an external hardware flasher, there could be fun surprises elsewhere. 
+
+However realistically speaking if you wipe the disk &amp; install Linux, then you are good 99.9999%.
+
+Comment 3:
+Author: Strict_Pie_9834
+Score: 20
+Created UTC: 1765612096.0
+Comment: This is likely just a typical phone scam.
+
+Nuking the OS is usually more than enough. You can't effectively remove firmware level malware, even by reinstalling firmware but this kind of infection is very unlikely.
+
+Comment 4:
+Author: Meliok
+Score: 16
+Created UTC: 1765628604.0
+Comment: Holy water probably clean zombie processes …. /s
+
+ ;)
+
+Comment 5:
+Author: irmajerk
+Score: 11
+Created UTC: 1765631811.0
+Comment: Nuke it from orbit.  It's the only way to be sure.
+
+In all seriousness, the likeliness of a hardware level exploit being unpatched after YEARS is very, very low.  I probably wouldn't use it as my personal machine, but I would happily use it as a terminal or server.
+
+As an aside, the hacker is a call center scammer?  It's probably a win dependent exploit.  Seriously, if you worry about security in any way, get the hell off ms spy machines!!  Good lord, they are evil, scrapping every bit of every users data to train ai while firing thousands of devs....

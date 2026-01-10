@@ -1,0 +1,46 @@
+Post Title: Danish head of government IT (left) hands over the first "microsoft-free" computer to the head of Danish Traffic control, December 2025
+Author: [deleted]
+Score: 9814
+URL: https://i.redd.it/f5po4uyqnn7g1.jpeg
+Number of comments: 358
+Created UTC: 1765929732.0
+
+Post Content:
+We are testing Linux as the primary operating system, with open source alternatives for stuff like office, on peoples work computers in government agencies. Traffic control gets to be our first test subject.
+
+This is gonna be put in the hands of somewhat tech-illiterate people. Definetly a gonna be messy at first.
+
+Maybe it will go well. Maybe our traffic lights are randomly purple soon, we will see.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mok000
+Score: 931
+Created UTC: 1765932024.0
+Comment: If what they need to do is write letters and reports, use spreadsheets,  create presentations, use email and browse the web there will be zero problems. Any Linux distro with LibreOffice and Firefox can do the job, and any computer user can click on icons to launch the programs.
+
+Comment 2:
+Author: DoubleOwl7777
+Score: 294
+Created UTC: 1765929881.0
+Comment: wait the thing that Controls traffic lights ran windows and wasnt an sps?! okay probably xp or something but still.
+
+Comment 3:
+Author: Intelligent-Stone
+Score: 253
+Created UTC: 1765947862.0
+Comment: dannish government, which at the same time wants to leave a corporate and also propose chat control and banning VPNs
+
+Comment 4:
+Author: hbdgas
+Score: 118
+Created UTC: 1765942901.0
+Comment: You're about to find out which 20 year old Excel file is actually running everything.
+
+Comment 5:
+Author: [deleted]
+Score: 102
+Created UTC: 1765930172.0
+Comment: [deleted]

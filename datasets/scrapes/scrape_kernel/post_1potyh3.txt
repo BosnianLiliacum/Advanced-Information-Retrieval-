@@ -1,0 +1,254 @@
+Post Title: Linux Real-Time Bandwidth Control Explained: From Cgroup v1 RT Limits to SCHED_DEADLINE
+Author: Infinite-Feed-3904
+Score: 0
+URL: https://www.reddit.com/r/kernel/comments/1potyh3/linux_realtime_bandwidth_control_explained_from/
+Number of comments: 0
+Created UTC: 1765969952.0
+
+Post Content:
+Practice is the Only Standard for Testing Truth - Mao Zedong
+
+# Preface
+
+A few days ago, I was chatting with a colleague about real-time Linux, and he mentioned the parameter `sched_rt_runtime_us`, which I hadn't tried to understand before, but this time I had some free time, so I tossed out `sched_rt_runtime_us` and `sched_rt_period_us` in detail.
+
+# Parameter analysis
+
+**1. sched\_rt\_period\_us (period)**
+
+* **Meaning**: Defines a measure of the duration of the Period.
+* **Unit**: microseconds.
+* **Function**: It sets a time window for the cycle. The scheduler will use this length of time as a cycle to continuously reset the available runtime quota for real-time tasks.
+* **Default value**: usually 1000000 microseconds (i.e. 1 second).
+
+**2. sched\_rt\_runtime\_us (runtime length)**
+
+* **Meaning**: Defines the upper limit of the total time that all Real-Time tasks are allowed to run in the above cycle.
+* **Unit**: microseconds
+* **Role**:
+   * If the total running time of Real-Time tasks in this period reaches this value, the system will force to pause (Throttle) all Real-Time tasks until the start of the next period.
+   * The remaining time (PERIOD minus runtime) will be reserved for normal tasks (SCHED\_OTHER), ensuring that the system has at least a little time to process non-real-time tasks.
+* **Default value**: normally 950000 microseconds (i.e. 0.95 seconds).
+* **Special value**: if set to -1, it means that the RT limit is disabled and real-time tasks can take up 100% of the CPU (this is dangerous in some cases, as it may cause the system to become unresponsive).
+
+Let's take two examples now:
+
+Graphics rendering threads (Graphics Group)
+
+Period: 40ms (0.04s)
+
+Runtime: 32ms (0.032s)
+
+CPU Utilization: 80% (32/40)
+
+Idle Time: 8ms
+
+Audio Group
+
+Period: 5ms (0.005s)
+
+Runtime: 0.15ms (0.00015s)
+
+CPU Utilization: 3% (0.15/5)
+
+Idle Time: 4.85ms
+
+# Hands-on Experiments
+
+With a basic understanding of `sched_rt_runtime_us` and `sched_rt_period_us`, let's try an experiment for a deeper understanding.
+
+Prerequisites: The `kernel` needs to be based on `cgroupv1`, not `cgroupv2`, for reasons that will be explained in the next section. The kernel needs to enable `CONFIG_RT_GROUP_SCHED`.
+
+Now there is a program for `rt_spin` with very simple code:
+
+    /* rt_spin.c */
+    #define _GNU_SOURCE
+    #include &lt;stdio.h&gt;
+    #include &lt;stdlib.h&gt;
+    #include &lt;unistd.h&gt;
+    #include &lt;sched.h&gt;
+    
+    int main(int argc, char *argv[]) {
+        while (1) {
+        }
+        return 0;
+    }
+    
+
+We will create two groups:
+
+* **group\_a**: limited to **40%** CPU usage.
+* **group\_b**: limit to **20%** CPU.
+* **Cycle time**: uniformly set to 1 second (1,000,000 microseconds)
+
+&amp;#8203;
+
+    cd /sys/fs/cgroup/cpu
+    mkdir group_a
+    # set period to 1s
+    echo 1000000 &gt; group_a/cpu.rt_period_us
+    # set run time to 0.4s (40%)
+    echo 400000 &gt; group_a/cpu.rt_runtime_us
+    
+    mkdir group_b
+    # set period to 1s
+    echo 1000000 &gt; group_b/cpu.rt_period_us
+    # set run time to 0.2s
+    echo 200000 &gt; group_b/cpu.rt_runtime_us
+    
+
+To make it easier to add the program to the cgroup, we run it with two scripts:
+
+    # run_group_a.sh
+    ./rt_spin &amp;
+    PID_A=$!
+    
+    # 2. Bind to CPU 0 and set as a real-time process (very important!).
+    sudo taskset -cp 0 $PID_A
+    sudo chrt -fp 50 $PID_A
+    
+    # 3. Add the process to group_a.
+    echo $PID_A &gt; /sys/fs/cgroup/cpu/group_a/cgroup.procs
+    
+
+    # run_group_b.sh
+    ./rt_spin &amp;
+    PID_B=$!
+    
+    # 2. Bound to CPU 0 and set as a real-time process.
+    sudo taskset -cp 0 $PID_B
+    sudo chrt -fp 50 $PID_B
+    
+    # 3. Add the process to group_b.
+    echo $PID_B &gt; /sys/fs/cgroup/cpu/group_b/cgroup.procs
+    
+
+So far, we have a test program, configured cgroup and two running scripts.
+
+Before we officially run it, we are ready to do a control group experiment:
+
+    # taskset -c 0: Bind to CPU 0
+    # chrt -f 50: Set to SCHED_FIFO, priority 50
+    ./rt_spin &amp; 
+    PID_CONTROL=$!
+    sudo taskset -cp 0 $PID_CONTROL
+    sudo chrt -fp 50 $PID_CONTROL
+    
+
+Execute the above script, open a top in a new terminal, and you can see that `rt_spin` 's cpu usage is 95%, this is because it is limited by default by the global `/proc/sys/kernel/sched_rt_runtime_us` (default 0.95).
+
+
+
+We now execute `run_group_a.sh` and `run_group_b.sh` after killing rt\_spin , again using top for observation.
+
+
+
+However, just top observation is not very intuitive, in order to observe the `sched_rt_runtime_us` and `sched_rt_period_us` parameters more intuitively, we use `perf` to observe.
+
+**Method 1: Verify CPU utilization using perf stat**
+
+While top's readings are bouncy, `perf stat` can count the exact amount of time a process is actually using CPU over a fixed period of time.
+
+**Experiment logic**:
+
+If the limit is 40%, then we sample the process over a 10 second period and it should run for exactly **4 seconds** (4000 milliseconds).
+
+    # -p: Specify the process PID
+    # -e task-clock: Only count clock events that the task actually uses the CPU
+    # sleep 10: Automatically stop after 10 seconds
+    ~/rt-group$ sudo perf stat -p 2589 -e task-clock sleep 10
+    
+     Performance counter stats for process id '2589':
+    
+              4,001.27 msec task-clock                       #    0.400 CPUs utilized
+    
+          10.006430872 seconds time elapsed
+    
+    
+
+Where time elapsed is 10 seconds (physical time), task-clock is 4002.15 msec (about 4 seconds), and 0.400 CPUs utilized indicates that the 40% limit is in effect. **Method 2: Using perf sched to observe "cutoff" behavior**
+
+We've observed the process occupancy in `perf stat`, which is the corresponding `rt_runtime_us`, so we'll look at `rt_period_us` next.
+
+    # Record all scheduling switch events on CPU 0 for 3 seconds.
+    # -C 0: Monitor only CPU 0 (to reduce data volume).
+    &gt;perf sched record -C 0 sleep 3
+    &gt;perf sched timehist | grep rt_spin
+    
+
+We can see the following log:
+
+    Samples do not have callchains.
+       22758.049228 [0000]  rt_spin[2602]                       0.000      0.000    199.369
+       22758.789225 [0000]  rt_spin[2589]                       0.000      0.000    399.299
+       22759.049230 [0000]  rt_spin[2602]                     800.628      0.000    199.374
+       22759.789227 [0000]  rt_spin[2589]                     600.699      0.000    399.302
+       22760.049227 [0000]  rt_spin[2602]                     800.608      0.000    199.387
+       22760.789225 [0000]  rt_spin[2589]                     600.696      0.000    399.301
+    
+
+We can see that the last column is `runtime` and the first column is `wait time`, which is exactly what we expected!
+
+Theoretically, this article should end here, but remember that we mentioned above that it needs to be based on `cgroupv1`, not `cgroupv2`, so why is that? We will analyze this in the next section.
+
+# A look at the bottom of the problem
+
+# 1. The "default value trap" and the hierarchical contradiction
+
+This is the most direct reason why Cgroup v2 refuses to port this feature directly.
+
+* **Problems with Cgroup v1**: In Cgroup v1, when creating a new subgroup, the kernel must give `cpu.rt_runtime_us` a default value.
+   * If defaulted to **0**: any realtime process (SCHED\_FIFO) migrated into the group **is immediately starved** (cannot be scheduled) and even causes the shell to get stuck, which is a very poor user experience.
+   * If given a **non-zero value** by default: RT bandwidth is a globally scarce resource (total cannot exceed 100%). If a user creates 1000 subgroups, and each one is given 10ms by default, the total demand instantly exceeds the physical limit of the CPU, causing the upper level math to collapse.
+* **V2 design philosophy**: Cgroup v2 emphasizes **"Top-down Resource Distribution"** and requires that **configurations are secure**. Since RT time is "hard currency" (absolute time), it is not dynamically compressed by weight like the time slice of a normal CFS process. It is not possible to give a safe and legal default value without explicitly configuring it.
+
+# 2. Priority inversion and deadlock risk
+
+* **Scenario**: Suppose that a Cgroup is restricted to a RT time of 10ms. there is a real-time process A within the group.
+* **Issue**: Process A may request a lock (Spinlock) in the kernel state, and then its 10ms time slice runs out and is Throttled by the scheduler. At this point, other critical processes in the system (perhaps even the management process responsible for unfreezing the Cgroup, or a parent process with a larger RT budget) want to acquire the same lock.
+* **The result**: Process A, which holds the lock, is "shut down" and can't run (it can't release the lock), while process B, which wants the lock, is idling and waiting. If B is a system critical process, the whole system is deadlocked. Although the kernel has a RT Throttling mechanism to try to break this situation (forcing it to run for a little while), it is extremely difficult to control this precisely in a complex hierarchical Cgroup.
+
+So since there is no `rt_runtime_us` and `rt_period_us` in cgroupv2, is there any alternate functionality to still try to implement this feature? Of course there is.
+
+The kernel community prefers to use `SCHED_DEADLINE` to control the real-time nature of the task. **SCHED\_DEADLINE** explicitly defines the period, runtime and deadline **.**
+
+* The scheduler will **pre-calculate** whether the demand can be met (Admission Control). If the system is too busy, it will simply refuse to let you start the process, rather than choke you halfway through.
+* **Cgroup v2's attitude**: If you want to support RT resource isolation, you should do it based on the `SCHED_DEADLINE` model, instead of the `SCHED_FIFO` cutoff model of v1, which is prone to deadlocks. However, the integration of `SCHED_DEADLINE` in Cgroup is still in the process of refinement.
+
+Similarly, let's try to write a program that uses **SCHED\_DEADLINE to achieve the same functionality, and** the program under test still uses rt\_spin.
+
+    &gt; ./rt_spin &amp;
+    &gt; sudo chrt -v -d --sched-runtime 400000000 --sched-period 1000000000 --sched-deadline 1000000000 -p $pid
+    &gt; sudo perf sched record sleep 3
+    &gt; sudo perf sched timehist | grep rt_spin
+    Samples do not have callchains.
+       27746.951656 [0004]  rt_spin[2839]                       0.000      0.000    400.074
+       27747.951644 [0004]  rt_spin[2839]                     599.921      0.000    400.067
+       27748.951636 [0004]  rt_spin[2839]                     599.937      0.000    400.053
+    
+    
+
+As you can see from the results, it works the same as using `rt_runtime_us` and `rt_period_us`.
+
+The author stepped on a small pit here, after starting `rt_spin`, use `taskset` to bind the process to cpu0, which causes `chrt -d` to fail.
+
+After looking up the information and asking the AI, a key piece of information came up:
+
+The core logic of the Deadline scheduler is that "the kernel must have complete freedom to schedule in order to run the task on any free CPU"
+
+The original description can be seen in [https://www.kernel.org/doc/Documentation/scheduler/sched-deadline.rst](https://www.kernel.org/doc/Documentation/scheduler/sched-deadline.rst) as:
+
+&gt;
+
+As to why rt\_runtime\_us and rt\_period\_us were not ported to cgroup v2, let AI summarize
+
+&gt;
+
+# Summarizing
+
+At this point, we have explored the practical use of rt\_runtime\_us and rt\_period\_us in our system, and understand the discussion of these two parameters as they evolve from cgroup v1 to cgroup v2.
+
+The above code is placed at [https://github.com/hlleng/linux\_practice/tree/main/rt\_group](https://github.com/hlleng/linux_practice/tree/main/rt_group), if you need it, please help yourself.
+
+
+Top 0 comments:

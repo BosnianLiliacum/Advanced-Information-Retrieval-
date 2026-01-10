@@ -1,0 +1,50 @@
+Post Title: I’m a young Linux user and my mother doesn’t like the terminal.
+Author: Impressive_Union_534
+Score: 591
+URL: https://www.reddit.com/r/linuxquestions/comments/1pyrcld/im_a_young_linux_user_and_my_mother_doesnt_like/
+Number of comments: 388
+Created UTC: 1767027166.0
+
+Post Content:
+I’m a young Linux user and I’ve been having a problem recently. Yesterday I was planning on designing the motherboard for a DIY game console, so I was downloading the proper software then I realize “My windows always look messy and unorganized“. This is a huge problem if you’re working on a project that requires more than one windows, so I decided to download swaywm. Whilst I was downloading Sway, my mother walked in on me with the terminal open and text flying by (normal sudo apt Install stuff) and told me to turn off the computer and not use it again because she didn’t like the terminal.
+
+For context I’m using my grandmothers old IMac, which was bricked due to apple being greedy. All the stuff on the IMac was already off the computer and my mother was worried about me messing with said (inaccessible) data via the terminal I guess?
+
+Does anyone know how to explain this situation to a tech illiterate person?
+
+(I originally posted this on r/Linux but it was removed)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Fast_Ad_8005
+Score: 135
+Created UTC: 1767030334.0
+Comment: If this is a legit post, which is difficult to believe as why would someone object to their child using a terminal? I'd ask your mum why she said this. I assume she must have a reason to object so strongly. For all I know, you could have a criminal record that involves computers and that's why she said that. Or maybe you have an uncle that descended into a Linux rabbit hole and was never seen again.
+
+Comment 2:
+Author: LiveRhubarb43
+Score: 134
+Created UTC: 1767034091.0
+Comment: I'm a frontend engineer. I need to use the terminal every day to do my job. Every other employed engineer is the same, and nothing we build gets built without using the terminal at some point. I've been employed for 5 years and am paid better than any of my peers.
+
+Tell your mom that
+
+Comment 3:
+Author: Inevitable-Issue-249
+Score: 78
+Created UTC: 1767028011.0
+Comment: Is this a troll post im crying
+
+Comment 4:
+Author: keoma99
+Score: 32
+Created UTC: 1767027728.0
+Comment: strange situation, if that is true. the terminal is needed for special programming issues, there are no other options. not only hackers use the terminal but all Linux users. Best would be: Moving out.
+
+Comment 5:
+Author: super_perc
+Score: 28
+Created UTC: 1767027799.0
+Comment: This can’t be a real post

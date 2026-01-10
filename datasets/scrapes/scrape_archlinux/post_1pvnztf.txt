@@ -1,0 +1,60 @@
+Post Title: Per-key RGB: light up only valid keybinds while holding SUPER
+Author: Red_Rush_223
+Score: 10
+URL: https://www.reddit.com/r/archlinux/comments/1pvnztf/perkey_rgb_light_up_only_valid_keybinds_while/
+Number of comments: 6
+Created UTC: 1766700089.0
+
+Post Content:
+I’m not sure how to describe this properly, so I’ll start with an example.
+
+I use **SUPER + Q** to open a terminal. What I’d like is for my keyboard’s **per-key RGB** to react to this: when I press and hold the **SUPER** key, only the keys that are part of valid SUPER keybinds (e.g. **Q**, and others) should stay lit, while all other keys should turn off.
+
+For example, since **SUPER + A** doesn’t do anything on my system, the **A** key should turn off as soon as SUPER is pressed.
+
+In other words, I’m wondering if it’s possible to dynamically control per-key backlighting based on a modifier key being held (like SUPER), effectively disabling the lighting for keys that have no function in that context.
+
+If it may help my keyboard is a **Ranked Supernova Nova 60%** and with its proprietary software (which exists only for Windows) I can control per-key RGB , but it’s **not supported by OpenRGB**.
+
+Is something like this possible? Any ideas on what I can try to do?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: jo53_100
+Score: 4
+Created UTC: 1766701160.0
+Comment: this is an awesome idea, please update if you have a solution or an approach!!
+
+Comment 2:
+Author: Esrrlyg
+Score: 4
+Created UTC: 1766700714.0
+Comment: Insanely cool idea, hope you find something that works for you
+
+Comment 3:
+Author: ZealousZera
+Score: 3
+Created UTC: 1766700523.0
+Comment: if you know some scripting the only limitation is the keyboard and time. 
+
+Ive done something like this on my razer keyboard. you could just write bytes directly to the driver so you can listen in to keybinds (or program them into your WM) and send the bytes to light them up.
+
+I know now theres tools for this to make it somewhat easier for you. 
+
+personally I probably wont do it again since it was a super hassle to set up. I would love if someone made like some auto script for this, maybe I'll do it someday, but not any time soon.
+
+Comment 4:
+Author: trowgundam
+Score: 3
+Created UTC: 1766710433.0
+Comment: On my QMK keyboards I could configure them to work like this, it wouldn't be dynamic, I'd have to program each keybind manually, but it'd be doable.
+
+Comment 5:
+Author: Gozenka
+Score: 1
+Created UTC: 1766719257.0
+Comment: In addition to anything else, this would depend on your desktop environment, as keybinds are defined there. I do not know how your keyboard's software does it on Windows, but perhaps it is using the keybinds defined in Windows's settings. So, if for example you are using Hyprland, you would need to define your keybinds in hyprland.conf, then list those keybinds for your keyboard's RGB in whatever tool you are using for it, and control when that RGB change occurs by adding an action to happen when your press Super into hyprland.conf or into the RGB tool somehow.
+
+This is a cool topic. Good luck with it! And make sure to share it here as a post if you manage to make progress.

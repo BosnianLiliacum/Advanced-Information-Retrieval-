@@ -1,0 +1,54 @@
+Post Title: GNOME &amp; Firefox Consider Disabling Middle Click Paste By Default: "An X11'ism...Dumpster Fire"
+Author: SAJewers
+Score: 722
+URL: https://www.phoronix.com/news/GNOME-Firefox-MiddleClick-Paste
+Number of comments: 550
+Created UTC: 1767648440.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Reygle
+Score: 356
+Created UTC: 1767648590.0
+Comment: Dang, don't love that.  I use it every day.
+
+Wait, the reason is \*"may result in unexpected behavior"\*?? It's a feature I've always explicitly *enabled*.
+
+Edit: it's just the default behavior on new installs and can be toggled back.  I've got to learn to read.
+
+Comment 2:
+Author: National_Increase_34
+Score: 299
+Created UTC: 1767652009.0
+Comment: &gt;Having a UI for this setting also gives us a convenient place to explain how the feature works, so the user can learn about it naturally
+
+This seems extremely reasonable, and personally I completely agree that as a new user it can be confusing. Accidentally middle-clicking (especially on trackpads) can easily mess up document formatting or code without you realizing it. Even for mouse users who don't realise that this is the default behaviour.  
+  
+Having a clear setting for this means only people who want the feature and know how it works will enable it, solving the problem for both sets of users. 
+
+Source: [https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/merge\_requests/119#note\_2644725](https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/merge_requests/119#note_2644725)
+
+Comment 3:
+Author: Time_Way_6670
+Score: 108
+Created UTC: 1767652484.0
+Comment: Hot take. I hate middle click paste and I always disable it. Scrolling on middle click is standard on Windows and Mac… why not Linux.
+
+Comment 4:
+Author: null_reference_user
+Score: 84
+Created UTC: 1767648982.0
+Comment: I hate middle click to paste while browsing the web, middle click should open the link in a new tab...
+
+Worst part is, I HAVE IT DISABLED! It's Brave that adds this shitty behavior back with no way to turn it off... There's an open issue about this that has simply gone ignored. I'm considering switching browsers just because of that.
+
+Comment 5:
+Author: Happy-Range3975
+Score: 52
+Created UTC: 1767648951.0
+Comment: I don’t understand why Gnome can’t have a well thought out and robust options section instead of this minimalist Jony Ive-esque Apple bullshit.

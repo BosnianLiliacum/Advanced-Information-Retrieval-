@@ -1,0 +1,177 @@
+Post Title: The Arch Linux WSL image is now reproducible
+Author: Antiz1996
+Score: 126
+URL: https://www.reddit.com/r/archlinux/comments/1pp16rh/the_arch_linux_wsl_image_is_now_reproducible/
+Number of comments: 13
+Created UTC: 1765989455.0
+
+Post Content:
+[https://lists.archlinux.org/archives/list/arch-dev-public@lists.archlinux.org/thread/XDF2IIWNCZZR6KABH2OGSN7AVL7BBX25/](https://lists.archlinux.org/archives/list/arch-dev-public@lists.archlinux.org/thread/XDF2IIWNCZZR6KABH2OGSN7AVL7BBX25/)
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Antiz1996
+Score: 33
+Created UTC: 1765989646.0
+Comment: &gt; Hi everyone,
+&gt; 
+&gt; Allow me to share a great milestone we've been able to recently reach: 
+&gt; Our WSL image [0] is now bit-for-bit reproducible [1]!
+&gt; 
+&gt; Here is a quick sum up of the issue we faced and the fixes we applied 
+&gt; for them:
+&gt; 
+&gt; -----
+&gt; 
+&gt; ## Installing packages from an archived repo snapshot
+&gt; 
+&gt; To ensure that the same exact versions / releases of packages get 
+&gt; installed in the image across builds, we defined an archived snapshot of 
+&gt; our repositories (via our "Arch Linux Archive" service [2][3]) as the 
+&gt; source to download packages during build.  
+&gt; The date for the daily archived repo snapshot is based against the 
+&gt; version of the built image (which is date based). The same date is also 
+&gt; used as the `SOURCE_DATE_EPOCH` (SDE) timestamp (see below points for 
+&gt; SDE usage).
+&gt; 
+&gt; ## Normalize filesystem `mtimes` with SDE
+&gt; 
+&gt; With SDE set in our build script, we normalized `mtimes` of the rootFS 
+&gt; against it as a post-build operation to avoid non-deterministic 
+&gt; timestamps on that front:
+&gt; 
+&gt; ```
+&gt; find "$BUILDDIR" -exec touch --no-dereference 
+&gt; --date="@$SOURCE_DATE_EPOCH" {} +
+&gt; ```
+&gt; 
+&gt; ## Get rid of Pacman logs during build (timestamps recording)
+&gt; 
+&gt; Pacman records each operation with the associated timestamp in its 
+&gt; logfile (/var/log/pacman.log).  
+&gt; Since we don't particularly need Pacman logs to be recorded during the 
+&gt; image build, we redirected them to `/dev/null/`:
+&gt; 
+&gt; ```
+&gt; pacman \
+&gt;      [...]
+&gt;      --logfile /dev/null \
+&gt;      [...]
+&gt; ```
+&gt; 
+&gt; ## Normalize packages' installation date in Pacman's local package DB
+&gt; 
+&gt; Pacman records packages' installation date, resulting in 
+&gt; non-deterministic timestamps recording in the metadata included in the 
+&gt; local package database.  
+&gt; Fortunately, Jelle van der Waa recently brought support in Pacman for 
+&gt; honoring SDE on that front [4]. With the related commit being merged in 
+&gt; our latest pacman package release, simply exporting SDE in our build 
+&gt; script was enough to normalize packages' installation date in Pacman's 
+&gt; local package database.
+&gt; 
+&gt; ## Delete Pacman keyring
+&gt; 
+&gt; Pacman OpenPGP keys (generated with `pacman-key`) implies 
+&gt; non-deterministic data in the local Pacman keyring.
+&gt; Fortunately, WSL has a built-in "oobe" (Out Of the Box Experience) 
+&gt; mechanism [5] that allows to automatically run a script at the first 
+&gt; boot of the image.  
+&gt; We therefore took advantage of this mechanism to completely delete the 
+&gt; Pacman's keyring as a post-build operation and automatically recreate it 
+&gt; at the first boot of the image via the "oobe" script (by running 
+&gt; `pacman-key --init &amp;&amp; pacman-key --populate archlinux` from it).
+&gt; 
+&gt; ## Normalize tar's `mtimes` and ordering
+&gt; 
+&gt; Our rootFS for the WSL image is archived with `tar`, to which we added a 
+&gt; few options to normalize `mtimes` (against SDE) as well as ordering, in 
+&gt; order to avoid non-determinism on that front:
+&gt; 
+&gt; ```
+&gt; tar \
+&gt;      [...]
+&gt;      --mtime="@$SOURCE_DATE_EPOCH" \
+&gt;      --clamp-mtime \
+&gt;      --sort=name \
+&gt;      [...]
+&gt; ```
+&gt; 
+&gt; ## Delete tar's `atimes` / `ctimes`
+&gt; 
+&gt; Finally, we got rid of tar's `atimes` / `ctimes` to avoid 
+&gt; non-deterministic timestamps in the archive's metadata:
+&gt; 
+&gt; ```
+&gt; tar \
+&gt;      [...]
+&gt;      --pax-option=delete=atime,delete=ctime \
+&gt;      [...]
+&gt; ```
+&gt; 
+&gt; -----
+&gt; 
+&gt; For more details, you can take a look at the related merge requests, 
+&gt; respectively to test the image reproducibility from a dedicated GitLab 
+&gt; CI stage [6] and to actually make the image reproducible (including all 
+&gt; the above fixes) [7].  
+&gt; At the moment, the result of the dedicated CI stage verifying the image 
+&gt; reproducibility is non-blocking for releasing, but we intend to make it 
+&gt; mandatory soon (given that we achieved to maintain a full 
+&gt; reproducibility until then).
+&gt; 
+&gt; The additional good news is that, since it's built in a similar way, 
+&gt; most of those fixes should also apply to our Docker image [8] as well ; 
+&gt; with the exception of the Pacman keyring related issue which will need 
+&gt; to be dealt with differently, somehow... (since, as far as I know, OCI 
+&gt; images doesn't have any built-in / straightforward mechanism to run a 
+&gt; script or commands automatically at first boot, like the WSL "oobe" 
+&gt; mechanism).
+&gt; 
+&gt; This represents a meaningful achievement regarding our global 
+&gt; "reproducible builds" related efforts and is encouraging for future 
+&gt; related work on our other releng images!
+&gt; 
+&gt; [0] https://gitlab.archlinux.org/archlinux/archlinux-wsl   
+&gt; [1] https://reproducible-builds.org/  
+&gt; [2] https://archive.archlinux.org  
+&gt; [3] https://wiki.archlinux.org/title/Arch_Linux_Archive  
+&gt; [4] 
+&gt; https://gitlab.archlinux.org/pacman/pacman/-/commit/f4bdb77470528019aaba4d8b  
+&gt; [5] 
+&gt; https://learn.microsoft.com/en-us/windows/wsl/build-custom-distro#add-the-wsl-distribution-configuration-file  
+&gt; [6] https://gitlab.archlinux.org/archlinux/archlinux-wsl/-/merge_requests/74  
+&gt; [7] https://gitlab.archlinux.org/archlinux/archlinux-wsl/-/merge_requests/76  
+&gt; [8] https://gitlab.archlinux.org/archlinux/archlinux-docker  
+&gt; 
+&gt; --   
+&gt; Regards,  
+&gt; Robin Candau / Antiz
+
+EDIT: If anyone's interested by further details, I also wrote a little blog post about it :)
+
+https://antiz.fr/blog/the-archlinux-wsl-image-is-now-reproducible/
+
+Comment 2:
+Author: previse_je_sranje
+Score: 26
+Created UTC: 1766003351.0
+Comment: What does reproducible mean here?
+
+Comment 3:
+Author: nickjj_
+Score: 21
+Created UTC: 1766012549.0
+Comment: If anyone sees this on Windows, Arch within WSL 2 works quite well.
+
+I've been using it full time for the last 9 months for running a ton of different workloads. tmux, Neovim, lots of Docker containers, scripts, etc.. It's where I spend most of my time in Windows.
+
+Fear not my friends, I will be running it natively by the end of this year.
+
+Comment 4:
+Author: FoxtrotZero
+Score: -18
+Created UTC: 1765999508.0
+Comment: World Surf League? I can't find this acronym expanded anywhere.

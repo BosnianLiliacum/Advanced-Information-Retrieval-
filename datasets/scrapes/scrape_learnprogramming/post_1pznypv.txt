@@ -1,0 +1,48 @@
+Post Title: I Just realized I Don't Know Programming!
+Author: Unlucky-Assistant870
+Score: 417
+URL: https://www.reddit.com/r/learnprogramming/comments/1pznypv/i_just_realized_i_dont_know_programming/
+Number of comments: 114
+Created UTC: 1767115413.0
+
+Post Content:
+I have been learning python,kotlin, C++, HTML, and CSS for a while now and then I decided to go to leetcode. I attempted a few problems and realized I don't know jack shit about programming.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: stiky21
+Score: 330
+Created UTC: 1767115641.0
+Comment: Perfect. Now you have nowhere to go but up. This was a cathartic feeling when it happened to me many many moons ago.
+
+Once you understand that you know nothing, the real gains begin.
+
+Comment 2:
+Author: johnkaye2020
+Score: 137
+Created UTC: 1767116640.0
+Comment: LC is like a free throw contest, where programming is like playing in a live basketball game. Being good at Free throws isn’t going to make you a good programmer, but it’ll help a tiny bit. And you can brag to people who can’t do either 
+
+Comment 3:
+Author: aqua_regis
+Score: 117
+Created UTC: 1767116439.0
+Comment: You can't do LeetCode without solid DSA foundation and skills.
+
+Also, LeetCode is for interview prep. It will not make you much of a better programmer as it does not bear much resemblance with real world programming.
+
+Much better to make real world projects.
+
+Comment 4:
+Author: AcanthaceaeOk938
+Score: 28
+Created UTC: 1767117889.0
+Comment: Leetcode is NOT a measure of how good of a programmer you are
+
+Comment 5:
+Author: EskilPotet
+Score: 21
+Created UTC: 1767115886.0
+Comment: It could be an idea to stick to one language for a while, to get a solid foundation

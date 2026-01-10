@@ -1,0 +1,80 @@
+Post Title: What's holding back battery life on Linux?
+Author: Infinite-Option9352
+Score: 144
+URL: https://www.reddit.com/r/linuxquestions/comments/1pn6wbz/whats_holding_back_battery_life_on_linux/
+Number of comments: 125
+Created UTC: 1765804037.0
+
+Post Content:
+Some say it's the year of the Linux desktop, but for laptop users who want UNIX and good battery life there's no other option but Macintosh.
+
+So what's holding back battery life on Linux? Will a transition to ARM solve this? Is it an unsurmountable problem due to the huge hardware configuration space? Is this being worked on and improving over time, or is this a lower priority than other things? In fact, who even takes responsibility for this, kernel devs or the distros?
+
+Edit: some commenters do not realise how much worse battery life is on Linux as they don't use mac. Reasonable battery life for Linux is [\~9 hours if dialed in](https://www.tomshardware.com/laptops/ultrabooks-ultraportables/framework-laptop-13-amd-ryzen-ai-300-series-review) vs mac [\~15 hours real use](https://www.tomsguide.com/computing/laptops/i-just-tested-the-macbook-pro-m4-pro-battery-and-its-the-longest-lasting-laptop-ever). Let's not compare to the flaming pile of trash that is Windows.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: am_lu
+Score: 49
+Created UTC: 1765834787.0
+Comment: No one is holding me. I removed the battery from my X230 thinkpad (is a click away no need to dissasemble anything) , every place where I got to use it will have a mains socket to power the computer (home/work/at field at work). 
+
+Makes it one kg lighter to carry and does not degrade the battery, I have it stashed somewhere.
+
+Comment 2:
+Author: ShieldScorcher
+Score: 48
+Created UTC: 1765811335.0
+Comment: I’ve been using Linux since 1998 (until recently) and, as far as I remember, every year it was “a year of Linux desktop” 😂
+
+As for the battery, Linux will always trail slightly below windows given the same hardware and all. Simply because the drivers are better tailored, no need to reverse engineer anything. Even if you get a perfect Linux laptop, it won’t be better. There is always bios and problems with sleep states, blah blah. In my experience, I’ve never seen the same laptop performing better on Linux in terms of battery than it does on Windows. But hey, I haven’t seen them all. 
+
+Now Mac is a completely different weight category. If you want battery, just get mac. Neither windows nor Linux will ever like EVER going to catch up or even get close to mac’s battery performance. When hardware, top to bottom belongs to Apple, they tailor their OS for a single piece of hardware. Not thousands like windows or Linux. Which means no drivers, less bugs and problems. Everything can be soldered on a single silicon. When an OS is specifically designed for just ONE laptop, it makes all the difference. When an OS can talk directly to the silicon and doesn’t need an “interpreter” to speak to other parts of the hardware, well, you know how it feels if you have used a mac. And I don’t even want to start on the performance of the M chips
+
+I still run Linux in a container on a mac and do all my dev stuff within the Linux container. It does everything I need. After trying mac and its multiple days battery, I doubt I will ever run Linux directly on any hardware. My containerised Linux runs way faster than it ever did on bare metal. And I had a pretty fast Framework laptop. 
+
+My gf’s windows 11 Lenovo X1 laptop lasts a few hours of spreadsheet and browsing  work. My M4 Mac Air lasts 2 days of constant work. In sleep mode, windows laptop will discharge in like 5 days. My mac will last months in sleep mode, it roughly discharges 5-8% a week. My Framework Linux laptop is about 40% behind windows. And it is extraordinarily bad in sleep mode dying pretty fast. 
+
+Peace.
+
+Comment 3:
+Author: Successful-Ice-468
+Score: 32
+Created UTC: 1765804760.0
+Comment: I have bwen useing 4 linux laptops for 8 years now, slackware, debian, popOS, mint, ubuntu and i have no idea what are you people talking about.
+
+Comment 4:
+Author: EETQuestions
+Score: 12
+Created UTC: 1765804482.0
+Comment: My experience with laptops with Linux have been good, as far as battery life goes. Between a S76, a Dell XPS, and few others over the years, I’ve never had an issue with the battery. Own a mid 2012 MBP, and when I had macOS on there, the battery life was really good, but found with any distro on there, it was good, but not the same. My only guess would be that Apple had tailored everything to be as efficient as possible between their hardware and operating system, however I don’t believe a distro alone could impact the battery in a negative way, but I could very well be wrong.
+
+Comment 5:
+Author: rarsamx
+Score: 11
+Created UTC: 1765809365.0
+Comment: "Some say"...
+
+Yes, inexperienced new users who don't understand the philosophy behind FOSS.
+
+Based on FOSS parameters, It's always been the year of Linux.
+
+For comercial software to "win", they need the most market share.
+
+For FOSS to succeed, they need the most freedom.
+
+Sacrificing freedom for marketshare is the wrong approach.
+
+How does "Linux" solve it? It doesn't. It is up to the manufacturer to provide specifications to the OS. You are barking at the wrong tree. Neither kernel devs or distros.
+
+The pressure should be against the hardware manufacturers to open their specs.
+
+And comparing Mac vs PC is misguided.
+
+It's different to optimize for a single hardware spec for a single OS.
+
+PC ecosystem is varied. You can't configure for every possible scenario. PCs will never be as optimized as Mac. But again it's the price of freedom. Selecting different components according to budget and needs.
+
+I have a ThinkPad which has steadily supported Linux. Battery lasts longer in Linux than windows.

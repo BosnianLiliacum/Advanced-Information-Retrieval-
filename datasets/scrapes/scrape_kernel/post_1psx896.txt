@@ -1,0 +1,28 @@
+Post Title: Hardcore Troubleshooting: How I Caught That "Gone 3 Milliseconds" in the Linux Kernel?
+Author: Infinite-Feed-3904
+Score: 33
+URL: https://www.reddit.com/r/kernel/comments/1psx896/hardcore_troubleshooting_how_i_caught_that_gone_3/
+Number of comments: 16
+Created UTC: 1766402622.0
+
+Post Content:
+In Real-Time Linux optimization, cyclictest serves as our "thermometer," indicating when the system is "sick" (high latency), but it never reveals the "source of the illness." When cyclictest reports a 5ms Max Latency, do you investigate the driver code? Question the scheduling strategy? Or suspect the underlying firmware (ATF) is causing trouble?
+
+Often times, we are dealing with a black box. In order to understand the source of the latency, instead of fixing the bug, I did the opposite - **I wrote kernel modules to actively "create faults".** By reproducing the four classic scenarios of **hard interrupt storms, priority starvation, kernel lock contention, and hardware SMI**, together with Ftrace's microscopic analysis, I summarized a set of general two-phase troubleshooting methodology. Mastering this set of methodology, even the most complex system delays will have nothing to hide.
+
+[https://github.com/hlleng/rt\_test\_noise/blob/main/README.md](https://github.com/hlleng/rt_test_noise/blob/main/README.md)
+
+
+Top 2 comments:
+
+Comment 1:
+Author: bedel99
+Score: 7
+Created UTC: 1766414371.0
+Comment: Your AI is sick "`cyclictest` is our "thermometer" that tells us when the system is "sick" (high latency), but never tells us where the "sick spot" is. It tells us that the system is "sick" (high latency), but it never tells us where the "sick spot" is.
+
+Comment 2:
+Author: Canaveral58
+Score: 0
+Created UTC: 1766537523.0
+Comment: AI slop

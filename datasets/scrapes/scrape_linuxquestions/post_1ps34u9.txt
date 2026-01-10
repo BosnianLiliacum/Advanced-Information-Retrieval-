@@ -1,0 +1,65 @@
+Post Title: Running Linux alongside with Windows
+Author: Ivan_Horozov
+Score: 12
+URL: https://www.reddit.com/r/linuxquestions/comments/1ps34u9/running_linux_alongside_with_windows/
+Number of comments: 33
+Created UTC: 1766311399.0
+
+Post Content:
+Hi,
+My IT teacher wants me to use Linux. I'm currently using Windows 11 and I don't think to remove it from my PC. I don't know using WSL, dual booting or running a distro in a virtual machine like VM Ware or VirtualBox is better. I'm learning C++ and want to be a system developer. Which of the three options is the best for my usecase. And also what distro do you recommend for my usecase and system specifications (16 GB RAM, intel i5 1235u and 1 TB SSD).
+
+
+Top 5 comments:
+
+Comment 1:
+Author: tomscharbach
+Score: 8
+Created UTC: 1766313360.0
+Comment: If you have a single drive, I suggest a VirtualBox VM rather than dual booting.  
+
+Dual booting allows you full hardware access, but dual booting on a single drive can become an issue if you have to repair Windows at any point.  The Windows Bootloader refuses to "see" other operating systems.
+
+You don't need much to run Linux and your computer has sufficient capacity to run a VM.
+
+WSL is designed to run Linux applications rather than a full distribution.  WSL runs a light Hyper-V Ubuntu VM and integrates installed applications into the Windows UI and menu system.  WSL works flawlessly for individual applications in my experience, but if your IT teacher wants you to run a full distribution, WSL might not be the best choice.
+
+Consider asking your IT teacher for a recommended distribution.  No harm in being on the same page as your instructor.  Otherwise, consider using Ubuntu, which installs "browser and essential utilities" by default without loading up the installation with a ton of applications.
+
+My best and good luck.
+
+Comment 2:
+Author: Proper-Train-1508
+Score: 3
+Created UTC: 1766314959.0
+Comment: &gt;I don't know using WSL
+
+It's very easy to setup this. And you will have almost like actual Linux on its own machine, except that it's running on Windows. And it's lighter and easier than using VirtualBox.
+
+Comment 3:
+Author: ashish_567
+Score: 2
+Created UTC: 1766312614.0
+Comment: Go with the dual boot
+
+Comment 4:
+Author: michaelpaoli
+Score: 1
+Created UTC: 1766315714.0
+Comment: &gt;teacher
+
+Start with what are your school's *requirements*.  Fail to meet that and you may have problems.  Then consider their *recommendations* \- not strictly required, but may make things (much) easier (e.g. better supported, etc.).  So, answer those questions first.
+
+Then probably go the VM route - presuming one only has a single computer.  If the school requires Windows (or some other non-Linux OS), may want to leave that on the host, as you might otherwise have issues - unless they well spell out that it's fine to run in a VM.  And then probably run your Linux in a VM atop that (rather than the other way around). WSL is an option, but it's not really a fully installed Linux OS, so there are some things it just will not be able to do, so it may not suffice for what one needs/wants regarding Linux.  So, typically Linux on a VM.  Can do VirtualBox, but meh, [Oracle is evil](https://www.youtube.com/watch?v=-zRN7XLCRhc&amp;t=1980s), and VirtualBox has a lot of disadvantages and limitations, but it is relatively easy to install (at least VirtualBox itself).  The other approach I'd recommend, though it's harder to set up and install initially, but generally more flexible and capable for the longer term, install HomeBrew, and then qemu/kvm (whatever they're labeling the software/packages in HomeBrew these days), and along with that, libvirt and friends (virsh, etc).  If you're aiming for system developer, I'd probably say to go that route, and you should be able to figure that out and install it and get it going.  Then at that point you should be pretty well set.  As for software developer and distros, I'd probably say go with Debian.
+
+And though many may suggest dual boot, the major downside to that is only one OS is running at a time, so that may often be quite inconvenient, whereas with VM, you can have both running at the same time ... even have multiple VMs and run more than one VM at a time - dual can't touch that.
+
+Comment 5:
+Author: TradeTraditional
+Score: 1
+Created UTC: 1766346559.0
+Comment: Linux is great for programming as you have full control. That said, I really recommend a separate computer, like an old Macbook Pro.  We're talking $100 Intel chipset (Pre M1) models. Install Linux, crash it, mess it up, reinstall - no worries. 
+
+That said, I commend the desire to enter what is going to be the 2nd hardest hit field in IT after analysts, due to future AI in the next decade. Focus as much as you can on the business and management aspects of the field, or areas that are not Windows OS dependant ( such as Linux ).  Just to have more hats to wear, as it were. The ones who get blindsided are the ones who stil think "Get a cert, use a tool."  They pigeon-hole themselves with few options. 
+
+As for myself, that's why I am working on a Masters in Cybersecurity, online. Bigger picture, less in the trenches with AI hurtling towards you.

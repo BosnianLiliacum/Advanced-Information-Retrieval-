@@ -1,0 +1,50 @@
+Post Title: I want to use Linux
+Author: Emma_nhv
+Score: 23
+URL: https://www.reddit.com/r/linuxquestions/comments/1pwk7i1/i_want_to_use_linux/
+Number of comments: 63
+Created UTC: 1766796776.0
+
+Post Content:
+The truth is, I want to use Linux on a laptop I'm buying next week. Windows 11 is terrible and has a lot of bugs. I need this laptop to last me at least six or seven years for university, and I want to start with Linux as a beginner. I've had almost no experience with Linux other than once when a friend showed me a personal Linux project. Could you give me some advice on how to start using it or what Linux distributions are good for a beginner?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Avreal_Valkara
+Score: 8
+Created UTC: 1766797860.0
+Comment: I'm sure the question will come up sooner or later.... What will you primarily be using it for? There are an insane number of options out there, some are better at certain things than others are. If you have a certain area to focus it'll be a better start for suggestions. 
+
+Also, if you're able to talk to your friend about different options that could help a lot too with choosing a few to try before you go through the installation. Either way, you can load some up onto a USB and live boot then to test out and explore. 
+
+Otherwise offhand easy starters I know of(I haven't explored them in a good while, so there may be others), would be Ubuntu, Mint, and PoP OS. PoP being my go to choice for the last few years.
+
+Comment 2:
+Author: Qweedo420
+Score: 4
+Created UTC: 1766797344.0
+Comment: I'd recommend using Ventoy to burn a few ISOs of different Linux distros on a USB drive, try them for a while and then install the one you prefer
+
+You could check out Ubuntu, Mint and Tumbleweed, they have different desktop environments so you can get an idea of what you want
+
+Comment 3:
+Author: AvonMustang
+Score: 4
+Created UTC: 1766797200.0
+Comment: For a beginner Ubuntu Linux is going to give you the best support...
+
+Comment 4:
+Author: Aberry9036
+Score: 3
+Created UTC: 1766798035.0
+Comment: You should research laptops with good Linux support - not all laptops behave themselves at first, though usually issues are fixed in a few months or years, depending on the Linux distribution.
+
+Some manufacturers like Lenovo, framework, certain dell models either guarantee support or even sell you a device without windows, meaning you don’t pay for the windows license either.
+
+Comment 5:
+Author: gtzhere
+Score: 3
+Created UTC: 1766800827.0
+Comment: before you take any random advice ,for a week i want you to explore diff diff videos related to diff diff linux distribution on YT , like linux mint , fedora , pop , zorin , etc , then start forming your own understading , then download all the distro you somewhat likes , live boot them , use it without installing ,  then after exploring them all decide what do you want to install , I have tried them all as a beginner , liked only 3 , Mint LMDE , Fedora , Endeavour.

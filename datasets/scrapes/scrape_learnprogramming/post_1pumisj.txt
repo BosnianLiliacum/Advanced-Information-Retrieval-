@@ -1,0 +1,49 @@
+Post Title: Books about algorithms
+Author: Mouse_Lord28
+Score: 29
+URL: https://www.reddit.com/r/learnprogramming/comments/1pumisj/books_about_algorithms/
+Number of comments: 22
+Created UTC: 1766580126.0
+
+Post Content:
+Hello, everyone. Recently, I wanted to learn about algorithms, but I have no idea where to start. I have a folder with some books on programming, but there is nothing about algorithms except for Knuth.  
+This raises two questions: does it make sense for me to read Knuth, and what books can you recommend on the subject of algorithms in general?  
+  
+P.S.: I think I simply don't have enough knowledge of mathematics for Knuth, because I'm just a regular high school graduate. If I'm wrong, you can convince me otherwise.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: plastikmissile
+Score: 9
+Created UTC: 1766580314.0
+Comment: Knuth, as you suspected, is very math heavy and is deep deep into theory. A more approachable text is "A Common-Sense Guide to Data Structures and Algorithms" by Jay Wengrow.
+
+Comment 2:
+Author: Specific-Housing905
+Score: 8
+Created UTC: 1766581078.0
+Comment: I like Essential Algorithms: A Practical Approach to Computer Algorithms by Rod Stephens. 
+
+Unlike other books he uses pseudo code instead of a programming language. He also has a book about algorithms with C# and Python
+
+Comment 3:
+Author: nousernamesleft199
+Score: 8
+Created UTC: 1766583309.0
+Comment: sedgewick's *algorithms in c*
+
+Comment 4:
+Author: FreeZappa
+Score: 7
+Created UTC: 1766595236.0
+Comment: Start with Grokking Algorithms. It's visual, doesn't assume you have a math degree, and actually explains the \*why\* behind things instead of just throwing formulas at you. Knuth is legendary but it's like trying to learn guitar by studying music theory dissertations
+
+Comment 5:
+Author: MathMajortoChemist
+Score: 5
+Created UTC: 1766586523.0
+Comment: If you want to use Knuth but feel like you need math for it, he literally co-wrote Concrete Mathematics, one of my favorite textbooks, for that exact purpose.
+
+Some are recommending CLRS Introduction to Algorithms, which is great but might also overwhelm. Tom Cormen (the C in CLRS) wrote Algorithms Unlocked to be a non technical first step if that's of interest.

@@ -1,0 +1,44 @@
+Post Title: Fabrice Bellard (creator of FFmpeg &amp; Qemu) Releases MicroQuickJS
+Author: TheTwelveYearOld
+Score: 707
+URL: https://github.com/bellard/mquickjs
+Number of comments: 60
+Created UTC: 1766517231.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: NightOfTheLivingHam
+Score: 226
+Created UTC: 1766524385.0
+Comment: God Bless Bellard. He's an unsung hero in the opensource world.
+
+Comment 2:
+Author: ILoveTolkiensWorks
+Score: 138
+Created UTC: 1766557664.0
+Comment: FFMPEG *_AND_* Qemu?! That's fucking insane. xkcd 2347 really is just about him
+
+Comment 3:
+Author: PerkyPangolin
+Score: 93
+Created UTC: 1766528267.0
+Comment: Since yt-dlp supports QuickJS, and this has comparable performance, I wonder if this can be embedded without the need for an external runtime. 
+
+Comment 4:
+Author: bubblegumpuma
+Score: 38
+Created UTC: 1766532642.0
+Comment: I'm getting some slight implications that this was built with porting to microcontrollers in mind.. like, it's not ready for that out of box seemingly, but the absurdly low resource usage and the specific mention of compiling to ARM Thumb-2 assembly and referring to the compiled binary as residing in a "ROM" seems to imply this is part of the thinking..
+
+Comment 5:
+Author: [deleted]
+Score: 37
+Created UTC: 1766519364.0
+Comment: unwritten heavy cooperative literate pot airport command crown husky north
+
+ *This post was mass deleted and anonymized with [Redact](https://redact.dev/home)*

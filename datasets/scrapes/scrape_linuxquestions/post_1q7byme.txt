@@ -1,0 +1,94 @@
+Post Title: How exactly is linux better than windows for a normal user(In easy to understand way)
+Author: DarkknightOP-69
+Score: 35
+URL: https://www.reddit.com/r/linuxquestions/comments/1q7byme/how_exactly_is_linux_better_than_windows_for_a/
+Number of comments: 173
+Created UTC: 1767879359.0
+
+Post Content:
+I went down the rabbit hole of linux and most of the benefits listed by users are stuff like:
+
+No automatic updates 
+
+Privacy
+
+No bloatware
+
+Full "control" (not sure what it means)
+
+Unlimited customization
+
+Better for dev
+
+
+Now I'm a normal lightweight user who watches movies, does college work and studying, and practices coding. I'm not very tech savvy and not comfortable with Terminal. Windows seems perfectly fine to me, you just click and get the work done. Help and support is widely and easily available, you don't need to spend hours just to fix some driver issue. 
+
+Linux users frequently say that Windows is slow and things sometimes takes lot of time to load, but to me windows feels fast enough to get the job done. I don't get stuck for 2 mins opening some app.
+
+I've never got the Blue Screen of death.
+
+I'm not bothered with any customization or the updates as they notify weeks before, so I have a lot of time to choose when I want to update my laptop.
+
+I don't do any shady stuff that I would be concerned of "privacy". I am also not into any high level dev work.
+
+I also visited subreddits like windows11 and linuxsucks to understand their pov and well linux has plenty of disadvantages too, like stuff breaking easily, help manuals not easily available, having to write 20 lines of script in some situations.
+
+So what exactly do y'all linux users glaze linux for and how would linux be beneficial for a lightweight normal user like me?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SnuffBaron
+Score: 111
+Created UTC: 1767881331.0
+Comment: &gt;I don't do any shady stuff that I would be concerned of "privacy".
+
+You don't need to be doing anything shady to be concerned about your privacy. If you truly don't care then send me all of your DMs with your partner for me to read.
+
+No? Feels icky? Exactly. Just cos a corporation is using your data doesn't make it any less icky than me, a rando on the internet, reading your messages.
+
+Be more concerned about your privacy regardless of if you're a wrong'un or not.
+
+Comment 2:
+Author: kloklon
+Score: 48
+Created UTC: 1767880438.0
+Comment: &gt; practices coding
+
+&gt; not comfortable with terminal
+
+huh. i thought those would go hand in hand, honestly.
+
+Comment 3:
+Author: nobikflop
+Score: 43
+Created UTC: 1767880817.0
+Comment: Does Windows bug the shit out of you? It doesn’t sound like it. If you’re not having any problems, don’t switch. If you’re curious you can always try Linux out, but don’t do it just because someone said it’s “better.”
+
+In my case, Windows bugged me because it had more and more features that couldn’t be turned off (or came back on after updates.) Sponsored news articles on my desktop, terrible search bar that searched the internet before my local files/programs, and bad redesign of menus.
+
+Also, things breaking isn’t just a Linux issue. A Windows update nuked my Ethernet drivers and nothing I did could recover them. Had to do a full reinstall, but had to borrow a computer of course because mine couldn’t get anything off the internet. That was more aggravating than any Linux issue I’ve had.
+
+In general, Linux is a more “porous” or transparent OS. This is a good thing when you want to control exactly how it looks, acts, and operates. It’s a bad thing when you expect everything to work with one click and don’t care about ads or privacy 
+
+Comment 4:
+Author: Ok_Opposite7385
+Score: 41
+Created UTC: 1767892179.0
+Comment: There are already so many comments, I doubt you'll even read this, but anyway, I'd say the first thing you'll notice is that all the distributions come with just the right applications (unless you're looking for a distribution for something specific), which you can uninstall whenever you want. Then you install what you really want, without being forced to have applications you don't want.
+
+You'll also notice it's much lighter, especially if you compare it to a Windows installation from 5 years ago on a modest PC.
+
+There are more reasons, but I don't want to make this too long.
+
+Best regards
+
+Comment 5:
+Author: wavecycle
+Score: 19
+Created UTC: 1767880288.0
+Comment: Windows has become a vehicle for advertising. If you're ok with that then keep it. I got sick of the repeated message "Would you like to update your OneDrive now or later???"
+
+
+That doesn't exist in my Linux.

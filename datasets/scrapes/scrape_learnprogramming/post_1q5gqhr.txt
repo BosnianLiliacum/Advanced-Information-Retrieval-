@@ -1,0 +1,54 @@
+Post Title: I’m currently on Day 68 of Angela Yu’s 100 Days of Python course, and honestly, the course takes a serious downturn after Day 57.
+Author: Leading_Property2066
+Score: 87
+URL: https://www.reddit.com/r/learnprogramming/comments/1q5gqhr/im_currently_on_day_68_of_angela_yus_100_days_of/
+Number of comments: 20
+Created UTC: 1767700925.0
+
+Post Content:
+She teaches Python fundamentals really well I’ll give her full credit for that. But once it reaches web development topics like Flask, SQLAlchemy, and databases, the explanations become rushed and shallow. These are some of the most important concepts, yet they feel poorly explained, almost like she got tired of the course.
+
+Before Day 57, everything was structured and clear. After that, it feels messy and frustrating 🤦🏽‍♂️
+
+Has anyone else who took (or is taking) this course felt the same way?
+
+How did you manage to push through or fill the gaps?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Rain-And-Coffee
+Score: 67
+Created UTC: 1767713563.0
+Comment: Most of those topics (Flask, SQL Alchemy, Databases, etc) could each be an entire course. 
+
+At a certain point you should take the lessons as ideas for you to explore on your own rather than hand holding through every detail.
+
+The documentation is usually a good place to learn them.
+
+Comment 2:
+Author: Nok1a_
+Score: 22
+Created UTC: 1767715322.0
+Comment: Try MOOC Python of Helsinki university it is free
+
+Comment 3:
+Author: oandroido
+Score: 10
+Created UTC: 1767730893.0
+Comment: I try to warn everyone asking about her courses about this.
+
+Comment 4:
+Author: gochet
+Score: 8
+Created UTC: 1767719172.0
+Comment: Yeah, I made it into the 70's, but then the course completely derails, and none of the required dependencies work anymore with the code.  It became hours and hours of troubleshooting that problem, with no help, and the forums are dead now.  It was a pretty good course until then, though.
+
+Comment 5:
+Author: AccomplishedCry8178
+Score: 4
+Created UTC: 1767727974.0
+Comment: I hit the same point roughly can’t remember the exact day, once it started using flask with really poor explanation on using decorators I basically stopped. It felt like someone else has said that she lost interest..
+
+Until around there though i felt it was a really good course and it confirmed my passion and lead me to go on and start a CS degree so well worth it

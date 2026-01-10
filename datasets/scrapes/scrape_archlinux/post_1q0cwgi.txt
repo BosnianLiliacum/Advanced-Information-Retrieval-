@@ -1,0 +1,58 @@
+Post Title: If you're a beginner, don't use Hyprland!
+Author: ArshRocks
+Score: 388
+URL: https://www.reddit.com/r/archlinux/comments/1q0cwgi/if_youre_a_beginner_dont_use_hyprland/
+Number of comments: 206
+Created UTC: 1767187360.0
+
+Post Content:
+The subreddit is full of posts like "Why isn't this loading/working" and they're first time linux users running hyprland without any idea of how the ecosystem works. I blame youtube tutorials that show "best Linux installation for your PC" which is falsely tagged as for beginners, leaving people who want to switch have a hard time and eventually turning away from linux completely. 
+
+What do you think?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: cr1s
+Score: 321
+Created UTC: 1767188048.0
+Comment: I started using Linux 20 years ago because compiz had wobbly windows, so if crazy hyprland setups motivate people, go for it!
+
+Comment 2:
+Author: Dwerg1
+Score: 101
+Created UTC: 1767189352.0
+Comment: There are different types of beginners.
+
+There's the one click types that expects everything to work out of the box, has no fucking clue how it works and couldn't use a search engine if their life depended on it. When this type comes around here asking questions because shit broke, offering no details aside from describing surface level symptoms, they're totally helpless and don't even understand the advice given to them. It's a miracle if they managed to install Arch in the first place.
+
+There's also the more technically inclined types who may not have much Linux specific knowledge, but know their way around a computer enough in general to kinda get how things work. These guys just occasionally need a pointer in the right direction.
+
+Then there's the resourceful types who also don't have much Linux knowledge, but they're proficient with search engines, accepts they have to spend time reading documentation and generally learn quickly. This type will only come asking for help when they're truly stuck despite spending quite a bit of effort trying to find the answer on their own.
+
+Personally I'm a mix of the technically inclined and the resourceful types. Hyprland would be fine for me as a beginner, it would just be a step learning curve that I'd eventually overcome and I would expect to spend quite a bit of time on it. I didn't go for Hyprland because it doesn't interest me, but I have done stuff on Linux that's harder than that.
+
+It's definitely not a good idea for the clueless one click types though, their skills are inadequate and their expectations are unrealistic.
+
+Comment 3:
+Author: fliperama_
+Score: 98
+Created UTC: 1767187815.0
+Comment: I really think beginners should use Hyprland, if they want to. I'm against using "full customization" dotfiles. They're usually the source of the confusion
+
+Comment 4:
+Author: Fantastic-Code-8347
+Score: 28
+Created UTC: 1767188984.0
+Comment: I’m a beginner, and immediately went to Hyprland, and created my own dotfiles with no issues. Doesn’t matter if you’re a beginner, it matters if you have a brain and know how to read
+
+Comment 5:
+Author: im-d3
+Score: 22
+Created UTC: 1767189163.0
+Comment: I think Hyprland is fine if you're a beginner, if you're technically-minded and like to learn things, and go in with the expectation of having to solve a lot of problems. Because you're gonna have to.
+
+I'm not super new to Linux, but I kind of started with Hyprland when I switched to Arch for the first time. I decided it wasn't for me, but searching for solutions to problems and slowly watching things come together was pretty fun.
+
+If you haven't got a clue and don't like tinkering, yeah you probably should avoid Hyprland.

@@ -1,0 +1,48 @@
+Post Title: Time to revive FatELF?
+Author: devofthedark
+Score: 348
+URL: https://www.reddit.com/r/linux/comments/1py8j5b/time_to_revive_fatelf/
+Number of comments: 197
+Created UTC: 1766971237.0
+
+Post Content:
+About 16 years ago now, FatELF was proposed, an executable format where code for multiple architectures can be put into one "fat binary". Back then, the author was flamed by kernel and glibc devs, seemingly partly because back then x86\_64 had near complete dominance of computing (the main developer of glibc even referring to arm as "[embedded crap](https://sourceware.org/bugzilla/show_bug.cgi?id=5070#c5)"). However a lot has changed in 16 years. With the rise in arm use outside of embedded devices and risc-v potentially also seeing more use in the future, perhaps it's time to revive this idea seeing as now we have multiple incompatible architectures floating around seeing widespread use. The original author has [said](https://github.com/icculus/fatelf/issues/1#issuecomment-1783983363) that he does not want to attempt this himself, so perhaps someone else can? Maybe I'm just being stupid here and there's a big reason this isn't a good idea.
+
+Some more discussion about reviving this can be found [here](https://github.com/icculus/fatelf/issues/1).
+
+What do you guys think? Personally I feel like the times have changed and it's a good idea to try and revive this proposal.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BranchLatter4294
+Score: 202
+Created UTC: 1766971611.0
+Comment: What is the benefit? You can easily and quickly download the binaries for whatever architecture you need.
+
+Comment 2:
+Author: eestionreddit
+Score: 55
+Created UTC: 1766972266.0
+Comment: Apple already had FAT binaries in the 90s when they were transitioning from 68k to PPC, so it's a proven concept. It only really makes sense on Linux for the odd piece of software distributed outside of the package manager (think AppImages or .deb/rpm files).
+
+Comment 3:
+Author: DFS_0019287
+Score: 51
+Created UTC: 1766972750.0
+Comment: How is that better than having architecture-specific subdirectories in your distribution zip file or tar ball, and just picking the right one with a little shell script when the app is invoked?  Or having architecture-specific packages that the user downloads?  Every time I've gone to the download page for a binary app, it has correctly detected my architecture based on the browser's User-Agent header.
+
+Fat ELF would make building executables more of a pain because you'd have to compile for each architecture (cross-compiling for most of them) before assembling the final ELF executable.
+
+Comment 4:
+Author: QuantumG
+Score: 51
+Created UTC: 1766971943.0
+Comment: What we need is a system where signing of binaries is enforced. It's crazy to me that Linux has devolved into "download that proprietary app from a website" ala Windows 9x era.
+
+Comment 5:
+Author: deke28
+Score: 34
+Created UTC: 1766971834.0
+Comment: It's a dumb idea. The packaging system is already taking care of this problem. Why solve it again and do it worse? 

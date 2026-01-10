@@ -1,0 +1,44 @@
+Post Title: Opengl on linux
+Author: Legitimate-War-2279
+Score: 690
+URL: https://i.redd.it/t4ipm7raiz6g1.jpeg
+Number of comments: 90
+Created UTC: 1765637335.0
+
+Post Content:
+today i installed sm64ex and my dad helped me make start.bash executable. When i launched the game he was surprised about opengl on linux so i got curious. Since when does linux support opengl?
+also, play sm64 however you can. its an amazing 3d platformer
+UPDATE: I asked my dad a few minutes ago about it, and it turns out he mixed up opengl and directx.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Atijohn
+Score: 555
+Created UTC: 1765637433.0
+Comment: since always? OpenGL's whole thing was that it was an *open*, multiplatform specification
+
+Comment 2:
+Author: MatchingTurret
+Score: 382
+Created UTC: 1765638079.0
+Comment: Since 1999. See [Direct Rendering Manager](https://en.wikipedia.org/wiki/Direct_Rendering_Manager)
+
+Comment 3:
+Author: SufficientLime_
+Score: 115
+Created UTC: 1765638994.0
+Comment: Curious about why he got surprised by it since OpenGL was for a very long time basically the only option on Linux 
+
+Comment 4:
+Author: mveinot
+Score: 63
+Created UTC: 1765637710.0
+Comment: I remember fighting to get OpenGL and glx extensions working in X11 on my Matrox Mystique card back in 2000 or so.
+
+Comment 5:
+Author: PixelBrush6584
+Score: 56
+Created UTC: 1765638072.0
+Comment: Linux supports OpenGL and Vulkan natively c:

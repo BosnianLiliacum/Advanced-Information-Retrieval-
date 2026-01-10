@@ -1,0 +1,32 @@
+Post Title: Fix On The Way For One Of The Linux 6.19 Regressions: 52.4% Scheduler Regression
+Author: somerandomxander
+Score: 397
+URL: https://www.phoronix.com/news/Linux-6.19-sched-core-52p
+Number of comments: 28
+Created UTC: 1766733865.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 3 comments:
+
+Comment 1:
+Author: TinderVeteran
+Score: 192
+Created UTC: 1766751807.0
+Comment: TL;DR one of commits included on the 6.19 release candidates introduced a performance regression by accident. Automated testing caught it, one of the next release candidates will include the fix.
+
+Regular users are not affected.
+
+Comment 2:
+Author: Inevitable_Gas_2490
+Score: 79
+Created UTC: 1766758460.0
+Comment: Nothing exciting. That's how software dev works
+
+Comment 3:
+Author: Prior-Advice-5207
+Score: -232
+Created UTC: 1766735885.0
+Comment: Maybe they should start testing parts of the kernel. Just like every other critical software does nowadays.

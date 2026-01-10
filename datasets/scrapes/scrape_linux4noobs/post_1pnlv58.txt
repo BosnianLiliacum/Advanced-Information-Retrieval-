@@ -1,0 +1,101 @@
+Post Title: After 15 years of "maybe next year", I finally ditched Windows 11 for Linux. Holy shit, why did I wait so long?
+Author: Pauldb
+Score: 683
+URL: https://www.reddit.com/r/linux4noobs/comments/1pnlv58/after_15_years_of_maybe_next_year_i_finally/
+Number of comments: 120
+Created UTC: 1765839728.0
+
+Post Content:
+Alright, rant incoming but stick with me because there's a happy ending.
+
+I've been a Windows user since XP. Watched it get bloated with Vista, loved Win7, tolerated the Metro UI disaster, accepted the telemetry in 10, but Windows 11? That was my breaking point. Microsoft literally shoved Copilot down my throat, my Start menu is full of ads I can't remove, my SSD is constantly churning with God-knows-what telemetry, and games that used to run fine on Win10 are stuttering. Oh, and let's not forget the mandatory Microsoft account and OneDrive integration I never asked for.
+
+So two weeks ago, at 2am after a particularly rage-inducing BSOD during a competitive match, I said screw it and decided to finally make the leap to Linux.
+
+But here's the thing I'm a gamer. I play everything from CS2 to Cyberpunk to indie titles. Everyone said just install Pop!\_OS and use Proton but nobody talks about the hardware minefield. Which GPU actually works? Do I need proprietary drivers? Will my motherboard throw a fit? I spent HOURS researching compatibility, checking wikis, reading forum posts from 2019 that may or may not be relevant.
+
+Then I stumbled on this tiny European site (buildapc.eu if you're curious, not affiliated) that only lists AMD GPU builds specifically for Linux gaming. They had compatibility guaranteed, which honestly sounded too good to be true, but the prices were reasonable so I figured worst case I'd return everything.
+
+Ordered a mid-tier build with an RX 6700 XT, Ryzen 7, 32GB RAM. Parts arrived in 3 days.
+
+Built it following their PDF guide (which was actually really good, props to whoever made it). Installed Ubuntu 25.10. Now here's where it gets wild - they included this bash script that literally installs Steam, Discord, Spotify, Firefox, VLC, and OnlyOffice in ONE COMMAND. No hunting for .debs, no adding PPAs, no "why isn't this working" - it just... worked? Got all my usual stuff, without the trouble.
+
+Two weeks later:
+
+\- Boot time: 8 seconds. EIGHT. SECONDS. Windows took almost a minute.  
+\- CS2 runs at 240+ fps on 1440p (was getting 180-200 on Win11 with the same GPU)  
+\- Cyberpunk 2077 on Proton? Buttery smooth 100+ fps, zero stutters  
+\- No random CPU spikes from "Windows Modules Installer Worker" or whatever tf that was  
+\- System RAM usage at idle: 2.3GB. Windows was eating 6GB just sitting there.  
+\- The GNOME UI is... actually really clean? Customization is insane, my desktop looks sick  
+  
+I keep waiting for something to break. For some game to not work. For a driver issue. It hasn't happened yet. I checked ProtonDB before buying anything on the Steam sale and 90% of my wishlist is Gold or Platinum rated.
+
+The weirdest part? I don't miss Windows at all. Not even a little bit. No Copilot nagging me, no forced updates during my gaming sessions, no Candy Crush reinstalling itself, no OneDrive sync errors. It's just... a computer that does what I tell it to do. What a concept.
+
+TL;DR: Windows 11 pushed me over the edge, found Linux-compatible hardware without the usual research hell, installed Ubuntu with a one-command setup script, gaming performance is actually BETTER than Windows, 2026 might legitimately be the year of the Linux desktop and I'm here for it.
+
+Anyone else make the jump recently? What distro did you land on? What made you switch?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Kylenki
+Score: 61
+Created UTC: 1765841009.0
+Comment: Yeah, the year of the Linux desktop meme has worn away peoples' sense of how far things have progressed, at times. Skepticism has given way to a bit too much cynicism.
+
+I started dipping my toes into Linux in the early 2000s, and every so often thereafter--each time hoping it was ready for my use cases. Last attempt was 2016 on Ubuntu, and things had definitely progressed. Most things just worked, but, gaming and some productivity tools I used back then had no analogue yet. Nine years later (2025) I would try Bazzite, and to my surprise, everything worked better than on Windows and all the games I play would run, the productivity apps were matured, and some ports were now available.
+
+From my vantage, the fabled desktop year is closer than ever. Been on Linux for about nine months now, and like you, I do not miss Windows. Not one bit. What it needs is some critical threshold of adoption--because Linux feels ready for prime time to me.
+
+Comment 2:
+Author: MarinatedTechnician
+Score: 23
+Created UTC: 1765845157.0
+Comment: You waited this long because Linux weren't really an alternative before the last 3 years (from a fellow gamers point of view).
+
+Now, don't get me wrong, I'm a long time Linux user since 1998 when we literally had to assemble our own graphics drivers based on chip combos and compile them, to the Nvidia hell with proprietary drivers...
+
+Things are changing a bit with the onset of datacenters and AI, plus the fact that Valve is kinda hellbent on making SteamOS the thing for gamers, especially as they started with their steamdeck that lead to the Frame and Gabecube (all in the works over time)...planned, not by accident or mistake.
+
+So you and I (I returned to Linux for the first time in 5 years now) we entered at the perfect moment for gamers and Linux, because now we can actually for real say - it just works!
+
+If you did this 3+ years ago, you'd be back to Windows in 14 days when the "ooh aah, Linux works" period is over and reality hits you when you still struggle with compatibility layers, Linux oddness, under the hood bashing and broken updates..
+
+Now? Not so much.  
+Modern Linux'es comes with Timeshift - synch and forget, roll back if some update screwed up.  
+Games - I've got 200+ games on Steam since 20 years back, and I've yet to come across one that doesn't work.  
+heck, I'm an old VR nerd, and I remember I wanted to escape windows SO bad, but VR held me back even in 2016, as it was barely an experiment on Linux and it was laggy as hell.
+
+Today? It works! Fast too!
+
+And you'll like oddities like: on Linux you MOUNT drives, on Windows it's constant destruction and trashing, plus 100s of services phoning home about stuff you have zero clue about..
+
+  
+Yep, I do believe this is finally the big one. Not sure hardcore Linux devotees will like this, but regular people will love it.
+
+Comment 3:
+Author: Plasma-fanatic
+Score: 10
+Created UTC: 1765840545.0
+Comment: Welcome to a better reality!
+
+I'm a long time Linux user (decades - currently using Arch) who keeps a copy of the latest Windows on most of my machines, alongside several Linux distros. It's there only as a means of keeping up with whatever the bad guys are trying to foist currently.
+
+In truth Windows 11 can still (for now) be tamed to be a lot less annoying (Wintoys, probably others), but I only boot it once a week to update it.
+
+Anyway, have fun!
+
+Comment 4:
+Author: TheUruz
+Score: 10
+Created UTC: 1765840548.0
+Comment: i had my newest build early this year, i had an nvidia graphic card and two M2 because i planned on dual boot for as long as i needed to feel comfortable with linux, expecially because i picked plain arch to start with (for various reasons). turns out i booted windows just to play literally two 32bit games which i could have run on linux but i was lacking a 32bit package and i have found out later. as of today i will probably format the other M2 and use it as a second steam library lol
+
+Comment 5:
+Author: popos_cosmic_enjoyer
+Score: 9
+Created UTC: 1765842049.0
+Comment: The OneDrive stuff on Windows drove me crazy. Holy hell, just let me remove that shit lol.

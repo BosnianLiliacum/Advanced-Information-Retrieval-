@@ -1,0 +1,61 @@
+Post Title: Terrible performance with DaVinchi Resolve
+Author: moop250
+Score: 9
+URL: https://www.reddit.com/r/archlinux/comments/1pw4go0/terrible_performance_with_davinchi_resolve/
+Number of comments: 9
+Created UTC: 1766756205.0
+
+Post Content:
+Hey yall, I've recently been trying to use DaVinchi resolve studio on my Arch setup, but any time the footage gets kind of busy, it starts stuttering and struggling to keep up, its made editing a chore.
+
+Technical details:
+
+My DE is KDE Plasma Wayland
+
+CPU: AMD Ryzen 7 9800X3D
+
+GPU: AMD Radeon RX 9070 XT
+
+All the footage is stored on an M.2 SSD, and i have 32 GB of ram that isnt anywhere near full at the time of stuttering.
+
+I use the "mesa" drivers and the "rocm-opencl-runtime"
+
+I have the "davinci-ffmpeg-encoder-plugin" from the aur
+
+My footage is recorded in 1440p, and is encoded in AV1 as mp4 files
+
+Something interesting that I have noticed, is that my 9070 XT is shown as having 100% utilization the second I open a project, and the integrated graphics of my CPU jumps from 0-100% utilization when I try to play media in the viewport, and if i disable my integrated graphics in favor of purely using the discrete GPU, it ends up running even worse.
+
+the stuttering seems to coincide with these errors in the log file:
+
+    0x7f7410351000 | UI                   | ERROR | 2025-12-26 14:26:57,135 | Async IO timed out frame: 230778 avsync: 5172 (UiPlayerModel)
+    0x7f71db9d8000 | LsManager            | WARN  | 2025-12-26 14:26:58,320 | Timeout waiting for interop lookahead (AVSyncCount = 5220)
+
+Is there any way I can resolve these performance issues? And if you need any more information I would be happy to provide it.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: lemmiwink84
+Score: 2
+Created UTC: 1766756851.0
+Comment: Did you remove opencl-mesa and lib32-opencl-mesa after installing rocm? I had issues as well until I did.
+
+Comment 2:
+Author: jayallenaugen
+Score: 2
+Created UTC: 1766910104.0
+Comment: [https://github.com/zelikos/davincibox](https://github.com/zelikos/davincibox)
+
+Comment 3:
+Author: Objective-Stranger99
+Score: 1
+Created UTC: 1766767740.0
+Comment: I think specific versions of resolve have this stuttering issue as a bug.
+
+Comment 4:
+Author: DarkeoX
+Score: 1
+Created UTC: 1766785079.0
+Comment: Do you non-identifying example footage and example project that we could load and try to reproduce?

@@ -1,0 +1,78 @@
+Post Title: Im a SAHM and I have an interest in coding, no prior background in it but I genuinely like it
+Author: Existing_Switch_4995
+Score: 34
+URL: https://www.reddit.com/r/learnprogramming/comments/1q632we/im_a_sahm_and_i_have_an_interest_in_coding_no/
+Number of comments: 29
+Created UTC: 1767752889.0
+
+Post Content:
+It challenges me, intrigues me and I would love to learn it in order to hopefully hone this skill just in case I decide to go back into the workforce. I want to work from home as I plan to be fully available to my child if I can so I figured learning how to code is the way to go. 
+
+What sparked my interest was Physical computing and I’m sure it hard but should I give it a shot or hone a more realistic skill? 
+
+This is the recommended certificate I was thinking about taking: Physical Computing for Creative Applications – via Kadenze
+
+Update: I think this course is a better fit  even though it’s $3000 (Interactive Device Design Certificate — Cornell eCornell Interactive Device Design Certificate Program￼ )
+ 
+Is there a cheaper way to learn this?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Own_Attention_3392
+Score: 21
+Created UTC: 1767755378.0
+Comment: Do not spend a cent on anything. If you want to learn to program, all you need is a computer and the ability to type things into Google.
+
+If the "physical computing" thing is where your interests lie, it's okay to pursue it, just understand that it's kind of a weird niche and there might not be a lot of jobs in it. 
+
+However, as I've said many times to many people, programming is not about any particular language, it's about learning to think like a programmer. Methodical, structured, analytical thinking and problem solving skills. Those skills are universally applicable across all programming languages, and, frankly, throughout life as well.
+
+So you hone some skills and write a bunch of programs and learn how to program and think like a programmer. Then if you want to pivot into something less personally interesting but more lucrative to pay bills, you'll have the necessary skillset to make that pivot.
+
+Comment 2:
+Author: Feeling_Photograph_5
+Score: 12
+Created UTC: 1767755165.0
+Comment: Yes, you could get this book: https://a.co/d/0SzwDH9
+
+And all the parts you'll need for, including a Raspberry Pi. It will cost you probably $200 to $300. There's a comment in that Amazon link if you scroll down that lists all the parts you need. 
+
+$300 is way better than $3000! 
+
+Udemy courses can also be good to learn from, and they're around $20 each.
+
+Comment 3:
+Author: CausticCranium
+Score: 10
+Created UTC: 1767756821.0
+Comment: This course is free and I highly recommend it. You learn the basics of programming but, more importantly, you learn about fundamental data structures, design patterns, and algorithmic thinking. 
+
+https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
+
+Comment 4:
+Author: RonaldHarding
+Score: 6
+Created UTC: 1767755160.0
+Comment: There's some uncertainty regarding your motivations in this post. Really get a sense of how serious you are before investing money into this. Learning to code is a \*\*journey\*\*. But thankfully, there are loads of resources out there that can help you choose your path! So, it's okay if you're not totally committed to building a career, my advice would be to measure the amount of resource you devote until you know that.
+
+You can teach yourself to code without access to any paid content or courses. It's a long road, it takes a lot of dedication and frustration, and drive to go find the answers yourself. But I'm not sure there's ever been a skill so thoroughly documented online as software development. Software developers largely love to share what they've built, and the very fine details of how it works. Youtube is full of tutorials. There are plenty of websites that will explain different programming languages or tools to you. Github is a massive source of real code that drives real projects which you can read and download and involve yourself in the discussions of. 
+
+If you're looking into a career, I recommend finding a university within your state with an accredited computer science program. The degree matters a lot when it comes to job prospects unfortunately. I also think it's a medium quick way to actually develop serious development skills. I know for me personally, I was on the self-taught path for many years and just very stuck. It was my degree program with the help of professors and peers that finally unlocked things for me and got me over the tough parts of learning development. You'll find no shortage of universities that offer remote degree programs in computer science as well. This is an expensive path, but its the most reliable path to a career.
+
+If you're not sure what you want yet, and you're just out to explore maybe try joining some community projects. Hackathons, game jams, competitions. Even if you don't feel like you're ready, just be honest about your level and express that you're there to learn and you're bound to find loads of people just like you who would be glad to learn along-side you. That's a great way to 'explore' and get a sense of what actual development is like even before you have the skills yourself. Even if it means you're joining a discord call just to watch and hear how more experienced developers are working it'll give you a sense of what its actually like once you're in the middle of things.
+
+I won't recommend any particular course or source of information personally. I've found that everyone seems to click with different materials. But the wiki has lots of linked resources [r/learnprogramming FAQ: Getting Started with Coding](https://www.reddit.com/r/learnprogramming/wiki/faq/)
+
+Comment 5:
+Author: Rain-And-Coffee
+Score: 5
+Created UTC: 1767758051.0
+Comment: After covid more office jobs became more flexible, with some being hybrid (part home, part office)
+
+My current job is 100% remote and I love the flexibility. However it took a long time to go fully remote (10+ years). Generally those jobs tend to be pretty competitive.
+
+Additionally it’s not very easy to do child care and work when a child is small (under 3). Imagine presenting in a big meeting and your child starts crying (ask me how I know…)
+
+Breaking into coding is currently quite difficult, I would start with an online intro class and see if you enjoy it.

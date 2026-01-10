@@ -1,0 +1,74 @@
+Post Title: Honest Linux question: GUI first or terminal first?
+Author: Expensive-Rice-2052
+Score: 20
+URL: https://www.reddit.com/r/linuxquestions/comments/1pwuyvd/honest_linux_question_gui_first_or_terminal_first/
+Number of comments: 113
+Created UTC: 1766832228.0
+
+Post Content:
+**There’s no right or wrong answer here.**
+
+When you start working on a Linux system, what do you usually do first?
+
+• Open a GUI tool
+
+• Open the terminal
+
+And why?
+
+**Curious to hear how different people approach this.**
+
+  
+For me, it depends on the task—but I usually open the terminal first to get a quick sense of the system.
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: zardvark
+Score: 18
+Created UTC: 1766832678.0
+Comment: My DE automatically launches Kitty when it boots. I'm equally comfortable with each environment.
+
+The issue isn't what you prefer. IMHO, the issue is that far too many have an irrational fear of the terminal and for the life of me, I do not understand it. That said, I grew up when stand alone DOS was still a thing, so that may, to some extent, explain my comfort with the terminal. Those who did not grow up in the DOS era may find the terminal to be strange and difficult to understand. But, even if this is the case, this is no reason to fear it.
+
+Comment 2:
+Author: Tuurke64
+Score: 15
+Created UTC: 1766836193.0
+Comment: I start with Firefox and then ask ChatGPT how to achieve what I want using the terminal. 
+
+As a total Linux noob, I managed to install Debian and a CUPS printer server on a HP mini pc.  It is located in my mother's house and connects to my home network through Wireguard.  
+
+I use this to remotely print on my mother's printer; she is 86 years old,  lives in another province and does not own a computer. I print her e-mails and her printer is now basically her letterbox.
+
+
+HP's own "hp smart" infrastructure can do remote printing but it breaks every other week so it's really unusable. Now everything is under my control!
+
+Comment 3:
+Author: anto77_butt_kinkier
+Score: 7
+Created UTC: 1766837291.0
+Comment: For daily use it's almost always gui. I play games, chat with friends, watch media, and do cad work. Steam runs on startup on my 3rd monitor, discord on my second. Cad programs and VLC are on my hotbar along with some games. Most of the time it's less effort to just click an icon to open a gui app than to use the terminal, and there aren't many terminal only applications I use. Cad, games, media players, web browsers, chat apps, spreadsheets, etc are all primarily gui apps for me.
+
+For a lot of tasks I do less often the terminal is great. Installing and updating programs is far easier via terminal (for apt/.deb programs). Doing backups with DD is a breeze. Running programs from the terminal is a great way to view logs from them so I can debug them/figure out wtf is going on. Htop is a great cli app that I only really need on occasion.
+
+I should note that I have a relatively unique setup, in that I have 4 monitors and take *great* advantage of virtual desktops/workspaces. Discord, steam, and Firefox are always open, I have a system monitoring app (I forget what it's called but it has a little graph for CPU &amp; GPU usage %'s and temps, wifi up/down, disk activity, and ram usage. It's wonderful) always pinned to the top right corner of my top right screen. I have a packed taskbar, and I have a few rows of icons on my main monitor that are separated by application type/usage reason. I'm quite good using the CLI for stuff, but I don't find myself ever really needing to use it to be more efficient. It's always faster to click an icon on my desktop or taskbar, or use a macro I set up.
+
+Comment 4:
+Author: DP323602
+Score: 3
+Created UTC: 1766833215.0
+Comment: I usually launch a terminal for any system tweaking or maintenance tasks.
+
+But then I'm a dinosaur from the age when being able to use a terminal, instead of a teletype or punched cards, was a huge improvement in ease of use.
+
+Obviously if I want to watch a video or even just listen to music I'll want to use a GUI app for that.
+
+Comment 5:
+Author: NeighborhoodSad2350
+Score: 3
+Created UTC: 1766832423.0
+Comment: Meanwhile, I was launching the GUI app from the terminal with options.

@@ -1,0 +1,47 @@
+Post Title: Does anybody use lightweight distros on strong machines?
+Author: Overall-Double3948
+Score: 29
+URL: https://www.reddit.com/r/linuxquestions/comments/1q25cjn/does_anybody_use_lightweight_distros_on_strong/
+Number of comments: 35
+Created UTC: 1767376225.0
+
+Post Content:
+I was looking at lightweight distros for my laptop with 2-cores and it got me wondering if there are people with strong PCs using lightweight distros.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Alchemix-16
+Score: 29
+Created UTC: 1767376644.0
+Comment: There is no reason to not use a lightweight distro, as long as it meets all of my requirements.
+
+Comment 2:
+Author: suicidaleggroll
+Score: 26
+Created UTC: 1767378290.0
+Comment: Lots of people run big powerful servers headless, which is pretty much the epitome of a lightweight distro on a strong machnine
+
+Comment 3:
+Author: Some_Conference2091
+Score: 5
+Created UTC: 1767378310.0
+Comment: I've used cli only versions of Linux and FreeBSD on servers.  I only install the necessities.  
+
+
+For workstations I don't need all the pretty stuff. Xfce is fine for me. Again, I install what I use.  I don't like a lot of extra stuff.
+
+Comment 4:
+Author: JohnnyS789
+Score: 5
+Created UTC: 1767378165.0
+Comment: I only use XFCE on all my systems. It lets me work the way I want instead of forcing me to learn somebody else's idea of the Right Way To Work.
+
+Comment 5:
+Author: ttkciar
+Score: 2
+Created UTC: 1767377652.0
+Comment: I use Slackware / FVWM2 on all of my systems, whether they're "strong" or not.
+
+Whether Slackware is "lightweight" is a matter of interpretation.  It's a fat install, so in terms of packages on disk it's very heavy, but in terms of processes running it's pretty minimal, especially when using FVWM2 for the desktop (or no X11 or WM at all, on headless systems).

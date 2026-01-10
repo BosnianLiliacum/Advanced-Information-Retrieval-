@@ -1,0 +1,51 @@
+Post Title: Stop asking what distro to choose. It really doesn't matter.
+Author: IllustriousCareer6
+Score: 660
+URL: https://www.reddit.com/r/linux/comments/1q6tgk7/stop_asking_what_distro_to_choose_it_really/
+Number of comments: 458
+Created UTC: 1767824087.0
+
+Post Content:
+EDIT: a lot of people keep dunking on the idea that there are distros out there that are not beginner friendly. That's just a BS argument, because:
+1. They most likely already know they've picked a non beginner friendly distribution.
+2. You're forgetting that I'm not arguing against asking for support (even though this sub is not meant for that) once they have installed it but ended up stuck somewhere and need help. 
+3. Worst case. They give up the distro.
+
+---
+
+Just pick one, I beg you. The only arguably notable difference is the package manager and the desktop environment it comes pre installed with. And guess what, you can swap out the DE for another of you need to.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: patrickha86
+Score: 772
+Created UTC: 1767824700.0
+Comment: Always choose your buddy's favorite distro, because nothing is as helpful as having someone being able to explain stuff nearby.
+
+Comment 2:
+Author: Real-Ad1328
+Score: 160
+Created UTC: 1767824305.0
+Comment: The answer is Fedora for anyone wondering.
+
+Comment 3:
+Author: Requires-Coffee-247
+Score: 139
+Created UTC: 1767825306.0
+Comment: It matters, but I agree that people overthink it like it's a lifelong commitment.
+
+Comment 4:
+Author: MaruThePug
+Score: 109
+Created UTC: 1767826581.0
+Comment: I got to be honest there's a big difference between having Gentoo as your first distro and having Mint.
+
+Comment 5:
+Author: thatsjor
+Score: 107
+Created UTC: 1767824301.0
+Comment: It definitely matters, many have drastically different philosophies about how the user interacts with their system. 
+
+Reductionist shit is just going to get beginners more lost.

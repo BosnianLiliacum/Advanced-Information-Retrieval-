@@ -1,0 +1,71 @@
+Post Title: coding
+Author: khalil1548
+Score: 36
+URL: https://www.reddit.com/r/learnprogramming/comments/1q5rcg1/coding/
+Number of comments: 23
+Created UTC: 1767725652.0
+
+Post Content:
+Hey ,
+i am 21 started studying CS in university , i have many difficulties with coding like slow pace and lack of many fundemental knowledge in CS.
+What would you recommend me to do to better my understanding and reasoning in problem solving.
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AcanthaceaeOk938
+Score: 20
+Created UTC: 1767726004.0
+Comment: start all over again and do things properly
+
+Comment 2:
+Author: aqua_regis
+Score: 14
+Created UTC: 1767726066.0
+Comment: Posts like yours are less than a dime a dozen.
+
+How long have you been learning? Days? Months? Years? If anything below 2 months of regular learning and practice, forget your post. You cannot expect to build up that skill in that time.
+
+Read:
+
++ https://old.reddit.com/r/learnprogramming/comments/1pmzjoe/how_do_you_learn_programming/nu4ufej/
++ https://redd.it/1pmzjoe
++ https://redd.it/1p7bv8a
++ https://redd.it/1oynnlv
++ https://redd.it/1ouvtzo
++ https://redd.it/1opcu7j
++ https://redd.it/1on6g8o
++ https://redd.it/1ofe87j
+
+And first and foremost: practice, practice, practice, practice, and more practice
+
+As usual with such posts (of which there are more than plenty), some Literature (aka *books*):
+
++ "Think Like A Programmer" by V. Anton Spraul
++ "The Pragmatic Programmer" by Andrew Hunt and David Thomas
++ "Structure and Interpretation of Computer Programs" (SICP) by Ableton, Sussman, Sussman
++ "Code: The Hidden Language of Computer Hardware and Software" by Charles Petzold
+
+Comment 3:
+Author: jbiemans
+Score: 9
+Created UTC: 1767726449.0
+Comment: I never went to uni, although now I wish I had, so take this with a grain of salt because I learned much of what I know through courses and experience. But for me learning the fundamentals and systems was way more important than learning any specific language. 
+
+Learning design patterns and architectures and their reasons were really important to my development.  Learning why to do things and not just how, opened many paths to me. 
+
+I think the most powerful part of learning though, is hands on practice, so build as much as you can. Don't be afraid to make mistakes early on too.
+
+Comment 4:
+Author: consulent-finanziar
+Score: 8
+Created UTC: 1767725845.0
+Comment: Focus on mastering 1 language, practice small problems daily and build projects to apply concepts practically. This is my golden rule for everything when I'm a beginner.
+
+Comment 5:
+Author: vVPinguVv
+Score: 2
+Created UTC: 1767726031.0
+Comment: Theres a great book called think like a programmer. It uses c++ as examples but in my opinion ita a great language to learn. Think most universities uses either c or c++ as the language of choice. But the examples in the book most of them can be adapted to whatever language you are using. You vould also try brealung down the problem in plain english on paper.

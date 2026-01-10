@@ -1,0 +1,68 @@
+Post Title: State of this subreddit
+Author: FootFungusYummies
+Score: 643
+URL: https://www.reddit.com/r/linux/comments/1pu00t6/state_of_this_subreddit/
+Number of comments: 181
+Created UTC: 1766511572.0
+
+Post Content:
+This used to be a place to discuss technical topics and patches, now it’s a place where memes and windows compability and adobe is posted about. And superstitions are shared instead of facts. 
+
+I wish it could go back to how it used to be, but I know it will never. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GigaHelio
+Score: 604
+Created UTC: 1766511920.0
+Comment: get ready another 18,000 "i'm done with windows" posts, buddy
+
+Comment 2:
+Author: artin2007majidi
+Score: 116
+Created UTC: 1766511889.0
+Comment: Reddit used to be a technical forum sure, but this change was long in the making. Reddit is much more of a "content social media" now than it was before, so I understand your frustration.
+
+But, I think most of that technical talk is best delegated to github /gitlab discussions where issues, comments and solutions are much better documented. With the slow, agonizing decline of Stack Overflow, that is pretty much the only place where issues are discussed, or at least larger, non user specific ones.
+
+While I do mourn that, especially since many a reddit thread had solutions that worked for me, I hope that this pushes people to go to places that are built for technical debugging over places like Reddit.
+
+Will that happen? Probably not. AI is here and is coming for technical forums, if the trend at StackOverflow is anything to go by.
+
+Comment 3:
+Author: ang-p
+Score: 114
+Created UTC: 1766519454.0
+Comment: Hey - I installed This old, vulnerable to 10,000 exploits distro on a potato that I will never use for anything - Give me da updoots.....      
+    
+Hey - I'm fed up with Windows, but I want all the windows programs to run....  I couldn't be arsed to read the rules... How do I do it?       
+
+Hey - Look at my awesome screenshot......   I even got neofetch and lolcat... How kool am I?      
+   
+HELP       
+
+I use Arch BTW        
+      
+Why don't people like Gnome / KDE / systemd?      
+
+My Linux Journey - (like seriously, WTF is a "journey"?   -  are you a recovering addict??    And seriously, if your name is not Linus Torvalds / Greg HK or a very few others... we really don't give a F.)   
+
+I've got this great idea about xyz that - despite me only posting once on linux4noobs about getting a black screen, I think would be a great suggestion for the world to do (despite its blatantly obvious - to anyone who does not post for help on Linux4noobs - failings)     
+
+Look at this picture of Bill gates with Epstein.....     
+
+Linux is great and I want to tell everyone who is here, on this Linux subreddit......
+
+Comment 4:
+Author: LittlestWarrior
+Score: 63
+Created UTC: 1766512588.0
+Comment: Yeah. If feel like it couldn't hurt to have the moderators redirect some posts to r/linuxmasterrace, r/linuxmemes, r/linux4noobs, r/linuxquestions, r/linux_gaming, etc. I am not at a level where I can participate in any high-level technical discussion, but I enjoy reading it nonetheless, and I agree with you in that I don't often see such discussion here anymore due to lower quality posts ending up on my home feed instead.
+
+Comment 5:
+Author: Adorable-Fault-5116
+Score: 40
+Created UTC: 1766513365.0
+Comment: It's sad because Linux here is now about how it isn't Windows. Imagine being defined as the negative space of your competitor, even if it's complimentary. Embarrassing. 

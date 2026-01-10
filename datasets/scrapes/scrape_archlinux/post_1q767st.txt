@@ -1,0 +1,88 @@
+Post Title: I almost ditched Arch Linux this week.
+Author: amehdaly
+Score: 10
+URL: https://www.reddit.com/r/archlinux/comments/1q767st/i_almost_ditched_arch_linux_this_week/
+Number of comments: 95
+Created UTC: 1767859959.0
+
+Post Content:
+Not because Arch is bad, not because KDE is unstable, but because I hit one of those situations where *everything* starts acting weird at the same time and your brain immediately goes to: “ok, the system is broken beyond repair”.
+
+It started after a normal Arch update. Nothing fancy. Suddenly, VS Code started behaving oddly when working on my Qt/C++ projects. When I closed VS Code, a Chromium process stayed running. Not just running… it became impossible to kill. After that, Dolphin would refuse to launch. The system wasn’t frozen, CPU and memory were fine, but basic desktop apps were blocked. Very creepy kind of instability.
+
+At first, it *felt* like a classic Arch problem. You update, something deep breaks, and you’re supposed to accept that this is the price of rolling release. I even went as far as installing Fedora KDE Plasma to escape the chaos.
+
+That lasted maybe a couple of hours.
+
+Fedora KDE is not bad at all, but when you come from a heavily customized Arch system, it feels like landing in a desert. Everything is clean, but empty. No muscle memory, no fine-tuning, no small things you built over years. I quickly realized I would spend weeks just to get back to where I already was. That alone pushed me back to Arch.
+
+Luckily, I always keep full system snapshots using R-Drive Image. After every update, I create an image and keep around 8–10 historic ones. That habit saved me completely. I restored a clean snapshot from two weeks ago where everything worked perfectly.
+
+Now here is the *important* part.
+
+Instead of updating the system again blindly and breaking it again, I decided to apply a few strict rules that I’ve learned (and relearned) the hard way.
+
+First rule: never panic and never assume the OS is broken.
+
+Second rule: change **one variable only**, then test.
+
+Third rule: trust evidence, not feelings.
+
+I started reintroducing updates slowly. Pacman packages were fine. Desktop was fine. VS Code was fine. Qt projects were fine. Then I moved to AUR packages.
+
+And I hit the root cause on the *first attempt*, almost by accident.
+
+An AUR package called `qt-sudo`.
+
+It’s a GUI sudo helper used by Octopi. Updating that single package instantly reproduced the issue: Chromium helpers stuck, Dolphin blocked, system feeling haunted again. Remove it? Everything works. Reinstall/update it? System breaks again. Perfect reproducibility.
+
+At that moment, everything clicked.
+
+This was never an Arch issue. It was never a KDE issue. It wasn’t VS Code, Chromium, or Qt either. It was a **GUI privilege wrapper from AUR**, sitting under the desktop stack, interfering with portals and polkit in subtle ways.
+
+Once I removed Octopi and `qt-sudo` completely, the system went back to being rock solid. VS Code exits cleanly. Chromium processes die normally. Dolphin works. No instability at all.
+
+The lesson here is not “AUR is bad”. The lesson is more nuanced.
+
+Some AUR packages are not just “apps”. They are *infrastructure*. Anything that touches sudo, polkit, authentication, portals, or GUI privilege escalation should be treated like a kernel-adjacent component. Updating those blindly is asking for trouble.
+
+Another lesson: Arch is not unstable by nature. Arch is **honest**. It doesn’t hide complexity. If something breaks, it breaks loudly, but it also gives you the tools to understand *why*.
+
+And finally, snapshots change everything. When rollback is easy, debugging becomes calm. You stop distro-hopping out of frustration and start reasoning like an engineer again.
+
+I was very close to leaving Arch. In the end, Arch didn’t fail me. One bad AUR dependency did.
+
+And now my system is back, stable, predictable, and honestly… I trust it more than before.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dgm9704
+Score: 219
+Created UTC: 1767862800.0
+Comment: tldr; Arch didn’t break, some AUR package did
+
+Comment 2:
+Author: EastZealousideal7352
+Score: 133
+Created UTC: 1767864389.0
+Comment: AI slop
+
+Comment 3:
+Author: Ok-Objective3746
+Score: 69
+Created UTC: 1767867950.0
+Comment: I’m pretty sure op is a bot
+
+Comment 4:
+Author: lakotajames
+Score: 41
+Created UTC: 1767893858.0
+Comment: But why write this with an LLM?
+
+Comment 5:
+Author: rebelvg
+Score: 15
+Created UTC: 1767860529.0
+Comment: Just curious, were there any hints in the logs anywhere? Seems like a problem where logs will be filled with errors screaming at you.

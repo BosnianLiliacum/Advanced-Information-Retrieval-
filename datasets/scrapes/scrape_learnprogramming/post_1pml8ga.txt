@@ -1,0 +1,59 @@
+Post Title: Why is there no structured learning path in programming like in medicine?
+Author: AlexPvita
+Score: 387
+URL: https://www.reddit.com/r/learnprogramming/comments/1pml8ga/why_is_there_no_structured_learning_path_in/
+Number of comments: 133
+Created UTC: 1765737113.0
+
+Post Content:
+I struggle a lot with learning programming because I need a clear, ordered path (books/courses in a fixed sequence), similar to how medicine has anatomy → physiology → clinical practice.
+
+Most advice I get is “just build projects” or “learn as you go”, but that doesn’t work for me.
+
+How did *you* actually learn?  
+Did you follow a structured curriculum, or did you piece things together over time?
+
+I’m trying to understand if this lack of structure is inherent to programming, or if I’m missing something.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: aqua_regis
+Score: 322
+Created UTC: 1765737979.0
+Comment: Have you heard of [OSSU Computer Science](https://github.com/ossu/computer-science) or of [Teach Yourself CS](https://teachyourselfcs.com/)?
+
+Also, every single University curriculum. Plenty courses available from Harvard, Stanford, Princeton, University of Helsinki, and many more.
+
+Also, programming has way more different paths than medicine.
+
+Comment 2:
+Author: BeauloTSM
+Score: 91
+Created UTC: 1765737382.0
+Comment: Medicine is very regulated. It’s structured because, if it wasn’t, doctors couldn’t actually be doctors. You wouldn’t want someone to become a surgeon because they did a “surgery project” (which sounds horrifying). The same is not true for programming, projects are often times great showcases of learning. 
+
+If building projects and learning as you go doesn’t work for you, I would suggest looking for a field that has a more structured and regulated education.
+
+Comment 3:
+Author: Digital-Chupacabra
+Score: 75
+Created UTC: 1765737843.0
+Comment: &gt; I’m trying to understand if this lack of structure is inherent to programming, or if I’m missing something.
+
+You're missing something. Programming has many well defined structured paths, when not a formal curriculum they are often called Roadmaps, there are one even for Unity.
+
+Comment 4:
+Author: serverhorror
+Score: 37
+Created UTC: 1765741451.0
+Comment: There is, it's called Computer Science and it's taught at accredited universities, just like medicine and the various specializations.
+
+What is it that you're missing?
+
+Comment 5:
+Author: hwc
+Score: 23
+Created UTC: 1765739472.0
+Comment: I would say this is exactly what you get if you get a BS in Computer Science at a good university.

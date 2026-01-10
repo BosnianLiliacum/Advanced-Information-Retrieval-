@@ -1,0 +1,48 @@
+Post Title: Linux 6.19's significant ~30% performance boost for old AMD Radeon GPUs
+Author: Fcking_Chuck
+Score: 1322
+URL: https://www.phoronix.com/review/linux-619-amdgpu-radeon
+Number of comments: 77
+Created UTC: 1766421189.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: klti
+Score: 267
+Created UTC: 1766428356.0
+Comment: The contrast is somewhat jaring
+
+
+On windows: get fucked people with 2 year old GPUs, no more improvements for you
+
+
+On Linux: here's a 30%  improvement for  12 year old GPUs
+
+Comment 2:
+Author: Jhakuzi
+Score: 215
+Created UTC: 1766421947.0
+Comment: W
+
+Comment 3:
+Author: feckdespez
+Score: 211
+Created UTC: 1766422935.0
+Comment: Nice. Thanks again to Valve!
+
+Comment 4:
+Author: casualops
+Score: 32
+Created UTC: 1766423883.0
+Comment: Will it properly wake up from suspend tho
+
+Comment 5:
+Author: BigHeadTonyT
+Score: 24
+Created UTC: 1766432879.0
+Comment: Woot, my 290X is getting a boost!

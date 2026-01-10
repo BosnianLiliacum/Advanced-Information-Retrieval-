@@ -1,0 +1,50 @@
+Post Title: One Linux mistake you don’t want to repeat in 2026
+Author: Expensive-Rice-2052
+Score: 18
+URL: https://www.reddit.com/r/linuxquestions/comments/1q1vj4z/one_linux_mistake_you_dont_want_to_repeat_in_2026/
+Number of comments: 47
+Created UTC: 1767350654.0
+
+Post Content:
+New year reflection question.
+
+Could be a technical mistake, an operational habit, or something you learned the hard way.
+
+Not about blame -  just lessons worth remembering.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: whamra
+Score: 17
+Created UTC: 1767353898.0
+Comment: Think you don't need backups. Think you'll set up backups later. Think you'll remember to always perform manual backups because you remembered today. Think a redundant RAID array is a replacement for backups.
+
+Do your backups people. Go now and think of everything that will make life hard if you lose or can be lost forever if gone now and setup a backup for it. Your family photos. Your school projects. If you're into tinkering and customising every aspect of your system, backup your /etc, /home, perhaps also your package lists or package manager state (apt/dpkg, pacman, etc..).
+
+If you have backups, check their status.
+
+Comment 2:
+Author: fellipec
+Score: 12
+Created UTC: 1767350866.0
+Comment: Think I'll need Windows enough to go through the hassle of dual booting.
+
+Comment 3:
+Author: Remarkable-Worth-303
+Score: 8
+Created UTC: 1767351659.0
+Comment: Installing on Btrfs. Really slows everything down.
+
+Comment 4:
+Author: PotentialStation6224
+Score: 7
+Created UTC: 1767355429.0
+Comment: Spending too much time tinkering as soon as installing the OS (adding extensions,customizing etc.) and missing the purity of the "DEFAULT". (Debian user coming from Fedora (both Gnome). Top 2 for me.)
+
+Comment 5:
+Author: redrider65
+Score: 5
+Created UTC: 1767358093.0
+Comment: Fooling around with rolling distros or even Fedora. No more distro hopping: Mint's got all I need and it's super stable.

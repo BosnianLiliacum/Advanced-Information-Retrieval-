@@ -1,0 +1,54 @@
+Post Title: Do my fellow Gen Z devs think they’d be further in their careers if they hadn’t used AI?
+Author: Todor-dev
+Score: 74
+URL: https://www.reddit.com/r/learnprogramming/comments/1pqvk5h/do_my_fellow_gen_z_devs_think_theyd_be_further_in/
+Number of comments: 48
+Created UTC: 1766176334.0
+
+Post Content:
+\[Some context\] I'm 23 years old. I’ve been working as a full-stack developer for a little over a year and I transitioned to a new company at the end of my first year. Recently, I’ve been rethinking how I use AI. I’ve been using it since the moment I decided I wanted to get into programming, but looking back, I feel like it has done more harm than good for me as a developer. Lately, I’ve been using it much more cautiously and with purpose, trying to solve most things by searching the internet, documentation, making mistakes, and asking meaningful questions to people with more experience, which boosted my learning by a lot. With that in mind, I’ve been wondering if I could have been at least a mid-level developer if I hadn’t relied on AI that much while learning, even though it’s a tricky topic because a big part of our job is learning constantly. I shouldn't be the only one that got hit by this thought.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: disposepriority
+Score: 153
+Created UTC: 1766176557.0
+Comment: Do any of my fellow gen Z cooks think they'd be better cooks if they ever cooked something instead of ordering takeout? Drop your likes and comments bellow
+
+Comment 2:
+Author: kevinossia
+Score: 123
+Created UTC: 1766176910.0
+Comment: The learning process requires the formation of new neural pathways. 
+
+This is only possible by forcing your brain to take on tasks that you don’t know how to do.
+
+AI overuse bypasses this process entirely. 
+
+Yes, we are coming up on a new generation of programmers who will have trouble holding down a job because they didn’t learn the true fundamentals.
+
+Comment 3:
+Author: soctamer
+Score: 10
+Created UTC: 1766185166.0
+Comment: no, barely use it and it's barely useful for anything more complex than automating mundane tasks
+
+Comment 4:
+Author: Saturnalliia
+Score: 8
+Created UTC: 1766201932.0
+Comment: I'm gonna go against the grain here and say something controversial but hear me out before judging; using AI to learn to code has made me a better programmer.
+
+But the caveat is you have to use the tool properly. Mindlessly asking AI to generate code for you teaches you nothing. But using AI to explain documentation, recommend improvements, provide examples, and break down code can be immensely valuable. There's nothing wrong with asking AI to clarify and teach. That's exactly what a professor does; to accommodate curriculum reading.
+
+What I'll do when trying to pick a new project I'd like to do and ask it something like this: "I'd like to make an app or program that does xyz. What stack would you recommend and why?" It'll spit back a bunch of recommendations. Then I'll pull up Google and read a bit about them and pick one. Then I'll pop open the documentation and ask the AI: "Let's start from the beginning. How do I render zyx? Or how do I get a basic function abc working?" Then I might ask it to explain the code and reference the documentation. I'll sometimes ask it for a list of the most common functions from the API and what they do, etc... but once AI helps me get the ball rolling I gradually transition to doing things myself. Once I understand the code the AI generated I'll apply it myself. This approach can take awhile but has gotten pretty functional at learning new skills. While I'm doing all this I'm also checking documentation and taking notes. 
+
+AI is like a tool box but you shouldn't drop the toolbox off at the job site and trust it to build everything itself. Learn to use the tools and apply them properly.
+
+Comment 5:
+Author: lo0nk
+Score: 8
+Created UTC: 1766180129.0
+Comment: Using AI is trading long term growth for short term productivity. Sure other people got hit by this but if u keep using it I think those who aren't will develop faster than you.

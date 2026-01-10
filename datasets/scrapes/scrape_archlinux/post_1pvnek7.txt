@@ -1,0 +1,46 @@
+Post Title: archlinux.org under DDoS attacks
+Author: Ashamed-Sprinkles838
+Score: 220
+URL: https://www.reddit.com/r/archlinux/comments/1pvnek7/archlinuxorg_under_ddos_attacks/
+Number of comments: 100
+Created UTC: 1766698373.0
+
+Post Content:
+If you go to https://status.archlinux.org/ it says that the main website is currently down due to DDoS attacks and that only IPv6 is available but where do I get said IPv6? I tried `dig AAAA archlinux.org` and also found one on Cloudflare but neither of them are working. It just says "This site can't be reached"
+
+EDIT:
+The IP I got from dig: https://[2a01:4f9:c012:16e3::1]/
+And I actually checked it's the same as Cloudflare's so it must be the right one and yet it doesn't work for me
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Erdnusschokolade
+Score: 114
+Created UTC: 1766699511.0
+Comment: Again?
+
+Comment 2:
+Author: arvigeus
+Score: 108
+Created UTC: 1766700898.0
+Comment: Fuck you to whoever does this
+
+Comment 3:
+Author: DarkeoX
+Score: 42
+Created UTC: 1766700543.0
+Comment: Working here from EU/FR. Using that IPv6 indeed and website is as fast as always.
+
+Comment 4:
+Author: Fupcker_1315
+Score: 38
+Created UTC: 1766703749.0
+Comment: Why are there people like this?
+
+Comment 5:
+Author: lemmiwink84
+Score: 31
+Created UTC: 1766706468.0
+Comment: People mass adopting to Arch this Christmas? Must be to land all the chicks in the new year.

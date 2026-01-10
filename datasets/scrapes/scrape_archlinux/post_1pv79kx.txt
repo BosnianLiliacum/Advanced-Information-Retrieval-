@@ -1,0 +1,28 @@
+Post Title: wlctl: TUI for managing wifi network with network manager dbus
+Author: Friendly_Platform875
+Score: 9
+URL: https://www.reddit.com/r/archlinux/comments/1pv79kx/wlctl_tui_for_managing_wifi_network_with_network/
+Number of comments: 10
+Created UTC: 1766644691.0
+
+Post Content:
+I have always loved the impala's TUI and the idea it has come up with vim keybinding (customizable). But I prefer network manager over iwd, so I always had conflict. So, I forked the repo and changed the logic to use networkmanager with dbus and its in almost usable state. I mean at least I use it. If anyone wants to use impala but with Network Manager, give it a shot and (star) please. Also, not everything works, since I am still testing it.  
+visit it here-&gt; [https://github.com/aashish-thapa/wlctl](https://github.com/aashish-thapa/wlctl)  
+If anyone is expert in rust and want to contribute to this project please feel free to. There is lot of work to be done.
+
+(The ulimate goal is the easy support to eduroam with CAT scripts.)
+
+
+Top 2 comments:
+
+Comment 1:
+Author: syaorancode
+Score: 4
+Created UTC: 1766752858.0
+Comment: Nice program. To make it easier to install, I made AUR packages for it - [wlctl-git](https://aur.archlinux.org/packages/wlctl-git) and [wlctl-bin](https://aur.archlinux.org/packages/wlctl-bin).
+
+Comment 2:
+Author: Hamilton950B
+Score: 3
+Created UTC: 1766661029.0
+Comment: I don't even know what impala is but I already like this. I've been using nmtui and it's abysmal. The developers apparently think of it as more of a debugging tool than something that actual humans can use.

@@ -1,0 +1,66 @@
+Post Title: WhatsApp on linux?
+Author: aWreidGuy
+Score: 15
+URL: https://www.reddit.com/r/linuxquestions/comments/1ptdwn9/whatsapp_on_linux/
+Number of comments: 121
+Created UTC: 1766444943.0
+
+Post Content:
+I’ve always been interested in trying Linux as my main operating system, but WhatsApp is still a major limitation for me. Due to both work and my personal environment (family and friends), I can’t realistically stop using it, and relying only on my phone for calls and video calls is quite impractical. Because of this, I’m still on Windows.
+
+I’ve been following this topic for a long time, hoping that a reliable way to use WhatsApp properly on Linux would appear, but so far it doesn’t seem like there is one. I wanted to ask those of you with more experience, or anyone who has dealt with the same situation: how do you handle this?
+
+Have you ended up abandoning WhatsApp, do you use something like a virtual machine only for calls, or is there any fix or workaround that I might have missed? I tried using a VM some time ago and the experience was quite unstable (at least on Nobara 40, which is when I tested it), so I’m not sure if things have improved since then.
+
+Any experiences or advice would be greatly appreciated.
+
+Hi everyone, sorry about that — I realize my previous message may have been a bit too brief, and that wasn’t my intention. It’s my first time posting in forums like this, and I didn’t fully take into account how much context I should include.
+
+To clarify things properly: this is **about using WhatsApp on a PC, not on a mobile phone**. I specifically need **WhatsApp with video calls on a PC**, because in my work there are situations where I need to **share my screen with coworkers** and show them something directly from my computer (documents, applications, or other work-related content). In those cases, sharing my screen directly during a WhatsApp video call is much more practical than sending files back and forth or asking them to switch to another app that they may not have installed or be comfortable using.
+
+I’ve noticed some confusion about whether this is about a phone or a PC, and about why I don’t simply use WhatsApp Web. I believe I mentioned it earlier, but to restate it clearly: **WhatsApp Web does not support video calls**, and video calls are exactly what I need.
+
+So, to summarize: my requirement is **WhatsApp video calls on PC**, mainly for work-related screen sharing. I’m trying to understand how others handle this situation on Linux, or if there is currently any reliable workaround.
+
+Thanks again, and I appreciate your patience and any insights you can share.
+
+**Update:**  
+A user named **B1PH** suggested a solution that actually worked for me. I can’t currently find their comment in the thread, but I do see it in my notifications.
+
+They recommended **WinBoat,** and so far it seems like a viable and functional alternative. I still need to test its long-term stability, but I was able to install WhatsApp, get it running correctly, make video calls, have working audio, and even use my camera thanks to USB pass-through.
+
+For anyone who finds this post in the future looking for a similar solution, I’m leaving the WinBot link here.  
+[https://www.winboat.app/](https://www.winboat.app/)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: B1ph
+Score: 41
+Created UTC: 1766447875.0
+Comment: You can, and in my opinion even should, use a web app manager, which is basically a software that opens a specific web page in your browser but without any browser UI, it also creates an app launcher for you and everything. There is one pre-installed on Linux Mint. The reason why i think you should do it this way is because a lot of these apps, like WhatsApp, Discord, Spotify, are web pages even in their desktop app versions, when you install them you are basically installing chromium and all the other bloat to do something that your default web browser can do without installing any extras.
+
+Comment 2:
+Author: Samsagax
+Score: 20
+Created UTC: 1766446844.0
+Comment: Use it in a browser. I use it regularly. Would that be a viable solution?
+
+Comment 3:
+Author: m0ntanoid
+Score: 10
+Created UTC: 1766498249.0
+Comment: This is crazy how many people read only a few first lines of post and completely ignore voice/video calls feature request.
+
+Comment 4:
+Author: [deleted]
+Score: 10
+Created UTC: 1766453337.0
+Comment: [deleted]
+
+Comment 5:
+Author: Gamerbot1000
+Score: 6
+Created UTC: 1766491007.0
+Comment: My solution is running an Android x86 VM and using WhatsApp there (calls worked well atleast in my experience)

@@ -1,0 +1,66 @@
+Post Title: So I’m planning to learn full-stack development. I see many free, well-rated courses online (freeCodeCamp, Odin Project, etc.). Are these enough if followed seriously, or is it better to go for paid online courses? I’m a beginner, so would really appreciate some guidance from experienced devs.
+Author: Fantastic_Jeweler579
+Score: 48
+URL: https://www.reddit.com/r/learnprogramming/comments/1popf5u/so_im_planning_to_learn_fullstack_development_i/
+Number of comments: 41
+Created UTC: 1765952607.0
+
+Post Content:
+Guide me so I can choose the better one 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Feeling_Photograph_5
+Score: 36
+Created UTC: 1765954561.0
+Comment: Hi, I'm an Engineering Manager. If you want to learn web development at a professional level you need to know a few things:
+
+1. How to use your computer as a professional tool. The terminal is a critical part of that. 
+
+2. Front end development (HTML, CSS, JavaScript, Typescript, React)
+
+3. Back end development (Node, or another back-end paradigm like Ruby on Rails or Laravel)
+
+4. Postgresql or another database
+
+5. AI Engineering (times being what they are)
+
+6. How to deploy your apps.
+
+You can learn enough of the first four at The Odin Project. After you finish it, get the book AI Engineering by Chip Huyen and read it. Then build at least one AI-driven application, such as a RAG app. 
+
+But, yeah, to answer your question, The Odin Project is enough instruction. Just as important though is the portfolio you build with that knowledge. This is a "prove it" industry. 
+
+Good luck!
+
+Comment 2:
+Author: Haunting-Dare-5746
+Score: 29
+Created UTC: 1765953418.0
+Comment: Very rarely will you need to pay to learn a skill in the world of Computer Science. For the basics, especially, simply using free resources is okay. The two resources mentioned in your thread are great places to start. Eventually, you will teach yourself, building pet projects that allow you to easily grow your skill set.
+
+Comment 3:
+Author: BetterDailyKeepGoing
+Score: 11
+Created UTC: 1765952986.0
+Comment: If you get through the Odin Project I’d say you’re legit.
+
+Comment 4:
+Author: Evening-Concern7146
+Score: 6
+Created UTC: 1765953859.0
+Comment: Stick with the free ones to start. You can always consider paid options later if you need more specialized material
+
+Comment 5:
+Author: TrapperFlint
+Score: 6
+Created UTC: 1765959695.0
+Comment: My vote goes to Odin, but I haven't tried many other courses. 
+
+No matter what course you take, the real learning begins when you build something without guidance. Takes a special kind of grit to push past the ignorance you will start out with, even after completing the best course. 
+
+If I had known how insanely difficult it would be I would have never started and called it impossible for me.
+
+Thank God I was oblivious to it. Few things are so rewarding. Good luck!

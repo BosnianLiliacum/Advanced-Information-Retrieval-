@@ -1,0 +1,72 @@
+Post Title: Mouse Tiler - for KDE Plasma (Probably the fastest manual tiler available)
+Author: rxdev
+Score: 206
+URL: https://i.redd.it/upw8xc6h259g1.gif
+Number of comments: 45
+Created UTC: 1766576645.0
+
+Post Content:
+Merry Christmas guys!
+
+Two days ago I released v1.0.0 of my Mouse Tiler for KDE Plasma 6.
+
+It is probably the fastest and easiest to use manual tiler for KDE. No need to remember dozens of keyboard shortcuts. Just drag your window a few pixels and it's where you want it to be.
+
+You can use one of two mouse adapted tilers (or both). The Popup Grid tiler lets you quickly place your window by moving the window a few pixels. The Overlay tiler is a classical full screen overlay that lets you place your window into one tile, or span multiple tiles. Define your own layouts or use some of the many predefined ones.
+
+Key features:
+
+* Two mouse tiling modes - Popup Grid and Overlay (use one or both)
+* Follow system theme or use one of pre-defined color themes
+* Highly customizable, from tile size to grid position (over 20 settings)
+
+To install the script you can:
+
+1. Open `System Settings` \&gt; `Window Management` \&gt; `KWin Scripts`.
+2. Click the `Get New...` in upper right corner.
+3. Search for `Mouse Tiler` and click `Install.`
+4. Enable `Mouse Tiler` in previous menu.
+5. Click `Apply` to enable it.
+
+The github page can be found here:
+
+[https://github.com/rxappdev/MouseTiler](https://github.com/rxappdev/MouseTiler)
+
+Enjoy and Merry Christmas!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 20
+Created UTC: 1766583778.0
+Comment: [deleted]
+
+Comment 2:
+Author: woernsn
+Score: 7
+Created UTC: 1766578651.0
+Comment: I saw the release yesterday.
+
+Installed it, not gonna uninstall it again.
+
+Thanks u/rxdev for the amazing KWin Script(s).
+
+Comment 3:
+Author: asltf
+Score: 6
+Created UTC: 1766579575.0
+Comment: what would my config entry look like for a 2/3, 1/3 column layout?
+
+Comment 4:
+Author: Superok211
+Score: 5
+Created UTC: 1766577145.0
+Comment: i'm not using plasma, but looks nice
+
+Comment 5:
+Author: _sLLiK
+Score: 3
+Created UTC: 1766581107.0
+Comment: Looks interesting.  I'm usually a diehard tiling WM fan, but I'll have to see about giving this a try.

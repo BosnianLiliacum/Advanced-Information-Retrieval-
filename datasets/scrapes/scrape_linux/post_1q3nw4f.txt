@@ -1,0 +1,52 @@
+Post Title: Learning linux with Dad 101
+Author: OGKnightsky
+Score: 2133
+URL: https://i.redd.it/ktouur3jkbbg1.png
+Number of comments: 139
+Created UTC: 1767526763.0
+
+Post Content:
+So i told my kids that they should learn Linux, its the only operating system (yes i know its a kernel but thats not important yet) that is Dad approved. I got laptops for all my kids and installed Ubuntu on their laptops. Well only my youngest daughter has shown any interest in knowing how to do more than wiggle the mouse around the screen lol. I told the kiddos this class is voluntary and starts no later than 9am on Sunday mornings, class goes until 10:30 am. We keep it simple 1 concept and 1 goal every sunday. Sunday mornings my youngest daughter (9) comes out of her room bright eyed and ready for "Learning Linux with Dad 101" at 5am. Im awake and it fits the requirements "before 9am of your own accord." Before today in previous classes we learned what a computer is, what a computer isnt, how to turn it on, navigate around to different places and find what we are looking for. Real basic operations and concepts which leads us to this morning. Today we opened the "scary terrminal." Its weird, its not like anything we have seen yet, much different than the gui navigation. Today's lesson concept was simple: The computer is a place, think of it like a house. A house has rooms, these rooms have things in them. In the terminal we call this house the "home directory" (for now) and inside are rooms we call directories, inside these directories are things we call files. The terminal is a map, it shows us the rooms inside the house, it also shows us the things inside the rooms. Learn how file explorer and terminal are the same thing, they are maps that show us where we are and whats around us. 
+
+Today's commands to learn: pwd, ls, cd, cd .., mkdir, and cat. What is a command? A command tells the map where to look and what to look for. So Today's task was to open terminal and file explorer, use pwd to show us where we are in the house, use ls to show us whats inside the rooms, use cat to look at the things. After some practice the task was use file explorer to create a directory (or a folder, or a new room in our house) anywhere and create a text document using text editor and type our favorite number, our favorite animal, and our favorite color. Save the file into our new directory and close all the windows. Now open the terminal and use the commands to find where your file is, then use the cat command to show us what is in the file. Then do it with the gui, note how they are showing us the same things in different ways. The goal, see how using terminal and the desktop gui are the same even if they feel and look different. See the similarities and the differences, know how to navigate with both. 
+
+Then for some extra credit I made a text document in a different directory and saved it and closed all the windows. I asked her to find the file I made and told her to do it without asking me for help and to use the command cheat sheet I gave her if she couldnt remember the commands using the terminal, or she could do it with the file explorer, it was her choice. I intentionally didnt tell her how to navigate between different directories in file explorer. 
+
+The payoff of the "proud dad" moment when she said "hey dad, look!" And there on her screen was a terminal window and in the output was the text from the document I created listed after the cat command she entered to see it!!! 
+
+The moral of the story, teach your kids linux, teach them how to use the cli and give them a super power they will forever have before they even understand its a super power 💪. This girl is going to be a wizard before she gets to highschool. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: th0th
+Score: 142
+Created UTC: 1767530194.0
+Comment: You sound like a really cool dad :) I am impressed by how you design the learning experience, leaving room for her to explore and discover herself is really smart, kudos!
+
+When the time is right, don't forget to tell a little bit about licenses and why GPL is better than MIT and others, I wish my dad thought me that :P
+
+Comment 2:
+Author: heret1c1337
+Score: 54
+Created UTC: 1767526871.0
+Comment: I use the same wallpaper!
+
+Comment 3:
+Author: AirlineEasy
+Score: 41
+Created UTC: 1767529044.0
+Comment: I'm a dev so my kids see a lot of code. I also use PC Mac and Linux so they have used them all. Right now I have them focused on enjoying playing around with Scratch but will get into more later on
+
+Comment 4:
+Author: Benjis_s
+Score: 22
+Created UTC: 1767533809.0
+Comment: ahhhhh small keyboard
+
+Comment 5:
+Author: StuntHacks
+Score: 15
+Created UTC: 1767531354.0
+Comment: This reminds me so much of my dad teaching me the basics of html on Saturday mornings when I was 9. 15 years later and I'm a professional webdev. Amazing job, OP. You're sowing some real, tangible passion right there

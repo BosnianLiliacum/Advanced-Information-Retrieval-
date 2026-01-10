@@ -1,0 +1,83 @@
+Post Title: It's a new year--don't forget to clean up your pkg cache
+Author: brophylicious
+Score: 311
+URL: https://www.reddit.com/r/archlinux/comments/1q1f5ge/its_a_new_yeardont_forget_to_clean_up_your_pkg/
+Number of comments: 57
+Created UTC: 1767301711.0
+
+Post Content:
+I always forget to clean up the pacman package cache until I notice my disk usage reaching 100%. Maybe I'll automate it this year (I won't). 
+
+This time I freed up about 132GiB:
+
+    $ df -h /                 
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/nvme0n1p3  226G  176G   50G  78% /
+    
+    $ sudo pacman -Sc
+    [...]
+    removing old packages from cache...
+    
+    $ df -h /                 
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/nvme0n1p3  226G   44G  171G  21% /
+
+Check out the wiki if you haven't cleaned up the package cache before. You may not want to run `pacman -Sc`. https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
+
+
+Top 5 comments:
+
+Comment 1:
+Author: winauer
+Score: 105
+Created UTC: 1767301994.0
+Comment: &gt; Maybe I'll automate it this year
+
+
+Do it right now. It takes less than 5 minutes.
+
+Comment 2:
+Author: archover
+Score: 37
+Created UTC: 1767302145.0
+Comment: &gt;132GB 
+
+Amazing you could go this long without noticing that! Glad you discovered trimming the cache.
+
+A more precise command: `du -hs /var/cache/pacman/pkg` 
+
+I've been using a pacman hook for this functionality for a long time, explained at your link. 
+
+Nice reminder for new users, and good day.
+
+Comment 3:
+Author: OneTurnMore
+Score: 27
+Created UTC: 1767310405.0
+Comment: I never think about it. `paccache` exists and will leave the ~~two~~ most recent versions by default.
+
+    pacman -Syu pacman-contrib
+    systemctl enable --now paccache.timer
+
+Edit: three
+
+Comment 4:
+Author: rv77ax
+Score: 19
+Created UTC: 1767302909.0
+Comment: And to clean your local copy of AUR repositories,
+
+```
+$ makepkg -code
+$ git clean -fx
+```
+
+Happy new year!
+
+Comment 5:
+Author: Xenapte
+Score: 15
+Created UTC: 1767303894.0
+Comment: I always just set my cache to somewhere under `/tmp` so they are gone after a reboot. Also a slight improvement on installation speed plus less disk writes as everything is done in RAM.
+
+People like to say that you would need to keep your cache in case of a botched update, but if you have a working internet connection you can always just get them from archlinux archives (you can even reset all your packages to a specific date using the archive!). Currently for my use cases I never need to deal with extended offline periods so I just never bother keeping my cache.

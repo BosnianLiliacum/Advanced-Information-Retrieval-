@@ -1,0 +1,38 @@
+Post Title: Waytermirror - Stream your Wayland desktop into a terminal (yes, really)
+Author: Grouchy_Pin8791
+Score: 18
+URL: https://www.reddit.com/r/archlinux/comments/1q34ow1/waytermirror_stream_your_wayland_desktop_into_a/
+Number of comments: 13
+Created UTC: 1767470908.0
+
+Post Content:
+I’ve been working on a project that lets you view and control a live Wayland desktop **entirely inside a terminal**, rendered using Unicode (braille / block / ASCII).
+
+**What it does:**
+
+* Real-time Wayland capture → Unicode rendering
+* Aims to run in *any* terminal
+* TCP streaming with LZ4 compression
+* Full bidirectional input (keyboard + mouse)
+* Audio streaming via PipeWire
+* Optional CUDA-accelerated rendering on the server
+* Full color, zoom, rotation, adjustable quality/detail levels
+
+Open a terminal, connect, and your desktop just shows up.  
+Keybinds let you switch renderers, zoom, rotate, and tweak quality live.  
+Repository: [https://github.com/cyber-wojtek/waytermirror](https://github.com/cyber-wojtek/waytermirror)
+
+
+Top 2 comments:
+
+Comment 1:
+Author: _Yank
+Score: 5
+Created UTC: 1767472786.0
+Comment: Give us a demo :D
+
+Comment 2:
+Author: intulor
+Score: 1
+Created UTC: 1767479622.0
+Comment: R/diwhy

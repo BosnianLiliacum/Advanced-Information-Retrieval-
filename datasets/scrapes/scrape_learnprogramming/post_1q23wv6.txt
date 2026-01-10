@@ -1,0 +1,68 @@
+Post Title: What exactly is a socket
+Author: NiceSand6327
+Score: 183
+URL: https://www.reddit.com/r/learnprogramming/comments/1q23wv6/what_exactly_is_a_socket/
+Number of comments: 24
+Created UTC: 1767373121.0
+
+Post Content:
+I'm trying to understand what a socket actually is. Is it a number, a file, the IP:port combination, an object, or what exactly?
+
+Also, when creating an HTTP server, why do we use sockets and what definition of socket are we using in that context
+
+
+Top 5 comments:
+
+Comment 1:
+Author: high_throughput
+Score: 136
+Created UTC: 1767374462.0
+Comment: A socket is an abstraction for a data connection to another socket across a network.
+
+
+It defines operations like "listen for incoming connections at an address", "establish an outgoing connection to an address", and "write data" with a corresponding "read data" on the other side.
+
+
+It's basically like a Queue ADT, except items you push from your process can be popped by the remote process.
+
+
+The physical form this abstraction takes varies. In C it's a number referencing a file descriptor, with syscalls for the defined operations. In Java it's an object (java.net.Socket) with methods for the defined operations. 
+
+
+The actual implementation will be via references to data structures in the system's networking stack, which will keep track of addresses and buffers, and handle the encoding and exchange of your data via the system's networking hardware.
+
+Comment 2:
+Author: TheRealKidkudi
+Score: 109
+Created UTC: 1767374559.0
+Comment: A socket is provided by the OS as a means for different processes to communicate, essentially acting like a file handle. You can write to it or read from it to send or receive data. It’s like a mailbox where the OS acts as the mailman and figures out how to transport the mail. 
+
+Sockets don’t necessarily need an address - e.g. you could have an anonymous socket for communicating between processes on the same computer. In this case, it’s usually held in memory by the OS kernel until the socket is closed. Sockets can also be local-only, and are often bound to a file path so other processes can also go find the socket and send mail to your program.
+
+When you’re writing an HTTP server you *do* want an address so that others can send you mail (HTTP requests), so when you bind to a socket with a specific port you’re telling the OS “if you get any letters to this address, stick them in my mailbox.” By binding your socket to a port, you’re giving it an address that is reachable over the network. Otherwise, you couldn’t have a server that just sits and waits for requests - nobody has a way to send your program any requests!
+
+Here’s a pretty good [YouTube video](https://youtu.be/D26sUZ6DHNQ) that explains sockets simply and in better detail than many developers ever know or care to learn. 
+
+In practice, you usually just need to know that it’s a stream of data handled by the OS, very similar to reading/writing files, and how that data is handled beyond that is not really your application’s business. 
+
+It is helpful to know that sockets usually stay open for a while after you’re done with them (in case the other side has more data to send), and you’re limited in the number of sockets you can create, so it’s prudent to reuse sockets where possible rather than open new ones regularly.
+
+Comment 3:
+Author: AlwaysHopelesslyLost
+Score: 15
+Created UTC: 1767373727.0
+Comment: Somebody previously asked that in this subreddit. You can check out the answers for a decent understanding:
+
+[https://www.reddit.com/r/learnprogramming/comments/12ifgcf/what\_is\_a\_socket\_what\_does\_it\_mean\_that\_a/](https://www.reddit.com/r/learnprogramming/comments/12ifgcf/what_is_a_socket_what_does_it_mean_that_a/)
+
+Comment 4:
+Author: minn0w
+Score: 6
+Created UTC: 1767389731.0
+Comment: A pipe that can be connected to send data through.
+
+Comment 5:
+Author: BigHammerSmallSnail
+Score: 4
+Created UTC: 1767374269.0
+Comment: And afaik it stemmed from old phone switch boards where people had to manually transfer calls from one socket to another.

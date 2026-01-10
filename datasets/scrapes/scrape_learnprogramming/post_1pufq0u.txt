@@ -1,0 +1,78 @@
+Post Title: Am I not cut out for SWE?
+Author: littlepail
+Score: 98
+URL: https://www.reddit.com/r/learnprogramming/comments/1pufq0u/am_i_not_cut_out_for_swe/
+Number of comments: 64
+Created UTC: 1766554823.0
+
+Post Content:
+I am a SWE for 3 years at a “near big tech” company. I got in as a fresh grad and when tech was booming so the bar wasn’t very high. Felt that I got in by sheer luck. 
+
+Academically, I’m not smart. I was generally a B-student back in CS college. But I did enjoy SWE mods like networks, distributed systems, or even learning algorithms. 
+
+Over the past 3 years, my job has been rather chill and I don’t read outside of work. I didn’t learn much while doing frontend for 2 years - my code looks more or less the same because frontend frameworks are very abstracted at my company.
+
+Now that I’m in my 3rd year without promotion, I’ve been looking for jobs. I’m terrible at Leetcode, not good at systems design, my problem-solving skills aren’t great either so I’ve been failing interviews here and there. Sometimes I get frontend interviews, which will test JavaScript or React or even HTML/CSS, where each language/framework has a lot of concepts to learn about. 
+
+I feel that there’s endless to study for and I’m fighting against a bar that is high but I can’t even see where it is.
+
+It’s been demoralising. I’ve moved into a backend team and I’m struggling hard. I have a difficult time grasping backend concepts, navigating backend code and understanding architectural designs. I’m lost 70% of the time during my team’s discussions. Everyone else is more senior than me, but they seem to know way more - it feels like that probably knew more than me when they were at 3 YOE. 
+
+I have a difficult time visualising architectures or technical things when they’re discussing. I learn better when I dive into the code to build something. 
+But it is inherently poor practise to dive into coding without understanding the requirements or the architecture or code itself, which causes me issues down the road. I think my lack of knowledge shows when I implement without understanding the full picture, but I have a difficult time following discussions.
+
+As an engineer, I only like to code. I like it when requirements are clear. I don’t like the ambiguity of having to dig around and define the requirements or scoping problems. I only like to build stuff and see my product coming to life and working.
+
+I think I should be studying harder for Leetcode, Systems design, and read more on whatever frameworks I’m using. 
+
+But now I feel so exhausted just by the thought of studying. It feels endless. I feel that I’m a terrible engineer and that I’m paying the price of not working hard for the past few years. 
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Benand2
+Score: 90
+Created UTC: 1766555385.0
+Comment: If you were terrible then surely they would have gotten you off the payroll by the three year mark. I enjoy the learning process and the figuring things out, did you not enjoy that when you started? What’s changed?
+
+Comment 2:
+Author: Comprehensive_Mud803
+Score: 63
+Created UTC: 1766557153.0
+Comment: You have 2 solutions to your situation:
+
+1: giving up and becoming a yak farmer in the Himalayas
+
+2: read about software development and practice, practice, practice. 
+
+Software engineering is more a matter of experience and knowledge acquired through practice and reading than being booksmart. 
+
+Good luck.
+
+Comment 3:
+Author: exploradorobservador
+Score: 33
+Created UTC: 1766555635.0
+Comment: Tech is tough because we need balance but we also want challenge and growth. There's nothing wrong with a 40 hour work week but sometimes PD is necessary. Thankfully we are in a craft where you can learn on your own and we don't have to do licensing.
+
+You might know more than you think.
+
+Comment 4:
+Author: BKhalissi
+Score: 18
+Created UTC: 1766557112.0
+Comment: There is nothing called endless, all you need is a solid roadmap and a plan to flick one domino after another, at the end you will see yourself doing more than you think, just get one thing done at a time.
+
+Your case is a lot easier than people whose only experience is doing uni exams
+
+Comment 5:
+Author: poply
+Score: 15
+Created UTC: 1766562231.0
+Comment: I had pretty bad imposter syndrome for the first 3-4 years at my first SWE job. Constantly felt like I was on the edge of being fired. Similar issues where I felt everyone knew more than me, constantly felt like tickets weren't fully scoped or properly defined, anxiety about my work, etc. I'm 7 years in and now I actually feel confident to know when to push back when my manager or more senior devs say things I disagree with (and allow them the opportunity to change my mind), or know when I have valuable input to provide. The amount of times I had a "stupid question" about design or architecture, and 4 out of the 5 people on my team had the same question are countless.
+
+I don't know your specific background, but I didn't go to college and get a degree. So what I know, is that I very much prefer working as a software engineer than going back to unload trucks at walmart, cashiering at kmart, or working as a barista.
+
+Ask yourself, if you knew more, if you felt more confident, would you still be asking whether you're cut out for SWE? If it's just a skill and confidence issue then that's where your focus should be. If however, you know being the most competent dev on the team wouldn't change a thing about how you feel, then consider if there's another area within tech that you may be more suited for.

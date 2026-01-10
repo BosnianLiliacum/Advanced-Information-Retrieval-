@@ -1,0 +1,52 @@
+Post Title: What programming habit do you wish you fixed earlier?
+Author: Ok-Message5348
+Score: 301
+URL: https://www.reddit.com/r/learnprogramming/comments/1ptwrcg/what_programming_habit_do_you_wish_you_fixed/
+Number of comments: 88
+Created UTC: 1766503813.0
+
+Post Content:
+I used to jump straight into writing code without thinking things through.  
+No planning, no sketching, no pseudocode. Just start typing and hope for the best.
+
+It felt productive but I spent more time debugging than actually learning.  
+Stepping away from the editor to think about structure first changed a lot for me.
+
+Curious what habits others wish they fixed sooner.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Achereto
+Score: 133
+Created UTC: 1766504131.0
+Comment: I don't think I could have fixed it earlier, because I didn't know about it before, but essentially getting away from the classic OOP way of thinking helped me a lot writing better code that doesn't keep restricting me from implementing new features.
+
+Comment 2:
+Author: nikfp
+Score: 58
+Created UTC: 1766514792.0
+Comment: Embracing pragmatism over dogma. 
+
+OOP is not always wrong or always right. There is no perfect programming language. Javascript isn't always bad. Functional programming isn't only for the nerdy elitists. Monoliths aren't strictly bad or strictly good. Etc.  
+
+Just use the tool that gets the job done, and move on to the next job.
+
+Comment 3:
+Author: pancakeQueue
+Score: 43
+Created UTC: 1766505192.0
+Comment: Not fully reading error messages, stack traces, logs.  It’s easy to skip important details and then spin out or go bug a senior dev.  Slow down, and read each line, there’s more important information in there than you think.
+
+Comment 4:
+Author: Lauris25
+Score: 34
+Created UTC: 1766504016.0
+Comment: Not re-inventing the wheel.
+
+Comment 5:
+Author: mlugo02
+Score: 33
+Created UTC: 1766504652.0
+Comment: Getting away from OOP and the ridiculous notion of pointer ownership

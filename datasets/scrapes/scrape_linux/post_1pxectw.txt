@@ -1,0 +1,104 @@
+Post Title: Wayland is flawed at its core and the community needs to talk about it
+Author: Which_Network_993
+Score: 1505
+URL: https://www.reddit.com/r/linux/comments/1pxectw/wayland_is_flawed_at_its_core_and_the_community/
+Number of comments: 1277
+Created UTC: 1766885014.0
+
+Post Content:
+**TL;DR:** Wayland bakes a paranoid security model directly into its protocol instead of using a sane capability system, breaks tons of important software (RenderDoc, xkill, automation tools, etc), solves threats that basically dont exist in practice, and projects like COSMIC arent even bothering with X11 support anymore. If X11 dies completely, entire workflows and niches are going with it. We either need Wayland to change its philosophy or start from scratch with something new.  
+
+
+I've been daily driving Linux for about 5 years now. Not the longest time compared to some of you, but enough to understand why I'm here. I want to actually my computer. That's the whole reason. Windows kept doing stuff I didn't ask for, and Linux was the answer. So why does it feel like Wayland is trying to bring that same energy back?
+
+My core issue with Wayland is that it confuses security philosophy with protocol design. The developers decided early on that applications should be completely isolated from each other. One window cannot know anything about another window. An application cannot grab pixels from another application. Programs cannot position other programs windows.
+
+And before someone says "but security!", look: this isolation ISN'T a configurable security layer you can adjust based on your needs. Its THE fundamental architecture. When Wayland devs say "we dont support feature X because security", what they really mean is "we designed ourselves into a corner and now we literally cant add this without breaking everything."
+
+You know how actual secure systems work? Capabilities. The Linux kernel does this with stuff like CAP\_NET\_ADMIN or CAP\_SYS\_PTRACE. SELinux does this. AppArmor does this. Even Android, which is paranoid as hell about security, has a granular permission system where you can say "yes this app can do this specific thing."
+
+Wayland could have been designed like a microkernel approach. Minimal core protocol, well defined extension points, capability system where compositors grant specific permissions to specific apps. Want your automation tool to see window positions? Grant it that capability. Screenshot tool needs to capture specific windows? Theres a capability for that.
+
+But no. Instead we got "nobody can do anything unless we specifically designed a portal for it, and even then your compositor might not implement that portal, so good luck lmao." 
+
+And I would shut up if that actually solved something, but it solves problems that dont really exist. Lets talk about what Wayland supposedly protects us from. The classic example is keyloggers: on X11, any application can read keystrokes from any other application. Sounds bad right?
+
+But think about it for a second. If malicious software is running on your system with your user permissions, you already lost. That application can read your files. It can access your browser cookies. It can modify your bashrc to capture passwords. It can install itself as a systemd user service. It can do literally anything you can do.
+
+The idea that preventing it from reading X11 events makes you meaningfully more secure is honestly a fantasy. The actual threat model where X11 isolation matters is basically nonexistent in the real world. Meanwhile, the restrictions that "protect" you from this theoretical threat break actual software that real people use every day. Not bad enough, there are a LOT of actual useful stuff that break down because of this. This is where I get actually frustrated. Here's software that just doesnt work properly under Wayland:
+
+**RenderDoc** is probably the most important graphics debugging tool out there. If you do anything with Vulkan or OpenGL, you need this. It works by injecting into the target process and capturing API calls. Wayland's security model makes this a nightmare. If youre a graphics dev on Linux, this alone should concern you.
+
+**Theres no xkill equivalent.** On X11, window freezes, you run xkill, click on it, its dead. Simple. Been working for decades. On Wayland you literally cannot do this in a compositor agnostic way because apps arent allowed to identify other windows. Each compositor has to roll their own solution, if they even bother. 
+
+**xdotool and automation** are just gone. Completely broken. If you have scripts that automate window management, send keystrokes, position windows programatically.. Wayland says "sorry, security risk" and offers nothing in return. Years of workflow optimization just thrown away.
+
+**Global hotkeys** were broken for years. Discord push to talk? Didnt work. Media keys in some apps? Didnt work. Some of this got "fixed" through portals but its still fragmented and janky.
+
+**Screen recording and streaming** was a disaster for the longest time. OBS needed special backends for each compositor. Some compositors just didnt support it at all. Even now its worse than X11 for a lot of users.
+
+**Color management** only recently got addressed and tons of compositors still dont implement it right. If you do photography or video editing and need accurate colors, Wayland was literally unusable for years.
+
+Compatibility isn't even the real problem. When you bring this stuff up, people always say "just wait, itll get better." And sure, some gaps are closing. XWayland exists. Portals are slowly adding features.
+
+But compatibility isnt my main concern. My concern is that Wayland's architecture means certain things will NEVER work, by design. The developers have said clearly they wont add features they consider security risks, even if users want them, even if users accept the tradeoff.
+
+And heres whats really worrying: new projects arent even bothering with X11 anymore. Look at COSMIC from System76. Its Wayland only. No X11 support, and they've said thats how its gonna stay. This is the future. More and more projects will go Wayland only, X11 support will slowly rot away, and eventually it wont be a choice anymore.
+
+If X11 truly dies and Wayland becomes the only option, entire categories of software and workflows will just cease to exist on Linux. Graphics debugging becomes second class. Automation requires compositor specific hacks forever. Power users who want actual control get told they cant have it.
+
+Look, I use linux because I want to control my computer. This is really what it comes down to for me. I didnt switch to Linux because I wanted my OS to protect me from myself. I switched because I wanted freedom. If I want an application to see other windows, that should be MY decision. If I want to run automation scripts, thats MY choice. If I want to accept a theoretical security risk in exchange for functionality I actually need, that should be up to ME.
+
+Wayland treats users like threats to their own systems. It assumes you cant be trusted to make decisions about what software can do on your own computer. This is Windows mentality. This is Apple mentality. This is exactly what Linux was supposed to be an escape from.
+
+# So what now
+
+I think theres really only two paths forward. Either Wayland fundamentally changes its philosophy and adopts something like capability based permissions, or we need to start working on a new display protocol from scratch that actually learns from both X11 and Wayland's mistakes.
+
+The current path where X11 slowly dies while Wayland remains hostile to power users is not sustainable. We're going to loose important niches. We're going to drive away developers who need functionality Wayland refuses to provide. We're going to make Linux worse in the name of security theater.
+
+X11 had real problems, I'm not denying that. It was old, full of cruft, the rendering model was showing its age. A replacement was probably needed. But Wayland aint it. It prioritized a flawed security model over user freedom, and now we're all paying for it.
+
+I really hope I'm wrong about this. I hope the Wayland devs eventually realize that treating users as adversaries isnt the way. But based on every discussion I've seen, they seem completely committed to this path. And honestly that scares me about where Linux on the desktop is heading, because this looks exactly what Microsoft or Apple do, prohibiting their users from doing stuff in their own operational systems.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: vinciblechunk
+Score: 1970
+Created UTC: 1766885599.0
+Comment: &gt; I want to actually my computer.
+
+
+Please do not the computer 
+
+Comment 2:
+Author: ashleythorne64
+Score: 686
+Created UTC: 1766885414.0
+Comment: I don't think you understand what "\[blank\] is flawed at its core" means. The things you mention are not difficult to do under Wayland, they just haven't been implemented for ideological reasons and for failing to achieve consensus. Desktops can and do implement protocols that "bypass" such security features, such as wlroots allowing unprivileged programs to access more information about other windows and to screen record.
+
+Xorg is flawed at its core. It's such an old protocol and implementation with so much history and baggage that it makes it difficult to change and fix its issues without breaking other things. That makes it a poor fit for future use, even if you prefer its more lax security.
+
+Comment 3:
+Author: shroddy
+Score: 591
+Created UTC: 1766897962.0
+Comment: Wayland alone does not magically make your pc more secure, that is correct. But with X11, it is not possible to make secure app isolation at all. 
+
+I do not really understand what exactly is the difference between a portal and a capability? Both need to be implemented before a program can use them, with both, the program needs to ask if it is allowed to do something and only if the user permits it, it can do it.
+
+You said you want to have the choice to allow an application to see other windows, or to run automation scripts, and Wayland allows it. But YOU have the choice to choose which programs can do it, while on X11, you do NOT have the choice, every program can do everything, take it or leave it.
+
+Comment 4:
+Author: thephotoman
+Score: 463
+Created UTC: 1766889716.0
+Comment: The Wayland spec isn’t paranoid. Bad actors really out to get us all.
+
+Comment 5:
+Author: Hectamus_
+Score: 387
+Created UTC: 1766895004.0
+Comment: You guys use a display server protocol? I just shove the DisplayPort cable in my ass and imagine what my screen is showing

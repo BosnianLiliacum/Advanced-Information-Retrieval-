@@ -1,0 +1,52 @@
+Post Title: How do you tell the time without a system bar?
+Author: Shaneiizm
+Score: 14
+URL: https://www.reddit.com/r/archlinux/comments/1pn4rmr/how_do_you_tell_the_time_without_a_system_bar/
+Number of comments: 60
+Created UTC: 1765796956.0
+
+Post Content:
+I'm looking for the best way to add a clock on a Wayland system without the use of a bar.  
+I use Hyprland and have btop open on a special workspace to pull up whenever I need to check my computer's performance, and I was thinking I could put a clock there as well, but I don't know what program would be best.  I'm also open to the idea of having the time shown over the wallpaper, but only as an extra and not to be used as my primary way to tell the time.
+
+Also, to anyone else here who doesn't use a bar, what do you do for the time, and other info?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: nic__007
+Score: 40
+Created UTC: 1765797401.0
+Comment: Btop has a clock up top
+
+Comment 2:
+Author: G0ldiC0cks
+Score: 18
+Created UTC: 1765797647.0
+Comment: Have you considered a watch? 
+
+-n 1 time should do it. 
+
+(Hopefully this gives you a chuckle and you don't just think I'm being a smart ass. 😊)
+
+Comment 3:
+Author: keirakeekee
+Score: 18
+Created UTC: 1765804844.0
+Comment: ```
+# tiny popup with exact date/time
+bind = SUPER, T, exec, notify-send "$(date '+%H:%M:%S %a %y-%m-%d')"
+```
+
+Comment 4:
+Author: intulor
+Score: 12
+Created UTC: 1765805461.0
+Comment: If the skies are clear, I take off my pants, lie down, and make a sundial
+
+Comment 5:
+Author: Xu_Lin
+Score: 7
+Created UTC: 1765797505.0
+Comment: Just look at my phone pretty much

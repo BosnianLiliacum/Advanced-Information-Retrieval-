@@ -1,0 +1,59 @@
+Post Title: Can not mount USB. USB storage not present in lsblk, but present in lsusb and seems fine in dmesg -w
+Author: Filipp_Krasnovid
+Score: 10
+URL: https://www.reddit.com/r/archlinux/comments/1pwb8il/can_not_mount_usb_usb_storage_not_present_in/
+Number of comments: 22
+Created UTC: 1766773738.0
+
+Post Content:
+Hello! So as the title says, I can not see my usb storage devices in lsblk, but they are present in lsusb, and there are no errors in dmseg.
+
+I know it often happens when updated the kernel without reboot, but i did reboot, my system is fully updated, even installed linux headers via pacman additionally (i am not super knowledgeable yet, maybe it has nothing to do with that), and I really can not find an answer to this problem on the internet.
+
+I am using default 6.18.2-arch2-1 kernel. And it happens to several USB storage devices, that connect fine on other (windows) systems. I genuinely have no idea how to fix this anymore. Please, if someone knows what could be the reason or what should i look at, I will appreciate a lot!
+
+Attaching screenshots of outputs of the lsblk etc in the comments. (The device here is Supernote) Also found few errors in the journal including something about bios, but they don't seem to be connected to USB problem, but again, I am not sure.
+
+**EDIT** 
+
+So I tried to mount devices which are not only storage devices: my ebooks and phone (I have lost my thumb stick somewhere, so i could not check). So a good person here told me that i need to use Media transfer protocol for this type of devices. I went with android transfer protocol - and, indeed, I can mount my devices now! Even tho I haven't figured out if i can automount them somehow, like with Udiskie, it still works and very simple!   
+Thank you to people trying to help!
+
+&gt;[Comment](https://www.reddit.com/r/archlinux/comments/1pwb8il/comment/nw2rat7/)  
+by[u/Filipp\_Krasnovid](https://www.reddit.com/user/Filipp_Krasnovid/) from discussion  
+in[archlinux](https://www.reddit.com/r/archlinux/)Comment  
+ byu/Filipp\_Krasnovid from discussion  
+ inarchlinux
+
+
+Top 4 comments:
+
+Comment 1:
+Author: lritzdorf
+Score: 13
+Created UTC: 1766779787.0
+Comment: Based on your other comments, especially the note that this is an e-reader thingy and that the same issue occurs with your Google Pixel: both devices are likely using the MTP protocol for file transfer. This is different from the USB mass storage interface, which is why you can't just mount them like you would a flash drive.
+
+See https://wiki.archlinux.org/title/Media_Transfer_Protocol for general information. I've personally had good luck with Android File Transfer (section 2.1 of that wiki page) to communicate with my Pixel. Despite the name, it should work with anything MTP, not just Android phones.
+
+Comment 2:
+Author: forbiddenlake
+Score: 3
+Created UTC: 1766775951.0
+Comment: A Supernote what? Not familiar with them but the Supernote Nomad appears to be an e-notebok, and you're getting an input device, so, why do you expect to see storage on it ?
+
+Comment 3:
+Author: Filipp_Krasnovid
+Score: 1
+Created UTC: 1766774018.0
+Comment: [https://imgur.com/a/JdEeOMF](https://imgur.com/a/JdEeOMF)
+
+**Screenshots**
+
+Comment 4:
+Author: agmatine
+Score: 1
+Created UTC: 1766814021.0
+Comment: &gt; Even tho I haven't figured out if i can automount them somehow, like with Udiskie
+
+It's called `/etc/fstab`.

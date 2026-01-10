@@ -1,0 +1,42 @@
+Post Title: Nvidia is reportedly bringing official Linux support to GeForce Now soon, not just for Steam Deck
+Author: Tiny-Independent273
+Score: 1321
+URL: https://www.pcguide.com/news/nvidia-is-reportedly-bringing-official-linux-support-to-geforce-now-soon-not-just-for-steam-deck/
+Number of comments: 177
+Created UTC: 1767613797.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ObjectOrientedBlob
+Score: 782
+Created UTC: 1767614248.0
+Comment: Yay, now Linux users can rent hardware and own nothing.
+
+Comment 2:
+Author: MrHighVoltage
+Score: 300
+Created UTC: 1767614440.0
+Comment: Native app =&gt; shitty react javascript embedded chrome stuff. Instead of a blazing fast QT/GTK app that literally runs on a Nintendo DS (see Moonlight)
+
+Comment 3:
+Author: rainbowroobear
+Score: 91
+Created UTC: 1767614414.0
+Comment: suppose these means they don't have to fix their drivers for consumers.
+
+Comment 4:
+Author: CandlesARG
+Score: 55
+Created UTC: 1767615655.0
+Comment: Remember don't buy it
+
+Comment 5:
+Author: iucatcher
+Score: 48
+Created UTC: 1767621164.0
+Comment: fuck cloud services no matter how good they may work, you'd be better off dual booting if you really need access to a certain game, dont give this stuff more money.

@@ -1,0 +1,106 @@
+Post Title: New Windows refugee. GRUB launcher issues. Grub is slowly populating with new kernels and defaulting to launch the latest one, but no system settings transfer in the newest kernel. No internet, bluetooth, etc. It's a broken version of Linux. How to transfer all the settings?
+Author: synapticrelease
+Score: 17
+URL: https://www.reddit.com/r/linuxquestions/comments/1q4q4d2/new_windows_refugee_grub_launcher_issues_grub_is/
+Number of comments: 23
+Created UTC: 1767630146.0
+
+Post Content:
+The title is basically the question. I started off in 16.14. Set up all my monitor settings, bluetooth, router settings, etc. Never had the GRUB loader at all as I don't have dual boot as an option. Then a couple days later I'm assuming a new version rolled out and then I was presented with what is in my screenshots. It defaults to the newest version but when I log in. Everything is broken and I can't even manually re-setup anything over again. No bluetooth which means no mouse. I can't even plug in a wired mouse and try to set bluetooh up. Bluetooth is just fully disabled.
+
+I don't know how to remedy this. I'd like to just load into the newest version but I need all my settings to go along with it. I don't need GRUB at all.
+
+[Screenshot of GRUB loader](https://imgur.com/SkLYfdf)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Cr0w_town
+Score: 6
+Created UTC: 1767630861.0
+Comment: what you see in the grub are “save points” for each major update 
+they are there because if an update breaks you can roll back(without loosing data)
+
+grub is useful 
+it’s not the same as dual booting 
+
+it seems like the version that has broken bluetooth and etc is broken or bluetooth was disabled so you shouldn’t boot into it 
+
+grab wired keyboard and mouse(or connect the ones you have if they have such option) and check if bluetooth is disabled 
+
+
+
+you can choose an older kernel and boot into it so you can keep using your computer 
+
+if a version breaks generally i wait like a few days and then update it usually get resolved
+
+when you boot into an older kernel is bluetooth fine?
+
+have you tried doing a cold restart(unplug pc from the outlet and then press the power button for a few seconds and connect it back) that sometimes gets wifi and bluetooth to work
+
+Comment 2:
+Author: greenFox99
+Score: 5
+Created UTC: 1767637735.0
+Comment: We'll break things down.
+
+You are using Fedora 42 with KDE Desktop.
+
+Grub is not the problem, it's just a way to pick which system settings you want to boot (latest kernel, other OS, ...) and it helps sometimes, like in your case your new kernel is not working.
+
+First make sure the kernel modules are loaded for your Wireless card. From the output of `lspci` you posted, the interesting line is:
+
+    04:00.0 Network controller: Intel Corporation Wi-Fi 5(802.11ac) Wireless-AC 9x6x [Thunder Peak] (rev 29)
+
+  
+You need to know which kernel module it uses. You can know this with:
+
+    # On the old kernel
+    lspci -ks 04:00.0
+
+  
+You can check if the module is loaded with the \*\*newer\*\* kernel:
+
+    # On the new kernel
+    lsmod | grep &lt;module_name&gt;
+
+If the module is missing with the new kernel, you can load it manually (it wont persist after a reboot) with:
+
+    # On the new kernel
+    modprobe &lt;module_name&gt;
+
+  
+Then test if your wireless is working. If that's the case we'll need to force this module to load.
+
+If you can give us the name of the kernel module that could help.
+
+Comment 3:
+Author: Peruvian_Skies
+Score: 2
+Created UTC: 1767630836.0
+Comment: 1) You actually do need GRUB (or systemd-boot or rEFInd or another equivalent) in order to boot your kernel. It's just that when there's only a single entry in the GRUB menu, the whole thing is hidden by default. It's still working in the background. Don't remove GRUB or you'll break your system (unless you've prooerly replaced it with an alternative first). GRUB is not your problem. 
+
+2) There haven't been any regressions that I've heard of with recent kernel versions so your bluetooth, etc hardware should work... If it doesn't, then does it work when you boot into an older kernel? 
+
+3) If things work with an older kernel, there are a few explanations. Something might have gone wrong during the installation of the new kernel when you updated your system, or it could be a problem with the initrd generation, with rebuilding external modules, or even an honest-to-god regression, though that's unlikely.
+
+4) If things don't work even in the older kernel that used to work before, that means something else is broken. We'd need to poke around to find out what.
+
+So my first question to you is, if you boot your older kernel, does everything work? And my second question is, did you install any modules (Windows calls them "drivers") for your Bluetooth, network, etc hardware specifically, or was everything working with just the modules that come installed with the kernel?
+
+Comment 4:
+Author: daveysprockett
+Score: 1
+Created UTC: 1767630494.0
+Comment: I can't see the screen dump as I'm UK based where imgur isn't available. 
+
+But suggest to start with that you use the grub menu to select an old kernel that does work.
+
+Then attempt to understand what's changed and missing from the new kernel configuration.
+
+Comment 5:
+Author: sniff122
+Score: 1
+Created UTC: 1767630357.0
+Comment: This sounds like it's driver related not settings. What WiFi and Bluetooth card do you have?

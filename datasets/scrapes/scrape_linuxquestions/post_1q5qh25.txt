@@ -1,0 +1,54 @@
+Post Title: Why people are so interested in the command that irreversibly deletes all the files on the Linux system?
+Author: JailbreakHat
+Score: 28
+URL: https://www.reddit.com/r/linuxquestions/comments/1q5qh25/why_people_are_so_interested_in_the_command_that/
+Number of comments: 155
+Created UTC: 1767723783.0
+
+Post Content:
+I wonder why there are a lot of questions here about that command and what it does? It simply deletes all the files including your personal data and corrupts the system requiring a reinstall. You lose all your data as well. I also don’t get why there are people that tell others to run this command even as a joke? I won’t give the command but most of you should have understood what command I am talking about.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Impressive_Barber367
+Score: 59
+Created UTC: 1767724307.0
+Comment: Because if you memeify it and point it out as dangerous new users get the meme and understand what it does should they ever need to use it.
+
+Kind of like how Reddit automatically covers your password: \*\*\*\*\*\*\*
+
+Comment 2:
+Author: u-give-luv-badname
+Score: 55
+Created UTC: 1767725633.0
+Comment: Windows had the same dynamic back in the 2000s. You were told Windows had a hidden server, the file was `hidserv.dll` and you should delete it.
+
+Deleting it put you in a world of hurt because:
+
+&gt;hidserv.dll is a core Microsoft Windows system file for the Human Interface Device Service, enabling your computer to recognize and use devices like keyboards, mice, touchpads, and multimedia hotkeys
+
+So this trickery isn't just Linux.
+
+Comment 3:
+Author: Shap6
+Score: 21
+Created UTC: 1767723862.0
+Comment: its just a meme. like back in runescape telling people to press alt+f4
+
+Comment 4:
+Author: FastBodybuilder8248
+Score: 15
+Created UTC: 1767724996.0
+Comment: It’s a meme because it succinctly demonstrates the power a user has over their system in Linux and the risk that poses, while at the same time acting as a parable about trusting strangers on the internet
+
+Comment 5:
+Author: jetblackswird
+Score: 11
+Created UTC: 1767729046.0
+Comment: So it's an old one. Arguably older than the name "meme"
+The mistake originated more from rm -rf ./* Where you delete everything in your current directory down. As root. (Before sudo it was more common to log in as root or run su). But forgot you'd moved to / at some point. Or typo'd / while thinking what you were trying to delete.
+
+The ultimate point is UNIX/Linux gives you full control. No hand rails. To do what you want. 
+Including completely fuck up your system.

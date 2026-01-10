@@ -1,0 +1,116 @@
+Post Title: Why is my boot time so slow? Is it supposed to be like this?
+Author: Exxentrix01
+Score: 42
+URL: https://www.reddit.com/r/archlinux/comments/1pmuzj9/why_is_my_boot_time_so_slow_is_it_supposed_to_be/
+Number of comments: 50
+Created UTC: 1765762507.0
+
+Post Content:
+Edit (Solution): So apparently, the issue was that I was booting with my wireless mouse connected to the computer, which made the computer spend a lot of time trying to identify the device. The time drastically went down when I unplugged the device and instead connected it after booting. Thanks to u/SheriffBartholomew for the fix.
+
+So I'm a beginner to arch linux, and I recently dualbooted arch with Windows. I was wondering why my total boot time is really slow.
+
+This is the output from my systemd-analyze.
+
+Startup finished in 7.125s (firmware) + 2.918s (loader) + 873ms (kernel) + 1.267s (initrd) + 11.442s (userspace) = 23.627s
+
+my systemd-analyze blame shows this
+
+9.873s dbus-broker.service
+
+8.979s efi.mount
+
+it's the dbus-broker.service and efi.mount taking the most time.
+
+What do you guys think could be the problem?
+
+P.S I do have noauto,x-systemd.automount in my /etc/fstab, as well as 0 0 (disabled fsck)
+
+My output for systemd-analyze critical chain
+
+[graphical.target](http://graphical.target/) [u/11](https://www.reddit.com/user/11/).441s
+
+└─gdm.service [u/11](https://www.reddit.com/user/11/).431s +9ms
+
+└─systemd-user-sessions.service [u/11](https://www.reddit.com/user/11/).406s +24ms
+
+[└─network.target](http://xn--network-194drg.target/) [u/11](https://www.reddit.com/user/11/).405s
+
+└─NetworkManager.service [u/11](https://www.reddit.com/user/11/).273s +132ms
+
+[└─basic.target](http://xn--basic-309bof.target/) [u/11](https://www.reddit.com/user/11/).272s
+
+└─dbus-broker.service [u/1](https://www.reddit.com/user/1/).381s +9.873s
+
+└─dbus.socket [u/1](https://www.reddit.com/user/1/).377s +28us
+
+[└─sysinit.target](http://xn--sysinit-194drg.target/) [u/1](https://www.reddit.com/user/1/).377s
+
+└─systemd-backlight@leds:dell::kbd\_backlight.service [u/11](https://www.reddit.com/user/11/).245s +47ms
+
+└─system-systemd\\x2dbacklight.slice [u/510ms](https://www.reddit.com/user/510ms/)
+
+└─system.slice
+
+└─-.slice
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SheriffBartholomew
+Score: 19
+Created UTC: 1765773340.0
+Comment: Do you use a wireless mouse? It'll hang trying to identify the USB dongle if the mouse isn't active. I solved it by always activating the mouse by moving it before booting.
+
+Comment 2:
+Author: ang-p
+Score: 14
+Created UTC: 1765765000.0
+Comment: Post a legible version of `systemd-analyze plot &gt; my-slow-boot.png` on a globally visible picture hosting platform
+
+Comment 3:
+Author: ropid
+Score: 6
+Created UTC: 1765768216.0
+Comment: Hmm, it's just 29ms for dbus-broker.service in systemd-analyze blame for me.
+
+You can try using systemd-analyze critical-chain with a service name as added argument to maybe get more details, example:
+
+    $ systemd-analyze critical-chain dbus-broker.service 
+    ...
+    dbus-broker.service +29ms
+    └─dbus.socket @2.364s +30us
+      └─sysinit.target @2.361s
+        └─systemd-binfmt.service @1.368s +993ms
+          └─proc-sys-fs-binfmt_misc.mount @2.343s +17ms
+            └─proc-sys-fs-binfmt_misc.automount @346ms
+
+You could look around `journalctl -b` to see if dbus-broker maybe printed something interesting while it was slow to start up.
+
+About your /efi mount, if those `noauto,x-systemd.automount` mount options you are using are not making it so you can log in without having to wait for it, you can use `auto,nofail` options instead. A nofail option will make it so the login screen won't depend anymore on that mount. The total boot time number won't decrease from this, but the total boot time doesn't really matter if you can already log in before that.
+
+About being able to log in and the total boot time... it might be interesting to look at just the point where your graphical login screen starts up:
+
+    $ systemd-analyze critical-chain display-manager.service
+    ...
+    lightdm.service +41ms
+    └─systemd-user-sessions.service @2.429s +6ms
+      └─nss-user-lookup.target @2.484s
+        └─systemd-userdb-load-credentials.service @1.368s +4ms
+          └─local-fs.target @1.366s
+            └─...
+
+There might be stuff for you that pushes the total boot time number up but won't delay the display manager start-up so won't really matter for how it feels for you as a user at boot because you'll already be able to log in and start using your desktop. I came up with this line of thought because my boot time here is totally atrocious and there's nothing I can do because I need that particular service that pushes it up for me.
+
+Comment 4:
+Author: [deleted]
+Score: 3
+Created UTC: 1765772787.0
+Comment: If we can just shave off 5 seconds from those boot times, in 50 years, you'll have saved a good 10 minutes of your life.
+
+Comment 5:
+Author: forbjok
+Score: 2
+Created UTC: 1765764975.0
+Comment: That does look absurdly slow. Are you running it from a HDD?

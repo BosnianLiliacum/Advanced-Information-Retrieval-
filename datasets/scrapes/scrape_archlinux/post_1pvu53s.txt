@@ -1,0 +1,68 @@
+Post Title: gopac: A cozy, Gruvbox-themed TUI for Arch Linux package (Official + AUR) searching and installing
+Author: Forsaken_Review_3919
+Score: 11
+URL: https://www.reddit.com/r/archlinux/comments/1pvu53s/gopac_a_cozy_gruvboxthemed_tui_for_arch_linux/
+Number of comments: 7
+Created UTC: 1766719012.0
+
+Post Content:
+Hi everyone!
+
+I wanted to share a project I’ve been working on called **gopac**. It’s a TUI for Arch Linux package management built with Go and the [Bubble Tea](https://github.com/charmbracelet/bubbletea) framework.
+
+I felt that existing tools were either too complex or lacked a certain "warmth," so I built gopac to be fast, functional, and visually pleasing (Gruvbox fans, this one is for you!).
+
+# Features:
+
+* Unified Search: Search both official repositories and the AUR simultaneously.
+* Smart Sorting: Puts exact matches and installed packages at the top.
+* Detailed Views: Quickly see maintainers, votes, versions, and dependencies.
+* Automatic AUR Helper Detection: Works out of the box with `paru`, `yay`, `pikaur`, `aura`, and `trizen`.
+* Built for Speed: Written in Go to keep things snappy.
+
+# Installation
+
+You can grab it from the AUR:
+
+    yay -S gopac  # or paru -S gopac
+
+Or build from source:
+
+    git clone https://github.com/the-daonm/gopac.git
+    cd gopac &amp;&amp; go build
+
+# Support the Project
+
+If you find this useful, I would really appreciate your support:
+
+* Star the repo on GitHub: [https://github.com/the-daonm/gopac](https://github.com/the-daonm/gopac)
+* Vote on AUR: [gopac](https://aur.archlinux.org/packages/gopac/) | [gopac-bin](https://aur.archlinux.org/packages/gopac-bin/)
+
+I’d love to hear your feedback or feature requests!
+
+
+Top 4 comments:
+
+Comment 1:
+Author: ArshRocks
+Score: 2
+Created UTC: 1766721597.0
+Comment: Let me try it now and I'll get back to you
+
+Comment 2:
+Author: x1-unix
+Score: 2
+Created UTC: 1766737822.0
+Comment: pacseek also a good option
+
+Comment 3:
+Author: ReferenceFit25
+Score: 1
+Created UTC: 1766832765.0
+Comment: looks nice! i did notice that when using aura as the aur-helper it does not use the correct -A flag for AUR packages. apart from that it seems very nice so far. might be nice to have a hotkey overlay ala micro, or at least a button to see the hotkeys.
+
+Comment 4:
+Author: LoneRider11
+Score: 1
+Created UTC: 1766859121.0
+Comment: Is fzf style interactive search planned to be implemented?

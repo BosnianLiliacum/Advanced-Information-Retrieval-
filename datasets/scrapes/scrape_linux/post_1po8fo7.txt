@@ -1,0 +1,62 @@
+Post Title: As a (now ex) Windows user:I finally understand why People love the terminal
+Author: TheGoodSatan666
+Score: 270
+URL: https://www.reddit.com/r/linux/comments/1po8fo7/as_a_now_ex_windows_useri_finally_understand_why/
+Number of comments: 99
+Created UTC: 1765907195.0
+
+Post Content:
+Alrighty, I switched to Linux around 2 months ago and as soon as I did that I truely understood the love that the terminal gets.
+
+So this is how it started: I switched to Windows 11 as soon as it released since I wasn't a big fan of Windows 10 anymore... I actually really loved Windows 10 around the 2017 to 2019 mark. I thought it was a great operating system and I would honestly say that it was one (If not the best) Windows ever made. But around 2020 it started going downhill, there were more and more ads included into the operating system, and more features were integrated that I thought were just useless.
+
+Little did I know that my biggest nightmare started with the switch to Windows 11...
+
+Omg I literally hate everything about Windows 11... I hate how it looks with it's overly corporate soulless design, (Can't say that Windows 10 was super great either but it had cool and interesting things, like the fact that the original "Hero" wallpaper of Windows 10 were 4 metal tubes that they shot light through to create the "Windows logo effect". And it was generally more interesting to look at. The metro tiles also gave Me XBOX 360 vibes.
+
+But I also hate the layout of Windows 11. The start menu is just a bunch of random apps cluttered together and the settings panel is the worst thing I've ever seen.
+
+And that is exactly what made Me realize that the terminal is great... The settings panel... Or should I say the setting panelS. I wanted to change something about my power settings since my PC wouldn't shut down completely when I would turn it off using the Windows start menu.
+
+So I simply went into the Windows settings and searched for "Power" only to come to basically nowhere. Then I clicked around the Windows settings for around 20 minutes without getting anywhere. Then I went into the stupid outdated Control Panel and clicked around it's horrible trash UI for another 10 minutes before FINALLY finding the setting I was looking for.
+
+And I also only found it because I just started searching on Google where I can change that setting... And then I got to an article that first tells Me why the feature was implemented, and why it has problems, and why You should turn it off, before it then tells Me where to change the setting in way to many steps.
+
+Then I was testing around with Fedora a bit and wanted to change a setting (Can't really remember what it was) but I could change it within a couple of seconds using just the Terminal. That was where I realized that the terminal might not be as fast for copy and pasting files (Except maybe You do it in bulk or with a complex file structure) but that the Terminal is great for so many other things.
+
+I still have trauma from the Windows Control Panel and it really pushed Me over the last ledge to switch to Linux.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Fantastic-Resist-545
+Score: 100
+Created UTC: 1765907521.0
+Comment: That's the difference in the design philosophy between the two in a nutshell, isn't it? Windows (Mac is worse on this) wants you to have the experience it wants you to have and doesn't trust you to know what you want. Linux is happy to say "you're an adult, make your own decisions" as you delete your system files.
+
+Comment 2:
+Author: _whats_that_meow_
+Score: 93
+Created UTC: 1765907751.0
+Comment:     cowsay right on
+
+Comment 3:
+Author: bubblegumpuma
+Score: 63
+Created UTC: 1765927871.0
+Comment: The way I phrased it to someone is, "It's a lot easier to tell the computer what to do than to find the button that tells the computer what I want it to do sometimes".
+
+You can use this same argument with Microsoft/Windows and Powershell, but the Linux side is a lot better documented (even if finding the good documentation can be hard) and generally changes less.
+
+Comment 4:
+Author: [deleted]
+Score: 20
+Created UTC: 1765907466.0
+Comment: Difference between Linux and Windows:  Terminal is used for installation and productivity. Command Prompt is used to temporarily fix bugs that eventually return.
+
+Comment 5:
+Author: BranchLatter4294
+Score: 8
+Created UTC: 1765908293.0
+Comment: You know, Windows has a terminal too, right?

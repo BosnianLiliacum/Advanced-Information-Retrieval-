@@ -1,0 +1,66 @@
+Post Title: Is Arch still a good fit if I only update every 2–3 months?
+Author: TrapNouz
+Score: 70
+URL: https://www.reddit.com/r/archlinux/comments/1q1oy4w/is_arch_still_a_good_fit_if_i_only_update_every/
+Number of comments: 54
+Created UTC: 1767327763.0
+
+Post Content:
+Hey everyone,
+
+I’ve been using Arch Linux for a while and really enjoy it — especially pacman, the AUR, and how lightweight it feels with KDE.
+
+My situation is that my PC is often left untouched for about 2–3 months at a time, so I only update during specific maintenance windows rather than regularly.
+
+My current routine looks like this:
+	•	I run a full pacman -Syu before leaving
+	•	While I’m away I don’t update at all (no partial upgrades)
+	•	When I return I:
+	•	refresh the keyring
+	•	read Arch News for anything in the last few months
+	•	run pacman -Syu
+	•	review .pacnew files with pacdiff
+	•	clean orphans if needed
+	•	I mainly use KDE, Steam, Flatpak apps, very few AUR packages, and I don’t kernel-hop or do deep system tweaks
+	•	I also keep Timeshift snapshots
+
+From your experience, is this update model still considered safe and reasonable for Arch, or would another distro fit this lifestyle better?
+
+Thanks for any insight!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: takethecrowpill
+Score: 74
+Created UTC: 1767328122.0
+Comment: Should be fine
+
+Comment 2:
+Author: aeiedamo
+Score: 41
+Created UTC: 1767328411.0
+Comment: &gt;read Arch News for anything in the last few months
+
+This is the most important part. You will be fine as long as you keep doing these practises.
+
+Comment 3:
+Author: MutualRaid
+Score: 16
+Created UTC: 1767333069.0
+Comment: You're already following a lot of best practices, sounds like you'll be fine - you're still benefiting from using Arch on the occasions you do boot it up and update.
+
+Comment 4:
+Author: agendiau
+Score: 14
+Created UTC: 1767332167.0
+Comment: No one is going to force you to update more frequently than you are comfortable with, this isn't Windows. I would suggest not going too long between updates, just for security reasons. Personally I update once a week, on Friday night because I use the machine for work. Once a month would be acceptable as well but ultimately it's your computer and your comfort level that matters here.
+
+Comment 5:
+Author: mathlyfe
+Score: 9
+Created UTC: 1767341889.0
+Comment: &gt;When I return I: • refresh the keyring • read Arch News for anything in the last few months • run pacman -Syu • review .pacnew files with pacdiff • clean orphans if needed
+
+You're doing exactly all the right things. Most don't even review pacnew files (they should) or clean orphans and have no issues. It doesn't matter if you use AUR packages or whatever, as long as you keep doing what you're doing you shouldn't have any problems.

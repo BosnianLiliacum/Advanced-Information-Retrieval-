@@ -1,0 +1,44 @@
+Post Title: How realistic is it to give a child (around 7 years old) a computer/laptop with only Linux on it
+Author: ad_396
+Score: 415
+URL: https://www.reddit.com/r/linux/comments/1po3y5q/how_realistic_is_it_to_give_a_child_around_7/
+Number of comments: 451
+Created UTC: 1765896882.0
+
+Post Content:
+keep in mind parents have a finance/medicine background with no tech knowledge and probably never heard of Linux before. i can obviously help him but i see him maybe twice a month, so i cannot be anything like a mentor or a guide.
+
+i really see potential already from the way he acts and the way he approaches problems and how he solves them. his parents trust me with him but I'm not available enough end he has to be somewhat independent
+
+
+Top 5 comments:
+
+Comment 1:
+Author: vagrantprodigy07
+Score: 505
+Created UTC: 1765897062.0
+Comment: It's completely feasible. My kid's first two computers were linux based, and he did fine with them. If it's not your kid though, it may not be a good idea.
+
+Comment 2:
+Author: korlo_brightwater
+Score: 226
+Created UTC: 1765897197.0
+Comment: Sure, why not?  He's 7, so most OSes will be new to him anyway.  Show him some basics and then let him explore the rest, just like you would on Windows, iOS or Android.
+
+Comment 3:
+Author: i860
+Score: 220
+Created UTC: 1765898534.0
+Comment: The children yearn for the command line.
+
+Comment 4:
+Author: Zeikos
+Score: 180
+Created UTC: 1765897575.0
+Comment: My philosophy is no desktop environment until 13, and no internet connection until they install wi-fi drivers by themselves /s
+
+Comment 5:
+Author: flatline000
+Score: 114
+Created UTC: 1765897088.0
+Comment: My kids have done most of their computer use at home on a Lenovo Thinkpad running Ubuntu for the last 10+ years. We've never had any problem with it.

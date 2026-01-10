@@ -1,0 +1,55 @@
+Post Title: My 6 year old son wants to get started in programming/coding. Where should I start him?
+Author: Dry_Nail5933
+Score: 103
+URL: https://www.reddit.com/r/learnprogramming/comments/1prh7gd/my_6_year_old_son_wants_to_get_started_in/
+Number of comments: 128
+Created UTC: 1766245235.0
+
+Post Content:
+He is taking an in person after school class to learn about coding and programming. I want to teach him more at home but first I gotta teach myself. Where should him and I start? I’m an electrician by trade and I love computers and have a nice pc setup at home. My best experience at anything technical with my computer is using the control panel and messing with IP address lol. Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Competitive-Party846
+Score: 77
+Created UTC: 1766245363.0
+Comment: Scratch
+
+Comment 2:
+Author: javiperales
+Score: 71
+Created UTC: 1766246314.0
+Comment: I am a programming teacher in middle and high school. I tried teaching programming with Scratch or block languages ​​without success; the children never made that leap the brain makes when learning programming. In the end, I started with Basic and PseInt, and that was the way they found a challenge and understood programming structures. Since all languages ​​are written, this allowed them to learn new languages ​​like Python, Java, and C++. Some of them are working in mayor industries here in México.
+
+Comment 3:
+Author: ReiOokami
+Score: 16
+Created UTC: 1766245409.0
+Comment: Scratch: [https://scratch.mit.edu/](https://scratch.mit.edu/)
+
+Comment 4:
+Author: Sad-Region9981
+Score: 15
+Created UTC: 1766245693.0
+Comment: At that age the goal is not syntax, it is thinking. You want things that feel like play and quietly teach logic, sequencing, and problem solving. If it feels like school, it will backfire.
+
+Great starting points are visual and game based. Scratch is excellent because kids can make characters move, talk, and interact without typing code, and adults can learn alongside them easily. ScratchJr is even simpler if he prefers tablet style interaction. [Code.org](http://Code.org) has short game like challenges using familiar characters that build logic step by step.
+
+If he likes puzzles, Lightbot teaches real programming concepts without feeling technical. For something more open ended and creative, Minecraft Education Edition introduces coding through building and experimentation.
+
+For you, learn just enough to stay one step ahead. Follow along with what he is doing, ask him to explain his thinking, and let him lead. The biggest win is associating coding with curiosity and fun, not correctness.
+
+Comment 5:
+Author: Anonymous_Coder_1234
+Score: 12
+Created UTC: 1766246665.0
+Comment: I'm going to say something controversial. I have a Bachelor of Science in Computer Science. I wrote code for big companies including Amazon. I don't think kids need to learn how to code. I mean if they want to learn how to play around with animation games and animation game loops with the Scratch visual programming language that's fine, but I don't think kids need to become professional level as kids (and by "kids" I mean under the age of 18 or 19).
+
+When you get to a Computer Science program like say Harvard Computer Science, there are kids in it who have been coding since elementary school and there are kids where that is their first experience. Either way, they ultimately end up in the same sorts of jobs. Like a kid could have been coding since elementary school, but if he messes up badly on the coding interview and the kid who started coding in university doesn't, the kid who started coding in university will get the coding job. Nobody cares when you started. It's the same interview for everyone.
+
+
+The important stuff is more like mathematical, analytical, computational thinking. People who do well on the coding interview tend to also do well on math tests like the SAT Math section and the Math Olympiad. All of coding fundamentals and Object Oriented Programming (OOP) can be taught in 3 successive university courses. After that you're not REALLY learning coding, you're learning other stuff in the Computer Science program like Operating Systems (OS), Databases (SQL vs NoSQL), Team Project, etc. It's totally fine to cover the material in university rather than at a young age.
+
+Ultimately the stuff that gets in the way in real programming jobs often isn't actually coding ability. It's other stuff like teamwork, people skills, social skills, delegation, team leadership, disabilities (ex. cognitive issues or disabilities, head injuries causing brain issues, neurological/psychiatric stuff), corporate politics, office politics, corporate corruption (ex. the boss is a psychopath/sociopath and is secretly taking a cut of some dishonest project deal), etc. Focus on making people functional, social, well-rounded people. Coding isn't that hard to learn later.

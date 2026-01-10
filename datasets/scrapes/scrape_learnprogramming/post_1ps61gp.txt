@@ -1,0 +1,109 @@
+Post Title: What exactly does "pythonic" mean, and how can I write more pythonic code?
+Author: Strong_Extent_975
+Score: 109
+URL: https://www.reddit.com/r/learnprogramming/comments/1ps61gp/what_exactly_does_pythonic_mean_and_how_can_i/
+Number of comments: 36
+Created UTC: 1766322189.0
+
+Post Content:
+Hi everyone,
+
+I've been learning Python for a while now, and I keep seeing the term "pythonic" thrown around — like "that's not very pythonic" or "this is the pythonic way to do it.  
+Can someone explain in simple terms what "pythonic" really means? Are there good examples of non-pythonic vs. pythonic code? And any tips/resources for improving at writing pythonic code (books, sites, practices, etc.)?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: JeLuF
+Score: 238
+Created UTC: 1766324163.0
+Comment: Two examples of what people mean with "more pythonic".
+
+Python offers some language constructs like "with". Compare
+
+    file = open("input.txt")
+    data = file.read()
+    file.close()
+
+with
+
+    with open("input.txt") as file:
+        data = file.read()
+
+Python's "with" will automatically take care of closing the file. That's more pythonic than doing it per hand.
+
+If you want to iterate over the elements of an array, you could do this:
+
+    for i in range(len(arr)):
+        print(arr[i])
+
+or this:
+
+    for item in arr:
+        print(item)
+
+The second one is more pythonic because it uses the built-in iterator of array objects that python provides.
+
+This means that code is more pythonic if it uses Python's comfort features. This makes code easier to read and thus easier to maintain.
+
+Comment 2:
+Author: Han_Sandwich_1907
+Score: 52
+Created UTC: 1766322547.0
+Comment: The word used in general is "idiomatic". Each language has its own preferred or common way of doing things that gets better support or is easier to work with or something. Python, for instance, in my understanding prefers try/except error handling vs input validation, where you check if the input will result in an error before you run the error-prone code, as is more common elsewhere. (I don't know if anything has changed recently on that front.) Also using list comprehensions when possible, or libraries like collections.Counter. It's a combination of official recommendations and common practice.
+
+Comment 3:
+Author: Impressive_Barber367
+Score: 19
+Created UTC: 1766341988.0
+Comment: Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Complex is better than complicated.
+
+Flat is better than nested.
+
+Sparse is better than dense.
+
+Readability counts.
+
+Special cases aren't special enough to break the rules.
+
+Although practicality beats purity.
+
+Errors should never pass silently.
+
+Unless explicitly silenced.
+
+In the face of ambiguity, refuse the temptation to guess.
+
+There should be one-- and preferably only one --obvious way to do it.
+
+Although that way may not be obvious at first unless you're Dutch.
+
+Now is better than never.
+
+Although never is often better than \*right\* now.
+
+If the implementation is hard to explain, it's a bad idea.
+
+If the implementation is easy to explain, it may be a good idea.
+
+Namespaces are one honking great idea -- let's do more of those!
+
+Comment 4:
+Author: program_kid
+Score: 13
+Created UTC: 1766325683.0
+Comment: I think of pythonic to mean that it aligns with the ideas of PEP 20 
+https://peps.python.org/pep-0020/
+
+Comment 5:
+Author: Horrrschtus
+Score: 8
+Created UTC: 1766322591.0
+Comment: If you want to make sure your code is pythonic use a linter. I recommend Ruff.

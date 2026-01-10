@@ -1,0 +1,67 @@
+Post Title: Facing issues with Nvidia 1050ti on my Acer Predator laptop.
+Author: souravdatta1995
+Score: 9
+URL: https://www.reddit.com/r/archlinux/comments/1pyk9hh/facing_issues_with_nvidia_1050ti_on_my_acer/
+Number of comments: 12
+Created UTC: 1767008695.0
+
+Post Content:
+Recently(2-3 weeks back) the graphics card stopped working after a update. I also found that I need to install 580-xx drivers. However it is still not working.
+
+Following are some of the commands that i ran. The following error message show : \*ERROR\* \[nvidia-drm\] \[GPU ID 0x00000100\] Failed to allocate NvKmsKapiDevice
+
+I have tried multiple things like going to x11 from wayland, using lts kernel etc.
+
+Please note, I am still beginner with linux system. Any help would be appreciated, thanks in advance
+
+    nvidia-smi
+    No devices were found
+    
+    sudo dmesg | grep -i nvidia
+    [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=caf5bb6e-ca84-48ca-bd26-62b4b3f45c22 rw zswap.enabled=0 rootfstype=ext4 loglevel=3 quiet pci=realloc nvidia-drm.modeset=1
+    [    0.031105] Kernel command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=caf5bb6e-ca84-48ca-bd26-62b4b3f45c22 rw zswap.enabled=0 rootfstype=ext4 loglevel=3 quiet pci=realloc nvidia-drm.modeset=1
+    [    1.479977] nvidia: loading out-of-tree module taints kernel.
+    [    1.479991] nvidia: module license 'NVIDIA' taints kernel.
+    [    1.479994] nvidia: module verification failed: signature and/or required key missing - tainting kernel
+    [    1.479995] nvidia: module license taints kernel.
+    [    1.967343] nvidia-nvlink: Nvlink Core is being initialized, major device number 239
+    [    1.972930] nvidia 0000:01:00.0: enabling device (0106 -&gt; 0107)
+    [    1.973151] nvidia 0000:01:00.0: vgaarb: VGA decodes changed: olddecodes=io+mem,decodes=none:owns=none
+    [    2.172814] NVRM: loading NVIDIA UNIX x86_64 Kernel Module  580.119.02  Mon Dec  8 08:42:31 UTC 2025
+    [    2.214794] nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  580.119.02  Mon Dec  8 07:37:54 UTC 2025
+    [    2.234847] nvidia_uvm: module uses symbols nvUvmInterfaceDisableAccessCntr from proprietary module nvidia, inheriting taint.
+    [    2.413228] [drm] [nvidia-drm] [GPU ID 0x00000100] Loading driver
+    [    2.573897] [drm:nv_drm_dev_load [nvidia_drm]] *ERROR* [nvidia-drm] [GPU ID 0x00000100] Failed to allocate NvKmsKapiDevice
+    [    5.398781] input: HDA NVidia HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card2/input14
+    [    5.398849] input: HDA NVidia HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card2/input15
+    [    5.398919] input: HDA NVidia HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card2/input16
+    [    5.398978] input: HDA NVidia HDMI/DP,pcm=9 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card2/input17
+    
+    sudo pacman -Qs | grep nvidia
+    local/lib32-nvidia-580xx-utils 580.119.02-1
+    local/linux-firmware-nvidia 20251125-2
+    local/nvidia-580xx-dkms 580.119.02-2
+    local/nvidia-580xx-settings 580.119.02-2
+    local/nvidia-580xx-utils 580.119.02-2
+    local/nvidia-prime 1.0-5
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Individual_Good4691
+Score: 9
+Created UTC: 1767008968.0
+Comment: Make sure you have read, understood and implemented the DKMS wiki article: https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support
+
+Comment 2:
+Author: theschrodingerdog
+Score: 5
+Created UTC: 1767008852.0
+Comment: Do you have `linux-headers` (or `linux-lts-headers`) installed?
+
+Comment 3:
+Author: FunAware5871
+Score: 3
+Created UTC: 1767009733.0
+Comment: Just in case: https://www.reddit.com/r/archlinux/comments/1pxw448/comment/nwe16id/?utm_source=share&amp;utm_medium=mweb3x&amp;utm_name=mweb3xcss&amp;utm_term=1&amp;utm_content=share_button

@@ -1,0 +1,49 @@
+Post Title: I created a wrapper around 'ss -tunlp' to display cleaner output of all open ports
+Author: rushedcar
+Score: 328
+URL: https://i.redd.it/2wkcjukg5jag1.png
+Number of comments: 36
+Created UTC: 1767182769.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: whosdr
+Score: 99
+Created UTC: 1767188061.0
+Comment: Your output shown here doesn't include TCP/UDP. That's usually pretty important.
+
+Comment 2:
+Author: rushedcar
+Score: 31
+Created UTC: 1767182819.0
+Comment: Please let me know how the functionality or the code can be improved!
+
+GitHub: https://github.com/sdushantha/oports
+
+Comment 3:
+Author: Nopium-2028
+Score: 15
+Created UTC: 1767186069.0
+Comment: Why are you using so many external tools to extract and format information that is directly readable from files in /proc and /sys? Just read the data directly and format it.
+
+Comment 4:
+Author: enigmamonkey
+Score: 3
+Created UTC: 1767210209.0
+Comment: My only comment (just from the screenshot) is on the parameter/argument syntax.  For example with `oports proc:tor`, why not the more typical double-dash or single dash syntax `oports --proc tor` and (if shortened) `oports -p tor`?
+
+Is there an advantage to the `:` separated syntax? Maybe I’m not familiar with the use cases or the other apps that are similar to this that use it.
+
+
+Edit: I see you have a `-h` already. Also, I wonder if ipv6 IP compatibility were added, it might be slightly easier to read/parse (not that it’s a huge deal).
+
+Comment 5:
+Author: cd109876
+Score: 3
+Created UTC: 1767187894.0
+Comment: netstat -atunp ?

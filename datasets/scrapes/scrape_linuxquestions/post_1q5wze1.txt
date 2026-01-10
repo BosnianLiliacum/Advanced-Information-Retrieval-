@@ -1,0 +1,56 @@
+Post Title: Can I call Linux an operating system in my personal statement for university? (Application for undergraduate CS degree)
+Author: Drumslammed
+Score: 55
+URL: https://www.reddit.com/r/linuxquestions/comments/1q5wze1/can_i_call_linux_an_operating_system_in_my/
+Number of comments: 122
+Created UTC: 1767737825.0
+
+Post Content:
+My understanding is Linux is the kernel and the Linux distribution is the OS?
+
+Would it look bad to say ‘Linux is my main operating system’?
+
+It flows better than saying ‘Linux distributions have been my main operating systems’. (Would it be system or systems in that case?!). I want it to sound right to the admissions officer…
+
+Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Intrepid_Suspect6288
+Score: 61
+Created UTC: 1767739000.0
+Comment: Linux is technically the kernel yes but it is also common to refer to linux as an OS to generically refer to operating systems that use the linux kernel. Saying Linux distributions in this context seems unintuitive and unnecessary. If you have a specific distribution or family you like (ubuntu, rhel, suse, etc.) then you could also use that.
+
+Comment 2:
+Author: zoharel
+Score: 59
+Created UTC: 1767738411.0
+Comment: Few people care to harp on that distinction.  You'll be fine unless Richard Stallman himself is reviewing your application.
+
+Comment 3:
+Author: cormack_gv
+Score: 23
+Created UTC: 1767738005.0
+Comment: Yes, you can say Linux.  But FSF would prefer you say Gnu/Linux.
+
+Comment 4:
+Author: chxr0n0s
+Score: 11
+Created UTC: 1767743804.0
+Comment: I work for a top managed web hosting company and all of our internal training for onboarding new hires says "GNU/Linux" - yes there is a meme but it's also perfectly professional to use that and it happens. You could also just say Linux or mention a specific distribution.
+
+Comment 5:
+Author: KaMaFour
+Score: 4
+Created UTC: 1767739496.0
+Comment: I don't think there are cases where you can't substitute "linux operating system" with "linux based operating system" which would be factually correct and not jarring.
+
+"I use Linux based operating system"
+
+I see no reason to mention the exact distributions you used as well:
+
+"I have experience with Pop!\_os and hannah montanna linux operating systems on my PC, which are both linux distributions. Using them has taught me a lot about system administration and inner workings of technology we use everyday"
+
+Or some bullshit like that...

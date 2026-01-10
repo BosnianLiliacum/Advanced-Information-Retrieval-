@@ -1,0 +1,44 @@
+Post Title: Well, new vulnerability in the rust code
+Author: hotcornballer
+Score: 378
+URL: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/?id=3e0ae02ba831da2b707905f4e602e43f8507b8cc
+Number of comments: 342
+Created UTC: 1765996940.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: RoyAwesome
+Score: 1263
+Created UTC: 1765997987.0
+Comment: lol there were 160 CVEs released today, [159 for the C side of the Kernel and 1 for rust](https://social.kernel.org/notice/B1JLrtkxEBazCPQHDM).  Guess which one got the reddit thread, phoronix news articles and wave of posters yapping about rust.
+
+I should note, it is notable that the kernel rust bindings had their first vulnerability.  Also useful to note that the vulnerability was in code that was explicitly marked as unsafe and had a very clear potential vulnerability note, one that was ignored.  The fix is fairly trivial and I dont think anyone working in rust in the kernel would consider this anything less than a total success and vindication for everything they've been saying about rust being less vulnerable and easier to diagnose and fix errors like this in.  Bugs happen, and good languages make it easier to fix those bugs.
+
+Comment 2:
+Author: Fantastic-Fee-1999
+Score: 275
+Created UTC: 1765997541.0
+Comment: c developers right now : "well well well, how the turntables"
+
+Comment 3:
+Author: No_Hedgehog_7563
+Score: 268
+Created UTC: 1765997555.0
+Comment: What's with the Rust hate in the linux world?
+
+Comment 4:
+Author: Mysterious_Lab_9043
+Score: 91
+Created UTC: 1765997685.0
+Comment: People are idiot. Less doesn't mean zero. Just like seatbelts don't lower the death ratio to 0, it doesn't mean they're not useful.
+
+Comment 5:
+Author: MaybeTheDoctor
+Score: 45
+Created UTC: 1765998160.0
+Comment: From the description, it sounds like you would have the same problem in C.

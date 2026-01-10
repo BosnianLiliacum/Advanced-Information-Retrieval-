@@ -1,0 +1,52 @@
+Post Title: Monitor wake up problems (HDMI, AMD Radeon RX 7900 XTX, KDE)
+Author: _lonegamedev
+Score: 14
+URL: https://www.reddit.com/r/archlinux/comments/1pkod25/monitor_wake_up_problems_hdmi_amd_radeon_rx_7900/
+Number of comments: 11
+Created UTC: 1765534283.0
+
+Post Content:
+Recently I started experiencing problems with monitor wake up. Can't bring it back on, except via rebooting (even VT switch won't do anything).
+
+HDMI, AMD Radeon RX 7900 XTX, KDE.
+
+edit: After some more testing, my fixes are not helping in all cases.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Independent_Fox5795
+Score: 6
+Created UTC: 1765537673.0
+Comment: Had this exact same issue with my 7900 XTX - try adding \`amdgpu.dc=0\` to your kernel parameters, fixed it for me after weeks of frustration
+
+Comment 2:
+Author: Grandleon-Glenn
+Score: 3
+Created UTC: 1765601762.0
+Comment: I have the same issue. It's probably not the solution you want, but I did...
+
+System Settings &gt; Power Management
+
+Then under "Turn off screen," I set it to Never.
+
+Comment 3:
+Author: HelloBloop
+Score: 1
+Created UTC: 1765550867.0
+Comment: i have a similar problem during wake up, except one monitor works properly and the other monitor cycles inputs until in comes back to the right input and then they both work, it’s super annoying!
+
+Comment 4:
+Author: GuillaumeLeConqueran
+Score: 1
+Created UTC: 1765558522.0
+Comment: Same with my 6800XT, started a few weeks ago and feels random if the monitor will wake up or not. I'll try some of the solutions here and report back.
+
+Comment 5:
+Author: so_back
+Score: 1
+Created UTC: 1765559310.0
+Comment: It's interesting that I see this come up now. I had a similar issue that was actually resolved sometime in the past few weeks. One of my monitors would resume fine and the other refused. It was to the point where I just simply didn't suspend anymore and just shut down. 
+
+What I found with mine though is that I could switch the refresh rate and it would kick it back on. So in the end, I just created a post-suspend script that flipped my refresh rate to something else and then back to what I use. It took a few extra seconds for it to come back, but it worked at least.

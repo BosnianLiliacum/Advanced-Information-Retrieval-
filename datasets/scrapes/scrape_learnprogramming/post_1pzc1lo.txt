@@ -1,0 +1,56 @@
+Post Title: A little hope
+Author: meinrache94
+Score: 85
+URL: https://www.reddit.com/r/learnprogramming/comments/1pzc1lo/a_little_hope/
+Number of comments: 18
+Created UTC: 1767080532.0
+
+Post Content:
+This year has been shit. The markets have been flooded with terrible AI and I’ve seen a lot of good programmers being laid off. I sat in my office in August and like clockwork one by one my coworkers were being let go. It was surreal. Eventually the guillotine came for me. I wasn’t surprised but god did it hurt when they pulled me into the office and I hear “Due to restructuring…”. So I’ve been at home since mid August in a stress graver dream trying to survive. 
+
+ I’ve been applying for so many jobs not just in computer science but retail, fast food etc. no call backs or anything. When I did get a call back I’d be two interviews in and just be dropped. I assumed by fate was sealed until I finally applied for a job that I was pretty sure I didn’t have the skills for. The only difference is this time I took command during my interview. I didn’t sit there any let them run it I simply said hey I know this is weird but instead of telling you my skills and answering all the typical questions can I just show you? They just kinda looked around and said sure. 
+
+ Before I officially applied I did deep research on the company. Looked into trends and markets and made a sample project. Long story short I made a backend and front end for a billing systems. I saw that they had recently acquired a billing company. 
+
+ After my presentation and showing off my project they smiled and said we will call you. Not even 30 minutes later they called and said that I would not be doing the other two interviews and sent me an offer letter. I was honestly so confused and happy?
+
+I was always told that projects were never the way to go and to just do the interviews and meet and greets. I guess I’m not sure exactly where this post is going but for all the people out there that do better by showing your skills I say go for it. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: octahexxer
+Score: 33
+Created UTC: 1767081739.0
+Comment: I'm just happy if I even get a automatic reject letter Instead of being ghosted. 
+
+Comment 2:
+Author: inwegobingo
+Score: 16
+Created UTC: 1767083530.0
+Comment: Well done. That's very inspiring. Congratulations on taking your career forward.
+
+Comment 3:
+Author: dartanyanyuzbashev
+Score: 14
+Created UTC: 1767091485.0
+Comment: This worked because you changed the power dynamic and reduced risk for them, interviews are noisy signals, a concrete project tied to their actual business is a strong signal, especially when markets are tight, the lesson is not build random side projects but build targeted proof, show you understand their problem, their context, and can execute, that cuts through resumes, AI noise, and generic interviews fast
+
+Comment 4:
+Author: the-techpreneur
+Score: 8
+Created UTC: 1767088622.0
+Comment: Great story. It’s frustrating to see that you have to take control just to be remembered. Interviewers should design interviews in a way that makes it easy to prove your expertise. Instead, you have to break the process just to show your best self :/
+
+Comment 5:
+Author: hitanthrope
+Score: 3
+Created UTC: 1767112223.0
+Comment: Nicely done. 
+
+I don't know where you are in your career and while I don't want to spread masses of fear, but I can tell you that I am currently getting close to 30 years professional XP with some recognisable stuff and posh sounding three letter job titles on my resume and I do not currently feel especially comfortable in this industry, relative to really the whole of this century. It's the darkest now it has ever been, but I think this will now change. 
+
+There will absolutely be a correction in headcount I think. We have over-attracted through the crazy times of the dot com bubble and subsequent aftershocks and the industry became the goto for everybody who wanted a comfortable office job but didn't really know what else to do. The industry accepted it because there was enough grunt work to do and people could be absorbed but this is coming to a very sudden end. The internet business landscape is now \*much\* more clear, it's not being pumped full of money like it was for the first quarter of this century. In fact, most of the money that was made in that process is now going into AI development, but they already have the barons in place there. It's not the same free-for-all the early internet was, so a recession is happening now. I think we probably all need to take a moment to mourn the fact that our "golden age" is coming to a close. It's still, and will probably remain a respected and well compensated profession, but not the wilds it has been. 
+
+In the interview you did absolutely the right thing. I've interviewed quite a bit and the second you presented your, "You know, I think you'll be able to get a better impression of what I can do if I show you this....", I think you're getting very close to a yes from me for almost this alone. If, afterwards, I feel like I do have a better impression that I might have got with my own questions, and that impression is of somebody who will do a good job, then welcome to the team. I can't tell you it will land with \*every\* interviewer, but the goal of the meeting is to figure out if a person joining the team is for the mutual benefit, if the interviewee can legitimately help us to mutually achieve that given what they know and I don't, then, yes please. Brilliant work.

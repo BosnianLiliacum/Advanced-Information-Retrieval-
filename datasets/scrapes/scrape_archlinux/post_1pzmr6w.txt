@@ -1,0 +1,24 @@
+Post Title: For you to have some fun at my cost: I was able to break my dbus and I have no clue how
+Author: ElectricalOstrich597
+Score: 11
+URL: https://www.reddit.com/r/archlinux/comments/1pzmr6w/for_you_to_have_some_fun_at_my_cost_i_was_able_to/
+Number of comments: 13
+Created UTC: 1767112664.0
+
+Post Content:
+Well, I have no clue what I did (it was 1am) I just know that I broke my systemd, dbus and polkit not once... but twice! that's a new personal record since the time I corrupted my kali linux by installing steam.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: ansible0
+Score: 19
+Created UTC: 1767114423.0
+Comment: Now I want to know why you put Steam on a Kali install.
+
+Comment 2:
+Author: intulor
+Score: 7
+Created UTC: 1767112851.0
+Comment: The wheels on dbus go round and round, round and round, round and round.

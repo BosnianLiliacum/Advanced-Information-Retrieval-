@@ -1,0 +1,66 @@
+Post Title: Is multithreading basically dead now, or is async just the new default for scaling?
+Author: Wash-Fair
+Score: 326
+URL: https://www.reddit.com/r/learnprogramming/comments/1pnuj7k/is_multithreading_basically_dead_now_or_is_async/
+Number of comments: 126
+Created UTC: 1765864883.0
+
+Post Content:
+Lately, it feels like *everything* is async-first - async/await, event loops, non-blocking I/O, reactive frameworks, etc. A lot of blogs and talks make it sound like classic multithreading (threads, locks, shared state) is something people are actively trying to avoid.
+
+So I’m wondering:
+
+* Is multithreading considered “legacy” or risky now?
+* Are async/event-driven models actually better for most scalable backends?
+* Or is this more about developer experience than performance?
+
+I’m probably missing some fundamentals here, so I’d like to hear how people are thinking about this in real production systems.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: symbiatch
+Score: 456
+Created UTC: 1765865475.0
+Comment: Async doesn’t make multiple things happen at the same time. It only allows you to do other stuff while waiting. If you need to calculate 2000 things it does nothing for you. If you need to wait for a response from another service async lets you do other stuff while waiting.
+
+So multi threading is not legacy in any way nor is it usually in any way related to asynchronous operations. Async doesn’t need multithreading and multithreading doesn’t need to do anything asynchronous. Both have been around for a long time, just in different forms.
+
+Comment 2:
+Author: internetuser
+Score: 171
+Created UTC: 1765865178.0
+Comment: They are different tools for different jobs.
+
+Async is better for IO bound systems (e.g. systems that spend most of their time waiting for data to arrive over a network).
+
+Multithreading is better for compute bound systems (e.g. systems that spend most of their time crunching numbers).
+
+Comment 3:
+Author: minneyar
+Score: 58
+Created UTC: 1765866668.0
+Comment: Threading has always been dangerous and complicated, but it's not "legacy" and still a very powerful tool.
+
+Async is actually not good for *scaling* at all.  Async mechanisms in languages like Python and JavaScript use single-threaded, event-driven, queue-based mechanisms.  They help to simplify the design of asynchronous systems where you send a lot of time waiting on network traffic, disk reads, or user input.  Async does not run anything in parallel, and you will not see any performance improvements from in; in fact, overuse of async methods in tight loops can significantly harm performance due to the added overhead of the event queue.
+
+Part of why async design is popular in Python and JavaScript is because threads really suck in those languages.  The existence of the global interpreter lock in Python &lt;3.14 severely limits how well threads can perform, and worker threads are a huge pain to manage in JavaScript.  There's much less incentive to use async in languages where threads are efficient and the language has good thread management mechanisms.
+
+Comment 4:
+Author: aleques-itj
+Score: 19
+Created UTC: 1765865196.0
+Comment: Solves a different problem
+
+Comment 5:
+Author: NapCo
+Score: 17
+Created UTC: 1765869388.0
+Comment: Multithreading is like have multiple people doing things. This way you can achieve true concurrency, where multiple things happens at once.
+
+Async is like having one person multitask by context switching. This gives you a degree of concurrency where you seemingly do multiple things at once, but in reality you just do a little bit here and there, making it look like you do multiple things at once.
+
+You can combine both. That is, multiple people doing multiple things by context switching.
+
+Can you think of the different use cases based on that intuition?

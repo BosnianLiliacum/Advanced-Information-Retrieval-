@@ -1,0 +1,52 @@
+Post Title: im changing from windows to linux today, is there a risk of losing my files?? (like videos and images)? how do i prevent it??
+Author: Sweet_Television_164
+Score: 13
+URL: https://www.reddit.com/r/linuxquestions/comments/1pkb1xj/im_changing_from_windows_to_linux_today_is_there/
+Number of comments: 38
+Created UTC: 1765492198.0
+
+Post Content:
+just scared i might lose some files.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: hypnomarten
+Score: 13
+Created UTC: 1765492634.0
+Comment: Yes, the risk is real. Best way is to move your files to an external drive and put them back on your computer, when your system is ready for it.
+
+Are your files like video and images on a separate partition? It's possible to tell linux to let that partition out from the installation process. But since you might want to change filesystem (from ntfs or fat32 to ext4 or zfs, for example), it's still the best idea to backup your files on an external drive. (And we humans make mistakes and may click unintentionally "use the whole disc drive and format it".)
+
+The files are on the same partition as the system? No way to let them there and keep them. Backup externally!
+
+Comment 2:
+Author: ipsirc
+Score: 8
+Created UTC: 1765492780.0
+Comment: The risk of losing files still exists even if you continue to use Windows. That's why we invented backup.
+
+Comment 3:
+Author: HereForC0mments
+Score: 5
+Created UTC: 1765493408.0
+Comment: Make an offline backup of your important files BEFORE doing anything with Linux.  Linux isn't going to purposefully mess up any of your files, but there are a lot of variables in the mix with moving windows to Linux, the most major of which is they use entirely different file systems.  And Microsoft doesn't exactly go out of their way to place nice with dual boot setups so theres that as well 
+
+On top of all that, you should always be making periodic backups of your most precious data.  A cloud backup service like Carbonite is ideal because it's backed up offsite from your home, but if nothing else you should make periodic backups to an external drive or a USB stick at least (or even to DVD if you still have such a drive).
+
+Regardless of anything else, back up anything you don't want to lose before installing Linux on your system.
+
+Comment 4:
+Author: temujin77
+Score: 5
+Created UTC: 1765502108.0
+Comment: Always back up regularly, even if you're not reinstalling.
+
+Comment 5:
+Author: jaromanda
+Score: 4
+Created UTC: 1765492459.0
+Comment: Are you installing linux over the top of windows? Then everything on the Windows drive will be gone
+
+You should backup anything you want to keep

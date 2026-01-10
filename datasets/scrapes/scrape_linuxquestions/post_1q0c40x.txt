@@ -1,0 +1,61 @@
+Post Title: Most valuable Linux skill you used in 2025?
+Author: Expensive-Rice-2052
+Score: 35
+URL: https://www.reddit.com/r/linuxquestions/comments/1q0c40x/most_valuable_linux_skill_you_used_in_2025/
+Number of comments: 53
+Created UTC: 1767184847.0
+
+Post Content:
+***^(Options:)***
+
+1. **Troubleshooting &amp; debugging**
+2. **Automation &amp; scripting**
+3. **Security hardening**
+4. **Cloud / container knowledge**
+
+If you think the most valuable Linux skill isn’t listed here, feel free to share it in the comments.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Brotakul
+Score: 65
+Created UTC: 1767185360.0
+Comment: If it works, don’t touch it.
+
+Comment 2:
+Author: thieh
+Score: 22
+Created UTC: 1767185233.0
+Comment: Maybe RTFM is the most valuable skill I used.
+
+Comment 3:
+Author: koopz_ay
+Score: 13
+Created UTC: 1767185352.0
+Comment: Same as the last 20yrs.
+
+Noting old shit the person was going to throw away and helping them repurpose it.
+
+The kiddies that I helped put some Mom or Dads old Dell laptops 20yrs ago when I worked as a Dell field tech...
+
+Microsoft should be paying me royalties for the number of kids I put onto Minecraft over the years.   
+
+  
+More for the number of old lappies I helped them setup as servers for their mates to join and play on.
+
+  
+Kids be kids..
+
+Comment 4:
+Author: TooMuchBokeh
+Score: 12
+Created UTC: 1767185348.0
+Comment: I stopped caring about adobe products and league of legends - and fully embraced the Linux ecosystem. Even at my job I had the option to completely switch to Linux. It feels really good to just accept the losses and enjoy the freedom.
+
+Comment 5:
+Author: LawrBond
+Score: 11
+Created UTC: 1767190124.0
+Comment: hate to admit but AI has made all my linux troubles disappear

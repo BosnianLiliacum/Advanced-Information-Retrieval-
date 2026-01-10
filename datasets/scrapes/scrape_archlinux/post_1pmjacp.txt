@@ -1,0 +1,50 @@
+Post Title: Somewhat random crashing of things like Firefox and VLC after upgrading
+Author: myprettygaythrowaway
+Score: 11
+URL: https://www.reddit.com/r/archlinux/comments/1pmjacp/somewhat_random_crashing_of_things_like_firefox/
+Number of comments: 18
+Created UTC: 1765732384.0
+
+Post Content:
+Ran ````pacman -Syu```` on the 11th, since then I'll have random crashes in Firefox and VLC. The crashes are practically random - VLC will crash playing a quick video, then I'll be able to watch a whole movie, then I'll get through 15min of a movie before it crashes. Similar for Firefox - how many tabs are open doesn't seem to matter, it'll crash when it feels like it, it seems. Apart from trying to fix it, I've barely used my laptop since, so I don't know if this problem is contained to just these two programs, or what.
+
+Running LTS kernel. Journal from [the 12th](https://pastebin.com/C3x8KAi8). ````inxi -Gaz```` output [here](https://pastebin.com/V1tbLcrX). 
+
+From ````lspci | grep -iE 'VGA|3D|video'````:
+
+````00:02.0 VGA compatible controller: Intel Corporation 3rd Gen Core processor Graphics Controller (rev 09)````
+
+```` 01:00.0 VGA compatible controller: NVIDIA Corporation GK107GLM [Quadro K1000M] (rev a1)````
+
+I've run ````memtest86````, ````glmark2````, ````stress-ng --cpu 4 --timeout 120````, ````smartctl -a```` &amp; ````-x````; all came back with clean bills of health. I might be shaky on smartctl, though, so if you wanna see that, lemme know. Ran ````sudo downgrade linux-firmware-intel linux-firmware-nvidia````, problem persists. Tried ````sudo pacman -Rsc intel-media-driver```` &amp; ````sudo pacman -S --needed libva-intel-driver libva libva-utils````, no dice. Finally, kept a tab open with ````journalctl -f```` while the stress tests &amp; trying some VLC [here](https://pastebin.com/MF0WDHKA).
+
+Lemme know what else you guys need.
+
+UPDATE: Librewolf just crashed. Interestingly, Chromium has yet to crash, at all. Anyway, final bit from the ongoing ````journalctl -f```` tab:
+
+````Dec 14 13:00:46 southernplains systemd[1]: systemd-coredump@0-1-137061_137361-0.service: Deactivated successfully.````
+
+````Dec 14 13:00:46 southernplains systemd[1]: systemd-coredump@0-1-137061_137361-0.service: Consumed 3.634s CPU time, 1G memory peak.````
+
+
+Top 3 comments:
+
+Comment 1:
+Author: SavvyBeardedFish
+Score: 5
+Created UTC: 1765736812.0
+Comment: It looks like it's your GPU driver that crashes (`nouveau`), any particular reason you're not using the closed source one?
+
+Comment 2:
+Author: boomboomsubban
+Score: 1
+Created UTC: 1765764946.0
+Comment: So I'm no good at diagnosing kernel panics, your post is nearly good enough for the forums and that's the place that can help, but the GPU driver issues other mention seem to happen long before your crash so are somewhat unlikely to be related. 
+
+Also, your GPU does not support nvidia or nvidia-open, it's keplar which uses nouveau or nvidia-470. There is some indication you have nvidia-470 installed, maybe try reinstalling that
+
+Comment 3:
+Author: InvestigatorLow9160
+Score: 1
+Created UTC: 1765894111.0
+Comment: I feel you man... Same happening with me ... Amu solution can u find

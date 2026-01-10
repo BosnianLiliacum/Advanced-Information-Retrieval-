@@ -1,0 +1,60 @@
+Post Title: Mount Drive to /run/media/{name}/ without needing a password
+Author: ReallyNotR8
+Score: 11
+URL: https://www.reddit.com/r/archlinux/comments/1q1m10r/mount_drive_to_runmedianame_without_needing_a/
+Number of comments: 10
+Created UTC: 1767319421.0
+
+Post Content:
+I would like to know how to mount a drive to /run/media/{name}/ without needing a password authentication and to edit files inside and delete files and make files inside of the **nvme** drive whilst it also being accessible to steam and other launchers.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: MilchreisMann412
+Score: 10
+Created UTC: 1767321352.0
+Comment: Install [udisks2](https://wiki.archlinux.org/title/Udisks), enable/start the service and create a file /etc/polkit-1/rules.d/99-mount.rules or similar with this content:
+     
+    polkit.addRule(function(action, subject) {
+      var YES = polkit.Result.YES;
+      var permission = {
+         // required for udisks2:
+        "org.freedesktop.udisks2.filesystem-mount": YES,
+      };
+      if (subject.isInGroup("storage")) {
+        return permission[action.id];
+      }
+    });
+
+
+
+
+Not verified, maybe theres an error but you should find the correct rules online or look here: https://github.com/coldfix/udiskie/wiki/Permissions
+
+This allows any user in the group `storage`  to mount via udisk. Then you can use `udisksctl mount -b /dev/nvmeXnY` to mount the partition.
+
+Comment 2:
+Author: billyfudger69
+Score: 2
+Created UTC: 1767328300.0
+Comment: You could edit /etc/fstab OR you could mount the drive the location and change the owner with chown. (Both require sudo/root to edit the permissions and mount points.)
+
+Comment 3:
+Author: [deleted]
+Score: 1
+Created UTC: 1767319820.0
+Comment: [deleted]
+
+Comment 4:
+Author: ZaenalAbidin57
+Score: 1
+Created UTC: 1767323070.0
+Comment: Use udiskie
+
+Comment 5:
+Author: FunnyArch
+Score: 1
+Created UTC: 1767340700.0
+Comment: udisikie-mount -a will mount all drives

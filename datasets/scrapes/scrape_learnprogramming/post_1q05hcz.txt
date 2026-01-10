@@ -1,0 +1,59 @@
+Post Title: Programming as a Job Feels Nothing Like Programming as a Hobby
+Author: Sensitive-Raccoon155
+Score: 440
+URL: https://www.reddit.com/r/learnprogramming/comments/1q05hcz/programming_as_a_job_feels_nothing_like/
+Number of comments: 66
+Created UTC: 1767160573.0
+
+Post Content:
+When I was learning to code, programming felt creative and exciting. I built things I cared about, experimented, and actually understood what I was making.
+
+Working as a programmer feels completely different. Real-world projects are rarely about clean design or interesting problems. Most of the time it’s legacy code, bad architecture, rushed deadlines, and fixing bugs in systems no one fully understands.
+
+Instead of building something meaningful, you’re gluing together hacks to keep a business running. Over time, this killed my motivation to code for fun at all.
+Has anyone else felt that professional development drained the joy out of programming?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: MissinqLink
+Score: 226
+Created UTC: 1767161335.0
+Comment: Yes. My best advice is don’t stop building the fun creative things. Figure out ways to do them at work.
+
+Comment 2:
+Author: Different_Pain5781
+Score: 109
+Created UTC: 1767164284.0
+Comment: The joy dies when Jira shows up.
+
+Comment 3:
+Author: iOSCaleb
+Score: 78
+Created UTC: 1767162509.0
+Comment: In other news, writing as a job feels nothing like writing as a hobby, playing music as a job is less fun than jamming with friends, driving for Uber is less fun than exploring a new town, and running a farm ain’t quite the same as tending your flower garden.
+
+If you’re going to survive as a professional programmer, you have to accept that it’s not all fun and games — your job is literally to help deliver a product that meets your organization’s needs, not your own. But that doesn’t mean that the work can’t be rewarding in a number of ways. You don’t have to — and shouldn’t — just live with crappy code held together with string and bubble gum. You can work to improve the code. You can solve problems that you’d probably never encounter writing code as a hobby. You might have access to hardware that you could never afford yourself. And you get paid.
+
+That the project that you work on isn’t what you’d choose to write in your free time doesn’t mean that it can’t be challenging and interesting. If you don’t like something about it, consider that a problem to be solved and work toward improving it.
+
+Comment 4:
+Author: Zesher_
+Score: 64
+Created UTC: 1767162304.0
+Comment: You actually have time to do programming at work? I'm jealous. Usually at my jobs I'm just stuck in meetings most days. 
+
+Keep the hobby part alive for fun, but treat the work part as a way to make money to fund your needs and everything else you want to do in life.
+
+Comment 5:
+Author: WystanH
+Score: 23
+Created UTC: 1767170922.0
+Comment: The act of programming is fun.  Doing that in service to anything you resent can't possibly be fun.
+
+A whole lot of job related stuff will simply be inherently frustrating.  If the frustration wins, the task will be that much harder.
+
+If you're fixing a bug and thinking "this sucks" then it will.  Fixing the same bug with the thought of "it's much better now" will bring some joy to the endeavor.
+
+"No man is disturbed by things, but by his opinion about things." -- Epictetus

@@ -1,0 +1,54 @@
+Post Title: SQLNet. Social network where you learn SQL by interacting with real users.
+Author: warphere
+Score: 74
+URL: https://www.reddit.com/r/learnprogramming/comments/1q4nwoq/sqlnet_social_network_where_you_learn_sql_by/
+Number of comments: 16
+Created UTC: 1767625255.0
+
+Post Content:
+I was exploring the possibility of building per-tenant databases and came up with the project that people found interesting enough to visit.  
+Since lots of the comments were saying that it could be something useful that helps people learn SQL, I thought I might just share it here.
+
+So, [https://sqlnet.cc](https://sqlnet.cc) \- is a Twitter-like social network, where people have to write actual SQL queries to post, like, comment, and follow.
+
+This could be useful for people just starting to learn SQL.  It's boring to learn queries with systematically generated data. or just rewriting queries from the books, StackOverflow.  
+  
+Here you have real data, produced by real customers, and you can play with it in any way you like. 
+
+You can drop users, posts, and edit them.   
+Each user has its own dedicated database instance that syncs with the rest of the network..
+
+If you break things, just create a new account. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: hypercosm_dot_net
+Score: 5
+Created UTC: 1767629666.0
+Comment: Love how it looks, really interesting idea. Best of luck with it.
+
+Comment 2:
+Author: [deleted]
+Score: 2
+Created UTC: 1767631961.0
+Comment: [removed]
+
+Comment 3:
+Author: d-wjr
+Score: 2
+Created UTC: 1767632661.0
+Comment: Okay, this is pretty neat.
+
+Comment 4:
+Author: Victor_Quebec
+Score: 2
+Created UTC: 1767637558.0
+Comment: Used, liked, bookmarked. Fantastic idea! Thank you!
+
+Comment 5:
+Author: elgranjuanco
+Score: 2
+Created UTC: 1767645770.0
+Comment: 🤣

@@ -1,0 +1,75 @@
+Post Title: C++ or Rust for beginner?
+Author: ifoundacookie
+Score: 44
+URL: https://www.reddit.com/r/learnprogramming/comments/1q5salq/c_or_rust_for_beginner/
+Number of comments: 42
+Created UTC: 1767727669.0
+
+Post Content:
+Post was longer than I expected, TL;DR: High-school level programming experience in Processing/Scratch/Python/Java and 4 weeks experience with C++ about 13 years ago when I was 14. Want to learn programming for game dev. Don't care that they're not entry level languages. 
+
+
+Okay, I know, I know, neither of these are beginner friendly at all but honestly I dont care. Im just wanting to learn game dev and I want something I can use for logic that needs to be quick and efficient, like terrain gen, etc. I have some experience in the really basic shit like Processing, Scratch, and Java by taking comp sci in HS but I was an awful student. I also took a 4 week summer camp between my freshman and sophomore years of HS that was for learning simple game dev through C++ but it was REALLY basic and I just made a short 10-minute text adventure. That being said, I have learned about Rust recently and everyone fuckn loves it and I've seen people making some really interesting things with it using its extension for Godot. 
+
+From my ignorant perspective, C++ seems like a good option to understand more what's going on under the hood, having to manually manage memory and shit, and also has much faster compile times (which ive already experienced when compiling Rust demos in Godot Jesus christ), as well as possibly better job prosepects and translates easier to other languages as I understand Rust is a fairly unique language. With Rust it seems like it's more annoying because you HAVE to handle your memory errors SOMEHOW because the borrow checker thing just doesn't let you fuck that up, as well as maybe being more difficult to understand because of its owner-borrower system or whatever its called, but the whole thing makes sense to me conceptually, not sure how easily I'll be able to implement it tho. (But it seems like it would at least be easier to debug, no?) I've watched videos on both and I haven't been able to find a great answer as to whether one would be better for a beginner. 
+
+Again, I dont care to learn something more basic, I'm already going to be using plenty of GDScript so I will be learning a simpler language anyway so anything I just simply can't do at my skill level at the moment I'll just fall back on that till I sharpen up with Rust/C++.
+
+Appreciate any advice or insight into this question and sorry for the long ass post. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: VibrantGypsyDildo
+Score: 44
+Created UTC: 1767727888.0
+Comment: Unreal engine is in C++, Unity is in C#.
+
+In Python there is a quite simple framework called pygame.
+
+For mobile games Java was used 10 years ago. Not sure what happens now.
+
+\-----
+
+If the question is Rust vs C++, it looks like C++ is the answer.
+
+If the question is "which language" -- you have much more options.
+
+Comment 2:
+Author: aqua_regis
+Score: 16
+Created UTC: 1767728445.0
+Comment: If you already work with Godot and GDScript, the next logical step is C#, not C++.
+
+There is the .NET version of Godot that uses C#.
+
+You can even step up to Unity3D later with C#.
+
+Comment 3:
+Author: Caryn_fornicatress
+Score: 10
+Created UTC: 1767730211.0
+Comment: If your goal is game dev, C++ is still the more practical starting point. It’s deeply integrated into engines, has way more learning resources for games specifically, faster iteration, and teaches fundamentals you’ll reuse everywhere. Yes, you’ll shoot yourself in the foot sometimes, but that’s part of understanding how things actually work under the hood.
+
+Rust is great, but the borrow checker adds cognitive load that’s not directly helping you learn game logic early on. It shines once you already understand memory and systems programming. For a beginner building terrain gen, gameplay systems, engine-level stuff, C++ will feel more straightforward and less “fighting the language.”
+
+Short version: start with C++ for game dev fundamentals, then Rust later if you want safety and modern design. You’re not wrong about either, but C++ is the smoother on-ramp for what you want right now
+
+Comment 4:
+Author: PopulationLevel
+Score: 7
+Created UTC: 1767729602.0
+Comment: C++ is a mess - it has had so much random crap bolted on over the years, that understanding C++ in totality is not worth it, unless you're implementing a compiler or something.
+
+However, C++ is also very practical to learn, for the reasons you listed.
+
+One thing I'd strongly recommend is to look at C++ style guides - there are a few publicly available. They'll help you understand what subset of C++ is worth understanding well.
+
+At the end of the day, most working C++ devs aren't using it because it's a good language, or that they like it in particular - it is just better than the alternatives at what they need to do.
+
+Comment 5:
+Author: FitSignificance1415
+Score: 6
+Created UTC: 1767727804.0
+Comment: If it's for C# games, wouldn't it be better?

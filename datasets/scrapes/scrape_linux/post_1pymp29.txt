@@ -1,0 +1,54 @@
+Post Title: KDE - Highlights from 2025
+Author: ChristophCullmann
+Score: 213
+URL: https://pointieststick.com/2025/12/28/highlights-from-2025/
+Number of comments: 33
+Created UTC: 1767015994.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: friciwolf
+Score: 48
+Created UTC: 1767024570.0
+Comment: you are a treasure Nate
+
+Comment 2:
+Author: ztwizzle
+Score: 41
+Created UTC: 1767028747.0
+Comment: &gt; Today Plasma is the default desktop environment in a bunch of the hottest new gaming-focused distros, including Bazzite, CachyOS, Garuda, Nobara, and of course SteamOS on Valve’s gaming devices. Fedora’s Plasma edition was also promoted to co-equal status with the GNOME edition, and Asahi Linux — the single practical option for Linux on newer Macs — only supports KDE Plasma. Parrot Linux recently switched to Plasma by default, too. And Plasma remains the default on old standbys like EndeavourOS, Manjaro, NixOS, OpenMandriva, Slackware and TuxedoOS — which ships on all devices sold by Tuxedo Computers! And looking at the DIY distro space, Plasma is by far Arch users’ preferred desktop environment.
+
+&gt; It’s a quiet revolution in how Linux users interact with their computers, and my sense is that it’s gone largely unnoticed. But it happened, so let’s feel good about it!
+
+I think the KDE Plasma developers should feel super proud for how valuable their work has been and how it's helped grow the Linux desktop. Through their hard work, Plasma has essentially become the standard Linux DE for non-enterprise distros. Thanks to Nate for pointing this out, I had no idea that Plasma adoption had grown so much.
+
+Comment 3:
+Author: aera
+Score: 15
+Created UTC: 1767032526.0
+Comment: I have to credit modern Plasma with being the thing that got me to stick back on Linux as my daily driver after abandoning KDE in around 2017 as Plasma 5 was having a little bit of an identity crisis and Windows had just introduced WSL.
+
+Coming back was a delight, especially to see that KDE has gained some proper design style while still keeping all the knobs and buttons, and it was so nice to use KIO with Dolphin again and not need separate SFTP programs. And props to the KDE Connect team as well.
+
+Just need to figure out what small issue/bugfix I want to use to try and get contributing...
+
+Comment 4:
+Author: FryBoyter
+Score: 14
+Created UTC: 1767021166.0
+Comment: A highlight for me would be if, in 2026, all programs would remember their exact position after a reboot. Without having to configure anything extra. This is currently not the case with Claws Mail, for example (multiple monitors).
+
+And yes, that's more of a Wayland problem than a Plasma problem. But as a simple user, I honestly don't really care.
+
+Please don't get me wrong, the development of plasma in 2025 deserves more than just being taken into account.
+
+Comment 5:
+Author: Hadi_Chokr07
+Score: 7
+Created UTC: 1767044150.0
+Comment: NixOS mention 🗣🔥🔥

@@ -1,0 +1,88 @@
+Post Title: Any tips for a beginner programmer with ADHD?
+Author: korvosg00b
+Score: 52
+URL: https://www.reddit.com/r/learnprogramming/comments/1pl077p/any_tips_for_a_beginner_programmer_with_adhd/
+Number of comments: 47
+Created UTC: 1765566220.0
+
+Post Content:
+So I'm in school trying tonget my computer science degree. I love programming and thinks its fascinating, but I struggle focusing on my own at times. Its hard to not get distracted especially when watching YouTube videos or trying to read books on it. Does anyone here who has ADHD and had similar struggles have any advice for what worked for them? 
+
+Edi: I suppose I should have added this I'm already diagnosed and on medication. Unfortunately the medication i take is non stimulant and doesn't work super great. I'm hoping to get back on Adderall next time I see my Dr.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DarthBraves
+Score: 47
+Created UTC: 1765567348.0
+Comment: What helped me in college was putting myself in scenarios that gave me the best chance at succeeding in whatever task I am trying to accomplish. I commuted, so going home before I finished my schoolwork was a big no in my book - too many distractions at the house. If I needed to read a book, I would put away, out of sight, everything except that book and just buried my head in it. If I needed to program, I would make sure I fullscreened my code editor, and if I had multiple screens I would minimize everything else. 
+
+It was little things like that helped me. Fortunately, I really enjoyed programming, so I often times would hit a hyper fixation state with it which helped me out as well. But everyone is different
+
+Comment 2:
+Author: josephjnk
+Score: 28
+Created UTC: 1765570581.0
+Comment: Get medicated. Seriously, I’ve tried lots of lifestyle interventions. Some work, some don’t. None of them compare to just having my brain chemistry balanced. While you’re at it, take your vitamins and make sure you aren’t deficient in anything (especially vitamin B).
+
+Aside from that: when I’m having trouble focusing I like to “cosplay productivity”. Pick what I’m supposed to be doing and set it up, but don’t necessarily try to actually do it. Like, open up my IDE and find the file that I know I should edit next. It’s easier if I don’t commit to actually _doing_ the work, but I just set it up so doing the work will be easy. Once I have my workstation set up I’ll try to just read the code and understand what’s going on. When I take baby steps like this and basically pretend to be productive I usually can trick myself into focusing on the thing that I really ought to do.
+
+Comment 3:
+Author: Vindelator
+Score: 9
+Created UTC: 1765568686.0
+Comment: Create a new chrome (or whatever browser) profile.
+
+It only should have things bookmarked that are relevant to the work you're doing.
+
+ADHD is big on "out of sight, out of mind." If you're not seeing youtube and reddit on your browser bar, it's a lot better.
+
+Throw your phone where you have to stand up to reach it.
+
+Also, you probably want a separate login so those games on your computer aren't begging to be played. 
+
+Build the habits you want too... they bad ones are tough to break.
+
+Being near other people working will make you want to work as well.
+
+Don't expect your focus to last forever either. Throwing on a timer on alexa or something for an hour or two later (depends on you) will give you an "end point." ADHD people work better when we have a little time pressure and urgency.
+
+Comment 4:
+Author: jowco
+Score: 6
+Created UTC: 1765567046.0
+Comment: Stay away from Youtube. Open two tabs, one to something like claude and the other to the actual documentation on the thing you're doing. 
+
+Pick a goal or a specific aspect you'll be working through.  Work that topic, reading the actual documentation and asking the AI to clarify things you don't understand from the documentation.
+
+Comment 5:
+Author: PainOne4568
+Score: 3
+Created UTC: 1765588742.0
+Comment: Fellow ADHD programmer here - been doing this professionally for about 8 years now. A few things that genuinely helped me:
+
+
+
+\*\*The Pomodoro technique but modified for ADHD:\*\* Standard 25/5 never worked for me. I do 15 minutes of focused work, then 3 minutes of literally whatever my brain wants (scroll Reddit, watch a YouTube short, whatever). The key is setting a timer for BOTH. Your brain learns it can have the dopamine hit soon, so it's easier to focus. Gradually increase the work interval as you build the habit.
+
+
+
+\*\*Treat debugging like a video game:\*\* ADHD brains love puzzles and immediate feedback. When you hit a bug, frame it as "I'm going to figure this out" rather than "ugh this is broken." Keep a running log of what you've tried - it helps when you inevitably get distracted and come back.
+
+
+
+\*\*Use the hyperfocus strategically:\*\* When you feel yourself getting pulled into something, lean into it if it's productive. I've had some of my best learning sessions at 2 AM because my brain decided "today we're learning async/await." Just make sure you're not hyperfocusing on tutorial hell.
+
+
+
+\*\*Accountability buddies:\*\* Find a study Discord or a friend who's also learning. Just having someone to check in with like "hey I'm going to work on this for the next hour" makes a huge difference.
+
+
+
+Also about the medication - might be worth trying different options if Adderall isn't working? Some people do better with Vyvanse or Concerta. But I'm not a doctor, just someone who's been there.
+
+
+
+You got this! ADHD can actually be an advantage in programming once you figure out how to work with your brain instead of against it.

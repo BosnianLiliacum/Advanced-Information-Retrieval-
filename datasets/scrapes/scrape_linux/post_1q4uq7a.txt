@@ -1,0 +1,47 @@
+Post Title: Valve &amp; AMD Developers Delivered The Most Code Contributions To Mesa In 2025
+Author: BinkReddit
+Score: 1234
+URL: https://www.phoronix.com/news/Mesa-Git-Stats-2025
+Number of comments: 49
+Created UTC: 1767639864.0
+
+Post Content:
+While Phoronix produces great content, I tend not to post their articles due to the comically large number of obtrusive ads they have on their site. That said, I do feel Valve and AMD need to be recognized for their contributions here.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: krumpfwylg
+Score: 292
+Created UTC: 1767643204.0
+Comment: Valve got Steam Decks to sell, so it's their interest to ensure 3D graphic library works well. In 2025, AMD dropped their proprietary driver in favor of Mesa, contributing also aligns with their interest, and let's not forget they ship the hardware for Steam Decks and upcoming Steam Machines. 
+
+Kudos to them both for taking part in Mesa development, but let's not forget all the others contributors, whose work is not paid to test and improve mesa libraries.
+
+Comment 2:
+Author: allocallocalloc
+Score: 240
+Created UTC: 1767642252.0
+Comment: &gt; ... the comically large number of obtrusive ads they have on their site.
+
+
+TIL Phoronix has any ads at all. I guess ad blockers really are a game changer.
+
+Comment 3:
+Author: InternetAnon94
+Score: 60
+Created UTC: 1767642990.0
+Comment: Its nice to have a giant gaming company support Linux.
+
+Comment 4:
+Author: the_abortionat0r
+Score: 42
+Created UTC: 1767652790.0
+Comment: Sadly Nvidia is a small company incapable of contributing to their open source driver though it's only been 4 years so we should give them more time.
+
+Comment 5:
+Author: Kuipyr
+Score: 34
+Created UTC: 1767643501.0
+Comment: I remember a couple years ago it was reported Valve had a 100+ compensated developers working on Linux. I wonder if that still holds true.

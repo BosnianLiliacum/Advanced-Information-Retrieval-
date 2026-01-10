@@ -1,0 +1,56 @@
+Post Title: Why are pointers even used in C++?
+Author: ElectricalTears
+Score: 118
+URL: https://www.reddit.com/r/learnprogramming/comments/1pthfk1/why_are_pointers_even_used_in_c/
+Number of comments: 159
+Created UTC: 1766454540.0
+
+Post Content:
+I’m trying to learn about pointers but I really don’t get why they’d ever need to be used. I know that pointers can get the memory address of something with &amp;, and also the data at the memory address with dereferencing, but I don’t see why anyone would need to do this? Why not just call on the variable normally? 
+
+At most the only use case that comes to mind for this to me is to check if there’s extra memory being used for something (or how much is being used) but outside of that I don’t see why anyone would ever use this. It feels unnecessarily complicated and confusing. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: minneyar
+Score: 311
+Created UTC: 1766456061.0
+Comment: What you're referring to a "normal" variable here is a variable that is allocated on the stack.  The contents of the stack are always destroyed whenever you exit the scope where they were allocated.
+
+If you want to allocate memory that can exist outside of the current scope, you have to allocate it on the heap, and in order to know where a variable is in the heap, you have to have a pointer to it.  That's just the way allocating memory on the heap works.
+
+Comment 2:
+Author: cbdeane
+Score: 161
+Created UTC: 1766455046.0
+Comment: Because when you pass a pointer into a function you copy the pointer and not the data. Many times that is more memory efficient.
+
+Comment 3:
+Author: Rain-And-Coffee
+Score: 61
+Created UTC: 1766455777.0
+Comment: Pointers ARE how computers work.   
+
+Everything else is just convenience to make your life easier.   
+
+However if you don’t know the underlying details you can end up doing inefficient operations or overwriting shared data.
+
+Comment 4:
+Author: DirkSwizzler
+Score: 38
+Created UTC: 1766455266.0
+Comment: As the other comment point out. Local variables only live until you leave scope. And generally the stack is 1mb or less.
+
+So you allocate a lot of stuff from the heap. And there's no name for it, just the pointer.
+
+Also I think you are underestimating the complexity of most programs by several orders of magnitude.
+
+In summary, as a programmer for over 30 years (20 professionally). The entire field would be completely screwed without pointers or similar types.
+
+Comment 5:
+Author: rioisk
+Score: 22
+Created UTC: 1766456094.0
+Comment: It's far more efficient to pass around pointers than copy entire objects. Read about heap vs stack and pass-by-value.

@@ -1,0 +1,110 @@
+Post Title: When things are breaking in production, what’s the first Linux command you reach for?
+Author: Expensive-Rice-2052
+Score: 21
+URL: https://www.reddit.com/r/linuxquestions/comments/1q69mlb/when_things_are_breaking_in_production_whats_the/
+Number of comments: 90
+Created UTC: 1767773042.0
+
+Post Content:
+I know there’s no single “best” command - it always depends on what’s failing and the context.
+
+But in real production incidents, when you need to get your bearings quickly, is there a command (or small set of commands) you tend to run first to understand what’s going on?
+
+Not looking for a universal answer - more interested in how experienced admins approach those first few minutes under pressure.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Afraid-Expression366
+Score: 35
+Created UTC: 1767803720.0
+Comment: Depends on what it is that broke. There is no single thing you “reach for”. 
+
+First thing you do is get an understanding of what is going on. Rushing to fix something can make things worse if you don’t know what’s going on. 
+
+If whatever broke is breaking because there “no space left on device” then determine what it is that is taking up space and then act accordingly. (IE: find the offending file(s) and figure out if deletion is an option. If not, then figure out if it can be moved to another location.)
+
+If whatever broke relies on a mounted device that is no longer there then you’d look into that. 
+
+If you ran out of memory you’d need to figure out why (poorly configured system/runaway process). 
+
+If it’s anything specific to an application you just updated, see if reverting to an earlier version will resolve it (in test). 
+
+If it’s network related, others have indicated some commands that are useful. 
+
+I mean, so many variables/so many things can go wrong that you can’t just say “x command” is the first thing you do. 
+
+The “find” command with parameters for a given size can be of help. 
+
+The “ps” command with other parameters can give you insight into the processes that are running. 
+
+The “top” command can give you some indication of what process may be eating up RAM. 
+
+I think though that over time you get a sense of what can go wrong with the system(s) you’re in charge of so it can almost become second nature. 
+
+The outliers are the ones that can make things difficult, so it’s important to go in calmly and deliberately and learn as much as you can about the issue before taking action. 
+
+What I tend to do is approach it in an effort to address the root cause, rather than mask the symptoms. A perfect example is running out of memory. I feel that things like adding memory to a server blindly without understanding why excessive memory consumption might be happening is like spraying Lysol on a corpse in a room. You’re hiding evidence of a problem without addressing the root cause. 
+
+That’s my two cents.
+
+Comment 2:
+Author: rabbixt
+Score: 21
+Created UTC: 1767781211.0
+Comment: Isolate the machine if possible, and then tools like ps, htop, journalctl, strace, lsof, df, nc, ip, etc.,  not necessarily in that order, and not exclusively those (depends where those lead me), but definitely not an immediate reboot which might temporarily fix the issue but lose important datapoints (such as those you can glean via lsof and strace).
+
+Comment 3:
+Author: kidmock
+Score: 11
+Created UTC: 1767790421.0
+Comment: If I'm coming in cold and have no indication of "what's wrong"
+
+First I want to know what kind of system I am on.
+
+`uname -a`
+
+Then I want to take a quick glance at the network to see if anything jumps out as wierd
+
+`netstat -anp`
+
+Then I'll check the process map for anomallies and zombies. (I prefer BSD style)
+
+`ps auxwww`
+
+Then I'll check the disk usage
+
+`df -h`
+
+Then I'll check to see if any of process are chewing away at resources
+
+`top`
+
+Lastly, I'll check the logs
+
+`dmesg`
+
+`cat log`
+
+`journalctl`
+
+That is normally enough to give me a pitcture
+
+Comment 4:
+Author: YakumoYoukai
+Score: 9
+Created UTC: 1767773617.0
+Comment: Just one command? Probably `top`. It shows how much CPU, memory, and swap is free, and which processes are using the most of those, among other resources.  If you let me use one more, I would follow it up with `df`, because running out of disk is an annoyingly common failure mode.
+
+Comment 5:
+Author: mecha_monk
+Score: 8
+Created UTC: 1767773381.0
+Comment: ....really depends. Checking logs and traces if something stopped running or didn't start.
+
+Enable logging of the kernel or recompile a debug version.
+
+Then check with dmesg and check the syslog depending on what went wrong.
+
+No specific one command but just things to do. Nothing universal but checking logs is where I start. There is no "one go-to command".

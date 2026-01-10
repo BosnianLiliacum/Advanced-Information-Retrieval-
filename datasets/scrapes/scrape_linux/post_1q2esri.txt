@@ -1,0 +1,42 @@
+Post Title: Linux Kernel Security Work by Greg Kroah-Hartman
+Author: unixbhaskar
+Score: 266
+URL: http://www.kroah.com/log/blog/2026/01/02/linux-kernel-security-work/
+Number of comments: 62
+Created UTC: 1767397994.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Internet-of-cruft
+Score: 102
+Created UTC: 1767403431.0
+Comment: I appreciate the irony that his website is specifically HTTP only.
+
+Comment 2:
+Author: Euphoric-Bunch1378
+Score: 86
+Created UTC: 1767404862.0
+Comment: The fact that one of the leading Linux developers is still running a website without HTTPS in 2026 makes my head explode with rage.
+
+Comment 3:
+Author: Cesar_PT
+Score: 38
+Created UTC: 1767404402.0
+Comment: this guy insists on not httpsing his goddamn site, holy shit
+
+Comment 4:
+Author: Mysterious_Lab_9043
+Score: 14
+Created UTC: 1767401415.0
+Comment: Excellent read.
+
+Comment 5:
+Author: Salamandar3500
+Score: 12
+Created UTC: 1767440432.0
+Comment: The fact that they insist on *not* using encryption... 🙄

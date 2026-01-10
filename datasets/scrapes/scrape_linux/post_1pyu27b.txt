@@ -1,0 +1,53 @@
+Post Title: 39C3: Multiple vulnerabilities in GnuPG and other cryptographic tools
+Author: LordAlfredo
+Score: 398
+URL: https://www.heise.de/en/news/39C3-Multiple-vulnerabilities-in-GnuPG-and-other-cryptographic-tools-11125362.html
+Number of comments: 33
+Created UTC: 1767033101.0
+
+Post Content:
+[Vulnerability Listing](https://gpg.fail/)
+
+[Presentation VoD](https://media.ccc.de/v/39c3-to-sign-or-not-to-sign-practical-vulnerabilities-i)
+
+[YouTube rehost (by the authors)](https://www.youtube.com/watch?v=U0ZYOTHrB7I)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: omgnerd
+Score: 147
+Created UTC: 1767043064.0
+Comment: From the vulnerability listing:
+&gt; in the hurry of leaving i forgot the sites src at home, sorry, had to rewrite the whole thing. expect a nicer site by tomorrow. im patching as we speak.
+
+I first looked at the site and thought "what a nice, clean, straight to the point site". Too many sites need tons of JS and CSS nowadays...
+
+Comment 2:
+Author: FizzBuzz3000
+Score: 91
+Created UTC: 1767046209.0
+Comment: I like how the first GPG vuln they talk about in the video has been disclosed to the GPG devs over 2 months ago and still isn't fixed. While `age(1)` fixed thier vuln (that was disclosed in the VOD) as soon as it was told to a dev  that was on a stream. 
+
+I guess we should call it Gnu Public Guard /s
+
+Comment 3:
+Author: T8ert0t
+Score: 68
+Created UTC: 1767060211.0
+Comment: &gt; The researchers particularly praised the reaction to the vulnerability in age: Not only was the error fixed in the various age implementations, but the specification was also updated to prevent the problem. Directly at the hacker congress, age developer Filippo Valsorda even went a step further: He was in the audience of the presentation and used the mandatory Q&amp;A session at the end to thank the researchers for their work. He also presented them with an improvised bug bounty in the form of stickers and pins.
+
+This is how it's done 👍🏻
+
+Comment 4:
+Author: BoutTreeFittee
+Score: 44
+Created UTC: 1767049628.0
+Comment: &gt; "All discovered problems are implementation errors, meaning they do not affect the fundamental security of the methods used, but rather their concrete – and indeed flawed – implementation in the respective tool."
+
+Comment 5:
+Author: BemusedBengal
+Score: 33
+Created UTC: 1767038254.0
+Comment: So do none of those have CVE numbers orrrr?

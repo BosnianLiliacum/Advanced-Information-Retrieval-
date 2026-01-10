@@ -1,0 +1,69 @@
+Post Title: I made a "Windows" like task manager and resource monitor for Linux. (User friendly)
+Author: rghmtn
+Score: 491
+URL: https://www.reddit.com/gallery/1psumfc
+Number of comments: 73
+Created UTC: 1766392655.0
+
+Post Content:
+I wanted to make something that was more user friendly than something like htop, and less cluttered than something like KDE system monitor with more useful abilies similar to what Windows task manager offers, and was also user friendly for someone new to Linux. I vibe coded this app but it seems it work very well after hours of effort. I call it Taskwire.
+
+Here's what it looks like, if you want to check it out it's open source on GitHub
+
+https://github.com/majoraexp/Taskwire
+
+UPDATE: currently on version 1.52, compiled as C++ standalone executable! Lot's of fixes and small changes since this post. This is probably the last small update I will make for a while, the next update will be bigger, I need to decide on what additions I should focus on/ if I need to do any rewrites, optimization etc. I need to put project manager hat on and brainstorm ideas for a while. I am still learning things as I go but this has been an absolute blast. Thank you to everyone who has been supportive and helpful, I greatly appreciate you!
+
+https://github.com/majoraexp/Taskwire/releases/tag/v1.52
+
+
+Top 5 comments:
+
+Comment 1:
+Author: 1Blue3Brown
+Score: 153
+Created UTC: 1766410450.0
+Comment: &gt; ⚠️ Disclaimer: This is an AI "vibe coded" project, and my first attempt at making something useful with it.
+
+Thank you for being upfront with it. I think AI disclaimers should be the standard
+
+Comment 2:
+Author: MelioraXI
+Score: 67
+Created UTC: 1766404071.0
+Comment: As your avid "vibe coded AI slop" disliker, I appropriate you being upfront with it. 
+The GUI looks pretty nice and friendly.
+
+But you're making lot of little strange decisions. PyQT is generally fine but if the goal is making it distro agnostic you might run into compatiblity issues, especially on Debian and Ubuntu based systems (not a guarantee but likely to happen). 
+
+You package a binary but it's not complete when you expect the enduser to still install a venv and install packages (i'm guessing you're using pyinstaller incorrectly). 
+
+The install instructions is not complete (i.e using github.com/yourusername/). 
+
+I would probably had spent a few minutes to quality control before announcing the project. If you want it to work without locking up, python is not the best tool. You might want to look into C++ or Rust but as a concept and prototype it's fine.
+
+Comment 3:
+Author: dankmemelawrd
+Score: 15
+Created UTC: 1766393071.0
+Comment: Now wait until you'll find out about grafana &amp; prometheus! :))
+
+Comment 4:
+Author: Surasonac
+Score: 11
+Created UTC: 1766414781.0
+Comment: Looks good. But there is already a lightweight windows like task manager called Mission Center. Python is gonna be your main hurdle
+
+Comment 5:
+Author: aflamingcookie
+Score: 7
+Created UTC: 1766419885.0
+Comment: Honestly, i love the disclaimer for vibe coding, it says a ton of good things about you by admitting that up front. Vibe coding isn't bad, it's a tool like any other, and it seems you are using it to learn and build something useful, as it should be used.
+
+  
+I gave your app a try on Linux Mint 22.2, it appears there is a rendering issue causing alternate rows in the process tab to appear as a white box unless each particular row is selected. I tried both with white and dark themes and it didn't seem to affect it.
+
+What would be really nice to have is additional small widgets that we could populate the interface with (toggle on/off from settings for example), especially for sensor outputs. For example System fan speed / GPU fan speed, Per core CPU graph (rather than the current overall usage graph), HDD/SSD activity for each or a specific drive, GPU frequency, CPU/GPU power draws etc.
+
+  
+Obviously i don't ever expect you to implement any of the above, but your application shows quite a lot of promise so i encourage you to further develop it, vibe coding is great for quick and dirty prototypes, you can then go and rewrite or refine the code manually, that way you further develop your skills. Overall, wonderful start, keep at it, this is really cool.

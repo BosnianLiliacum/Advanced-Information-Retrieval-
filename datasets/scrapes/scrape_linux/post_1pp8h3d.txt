@@ -1,0 +1,47 @@
+Post Title: Linux Kernel Rust Code Sees Its First CVE Vulnerability
+Author: sash20
+Score: 1031
+URL: https://www.phoronix.com/news/First-Linux-Rust-CVE
+Number of comments: 255
+Created UTC: 1766006457.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 789
+Created UTC: 1766006778.0
+Comment: [deleted]
+
+Comment 2:
+Author: tulpyvow
+Score: 318
+Created UTC: 1766007716.0
+Comment: Unsafe code has vulnerability.
+
+Water found in ocean.
+
+I'm a rust hater but come on man, this is just making you all look bad.
+
+Comment 3:
+Author: Ursomrano
+Score: 198
+Created UTC: 1766008963.0
+Comment: Well it was guaranteed to happen eventually. And I'm not saying that because I'm a rust hater, I'm saying it because as long as something is even remotely probable, it's a matter of when it'll happen.
+
+Comment 4:
+Author: CardOk755
+Score: 171
+Created UTC: 1766009772.0
+Comment: &gt; Issue introduced in 6.18 with commit eafedbc7c050c44744fbdf80bdf3315e860b7513 and fixed in 6.18.1 with commit 3428831264096d32f830a7fcfc7885dd263e511a
+&gt;	Issue introduced in 6.18 with commit eafedbc7c050c44744fbdf80bdf3315e860b7513 and fixed in 6.19-rc1 with commit 3e0ae02ba831da2b707905f4e602e43f8507b8cc
+
+Comment 5:
+Author: sash20
+Score: 88
+Created UTC: 1766008254.0
+Comment: "This first CVE for Rust code in the Linux kernel pertains to the Android Binder rewrite in Rust. There is a race condition that can occur due to some noted unsafe Rust code. That code can lead to memory corruption of the previous/next pointers and in turn cause a crash."

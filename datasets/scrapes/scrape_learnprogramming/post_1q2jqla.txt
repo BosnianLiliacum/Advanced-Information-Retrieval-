@@ -1,0 +1,59 @@
+Post Title: 2026, and I’m relearning
+Author: Important_Fennel3523
+Score: 37
+URL: https://www.reddit.com/r/learnprogramming/comments/1q2jqla/2026_and_im_relearning/
+Number of comments: 9
+Created UTC: 1767410967.0
+
+Post Content:
+Hey everyone! I just want to share something I’ve been doing for the past month or so. 
+
+Late 2023 I was dealing with a huge burnout working as a SWE at a bank. So, I decided that I wanted to take a break from the hostile environment and work with other stuff (and enjoy some of my life after uni). 
+
+The thing is, job market wasn’t so lucky to me. It was (and it still is) hard to even get an interview. So I ended up doing some freelance and gigs all around. 
+
+But one stuff that was all over my head ever since I finished uni was the famous “imposter syndrome”. And, I got the realisation that I was, in fact, very lucky to land my positions. I always relied on AI to deliver something, didn’t know how to start a project from scratch. 
+
+So, in November I decided to “start again”. Focusing on getting the basics well and enjoying coding again. And it has been a quite fun journey! In fact, I’m liking studying and trying some stuff. I got a membership on Frontend Masters (mostly because of the algorithm course) and gifted myself with some books for Christmas. 
+
+I’m relearning (or learning in fact) Javascript, algorithms, some cloud computing (aiming for AWS SAA-CO3) and eager to learn DBs and Golang. 
+
+Challenges are getting fun again, struggling is getting fun again and, more importantly, learning is getting fun again. 
+
+I’m still doing some gigs (mostly because I really need the money), but I’m planning on diving deep in interviews at June. But, until then, I’ll enjoy the ride :)
+
+
+Top 4 comments:
+
+Comment 1:
+Author: OkAmount5959
+Score: 5
+Created UTC: 1767418787.0
+Comment: I relate a lot to this.
+
+I burned out around 2022 and took a long sabbatical to relearn English and experience life abroad. I even considered quitting SWE entirely. What pulled me back was a small freelancing backend gig from a friend, it reminded me that I actually enjoy building things.
+
+After that, I went hard on LeetCode and “interview prep mode.” I learned a lot, but one thing surprised me: interviews didn’t always test what I had spent the most time on. System topics and real-world tradeoffs mattered more than I expected.
+
+If there’s one thing I’d share: you don’t need to rush interviews, but doing a few earlier can be really useful. They act like a compass, showing what skills are actually worth prioritizing.
+
+Enjoy the ride. Rediscovering is already a big win.
+
+Comment 2:
+Author: No-Ear-4161
+Score: 2
+Created UTC: 1767415160.0
+Comment: That's great dude! I wish the best for you. My advice, which is sounds like you are already doing, is to stick with structured courses. From my experience, when I try to learn something myself with no structured curriculum, it falls apart.   
+Also, let me know what kind of gigs you did. I'd like to get into those myself.
+
+Comment 3:
+Author: dartanyanyuzbashev
+Score: 1
+Created UTC: 1767425813.0
+Comment: I bert i need to learn again AS welll...
+
+Comment 4:
+Author: greyspurv
+Score: 1
+Created UTC: 1767452187.0
+Comment: I would encourage you to also think about doing your own thing, own product etc, so many doing programming only think selling their time for money is the only way to make money in the space

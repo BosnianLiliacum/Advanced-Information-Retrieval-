@@ -1,0 +1,46 @@
+Post Title: Future prospects for Comp Science degree
+Author: jnags6570
+Score: 41
+URL: https://www.reddit.com/r/learnprogramming/comments/1pz5rzn/future_prospects_for_comp_science_degree/
+Number of comments: 45
+Created UTC: 1767061410.0
+
+Post Content:
+I have a chance to go back to school coming up as a mature student, I can get into open studies at my local university that I already have a degree in business from and some of the classes I’m interested in would be the basis for a computer science degree. First two classes are fundamentals of programming and intro to discreet structures. They seem like interesting classes, probably very valuable to know regardless, just wondering if I’ve missed the boat a bit on timing of this degree if I decide to pursue it further. Seems like a lot of discussion here about the threat of AI, offshoring, etc. What’s the general consensus here? Fear mongering or legit concerns?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: lo0nk
+Score: 33
+Created UTC: 1767062671.0
+Comment: Okay if the ai marketing glaze actually comes true and cognitive labor becomes worthless, then the world as we know it is basically gonna end and we all be like little peasant people. However this is very unlikely and not really worth worrying about.
+
+The reality is that you can totally get a cushy dev job that's maybe remote and pays great. However you basically have to: get the degree, build personal projects in your free time, contribute meaningfully to open source projects, teach yourself a ton of stuff, study leetcode to pass technical interviews, and also either make connections to get your first job or apply to potentially hundreds (I've seen people with 1500 applications with no jobs but others got somewhere with less then 50.) of places.
+
+This not good value unless you like programming. If you are passionate, disciplined, and committed you can do it and it'll be awesome.
+
+Comment 2:
+Author: [deleted]
+Score: 15
+Created UTC: 1767062036.0
+Comment: [removed]
+
+Comment 3:
+Author: Astronaut6735
+Score: 9
+Created UTC: 1767076863.0
+Comment: I think the negatives of the current iteration of AI are going to catch up to everyone, and we'll realize that it can't deliver on expectations, and creates more problems than it solves. The hype will fade, and LLMs will be just another tool used in limited ways. So my recommendation is to pursue your CS education.
+
+Comment 4:
+Author: timmyturnahp21
+Score: 6
+Created UTC: 1767063982.0
+Comment: Learn to plumb. Unironically
+
+Comment 5:
+Author: Special_Rice9539
+Score: 5
+Created UTC: 1767091718.0
+Comment: Honestly get an engineering degree in mining or electrical engineering if you’re going to spend money on school

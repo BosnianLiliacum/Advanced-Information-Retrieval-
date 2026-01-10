@@ -1,0 +1,30 @@
+Post Title: Intel readies multi-queue support for Linux 7.0 as new feature for Crescent Island
+Author: Fcking_Chuck
+Score: 259
+URL: https://www.phoronix.com/news/Intel-Xe-Multi-Queue-Linux-7.0
+Number of comments: 9
+Created UTC: 1766319244.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 3 comments:
+
+Comment 1:
+Author: hoyohoyo9
+Score: 90
+Created UTC: 1766330392.0
+Comment: Crescent Island definitely sounds like a 90's point and click adventure game
+
+Comment 2:
+Author: jaredw
+Score: 14
+Created UTC: 1766359460.0
+Comment: Can someone ELI5 this for me
+
+Comment 3:
+Author: biffbobfred
+Score: 1
+Created UTC: 1766373809.0
+Comment: I say this with no snark - how prevalent are these cards?  Is this news in general like “hey that’s so cool may make some more people buy the cards” or “Intel still makes graphics cards?”  I’m out of the loop I’m more the latter

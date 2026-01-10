@@ -1,0 +1,50 @@
+Post Title: Here's an interesting question: Why do you guys think Linux took off to become the phenomenon it is, while none of the BSD/Unix OSes ever did, at least not to anywhere near the same extent?
+Author: earthman34
+Score: 618
+URL: https://www.reddit.com/r/linux/comments/1prqw7z/heres_an_interesting_question_why_do_you_guys/
+Number of comments: 413
+Created UTC: 1766270705.0
+
+Post Content:
+What made the Linux path different from something like, let's say, FreeBSD, or OpenBSD? Was it because of the personalities associated with these systems? Or because of the type of users these systems tended to attract?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: aioeu
+Score: 669
+Created UTC: 1766271024.0
+Comment: The USL v. BSDi lawsuit essentially made BSD a non-starter until 1993 at the very earliest, and by then Linux had taken hold.
+
+It would be fair to say that had that lawsuit not happened, Linux could well have remained a hobbyist's OS.
+
+Comment 2:
+Author: SufficientLime_
+Score: 157
+Created UTC: 1766270842.0
+Comment: GNU was already an almost complete OS and needed a kernel Linus happened to be developing one
+
+Comment 3:
+Author: whatstefansees
+Score: 111
+Created UTC: 1766270939.0
+Comment: From the beginning Linux ran on standard PCs, the ones we had at home. BSD on a 386 in 1995? Forget it!
+
+Comment 4:
+Author: crucible
+Score: 100
+Created UTC: 1766271105.0
+Comment: Hardware requirements may have played a small part.
+
+IIRC there’s a quote from Alan Cox in the old book *Rebel Code* about why he chose Linux when BSD was also available.
+
+It’s something like “when I started with PC based Unixes, 386BSD needed a maths co-processor, and Linux didn’t”
+
+Comment 5:
+Author: MaizeGlittering6163
+Score: 53
+Created UTC: 1766272414.0
+Comment: The ancestor of the BSDs was mired in some legal problem; GNU had all the user land software but the HURD kernel was nowhere near ready. Minix had licensing problems of some kind. Commercial releases of Unix or clones thereof cost several hundred dollars or more, entirely too much for the geeks who had scrounged a 386 and wanted to hack on it. 
+
+Enter Linux. It was free of legal problems, GPL so the GNU guys could use it without commuting apostasy, and it existed in a usable state. It won a race Linus didn’t even know was happening and its star just took off. 

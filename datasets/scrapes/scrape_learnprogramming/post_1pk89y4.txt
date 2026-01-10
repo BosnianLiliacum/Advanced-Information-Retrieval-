@@ -1,0 +1,55 @@
+Post Title: How to overcome the "X already exists, why bother" feeling?
+Author: Aromatic_Dinner_1573
+Score: 36
+URL: https://www.reddit.com/r/learnprogramming/comments/1pk89y4/how_to_overcome_the_x_already_exists_why_bother/
+Number of comments: 49
+Created UTC: 1765485480.0
+
+Post Content:
+I'm not a new developer, but I recently started to suffer from the "I'm overwhelmed" feeling. I find motivation to work on project X, start working on it then progressively demotivate myself with thoughts like "Why bother making this when someone already made this, but better?".
+
+I am aware I should be making projects **for me**, and not for someone else. But it is hard to justify spending hours/days/weeks working on something, wanting to share it then being told "oh, Y already does it but better."
+
+I'd consider myself a library programmer, so it is quite demotivating to be unable to make something by myself for others to enjoy...
+
+
+Top 5 comments:
+
+Comment 1:
+Author: disposepriority
+Score: 51
+Created UTC: 1765485606.0
+Comment: Sometimes I want to cook a cool recipe I found online but then I realize, the person who made the recipe has already cooked it so honestly why bother.
+
+Comment 2:
+Author: EvokeNZ
+Score: 31
+Created UTC: 1765486298.0
+Comment: In my readme I write “there are many like it, but this one is mine”
+
+Comment 3:
+Author: zubeye
+Score: 13
+Created UTC: 1765485898.0
+Comment: Building something is only a fraction of the project, then you gotta market it, manage it, maintain it, sell it 
+
+If you are just developing your building skills, then it hardly matters if it exists already
+
+If you are trying to start a business then perhaps you are  hiding in your comfort zone.
+
+Comment 4:
+Author: lurgi
+Score: 12
+Created UTC: 1765485622.0
+Comment: That's how I feel about learning guitar. Why should I spend hours/days/weeks learning to play something when there is already someone out there doing it better?
+
+Edit: Yes, people. That was my point.
+
+Comment 5:
+Author: fugogugo
+Score: 3
+Created UTC: 1765487938.0
+Comment: is X perfect?  
+if not then there's still room for improvement
+
+alternative is always welcomed

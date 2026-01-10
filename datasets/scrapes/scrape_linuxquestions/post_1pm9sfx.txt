@@ -1,0 +1,70 @@
+Post Title: Linux hanging task killing/OOM handling is better then Windows?
+Author: tomekgolab
+Score: 15
+URL: https://www.reddit.com/r/linuxquestions/comments/1pm9sfx/linux_hanging_task_killingoom_handling_is_better/
+Number of comments: 11
+Created UTC: 1765703351.0
+
+Post Content:
+I've been thinking lately how it works, I'm not that well versed into internals of each systems to just judge. So, assume a hanging task, taking a lot of resources and, from user perspective, "frozen". 
+
+On Windows we use the three key salute, which is really an interrupt with priority higher then apps we run, which gives us Task Manager... in userspace. It might get hanged just like the app. 
+
+This would be similar to lanuching a terminal emulator from DE and sending SIGTERM?
+
+So assuming the user level solutions like task manager and the terminal wouldn't crash, they are pretty equal, the only difference being, Windows will rather always try to peacefully terminate the process, whereas in Linux you are able to just kill -9 it.
+
+Is switching to another TTY (Alt+Fn) better then opening terminal emulator by DE? Is it better then lanuching Windows Task manager?
+
+I guess Linux would be better at handling OOM to, assuming you want to get control of the machine no matter saving the data,  but that requires some configuration beforehand, and not even talking about the 'atomic' option of reisub oom killer.
+
+I might be speaking in rough and certain terms, but those are just my deductions and some experience with Windows 7-10 and Debian. If I am fundamentally wrong about something please correct me.  
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Appropriate_Ant_4629
+Score: 4
+Created UTC: 1765706018.0
+Comment: It's only good if you [enable Alt-SysRq-F](https://en.wikipedia.org/wiki/Magic_SysRq_key) - because its idea of when to fire may not match an interactive user's idea.
+
+Good [old reddit post on it here](https://www.reddit.com/r/linux/comments/75gyrz/a_tribute_to_altsysrqf/)
+
+I hate that many popular distros disable it by default.
+
+Comment 2:
+Author: DP323602
+Score: 4
+Created UTC: 1765705076.0
+Comment: For a more direct equivalent of Windows Task Manager, I launch htop from a terminal and then use that to kill unwanted tasks as required.
+
+If I'm running a lot of compute intensive tasks, I usually keep htop open to see how they are doing.
+
+Comment 3:
+Author: ptoki
+Score: 1
+Created UTC: 1765744685.0
+Comment: I see no difference. BUT! the use cases I experienced are different.
+
+In windows its easy to get into full memory (a browser and few tabs of JIRA) and this may or may not cause system slow down to a state where task manager will not pop up and work (despite the words of that former ms engineer on youtube - dave). In that case only solid multisecond power button will get you back to a working system through reboot.
+
+In linux its a bit more tricky, usually the browser scenario is not that severe but running a couple of rsyncs over the course of few weeks will eat your memory but you will have hard time to see it anywhere in top/htop etc. There are bugs opened on kernel bugzilla on this (https://bugzilla.kernel.org/show_bug.cgi?id=110501)
+
+In this case even switching to text tty may be also not really responsive if not caught in time. My machine gets to loads like 50-80 in such case. 
+
+All in all, if you have case fancy enough you can lock up both systems.
+
+Comment 4:
+Author: wiebel
+Score: 1
+Created UTC: 1765706369.0
+Comment: In reality if you switch over to tty a getty has to spawn a login shell which involves several processes the whole pam shenanigans and what not all of those processes need their slices of cpu cycles. Then you most probably need to sudo or su and the whole stack need a new go. 
+If you have a (root) shell ready to go you are pretty much set to fire. The needed kill -9 or more probable killall -9 ... 
+That being said. When you know you're up to something risky, start your tty root shell ahead of time.
+
+Comment 5:
+Author: Jean_Luc_Lesmouches
+Score: 1
+Created UTC: 1765733056.0
+Comment: Well the other day firefox crashed so hard, when I tried to reboot the computer it hung for a while on the console and after the reboot it asked to check the system drive...

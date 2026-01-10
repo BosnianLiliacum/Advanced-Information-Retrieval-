@@ -1,0 +1,66 @@
+Post Title: Is there a workaround to make AUR helper to use SSH instead of HTTPS?
+Author: AbdSheikho
+Score: 44
+URL: https://www.reddit.com/r/archlinux/comments/1pyl032/is_there_a_workaround_to_make_aur_helper_to_use/
+Number of comments: 45
+Created UTC: 1767011106.0
+
+Post Content:
+I know while installing an AUR package, the PKGBULID will uses HTTPS when downloading or cloning anything from _GitHub_ per say.
+
+However, HTTPS downloads are often error-prone and may break with a weak/unstable internet connection. That's why I'm looking for a way around using HTTPS.
+
+So, Is there a workaround to make the process use something like SSH, tokens, or any other method?
+
+## Solution:
+You can either edit the `.gitconfig`
+
+```config
+[url "ssh://git@github.com/"]
+    insteadOf = "https://github.com/"
+```
+
+Or you can use this command:
+
+```
+git config set url."ssh://git@github.com/".insteadOf "https://github.com/”
+```
+
+**Note: this will make all your interactions with GitHub via SSH**
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Responsible-Sky-1336
+Score: 45
+Created UTC: 1767013135.0
+Comment: You sir are a smart cookie actually.
+
+Can be tested here: [https://github.com/h8d13/grimaur-too](https://github.com/h8d13/grimaur-too)
+
+With option `--use-ssh`
+
+Comment 2:
+Author: sheduller
+Score: 22
+Created UTC: 1767011705.0
+Comment: You can't fix a weak internet connection by changing the download protocol. Your problem is a weak internet connection, and you know it. Try to solve known problems instead of creating non-existent one
+
+Comment 3:
+Author: NiceNewspaper
+Score: 21
+Created UTC: 1767012070.0
+Comment: The packages are built by the makepkg shell script, look for where it calls git and modify those lines.
+
+Comment 4:
+Author: mjec
+Score: 21
+Created UTC: 1767015196.0
+Comment: You can set up your gitconfig to replace the URL automatically: https://blog.scottlowe.org/2023/12/11/automatically-transforming-git-urls/
+
+Comment 5:
+Author: Lostronzoditurno
+Score: 6
+Created UTC: 1767034956.0
+Comment: Your premise doesn't really make sense. Both protocols use TCP and both have an initial handshake with key negotiation. An unstable connection will break both the same way... And besides that, HTTPS is the protocol behind the whole internet, how can you even say that it's unreliable

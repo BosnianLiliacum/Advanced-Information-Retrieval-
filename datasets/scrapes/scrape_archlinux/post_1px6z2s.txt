@@ -1,0 +1,42 @@
+Post Title: If the Steam client were also available as a 64-bit application on Linux, would there be any reason to continue using multilib?
+Author: Adorable_Dust4838
+Score: 67
+URL: https://www.reddit.com/r/archlinux/comments/1px6z2s/if_the_steam_client_were_also_available_as_a/
+Number of comments: 35
+Created UTC: 1766865394.0
+
+Post Content:
+I’m not sure which applications still require 32-bit dependencies. I’m running Hyprland and a very minimal setup, so I’m wondering whether I actually need 32-bit libraries at all.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Sea-Promotion8205
+Score: 71
+Created UTC: 1766865749.0
+Comment: You still need 32 bit libraries for 32 bit games, don't you?
+
+Comment 2:
+Author: poixninja
+Score: 7
+Created UTC: 1766865975.0
+Comment: Try paclist
+
+Comment 3:
+Author: AMGz20xx
+Score: 4
+Created UTC: 1766935590.0
+Comment: I still play 32-bit games like F.E.A.R. (awesome game btw). I don't use Steam, I just buy them on DVD or from GOG and launch them on ES-DE. I don't even use Steam anymore. Your Steam games can get delisted at any time, and running Steam in the background can reduce performance in games.
+
+Comment 4:
+Author: donnaber06
+Score: 2
+Created UTC: 1766968178.0
+Comment: I flatpak steam.
+
+Comment 5:
+Author: Much_Dealer8865
+Score: -1
+Created UTC: 1766900240.0
+Comment: Bunch of windows shit is still 32-bit, for me it came into play with old games and game launchers while running them through steam and proton so I keep them. And by old I mean a few years old.

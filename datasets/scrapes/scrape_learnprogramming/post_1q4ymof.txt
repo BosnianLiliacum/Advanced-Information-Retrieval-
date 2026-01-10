@@ -1,0 +1,61 @@
+Post Title: 2,000 free sign ups for the Automate The Boring Stuff With Python course on Udemy (Jan 2026)
+Author: AlSweigart
+Score: 255
+URL: https://www.reddit.com/r/learnprogramming/comments/1q4ymof/2000_free_sign_ups_for_the_automate_the_boring/
+Number of comments: 28
+Created UTC: 1767648373.0
+
+Post Content:
+This link redirects to a free sign up for the Automate The Boring Stuff With Python course on Udemy:
+
+https://inventwithpython.com/automateudemy
+
+[This blog post discusses how you can otherwise get the course for free or at a discount.](https://inventwithpython.com/blog/automate-boring-stuff-udemy-free-discount.html)
+
+**NOTE: Be sure to BUY the course for $0, and not sign up for Udemy's subscription plan. The subscription plan is free for the first seven days and then they charge you. It's selected by default. If you are on a laptop and can't click the BUY checkbox, try shrinking the browser window. Some have reported it works in mobile view.**
+
+**Frequently Asked Questions:** (*read this before posting questions*)
+
+* This course is for beginners and assumes no previous programming experience, but the second half is useful for experienced programmers who want to learn about various third-party Python modules.
+* If you don't have time to take the course now, that's fine. Signing up gives you lifetime access so you can work on it at your own pace.
+* This Udemy course covers roughly the same content as the 1st edition book (the book has a little bit more, but all the basics are covered in the online course), which you can read for free online at https://inventwithpython.com
+* The 3rd edition of Automate the Boring Stuff with Python is free online: https://automatetheboringstuff.com/3e/
+* I do plan on updating the Udemy course, but it'll take a while because I have other book projects I'm working on. If you sign up for this Udemy course, you'll get the updated content automatically once I finish it. It won't be a separate course.
+* **You're not too old to learn to code. You don't need to be "good at math" to be good at coding.**
+
+
+Top 5 comments:
+
+Comment 1:
+Author: TytoCwtch
+Score: 11
+Created UTC: 1767653739.0
+Comment: Thanks so much for this. Really looking forward to the course!
+
+Comment 2:
+Author: AlSweigart
+Score: 6
+Created UTC: 1767709688.0
+Comment: Thanks everyone for the kind words. In its heyday, this course would get 10,000, 15,000 or even up to 40,000 sign ups per month when I'd post it to this sub. Udemy now limits me to 2,000 per month, and even then I only get about half of that. I worry that I'm spamming something people don't want, but these words of encouragement are great.
+
+A reminder that the book that this course is based on is now in its third edition and free to read online at https://automatetheboringstuff.com/3e/
+
+Thank you all so much!
+
+Comment 3:
+Author: hthi2802
+Score: 3
+Created UTC: 1767654941.0
+Comment: Thank you very much, Mr. Sweigart!
+
+Comment 4:
+Author: Flyby34
+Score: 3
+Created UTC: 1767653204.0
+Comment: Thanks!
+
+Comment 5:
+Author: m88883
+Score: 3
+Created UTC: 1767661425.0
+Comment: Thanks Al, I bought your course in 2019. This was the best intro to python ever!

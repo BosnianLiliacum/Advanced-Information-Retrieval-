@@ -1,0 +1,35 @@
+Post Title: NTS support through systemd-timesyncd is faintly visible on the horizon.
+Author: Itchy_Ruin_352
+Score: 19
+URL: https://www.reddit.com/r/archlinux/comments/1pzhpyw/nts_support_through_systemdtimesyncd_is_faintly/
+Number of comments: 5
+Created UTC: 1767100158.0
+
+Post Content:
+As can be seen from the following links, there appears to be an attempt to support NTS through systemd-timesyncd.
+
+\* [https://github.com/systemd/systemd/issues/9481](https://github.com/systemd/systemd/issues/9481)  
+\* [https://github.com/pendulum-project/nts-timesyncd/tree/nts-time-v258](https://github.com/pendulum-project/nts-timesyncd/tree/nts-time-v258)
+
+Anyone who is able to help with the project is certainly welcome.
+
+If you are wondering what NTS is good for, it ensures that the system time is not manipulated, that certificates cannot be considered expired even though they are still valid, and vice versa, that certificates are accepted even though they have already expired.
+
+I recognize the importance of using NTS, but I don't have the relevant programming skills, so I can only draw attention to the project. Maybe I'll get lucky and someone with better skills in this area will be interested in taking a look at the project.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 2
+Created UTC: 1767114195.0
+Comment: Wait so does this mean systemd-timesyncd will be an NTP client instead of an SNTP client?
+
+Comment 2:
+Author: JohnSmith---
+Score: 1
+Created UTC: 1767182015.0
+Comment: I've switched to ntpd-rs immediately last week when I found out about NTS being a thing. I used systemd-timesync for years before that. Shame something available since 2018 went unimplemented in systemd for years.
+
+It's also a full NTP client instead of SNTP, so I'll probably stay with ntpd-rs for the foreseeable future.

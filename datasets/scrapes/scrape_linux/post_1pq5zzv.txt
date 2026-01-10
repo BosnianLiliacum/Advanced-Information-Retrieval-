@@ -1,0 +1,62 @@
+Post Title: If you can't code, a great way to contribute to your desktop environment is telemetry
+Author: Indolent_Bard
+Score: 999
+URL: https://www.reddit.com/r/linux/comments/1pq5zzv/if_you_cant_code_a_great_way_to_contribute_to/
+Number of comments: 232
+Created UTC: 1766101383.0
+
+Post Content:
+"But I'm on linux to escape that stuff!" Then why are you reading this? Respectfully, what are you doing here?
+
+Gnome and KDE Plasma have optional telemetry. As much as people in this sub dispise the very idea of it, projects done by volunteers can benefit MASSIVELY from it since it lets them know what to prioritize and what breaks when and how. I just turned on the full extent it would allow, which allows me to do my part to help make this ecosystem a better one for everyone.
+
+In KDE this is in the settings under feedback. On gnome, you need to download Gnome-info-collect if it isn't already in your distro (not sure if any distros come with it preinstalled but disabled.)
+
+Cosmic doesn't seem to have this as an option yet, but they should really get on that since it's such a new project.
+
+For those that don't hate telemetry, this is a great way to contribute to the greater linux ecosystem. If you want to help but can't code (or come across any bugs to report, since those are always good to but most of us don't encounter bugs) this is a nice way to help.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: danGL3
+Score: 744
+Created UTC: 1766101653.0
+Comment: I legit don't mind telemetry as long as 
+
+1-It's not forced on by default
+
+2-It is easy to toggle/on off
+
+3-Is transparent on what is collected
+
+4-Let's me choose how much telemetry I'm comfortable sending
+
+So yeah, I keep my KDE telemetry enabled because I know what's being collected and I know that information is solely in the hand of developers not interested in monetizing said information
+
+Comment 2:
+Author: thomas-rousseau
+Score: 246
+Created UTC: 1766101692.0
+Comment: I love opting into telemetry for FOSS projects that I use regularly. I hate being auto-enrolled in telemetry by proprietary software. Very different beasts
+
+Comment 3:
+Author: Accurate_Hornet
+Score: 72
+Created UTC: 1766102702.0
+Comment: Don't forget that you can always donate to your favourite projects!
+
+Comment 4:
+Author: atoponce
+Score: 71
+Created UTC: 1766101754.0
+Comment: Completely agreed. One of the oddities about Free Software users is their complaints that software isn't working the way they want, while also disabling any and all telemetry, preventing the developers from knowing what is and isn't being used.
+
+You see this all the time in r/Firefox where Mozilla makes a UI change because no one is using it. Or users are but they disabled telemetry, so Mozilla is blind.
+
+Comment 5:
+Author: giomjava
+Score: 19
+Created UTC: 1766102740.0
+Comment: I don't mind telemetry at all if it's not being sold somewhere -- I'm ok if it's used to actually benefit the software and users.

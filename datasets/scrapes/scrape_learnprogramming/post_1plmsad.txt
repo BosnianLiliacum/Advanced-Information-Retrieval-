@@ -1,0 +1,52 @@
+Post Title: What programming language better to learn
+Author: Turbulent-Diamond397
+Score: 78
+URL: https://www.reddit.com/r/learnprogramming/comments/1plmsad/what_programming_language_better_to_learn/
+Number of comments: 39
+Created UTC: 1765636504.0
+
+Post Content:
+im a third year college student, majoring in software development, I actually start learning programming in my second year, i watched 200+- videos abt c++ just to pass c++ exam in college make snake game, now in learning c# i wanna make games or backend stuff, i think i have a good base, but im not sure about my choice, i always wanna switch on goland, python or something like this when i hear that someone earn a lot of cash on that.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: aqua_regis
+Score: 128
+Created UTC: 1765636786.0
+Comment: People are not earning cash because they know certain programming *languages*. They earn because they can *program*.
+
+Jumping languages will not make you a better *programmer*. Active programming, building projects is the only thing that will make you a better programmer.
+
+Programming languages are not Pokemon. You don't have to catch them all.
+
+Comment 2:
+Author: OutsidePatient4760
+Score: 19
+Created UTC: 1765636939.0
+Comment: honestly the language hopping is what slows most people down. c# is solid for both games and backend, especially if you already started it. stick with one path long enough to actually build stuff. chasing whatever people say makes money just keeps resetting your progress.
+
+Comment 3:
+Author: No-Market-4906
+Score: 8
+Created UTC: 1765636945.0
+Comment: Real answer is it doesn't matter. Every job you get out of college will expect your skills in one language to translate to whatever they want you to do (my current job I've done go, cpp, python, java and soooo many config files over 4 years). Focus on building something in whatever language has the best tools for your project or that you enjoy the most.
+
+Comment 4:
+Author: samanime
+Score: 8
+Created UTC: 1765636835.0
+Comment: "Real" programmerss will eventually pick up new languages and switch languages as needed. There isn't much reason to worry about learning particularly languages at this point, but rather make sure you are learning the common fundamental concepts shared by all of them.
+
+There are jobs out there for pretty much any programming language, but being able to pick up new ones quickly  is important. The requirements of the project usually dictate what language(s) might be best for the project. The knowledge already in a team also plays a big part. But people able to switch and learn new languages is a really common task.
+
+For an example, I applied for a job that used Ruby. I had no Ruby experience, but it took me less than a week (of non-intensive) practice to be able to get a job offer from them. I was even up-front that I had no professional Ruby experience. It really doesn't matter, because 95%+ of languages all share similar concepts, so switching between them is easy.
+
+For now, I wouldn't worry about it too much. Work with whatever languages are interesting to you. C# is a solid choice with a lot of businesses using it.
+
+Comment 5:
+Author: xnfra
+Score: 5
+Created UTC: 1765637729.0
+Comment: C, Python, and JavaScript. Want to spice it up? Throw C++, Rust, and PHP in there for fun. Those 6 will carry you through the next couple decades. Zig is still a distant dream.

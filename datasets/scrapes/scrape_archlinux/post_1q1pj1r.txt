@@ -1,0 +1,62 @@
+Post Title: Pros and Cons of Waybar vs Quickshells ?
+Author: GuyKage8
+Score: 14
+URL: https://www.reddit.com/r/archlinux/comments/1q1pj1r/pros_and_cons_of_waybar_vs_quickshells/
+Number of comments: 11
+Created UTC: 1767329554.0
+
+Post Content:
+So I just started my ricing journey in arch linux with hyprland. I came across two setups for the bars/widgets. Waybar or quickshells. Now I realise quickshell  is like tool that lets you create tools similar to your waybar and any number of tools like that using QML.
+
+I saw all those sweet looking animations of various shells like noctia, celestia, dms, etc. and they look great. But my question is can those animations be implemented in a simple waybar+hyprland setup? What is the ram usage comparison of quickshell vs waybar ? Learning curve aside, what other things should I keep in mind?  
+  
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: scandii
+Score: 18
+Created UTC: 1767332488.0
+Comment: quickshell is a toolkit written around qt quick which uses the markup language qml which is eerily similar to javascript.
+
+the most famous product built on qt quick is (probably) kde plasma.
+
+so with quickshell you're quite literally programming to get things done.
+
+waybar on the other hand is a customisable software that allows you to customise prebuilt widgets and write your own within the definition of the software.
+
+so if you want unlimited freedom and powah - quickshell.
+
+if you want to work within the confines of waybar - waybar (or other similar competing products).
+
+for clarification I think both are excellent offerings just targeting different audiences and needs.
+
+note that waybar is "only" a panel bar - quickshell can be literally anything that requires a UI.
+
+Comment 2:
+Author: Sileniced
+Score: 2
+Created UTC: 1767358794.0
+Comment: Waybar is reasonably easy to configure. And it's not infinitely configurable.
+
+Quickshell is a framework to build your own components. You need to study QuickShell through Youtube or something.. follow extensive tutorials.. just to make something basic.
+
+Comment 3:
+Author: TroPixens
+Score: 1
+Created UTC: 1767369705.0
+Comment: I’ve exclusively switched to quickshell for my bars. Because I find it easier for some reason. I think building every part is really nice. I’m Also building a big shell really slowly so when ever I can learn things I do. Compared to waybar they both work completely fine and have their own ups and downs. Quickshell is more difficult with farther customization and waybar is easier but with less customization
+
+Comment 4:
+Author: NeonVoidx
+Score: 1
+Created UTC: 1767372164.0
+Comment: quickshell has no downsides other than learning it. but you can make bars like waybar, widgets, lock screens, app launchers etc
+
+Comment 5:
+Author: [deleted]
+Score: 0
+Created UTC: 1767339668.0
+Comment: [deleted]

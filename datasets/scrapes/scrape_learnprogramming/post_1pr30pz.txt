@@ -1,0 +1,67 @@
+Post Title: Finding out there is a lot more to tech than just "Frontend vs Backend"
+Author: daniel_odiase
+Score: 401
+URL: https://www.reddit.com/r/learnprogramming/comments/1pr30pz/finding_out_there_is_a_lot_more_to_tech_than_just/
+Number of comments: 61
+Created UTC: 1766197198.0
+
+Post Content:
+I have been working with Python for about 5 years now, and for most of that time, I was stuck in a bit of a bubble. I assumed the career path was basically just moving from junior to senior backend roles, building APIs and scaling web services. It felt like the industry was 90% CRUD apps and centered around the same few "cliché" frontend and backend frameworks.
+
+Recently, I started looking into Quant Finance, and it has been a total eye-opener. It is a completely different world where the problems aren't about HTTP requests or CSS; they are about high-frequency execution, mathematical modeling, and processing massive amounts of data in real-time. It made me realize how many deep technical niches we completely ignore because they aren't as "loud" as web development.
+
+I wanted to share this because if you are starting to feel a bit burnt out or bored with standard web stacks, I really encourage you to look at these non-obvious fields. Whether it is Quant, Embedded Systems, or Bio-informatics, there are rabbit holes out there that are way more technically challenging than the standard paths. I spent years thinking I had seen most of what the industry had to offer, but I am finding out I was barely scratching the surface of what we can actually do with code.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: brendonap
+Score: 173
+Created UTC: 1766198279.0
+Comment: Reminds me of speaking to a civil engineer in school while considering it as a path. He said “90% of people are building roads and schools, unlikely you’re going to build iconic bridges and sky scrapers” I think every field is like this
+
+Comment 2:
+Author: Rain-And-Coffee
+Score: 54
+Created UTC: 1766198338.0
+Comment: I did 10 years of web dev before stumbling into IoT (Internet of Things).
+
+It deals with low cost hardware to sense different things (electricity, temperature, humidity, pressure, etc). There's also a lot of backend code to handle incoming data and alert in real time.
+
+My favorite is still web dev, and I'll probably go back to that after this job, or maybe DevOps.
+
+Comment 3:
+Author: LeeRyman
+Score: 32
+Created UTC: 1766201996.0
+Comment: If you want to broaden horizons in software engineering, industrial control or manufacturing execution systems will have you crawling around in dirty switch rooms checking connections to PLCs one moment, writing QA software that is interfacing between online diagnostics systems/sensors and product tracking systems the next, and then writing b2b and barcode scanning/printing interfaces the next.
+
+I did 12 years looking after a couple of steel mills. I think I touched every language from Delta to T-SQL to all the .Nets to C++. I got to play with APIs ranging from old school GEFanuc serial, S7-PC, OPC-UA/DA, SOAP, web services, REST, priority binary encodings, IMS, ZPLII, insert other TLA or FLAs here.
+
+I was setting up WiFi and mobile SCADA terminal systems for 20t forktrucks one moment, and being sent interstate to solve control system issues the next. I learnt sooo much in those 12 years, there was always new subject matter. It can be very blue collar and you need a little resilience at times to fit into the click, but I found it very rewarding and it led onto even bigger things.
+
+Comment 4:
+Author: ThePunisherMax
+Score: 25
+Created UTC: 1766199988.0
+Comment: I had a different path.
+
+My background is Robotics, my degrees elec/mech engineering.
+In my studies I always liked the programming side of the curriculum. So naturally I went into the programming side of robotics. Computer vision, but also making the arms move etc.
+
+In my career I had a project where I was programming a sensor input for a system and for efficiency I had to study and learn an algorithm and program it on an incredibly low level (microcontroller C)
+
+Turns out, I just love data, I love making data move. and designing efficiënt ways to make data move and transform.
+
+Im now a Data Engineer.
+
+Kinda point of the story.
+
+Theres a lot to any field, and finding them is part of the fun.
+
+Comment 5:
+Author: FreelyIP109
+Score: 21
+Created UTC: 1766201530.0
+Comment: My CS degrees are from way back when.  Before there was a world wide web. So I find the whole idea that everything is front end/back end web development amusing.  You wouldn't want me to develop your web site.  But I have been gainfully employ as a CS researcher in medical image analysis and scientific visualization ever since grad school.

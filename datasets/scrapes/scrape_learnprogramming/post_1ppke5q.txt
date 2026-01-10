@@ -1,0 +1,56 @@
+Post Title: IDK WHERE TO START FROM..IS IT TOO LATE??
+Author: Sha_6534
+Score: 88
+URL: https://www.reddit.com/r/learnprogramming/comments/1ppke5q/idk_where_to_start_fromis_it_too_late/
+Number of comments: 37
+Created UTC: 1766041090.0
+
+Post Content:
+im at my third year in college and all ik is C++ and python..thst too could do some basic dsa problems nothing much..i dont hav a github,linkedin nothing...Few months ago started leetcode,,but lost motivation midway. I actually have no clue where to begin or what to do. Internships cycles hav started in my college did not get selected for any..Placement cycles would start from next year April or so and im here lagging behind...can someone give me a road map or something PLZZ😭😭
+
+
+Top 5 comments:
+
+Comment 1:
+Author: InspectorFeeling3892
+Score: 37
+Created UTC: 1766067352.0
+Comment: Don't stress, you're not too late. You've got time before placements start. Start by building something, anything. Pick a small project in Python or C++, put it on GitHub, and start there. You don't need to be perfect, companies want to see you can actually build stuff. Do some projects, get comfortable with Git, make a LinkedIn and start connecting with people. Focus on understanding the fundamentals well and building real things. You've got this, just take it step by step and stop comparing yourself to others.
+
+Comment 2:
+Author: Haunting-Dare-5746
+Score: 24
+Created UTC: 1766042404.0
+Comment: If you continue as you are now, you will be completely cooked post graduation. 
+
+1. Make a GitHub immediately. Start doing commits to get it green, as green as a Christmas tree. 
+
+2. Make a fresh resume using this template - https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs - as you learn new languages &amp; technologies. 
+
+3. Learn the following. It's not gonna guarantee you a job, but these are the basic things you want on a resume, they're gonna give you the ability to build a lot of things. 
+
+LEARN: Java, C, C++, Typescript, JavaScript, HTML, CSS, JS, Docker, AWS, CI/CD, Google Cloud, React, Node.js, Express.js, Jenkins, MySQL, PostgresSQL, Flask, Django.  Populate your skills section, learn these technologies. 
+
+4. Consider buying books such as TCP Illustrated, C++ Software Design Principles, Operating Systems: Three Easy Pieces, Inside the Machine. Study the materials to uncook yourself, any coding exercises they ask you, put them on your GitHub to show that you're working. 
+
+5. https://github.com/codecrafters-io/build-your-own-x Study these repository, create some of the projects they suggest you to make go populate your GitHub. 
+
+6. Build, Build, Build, Commit, apply endlessly to Internships constantly, apply to full time jobs before you graduate, make projects, otherwise you're gonna be finished when you graduate.
+
+Comment 3:
+Author: Bold2003
+Score: 23
+Created UTC: 1766044810.0
+Comment: Knowing C++ alone puts you ahead of most people. We have too many web devs and data engineers as it is. C/C++ engineers are in shortage and those two languages run the world. I recommend you get really good with CMake and familiarize yourself with C++ standard library. I learned by just suffering a lot. I learn a lot better by just making something really hard with 0 experience and googling as I go
+
+Comment 4:
+Author: [deleted]
+Score: 17
+Created UTC: 1766042550.0
+Comment: [removed]
+
+Comment 5:
+Author: grantrules
+Score: 12
+Created UTC: 1766078581.0
+Comment: Yup. Nobody in their 20s or beyond has ever learned how to program. Sorry.

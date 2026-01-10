@@ -9,7 +9,6 @@ import helix
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-# You already have this helper (good: keeps embedding consistent with indexing)
 from insert_data import vectorize_text
 
 
@@ -19,14 +18,11 @@ from insert_data import vectorize_text
 DB_LOCAL = True
 K = 20
 
-# CHANGE THIS to match your DB schema
-# inspect one result and set this correctly:
-# e.g. "subreddit", "source", "dataset", "community"
 SUBREDDIT_FIELD = "subreddit"
 
 
+# TODO: put more from other datasets as well
 # --------------- Queries to evaluate ---------------
-# Put ~20 per subreddit (you can extend this list)
 EVAL_QUERIES: List[Tuple[str, str]] = [
     # (label, query_text)
 

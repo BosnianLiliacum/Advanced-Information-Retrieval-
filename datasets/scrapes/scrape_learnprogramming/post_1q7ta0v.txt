@@ -1,0 +1,48 @@
+Post Title: Learning to Code while being Unemployed
+Author: Agile_Scheme_8341
+Score: 90
+URL: https://www.reddit.com/r/learnprogramming/comments/1q7ta0v/learning_to_code_while_being_unemployed/
+Number of comments: 76
+Created UTC: 1767918683.0
+
+Post Content:
+I graduated with a CS degree from a decently good college, but could never code on my own. I want to know how to fully understand coding in the most efficient way possible. I know it will take a lot of time, but I want to make sure I am taking the most efficient and effective path possible to ACTUALLY learn how to code. I'm currently unemployed and looking for non-tech/tech-adjacent roles (because I won't pass the coding assessments) so that I can have a job and go from there. Any advice on the best path to take? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ffrkAnonymous
+Score: 73
+Created UTC: 1767920023.0
+Comment: Go back and redo your homework 
+
+Comment 2:
+Author: Haunting-Dare-5746
+Score: 26
+Created UTC: 1767918813.0
+Comment: Harvard CS50 is the best bet for you
+
+https://youtube.com/playlist?list=PLhQjrBD2T383q7Vn8QnTsVgSvyLpsqL_R&amp;si=sOdE8hj6M8Y1sjW8
+
+Comment 3:
+Author: Sultown
+Score: 18
+Created UTC: 1767920540.0
+Comment: I’m curious, did your entire CS degree never have you code at all or do you mean you never learned design patterns and how to tie everything together?
+
+My college taught me most concepts (formal language and automata theory, DSA, design patterns, machine architecture) through actual coding (OCaml, C, C++, Java, minimal Python only in my intro class). I get where you’re coming from, college is highly focused on theory and usually requires a specific “Software Engineering” elective class to fill in the production part of software.
+
+Comment 4:
+Author: picklefiti
+Score: 18
+Created UTC: 1767918907.0
+Comment: This may sound trite, but, just .. sit down and do it ?
+
+There's no substitute for just sitting down and banging away at it until you get it.
+
+Comment 5:
+Author: Bitter-Olive7744
+Score: 17
+Created UTC: 1767920149.0
+Comment: Try TheOdinProject.com

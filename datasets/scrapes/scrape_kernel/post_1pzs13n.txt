@@ -1,0 +1,17 @@
+Post Title: Why can't I get my iX86 initramfs to see block devices?
+Author: Own-Pattern-7862
+Score: 3
+URL: https://www.reddit.com/r/kernel/comments/1pzs13n/why_cant_i_get_my_ix86_initramfs_to_see_block/
+Number of comments: 0
+Created UTC: 1767124602.0
+
+Post Content:
+Hello. I compiled stable kernel for x86. I used old Debian config from when Debian used to have support for i386, and this failed to boot. I then used i386\_defconfig from already inside the kernel and built with that, but the initramfs didn't recognise any block devices when I ran "blkid" and "fdisk -l". I tried on two separate machines and it didn't find block devices. I tried USB boot and from CD. It didn't find them. I also tried in QEMU, and it didn't find block devices there either. I then tried using alpine linux lts defconfig. And the same happened. It didn't find the block devices. I tried packing the initramfs using busybox and using Debian's update-initramfs tool. I tried packing modules manually and running "modprobe ahci" and "modprobe usb-storage". It just didn't want to go and didn't find the block devices.
+
+  
+Is this typical behavior for ix86 kernel? Is there some bug I don't know about? Has the code rotted? Or is there something I am missing?
+
+Thanks
+
+
+Top 0 comments:

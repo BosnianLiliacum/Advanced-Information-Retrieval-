@@ -1,0 +1,67 @@
+Post Title: Linus Torvalds: "The AI slop issue is *NOT* going to be solved with documentation"
+Author: Fcking_Chuck
+Score: 1865
+URL: https://www.phoronix.com/news/Torvalds-Linux-Kernel-AI-Slop
+Number of comments: 104
+Created UTC: 1767873204.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ICantBelieveItsNotEC
+Score: 719
+Created UTC: 1767877892.0
+Comment: He's completely right, of course. The people who are going to meticulously document their AI use probably aren't going to produce slop in the first place, and the people who produce slop are probably going to just pass it off as their own work.
+
+The solution is to have an effective process that filters out all slop, regardless of its origin. The kernel already has this in the form of code reviews - Linus and friends have been fighting against human-created slop for decades, hence all of the humorous expletive-filled rants that we've seen over the years.
+
+Comment 2:
+Author: duperfastjellyfish
+Score: 135
+Created UTC: 1767873816.0
+Comment: Torvalds interpreted that statement very differently than I did.
+
+I think he was trying to say that quoting "AI is just another tool" shuts down conversation worthwhile having, regardless of AI usage/prevalence.
+
+**Edit**: Here is part of the follow-up from Lorenzo:
+
+&gt;The point is:
+
+&gt;a. For the tech press to not gleefully report that the kernel just accepts AI  
+patches now since hey it's just another tool.
+
+&gt;b. To be able to refer back to the document when rejecting series.
+
+&gt;\[...\]
+
+&gt;To be clear I am actually quite optimistic about AI tooling in some areas,\[...\]
+
+&gt;\[...\]
+
+[Full response](https://lore.kernel.org/lkml/99b046ce-3f91-4fb8-bd15-9045cc35f7e9@lucifer.local/)
+
+Comment 3:
+Author: kociol21
+Score: 33
+Created UTC: 1767876271.0
+Comment: Torvalds based as hell again. AI generated code will be in Linux kernel 100%, and it will be in pretty much every open source project 100%. It probably is in the majority of them already. 
+
+Guidelines and specifications are not for someone to write what tools he likes and what he doesn't like. 
+
+All it takes to commit AI generated code to any repo with a "no-ai-code" statement is to respond "no" when somebody asks - "was this ai generated?"
+
+Comment 4:
+Author: Mysterious_Lab_9043
+Score: 28
+Created UTC: 1767873565.0
+Comment: Didn't really understand what that means. He first seems to talk about AI usage on documentation, then says "AI problem won't be solved with documentation", I'm confused.
+
+Comment 5:
+Author: vancha113
+Score: 25
+Created UTC: 1767879351.0
+Comment: From a code quality point if view it doesn't matter if the code is AI generated or not. If the code is bad, it's bad whoever wrote it and has no place in the kernel. If it's good, then great. All the usual rules apply anyway, it needs to be maintainable/documented/readable/performant where it needs to be. If most AI code doesnt respect that, it says something about both the programmer that wrote it and the capabilities of (current) llm's to generate code.

@@ -1,0 +1,50 @@
+Post Title: Do you use htop for process monitoring?
+Author: Expensive-Rice-2052
+Score: 43
+URL: https://www.reddit.com/r/linuxquestions/comments/1pvvcb7/do_you_use_htop_for_process_monitoring/
+Number of comments: 44
+Created UTC: 1766722901.0
+
+Post Content:
+htop gives a cleaner, interactive view of processes compared to top.
+
+
+
+Do you use it regularly, or do you prefer something else?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Joe-Arizona
+Score: 37
+Created UTC: 1766723829.0
+Comment: I prefer btop most of the time. I like the network, I/O and per core display. Just a bit more modern than htop. 
+
+Haven’t played with atop yet.
+
+Comment 2:
+Author: Akin_yun
+Score: 12
+Created UTC: 1766723111.0
+Comment: I work on mostly ubuntu servers (non-root) and most of them have htop installed by default. so it convenient to use since it always installed.
+
+Comment 3:
+Author: rarsamx
+Score: 9
+Created UTC: 1766729049.0
+Comment: I used to use htop. That was the first thing installed. Once I discovered btop, I realized that it gave better memory readings and network activity.
+
+I think I should learn the top keybindings, though.
+
+Comment 4:
+Author: thatguychad
+Score: 9
+Created UTC: 1766722999.0
+Comment: Sometimes, but mostly just top since it’s ingrained in memory.
+
+Comment 5:
+Author: Equal-Somewhere8465
+Score: 7
+Created UTC: 1766724401.0
+Comment: btop looks way better tho

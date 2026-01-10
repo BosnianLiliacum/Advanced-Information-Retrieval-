@@ -1,0 +1,59 @@
+Post Title: (hyprland) desktop environment failing to start after update
+Author: iamthruthewalls
+Score: 12
+URL: https://www.reddit.com/r/archlinux/comments/1powjt5/hyprland_desktop_environment_failing_to_start/
+Number of comments: 13
+Created UTC: 1765978205.0
+
+Post Content:
+Hi! ive been using arch casually for about a year now and today, after updating arch before going to bed yesterday, i cannot use the graphical interface.
+
+broken:
+ ly login screen
+ DE / WM not loading at all / failing to load
+
+arch itself is okay (i think?) i can use the command line alright and my files are still intact
+
+from the logs, it seems to be a problem with the newest proprietary nvidia drivers but im not sure. arch can see my gpu but it fails to load drivers and freedesktop.home1.service 
+
+any help would be greatly appreciated! 
+
+specs
+RTX 2060
+amd ryzen 5 5600X
+32gb ddr4 corsair ram
+hyprland (wayland, arch)
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Sarv_
+Score: 40
+Created UTC: 1765978687.0
+Comment: You should read what pacman tells you during upgrades. ly had its service removed as they changed the way it functions. During the upgrade the following lines are printed:
+
+    ly has switched its service from "ly.service" to a service template "ly@.service"
+     ==&gt; If you had ly enabled as DisplayManager you need to reenable it:
+     ==&gt;   sudo systemctl enable --now ly@tty1.service
+
+Check if your wm is actually broken by manually launching it from the tty with `Hyprland`. Run it with logs enabled and post them here if it does not launch. You can just enable ly again using the command above if everything works
+
+Comment 2:
+Author: iamthruthewalls
+Score: -4
+Created UTC: 1765978659.0
+Comment: ive tried blacklisting the usbc thing on nvidia that can break it sometimes 
+
+log messages im getting are:
+&gt; FAT-fs (nvme0n1p1): Volume was not properly mounted... please run fsck
+&gt; nvidia_uvm: module uses symbols [...] from proprietary module nvidia, inheriting taint.
+&gt; nvidia: module license 'NVIDIA' taints kernel.
+&gt; asus_wmi failed to register LPS0 sleep handler.
+&gt; ccp: unable to access the device: you might be running a broken bios
+
+Comment 3:
+Author: Moist_Professional64
+Score: -11
+Created UTC: 1765982425.0
+Comment: I don't get why these Arch people here always downvote posts. It's a valid question. It's so toxic no wonder why some people don't like to try Linux

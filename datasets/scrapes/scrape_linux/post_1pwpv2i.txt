@@ -1,0 +1,68 @@
+Post Title: I reinvented htop in C because I hate myself
+Author: utsav_khatri
+Score: 1969
+URL: https://i.redd.it/m20cgjccno9g1.png
+Number of comments: 166
+Created UTC: 1766813413.0
+
+Post Content:
+So instead of just using **htop** like a normal person, I decided to write my own tiny terminal process manager in **C** using **ncurses**.
+
+why ?
+
+\- because I wanted to
+
+What it does right now:
+
+\- shows running processes
+
+\- updates in real time
+
+\- basic navigation (yes, vim keys)
+
+Code is here if you want to roast it:  
+[https://github.com/utsav-98/ProcessManage](https://github.com/utsav-98/ProcessManager?utm_source=chatgpt.com)r
+
+Yes, I know this already exists. No, that will not stop me.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: 0riginal-Syn
+Score: 908
+Created UTC: 1766814878.0
+Comment: &gt;why ?
+
+&gt;\- because I wanted to
+
+That is all the reason you need. Looks nice!
+
+Comment 2:
+Author: Sjoerd93
+Score: 529
+Created UTC: 1766816826.0
+Comment: Telling a programmer that there already is a tool that does that is like telling a musician there already is a song about love.
+
+Comment 3:
+Author: recursion_is_love
+Score: 145
+Created UTC: 1766814186.0
+Comment: Just want to tell that someone made a library for /proc in case you don't want to parse the text by yourself.
+
+[https://man7.org/linux/man-pages/man3/procps.3.html](https://man7.org/linux/man-pages/man3/procps.3.html)
+
+Comment 4:
+Author: oblong_cheese
+Score: 121
+Created UTC: 1766814211.0
+Comment: Good job.
+
+
+Now waiting for someone to post about writing htop in Rust
+
+Comment 5:
+Author: sublime_369
+Score: 67
+Created UTC: 1766813883.0
+Comment: Looks nice. If you can think of any value-adds htop doesn't have it might even gain popularity.

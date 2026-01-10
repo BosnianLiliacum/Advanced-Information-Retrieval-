@@ -1,0 +1,86 @@
+Post Title: What was the first Linux mistake you made?
+Author: Expensive-Rice-2052
+Score: 65
+URL: https://www.reddit.com/r/linuxquestions/comments/1pvcpev/what_was_the_first_linux_mistake_you_made/
+Number of comments: 210
+Created UTC: 1766666836.0
+
+Post Content:
+We all start somewhere.
+
+
+
+Mine was breaking permissions and not understanding why sudo didn’t fix it.
+
+
+
+What was your first Linux mistake, and what did it teach you?
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: idontknowlikeapuma
+Score: 36
+Created UTC: 1766672607.0
+Comment: Oh goos god, I have two, and I am older:
+
+When I was sixteen, back when Linux was like four or five years old, I downloaded Slackware over a 56k modem. And it took me over a month to get it downloaded.
+
+This was before usb drives and even cd burners.
+
+So everything was downloaded to the C:\ drive. I followed the directions precisely:
+
+Create a linux boot floppy, boot off of it, delete the FAT32 partition, and boot off your installation media. Um……. 
+
+Installation media not found.
+
+Shit, mom, I will get your AIM contacts back (they weren’t stored on a server; I had to scour the drive by hand! The files no longer had functional names. )
+
+I don’t know how many files I had to have gone through. There was no directories, the file system was completely non-existent. I was opening files like you would open them in a text editor. 
+
+I found it, though. That was an ultra mega bitch, but I found the file and got her contacts back, two years later.
+
+Bear in mind, I hadn’t even installed windows before. I had no fucking idea what a partition was.
+
+I was following the readme, which obviously assumed I was using some sort of external media.
+
+The other was when I learned that mv is recursive:
+
+I was updating a server, and I had put all the installation files for the upgrade to / (all .rpm, this was like FC4). Got everything installed and I thought, “I’m going to be safe and smart and mkdir /upgrade and mv /* /upgrade”
+
+On a production server while I am running as root. This was on a production server. Yeah, that moved everything. Stressful day. It didn’t disrupt the server, and thank God it didn’t need a reboot until I could get to it after midnight and I was able to move it back into place. 
+
+Hands down, the two shittiest Linux mistakes I have made. Both were over twenty years ago.
+
+mv as root is dangerous, kiddos.
+
+Comment 2:
+Author: modpr0be
+Score: 31
+Created UTC: 1766667648.0
+Comment: Planned to dual boot but wiped the entire disk instead. All data vanished, and I realized it after hours of playing around.
+
+Comment 3:
+Author: Solah-Shringaar_04
+Score: 16
+Created UTC: 1766667738.0
+Comment: Today I was about to delete my whole computer while installing linux mint Mate for the 1st time. But thankfully I have the habit of reading before not trusting YouTuber saying "you have to just click next a bunch of times" Still haven't understood "something else" fully. Anyone willing to answer my stupid questions?
+
+https://preview.redd.it/0ejoxxm7mc9g1.jpeg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=b72319720b78ad066c53a3b9d38e976cd6f11df3
+
+Comment 4:
+Author: jmayer0042
+Score: 16
+Created UTC: 1766667261.0
+Comment: Not switching to it sooner.
+
+Comment 5:
+Author: Aggressive_Ad_5454
+Score: 15
+Created UTC: 1766667977.0
+Comment: Long ago. UNIX. I did `rm -rf  /` on a development box when I meant `rm -rf *`. Ooopsie.
+
+The thing kept working for a few minutes, oddly enough.

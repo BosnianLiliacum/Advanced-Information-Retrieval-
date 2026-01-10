@@ -1,0 +1,67 @@
+Post Title: Today was my first time breaking Arch, now I can say “I use Arch, btw”
+Author: AbdSheikho
+Score: 19
+URL: https://www.reddit.com/r/archlinux/comments/1por939/today_was_my_first_time_breaking_arch_now_i_can/
+Number of comments: 22
+Created UTC: 1765959438.0
+
+Post Content:
+Actually I didn't break Arch. What happened was that I updated the system and something broke between **`ly`** login manager and **`systemd`**/**`systemctl`**, which disabled ly and dumped me straight to TTY. It was an easy fix (enable/disable/reboot).
+
+Honestly, I was both afraid &amp; excited about my first break.
+
+Simultaneously, I also had a break in paru... but that wasn't my fault.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Olive-Juice-
+Score: 19
+Created UTC: 1765963518.0
+Comment: One of the reasons it is important to read the pacman output when you run it. It would have warned you this was going to happen.
+
+From [this commit](https://gitlab.archlinux.org/archlinux/packaging/packages/ly/-/commit/ab28787b159f846dab2f4363bda598a396254c54), see
+[ly.install](https://gitlab.archlinux.org/archlinux/packaging/packages/ly/-/blob/ab28787b159f846dab2f4363bda598a396254c54/ly.install):
+
+    #!/bin/bash
+    
+    # arg 1: the new package version
+    # arg 2: the old package version
+    post_upgrade() {
+      if (( "$(vercmp "$2" 1.2.0)" &lt;= 0 )); then
+        echo '==&gt; ly has switched its service from "ly.service" to a service template "ly@.service"'
+        echo '==&gt; If you had ly enabled as DisplayManager you need to reenable it:'
+        echo '==&gt;   sudo systemctl enable --now ly@tty1.service'
+      fi
+      :
+    }
+
+Comment 2:
+Author: ZiggyAvetisyan
+Score: 5
+Created UTC: 1765962892.0
+Comment: Had this happen to me, too! I was too busy to troubleshoot it but I figured it had to do with Ly. I will do a systemctl enable disable plus reboot tmr to see if it helps. Thanks man!
+
+Comment 3:
+Author: Majestic_unknown47
+Score: 3
+Created UTC: 1765964817.0
+Comment: DW 
+Make it common thing now..
+Tips : Use Timeshift before playing around with configs and all..
+
+And 
+I use Arch btw ...
+
+Comment 4:
+Author: OddCounty3114
+Score: 2
+Created UTC: 1765965529.0
+Comment: Try a kernel panic buddy
+
+Comment 5:
+Author: Selenephose
+Score: 2
+Created UTC: 1766025297.0
+Comment: Good for you. I have uninstalled and reinstalled for over 300 times now.

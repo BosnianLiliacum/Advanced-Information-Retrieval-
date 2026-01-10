@@ -1,0 +1,106 @@
+Post Title: Can't figure out high level and object oriented programming.
+Author: DiscountImportant507
+Score: 55
+URL: https://www.reddit.com/r/learnprogramming/comments/1q79dtu/cant_figure_out_high_level_and_object_oriented/
+Number of comments: 48
+Created UTC: 1767871683.0
+
+Post Content:
+Hi, I am working as an electronics engineer and Hardwear level developer (I don't have a degree). After 10 years of trying, I still can't figure out object oriented programming or high level languages in general. I'm working mostly in C and assembly, I feel like I have the opposite problem of everyone else, I find writing directly to registers and building my own libraries for hardwear peripherals very easy, but I still can't figure out how a class works. I have done online courses, had people try to explain things to me, and whilst I can do very simple things, it often takes me hours what my developer colleagues can do in minutes. Should I just give up and stick to the low level stuff and circuit design, or is there anything more that I can do ?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Anhar001
+Score: 48
+Created UTC: 1767872221.0
+Comment: Think of a `Class` as a kind of Record, e.g lets say we want a record for a Company, well what kind of information would we want for such a "record"?
+
+* Company Name
+* Company Address
+* Phone Number
+* Total Employees
+* Sector
+
+Ok, so now we can "define" this "Class" e.g :
+
+```
+class Company {
+      Name: String,
+      Address: String,
+      Phone: Number,
+      TotalEmployees: Integer,
+      Sector: String
+}
+```
+
+Excellent, now we want to "create" a new company record (Object):
+
+```
+let Microsoft = new Company("Microsoft", "Washington, USA", 45633748, 10000, "Tech");
+```
+
+Ok what if we want to create another record (Object)? easy:
+
+```
+let Google = new Company("Google", "California, USA", 45633748, 10000, "Tech");
+```
+
+Of course that's just the tip of the "iceberg", because with these "records" we can do smart things, such as add "functionality" or think of them as "smart records".
+
+## Summary
+
+* Class: A kind of Record or blueprint that defines properties/fields and behaviour (functionality)
+* Object: A specific record of some class, with actual values.
+
+Comment 2:
+Author: desrtfx
+Score: 6
+Created UTC: 1767872473.0
+Comment: I absolutely can feel your pain and problems coming from a similar, procedural background. I started with BASIC, PASCAL, C way before OOP became mainstream.
+
+In the beginning, I couldn't make heads nor tails of OOP and it took me quite long and many failed attempts.
+
+Maybe, moving on to Arduino with its C++ can help, or a complete, 100% cut to a different language, like Java with the MOOC [Java Programming](https://java-programming.mooc.fi) from the University of Helsinki might help. Another thing that might help is Python with its very easy to understand object model.
+
+OOP requires a different way of thinking - kind of a rewiring of the brain to look at things differently. In OOP it's more a dialog between the individual objects than the sequential command patterns we are used to in procedural programming. In OOP you more or less "talk" to the objects. You ask them to do things for you. You ask them to change their internal state if needed (yes, the "immutability" topic will now come up and I might anger a few people with my mutable approach).
+
+My breakthrough with OOP was when I got into my current job in Industrial Automation working with our DCS (Distributed Control System) and with our SCADA (Supervisory Control and Data Acquisition) systems. There, everything was object oriented with inheritance and I started to see the advantages and how OOP works. Our SCADA even goes further in the direction of being an Entity-Component system where each Entity can have many components with many different aspects, but that leads too far (it's basically just some very extended form of composition, not inheritance).
+
+&gt; it often takes me hours what my developer colleagues can do in minutes.
+
+This only boils down to practice, ample practice.
+
+You will feel stuck and dumbfounded for quite some time but you will eventually reach the point where things fall into place and you all of a sudden understand. It's not as complicated as it seems.
+
+Don't give up! Keep going!
+
+Comment 3:
+Author: epic_pharaoh
+Score: 3
+Created UTC: 1767875200.0
+Comment: It’s an abstraction thing that gets easier the more you use it. Likely your colleagues have had to build systems where you’ve had to solve problems, build some more systems, use the language to it’s fullest, and things will start to make sense.
+
+Comment 4:
+Author: Significant-Syrup400
+Score: 3
+Created UTC: 1767877525.0
+Comment: It's all just a way to consolidate code, to write less code, essentially.  When you look at it this way it makes considerably more sense.  
+
+You encapsulate repeatedly used functions or clusters of similar types of data in a way that can be quickly referenced with less lines of code being written.
+
+  
+It's like using copy and paste, but just in the execution so the code stays slim, efficient, and readable.
+
+Comment 5:
+Author: fixermark
+Score: 2
+Created UTC: 1767888623.0
+Comment: General question: when you learn a new language or a concept in one you know, are you asking yourself "How is this represented at the machine level?" As in "What registers is this setting, where is memory stored, how is a class represented?"
+
+That'll get in the way of what you're trying to do right now. It's a natural instinct if you spend most of your time close to the machine itself, but it's actually disruptive to learning HLLs.
+
+HLLs are designed to be somewhat implementation-agnostic; they have rules, and they trust that some intermediary layer will implement a thing that makes those rules go. Getting bogged down in how that intermediary layer might work (\*) generally will impede your understanding of the higher-level layer. This is a skill I had to learn when learning SML/NJ: the fine art of no longer worrying about how the language represents a function, trusting "It just does," and learning the language independent of its implementation. The language is just rules and math; you could implement it with pencil and paper if you had the time and patience. Once you have the language under your belt, you can start caring about how it was implemented on a Von Neumann architecture with registers, RAM, and the like.
+
+(\*) C++ might be an exception that proves this rule; there are actually quite a few features of C++ where the reason they work that way is "It made it a lot easier to write the compiler" or "Look, this language is old, and older computers didn't have enough RAM to do things like lookahead compilation or multiple passes, so it is what it is."

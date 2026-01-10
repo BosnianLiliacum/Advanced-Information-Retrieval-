@@ -1,0 +1,66 @@
+Post Title: Will NVIDIA 10xx series cards be supported thru the aur forever?
+Author: FemBoy_GamerTech_Guy
+Score: 37
+URL: https://www.reddit.com/r/archlinux/comments/1pxivus/will_nvidia_10xx_series_cards_be_supported_thru/
+Number of comments: 24
+Created UTC: 1766898348.0
+
+Post Content:
+I have a gtx 1050 ti card and i want to know how much time i have left with my gpu on archlinux? can i stay on arch forever with my gpu or i would have to upgrade? the gpu after sometime using the proprietary drivers.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ChrisTX4
+Score: 128
+Created UTC: 1766902903.0
+Comment: Right now, you won't be getting driver updates for games anymore, and will only receive driver patches once a quarter, if that. You will also need to use the 580 DKMS driver package from AUR. 
+
+In 2028, NVIDIA will end support for the 580 driver series. You will not receive security updates (to the driver) anymore after that point, and no compatibility adjustments will be made by NVIDIA thereafter.
+
+Given that the code interfacing the open-source components of your OS (kernel, Xorg if that's used, etc.) is available, people can keep retaining compatibility without support from NVIDIA. Currently, older driver series (340/390/470) are being maintained by folks in AUR as packages with patches to make those older drivers work with more recent kernels.
+
+For how long that's possible? Hard to say.
+
+Comment 2:
+Author: G0ldiC0cks
+Score: 11
+Created UTC: 1766899682.0
+Comment: I had read somewhere nvidia would be releasing security updates through 2080?  But pretty sure that's bullshit, as Nvidia's website says 2028.
+
+I would imagine so long as someone running Arch with the know-how to keep it updated has a need for the driver, you'll continue finding something workable there. 
+
+I'm not sure what graphics cards are gonna look like in three years.  Looking at current trends and prices though, I wouldn't be surprised if that's community-extended well longer.
+
+Comment 3:
+Author: Objective-Stranger99
+Score: 9
+Created UTC: 1766904542.0
+Comment: August 4th 2026 - Official support ends (basically Nvidia will no longer fix bugs and will not help with issues)
+
+
+August 4th 2028 - Security patch support ends. You are on your own. Good luck.
+
+Comment 4:
+Author: Sinaaaa
+Score: 6
+Created UTC: 1766948398.0
+Comment: Forever is a long time, but plausibly you have many years left with AUR support. 
+
+On Windows I used my Radeon 4850 for 5 years after driver support ended. Driver support for games is not a big deal for most titles. Linux is a bit different, but the card should remain operational with the AUR driver for at least 3 years more I think. At that time if you still want to use your current card, you may still have options, though possibly from outside Arch.
+
+What's a bigger problem is that on Linux 4gb of vram is not much and as time goes by you'll see more and more games crash or be a slideshow even with the lowest textures.
+
+With all that said, you could do what I did. I sold my 1060 &amp; used the $50 I got to buy an rx 480. Even if you are a jobless student, you could probably get an rx470 / 570 4gb without losing much if anything at all.
+
+Comment 5:
+Author: ZZ_Cat_The_Ligress
+Score: 6
+Created UTC: 1766914867.0
+Comment: I'm in the same boat as you, OP.  
+I don't _want_ to replace my (perfectly good) laptop simply because NVIDIA chose to enforce their planned obsolescence.
+
+I _do_ plan to replace my laptop eventually, but _not_ because of NVIDIA and their planned obsolescence.
+
+Also, here in Aotearoa, we are sPoILeD fOr ChOiCe as practically the only choices for us at the minute all have NVIDIA + Intel combos for laptops. Mine in particular is NVIDIA + AMD Ryzen 5. I wish we had more all AMD offerings as far as laptops go, but nooOOoo. My country has to have an unhealthy love affair with monopolies and duopolies. =\/)\/.-=

@@ -1,0 +1,68 @@
+Post Title: I built a SQL TUI
+Author: Maxteabag
+Score: 706
+URL: https://i.redd.it/ef7mvtvwmcag1.jpeg
+Number of comments: 78
+Created UTC: 1767103819.0
+
+Post Content:
+Coming from Windows, SSMS was everywhere in my workflow. Even for simple tasks like running a few queries or updating rows, I had to launch this gigabyte-heavy behemoth that took ages to start.
+
+When I switched to Linux, SSMS wasn't an option anymore. The popular solution was VS Code's SQL extension. But launching an Electron-based code editor just to execute SQL queries felt... wrong.
+
+I'd recently discovered the beauty of Terminal UIs - fast, keyboard-driven, and efficient. I tried existing SQL TUIs like lazysql and harlequin, but they didn't click with me the way tools like lazygit did. Nothing felt as intuitive or had that "just works" experience.
+
+So I built Sqlit - a lightweight, keyboard-driven SQL TUI inspired by lazygit's workflow.
+
+What it does:
+
+* Connect to databases and browse tables/views/schemas
+* Run queries with syntax highlighting and autocomplete
+* Vim-style keybindings and intuitive navigation
+* Multiple themes (Tokyo Night, Nord, etc. Syncs up if you use Omarchy)
+* Supports SQL Server, PostgreSQL, MySQL, SQLite, MariaDB, Oracle, DuckDB, CockroachDB, ClickHouse, Snowflake, and more
+
+Sqlit deliberately avoids bloat. It's not trying to be a full-featured database IDE with performance graphs and schema designers. It focuses on doing one thing well: making it fast and enjoyable to connect, browse, and query your databases without the overhead of GUI applications.
+
+Link: [https://github.com/Maxteabag/sqlit](https://github.com/Maxteabag/sqlit)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Klapperatismus
+Score: 68
+Created UTC: 1767105695.0
+Comment: I like it already.
+
+Comment 2:
+Author: elohiir
+Score: 32
+Created UTC: 1767107356.0
+Comment: Related:
+
+
+https://github.com/achristmascarl/rainfrog
+
+
+(I'm not the author)
+
+Comment 3:
+Author: Ytrog
+Score: 26
+Created UTC: 1767107976.0
+Comment: What was the biggest challenge during development for you? 👀
+
+Comment 4:
+Author: garrylie
+Score: 13
+Created UTC: 1767106624.0
+Comment: I did "pipx inject sqlit-tui mysql-connector-python" but it still shows no "pymysql" module found. 
+
+It also says press \^i for help. What is it? Ctrl+i? If so, it behaves same as Tab
+
+Comment 5:
+Author: joggekis
+Score: 6
+Created UTC: 1767109057.0
+Comment: Have you looked at Harlequin ? Not that it beats building something yourself but is also a great db tui app

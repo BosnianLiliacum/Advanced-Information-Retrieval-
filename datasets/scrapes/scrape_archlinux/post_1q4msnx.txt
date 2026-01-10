@@ -1,0 +1,42 @@
+Post Title: Which shell do you use and why?
+Author: Luquatic
+Score: 85
+URL: https://www.reddit.com/r/archlinux/comments/1q4msnx/which_shell_do_you_use_and_why/
+Number of comments: 169
+Created UTC: 1767622582.0
+
+Post Content:
+I'm curious to see what you guys use and why you use it
+
+
+Top 5 comments:
+
+Comment 1:
+Author: No-Dentist-1645
+Score: 165
+Created UTC: 1767623626.0
+Comment: Zsh because it's basically just bash with some nice extra features and better autocompletion
+
+Comment 2:
+Author: Fupcker_1315
+Score: 130
+Created UTC: 1767623646.0
+Comment: fish as the interactive shell because I couldn't care less about posix compatibility and I love sensible defaults, completion, syntax highlighting and easy theming.
+
+Comment 3:
+Author: Penrosian
+Score: 111
+Created UTC: 1767623200.0
+Comment: Bash bcs I never bothered to look at any others
+
+Comment 4:
+Author: theChaparral
+Score: 56
+Created UTC: 1767631902.0
+Comment: Bash. I never found any compelling reason to switch.
+
+Comment 5:
+Author: thayeeboi890
+Score: 28
+Created UTC: 1767623423.0
+Comment: I use oh my zsh for everything

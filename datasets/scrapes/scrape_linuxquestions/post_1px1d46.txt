@@ -1,0 +1,58 @@
+Post Title: Do you guys use multiple distros?
+Author: Overall-Double3948
+Score: 14
+URL: https://www.reddit.com/r/linuxquestions/comments/1px1d46/do_you_guys_use_multiple_distros/
+Number of comments: 62
+Created UTC: 1766851651.0
+
+Post Content:
+I'm wondering because I have a free m2 slot on my motherboard and I was thinking of adding another distro for the hell of it.
+
+I do have ZorinOS running on my old laptop (from 2014) but all my other computers running Ubuntu
+
+
+Top 5 comments:
+
+Comment 1:
+Author: inbetween-genders
+Score: 14
+Created UTC: 1766851783.0
+Comment: No. I got better things to do like video games and video games to deal with installations after I already have one up and running.
+
+Comment 2:
+Author: ZephyrineStrike
+Score: 3
+Created UTC: 1766864735.0
+Comment: I use a few different distros but not on the same machine
+
+I have dual booted with windows, and even triple booted with Mac in order to run proprietary software, but between different linux distro's?  Not enough difference in performance or software compatibility to appeal to me, personally.
+
+At this point I'm starting to consolidate for ease of maintenance.  Has definately been fun trying out different distros over the years, but now maintaining several machines and servers... streamlining is my current goal :3
+
+Comment 3:
+Author: suicidaleggroll
+Score: 3
+Created UTC: 1766851910.0
+Comment: No, I use Debian 13 everywhere, even laptops.  Unless you count Proxmox 9 as a different distro, which it kinda is, but it’s still Debian 13 under the hood.
+
+Comment 4:
+Author: Baudoinia
+Score: 3
+Created UTC: 1766852367.0
+Comment: I have 3 on one MacBook.
+
+Comment 5:
+Author: tomscharbach
+Score: 2
+Created UTC: 1766856294.0
+Comment: I use Ubuntu LTS as my "workhorse" mainstay, LMDE as my "personal" laptop daily driver, and Debian for everything else.  
+
+I run the distributions on separate computers, and each is set up to satisfy and particular aspect of my use case.
+
+If you want to explore different distributions "for the hell of it", consider using an inexpensive  non-production computer for that purpose. 
+
+I've been part of a "geezer group" of long-retired old men who explore distributions to keep us off the streets and (mostly) out of trouble. We select a distribution every month or so, install and use, then trade notes. 
+
+Over the last six years, I've looked at 4-5 dozen distributions.  I've learned a lot about the wide variety of approaches to the Linux desktop.
+
+My best and good luck.

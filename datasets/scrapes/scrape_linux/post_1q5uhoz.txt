@@ -1,0 +1,44 @@
+Post Title: Favorite command?
+Author: ajprunty01
+Score: 272
+URL: https://www.reddit.com/r/linux/comments/1q5uhoz/favorite_command/
+Number of comments: 273
+Created UTC: 1767732366.0
+
+Post Content:
+I'll start. My favorite command is "sudo systemctl soft-reboot" . It's quicker than a full on reboot for the purpose of making system wide changes. It's certainly saved me a lot of time. What's y'all's favorites? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mattk404
+Score: 276
+Created UTC: 1767732621.0
+Comment: I did not know that existed.... I... Um... That's my new favorite.
+
+Comment 2:
+Author: ABotelho23
+Score: 98
+Created UTC: 1767733027.0
+Comment: ```grep```
+
+Comment 3:
+Author: FoxxBox
+Score: 70
+Created UTC: 1767734052.0
+Comment: !! Because I often forget sudo.
+
+Comment 4:
+Author: Competitive_Tie_3626
+Score: 61
+Created UTC: 1767732701.0
+Comment: htop
+
+Sometimes I just leave it running in a side window. Makes me feel things are working fine
+
+Comment 5:
+Author: deneske99
+Score: 47
+Created UTC: 1767733123.0
+Comment: ltrace and strace. I get a view on how the program interacts with linux which fascinates me, and at times helped me debug stuff.

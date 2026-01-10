@@ -1,0 +1,58 @@
+Post Title: I am interested in pursuing various Linux, IT and Networking related certifications purely for the fun of it and to expand my overall knowledge, not for a career related pathway. What are some of your recommendations that are suitable for hobbyists?
+Author: Nelo999
+Score: 15
+URL: https://www.reddit.com/r/linuxquestions/comments/1q0d3oh/i_am_interested_in_pursuing_various_linux_it_and/
+Number of comments: 7
+Created UTC: 1767187965.0
+
+Post Content:
+Let me start by stating that I do not really work in Tech, I am an accountant by trade.
+
+Although I should highlight that I always had a strong interest in technology, purely as a hobby and as an enjoyable past time.
+
+Currently, I am pursuing a CCNA certification and a Ham Radio one.
+
+Which ones among the likes of CISCO, CompTIA A+, RHCSA/RHCE/RHCA, Google Cybersecurity Certificate, CEH, OSCP, LFCS and so on would be suitable for my use case?
+
+I would mostly study in my own free time after work or during the weekends(as I am doing already).
+
+Looking forward to hearing from others in my position.
+
+Take care abd happy new year!
+
+
+Top 4 comments:
+
+Comment 1:
+Author: KoholintCustoms
+Score: 3
+Created UTC: 1767196039.0
+Comment: I mean, CCNA is already pretty hefty. That one alone is enough to get you a real job. If you're understanding the material, I would say just focus on that one and full speed ahead.
+
+Comment 2:
+Author: SunlightBladee
+Score: 2
+Created UTC: 1767264795.0
+Comment: - Look into homelabbing to set up your own networks.
+- TryHackMe and HackTheBox for practical certificates with pretty fun learning paths at a good price.
+- OverTheWire is pretty fun for learning Linux CLI and it's tools.
+- A+ Net+ and Security+ are moreso to pass the HR firewall. They're pure theory and multiple choice exams. Personally I'd recommend them only if you're going for a career.
+- CCNA is probably also better for strictly pursuing a career, but if it's what you want to do then go for it!
+
+The real answer is whatever is fun/helpful to you personally that doesn't burn you out.
+
+Comment 3:
+Author: acdcfanbill
+Score: 1
+Created UTC: 1767221562.0
+Comment: What I did was, i got fed up with router mfg's firmware, and didn't like hosting all my media on my desktop so I set up openwrt on a router and built my own headless NAS.  Which means i administrated 2 things over SSH.  A few months to years of setting up those, new/interesting projects running on them, debugging issues, etc. and you end up with some decent skills in the areas.  Enough to pass those cert tests? probably not, thing thing that I've taken away from certs and tests about certs is that you basically need to study for that cert for that company.  None of the specific area certs are really something that a generalist will ace because a) it's not in the companies best interest, monetarily, to design tests like that, and b) in the workplace, your position will often specialize in specific hardware and software, which are contracted for years at a time, so having specific, esoteric knowledge, about those areas is beneficial.  So while you could study for some of the general certs, I'd more recommend picking a project and doing it to learn hands on.  Even if it fails the first time, or takes a couple of starts to finish, for my money, hands on learning is always better.
+
+Comment 4:
+Author: Disastrous_Sun2118
+Score: 1
+Created UTC: 1767208519.0
+Comment: Has anyone ever thought about learning to wire up your own Networks, CPUs, ram, DMA, CPU clocks, using the Electrical Engineering 101 and 102 Style of Certification?  It's where I'm beginning to look at breadboarding my software ideas.  Bare with me though, I've learned this before, but am just now looking at using the breadboard to diagram the schematics with specifications for more machine programming level.  Which can be extended heavily through higher level programming.  But at the hard wired level, we learn how to soft wire everything, exactly as it is.,.  With that, we can build Virtual Hardware.
+
+I don't have a degree accredited by anyone other than my own studies.  But its also based on academic values, note keeping, and is results driven.  Something that is often complained about employees and employers not having.  
+Creation Level Degree of Knowledge. 
+I doubt this is what your asking.   But I figured I would drop it.

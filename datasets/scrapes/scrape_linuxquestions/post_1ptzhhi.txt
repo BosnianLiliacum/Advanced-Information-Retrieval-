@@ -1,0 +1,65 @@
+Post Title: What's wrong with Linux and Sleep/Hibernation in laptops?
+Author: Omer-Ash
+Score: 62
+URL: https://www.reddit.com/r/linuxquestions/comments/1ptzhhi/whats_wrong_with_linux_and_sleephibernation_in/
+Number of comments: 97
+Created UTC: 1766510296.0
+
+Post Content:
+I tried 3 different distros (Mint, Arch, and now Fedora) hoping one of them would solve my issue, but none of them worked. Everytime my laptop goes to sleep or hibernate, the screen won't turn on again. I have to restart the laptop for things to go back to normal. Am I doing something wrong with my installations?
+
+  
+Edit: NVIDIA by the way, since I just learned that it's what's causing the issue.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: isabellium
+Score: 42
+Created UTC: 1766511177.0
+Comment: Let me guess, NVIDIA?
+
+Comment 2:
+Author: ipsirc
+Score: 10
+Created UTC: 1766510460.0
+Comment: &gt;What's wrong with Linux and Sleep/Hibernation in laptops?
+
+the hardware drivers
+
+&gt;I tried 3 different distros (Mint, Arch, and now Fedora) hoping one of them would solve my issue, but none of them worked.
+
+They're all Linux distros, so they're using the same drivers.
+
+&gt;Am I doing something wrong with my installations?
+
+No, that's completely normal.
+
+Comment 3:
+Author: Emmalfal
+Score: 3
+Created UTC: 1766519682.0
+Comment: So, quasi related to OP's question: I've installed Mint on nine or ten laptops at this point and they were mostly laptops that just fell into my hands one way or another. Some I bought on Marketplace, a few were just gifted to me from overwrought Windows users and so on. I've yet to come across a machine with NVIDIA and I wonder why that is. Is it only popular in the gaming crowds or something along those lines? I'm grateful I've never had to deal with the problems it causes in Linux, but I'm curious about why that is.
+
+Comment 4:
+Author: cgbellin
+Score: 3
+Created UTC: 1766515090.0
+Comment: Had a similar problem with Debian 12 on a Thinkpad T460 with an Intel i5-6300U. What fixed it for me was adding "intel\_iommu=off" to GRUB\_CMDLINE\_LINUX\_DEFAULT in /etc/default/grub.
+
+Comment 5:
+Author: lincolnthalles
+Score: 2
+Created UTC: 1766526457.0
+Comment: Drivers, bad ACPI tables (it's a shitshow) and manufacturers that don't care.
+
+It also affects desktops, though. I'd say that more than half of the available hardware can't sleep or hibernate properly on Linux.
+
+You can try patching your system's [DSDT](https://wiki.archlinux.org/title/DSDT) to see if it helps.
+
+Tweaks for NVIDIA sometimes work, until you update the driver. Setting `mem_sleep_default=deep` may work, so as disabling the service `nvidia-hibernate`.
+
+If you can't fix it, it's best to leave sleep and hibernation disabled, so at least you won't lose your work and get annoyed by having to do a hard reset.
+
+I wish there were a Linux hardware certification to make it easier for consumers to make informed buys.

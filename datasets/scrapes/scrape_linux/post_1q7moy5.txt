@@ -1,0 +1,60 @@
+Post Title: (Takes drag of cigarette) I love kernal logging.
+Author: robprobasco
+Score: 248
+URL: https://www.reddit.com/r/linux/comments/1q7moy5/takes_drag_of_cigarette_i_love_kernal_logging/
+Number of comments: 53
+Created UTC: 1767903405.0
+
+Post Content:
+I just had a realization while dialing in my daily driver.
+
+I have a Lenovo laptop. It’s a beast. I love it. It shipped with Windows and it was clunky out of the box. Random freezes. Fingerprint reader would just quit working for a time. The one that haunted me was the keyboard. It would just drop off. Sometimes twice in a few hours, sometimes it wouldn’t happen again for a week or a month.
+
+I chased that shit for six months.
+
+Logs. Google-fu. Microsoft forums. Support tickets. The whole time it was just “try this… maybe?” vibes. No answers. The problem never actually went away.
+
+So I before I got too deeply committed, I put Linux Mint on it. And yeah, it locked up twice while I was doing normal stuff. But here’s the differenence. THERE WAS A LOG. I looked at it and Xorg had absolutely biffed it. Turns out some ancient Xorg 2D rendering thing called *glamor* was hard-locking the graphics and tying up the kernel resulting in it doing absolutely noting. Hard freeze.
+
+I googled glamor. Learned it’s optional. Turned it off. Problem gone.
+
+And that’s when it clicked. When Linux breaks, it usually tells you *exactly* what broke. It doesn’t just shrug and tell you to reinstall or wait for an update fairy.
+
+Sure, the very next day Ubuntu Server decided to “help” by installing its own postfix on a box running Mailcow, tied up port 25, and crashed my mail stack… but at least I knew *why* that happened too.
+
+This is why I love running my own junk. It’s not that nothing breaks. It’s that when it does, the system leaves clues that I myself can Sherlock out.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Emmalfal
+Score: 115
+Created UTC: 1767903470.0
+Comment: Upvoting just for the nice scene setting.
+
+Comment 2:
+Author: Maleficent-One1712
+Score: 72
+Created UTC: 1767904235.0
+Comment: &gt;The whole time it was just “try this… maybe?” vibes.
+
+Exactly this. Back in the day when I studied for Microsoft system administrator and I had to solve an issue as an intern I had to contact Microsoft support. It was always: try this.. try this.., 9 out of 10 suggestions never worked until one solution magically worked, and nobody understood why because you are working in a black box. In linux everything is open, which makes things so much easier. Things just make sense.
+
+Comment 3:
+Author: matthewrcullum
+Score: 27
+Created UTC: 1767908402.0
+Comment: The thing I love about Linux problems is that they tend to be very deterministic. Action a leads to result b, every time, with rare exception. Once you figure out an issue (which as you've said, you have all the power in the world to do) it is generally solved forever. Things just behave very predictably.
+
+Comment 4:
+Author: Old_Bug610
+Score: 16
+Created UTC: 1767904139.0
+Comment: It's uber refreshing to encounter people who like and make time to learn.  Gotta foster more of this in community!
+
+Comment 5:
+Author: lunchbox651
+Score: 12
+Created UTC: 1767909727.0
+Comment: To be fair, a lot of those issues should also be in Windows Event viewer too. If event viewer wasn't horrifically slow it would be a great system.

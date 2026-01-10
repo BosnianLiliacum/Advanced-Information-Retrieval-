@@ -1,0 +1,44 @@
+Post Title: There Is No One Left On Debian's Data Protection Team
+Author: anh0516
+Score: 559
+URL: https://www.phoronix.com/news/No-Debian-Data-Protection-Team
+Number of comments: 56
+Created UTC: 1767622634.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: FlukyS
+Score: 415
+Created UTC: 1767623561.0
+Comment: This sort of role is one of the rare ones that need to be paid even if the majority of Debian is unpaid this isn't a fun job but is pretty critical.
+
+Comment 2:
+Author: littypika
+Score: 118
+Created UTC: 1767626442.0
+Comment: With how passionate the Debian community is to their distro and its long-standing history of being the 2nd oldest Linux distro still being maintained, I hope that we see people fill this void with data protection on Debian.
+
+This will definitely have a chain effect, as many distros (such as Linux Mint Debian Edition) are based on Debian.
+
+Comment 3:
+Author: ilep
+Score: 23
+Created UTC: 1767672991.0
+Comment: It is better to read from the source: [https://lists.debian.org/debian-devel-announce/2026/01/msg00001.html](https://lists.debian.org/debian-devel-announce/2026/01/msg00001.html)
+
+Comment 4:
+Author: miked0331
+Score: 23
+Created UTC: 1767637556.0
+Comment: It's concerning to see such a crucial team go unstaffed, as data protection is essential for maintaining user trust and security in Debian and its derivatives.
+
+Comment 5:
+Author: olde_curmudgeon
+Score: 9
+Created UTC: 1767722566.0
+Comment: Not a surprise. The designated GDPR officer can be held personally criminally responsible for breaches of the GDPR. Few people would take on that level of responsibility without significant remuneration.

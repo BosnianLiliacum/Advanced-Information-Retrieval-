@@ -1,0 +1,51 @@
+Post Title: How to compile a minimal functional kernel that uses least amount of ram possible?
+Author: GuiltyVisit9119
+Score: 35
+URL: https://www.reddit.com/r/kernel/comments/1q4u1di/how_to_compile_a_minimal_functional_kernel_that/
+Number of comments: 35
+Created UTC: 1767638429.0
+
+Post Content:
+How to i achieve it, i need it to be below 50 mb of ram?
+Any suggestions? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: alpha417
+Score: 15
+Created UTC: 1767639042.0
+Comment: What hardware, and what kind of functionality are you expecting?
+
+Comment 2:
+Author: jashAcharjee
+Score: 10
+Created UTC: 1767639557.0
+Comment: 32bit, remove networking, and sensors drivers and pretty much all drivers unless the basic ones. Disable init system, switch the /bin/initrc to point /bin/dash after sourcing the env vars. Disable watchdogs, and pretty much compile the kernel with insane and unusable application specific defaults. Ohh yes for display, use the framebuffer just with intel basic drivers, yeah this should work.
+
+Folks over on LFS community have achieved this through this method.
+
+Comment 3:
+Author: yawn_brendan
+Score: 3
+Created UTC: 1767652461.0
+Comment: First step is make localmodconfig.
+
+From there the practical answer here is lots of tedious iteration, I have been through this process. There is no real shortcut. You need to start with something that you know works, then remove something and see if it breaks anything. Repeat, over and over and over again. 
+
+Sometimes you can remove very large swathes at once but then if something breaks in a way you don't understand you don't have an easy next step except to re-enable everything then do it again in smaller increments.
+
+FWIW this probably won't save that much RAM. But if you're just doing it for the fun of tinkering then knock yourself out!
+
+Comment 4:
+Author: lllyyyynnn
+Score: 2
+Created UTC: 1767681109.0
+Comment: what youtube video dropped to produce this question multiple times? what hardware restriction do you have for 50mb to be a goal? are you aware that free ram is wasted ram?
+
+Comment 5:
+Author: Accurate_Ad_711
+Score: 2
+Created UTC: 1767730037.0
+Comment: 'Minimal' and 'recent' are mutually exclusive though, at some point you'll want to go back to 4.19 or even 4.14.

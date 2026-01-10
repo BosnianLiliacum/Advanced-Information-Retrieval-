@@ -1,0 +1,50 @@
+Post Title: Using “AI” to manage your Fedora system seems like a really bad idea
+Author: samvimesmusic
+Score: 367
+URL: https://www.osnews.com/story/144006/using-ai-to-manage-your-fedora-system-seems-like-a-really-bad-idea/
+Number of comments: 104
+Created UTC: 1765547627.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Pwc9Z
+Score: 152
+Created UTC: 1765548359.0
+Comment: Yeah no shit
+
+Comment 2:
+Author: iaacornus
+Score: 139
+Created UTC: 1765551243.0
+Comment: For people that doesn't click and read, it might be good to clarify that this is just a blog post on Fedora maganize that makes a tutorial on how to use an AI on your system.
+
+Comment 3:
+Author: tenmatei
+Score: 107
+Created UTC: 1765549233.0
+Comment: Who could've thought?
+
+Comment 4:
+Author: PlainBread
+Score: 34
+Created UTC: 1765549007.0
+Comment: Maybe if it's atomic/immutable and you don't give it access to your /home/ files.
+
+Otherwise, MCP servers are nothing new. It's just a program that acts as a go-between between your OS and an LLM but you still need to both code the programmatic interconnects and also teach the AI how to use them through language.
+
+It's a huge pain in the ass.  But it's also necessary for semantic processing, like extended memory management through "paste everything already said every exchange" memory to calling bots to perform semantic processing to condense the oldest/least important memories to manage active context space.
+
+I was using them to work on an enhanced AI roleplaying client, like for DnD scale stuff, but my project is on hiatus.
+
+EDIT tl;dr: The AI is still in its own little bubble of being limited to language, but you can give it levers to pull through linguistic means, and you design what those levers do, so if it nukes your system or starts SkyNet, that's your fault.  Check out r/LocalLLaMA for more of a look behind the curtain.
+
+Comment 5:
+Author: Irregular_Person
+Score: 20
+Created UTC: 1765551961.0
+Comment: for those who don't want the alarmist take, a mcp server is what you use to provide an ai with 'tools' that it can use. Like how gemini can search the web to get results. Building an MCP server that is hooked into the OS isn't inherently baking-in AI or anything to get alarmed about, nor is it necessarily giving it free reign over your system - actually it makes it easy to give it *less*. Without a dedicated MCP, you would have to give an AI the ability to run commands to do things like read error log files (or manually paste in each one, which is going to be a problem if they're big). an MCP server could give the AI strict read-only access to those files instead, or which ones. The MCP server could allow you to choose which features an AI agent has access to. I don't see this as a bad move at all, used responsibly.

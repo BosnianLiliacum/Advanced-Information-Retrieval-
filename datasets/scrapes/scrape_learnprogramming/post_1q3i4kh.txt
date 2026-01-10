@@ -1,0 +1,72 @@
+Post Title: What’s your go to method for quickly acquiring new technical skills, like Docker, Kubernetes, or Terraform?
+Author: dealernumberone
+Score: 133
+URL: https://www.reddit.com/r/learnprogramming/comments/1q3i4kh/whats_your_go_to_method_for_quickly_acquiring_new/
+Number of comments: 50
+Created UTC: 1767506313.0
+
+Post Content:
+I’ve been trying to learn tools like Docker, Kubernetes, Terraform for months now and I feel stuck.
+
+I have a short attention span, so I start strong, follow some tutorials, then lose focus and drop it… then repeat the cycle. I really want to get good at this stuff but I’m struggling to find a learning method that actually works for me.
+
+For those of you who successfully learned these tools: 
+
+what approach finally clicked?
+
+How did you stay focused and avoid tutorial hell?
+
+Would love to hear what worked for real people.
+
+Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Haunting-Dare-5746
+Score: 96
+Created UTC: 1767506606.0
+Comment: Docker is a trivial tool, you learn the basics of it in 15 minutes. 
+
+It's best not to learn tools just to check a box, learn them to solve a problem you have. 
+
+The best way to learn a Docker is making a project, then seeing how you can containerize it. Watch a 20 minute video, make the Dockerfile with the needed commands, build it, then run the container. You get started very quickly. If there's a genuine reason you need Docker, learning more advanced things won't be difficult, because you'll be eager to fix the problem you have. If you watch a Docker vid just to do Docker you'll be bored out of your mind
+
+Comment 2:
+Author: WrongStop2322
+Score: 39
+Created UTC: 1767508118.0
+Comment: https://roadmap.sh/
+
+There is a roadmap for each of these
+
+Comment 3:
+Author: two_three_five_eigth
+Score: 16
+Created UTC: 1767506504.0
+Comment: Buy a high rated udemy course and listen at 2x speed while I do other work.  I will go back and rewatch some parts at 1.5x speed once I’m done.
+
+Picked a small personal project that isn’t the tutorial, then did that after.
+
+Comment 4:
+Author: ibeerianhamhock
+Score: 5
+Created UTC: 1767507823.0
+Comment: Docked is dead simple really, I’d start with that. I’d you don’t understand how to work with containers locally by themselves within docked there’s not a chance you’ll know work with to do k8s. Learn incrementally.
+
+Comment 5:
+Author: no_brains101
+Score: 4
+Created UTC: 1767509764.0
+Comment: Use it.
+
+For something non-trivial.
+
+You will learn it. Guaranteed.
+
+YMMV on that for things that are not about a specific technology, but for the skills you listed, just use them.
+
+You will remember enough to use it in practice later someday when you need it if you do it that way too.
+
+Save what you did in git or similar and upload it somewhere or you willl be like "oh, that thing I did that one time, what was it? I suddenly need it now." and have no answer.

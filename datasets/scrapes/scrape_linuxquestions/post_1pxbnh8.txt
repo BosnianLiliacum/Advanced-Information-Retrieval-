@@ -1,0 +1,44 @@
+Post Title: Are there any good drawing apps for Linux?
+Author: No_Cream5465
+Score: 30
+URL: https://www.reddit.com/r/linuxquestions/comments/1pxbnh8/are_there_any_good_drawing_apps_for_linux/
+Number of comments: 33
+Created UTC: 1766877572.0
+
+Post Content:
+I've been wanting to switch to linux on my main laptop but I do need to draw, I currently use photoshop but I know that's not possible on Linux so I'm probably gonna switch. Are there any apps for linux that are actually good and somewhat professional? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: raitzrock
+Score: 62
+Created UTC: 1766877727.0
+Comment: Krita is a drawing focused image editor, very mature and feature packed, might be what you need.
+
+Comment 2:
+Author: DoubleOwl7777
+Score: 19
+Created UTC: 1766877931.0
+Comment: +1 for krita, its THE go to for an open source drawing app, and rivals photoshop for sure for drawing.
+
+Comment 3:
+Author: kayosiii
+Score: 12
+Created UTC: 1766878207.0
+Comment: People use Photoshop for a lot of things so it's so the best replacement isn't necessarily the same for everybody.
+
+If what you mean by drawing app is that you want to be able to paint digitally, then Krita is good and somewhat professional.
+
+Comment 4:
+Author: keoma99
+Score: 12
+Created UTC: 1766880268.0
+Comment: Krita, Pinta, RapidRaw, RawTherapee, DarkTable, Blender, Inkscape and also Gimp. Shotwell, Pix, gwenView for pic management.
+
+Comment 5:
+Author: recontitter
+Score: 11
+Created UTC: 1766878899.0
+Comment: Literally just krita. Other drawing apps are useless or too simple. There is also a pencil tool in blender3d but it’s working very much differently compared to programs like krita, csp, photoshop, and alike.

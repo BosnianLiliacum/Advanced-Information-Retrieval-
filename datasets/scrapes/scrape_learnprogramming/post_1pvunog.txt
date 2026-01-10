@@ -1,0 +1,55 @@
+Post Title: How do experienced devs approach learning a new language?
+Author: DebuggingMyExistence
+Score: 46
+URL: https://www.reddit.com/r/learnprogramming/comments/1pvunog/how_do_experienced_devs_approach_learning_a_new/
+Number of comments: 49
+Created UTC: 1766720639.0
+
+Post Content:
+Learning a first programming language often involves structured courses and tutorials, but learning additional languages seems to be a very different process. With prior experience, developers already have mental models and habits that carry over.  
+How do experienced devs usually approach learning a new language, and how does that differ from how they learned earlier in their careers?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BusEquivalent9605
+Score: 37
+Created UTC: 1766721481.0
+Comment: Just start building and learn the language as you go. Once you understand what’s going on under the hood (not that I do) learning a new language is pretty quick - you’re just like “oh they call that this here” and occasionally like “oh neat, they have this!?” and occasionally like “wait, actually they do it like this? gross”
+
+it’s a bigger jump if you’re also switching paradigms, OOP to functional (aka. I *want* to like Haskell)
+
+and switching domains (what you’re code is actually doing and the general code ecosystem in which you work) is even a bigger jump
+
+Comment 2:
+Author: Rain-And-Coffee
+Score: 31
+Created UTC: 1766721393.0
+Comment: I usually pick up a book (or the manual) and read it front to back. It’s how I learned ~10 languages.
+
+If I’m in absolute rush then I just learn the pieces I need, then go back later.
+
+It’s much easier after a handful.
+
+Comment 3:
+Author: kabekew
+Score: 7
+Created UTC: 1766721448.0
+Comment: The biggest effort is getting a productive development environment and workflow set up so you can rapidly develop, compile, test and debug. Your lead engineer or coworkers can usually help with that. Then as you go through the codebase to try to learn it, you pick up the language pretty quickly. 
+
+Then your first tasks are typically to modify existing code, which is a lot easier than writing from scratch. That lets you kind of ease into it. Eventually you're comfortable enough to be productive with all-new code. Code reviews are also where you learn a lot (when they point out easier ways to do things, or elements of the language you didn't know about).
+
+It doesn't really differ between earlier or later in your career I don't think.
+
+Comment 4:
+Author: reheapify
+Score: 6
+Created UTC: 1766722546.0
+Comment: Sandwich approach. Both doing the assigned task and going through tutorials.
+
+Comment 5:
+Author: SwordsAndElectrons
+Score: 5
+Created UTC: 1766724243.0
+Comment: By the time you're "experienced," you have hopefully figured out for yourself how you learn best. That's going to be your personalized answer.

@@ -1,0 +1,70 @@
+Post Title: What does “being good at Linux” mean to you after real-world experience?
+Author: Expensive-Rice-2052
+Score: 38
+URL: https://www.reddit.com/r/linuxquestions/comments/1q3jcj3/what_does_being_good_at_linux_mean_to_you_after/
+Number of comments: 92
+Created UTC: 1767510352.0
+
+Post Content:
+Early on, I thought being good at Linux meant memorizing commands.
+
+After working with real systems, that view changed.
+
+Curious how others define it now - especially after dealing with real workloads, troubleshooting, or production systems.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Introvertosaurus
+Score: 55
+Created UTC: 1767512189.0
+Comment: I got 20 years experience in linux servers (only few as desktop user)... same years of dev experience... always have to look stuff up, even basic commands. Memory doesn't make you experienced... it just means you have a good memory or wasted time memorizing easily accessible information. 
+
+Being good... simply knowing and understanding how it works.
+
+Comment 2:
+Author: UnluckyDouble
+Score: 16
+Created UTC: 1767545601.0
+Comment: I'm just a home user, but for me the key is an understanding of *system anatomy.*
+
+I understand most of the interlocking systems that make up a Linux system and their functions. I can guess at which one might be malfunctioning when something goes wrong and I know what it's called so I can look up information on its configuration.
+
+Knowing commands is obviously important, but it's critical to understand terminal commands are just programs with a text interface. You don't memorize the precise string to make a certain thing happen, you memorize what programs you have available to you and their purposes. Then you read the manpage when you want to use it.
+
+Finally, as a necessary supporting component to the above, it's important to have a working understanding of general concepts like how computer networks work, the different standards that computer hardware uses to interface with the CPU, the overall architectural principles of Unix, etc. This doesn't need to be exhaustive, though I enjoy delving deep into it; you just need to understand what common terms and concepts mean so you can understand what you're doing when you manipulate those things with commands.
+
+And the most important element of all for me is to love doing it. I learned all this not because I felt like I needed to know it to feel superior to others, but simply because I love computers and everything about them. I love learning about them, I love tinkering with them, I love making them do what I want. That passion isn't just what allowed me to get this far; it's the very reason that getting this far means anything.
+
+Comment 3:
+Author: GreedyGerbil
+Score: 6
+Created UTC: 1767533948.0
+Comment: You'll see the same misconception in programming. Inexperienced developers thinks it is about memorizing syntax and knowing "what to type" to achieve the result. 
+
+Experienced devs understand what can be done then they google/ask ai/read docs to find out how.
+
+Same for linux really. I had to lookup today, 30 mins ago how to refresh my font cache, something I do like 10 times on a fresh system then maybe twice more in the next 3 years. Not gonna remember that. But I know I need to do that and that it can be done.
+
+Comment 4:
+Author: beatbox9
+Score: 6
+Created UTC: 1767511906.0
+Comment: For me, "being good at Linux" means I can use it "normally."
+
+"Normally" does not mean command line.  It does not mean troubleshooting.  It does not mean writing scripts.
+
+It means I turn on the computer and click around without thinking about Linux at all.
+
+It ***might*** take some of the above occasionally to initially set up things to be in this state; but if I am frequently doing that stuff, I am bad at Linux.
+
+This is similar to Mac OSX--if I am using the terminal frequently for normal things, I am probably doing something wrong and it's probably because I don't understand how to do it right.
+
+Comment 5:
+Author: ipsirc
+Score: 5
+Created UTC: 1767510719.0
+Comment: &gt;What does “being good at Linux” mean to you after real-world experience?
+
+Nothing, but someone likes to use Linux.

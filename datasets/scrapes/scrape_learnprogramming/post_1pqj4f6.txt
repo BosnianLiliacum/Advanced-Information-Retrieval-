@@ -1,0 +1,65 @@
+Post Title: I’d like to hear from professionals: Is AI really a technology that will significantly reduce the number of programmers?
+Author: AdCertain2364
+Score: 93
+URL: https://www.reddit.com/r/learnprogramming/comments/1pqj4f6/id_like_to_hear_from_professionals_is_ai_really_a/
+Number of comments: 293
+Created UTC: 1766144790.0
+
+Post Content:
+On social media, I often see posts saying things like, ‘I don’t write code anymore—AI writes everything.’  
+I’ve also seen articles where tech executives claim that ‘there’s no point in studying coding anymore.’
+
+I’m not a professional engineer, so I can’t judge whether these claims are true.  
+In real-world development today, is AI actually doing most of the coding? And in the future, will programming stop being a viable profession?
+
+I’d really appreciate answers from people with solid coding knowledge and real industry experience.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BruteCarnival
+Score: 300
+Created UTC: 1766145137.0
+Comment: Personally I am a strong believer that AI is only good for smaller tasks and helping out. So it’s really just makes you more productive when working in large codebases.
+
+I believe there are a lot of executives boasting about replacing devs and how much faster and cheaper things are doing them with just AI. So currently jobs are being replaced and teams downscaled.
+
+But I believe in a few years everything is going to start falling apart because of people overusing AI and introducing large amounts of tech debt without having experience devs ensuring everything is plugging together well. And companies are going to start mass hiring again to fix everything.
+
+AI is a tool that makes us more productive, not a replacement for experienced developers.
+
+Comment 2:
+Author: [deleted]
+Score: 68
+Created UTC: 1766145763.0
+Comment: AI is a tool that is useful in the hands of a programmer who can write good code to start with, but produces rubbish code in the hands of someone who cannot tell the difference.
+
+Comment 3:
+Author: Alternative-Pen1028
+Score: 20
+Created UTC: 1766146427.0
+Comment: It will reduce the amount of non-qualified people for sure. The IT sector has grown too large because it was easy to enter. The demands were low, and a lot of people who entered the industry are remaining low skilled even still. Thousands of products are so poorly coded you can't even imagine. Basically we were living in the world of software made with AI for the past 20 years, with only difference AI were real people getting paid. Now AI can do the same shitty job.
+
+The industry will transform, the demand in skills will grow - AI will become tools. So no, studying is required more than ever now. But it has to be very fundamentally oriented. Understanding the security side and performance optimizations etc. Also I believe QA Manual/Automation and SecurityOps will skyrocket with AI era.
+
+Comment 4:
+Author: disposepriority
+Score: 20
+Created UTC: 1766145141.0
+Comment: &gt;In real-world development today, is AI actually doing most of the coding?
+
+Maybe in some super greenfield startups? Any serious code base and it's an almost certain no.
+
+&gt;And in the future, will programming stop being a viable profession?
+
+How far into the future? Who can tell what software engineering will look like in 50 years, there is no imminent threat to the profession.
+
+  
+In the company I work in AI is used quite a lot, it's not close to doing a measurable amount of work within the company.
+
+Comment 5:
+Author: themegainferno
+Score: 13
+Created UTC: 1766145310.0
+Comment: I mean it quite literally has already reduced the need. The bar to get into software engineering is much higher than it was before. Even during 2020 -2021, it wasn't uncommon to get jobs just knowing basic syntax of programming languages. AI makes it exceptionally easy to produce code that works, so the jr positions have changed drastically. Jrs previously would cut their teeth writing boilerplate and simple code while they built their experience. That is nowhere near the case in 2025 going into 2026. Effectively, the bar has been raised to be a mid-level developer to get in.

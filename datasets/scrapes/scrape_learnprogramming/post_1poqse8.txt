@@ -1,0 +1,42 @@
+Post Title: Any games or fun apps to learn a coding language?
+Author: Redshein
+Score: 52
+URL: https://www.reddit.com/r/learnprogramming/comments/1poqse8/any_games_or_fun_apps_to_learn_a_coding_language/
+Number of comments: 56
+Created UTC: 1765957654.0
+
+Post Content:
+Hi! My teenage son is into programming. I don't know much about this so I apologize in advance in case I say stupid things or use wrong terms. My son takes some classes, writes codes at home and with his friends, has books about programming etc. He especially likes writing code and would like to learn more programming languages and better those that he already knows some of. I myself have studied a lot of human languages with different games, so I thought that surely there are some fun games or practice software that I could buy him for Christmas and he could use to learn more in a fun way. But weirdly I have not found any. Do you have some suggestions? So not something that will teach you the basics of programming thinking, but something that he can use to learn better some specific programming language or use better some engine or something like that.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: WrongStop2322
+Score: 18
+Created UTC: 1765960036.0
+Comment: The Farmer Was Replaced is a great game that teaches Python and it just release 1.0 on Steam not long ago. Highly recommend. There are other programming games I would recommend once they're a more proficient programmer such as Screeps
+
+Comment 2:
+Author: neindochmalik
+Score: 4
+Created UTC: 1765959422.0
+Comment: Factorio
+
+Comment 3:
+Author: Plastic-Jicama-5167
+Score: 3
+Created UTC: 1765961169.0
+Comment: “Players guide to c#” is a great book to learn c#, it’s the language used for a lot of programs but also one of the main languages for making games.
+
+Comment 4:
+Author: CombustibleToast
+Score: 3
+Created UTC: 1765961306.0
+Comment: Shenzhen I/O and Exapunks are games first, but they teach programming at the hardware/CPU level. I played them years before taking a course on assembly and was astonished by how much I already intuitively knew.
+
+Comment 5:
+Author: kioskinmytemporallob
+Score: 3
+Created UTC: 1765989009.0
+Comment: [removed]

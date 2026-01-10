@@ -1,0 +1,52 @@
+Post Title: Can you guys explain what is SELinux on android
+Author: HuckleberryOk640
+Score: 31
+URL: https://www.reddit.com/r/linuxquestions/comments/1q84b39/can_you_guys_explain_what_is_selinux_on_android/
+Number of comments: 30
+Created UTC: 1767952583.0
+
+Post Content:
+Why is SELinux on android? Just wanted to know.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: greenFox99
+Score: 27
+Created UTC: 1767955145.0
+Comment: In short, SELinux is a Linux kernel security feature. It catches every request an application is making to the kernel (like reading a specific file, accessing position etc...). Those requests are system calls (or syscall for short). SELinux has a table of what each application is able to do, if the operation is not allowed explicitly, it is denied.
+
+This is an incredibly powerful security feature that allows to filter very well what applications are allowed to do.
+
+If you want to learn more, the note book is nice, but very technical: https://github.com/SELinuxProject/selinux-notebook/blob/main/src/title.md
+
+TIL it is used on android though.
+
+Comment 2:
+Author: CodeFarmer
+Score: 16
+Created UTC: 1767952810.0
+Comment: Android is a highly modified form of Linux, and SELinux does the same thing for it as it does for mainstream kernels and distributions: mandatory access control policy for all kinds of things, from applications to extensions.
+
+Comment 3:
+Author: ipsirc
+Score: 10
+Created UTC: 1767952716.0
+Comment: [https://duckduckgo.com/?q=explain+what+is+SELinux+on+android&amp;ia=web](https://duckduckgo.com/?q=explain+what+is+SELinux+on+android&amp;ia=web) \--&gt; [https://source.android.com/docs/security/features/selinux](https://source.android.com/docs/security/features/selinux)
+
+Comment 4:
+Author: Sileniced
+Score: 7
+Created UTC: 1767952860.0
+Comment: Because Android treats all the apps as hostile. So SELinux creates a wall around each app so that it's safer or something like that... It's for app isolation. It's connected to all those app permissions.
+
+Comment 5:
+Author: sidusnare
+Score: 5
+Created UTC: 1767959792.0
+Comment: SELinux is a MAC (Mandatory Access Control). It takes a set of rules and compiles it into a filter. This model fits nicely with at "app" model of software that runs on phones. If a process (app) wants to open a file, device, communicate with the internet or another process, it has to pass the filter, and SELinux let's that filter be in the kernel, running in protected kernel space.
+
+This is in contrast to other walled garden app frameworks, many of which used some stand alone daemon that hands out such things to apps that request it. All apps are supposed to talk to the daemon which does the filtering and access control. The big problem is, that service and the app are running at the same privilege, so a malicious app in a straight up fight with the service daemon is on equal footing, and it if manages to talk to anything other than the daemon, it's completely unfiltered. 
+
+SELinux is brought to us be the friendly spooks over at the NSA. It's been a huge contribution to the Linux kernel, and even though many admins habitually turn it off, it's very much worth the effort to get it right.

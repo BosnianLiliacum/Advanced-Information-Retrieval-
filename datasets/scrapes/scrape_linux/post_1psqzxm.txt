@@ -1,0 +1,65 @@
+Post Title: I didn’t expect to fall in love with Linux like this
+Author: Snowy_AI
+Score: 211
+URL: https://www.reddit.com/r/linux/comments/1psqzxm/i_didnt_expect_to_fall_in_love_with_linux_like/
+Number of comments: 31
+Created UTC: 1766379526.0
+
+Post Content:
+I used Windows for years because it’s always been the easy, user-friendly choice. I’m not exactly an “average user” though, I’ve always been the type to tinker, and I’ve been self-teaching programming since I was a kid.
+
+I also spent years trying to “make Windows mine”: random tools to change the look, add features, tweak stuff… and it usually ended with a system that felt heavier, buggier, and kind of messy.
+
+I’ve done distro-hopping, but I never found a distro/DE that really clicked for me. Recently I’m working on one of the most important projects I’ve ever done, and I started getting paranoid about Windows spyware/malware risking it. So I set up a Fedora dual-boot and decided to use it only for that project.
+
+While looking up the usual GNOME customization videos, I stumbled on one about installing Hyprland on Fedora.
+
+I’d wanted to try Hyprland for a long time because I love the look and the whole vibe, but I always assumed it was basically “Arch-only”. Thanks to JaKooLit (seriously, I can’t thank them enough), I finally tried it... and yeah, I fell hard. Fedora + Hyprland gave me that dumb “new crush” feeling: the more I learned, the more I love it.
+
+It’s the first OS where I genuinely feel like "this is mine". It fits how I think, I can script basically anything and the dotfiles are very addictive. Also, the Linux community philosophy is just beautiful.
+
+I really hope more people give different distros a real try until they find something that matches them, especially now that Windows keeps getting more and more stuffed with AI bloat.
+
+I don’t know how to explain it properly, but using an OS built by people who do this because they love it feels like the internet used to feel: more like ours, and less like something owned by cash-cow companies.
+
+Anyway, thank you to everyone who made all of this possible &lt;3
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Typeonetwork
+Score: 37
+Created UTC: 1766380603.0
+Comment: I get it.  I'm on the opposite side with low resource distros, but that's the magic of Linux.
+
+Comment 2:
+Author: o0OhaNkO0o
+Score: 20
+Created UTC: 1766381977.0
+Comment: keep that energy into your career too. it's hard to get rid of someone who custom-built everything.
+
+Comment 3:
+Author: Academic-Slice-2631
+Score: 10
+Created UTC: 1766379859.0
+Comment: Welcome! You're not going back anymore. 
+Also, get used to the "i use arch btw" jokes
+
+Comment 4:
+Author: DizzyCardiologist213
+Score: 6
+Created UTC: 1766410178.0
+Comment: less of a power user than you. did very light programming 25-30 years ago and built my pcs from parts, but got a more than full time job and just needed a PC that works. Windows was fine for that for a while (I skipped 8, dragged my feet on 10, and windows 11 sent me to linux). 
+
+Son is as the age that he goes from tablet to PC now, and I really don't want my kids on Windows 11. I am an old school conservative (not the current type) gone unaffiliated, so keep that in mind when I say this - what's going on with Google, Window, Apple, etc, is corrosive societally. The kind of thing I'd never have noticed 30 years ago, but it's gone on so long and so far, the manipulation and AI is just the next step of it. Could be great for society, and I use AI at work for some efficiency items, but on the outside for non-work, the idea that it's pushing to do things even like make leisure choices for us (which is entirely greed -wanting to be between us and whatever we do to collect money). No thanks. 
+
+work is windows, I don't have a choice. Four PCs in the house are ubuntu, kubuntu, mint cinnamon and ubuntu studio. They are all about the same if you're new, which is nice to see. Son never had a windows PC and never well. 
+
+After getting past windows failing to burn the first image and having to bust out a really old PC that needed to be parted out (and now is), just to burn the first ISO, the others have been only minutes of time. I feel like I got away from a society wide cult. No more onedrive surprises (I turned that off!), and so on.
+
+Comment 5:
+Author: sid_kailasa
+Score: 3
+Created UTC: 1766379896.0
+Comment: I had the same experience with Fedora + Plasma + Orchis-kde lol

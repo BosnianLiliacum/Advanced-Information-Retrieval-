@@ -1,0 +1,64 @@
+Post Title: What advice would you give your younger self when starting to learn programming?
+Author: idont_need_one
+Score: 78
+URL: https://www.reddit.com/r/learnprogramming/comments/1pvfpbd/what_advice_would_you_give_your_younger_self_when/
+Number of comments: 87
+Created UTC: 1766676679.0
+
+Post Content:
+If you could go back to the very beginning of your programming journey, what would you do differently?
+
+Would you:
+
+focus more on fundamentals?
+
+stop tutorial hopping earlier?
+
+build projects sooner?
+
+choose a different first language?
+
+worry less about being “bad” at the start?
+
+I’m curious to hear lessons, mistakes, and things you wish someone had told you. Hoping this helps beginners (and maybe reminds experienced devs how far they’ve come).
+
+
+Top 5 comments:
+
+Comment 1:
+Author: VibrantGypsyDildo
+Score: 48
+Created UTC: 1766676987.0
+Comment: &gt;worry less
+
+It is probably the best advice.
+
+Comment 2:
+Author: MillenniumGreed
+Score: 38
+Created UTC: 1766678747.0
+Comment: Just start. 
+
+Don’t focus too much on the resource you use. 
+
+Don’t fall in love with the idea of the destination more than you do the reality of the journey.
+
+Comment 3:
+Author: ChrisMartins001
+Score: 20
+Created UTC: 1766677340.0
+Comment: Build projects sooner. 
+
+Watching tutorials are always helpful, but I learned more actually building projects and having to problem solve.
+
+Comment 4:
+Author: mahesh_dev
+Score: 13
+Created UTC: 1766677615.0
+Comment: build projects way sooner. i wasted months doing tutorials thinking i needed to know everything first. you learn way more by building something broken and fixing it than watching someone else code. also stop comparing yourself to others, everyone starts confused and thats normal
+
+Comment 5:
+Author: edparadox
+Score: 11
+Created UTC: 1766683172.0
+Comment: Do not try to skip on learning build systems early.

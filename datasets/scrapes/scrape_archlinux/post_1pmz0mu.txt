@@ -1,0 +1,52 @@
+Post Title: Dual Boot Windows &amp; Arch Linux (Secure Boot)
+Author: hmm-ok-sure
+Score: 13
+URL: https://www.reddit.com/r/archlinux/comments/1pmz0mu/dual_boot_windows_arch_linux_secure_boot/
+Number of comments: 19
+Created UTC: 1765774807.0
+
+Post Content:
+I installed Arch Linux recently and I use windows too. I play games like valorant in windows which requires secure boot on. But during boot up it will not load arch with secure boot on, because the keys are not signed. 
+
+So is there any way to dual boot to Arch without turning off secure boot. 
+
+I saw you can sign custom keys, but not sure if it may brick my BIOS or something.
+
+Somebody please help if you have any solution..
+
+Note : I have checked the docs but I'm not sure how to do it, i am new to arch...
+
+
+Top 5 comments:
+
+Comment 1:
+Author: nerrdrage
+Score: 28
+Created UTC: 1765775134.0
+Comment: If only there was a centralized resource for information about this distro. And if it were considered the one of the pinnacle’s of open-source documentation that would be even better.
+
+Here’s payment for the ribbing: https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot
+
+Comment 2:
+Author: Logical-Razzmatazz17
+Score: 5
+Created UTC: 1765776858.0
+Comment: You can add it but personally I just enable secure boot when I need to go into windows and disable when I go back into Arch
+
+Comment 3:
+Author: INviS87
+Score: 2
+Created UTC: 1765809211.0
+Comment: Did you do it ? I used sbctl to create and enroll my own keys and now I can dual boot with secure boot on and  play valorant in my laptop. I have the whole process and the commands saved somewhere. Let me know if you haven't done it yet. Till now I have only faced one problem. When I updated my bios , everything broke and grub wasn't working. So have a live Arch usb ready to solve it.
+
+Comment 4:
+Author: Amorphous7473
+Score: 1
+Created UTC: 1765796676.0
+Comment: Use sbctl like someone has told you. It is super simple that other ways
+
+Comment 5:
+Author: Objective-Stranger99
+Score: 1
+Created UTC: 1765799033.0
+Comment: I just used Shim, which I found convenient and easy while also being relatively secure. REFInd also manages my keys.

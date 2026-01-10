@@ -1,0 +1,91 @@
+Post Title: What is the future of Linux vs anti cheat?
+Author: Bane_of_Balor
+Score: 57
+URL: https://www.reddit.com/r/linuxquestions/comments/1q01193/what_is_the_future_of_linux_vs_anti_cheat/
+Number of comments: 87
+Created UTC: 1767147421.0
+
+Post Content:
+Fairly new to Linux, but overall pretty tech-savy. I was aware before using Linux that there are compatibility issues with Linux and some kernel based anti-cheat in games.
+
+Thankfully, none of the games that I currently play have anti cheat issues on Linux, but it's something that's still on my mind as I get used to running linux-only on my main gaming rig.
+
+So what's the outlook on this issue, and where does the responsibility lie? Is it something that Linux developers may be able to work around/fix in the future? Or is it entirely on the developers? More confusing is that some games seem to use the same anti-cheat software (e.g. easy anti-cheat) but sone are supported but others are not. It being a kernel based issue makes me think that there is very little that Linux developers can do, but 5-10 years ago you'd have said the same thing about running games in general, at least to the extent we have it now.
+
+So what does the future look like? Are there projects in the works on the Linux side? Are there anti-cheat developers working on better support? Is it entirely down to game developers and their implementation? Are we stuck hoping that the steam machine 2 can generate enough pressure on game/anti-cheat developers to offer better support?​
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dank_imagemacro
+Score: 44
+Created UTC: 1767159487.0
+Comment: The first step will be Windows no longer allowing kernel access to non-microsoft software. They have already signaled an intent to do this, so it is coming at some point. Once anti-cheat makers can no longer rely on kernel-level access, they will create anti-cheat software that will take significantly less modification to also support Linux. At this point you can expect to see a few game studios put out a Linux client, but by no means all of them. EA appears to be actively hostile to Linux and I do not expect them to produce a client, even when they can. 
+
+However, other studios making a Linux client will result in Linux becoming more attractive to users, and will increase the Linux marketshare. 
+
+The next step is up to Microsoft. How badly will Windows 12-15 suck? Issues with windows 11, especially it not running on older hardware, but also automated reboots and upgrades as well as advertisements, privacy issues and integrated AI have driven many users to Linux already. If subsequent Windows versions continue to alienate customers, Linux will continue to grow to the point that it makes true financial sense for game developers and other software companies to target Linux compatibility. This will create a snowball effect of more Linux adoption, leading to even more financial incentive for more game developers to support the platform. When Linux has even 25% marketshare, a game developer will not be able to afford not to make sure it runs under proton. 
+
+I do not see non-proton Linux adoption any time soon, possibly even after Microsoft is a minority marketshare.
+
+Comment 2:
+Author: Malthammer
+Score: 27
+Created UTC: 1767147722.0
+Comment: It’s up to the makers of the anti-cheat systems to support Linux and up to the game devs to honor it or implement it. Then it’s up to YOU, the end user to decide if you’re ok with allowing whatever they come up with to run on YOUR system. 
+
+It’s not worth it for them though, so whatever.
+
+Comment 3:
+Author: FineWolf
+Score: 16
+Created UTC: 1767152453.0
+Comment: There're two issues right now: distros are not signing their kernel/EFI images, which means that security vendors cannot attest that the kernel is unmodified, and some game publishers do not see the value in supporting Linux due to the small user base.
+
+For the first point... Secure Boot and Measured Boot already exists on Linux. Valve doesn't have to develop anything, nor should it be something under Valve's control.
+
+What Valve can do, however, is partner with AC vendors to set clear requirements for a baseline required for anti-cheats that require observability. These should be:
+
+* Kernel EFI images distributed by distros in their repos should be signed by the distro's own key infrastructure
+* Kernel binary DKMS modules distributed by distros in their repos should be signed by the distro's own key infrastructure
+* Bootloader EFI images distributed by distros in their repos should be signed by the distro's own key infrastructure
+* Distros need to distribute their KEKs and DB/DBX to their users (it doesn't have to be part of the installation media, but it should be available for users to install should they wish to play anti-cheat games that require observability)
+* Users must set their Kernel into Integrity Lockdown Mode (`lockdown=integrity`)
+* Users must have measured boot and remote attestation capability via TPMv2 available
+* eBPF must be available
+
+That way:
+
+* Users are free to install any kernel or module distributed by their distribution (provided their distribution doesn't start to provide kernel modules that enable cheating, then it would be untrusted). That includes common use-cases like `nvidia-dkms`, `nvidia-open-dkms`, `v4l2loopback-dkms`, `zfs-dkms`, etc... Cachy can continue distributing their own `linux-cachyos`, Arch users can continue to enjoy `linux-zen`, etc.
+* The distros are fully autonomous in signing their own binary EFI images
+* *This is entirely optional for users. Users who wish to compile their own modules and their own kernels can continue to do so, they just won't be able to play some games (which is already the case today).* ***No user freedom is removed.***
+
+There are some downsides:
+
+* Users will have to be comfortable enrolling their own PK, their distro's of choice KEKs/DBs/DBXs into their firmware, and if they are dual booting, [Microsoft's KEKs/DBs/DBXs](https://github.com/microsoft/secureboot_objects/). We already have tooling for that through `sbctl` and `systemd-boot`.
+* Distributions that distribute their packages as source (Gentoo for example) are simply not going to be supported for those games because there is no way to verify that the user didn't modify their kernel on those distributions.
+
+Valve can also help by maintaining a repository (think phone book) of distros their users are using, and pointing security vendors towards the distro's KEKs.
+
+In no way shape or form should Valve or Microsoft be in control of the key infrastructure here. It's imperative that distros remain in control.
+
+All the pieces are already there. What's needed is a nudge to get distros to start signing their stuff (which would have no impact on users who do not want to use Secure Boot) and for security vendors to start adopting it. Yes, that requires building an observability engine using eBPF, but [that's also the direction Microsoft is taking for their security vendors](https://github.com/microsoft/ebpf-for-windows), so they'll need to do that eventually with Windows as well.
+
+Comment 4:
+Author: PavelPivovarov
+Score: 16
+Created UTC: 1767152403.0
+Comment: There's no future for kernel-level anticheat regardless of what AntiCheat developers suggest. There are just way too many examples where people cheat using either automatical clicking device, or moving mousepad, or full arm control, and neither of that is detected by any existing anticheat, and will never be.
+
+On the other hand as someone who is privacy focused (or you can call me paranoid), I don't like the idea that the game will have unrestricted kernel-level access to my system. That's basically user initiated malware installation, and violates way to many security best practices.
+
+I think the future of anti-cheat is server-level anti-cheat based on the unusual users patterns - that has more control and better potential.
+
+Comment 5:
+Author: littypika
+Score: 14
+Created UTC: 1767147645.0
+Comment: Maybe not in the near future, as Linux continues to be mainly a niche OS for enthusiasts, but make no mistake, it's quickly gaining traction with the "mainstream" and "masses", so I definitely see projects in the works on Linux for anti-cheat developers for better support.
+
+This is evident with how good gaming has gotten on Linux in recent years, so the future of Linux with anti-cheat is very bright and inevitable.

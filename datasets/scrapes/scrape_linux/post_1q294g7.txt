@@ -1,0 +1,49 @@
+Post Title: Fall To Boot:  UEFI vertical scrolling game
+Author: alearmas1
+Score: 1978
+URL: https://i.redd.it/6epwyyrvrzag1.png
+Number of comments: 85
+Created UTC: 1767384509.0
+
+Post Content:
+Hello everyone, happy new year!.
+
+Just pushed a new game to my [UEFI Games repo](https://github.com/mycroftsnm/UEFIGame), basically you have to survive a *procedurally generated* descent to continue booting linux, but if you touch a wall, you lose and the computer turns off.  ([demo video](https://github.com/mycroftsnm/UEFIGame?tab=readme-ov-file#demo-videos))
+
+  
+EDIT: [New Release](https://github.com/mycroftsnm/UEFIGame/releases/tag/1.4.0) with 2 more games!  (one being contributed!) 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ohkillz
+Score: 451
+Created UTC: 1767386037.0
+Comment: Can you make a version where its doom ultra nightmare mode
+
+Comment 2:
+Author: arf20__
+Score: 118
+Created UTC: 1767384965.0
+Comment: OMGGGGGGG I needed to figure out this for my game. It runs as a standalone BIOS boot kernel and I wanted to make it with UEFI too: https://github.com/arf20/arfminesweeper
+
+Comment 3:
+Author: sublime_369
+Score: 48
+Created UTC: 1767384724.0
+Comment: Love it you mad lad!
+
+Friend bought me 'Return to Monkey Island' for a birthday present recently. Massive disappointment, loved the first two.
+
+Comment 4:
+Author: litescript
+Score: 28
+Created UTC: 1767390344.0
+Comment: this is the funniest thing i’ve seen in some time. checked out the repo, i don’t know how id feel about my firmware being better at insults than me
+
+Comment 5:
+Author: Admirable-Food9942
+Score: 28
+Created UTC: 1767386729.0
+Comment: Can you put doom on the bios though?

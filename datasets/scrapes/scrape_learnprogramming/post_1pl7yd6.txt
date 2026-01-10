@@ -1,0 +1,73 @@
+Post Title: Is contributing to major projects as a beginner programmer a realistic goal?
+Author: noctural9
+Score: 60
+URL: https://www.reddit.com/r/learnprogramming/comments/1pl7yd6/is_contributing_to_major_projects_as_a_beginner/
+Number of comments: 33
+Created UTC: 1765586155.0
+
+Post Content:
+I’m a beginner programmer and I’m curious about the practicality of contributing to major open-source projects (like Django, TensorFlow, or Rust’s Cargo) as I get this recommendation a lot by gurus. I’m not asking whether it’s theoretically possible. I want to know if it’s realistic for someone just starting out.
+
+Specifically, I’m wondering:
+
+What types of contributions are beginner friendly (code, documentation, tests, triage)?
+
+How steep is the learning curve in large projects?
+
+Is it more efficient to start with smaller projects before tackling major ones?
+
+
+I’d love to hear experiences from beginners who’ve tried contributing, as well as maintainers or anyone familiar with onboarding new contributors.
+
+Thanks in advance for your advice!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Psychoscattman
+Score: 75
+Created UTC: 1765587585.0
+Comment: In my opinion you should try and contribute to projects that you yourself use. Especially if you find a problem with it or think that it could be improved.
+
+For large projects, you are likely missing the expertise to make any meaningful contributions outside of documentation and fixing typos. I personally like doing Bug fixes because they likely don't require any engineer work. The architecture and algorithms are already there and the expected behaviour is really well defined, you just have to fix the bug. It also means that you get to learn that area of the project better.
+
+But in general don't try to contribute for the sake of contributing, contribute because you have something to contribute.
+
+Comment 2:
+Author: [deleted]
+Score: 31
+Created UTC: 1765587570.0
+Comment: [removed]
+
+Comment 3:
+Author: justUseAnSvm
+Score: 14
+Created UTC: 1765590015.0
+Comment: You can do it, but pick a project you like, and one you don't mind onboarding.
+
+Even the most complex software projects have low hanging fruit, documentation, clean up, small errors in comments, that sort of thing.
+
+For instance, I contributed to the Haskell compiler, starting with documentation tasks, and moving up to some "code clean up", that was basically running a dead code detection tool, submitting a massive PR, then finding out there's not standard library or exports for GHC, so that's fun.
+
+Anyway, start small, and build up.
+
+Comment 4:
+Author: Sorlanir
+Score: 7
+Created UTC: 1765596305.0
+Comment: I have not contributed to major open source projects before, so take this advice with a grain of salt.
+
+In my opinion, it doesn't make much sense to try to contribute something just because you want to contribute (to anything), especially if the ultimate reason for that is to be able to say to others that you contributed to something.
+
+The more organic thing to me would be: a) you've used the tool yourself, b) you've noticed issues that you want to improve on, and c) you have the skills to improve on those things mostly independently. I think it's difficult for a true beginner to have met those criteria, though certainly not impossible.
+
+So maybe just consider starting small. Find a project you're interested in, build it, mess with it, read the docs, etc. After you've done that you can decide if you want to try to contribute. But I wouldn't go in under the assumption that you can start meaningfully contributing quickly.
+
+Comment 5:
+Author: dashkb
+Score: 4
+Created UTC: 1765586334.0
+Comment: Yes. They love it. Fix docs, comments, update dependencies, write tests, all that kind of work will get you noticed and generate goodwill with people who will help you grow.
+
+Edit: find projects that have healthy contributor environments. A lot of times maintainers will have a tag on their project board like “good first project” or something; I always did that for teams I led.

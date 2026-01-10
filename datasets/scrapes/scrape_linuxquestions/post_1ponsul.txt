@@ -1,0 +1,60 @@
+Post Title: Question about the 'touch' command
+Author: MeninoPolaroid
+Score: 21
+URL: https://www.reddit.com/r/linuxquestions/comments/1ponsul/question_about_the_touch_command/
+Number of comments: 58
+Created UTC: 1765947111.0
+
+Post Content:
+Noob here!  
+I was playing around with the terminal and learning how to work with my files using only the terminal. I got the gist of the 'touch' functionality, but is it supposed to create only txt files? or do I have to put the file format with the 'touch' command to get the type of file I want?  
+ 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: sleemanj
+Score: 91
+Created UTC: 1765947294.0
+Comment: `touch` simply sets the modification &amp;/ access time of a file.  If the file doesn't exist a file with **no** content, a zero-byte file, is created with the given filename. `touch` doesn't know anything, nor does it need to know anything, about the files you are touching.
+
+Comment 2:
+Author: RoseQuartzzzzzzz
+Score: 44
+Created UTC: 1765948092.0
+Comment: File formats aren't really a thing. A file is just a collection of bytes. Those same bytes can have drastically different meanings depending on the program you use to read them. You can open a png in a text editor just fine, but it'll look like gibberish, because most of the bytes will be mapped to strange unicode characters that don't have any meaning as text a human could read.
+
+`touch`, more specifically, updates a target file's modification and access times to Now, and creates a new, completely empty file if the target does not exist.
+
+Comment 3:
+Author: whiteskimask
+Score: 19
+Created UTC: 1765948977.0
+Comment: Touch creates empty files if no file of the same name is present.
+
+
+A file can be anything, audio, video, text, image etc.
+Its like an empty envelope waiting for its contents.
+
+Comment 4:
+Author: ImpressiveHat4710
+Score: 7
+Created UTC: 1765949310.0
+Comment: While you're exploring, I would suggest exploring the `file` command.  It tells you what type of file it is.
+
+`file &lt;file path&gt;`
+
+Comment 5:
+Author: sjbluebirds
+Score: 3
+Created UTC: 1765971477.0
+Comment: I think you're misunderstanding what the 'touch' command does.
+
+Yes, it can create a file. But it only creates a file with a name that you give it. In Linux, a file is a file is a file. There is no differentiation or understanding of what kind of file a particular one is, except for any program or application that uses that file.
+
+You can have a spreadsheet mislabeled as a PDF.  You can have an MP3 mislabeled as an ODT. If you ask an application to open the file, it doesn't matter what the name is- just the contents. 
+
+The touch command pays no attention to the kind of file. It's simply changes the access date of the file. The last time the file was touched by the system. If the file doesn't exist, a new one, of size 0, is created with the current date.
+
+That's all it does.

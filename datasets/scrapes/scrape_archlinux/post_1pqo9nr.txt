@@ -1,0 +1,60 @@
+Post Title: Arch Linux Immutable. Is it worth? Is it "feasable" 100%?
+Author: D3vil0p
+Score: 23
+URL: https://www.reddit.com/r/archlinux/comments/1pqo9nr/arch_linux_immutable_is_it_worth_is_it_feasable/
+Number of comments: 38
+Created UTC: 1766158956.0
+
+Post Content:
+I used Arch Linux and NixOS for years and in the last period I was thinking about Arch Linux immutability. Is it possible to reach the immutability in a similar manner as NixOS? Probably it can be reached by BTRFS? What if packages with **post\_install()** that could break the immutability are installed?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: npaladin2000
+Score: 70
+Created UTC: 1766159230.0
+Comment: SteamOS is "Arch Linux Immutable" if you're wondering. That seems to work for a very specific use case. I could absolutely see embedded applications that are built out of an atomic, immutable Arch image. Solves the problem of update breakage, since you're dealing with  a single image with particular software versions that would be tested together. I don't think it would appeal to the typical Arch user day-to-day though, as Arch itself tends to be a tinkerer's OS.
+
+Comment 2:
+Author: TheBlackCarlo
+Score: 32
+Created UTC: 1766161077.0
+Comment: As an Arch linux enthusiast, I don't see why you would want to make Arch immutable when there are better suited distros to do so.
+
+* You might be able to freeze Arch to a state and never update it, but I would not advise it for security. When new packages come around and they are not in any repo, you would be forced to install them (at a specific version, hoping for the best) via github. Not really nice to maintain. Otherwise you need to relay entirely on flatpak or appimages, but still the base system remains without security fixes, so that would become an issue in a short time.
+* Debian is extremely stable, with only few and far between security fixes. Why not use that?
+* Fedora silverblue is atomic in nature, you could try that.
+
+And then, WHY do you want immutability? Is it for software development? Would not a docker environment be better suited?
+
+Comment 3:
+Author: levensvraagstuk
+Score: 17
+Created UTC: 1766159323.0
+Comment: KDE Linux is immutable arch linux based. Maybe start there.
+
+Comment 4:
+Author: arkane-linux
+Score: 13
+Created UTC: 1766167766.0
+Comment: My little hobby project does exactly this. [github.com/arkanelinux](http://github.com/arkanelinux)
+
+Comment 5:
+Author: pyro57
+Score: 5
+Created UTC: 1766172451.0
+Comment: you *can* but the question of use case really hangs in the air here. like what problem are you trying to solve?
+
+
+if you want stability then making the distro immutable doesn't really help with that. the reason immutable distros are seen a more stable then traditional ones is because the distro maintainers test the packages they put in their images before pushing the new images to users. if you wanted to replicate that yourself you'd need some way of generating images (easy enough) then manually test your images before deploying them to your primary computers. sure you *can * do that, but why?
+
+
+if you want security, well even on immutable distros if an attacker gets root then they can specify overlay filesystems that mount over the immutable file system and can Futz with your stuff that way so it doesn't really help that much.
+
+
+again what problem are you trying to solve here? if it's being able to revert back if an update breaks something then you can use btrfs snapshots and it doesn't need to be immutable for that. if you want stability over default arch then I'd suggest running a different distro like a Universal blue based distro such as bazzite, auroraos, etc. if those feel too limiting to you... its because they're immutable, making arch immutable would hamper tinkering in the same way.
+
+
+that said I've found arch to be just as reliable as basically any other distro out there. been running it for years and never had an update break something, I've broken many things myself, but never had an update break something. I even use it as the host os on my home server.

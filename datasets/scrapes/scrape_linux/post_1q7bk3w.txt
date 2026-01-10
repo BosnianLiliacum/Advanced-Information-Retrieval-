@@ -1,0 +1,80 @@
+Post Title: I made windows 8 start menu for linux
+Author: N3Rumie
+Score: 921
+URL: https://i.redd.it/92idqn2ul4cg1.png
+Number of comments: 169
+Created UTC: 1767878298.0
+
+Post Content:
+So i am one of rare ppl that enjoyed windows 8.1 and kind off missed it. But i did not see anyone who shared my opiniom hard enough to do something like that.
+
+Its written in python Main function is to launch python scripts like apps, but I added support for flatpacks, steam games and system native apps.
+
+Every color can be changed via edit mode or right click, you can replace background with wallpaper. Tiles are moveable, you can create groups and folders. I belive it has like 80% of functionality of original w8 start menu. Missing is search mode and ability for making bigger tiles It sits in tray until "super+p" is pressed.
+
+It made it for myself and its depended on gnome terminal but if someone is interested i can relase code on git when i get back from work.  
+  
+ Here you go [download](https://pastebin.com/BYHQWpPa) 
+
+  
+only libraries used are;   
+`PyQt6==6.10.1`
+
+`pynput==1.8.1`
+
+Edit: I had a lot of troubles with github 2FA and gitlab is confusing so i am just putting code in pastebin.
+
+Do i plan on developing it further?  
+Yes, i am surprised by response. While app is enough for me as it is.   
+I seen some good suggestions and i would love to make it more fitting for tablets or devices without "super+p" buttons
+
+
+Top 5 comments:
+
+Comment 1:
+Author: 1Blue3Brown
+Score: 891
+Created UTC: 1767879609.0
+Comment: Thanks. How can i disable it?
+
+Comment 2:
+Author: LeastCow1284
+Score: 165
+Created UTC: 1767879765.0
+Comment: why are you developing shit instead of arguing about software choices, on r/linux?
+
+anyways this is epic op, I might try it out as I (didnt use windows 8 but) thought the ui design, conceptually at least, wasnt too bad
+
+Comment 3:
+Author: Additional-Leg-7403
+Score: 105
+Created UTC: 1767881563.0
+Comment: heres my one [https://github.com/er-bharat/Win8DE.git](https://github.com/er-bharat/Win8DE.git)
+
+i have made
+
+* start menu
+* running apps section
+* volume brightness OSD
+* battery ui
+* a wall app
+* a settings app
+* a hot corner app
+* a lockscreen
+* a SDDM theme.
+
+and i am daily driving it its made in QT and C++  and fully functional its made for labwc and hyprland in mind
+
+Comment 4:
+Author: Brotendo42069
+Score: 105
+Created UTC: 1767879654.0
+Comment: There probably was a reason it hasn’t been done before lol
+
+Comment 5:
+Author: helgur
+Score: 65
+Created UTC: 1767878805.0
+Comment: If you really wanted to emulate peak Microsoft you would have made this in electron, not python. Just to make sure the end user could experience the wonderful slog of genuine windows performance.
+
+Joking aside, I like this. It's weird, and esoteric. Same reason I used Enlightenment with eterm back in the day. It won't appeal to a lot of people, but people like me appreciate that someone puts things like this out there.

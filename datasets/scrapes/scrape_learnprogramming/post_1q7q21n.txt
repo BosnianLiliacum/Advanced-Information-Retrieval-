@@ -1,0 +1,50 @@
+Post Title: Did my first complete non-college project today
+Author: Fun_Wonder_695
+Score: 37
+URL: https://www.reddit.com/r/learnprogramming/comments/1q7q21n/did_my_first_complete_noncollege_project_today/
+Number of comments: 5
+Created UTC: 1767910906.0
+
+Post Content:
+So, I am a third year(second year discounting prep year where we only focus on English) cs student. I entered this major with the full belief that I will enjoy it and have fun in it. que forward two years in the major, i am behind in the practical aspect, can't code from scratch, and feeling imposter syndrome since i only know the theory and not how to apply it. a week ago i decided to go all out and code a basic one level rpg game. lo and behold it ended terribly lol.
+
+today i thought "Y'know what? if i suck at that then maybe i can try the simplest project in the book."
+
+so I coded a simple number guessing game from scratch, and it ran. 
+
+i felt proud to say the least, felt the reason as to why  i entered this major, and if i can do this, then maybe, i can with what's after.
+
+  
+just wanted to share :)
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Rain-And-Coffee
+Score: 5
+Created UTC: 1767914845.0
+Comment: Congrats, step 1 is always the hardest and you did it.
+
+Now keep the momentum going :)
+
+Comment 2:
+Author: MuaTrenBienVang
+Score: 2
+Created UTC: 1767924355.0
+Comment: Cool. I suggest you read the little schemer book
+
+Comment 3:
+Author: JollyConversation186
+Score: 2
+Created UTC: 1767911047.0
+Comment: Dude that's awesome! The number guessing game is like the "hello world" of actual projects - simple but you actually built something that works
+
+  
+The jump from theory to "holy shit I made a thing" is real, congrats on pushing through the imposter syndrome
+
+Comment 4:
+Author: DowntownLaugh454
+Score: 1
+Created UTC: 1767990748.0
+Comment: Congrats on completing your first project. It's a huge milestone and a great step forward in your programming journey.

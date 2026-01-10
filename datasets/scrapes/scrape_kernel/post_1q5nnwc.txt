@@ -1,0 +1,58 @@
+Post Title: How to find the reason of Reboot from the system
+Author: Inevitable_Delay_747
+Score: 5
+URL: https://www.reddit.com/r/kernel/comments/1q5nnwc/how_to_find_the_reason_of_reboot_from_the_system/
+Number of comments: 5
+Created UTC: 1767717765.0
+
+Post Content:
+I am curious is there any way other we can be sure that the last reboot of the Linux server is manual or crash/panic.  We can look at /var/log/ wtmp file and use last -s command, wondering if there are any other ways
+
+
+Top 4 comments:
+
+Comment 1:
+Author: alpha417
+Score: 6
+Created UTC: 1767720253.0
+Comment: This is not really the best forum for this,  as diagnostics are not distro-agnostic.  For instance, my distro uses systemd...so I'm calling journalctl -b -1 to look at the boot prior, and reading backwards to see whatb was logged prior to the crash...
+
+r/linuxadmin or mayhaps the distro related sub for you...
+But not really here.
+
+Comment 2:
+Author: jjjare
+Score: 3
+Created UTC: 1767720294.0
+Comment: Journalctl boot logs and sometimes dmesg
+
+Comment 3:
+Author: yawn_brendan
+Score: 2
+Created UTC: 1767723689.0
+Comment: Depending on the platform there may be HW watchdogs you can check
+
+Comment 4:
+Author: Inevitable_Delay_747
+Score: 1
+Created UTC: 1767718226.0
+Comment: Clarifying for the manual/normal reboot
+the logs in /var/log/wtmp has a shutdown event prior to reboot event
+
+[1] [00000] [~~  ] [shutdown] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-12T08:35:45,675010+00:00]
+[2] [00000] [~~  ] [reboot  ] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-12T08:36:08,926820+00:00]
+[1] [00051] [~~  ] [runlevel] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-12T08:36:26,042772+00:00]
+
+But in case of crash/panic we will not have a shutdown event logged
+
+[5] [03192] [tty1] [        ] [tty1        ] [                    ] [0.0.0.0        ] [2025-12-16T15:32:46,069522+00:00]
+[6] [03192] [tty1] [LOGIN   ] [tty1        ] [                    ] [0.0.0.0        ] [2025-12-16T15:32:46,069522+00:00]
+[2] [00000]  [reboot  ] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-17T07:15:04,913967+00:00]
+[1] [00051] [~~  ] [runlevel] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-17T07:15:22,802954+00:00]
+[5] [03371] [tyS0] [        ] [ttyS0       ] [                    ] [0.0.0.0        ] [2025-12-17T07:15:22,811203+00:00]
+[6] [03371] [tyS0] [LOGIN   ] [ttyS0       ] [                    ] [0.0.0.0        ] [2025-12-17T07:15:22,811203+00:00]
+[5] [03375] [tty1] [        ] [tty1        ] [                    ] [0.0.0.0        ] [2025-12-17T07:15:22,819684+00:00]
+[6] [03375] [tty1] [LOGIN   ] [tty1        ] [                    ] [0.0.0.0        ] [2025-12-17T07:15:22,819684+00:00]
+[7] [84822] [ts/2] [opc     ] [pts/2       ] [10.87.167.228       ] [10.87.167.228  ] [2025-12-17T12:29:49,587521+00:00]
+[8] [84822] [    ] [        ] [pts/2       ] [                    ] [0.0.0.0        ] [2025-12-17T16:47:55,369912+00:00]
+[2] [00000] [~~  ] [reboot  ] [~           ] [5.4.17-2136.342.5.el8uek.x86_64] [0.0.0.0        ] [2025-12-18T08:02:34,886443+00:00]

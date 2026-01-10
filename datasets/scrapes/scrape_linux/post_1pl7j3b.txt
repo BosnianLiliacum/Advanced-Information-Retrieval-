@@ -1,0 +1,49 @@
+Post Title: The most powerful supercomputer ever built and operated by Microsoft runs on Ubuntu
+Author: Aschebescher
+Score: 801
+URL: https://top500.org/system/180236/
+Number of comments: 132
+Created UTC: 1765584974.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: HAL9000thebot
+Score: 397
+Created UTC: 1765585377.0
+Comment: i think all of them run on linux
+
+  
+edit:
+
+i remember correctly, accordingly to [wikipedia](https://en.wikipedia.org/wiki/TOP500) all 500 run on linux
+
+Comment 2:
+Author: BranchLatter4294
+Score: 86
+Created UTC: 1765586695.0
+Comment: Not very surprising. MS has been a big contributor to the Linux kernel and their cloud platform is highly dependent on a Linux based infrastructure.
+
+Comment 3:
+Author: john0201
+Score: 80
+Created UTC: 1765593696.0
+Comment: At last count I think 100% of the top500 list uses Linux.
+
+Ubuntu happens to be the most popular Linux distro, the other big one used in data centers is RHEL/Fedora, and SUSE is also popular especially in Europe.
+
+Comment 4:
+Author: BinkReddit
+Score: 41
+Created UTC: 1765585845.0
+Comment: That's awesome! Guess we should all run Ubuntu now? 😆
+
+Comment 5:
+Author: noiserr
+Score: 18
+Created UTC: 1765597577.0
+Comment: [El Capitan](https://www.top500.org/system/180307/) the fastest on the top500 list also runs Linux. Special version of RHEL (Red Hat) for HPC.

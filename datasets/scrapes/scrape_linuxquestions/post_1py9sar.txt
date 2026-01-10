@@ -1,0 +1,52 @@
+Post Title: Notepad++ equivalent on linux
+Author: Artistic-Age-Mark2
+Score: 209
+URL: https://www.reddit.com/r/linuxquestions/comments/1py9sar/notepad_equivalent_on_linux/
+Number of comments: 284
+Created UTC: 1766974638.0
+
+Post Content:
+What is the best alternative for notepad++ for linux machines? My favourite feature of notepad++ is its ability to autosave all tabs (even if some of them not saved to disk yet) and can automatically restore all of them after unexpected crash of some sort. Is there any text editors have this exact feature?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AvonMustang
+Score: 124
+Created UTC: 1766975756.0
+Comment: Notepad++ is the ***only*** application I really miss when I went from Windows to MacOS for my work laptop.  I landed on Sublime text editor.  It keeps your tabs *saved* when you close it just like Notepad++ even if the files haven't been saved.  I use it for my in-progress tasks - a tab for each one.  I changed over to it for my Linux as well just so I have one text editor everywhere.
+
+It does have what I call column select for text files and regex replace which honestly I don't know how people live without...
+
+NOTE: It is not free but has an unlimited trial.
+
+Comment 2:
+Author: augusto_peress
+Score: 122
+Created UTC: 1766974746.0
+Comment: I really like Kate; I find it very complete. I believe Gnome-Text-Editor (the replacement for gedit) does that too.
+
+Comment 3:
+Author: zovirax99
+Score: 58
+Created UTC: 1766975889.0
+Comment: Sublime Text - 
+Extremely fast, very resource-efficient, and session management is extremely stable.
+
+Comment 4:
+Author: robertcartman
+Score: 41
+Created UTC: 1766974987.0
+Comment: NotepadNext is what I've settled with. Almost the same, but needs some configuring. 
+
+[https://github.com/dail8859/NotepadNext](https://github.com/dail8859/NotepadNext)
+
+Comment 5:
+Author: cyb3rofficial
+Score: 34
+Created UTC: 1766975373.0
+Comment: https://github.com/dail8859/NotepadNext
+
+
+Can't get more equivalent than a reimplementation.

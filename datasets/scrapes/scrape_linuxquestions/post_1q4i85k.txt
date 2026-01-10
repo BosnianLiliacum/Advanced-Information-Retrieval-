@@ -1,0 +1,84 @@
+Post Title: Since gnu `finger` was decommissioned, how does one read the `chfn` information?
+Author: _offugo
+Score: 17
+URL: https://www.reddit.com/r/linuxquestions/comments/1q4i85k/since_gnu_finger_was_decommissioned_how_does_one/
+Number of comments: 8
+Created UTC: 1767608876.0
+
+Post Content:
+I don't know if I'm misisng something, but I was studying some basic system administration and realized that I can't read the information changed by the \`chfn\` commad using the \`finger\` substitute, \`pinky\`. I read the manuals to see If I was doing something wrong, but the long format opition only shows "login name", "home directory", "shell" and a empyt "in real life" section. The \`chfn\` command prompts for "Full Name", "Office", "Office Phone" and "Home Phone", but none of that is showed in the \`pinky\` invocation. Since \`finger\` was decommissioned, the only way of checking that is by reading directly in /etc/passwd? 
+
+
+Top 2 comments:
+
+Comment 1:
+Author: aioeu
+Score: 10
+Created UTC: 1767609293.0
+Comment: The use of separate sub-fields within GECOS is, arguably, an historical relic. Modern tools generally just treat it as a free-form string, without bestowing any structure or meaning to it.
+
+&gt; Since `finger` was decommissioned, the only way of checking that is by reading directly in /etc/passwd? 
+
+I don't know of any other tool that displays those four sub-fields individually.
+
+You can use:
+
+    userdbctl user $username
+
+to get some pretty-printed info about a user. The GECOS field is just shown as "Real Name" though.
+
+Another option is:
+
+    getent passwd $username |
+        column \
+            --separator=: \
+            --table \
+            --table-columns=NAME,PASSWORD,UID,GID,GECOS,HOME,SHELL \
+            --table-right=UID,GID
+
+Comment 2:
+Author: michaelpaoli
+Score: 3
+Created UTC: 1767629345.0
+Comment: Well, ye olde finger provided various bits of data, not limited to just the passwd(5) data ... which also isn't necessarily in nor limited to just the /etc/passwd file.  In any case, chfn is more limited, to only the GECOS field, and finger would further interpret/format that based upon contents within, notably using comma (,) as sub-field separator.
+
+So, getent(1) can get the passwd(1) data, regardless of how/where it's stored.  That uses colon  (:) for field separators, first field is login name, fifth field is GECOS.
+
+    $ id -nu
+    test
+    $ cd &amp;&amp; grep . .plan .project .pgpkey .forward
+    .plan:.plan
+    .project:.project
+    .pgpkey:.pgpkey
+    .forward:.forward
+    $ getent passwd | grep '^test:'
+    test:x:1009:1009:test account,2,3,4,5,6,7,8,9,10,11:/home/t/test:/usr/bin/bash
+    $ finger -l test
+    Login: test                             Name: test account
+    Directory: /home/t/test                 Shell: /usr/bin/bash
+    Office: 2, 3                            Home Phone: 4
+    Last login Wed Aug 13 06:08 (UTC) on tty6
+    Mail forwarded to .forward
+    No mail.
+    PGP key:
+    .pgpkey
+    Project:
+    .project
+    Plan:
+    .plan
+    $ pinky -l test
+    Login name: test                        In real life:  test account
+    Directory: /home/t/test                 Shell:  /usr/bin/bash
+    Project: .project
+    Plan:
+    .plan
+     
+    $ 
+
+And GECOS subfields per chfn:
+
+    # mkdir /CHROOT_DIR &amp;&amp; { mount -o bind / /CHROOT_DIR &amp;&amp; mount -o bind /usr /CHROOT_DIR/usr &amp;&amp; chfn --full-name FULL_NAME --home-phone HOME_PHONE --other OTHER --room ROOM_NUMBER --root /CHROOT_DIR --work-phone WORK_PHONE test &amp;&amp; getent passwd | grep '^test:'; umount /CHROOT_DIR/usr; umount /CHROOT_DIR; rmdir /CHROOT_DIR; }
+    test:x:1009:1009:FULL_NAME,ROOM_NUMBER,WORK_PHONE,HOME_PHONE,OTHER:/home/t/test:/usr/bin/bash
+    # 
+
+Additional GECOS subfields may be used for additional purposes, and may depend upon PAM and/or other configuration details, e.g. may specify chroot, priority/niceness, umask, and possibly other/additional settings.

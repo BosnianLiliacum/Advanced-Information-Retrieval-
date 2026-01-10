@@ -1,0 +1,54 @@
+Post Title: Pop!_OS 24.04 LTS with COSMIC Released: A Letter From Our Founder
+Author: NGRhodes
+Score: 400
+URL: https://blog.system76.com/post/pop-os-letter-from-our-founder
+Number of comments: 47
+Created UTC: 1765484465.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Historical-Bar-305
+Score: 109
+Created UTC: 1765484687.0
+Comment: I think cosmic is not ready as a "stable" , i know the reason why now it seems they want to prepare COSMIC to 26.04.
+
+Comment 2:
+Author: GloriousExtra
+Score: 32
+Created UTC: 1765486134.0
+Comment: Good for them! I tried out Pop OS Cosmic beta a few weeks ago and while I liked a lot of it, the UI still feels a bit undercooked. For example, at the time, there was no split view in the file manager. You had to open two windows if you wanted to see two folders open (for example if you were wanting to move files and monitor them or whatever reason you need).
+
+Cosmic doesn't have a lock screen background option, which is just a personal ask for me, one of the reasons I like KDE is you can change the lockscreen background (I'm a private person). With an extension you can do the same in Gnome, and you can also do it in MATE. It's not a heavily demanded feature, I don't think, but it's nice to have.
+
+Anyway, it is fast, and it's clearly a labor of love. I just think it needs a little more time.
+
+Comment 3:
+Author: driftwoodlk
+Score: 29
+Created UTC: 1765493690.0
+Comment: It's my daily driver. But there are definitely issues:
+
+- Screen capture sometimes crashes DE
+- Sometimes windows (Discord, Steam) "disassociate" from their icons on the dock, even while open and running 
+- Cosmic file manager doesn't allow shortcuts to be pinned
+- Synaptic, InSync, etc don't launch from their icons and have to be started via terminal
+- Mouse cursor is sometimes funky
+
+It feels like a late beta to me. I'm fine using it, but I'm hoping for some refinement. I'm expecting 26.04 to be the "real" launch.
+
+Comment 4:
+Author: icywind90
+Score: 25
+Created UTC: 1765485880.0
+Comment: Right in time for Ubuntu 26.04 release
+
+Comment 5:
+Author: Masterofunlocking1
+Score: 10
+Created UTC: 1765487289.0
+Comment: One big thing I’m noticing is the lack of night light. I’ll stay on Ubuntu 24.04 until this gets added. Other than this it looks great!

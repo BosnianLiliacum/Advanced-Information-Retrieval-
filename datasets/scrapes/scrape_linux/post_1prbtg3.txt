@@ -1,0 +1,54 @@
+Post Title: Debian adds LoongArch as officially supported architecture
+Author: cbmuser
+Score: 254
+URL: https://lists.debian.org/debian-devel-announce/2025/12/msg00004.html
+Number of comments: 43
+Created UTC: 1766228422.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mr_clauford
+Score: 110
+Created UTC: 1766230510.0
+Comment: Will they support ShoortArch though?
+
+Comment 2:
+Author: nekokattt
+Score: 48
+Created UTC: 1766228754.0
+Comment: so err what actually uses this, out of curiosity?
+
+A quick google just showed the debian page and a wikipedia article but it isn't clear what is currently using this in anger. Searching on the "shopping" tab just tries to send me to pages for Nintendo Switches (which I believe are arm64), and AMD Threadripper retailers.
+
+Is there a niche part of the market using this (like MIPS to an extent)?
+
+Comment 3:
+Author: rarsamx
+Score: 9
+Created UTC: 1766265528.0
+Comment: This is big news.
+
+For countries who no longer want to depend on the US given the current shanenigans this is huge.
+
+Cue the fearmongering of chinese backdoors and spyware. It may be something that state actors may need to worry about, but not the average joe.
+
+I'm looking forward to consumer level devices which will increase the competition in the microprocessor space, both for capabilities as well as price.
+
+Unfortunately, Some countries like Canada have blocked Chinese technology just to appease the US.
+
+Comment 4:
+Author: deja_geek
+Score: 8
+Created UTC: 1766248951.0
+Comment: From a purely academic side of things, LoongArch is an interesting ISA.  It's a fork of MIPS that has some RISC-V added in as well as custom instructions.
+
+Comment 5:
+Author: PuzzleheadedUnit1758
+Score: 2
+Created UTC: 1766234062.0
+Comment: What does this mean in practice? Anything user facing?

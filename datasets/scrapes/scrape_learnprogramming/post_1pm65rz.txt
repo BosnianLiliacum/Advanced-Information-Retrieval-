@@ -1,0 +1,69 @@
+Post Title: I Love Programming but Hate Learning from Tutorials and Guides.
+Author: Respect-Grouchy
+Score: 36
+URL: https://www.reddit.com/r/learnprogramming/comments/1pm65rz/i_love_programming_but_hate_learning_from/
+Number of comments: 32
+Created UTC: 1765689711.0
+
+Post Content:
+Hello everyone! To give some background, I am currently on a journey to learn embedded software engineering. I have taken a couple of courses on Udemy to get the basics of how the C language works and how to implement communication protocols. 
+
+However, I would love to extend this knowledge to C++ due to already having taken a class in the language, but I have discovered something about myself: I HATE LEARNING FROM TUTORIALS.
+
+Though it looked great to implement the concepts of these courses, slogging through these courses absolutely sapped my energy and killed a lot of my learning motivation. I have also had books recommended to me, but reading is honestly worse for me, as I seem to be one of the slowest readers on planet Earth.
+
+I would love to start building projects, but I am afraid that I will miss a lot of the nuances and "gotchas" of C++ that may come to bite me later in interviews or debugging for instance. I would love advice on next steps for my journey!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: vladadj
+Score: 36
+Created UTC: 1765694922.0
+Comment: I'm sorry I have to tell you this, but if reading a book is hard for you, you won't get very far. How are you gonna read documentation for project/library/framework, if you can't force yourself to study from a book?
+
+Plus, if you want to do embedded, you'll have to read A LOT of datasheets for components, protocols, standards etc. There's no way around this,
+
+So, my advice: force yourself to read. Books, documentation, written tutorials, anything that can help you. It will get easier the more you do it.
+
+Comment 2:
+Author: prcyy
+Score: 7
+Created UTC: 1765690016.0
+Comment: Just learn by compiling code and reading the errors. The tools we have today have quite verbose debugging as they have been developed over the years and time is forever until it isnt. Also user documentation is good 😊
+
+Comment 3:
+Author: mantenner
+Score: 5
+Created UTC: 1765690559.0
+Comment: Just make something.
+
+Comment 4:
+Author: dialsoapbox
+Score: 4
+Created UTC: 1765720235.0
+Comment: Books &gt; yt/paid stuff.
+
+Content creator's main goal is to get views/clicks. Sure if you learn something, that's great, but that's not their main goal.
+
+&gt; I would love to start building projects, but I am afraid that I will miss a lot of the nuances and "gotchas" of C++ that may come to bite me later in interviews or debugging for instance
+
+That's why it's good to build projects, you often come across problems. During interviews you can say you came across it when doing __.
+
+Comment 5:
+Author: adambahm
+Score: 4
+Created UTC: 1765727009.0
+Comment: Read programming books.
+
+When I started there was no stack overflow, no LLMs.  Tab complete was like learning to make fire.
+
+We literally had to read books about a language or technology in order to build things.
+
+I learn better this way, you might as well.
+
+EDIT:  
+I honestly didnt read all of your post because it sounded really whiny, but now that I have, maybe programming is not for you?
+
+You have to have the urge to push through challenges and it doesnt look like you have it.

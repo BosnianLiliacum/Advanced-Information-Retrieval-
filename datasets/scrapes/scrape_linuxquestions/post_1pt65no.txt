@@ -1,0 +1,38 @@
+Post Title: Skip sign in if phone is in range?
+Author: doomcomes
+Score: 11
+URL: https://www.reddit.com/r/linuxquestions/comments/1pt65no/skip_sign_in_if_phone_is_in_range/
+Number of comments: 13
+Created UTC: 1766426198.0
+
+Post Content:
+Basically, I'm wanting to set my desktop to skip the login page if it's bluetooth detects my phone. If I'm home I'd rather just have it start. An option to lock it when I leave isn't really needed because I'd shut it off if I was going to be gone for awhile and I have it set to lock if I'm not using it for a bit. Really, It's just that if I'm home I'd like to sign in easier or have it not prompt me when I get done cooking supper or talking to someone outside.
+
+Is there a clean solution for this?
+
+Could grab some device info if needed, but the system is DraugerOS 7.7 with KDE 5.115.0/Plasma 5.27.12
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Klosterbruder
+Score: 5
+Created UTC: 1766439986.0
+Comment: There is [BlueProximity](https://github.com/tiktaalik-dev/blueproximity), for locking/unlocking your PC after the initial login, when you move away/return to it. But that saw its last update 5 years ago, so it's questionable if it still works. And whether it can skip the initial login is also something that needs evaluation as it isn't described in the readme file.
+
+It might still be a starting point.
+
+Comment 2:
+Author: Akin_yun
+Score: 3
+Created UTC: 1766435375.0
+Comment: If you able to query connectivity of your phone via the terminal (probably possible) and change the lockscreen via terminal (not sure if possible), it would be possible to write a simple shell script (just one if statement) that does check connectivity and changes the lockscreen per if you are or not connected.  
+  
+Once you got that shell script working, you add to computer job scheduler (i.e. cron or systemd timer) to run it like every minute.
+
+Comment 3:
+Author: [deleted]
+Score: 1
+Created UTC: 1766441310.0
+Comment: it might make sense to use your phone to lock/unlock your screen, but doesn't make much sense to be able to login with that. I mean "your computer should be able to identify and track your mobile even when you aren't logged in", and that sounds like a security issue, given the fact that linux is a multiuser system by design.

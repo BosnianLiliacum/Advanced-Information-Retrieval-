@@ -1,0 +1,36 @@
+Post Title: Made a minimalistic GTK4 frontend for Hamachi
+Author: Thick_You9399
+Score: 8
+URL: https://www.reddit.com/r/archlinux/comments/1q3z0rx/made_a_minimalistic_gtk4_frontend_for_hamachi/
+Number of comments: 3
+Created UTC: 1767554831.0
+
+Post Content:
+My friends use Hamachi for gaming, but the existing GUIs seem a bit cluttered or outdated to me.
+So I made my own using GTK4 and Libadwaita.
+
+If you find this useful, the program is already on aur:
+yay -S hanuchi
+
+Repository on GitHub: https://github.com/Advnirr/hanuchi 
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Toorero6
+Score: 2
+Created UTC: 1767564172.0
+Comment: I didn't even know this is still a thing. I'm just using Wireguard or other VPN services now. Cool work though.
+
+Comment 2:
+Author: plasticbomb1986
+Score: 1
+Created UTC: 1767562706.0
+Comment: Cool! Used it a less then a week ago (new years eve), when playing with my brother! Sadly doesn't help if hamachi itself just crash every 10-30 minutes.
+
+Comment 3:
+Author: rangelovd
+Score: 1
+Created UTC: 1767784857.0
+Comment: How is it different from Haguichi?

@@ -1,0 +1,65 @@
+Post Title: How do you stop the urge to _completely_ understand things?
+Author: Andrew_7032
+Score: 190
+URL: https://www.reddit.com/r/learnprogramming/comments/1q1d18k/how_do_you_stop_the_urge_to_completely_understand/
+Number of comments: 38
+Created UTC: 1767296574.0
+
+Post Content:
+Most of us growing up in school have learned everything in a sequence. Heck, even everything in life almost follows a sequence. A year starts with day 1 until it hits day 365; a book starts with chapter 1 until it reaches the ending chapter. Almost everything has a sequence. Programming does not have that; you have to have the ability to learn things out of sequence. You can't wait until you have the entirety of JS learned before you move on to something like React. Heck, you will probably never get there in a lifetime, as there will be new additions to the language and deprecations. I have a degree, I have been self-studying, and I am still unemployed. When I start learning a library, it is hard to sort of know what to pick up and then move on and hit the library only when you need it again.
+
+This is a barrier, or at least one of the barriers that makes programming a high-paying job. We need to have a different kind of approach to learning to code. I have been trying to adapt my brain's wiring so that I only learn what is important and move on. But from my question to senior programmers here, how do I overcome this? I am 29 years old; for reference, I have never been employed.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DoomGoober
+Score: 117
+Created UTC: 1767297090.0
+Comment: Program projects and impose a deadline.
+
+When your goal is to complete something rather than learn you will tend to learn the least amount necessary to complete the thing. Or at least you should after you miss deadline after deadline learning too much.
+
+An alternative way of thinking about this that almost all modern technology is a black box. You dont learn how your car's computer works before you drive to work do you? So, why would you learn the depths of some random library you are using before using it? It just doesn't make sense.
+
+Embrace the black box and just use it. Don't look inside unless you have to.
+
+Comment 2:
+Author: corporaterebel
+Score: 28
+Created UTC: 1767297021.0
+Comment: You don't. 
+
+
+Try to have defined  projects to get done.
+
+Comment 3:
+Author: Eweer
+Score: 16
+Created UTC: 1767298362.0
+Comment: &gt;When I start learning a library, it is hard to sort of know what to pick up and then move on and hit the library only when you need it again.
+
+This is your issue: You are learning a library for the sake of learning a library, you do not have any specific purpose other than acquiring knowledge *(which is not specific at all)*, so you end up overwhelmed by the vastness of the rabbit hole you just jumped for.
+
+Recently I learnt how to use OpenCV. Did I study the *library*? Nope. For one project I had I needed to do image manipulation *(straighten/skew an ID card)*, so I learnt how to do just that. Nothing else; anything that I try to memorize will end up being forgotten after a few days in a different library.
+
+My recommendation: Learn just enough for doing the task you have at hand. Once you feel satisfied with the current project *(or abandon it like 95% of projects that are started, because finishing one is extremely hard)*, move to a different project that requires you to use a different part of the libraries you are interested in. Do not take it all at the same time, just bit by bit and motivate yourself with the project.
+
+Comment 4:
+Author: Sierra24
+Score: 13
+Created UTC: 1767298795.0
+Comment: You have never completely studied anything, what you have done is that you have _completely_ studied what another entity (person, government, school, etc.) defined as the course. But they themselves had to choose what to include and exclude. 
+
+The key here is to first define what you want to accomplish with your studies, then, you study what you need to accomplish such goals.
+
+Comment 5:
+Author: destined_to_dad
+Score: 13
+Created UTC: 1767330190.0
+Comment: Most people responding in this thread are wrong. They’re coming from only their own personal experience and they don’t realize how much variation there actually is between people. I’ve taught software engineering to a couple hundred people. There is a spectrum for what you’re describing. I used to call it rabbit hole vs. fuzziness. Some people are comfortable moving on with just a vague understanding of a topic (these people are “fuzzy” on the details). Others can’t move on until they’ve understood every last piece (they get lost down the rabbit hole). Go too far on the spectrum in either direction and you have problems. In my experience with people learning programming, you run into way more people having problems because they’re too “fuzzy.” But you DO get some people who struggle because they consistently go too far down the rabbit hole — even when working on a specific project, even with a tight deadline. You should 100% address this. I have two tips:
+
+First, keep a very dynamic, organized todo list. What I mean is, before you start working on pretty much anything, you should explicitly write out high-level goals and todo items. Generally, what do you aim to accomplish? And what do you think the high-level steps are that you need to take to get there? Then as you work (and get a better sense of what needs to be done on a granular level), start to populate more specific sub todos (nested/indented below the correct parent todo). Cross todo items off as you complete them — and add more as you realize you’re missing them. You should be switching back and forth between doing the work and managing the todo list. Keep the todo list correctly organized in a hierarchy (sub todos indented below the correct parent). This process is helpful for a number of reasons, but in your case the biggest one is it helps keep you focused on the bigger picture. You’re constantly reminded how what you’re doing fits in to getting you to your initially stated goal. That way you’re working toward the goal rather than being distracted by every single thing you don’t totally understand.
+
+Keep a separate list of open questions. Writing them down can help you resist the urge to chase down all the answers right away. You can always come back to the list and answer the questions later if time permits.

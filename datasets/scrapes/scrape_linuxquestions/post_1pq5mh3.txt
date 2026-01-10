@@ -1,0 +1,56 @@
+Post Title: I want my 7-year-old to learn programming on an old laptop I have lying around. What should I install on it?
+Author: dieyoubastards
+Score: 19
+URL: https://www.reddit.com/r/linuxquestions/comments/1pq5mh3/i_want_my_7yearold_to_learn_programming_on_an_old/
+Number of comments: 64
+Created UTC: 1766100390.0
+
+Post Content:
+He's bright and has expressed interest in making games, and I have this old laptop lying around. I'd love it if I just gave him this thing and let him go free hacking it around and learning computer skills by breaking and fixing things like a lot of us did.
+
+One aspect of this is that it will NOT have internet access for obvious reasons. So no online tools such as code academy.
+
+Is there any software specifically for this purpose on Linux? From a quick Google I see Scratch and Greenfoot, and I'll put those on if they work, but really I would prefer actual code.
+
+Or perhaps a regular minimal IDE, but with a list of coding tutorials and an easy way to see the results?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: kibibot
+Score: 21
+Created UTC: 1766106115.0
+Comment: Whatever you are familiar with. Parent guidance and parent kid interaction are more important
+
+Comment 2:
+Author: free_help
+Score: 17
+Created UTC: 1766101972.0
+Comment: Raspberry Pi OS. It has an application that downloads the foundation's magazines and books, which teach programming in very fun ways
+
+Comment 3:
+Author: Sure-Passion2224
+Score: 8
+Created UTC: 1766102208.0
+Comment: Raspberrypi.org has a very good education program. I believe it introduces them to Python which happens to be the top language on the latest IEEE survey of actively used languages.
+
+Comment 4:
+Author: 9NEPxHbG
+Score: 7
+Created UTC: 1766100661.0
+Comment: [Debian Edu](https://wiki.debian.org/DebianEdu)?
+
+Comment 5:
+Author: move_machine
+Score: 6
+Created UTC: 1766125399.0
+Comment: Does he want to "make games" or learn programming to make games?
+
+Sometimes kids and laymen don't realize that the latter is required for the former, and learning to sort a list or whatever will be something that disinterests them.
+
+I think starting out with programming initially is a bad idea. See how far he can get with GameMaker or whatever the modern equivalent is. Eventually you'll get to the point where some programming is needed, and that could spark an innate desire to learn how to do it.
+
+I haven't used it, but Unreal or Unity have a blueprints system that's kind of a visual programming language a la Scratch. It's probably too complicated, though.
+
+Regarding no internet, consider running a local LLM to allow him to ask it questions. They're pretty good for programming.

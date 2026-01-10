@@ -1,0 +1,58 @@
+Post Title: I am actually loving java
+Author: Easy-Yoghurt-4973
+Score: 50
+URL: https://www.reddit.com/r/learnprogramming/comments/1px3vq6/i_am_actually_loving_java/
+Number of comments: 40
+Created UTC: 1766857811.0
+
+Post Content:
+Hey everyone, im a cs student and currently exploring things. As a beginner what you tend to do is exactly what i have been doing. I learnt (just explored, not completely) python c cpp and just recently java. I really liked java out of these. C cpp feels very strict language  and python felt like it was very lazy, unserious, and very indisciplined language. 
+
+ 
+
+I felt java somewhere in the middle of this. I dont know whether my views of these languages are actually true or not, but id like to hear from you whats your opinion. 
+
+Also should i continue with java and dig deeper, and explore more? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: POGtastic
+Score: 26
+Created UTC: 1766861057.0
+Comment: Java as a language, especially recent Java, is totally fine. It's a totally fine teaching language.
+
+Java *in the workplace* is miserable because Spring is a monstrosity of complexity and is basically its own language.
+
+Comment 2:
+Author: GeneticsGuy
+Score: 23
+Created UTC: 1766858732.0
+Comment: I also enjoy Java... then I learned C#, which is basically a more modern, better Java, and my eyes were opened to how much better life was as a C# dev.
+
+Comment 3:
+Author: Peanutbutter_Warrior
+Score: 23
+Created UTC: 1766858135.0
+Comment: If you like java then stick with it. Especially as a beginner it's much more important to learn computational thinking than a specific language
+
+Comment 4:
+Author: _Decimation
+Score: 15
+Created UTC: 1766866005.0
+Comment: Wait until you try C#. I never turned back since.
+
+Comment 5:
+Author: VibrantGypsyDildo
+Score: 6
+Created UTC: 1766858619.0
+Comment: You can build a whole career in Java.
+
+I built it in C/C++.
+
+Many people disagree with me, but I consider Python just a helper language.
+
+\-----
+
+In your case you are fine. You found a language you like. And the market likes it as well.

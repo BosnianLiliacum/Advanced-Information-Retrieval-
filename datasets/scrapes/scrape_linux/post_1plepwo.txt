@@ -1,0 +1,48 @@
+Post Title: New Linux patch confirms: Rust experiment is done, Rust is here to stay
+Author: Fcking_Chuck
+Score: 1107
+URL: https://www.phoronix.com/news/Rust-To-Stay-Linux-Kernel
+Number of comments: 160
+Created UTC: 1765607451.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: 28874559260134F
+Score: 443
+Created UTC: 1765609304.0
+Comment: They've really listed all the hurdles, the largest one being mentioned last: :-)
+
+&gt;"The Rust support was merged in v6.1 into mainline in order to help determine whether Rust as a language was suitable for the kernel, i.e. worth the tradeoffs, technically, procedurally and **socially**.
+
+Comment 2:
+Author: returnofblank
+Score: 170
+Created UTC: 1765610711.0
+Comment: Very awesome but why did they choose that picture in the article? It looks nothing like rust, and more like Tux got shitted on.
+
+Comment 3:
+Author: syklemil
+Score: 95
+Created UTC: 1765634107.0
+Comment: It's nice that it's going so well, but also perhaps not all that surprising. Something more curious was shared [on a subscriber LWN post shared with /r/rust](/r/rust/comments/1plfeud/the_state_of_the_kernel_rust_experiment/):
+
+&gt; The DRM (graphics) subsystem has been an early adopter of the Rust language. It was still perhaps surprising, though, when Airlie (the DRM maintainer) said that the subsystem is only "about a year away" from disallowing new drivers written in C and requiring the use of Rust.
+
+Anyone worried about systems not supported by LLVM / EOL architectures etc: Please keep in mind that the quote is about _new graphics drivers_, which are … not something legacy systems need worry about.
+
+Comment 4:
+Author: Squalphin
+Score: 66
+Created UTC: 1765615265.0
+Comment: It‘s nice to see Rust getting traction. Love that language. Was on an Embedded convention lately and they are also trying to adapt Rust where it makes sense.
+
+Comment 5:
+Author: Dependent-Entrance10
+Score: 49
+Created UTC: 1765618900.0
+Comment: New linux user here: What's rust and what does it do?

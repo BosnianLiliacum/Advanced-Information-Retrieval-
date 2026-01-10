@@ -1,0 +1,85 @@
+Post Title: Why systemd is so hated?
+Author: [deleted]
+Score: 214
+URL: https://www.reddit.com/r/linuxquestions/comments/1psmdnd/why_systemd_is_so_hated/
+Number of comments: 333
+Created UTC: 1766365612.0
+
+Post Content:
+So, I'm on Linux about a year an a half, and I heard many times that systemd is trash and we should avoid Linux distros with systems, why? Is not like is proprietary software, right?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ParallelProcrastinat
+Score: 176
+Created UTC: 1766366245.0
+Comment: Most of the criticism is that the systemd project keeps "absorbing" other projects and integrating their functionality. There are two versions of this critique:  
+1. The misinformed version that things that systemd is some kind of monolithic "do-everything" tool that violates the Unix philosophy -- it's actually a bunch of separate binaries that serve specific purposes, just like in classic Unix.  
+2. The critique that organizationally it's concentrating decision making about how Linux works to a few leaders of a single project, especially by people not happy with systemd project leadership.
+
+The reality is that systemd is absorbing a bunch of tools that no one had much interest in maintaining, which is the only real way to continue improving them. It's a sign that the Linux community is perhaps less healthy than it once was, but it's not the cause of that issue.
+
+Comment 2:
+Author: ipsirc
+Score: 47
+Created UTC: 1766365646.0
+Comment: [https://devopsreactions.tumblr.com/post/112502661235/watching-systemd-evolve](https://devopsreactions.tumblr.com/post/112502661235/watching-systemd-evolve)
+
+[https://www.agwa.name/blog/post/how\_to\_crash\_systemd\_in\_one\_tweet](https://www.agwa.name/blog/post/how_to_crash_systemd_in_one_tweet)
+
+[https://www.phoronix.com/news/systemd-tmpfiles-purge-drama](https://www.phoronix.com/news/systemd-tmpfiles-purge-drama)
+
+[https://without-systemd.org/wiki/index\_php/Arguments\_against\_systemd/](https://without-systemd.org/wiki/index_php/Arguments_against_systemd/)
+
+Comment 3:
+Author: AcceptableHamster149
+Score: 20
+Created UTC: 1766365897.0
+Comment: I think the vast majority of Linux users don't care. And also that a whole lot of us are using at least part of it, even the ones who do complain.
+
+It had some growing pains at first, like any system. And while some of the complaints people make are valid and some of the efforts to improve it are worth watching, a whole lot of the most persistent complaints are coming from a tiny minority of users and don't reflect the opinions of the rest of us.
+
+Comment 4:
+Author: kombiwombi
+Score: 18
+Created UTC: 1766367822.0
+Comment: Systemd is three things. Software, a project, a brand.
+
+
+The software is good. It's basically a updated Solaris SMF. It was long needed, for exactly the reasons SMF was needed. The documentation and design documentation is good.
+
+
+The project was poorly run in some other ways, with a 'masters of the universe' attitude to helpful criticism and to bug reports. The low point being Fedora not booting at all, twice, and bug reports for that being closed as not-a-bug until there was just too much proof otherwise. And telling the kernel community that this behaviour was their fault, despite no change having been made.
+
+
+The brand was used to ship some dodgy software. Timesycd is a worse NTP client than chrony (in particular as a SNTP server it should only be used for containers). Networkd is a worse interface manager than Network Manager (Networkd only looks better because it does less, again, enough to get a container up).
+
+
+In contrast Logind was a long-needed change, and well done.
+
+
+So whilst I have no issues using Systemd, and occassionally contribute, it's also get a bunch of lessons on how to run a project.
+
+
+Finally, I like to say that not all of this is Systemd's problem. A lot of the community response would have happened whatever system replaced Sysv. Linux's audience got stuck in their ways, resistant to change, even when desperately needed as with Sysv (proven by the huge number of system initialisation projects). Just imagine replacing A.out with Elf in the current era.
+
+
+
+Linux reportage and users need to have a hard look at themselves. The system dynamic linker is no longer fit for purpose, and we need to enhance the concept of linkage to allow languages like Rust and C++ to be able to have dynamic linkage whilst meeting the needs of those languages. That's never going to happen if Linux is ossified by reportage in the trade press seeking outrage engagement and mob behaviour in social media.
+
+
+The Debian resolution on Systemd got it right. The winning resolution didn't make a technical decision at all. It asked for everyone to be better people.
+
+Comment 5:
+Author: dkopgerpgdolfg
+Score: 11
+Created UTC: 1766366644.0
+Comment: For very many popular software projects, you'll find a small but loud group that hates it for no logical reason. Often they have no idea about the topic, and/or intentionally spread lies. =&gt; Think critically and form your own opinion.
+
+You'll find that for systemd, for zfs, btrfs, grub, rust, go, php, c, c++, gnome, kde, xfce, the concept of config files, etc.etc.
+
+For systemd the most commonly stated reason is "it is more than a init system" ... while ignoring that it's a group of programs with different purposes, one of them being an init system only. Others have other purposes, and if someone doesn't like them they don't have to use these.
+
+While nothing on the world is perfect, for tha vast majority of people systemd (init) is better than the alternatives that existed before it, and most distributions started shipping it by default.

@@ -1,0 +1,42 @@
+Post Title: New Linux Patches Allow More Easily Changing The Tux Kernel Boot Logo
+Author: anh0516
+Score: 248
+URL: https://www.phoronix.com/news/LInux-Kconfig-Tux-Boot-Logo
+Number of comments: 17
+Created UTC: 1767382242.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: anh0516
+Score: 98
+Created UTC: 1767382337.0
+Comment: It's not really that useful because pretty much everything that needs to display a logo uses a userspace boot splash implementation (usually Plymouth on Linux desktops) anyways, but the code cleanups that came along with it are welcome to see.
+
+Comment 2:
+Author: rhoki-bg
+Score: 43
+Created UTC: 1767390425.0
+Comment: Kernel boot logo? I don't remember seeing it once. Do you need to add some flag in grub to make it appear?
+
+Comment 3:
+Author: xINFLAMES325x
+Score: 21
+Created UTC: 1767397838.0
+Comment: There are like 7 penguins that go across elilo when Slackware is booting. Never saw something like that before.
+
+Comment 4:
+Author: RoomyRoots
+Score: 8
+Created UTC: 1767404988.0
+Comment: God I havent seen Tux in my boots in decades. Now with 16c it would be hilarious.
+
+Comment 5:
+Author: pppjurac
+Score: 2
+Created UTC: 1767435582.0
+Comment: So you say I can now easily change to Klingon Empire logo ?
