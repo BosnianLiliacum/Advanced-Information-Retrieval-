@@ -1,0 +1,56 @@
+Post Title: [D] NLP vs. Computer Vision: Career Transition Thoughts
+Author: ImportantSeesaw5270
+Score: 63
+URL: https://www.reddit.com/r/MachineLearning/comments/1q5lfun/d_nlp_vs_computer_vision_career_transition/
+Number of comments: 17
+Created UTC: 1767712899.0
+
+Post Content:
+Hi everyone,  
+I’ve been working in NLP for several years, and my role has gradually shifted from training models to mainly using LLM wrappers. I’m concerned that this kind of work may become less in demand in the coming years.
+
+I now have an opportunity to transition into Computer Vision. After about two months of self-study and research, I feel that the gap between academic research and real-world applications in CV is relatively large, and that the field may offer more specialized niches in the future compared to NLP.
+
+I’d really appreciate hearing your thoughts or advice on this potential transition. Thanks in advance.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: currentscurrents
+Score: 35
+Created UTC: 1767722805.0
+Comment: I would not expect CV to be immune to the trend towards foundation models. 
+
+The day will probably come when you can do many CV tasks by prompting a vision model, much like how you can do many NLP tasks by prompting a language model today.
+
+Comment 2:
+Author: Tiger00012
+Score: 25
+Created UTC: 1767721194.0
+Comment: I’ve also burned out from using llm frameworks rather than doing actual science. I’ve been doing it for the past 2 years and I feel like a glorified prompt engineer. Since training LLMs is prohibitively expensive for a small team, I wonder if there’s something else we could do with them that would generate s quick ROI and spark my interest
+
+Comment 3:
+Author: mocny-chlapik
+Score: 11
+Created UTC: 1767725857.0
+Comment: Career wise, NLP is currently the bigger field. More opportunities, more money. There is a lot to do there that is not directly related to model training. Also consider that CV jobs are not super creative either, and a lot of them are mostly about data pipelines and using a few standard models all over again.
+
+
+I feel like you don't struggle with the field, but perhaps with your position.
+
+Comment 4:
+Author: Itchy-Trash-2141
+Score: 7
+Created UTC: 1767741303.0
+Comment: All I can say is I just accepted an offer to work on autonomous vehicles. I come from a pure NLP background and was kind of getting tired of it. I'll know in a couple months how it goes...
+
+Comment 5:
+Author: Tall_Interaction7358
+Score: 4
+Created UTC: 1767764925.0
+Comment: I’ve seen a similar shift, and your concern is reasonable. NLP work that relies mostly on orchestration can plateau, while CV still rewards deep domain knowledge in areas such as data curation, deployment constraints, and edge cases. 
+
+That said, CV isn’t immune to abstraction either, so the safest move is building strong fundamentals plus real production exposure, not just switching fields. 
+
+If the CV role lets you work close to data, models, and real-world failures, it can be a solid long-term bet.

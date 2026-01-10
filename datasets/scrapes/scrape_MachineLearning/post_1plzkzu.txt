@@ -1,0 +1,75 @@
+Post Title: [R] Efficient Virtuoso: A Latent Diffusion Transformer for Trajectory Planning (Strong results on Waymo Motion, trained on single RTX 3090)
+Author: Pale_Location_373
+Score: 43
+URL: https://www.reddit.com/r/MachineLearning/comments/1plzkzu/r_efficient_virtuoso_a_latent_diffusion/
+Number of comments: 14
+Created UTC: 1765669595.0
+
+Post Content:
+Hi r/MachineLearning comunity,
+
+I am an independent researcher focused on Autonomous Vehicle (AV) planning. I am releasing the paper, code, and weights for a project called **Efficient Virtuoso**. It is a conditional latent diffusion model (LDM) for generating multi-modal, long-horizon driving trajectories. 
+
+The main goal was to see how much performance could be extracted from a generative model using a single consumer GPU (RTX 3090), rather than relying on massive compute clusters.
+
+**Paper (arXiv):** https://arxiv.org/abs/2509.03658
+**Code (GitHub):** https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner
+
+### The Core Problem
+Most standard motion planners use deterministic regression (Behavioral Cloning) to predict a single path. In urban environments, like unprotected left turns, there is rarely one "correct" path. This often leads to "mode averaging" where the model produces an unsafe path in the middle of two valid maneuvers. Generative models like diffusion handle this multimodality well but are usually too slow for real-time robotics.
+
+### Technical Approach
+To keep the model efficient while maintaining high accuracy, I implemented the following:
+
+1. **PCA Latent Space:** Instead of running the diffusion process on the raw waypoints (160 dimensions for 8 seconds), the trajectories are projected into a 16-dimensional latent space via PCA. This captures over 99.9 percent of the variance and makes the denoising task much easier.
+2. **Transformer-based StateEncoder:** A Transformer architecture fuses history, surrounding agent states, and map polylines into a scene embedding. This embedding conditions a lightweight MLP denoiser.
+3. **Conditioning Insight:** I compared endpoint-only conditioning against a "Sparse Route" (a few breadcrumb waypoints). The results show that a sparse route is necessary to achieve tactical precision in complex turns.
+
+### Results
+The model was tested on the Waymo Open Motion Dataset (WOMD) validation split.
+
+* **minADE:** 0.2541 meters
+* **minFDE:** 0.5768 meters
+* **Miss Rate (@2m):** 0.03
+
+For comparison, a standard Behavioral Cloning MLP baseline typically reaches a minADE of around 0.81 on the same task. The latent diffusion approach achieves significantly better alignment with expert driving behavior.
+
+### Hardware and Reproducibility
+The entire pipeline (data parsing, PCA computation, and training) runs on a single **NVIDIA RTX 3090 (24GB VRAM)**. The code is structured to be used by other independent researchers who want to experiment with generative trajectory planning without industrial-scale hardware.
+
+I would appreciate any feedback on the latent space representation or the conditioning strategy. I am also interested in discussing how to integrate safety constraints directly into the denoising steps.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: karake
+Score: 10
+Created UTC: 1765709386.0
+Comment: To me it looks like your paper is basically MotionDiffuser with some more experiments and a new normalization layer. Still, always nice to have results reproduced.
+
+Comment 2:
+Author: decawrite
+Score: 5
+Created UTC: 1765680207.0
+Comment: I'm not familiar enough with the area to comment, but I applaud your effort to see how far smaller players can get, rather than leaning into the moar data moar compute thing.
+
+Comment 3:
+Author: BossOfTheGame
+Score: 3
+Created UTC: 1765748285.0
+Comment: Big fan of restricting training to a single GPU. We need more people researching how to do more with less. I also enjoy seeing single author papers; I'm very interesting in seeing what individuals can do on their own. 
+
+Table 3 looks like the main results, but I'm not familiar with the problem domain, are the MotionDiffuser and Wayformer alternatives using more training compute? I was expecting to see a result that was less good than SoTA because I assume SoTA would use more data and more compute, or is the fact that this is trained on a single 3090 a detail and not a major focus here?
+
+Comment 4:
+Author: LiquidDinosaurs69
+Score: 3
+Created UTC: 1765746548.0
+Comment: Why did you choose to use PCA instead of using an encoder-decoder to learn a compressed latent space? Looks like MotionDiffuser also used PCA. Stable diffusion 3 uses an encoder decoder architecture though.
+
+Comment 5:
+Author: Erika_bomber
+Score: 2
+Created UTC: 1765690601.0
+Comment: As someone who's working on the same field, interesting that you could fit all of that into a RTX 3090 24GB.

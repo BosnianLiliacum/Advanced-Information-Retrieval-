@@ -1,0 +1,105 @@
+Post Title: You can't improve what you can't measure: How to fix AI Agents at the component level
+Author: UBIAI
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1pk5ll9/you_cant_improve_what_you_cant_measure_how_to_fix/
+Number of comments: 6
+Created UTC: 1765479140.0
+
+Post Content:
+I wanted to share some hard-learned lessons about deploying multi-component AI agents to production. If you've ever had an agent fail mysteriously in production while working perfectly in dev, this might help.
+
+The Core Problem
+
+Most agent failures are silent. Most failures occur in components that showed zero issues during testing. Why? Because we treat agents as black boxes - query goes in, response comes out, and we have no idea what happened in between.
+
+The Solution: Component-Level Instrumentation
+
+I built a fully observable agent using **LangGraph + LangSmith** that tracks:
+
+* **Component execution flow** (router → retriever → reasoner → generator)
+* **Component-specific latency** (which component is the bottleneck?)
+* **Intermediate states** (what was retrieved, what reasoning strategy was chosen)
+* **Failure attribution** (which specific component caused the bad output?)
+
+Key Architecture Insights
+
+The agent has 4 specialized components:
+
+1. **Router**: Classifies intent and determines workflow
+2. **Retriever**: Fetches relevant context from knowledge base
+3. **Reasoner**: Plans response strategy
+4. **Generator**: Produces final output
+
+Each component can fail independently, and each requires different fixes. A wrong answer could be routing errors, retrieval failures, or generation hallucinations - aggregate metrics won't tell you which.
+
+To fix this, I implemented automated failure classification into 6 primary categories:
+
+* Routing failures (wrong workflow)
+* Retrieval failures (missed relevant docs)
+* Reasoning failures (wrong strategy)
+* Generation failures (poor output despite good inputs)
+* Latency failures (exceeds SLA)
+* Degradation failures (quality decreases over time)
+
+The system automatically attributes failures to specific components based on observability data.
+
+Component Fine-tuning Matters
+
+Here's what made a difference: **fine-tune individual components, not the whole system**.
+
+When my baseline showed the generator had a 40% failure rate, I:
+
+1. Collected examples where it failed
+2. Created training data showing correct outputs
+3. Fine-tuned ONLY the generator
+4. Swapped it into the agent graph
+
+**Results**: Faster iteration (minutes vs hours), better debuggability (know exactly what changed), more maintainable (evolve components independently).
+
+For anyone interested in the tech stack, here is some info:
+
+* **LangGraph**: Agent orchestration with explicit state transitions
+* **LangSmith**: Distributed tracing and observability
+* **UBIAI**: Component-level fine-tuning (prompt optimization → weight training)
+* **ChromaDB**: Vector store for retrieval
+
+
+
+**Key Takeaway**
+
+**You can't improve what you can't measure, and you can't measure what you don't instrument.**
+
+The full implementation shows how to build this for customer support agents, but the principles apply to any multi-component architecture.
+
+Happy to answer questions about the implementation. The blog with code is in the comment.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: UBIAI
+Score: 1
+Created UTC: 1765479274.0
+Comment: Link to the blog: post: [https://ubiai.tools/building-observable-and-reliable-ai-agents-using-langgraph-langsmith-and-ubiai](https://ubiai.tools/building-observable-and-reliable-ai-agents-using-langgraph-langsmith-and-ubiai)
+
+Comment 2:
+Author: Trick-Rush6771
+Score: 1
+Created UTC: 1765490847.0
+Comment: This is the right mindset, most production surprises come from treating agents like black boxes rather than instrumented pipelines, and tracking component execution flow, intermediate states, and latency is exactly how you make silent failures visible. You might want to extend what you already have with token level accounting and prompt path tracing so you can answer not just which component slowed down but which exact prompt variant caused a regression, and teams often balance LangGraph and LangSmith for telemetry with visual flow tools like LlmFlowDesigner or custom dashboards so product and engineering can both explore execution traces without digging through logs.
+
+Comment 3:
+Author: AdVivid5763
+Score: 1
+Created UTC: 1765496099.0
+Comment: Love this breakdown, especially the 6 failure categories.
+
+I’ve been playing with a small tool that turns LangGraph/LangSmith traces into an interactive graph so you can visually step through router → retriever → reasoner → generator and see timings per step.
+
+Curious: how are you visualising your component execution flow today, custom dashboards, or just LangSmith UI?
+
+Comment 4:
+Author: blackbayjonesy
+Score: 1
+Created UTC: 1765651596.0
+Comment: You guys have heard of OpenLLMetry right?  You are headed down the right path, but you may want to think about observability interoperability

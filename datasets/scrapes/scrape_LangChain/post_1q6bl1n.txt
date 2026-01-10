@@ -1,0 +1,48 @@
+Post Title: LangChain or LangGraph? for building multi agent system
+Author: Major_Ad7865
+Score: 13
+URL: https://www.reddit.com/r/LangChain/comments/1q6bl1n/langchain_or_langgraph_for_building_multi_agent/
+Number of comments: 15
+Created UTC: 1767780518.0
+
+Post Content:
+I’ve just started learning LangChain and LangGraph, and I want to build a multi-agent application. I’m a bit confused about which one I should use. Should I go with LangChain or LangGraph? Also, is LangChain built on top of LangGraph, or are they separate? which one to learn first?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: honorable_uncle
+Score: 7
+Created UTC: 1767784060.0
+Comment: Skip langchain and go with langgraph
+
+Comment 2:
+Author: Khade_G
+Score: 3
+Created UTC: 1767839154.0
+Comment: They’re related, but they solve different problems. LangChain is the easier starting point… it’s a toolbox for prompts, tools, retrievers, and simple agents. Great for getting something working quickly.
+
+LangGraph is for when things get more complex: multiple steps, multiple agents, branching logic, retries, and state. It gives you more control over how an agent actually moves through a process.
+
+They’re not built on top of each other, but they work well together. A good path is to learn LangChain basics first, then move to LangGraph once you start thinking in workflows instead of single chats.
+
+Comment 3:
+Author: Hot_Substance_9432
+Score: 2
+Created UTC: 1767781050.0
+Comment: LangGraph is built on LangChain and uses several of its core models, you can build MAS using langGraph for sure here is some guidance
+
+[https://medium.com/@sushmita2310/building-multi-agent-systems-with-langgraph-a-step-by-step-guide-d14088e90f72](https://medium.com/@sushmita2310/building-multi-agent-systems-with-langgraph-a-step-by-step-guide-d14088e90f72)
+
+Comment 4:
+Author: ScaleBrave6626
+Score: 2
+Created UTC: 1767795811.0
+Comment: Langchain is just for the core components and wrappers. It’s useful for apis, vector stores and utilities in general. For building agentic applications go for langgraph that’conceived for this purpose. They provide built in function for building off the shelves react agent but also the logic to customize your agent
+
+Comment 5:
+Author: USToffee
+Score: 2
+Created UTC: 1767810345.0
+Comment: Check out Langgraph Deep Agents

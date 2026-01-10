@@ -1,0 +1,32 @@
+Post Title: [R] Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space
+Author: RobbinDeBank
+Score: 49
+URL: https://i.redd.it/2lbq6cmsz2bg1.jpeg
+Number of comments: 6
+Created UTC: 1767422931.0
+
+Post Content:
+https://arxiv.org/pdf/2512.24617
+
+New paper from ByteDance Seed team exploring latent generative modeling for text. Latent generative models are very popular for video and image diffusion models, but they haven’t been used for text a lot. Do you think this direction is promising?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Chinese_Zahariel
+Score: 8
+Created UTC: 1767428726.0
+Comment: Latent space learning is a promising direction but I'm not sure whether LLM still is nowadays
+
+Comment 2:
+Author: 1-hot
+Score: 1
+Created UTC: 1767458805.0
+Comment: I’m very curious on how continuous representations would alter performance on VLMs. It seems like we would naturally converge to similar latent representations, and might provide further evidence for the platonic representation hypothesis.
+
+Comment 3:
+Author: Shizuka_Kuze
+Score: 1
+Created UTC: 1767487666.0
+Comment: Most research appears to be moving toward latent diffusion for language. The issue is mostly the continuous to discrete problem and misapplication of methods imo.

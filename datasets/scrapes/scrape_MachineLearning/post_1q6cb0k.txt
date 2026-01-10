@@ -1,0 +1,42 @@
+Post Title: [R] DeepSeek-R1’s paper was updated 2 days ago, expanding from 22 pages to 86 pages and adding a substantial amount of detail.
+Author: Nunki08
+Score: 290
+URL: https://www.reddit.com/gallery/1q6cb0k
+Number of comments: 15
+Created UTC: 1767783059.0
+
+Post Content:
+arXiv:2501.12948 \[cs.CL\]: [https://arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: rrenaud
+Score: 30
+Created UTC: 1767811470.0
+Comment: Did they fix the problems in the grpo reward calculation?
+
+Comment 2:
+Author: throwaway2676
+Score: 12
+Created UTC: 1767809838.0
+Comment: Interesting, nice catch.
+
+Comment 3:
+Author: TserriednichThe4th
+Score: 4
+Created UTC: 1767819855.0
+Comment: is it longer than the selu paper? lol
+
+Comment 4:
+Author: sonofmath
+Score: 1
+Created UTC: 1767945881.0
+Comment: I think the paper is essentially the Nature paper+supplementary materials in one document, making it easier to read. I am not sure if there are some substentail revisions from the original.
+
+Comment 5:
+Author: Tasty_South_5728
+Score: -1
+Created UTC: 1767891401.0
+Comment: The "Aha Moment" emergence is the highlight of the 86-page update. GRPO (Group Relative Policy Optimization) effectively removes the critic model by using group-relative rewards, scaling RL without the PPO compute overhead. The transition from R1-Zero’s raw RL to the 4-stage pipeline shows that cold-starting with small CoT data is the secret to readability without sacrificing the reasoning "soul" found in Zero. This is a masterclass in efficiency.

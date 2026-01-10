@@ -1,0 +1,63 @@
+Post Title: [D] How does Claude perform so well without any proprietary data?
+Author: apidevguy
+Score: 136
+URL: https://www.reddit.com/r/MachineLearning/comments/1plg1gs/d_how_does_claude_perform_so_well_without_any/
+Number of comments: 140
+Created UTC: 1765612444.0
+
+Post Content:
+Google has massive proprietary assets (Search, Gmail, Docs, YouTube).
+
+Microsoft/OpenAI has GitHub, Bing, Office, and enterprise data.
+
+xAI has direct access to Twitter/X's social data.
+
+Meta has facebook data. 
+
+Anthropic (Claude) however, doesn't appear to own or control any comparably large proprietary data sources. Yet Claude often scores extremely well on reasoning and tasks, many times outperforming other company models. 
+
+How Anthropic (Claude) is able to beat their competitiors in model quality? 
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Waste-Falcon2185
+Score: 186
+Created UTC: 1765613300.0
+Comment: They bought cheap books online and literally tore them apart to feed them into scanners to get previously unavailable training data.
+
+Comment 2:
+Author: Bardy_Bard
+Score: 154
+Created UTC: 1765613228.0
+Comment: I would imagine they actually do have proprietary annotated data. Maybe the source is more “open source” than a specific channel they probably have heaps of post processing / cleaning / expert data.
+
+Comment 3:
+Author: marr75
+Score: 76
+Created UTC: 1765621925.0
+Comment: Other commenters have noted many sources of data for Anthropic but one of the most widely hypothesized differentiators for Anthropic is data quality. Whether they have used human annotators, models, or the combination, they have found higher quality sets of data within "the pile" to leverage more heavily and their generation techniques (frontier labs have been generating new synthetic data in "verifiable" categories like math and coding for a while) in code had a headstart over other firms.
+
+Comment 4:
+Author: melodyze
+Score: 34
+Created UTC: 1765643387.0
+Comment: Their team is particularly strong, and that compounds in creating more advantages over time. Anecdotally, of people I know that have worked at multiple labs, anthropic seems to have the highest talent density. It just has the best reputation in that labor market.
+
+People can feel kind of dirty about working at openai because of a perception that they don't take risks seriously, and sam altman has a weird reputation rhat is a little concerning if he ends up that powerful. Dario Amodei is seen as a much more responsible/thoughtful person to end up in power. He has bona fides from long running participation in intellectual communities that took ai risk seriously before there even were language models, he is viewed as having one of the best visions for a future with superintelligence that goes well, and he is viewed as the most likely to actually stay the course and not get corrupted.
+
+Demis hassabis has a really good reputation too, probably the best, but sundar doesn't and people are often worried about the long term effects of the mothership.
+
+Meta is not viewed as being in the game at all.
+
+Then reputation for talent density reflexively drives talent density. People want to work with the smartest team they can.
+
+That's the vibe from people I know who chose between them.
+
+Comment 5:
+Author: like_a_tensor
+Score: 21
+Created UTC: 1765632944.0
+Comment: I wouldn’t be surprised if big tech companies also don’t actually have that large of an advantage since most of their data is complete garbage

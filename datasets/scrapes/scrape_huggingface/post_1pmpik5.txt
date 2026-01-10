@@ -1,0 +1,17 @@
+Post Title: hf download does not do anything
+Author: Frosty_Chest8025
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pmpik5/hf_download_does_not_do_anything/
+Number of comments: 0
+Created UTC: 1765747650.0
+
+Post Content:
+Hi,
+
+did hf auth login and then hf download but it does not show any progress..  
+something going on?
+
+It might be my ipv6, can I force the hf download to use ipv4?
+
+
+Top 0 comments:

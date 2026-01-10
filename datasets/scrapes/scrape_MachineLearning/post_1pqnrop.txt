@@ -1,0 +1,56 @@
+Post Title: [D] Current trend in Machine Learning
+Author: Ok-Painter573
+Score: 82
+URL: https://www.reddit.com/r/MachineLearning/comments/1pqnrop/d_current_trend_in_machine_learning/
+Number of comments: 35
+Created UTC: 1766157762.0
+
+Post Content:
+Is it just me or there's a trend of creating benchmarks in Machine Learning lately? The amount of benchmarks being created is getting out of hand, which instead those effort could have better been put into more important topics.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Antique_Most7958
+Score: 104
+Created UTC: 1766158180.0
+Comment: Well, in the case of LLMs, they are very hard to evaluate given their wide capabilities so a lot of benchmarks were created to quantify their performance.
+Also, Neurips has a Dataset and Benchmarks track leading to proliferation of benchmarks.
+
+Comment 2:
+Author: AffectionateLife5693
+Score: 71
+Created UTC: 1766167365.0
+Comment: I know OP may attract a lot of hate, but at this point, benchmarking has become an easy shortcut to top-tier publications.
+
+Years ago, benchmarking required substantial effort: large-scale data collection, human annotation, careful design of evaluation protocols, and deep domain expertise. As researchers, we appreciated that work immensely. Those efforts genuinely advanced the field. ImageNet’s impact on modern computer vision is a prime example. The people behind such benchmarks were real heroes.
+
+Today, however, benchmarking often boils down to “asking an LLM or VLM anything.” We now see countless papers titled “Do LLMs understand spatial relationships?”, “Do VLMs understand materials?”, “Gender/racial/demographic bias in LLMs/VLMs,” “Can models solve elementary school math/physics/chemistry?”, or “Can LLMs play poker?” Because modern AI models support human-like conversational inputs and outputs, virtually any prompt can be framed as a benchmark.
+
+The problem is that these papers are extremely HARD TO REJECT under the current peer-review protocols. They are de facto plain experimental reports, leaving little room for technical errors or controversy. As a result, the same groups of authors can repeatedly publish in top conferences by following this formula, often with minimal methodological innovation.
+
+Comment 3:
+Author: linverlan
+Score: 28
+Created UTC: 1766158213.0
+Comment: The thing is that almost everyone has to do it. For most projects you need to start out by setting up your eval and baselines. At that point you look at it and say  “X workshop would like this, and that would be great on my CV” so you go ahead and submit it, and as long as you can make your data public it is very likely to be published so it keeps happening. 
+
+I’m not even sure it’s a bad thing, it usually just means more public data and the good ones often end up getting aggregated into the giant benchmarks later on.
+
+Comment 4:
+Author: bikeranz
+Score: 15
+Created UTC: 1766157952.0
+Comment: Creating your own benchmark is a tried and tested method for getting bold numbers, and you need those to publish.
+
+/s
+
+Comment 5:
+Author: fnands
+Score: 9
+Created UTC: 1766160434.0
+Comment: More important topics like what?   
+
+
+To actually know whether a new model/training regime/etc. is better than what came before it you need a benchmark to evaluate it against.

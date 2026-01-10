@@ -1,0 +1,86 @@
+Post Title: [D] I took Bernard Widrow’s machine learning &amp; neural networks classes in the early 2000s. Some recollections
+Author: Old-School8916
+Score: 113
+URL: https://www.reddit.com/r/MachineLearning/comments/1q3uvuj/d_i_took_bernard_widrows_machine_learning_neural/
+Number of comments: 9
+Created UTC: 1767545613.0
+
+Post Content:
+Bernard Widrow passed away recently. I took his neural networks and signal processing courses at Stanford in the early 2000s, and later interacted with him again years after. I’m writing down a few recollections, mostly technical and classroom-related, while they are still clear.
+
+One thing that still strikes me is how *complete* his view of neural networks already was decades ago. In his classes, neural nets were not presented as a speculative idea or a future promise, but as an engineering system: learning rules, stability, noise, quantization, hardware constraints, and failure modes. Many things that get rebranded today had already been discussed very concretely.
+
+He often showed us videos and demos from the 1990s. At the time, I remember being surprised by how much reinforcement learning, adaptive filtering, and online learning had already been implemented and tested long before modern compute made them fashionable again. Looking back now, that surprise feels naïve.
+
+Widrow also liked to talk about hardware. One story I still remember clearly was about an early neural network hardware prototype he carried with him. He explained why it had a glass enclosure: without it, airport security would not allow it through. The anecdote was amusing, but it also reflected how seriously he took the idea that learning systems should exist as real, physical systems, not just equations on paper.
+
+He spoke respectfully about others who worked on similar ideas. I recall him mentioning Frank Rosenblatt, who independently developed early neural network models. Widrow once said he had written to Cornell suggesting they treat Rosenblatt kindly, even though at the time Widrow himself was a junior faculty member hoping to be treated kindly by MIT/Stanford. Only much later did I fully understand what that kind of professional courtesy meant in an academic context.
+
+As a teacher, he was patient and precise. He didn’t oversell ideas, and he didn’t dramatize uncertainty. Neural networks, stochastic gradient descent, adaptive filters. These were tools, with strengths and limitations, not ideology.
+
+Looking back now, what stays with me most is not just how early he was, but how *engineering-oriented* his thinking remained throughout. Many of today’s “new” ideas were already being treated by him as practical problems decades ago: how they behave under noise, how they fail, and what assumptions actually matter.
+
+I don’t have a grand conclusion. These are just a few memories from a student who happened to see that era up close.
+
+which I just wrote on the new year date. Prof. Widrow had a huge influence on me. As I wrote in the end of the post: "For me, Bernie was not only a scientific pioneer, but also a mentor whose quiet support shaped key moments of my life. Remembering him today is both a professional reflection and a deeply personal one."
+
+  
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Old-School8916
+Score: 17
+Created UTC: 1767545721.0
+Comment: reposted for [u/DueKitchen3102](https://www.reddit.com/user/DueKitchen3102/), I noticed he was having some issues posting it so I told him i'd post it here. I remember Widrow's works myself 10+ years ago. 
+
+he posted some other links:
+
+Prof. Widrow's talk slides in 2018 are available here
+
+[https://research.baidu.com/AI\_Colloquium](https://research.baidu.com/AI_Colloquium)
+
+[https://research.baidu.com/ueditor/upload/file/20180719/1531980648361638.pdf](https://research.baidu.com/ueditor/upload/file/20180719/1531980648361638.pdf)
+
+Comment 2:
+Author: DueKitchen3102
+Score: 13
+Created UTC: 1767547422.0
+Comment: Thank you u/Old-School8916  for reposting this 
+
+Prof. Widrow influenced me deeply, as did Prof. Hastie, Prof. Friedman, and Prof. Lai. After meeting him again in 2018, I kept telling myself I should do something to help the world understand Prof. Widrow's foundational contributions to the tools we use daily: SGD, neural nets, adaptive filters, quantization, etc. Regrettably, I let work keep me "too busy" for too long.
+
+He passed away on Sept 30, 2025, just two months shy of his 96th birthday, though Stanford did not announce it until mid-December. Writing this personal memory is the least I could do to honor him.  
+  
+Some other details are available in [https://www.linkedin.com/feed/update/urn:li:activity:7412561145175134209/](https://www.linkedin.com/feed/update/urn:li:activity:7412561145175134209/)
+
+Comment 3:
+Author: DueKitchen3102
+Score: 6
+Created UTC: 1767549757.0
+Comment: This weekend, after writing about Prof. Bernie Widrow, I started thinking more about his style of research.
+
+First, Dr. Widrow was fundamentally an engineer. His goal was to solve real world problems that actually mattered. That is rare, and it genuinely benefited society. In contrast, much highly influential academic research does not aim to fully solve a problem, but instead points to a promising direction for addressing a broader class of problems. Of course, this does not mean Prof. Widrow’s work was not influential. It was influential in a different, and often more direct, way.
+
+Second, Dr. Widrow kept moving into new areas and made contributions across many fields. When he realized that the computational bottleneck of neural networks exceeded what was feasible at the time, he shifted his focus to other equally important topics, such as adaptive filters, quantization, noise cancellation, and medical devices. Modern phones would not work nearly as well without his contributions. This breadth is also remarkable. At the same time, it can make recognition uneven, because foundational work across multiple areas is harder to summarize under a single label, and people may think, “Bernie is already well known for something else.”
+
+I was once advised by a highly respected researcher whose style was quite similar to Dr. Widrow’s. He told me that academia is built around a reward system. If your work helps enable others to be rewarded, your work is more likely to be rewarded as well. If you write only one paper a year, or every other year, and that paper fully solves an important problem, your work may be overlooked for a long enough period that the reward never arrives.
+
+There is no right or wrong style of research. Enjoying the process matters most. In the end, everyone reaches the same destination, although some leave deeper marks on the world than others.
+
+Comment 4:
+Author: StealthX051
+Score: 5
+Created UTC: 1767546955.0
+Comment: Can you explain what you mean by treating Rosenblatt kindly?
+
+Comment 5:
+Author: taleofbenji
+Score: 4
+Created UTC: 1767585799.0
+Comment: Jeff Dean's 1990 thesis was how to train distributed neural networks. 
+
+
+So yea, it's been around for awhile. 

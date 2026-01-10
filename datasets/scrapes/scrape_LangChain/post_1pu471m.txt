@@ -1,0 +1,72 @@
+Post Title: Teaching AI Agents Like Students (Blog + Open source tool)
+Author: Unable-Living-3506
+Score: 19
+URL: https://www.reddit.com/r/LangChain/comments/1pu471m/teaching_ai_agents_like_students_blog_open_source/
+Number of comments: 5
+Created UTC: 1766521657.0
+
+Post Content:
+**TL;DR:**  
+Vertical AI agents often struggle because domain knowledge is tacit and hard to encode via static system prompts or raw document retrieval.
+
+What if we instead treat agents like students: human experts teach them through iterative, interactive chats, while the agent distills rules, definitions, and heuristics into a continuously improving knowledge base.
+
+I built an open-source tool [Socratic ](https://github.com/kevins981/Socratic)to test this idea and show concrete accuracy improvements.
+
+Full blog post: [https://kevins981.github.io/blogs/teachagent\_part1.html](https://kevins981.github.io/blogs/teachagent_part1.html)
+
+Github repo: [https://github.com/kevins981/Socratic](https://github.com/kevins981/Socratic)
+
+3-min demo: [https://youtu.be/XbFG7U0fpSU?si=6yuMu5a2TW1oToEQ](https://youtu.be/XbFG7U0fpSU?si=6yuMu5a2TW1oToEQ)
+
+Any feedback is appreciated!
+
+Thanks!
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Khade_G
+Score: 3
+Created UTC: 1766531184.0
+Comment: Interesting idea… “teach the agent like a student” feels like a more realistic way to capture tacit knowledge than hoping a static prompt + RAG nails it.
+
+A few things I’d be curious about (and what I’d look for to evaluate it):
+- What exactly gets written to the KB? (rules/heuristics, examples, counterexamples, definitions?) and how you avoid it becoming a grab-bag of paraphrased chats.
+- Conflict + drift handling: if two experts teach slightly different policies, how do you reconcile? Do you version rules, keep provenance, or let the agent learn a “house style” per org?
+- Generalization vs memorization: do your “accuracy improvements” hold on new scenarios, or mainly on similar phrasing to the teaching sessions?
+- Evaluation clarity: what benchmarks/tasks did you use, what’s the baseline (prompt-only, RAG, fine-tune), and what’s the biggest failure case still?
+- Safety/permission model: when experts teach via chat, are you logging sensitive info? Any redaction/anonymization options before distillation?
+- Tooling ergonomics: how much effort per “lesson” to see meaningful gains? (If it takes 2 hours of expert time to improve 2%, that’s a tough sell.)
+
+If you want actionable feedback from practitioners, I’d suggest adding one tight example in the README/blog like:
+1) the raw problem + agent failure,
+2) 2–3 teaching turns,
+3) the distilled KB artifact,
+4) the post-teach behavior change,
+5) one counterexample where the rule shouldn’t fire.
+
+Also: have you tried a “challenge set” workflow where users submit tricky edge cases, and the system proposes a candidate rule + asks the expert to approve/edit? That tends to scale better than open-ended teaching.
+
+Quick question: does Socratic distill into something structured (YAML/JSON rules, decision tree, rubric), or is it still largely natural language notes with retrieval?
+
+Comment 2:
+Author: PurpleWho
+Score: 2
+Created UTC: 1766978486.0
+Comment: This is neat.
+
+If I understand correctly, you've built a knowledge base builder.
+
+Then you improved an airline agent’s success rate by 17% by automating the agent failure analysis using your knowledge base builder to improve the agent's instruction prompt.
+
+I think it's an interesting tool and an interesting use case.
+
+In [your second blog post](https://kevins981.github.io/blogs/teachagent_part2.html), you say, "I split all tasks into train and test sets (20 and 30 tasks each)."
+
+How did you come up with the initial set of 30 tasks?
+
+Did you just ask an LLM for an initial range of likely mock tasks?
+
+I find that coming up with the tasks in the first place, for the analysis is the tricky bit and would love to understand how you approached this here.

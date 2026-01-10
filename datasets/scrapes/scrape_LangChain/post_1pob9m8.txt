@@ -1,0 +1,62 @@
+Post Title: How do you test prompt changes before shipping to production?
+Author: quantumedgehub
+Score: 10
+URL: https://www.reddit.com/r/LangChain/comments/1pob9m8/how_do_you_test_prompt_changes_before_shipping_to/
+Number of comments: 19
+Created UTC: 1765913626.0
+
+Post Content:
+I’m curious how teams are handling this in real workflows.
+
+When you update a prompt (or chain / agent logic), how do you know you didn’t break behavior, quality, or cost before it hits users?
+
+Do you:
+
+	•	Manually eyeball outputs?
+
+	•	Keep a set of “golden prompts”?
+
+	•	Run any kind of automated checks?
+
+	•	Or mostly find out after deployment?
+
+Genuinely interested in what’s working (or not).
+
+This feels harder than normal code testing.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: johndoerayme1
+Score: 5
+Created UTC: 1765914160.0
+Comment: Try LangSmith tooling for managing prompts &amp; running experiments. I like it as a piece of my testing and observability stack.
+
+Comment 2:
+Author: adlx
+Score: 2
+Created UTC: 1765914114.0
+Comment: Also interested to know...
+
+Comment 3:
+Author: hrishikamath
+Score: 2
+Created UTC: 1765914380.0
+Comment: Evals
+
+Comment 4:
+Author: mtutty
+Score: 2
+Created UTC: 1765915298.0
+Comment: I've used this library with some good success.  https://www.npmjs.com/package/supertest
+
+Comment 5:
+Author: Dan6erbond2
+Score: 2
+Created UTC: 1765923356.0
+Comment: Not LangChain specific, but [we stopped managing prompts in code](https://finly.ch/engineering-blog/916926-building-ai-native-applications-with-payload-cms-and-the-vercel-ai-sdk). We use PayloadCMS so we can manage prompts through the admin UI, making it easier to let non-technical users help us when it comes to prompt engineering where business logic/domain knowledge is involved. 
+
+We then store all the operations from the initial system message to tool calls and results to the final output in a table we can easily introspect to understand the full process. And by deploying multiple environments (staging, prod) we can safely test until we're happy with new prompts. 
+
+Payload also supports versioning documents so if you want to restore an old prompt that's easy, too.

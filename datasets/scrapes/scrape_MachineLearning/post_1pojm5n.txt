@@ -1,0 +1,42 @@
+Post Title: [D] Recent research in training embedding models
+Author: ArtisticHamster
+Score: 23
+URL: https://www.reddit.com/r/MachineLearning/comments/1pojm5n/d_recent_research_in_training_embedding_models/
+Number of comments: 5
+Created UTC: 1765934613.0
+
+Post Content:
+What are the current SOTA methods for training embedding models. The main focus is understanding source code.
+
+P.S. I did my research and the latest I found is https://arxiv.org/abs/2305.07922 i.e. CodeT5+ by Salesforce. Is there anything newer or more advanced?
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Mbando
+Score: 17
+Created UTC: 1765937528.0
+Comment: I can’t share code here, but maybe this is helpful: in fine-tuning embedding models, we found that early stopping was really critical to avoid overfitting.
+
+We built our fine-tuning data by reversing our LLM fine-tuning data set. In the LLM fine-tuning data set we had a question and then context+answer from a specific military domain. To fine-tune the embedding model, we used a context and then question pair set to train for retrieval.
+
+In our early experiments, we find tuned different open source embedding models using FSDP for five epochs. We found that the models would consistently overfit, shrinking the embedding space into a giant blob.
+
+We ended up swapping to DDP and InformationRetrievalEvaluator from Sentence Transformers. This allowed us to do early stopping and essentially gain retrieval accuracy for each batch without overfitting. We ended up making substantial gains and retrieval accuracy over the base version of each model with this method.
+
+EDIT:
+
+To add detail: The goal was to systematically explore fine-tuning pre-trained embedding models to understand military-specific terminology (doctrine and strategy from one service), testing multiple models (Stella 400M/1.5B, BGE-Small, NV-Embed), training methods (DDP, FSDP), and epoch counts (1-5). In particular, the specific domain mostly overlaps with general English language, but there are critical semantic differences for limited vocabulary, for example, words like "fires."
+
+We tried multiple epochs to trace out embedding effects, and visualize collapse using projections of the embedding space. When we incorporated an Information Retrieval Evaluator with DDP training, the evaluator monitored performance on held-out data during training, preventing overfitting and enabling models to improve across multiple epochs. 
+
+So for example, on BGE Small EN model with 384-dimensional embeddings using DDP for both 2 epochs and 5 epochs, we got:
+
+* The base model maintained a top 20 accuracy of 54.4%.
+* 2 epochs fine-tuned model: Top 20 retrieval accuracy was 70.8%.
+* 5 epochs fine-tuned model: Top 20 retrieval accuracy increased to 73%.
+
+Similarly, our fine-tuned Stella 400M model achieved 73.3% accuracy (vs. 62.9% baseline) at retrieving relevant military context for questions, with increasing accuracy across each epoch.
+
+Testing across multiple epochs was essential—not just to find optimal stopping points, but to understand failure modes unique to specialty domains with limited vocabulary diversity. Some methods (FSDP without evaluation) degraded with more training, while others (DDP with IR Evaluator) improved. These insights established that for specialty domains, the evaluation strategy matters more than training duration, and proper monitoring can transform the same training data from causing catastrophic collapse to achieving meaningful improvements.

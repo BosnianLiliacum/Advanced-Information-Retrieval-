@@ -1,0 +1,39 @@
+Post Title: Suggest me best ocr model
+Author: rawsid_
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1puq4c4/suggest_me_best_ocr_model/
+Number of comments: 2
+Created UTC: 1766590636.0
+
+Post Content:
+Hey I'm looking for best an ocr model for my web app, any suggestion? 
+
+
+Top 2 comments:
+
+Comment 1:
+Author: frank_brsrk
+Score: 4
+Created UTC: 1766608338.0
+Comment: # (self-hosted / open source)
+
+* **PaddleOCR (PP-OCRv5 + PP-StructureV3)** — one of the most capable open-source stacks for multilingual OCR + document structure (tables/layout) and is actively maintained. [paddlepaddle.github.io+3arXiv+3paddlepaddle.github.io+3](https://arxiv.org/pdf/2507.05595?utm_source=chatgpt.com)
+* **Surya** — strong “document OCR toolkit” approach (OCR + layout + reading order + tables + LaTeX OCR). [GitHub](https://github.com/datalab-to/surya?utm_source=chatgpt.com)
+* **docTR** — clean developer experience; strong baseline for detection+recognition pipelines. [GitHub+1](https://github.com/mindee/doctr?utm_source=chatgpt.com)
+
+Comment 2:
+Author: frank_brsrk
+Score: 3
+Created UTC: 1766608286.0
+Comment: Here’s a **tight OCR shortlist** with **\~cost per 1M tokens** (USD). For anything billed **per page**, I give an **equivalent $/1M output tokens** using a rough **700 tokens/page** assumption.
+
+* **Mistral OCR (Vertex AI partner)** — strong PDF OCR + structure; **$0.0005 in + $0.0005 out / 1M tokens** (Vertex also counts **\~1 page = 1M in + 1M out**). [Google Cloud+1](https://cloud.google.com/vertex-ai/generative-ai/pricing)
+* **DeepSeek-OCR (Vertex AI partner)** — cheap token-priced OCR; **$0.30 in / $1.20 out per 1M tokens**. [Google Cloud](https://cloud.google.com/vertex-ai/generative-ai/pricing)
+* **OpenAI gpt-4o-mini (Vision OCR)** — best value vision-OCR; **$0.15 in / $0.60 out per 1M tokens**. [OpenAI](https://platform.openai.com/docs/pricing?utm_source=chatgpt.com)
+* **OpenAI gpt-4o (Vision OCR)** — higher accuracy, pricier; **$2.50 in / $10.00 out per 1M tokens**. [OpenAI](https://platform.openai.com/docs/pricing?utm_source=chatgpt.com)
+* **Google Gemini API (Vision OCR)** — good multimodal OCR; pricing varies by model, typical tier shows **$1.25 in / $10 out per 1M tokens** (&lt;=200k context tier shown on pricing page). [Google AI for Developers](https://ai.google.dev/gemini-api/docs/pricing?utm_source=chatgpt.com)
+* **AWS Textract (DetectDocumentText)** — classic OCR API; **page-based**: **$0.0015/page** → **≈$2.14 per 1M output tokens** (700 tok/page). [Amazon Web Services, Inc.](https://aws.amazon.com/textract/pricing/)
+* **Azure Document Intelligence (Read)** — classic OCR API; **page-based**: **$1.50 per 1,000 pages** (= $0.0015/page) → **≈$2.14 per 1M output tokens** (700 tok/page). [Microsoft Azure](https://azure.microsoft.com/en-au/pricing/details/ai-document-intelligence/?utm_source=chatgpt.com)
+* **Google Document AI (OCR examples)** — page-based; examples imply **$0.10 for 1–10 pages** (\~$0.01/page) → **≈$14.3 per 1M output tokens** (700 tok/page). [Google Cloud](https://cloud.google.com/document-ai/pricing)
+
+*Note:* “$/1M tokens” comparisons are cleanest for **token-priced models**. For **page-priced OCR**, the token-equivalent swings a lot depending on how text-dense your pages are.

@@ -1,0 +1,57 @@
+Post Title: fastapi-fullstack v0.1.11 released – now with LangGraph ReAct agent support + multi-framework AI options!
+Author: VanillaOk4593
+Score: 38
+URL: https://www.reddit.com/r/LangChain/comments/1q1qjkz/fastapifullstack_v0111_released_now_with/
+Number of comments: 5
+Created UTC: 1767332683.0
+
+Post Content:
+Hey r/LangChain,
+
+For those new or catching up: fastapi-fullstack is an open-source CLI generator (pip install fastapi-fullstack) that creates production-ready full-stack AI/LLM apps with FastAPI backend + optional Next.js 15 frontend. It's designed to skip boilerplate, with features like real-time WebSocket streaming, conversation persistence, custom tools, multi-provider support (OpenAI/Anthropic/OpenRouter), and observability via LangSmith.
+
+Full changelog: [https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template/blob/main/docs/CHANGELOG.md](https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template/blob/main/docs/CHANGELOG.md?referrer=grok.com)  
+Repo: [https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template](https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template?referrer=grok.com)
+
+**Full feature set:**
+
+* Backend: Async FastAPI with layered architecture, auth (JWT/OAuth/API keys), databases (PostgreSQL/MongoDB/SQLite with SQLModel/SQLAlchemy options), background tasks (Celery/Taskiq/ARQ), rate limiting, admin panels, webhooks
+* Frontend: React 19, Tailwind, dark mode, i18n, real-time chat UI
+* AI: Now supports **LangChain**, **PydanticAI**, and the new **LangGraph** (more below)
+* 20+ configurable integrations: Redis, Sentry, Prometheus, Docker, CI/CD, Kubernetes
+* Django-style CLI + production Docker with Traefik/Nginx reverse proxy options
+
+**Big news in v0.1.11 (just released):**  
+Added **LangGraph as a third AI framework option** alongside LangChain and PydanticAI!
+
+* New --ai-framework langgraph CLI flag (or interactive prompt)
+* Implements **ReAct (Reasoning + Acting) agent pattern** with graph-based flow: agent node for LLM decisions, tools node for execution, conditional edges for loops
+* Full memory checkpointing for conversation continuity
+* WebSocket streaming via astream() with modes for token deltas and node updates (tool calls/results)
+* Proper tool result correlation via tool\_call\_id
+* Dependencies auto-added: langgraph, langgraph-checkpoint, langchain-core/openai/anthropic
+
+This makes it even easier to build advanced, stateful agents in your full-stack apps – LangGraph's graph architecture shines for complex workflows.
+
+LangChain community – how does LangGraph integration fit your projects? Any features to expand (e.g., more graph nodes)? Contributions welcome! 🚀
+
+
+Top 3 comments:
+
+Comment 1:
+Author: hopes_alive123
+Score: 3
+Created UTC: 1767338629.0
+Comment: any sample projects built using this?
+
+Comment 2:
+Author: mamaBiskothu
+Score: 1
+Created UTC: 1767333336.0
+Comment: How do you ensure exactly once processing with celery?
+
+Comment 3:
+Author: Preconf
+Score: 1
+Created UTC: 1767344996.0
+Comment: Can I use phoenix for observability instead?

@@ -1,0 +1,100 @@
+Post Title: ChatEpstein with LangChain
+Author: br3nn21
+Score: 24
+URL: https://www.reddit.com/r/LangChain/comments/1q5mjzy/chatepstein_with_langchain/
+Number of comments: 29
+Created UTC: 1767715371.0
+
+Post Content:
+While there’s been a lot of information about Epstein released, much of it is very unorganized. There have been platforms like jmail.world, but it still contains a wide array of information that is difficult to search through quickly.
+
+To solve these issues, I created [ChatEpstein](https://chat-epstein.vercel.app/), a chatbot with access to the Epstein files to provide a more targeted search. Right now, it only has a subset of text from the documents, but I was planning on adding more if people were more interested. This would include more advanced data types (audio, object recognition, video) while also including more of the files.
+
+Here’s the data I’m using:
+
+**Epstein Files Transparency Act (H.R.4405)** \-&gt; I extracted all pdf text
+
+**Oversight Committee Releases Epstein Records Provided by the Department of Justice** \-&gt; I extracted all image text
+
+**Oversight Committee Releases Additional Epstein Estate Documents** \-&gt; I extracted all image text and text files
+
+Overall, this leads to about 300k documents total.
+
+With all queries, results will be quoted and a link to the source provided. This will be to prevent the dangers of hallucinations, which can lead to more misinformation that can be very harmful. Additionally, proper nouns are strongly highlighted with searches. This helps to analyze specific information about people and groups. My hope with this is to increase accountability while also minimizing misinformation.
+
+Feel free to let me know if there are any issues or improvements you'd let me see. I’d love to grow this and get it into the hands of more people to spread more information about the Epstein Files.
+
+[https://chat-epstein.vercel.app/](https://chat-epstein.vercel.app/)  
+
+
+[](https://www.reddit.com/submit/?source_id=t3_1q5lgnw)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: br3nn21
+Score: 3
+Created UTC: 1767715379.0
+Comment: Here’s the tech I used:
+
+For initial storage, I put all the files in an AWS S3 bucket. Then, I used Pinecone as a vector database for the documents. For my chunking strategy, I initially used a character count of 1024 for each chunk, which worked well for long, multipage documents. However, since many of the documents are single-page and have a lot of continuous context, I have been experimenting with a page-based chunking strategy. Additionally, I am using spAcy to find people, places, and geopolitical entities. 
+
+During the retrieval phase, I am fetching both using traditional methods and using entity-based matching. Doing both of these gives me more accurate but diverse results. I am also having it keep track of the last 2 2 exchanges (4 messages: 2 user + 2 assistant). Overall, this gives me a token usage of 2k-5k. Because I’m semi-broke, I’m using Groq’s cheap llama-3.1-8b-instant API.
+
+One of the most important parts of this phase is accuracy. Hallucinations from an LLM are an inherent certainty in some instances. As a result, I have ensured that I am not only providing information, but also quotes, sources, and links to every piece of information. I also prompted the LLM to try to avoid making assumptions not directly stated in the text.
+
+With that being said, I’m certain that there will be issues, given the non-deterministic nature of AI models and the large amount of data being fed. If anyone finds any issues, please let me know! I’d love to fix them to make this a more usable tool.
+
+Comment 2:
+Author: Radiate_Wishbone_540
+Score: 2
+Created UTC: 1767731911.0
+Comment: Sent this: "Who are the most surprising associates of Epstein?"
+
+And got this: "There was an error processing your request. Please try again."
+
+Comment 3:
+Author: mdrxy
+Score: 1
+Created UTC: 1767716663.0
+Comment: Nice, can you share the source repo?
+
+Comment 4:
+Author: OnyxProyectoUno
+Score: 1
+Created UTC: 1767719731.0
+Comment: 300k documents is where you start hitting real preprocessing bottlenecks. The issue isn't just volume, it's that OCR'd text from images and PDFs usually comes out messy and your chunking strategy becomes critical for retrieval quality.
+
+With that much extracted text, you're probably seeing inconsistent formatting between the PDF extractions and image OCR results. The image text especially tends to have weird spacing, broken words, and missing context that makes chunking unpredictable. I've been building document processing tooling at vectorflow.dev specifically because this preprocessing stage is where most RAG systems break down silently.
+
+A few things to watch out for: OCR'd proper nouns (which you mentioned highlighting) often get mangled during extraction, so "Jeffrey Epstein" might become "Jeffrey Ep stein" in some chunks but not others. Your retrieval will miss these variations. Also, with 300k docs, you'll want to preserve document-level metadata (source file, date, document type) and make sure it propagates to every chunk, otherwise you lose the citation trail you're trying to maintain.
+
+For accountability applications like this, consider adding entity extraction during preprocessing to tag people, organizations, and dates consistently across all documents. This gives you much better retrieval precision than just relying on semantic similarity.
+
+What does your current chunking strategy look like, and are you seeing consistency issues between the PDF and image-extracted content?
+
+Comment 5:
+Author: forevergeeks
+Score: 1
+Created UTC: 1767721648.0
+Comment: is this thing hallucinating? I asked this question: **top 10 famous people in the files**
+
+and got:
+
+Based on the provided documents, I found the following information about the top 10 famous people mentioned:
+
+1. **Vladimir Putin**: Topped the Russian poll with a whopping 24% 
+2. **Lionel Messi**: Had broader support, reaching 15th in the world 
+3. **David Beckham**: Squeaked into 10th place in Britain 
+4. **Edward Snowden**: 10th most admired in the country that granted him asylum 
+5. **Angela Merkel**: Scored 65 times higher at 13% in Germany 
+6. **The Pope**: Second only to Angela Merkel in Germany 
+7. **Nigel Farage**: In 16th place in Britain 
+8. **David Cameron**: Received the "most admired" accolade from only two people in a thousand in Britain
+9. **Nicolas Sarkozy**: Third in France 
+10. **Goodluck Jonathan**: 8th in Nigeria 
+
+**Sources:**
+
+* **HOUSE\_OVERSIGHT\_022344, Page 1.0 - Oversight Committee Releases Additional Epstein Estate Documents** \- View Document

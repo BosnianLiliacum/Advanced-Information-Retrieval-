@@ -1,0 +1,20 @@
+Post Title: opensource security for ai agents
+Author: ProgrammerNo5922
+Score: 5
+URL: https://www.reddit.com/r/LangChain/comments/1ppy5qh/opensource_security_for_ai_agents/
+Number of comments: 1
+Created UTC: 1766082382.0
+
+Post Content:
+With all the hype going around about AI Agents I thought I'd create something to help developers protect their AI Agents through agent identity management and mcp server supply chain. I'd appreciate any feedback anyone can share. Thanks
+
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: ProgrammerNo5922
+Score: 1
+Created UTC: 1766086020.0
+Comment: sorry forgot to add url [https://github.com/opena2a-org/agent-identity-management](https://github.com/opena2a-org/agent-identity-management)

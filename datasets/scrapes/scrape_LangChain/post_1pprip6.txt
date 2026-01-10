@@ -1,0 +1,30 @@
+Post Title: Opinion: Massive System Prompts are Technical Debt. The move to Data Engineering.
+Author: Proud-Employ5627
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1pprip6/opinion_massive_system_prompts_are_technical_debt/
+Number of comments: 2
+Created UTC: 1766066444.0
+
+Post Content:
+We treat LLMs like magic genies that need to be coaxed with 3,000-word prompts, instead of software components that need to be trained.
+
+I wrote a deep dive on why "Prompt Engineering" hits a ceiling of reliability, and why the next phase of agent development is **Data Engineering** (collecting runtime failures to bootstrap fine-tuning).
+
+**The Architecture (The Deliberation Ladder):**
+
+1.  **The Floor (Validity):** Use Steer (open source) to catch errors deterministically (Regex/JSON checks) in real-time.
+2.  **The Ceiling (Quality):** Use `steer export` to build a dataset from those failures.
+3.  **The Fix:** Fine-tune a small model (GPT-4o-mini) on that data to remove the need for the massive prompt.
+
+Full post: https://steerlabs.substack.com/p/prompt-engineering-is-technical-debt
+
+Code implementation (Steer): https://github.com/imtt-dev/steer
+
+
+Top 1 comments:
+
+Comment 1:
+Author: attn-transformer
+Score: 2
+Created UTC: 1766138015.0
+Comment: You have identified a critical flaw in agent systems. I look forward to studying steer.

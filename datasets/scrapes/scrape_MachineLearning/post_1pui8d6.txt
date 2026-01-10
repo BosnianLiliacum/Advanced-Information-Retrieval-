@@ -1,0 +1,95 @@
+Post Title: [D] Paper Accepted Then Rejected: Can We Use Sky Sports Commentary Videos for Research? Need Advice
+Author: Outrageous_Tip_8109
+Score: 29
+URL: https://www.reddit.com/r/MachineLearning/comments/1pui8d6/d_paper_accepted_then_rejected_can_we_use_sky/
+Number of comments: 11
+Created UTC: 1766563895.0
+
+Post Content:
+Hi everyone,
+
+I’m looking for advice on a situation we’re currently facing with a journal publication.
+
+Our research group proposed a **new hypothesis** and validated it using **commentary videos** from the **official Sky Sports YouTube channels** (Premier League and Cricket). These videos were used **only for hypothesis testing**, not for training any AI model.
+
+Specifically:
+
+* We used an **existing gaze-detection model** from a CVPR paper.
+* We processed the videos to extract gaze information.
+* No model was trained or fine-tuned on these videos.
+* The videos are **publicly available** on official YouTube channels.
+
+We submitted the paper to a **Springer Nature journal**. After **8–9 months of rigorous review**, the paper was **accepted**.
+
+However, after acceptance, we received an email from the editor stating that we now need **written consent from every individual appearing in the commentary videos**, explicitly addressed to Springer Nature.
+
+Additional details:
+
+* We **did not redistribute** the original videos.
+* We **open-sourced a curated dataset** containing **only the extracted frames used for processing**, not the full videos.
+* We only provided **links to the original YouTube videos**, which remain hosted by Sky Sports.
+
+This requirement came as a surprise, especially **after acceptance**, and it seems practically impossible to obtain consent from all individuals appearing in broadcast sports commentary.
+
+# My questions:
+
+1. Is this consent requirement standard for research using **public broadcast footage**?
+2. Are there known **precedents or exemptions** for analysis-only use (no training, no redistribution)?
+3. What realistic options do we have at this stage?
+   * Remove the dataset?
+   * Convert to a closed-access dataset?
+   * Request an ethics/legal review instead?
+4. Has anyone faced a **post-acceptance rejection** like this, and how did you handle it?
+
+Any advice, similar experiences, or pointers to publisher policies would be greatly appreciated. This has been quite stressful after such a long review cycle.
+
+Thanks in advance!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Goatoski
+Score: 33
+Created UTC: 1766564594.0
+Comment: Not had an experience with this specifically but run into this potential issue all the time since I work with internet memes posted on public forums.
+
+
+The videos are publicly available correct? Your best option, I think, is removing the dataset (the frames will contain images of people I guess) and then instead outline a method for others to collate the same dataset identical to the one used in your research.
+
+
+That way you are not distributing any images, frames or videos.
+
+
+In my research I offer the image URLs for others to collate, which are freely available and publicly visible. I also cannot actually give people the images because of the UK Online Safety Act but generally this seems to be fine and common practice to provide the URLs. I also try to provide embeddings, models .etc but never the raw images.
+
+
+Edit: no experience with the journal you mentioned, but in the ones I submit to (CS conferences) an ethics statement is required and often this is discussed or covered by authors. Might be an idea to look at those statements as data for training is extremely common in CS, however the acceptable criteria might be different for your journal.
+
+Comment 2:
+Author: eurz
+Score: 3
+Created UTC: 1766619449.0
+Comment: It is crucial to ensure compliance with copyright laws when using commentary videos for research purposes. Even if the videos are publicly available, the presence of individuals may raise privacy concerns. Seeking permission or establishing a clear framework for fair use could mitigate potential legal issues and enhance the integrity of your research.
+
+Comment 3:
+Author: Distinct-Gas-1049
+Score: 3
+Created UTC: 1766568662.0
+Comment: I would definitely have sought their consent. People can be very protective about their rights. If you’ve established some new method that their competitors could use against them using their data they’d not be happy.
+
+Although that doesn’t seem to be the issue? The issue is about privacy of the individual’s appearing in the videos?
+
+I imagine the broadcaster would’ve needed consent to broadcast the individual’s in the first place (implied or explicit.) there’s a chance such consent automatically propagates to you, or, maybe they can extend it to you? This might be enough?
+
+Comment 4:
+Author: samajhdar-bano2
+Score: 2
+Created UTC: 1766634826.0
+Comment: This thread is ML Gold. Never even knew these domains existed .
+
+Comment 5:
+Author: Amazing_Lie1688
+Score: 1
+Created UTC: 1766645827.0
+Comment: hey do you have its preprint somewhere on web?

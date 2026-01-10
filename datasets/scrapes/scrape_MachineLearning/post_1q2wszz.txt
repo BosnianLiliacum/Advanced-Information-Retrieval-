@@ -1,0 +1,80 @@
+Post Title: [D] Why is focal loss not used in LLM training?
+Author: Electrical-Monitor27
+Score: 20
+URL: https://www.reddit.com/r/MachineLearning/comments/1q2wszz/d_why_is_focal_loss_not_used_in_llm_training/
+Number of comments: 19
+Created UTC: 1767452746.0
+
+Post Content:
+I have been recently using focal loss for heavily imbalanced image and text classification tasks and have been seeing a very large boost in a production environment.
+
+For those that don't know how focal loss works: focal loss reduces the importance of "easy" examples so that the model can focus its learning on "hard" examples.
+
+Now i have been thinking that LLM models based on the transformer architecture are essentially an overglorified classifier during training (forced prediction of the next token at every step). Isn't this task with massive vocabs (e.g. 256k) essentially an extremely imbalanced task and also because some tokens are very easy to predict.
+
+For example, In the DeepSeek paper the team trained distillations based on the teacher forced reasoning traces, and these traces are full of easy token sequences that push down the loss by a lot initially (e.g. "But wait! I need to consider that..."), and it doesn't make sense from my perspective to try to improve the performance of all tokens equally in the cross entropy loss function, so why is no one using the focal loss loss function to focus only on the hard tokens?
+
+It would also be interesting to know how a LLM pretrained with focal loss would perform.
+
+Is there anything that I haven't thought about that would make this not work, or is this simply untested?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: seanv507
+Score: 44
+Created UTC: 1767454190.0
+Comment: Focal loss is used when people dont optimise for cross entropy but hard classification.
+
+For llms, probability accuracy is very important, and is directly optimised for in crossentropy loss. Eg for sampling you output words based on the estimated true probabilities
+
+Comment 2:
+Author: Shizuka_Kuze
+Score: 6
+Created UTC: 1767487284.0
+Comment: Focal loss is used when you have an imbalanced dataset and want to give all classifications a fairer chance. A probability distribution for cats, dogs, planes and cars is nice, but you really only want the most probable label and throw out the rest. 
+
+The purpose of an LLM is to approximate the probability distribution of the next token. More often than not you are not sampling in a “greedy” way where you just generate the highest probability “correct” token. Given the sentence “Einstein is a” we may have a distribution that looks like:
+
+0.4: scientist
+0.3: famous
+0.2: physicist
+…
+0.01: sigma male
+
+Basically what you want, technically correct tokens near the top you can sample from, and incorrect tokens at the bottom which can be excluded explicitly with top_k or top_p. If you use focal loss predicting the real distribution becomes more difficult. It might look more like:
+
+0.3: scientist
+0.2: famous
+0.1: physicist
+…
+0.025: sigma male
+
+That doesn’t look like a big deal, but with non-deterministic sampling that is something you really don’t want. The goal of most language models is not to greedily classify or predict the next token, but rather to generate a meaningful distribution of all tokens we can sample from. 
+
+With image classification you want the model to consider all classes equally. With language modeling, this assumption is not always true. Some tokens like “the” are inherently used more than “phi.” 
+
+Empirically I’ve noticed PolyFocalLoss does appear decent until about 5-10 thousand training steps where it collapses. Focal loss and its derivatives are certainly powerful tools and not to be disregarded, but they are hammers in a baking contest. The best choice for construction, questionably useful when making a cake. Perhaps they could be made more useful for this field in the future, and maybe the person who makes that a reality could be whoever’s reading this :)
+
+Comment 3:
+Author: RelevanceAlpha
+Score: 3
+Created UTC: 1767461637.0
+Comment: Interesting question. One thing that might complicate focal loss for LLMs is that token difficulty isn’t static — it’s highly context- and phase-dependent. Early in training, many tokens are trivially predictable, but later those same tokens may carry structural or stylistic information that regularization still benefits from.
+
+I’ve also wondered whether aggressively down-weighting “easy” tokens could unintentionally distort the learned distribution or harm calibration, especially for long-horizon generation. That said, it does feel underexplored, and I’d be curious whether variants that adapt the focusing parameter over training would behave better.
+
+Comment 4:
+Author: RoofProper328
+Score: 1
+Created UTC: 1767595427.0
+Comment: Good question. While token frequencies are imbalanced, next-token prediction is a *conditional* task, not a standard class-imbalance problem. “Easy” tokens still provide important gradient signal for learning syntax, fluency, and calibrated probabilities. Focal loss can suppress these signals, harm calibration, and introduce training instability at LLM scale. Similar ideas are explored instead via curriculum learning, token weighting, and distillation filtering rather than focal loss.
+
+Comment 5:
+Author: nikgeo25
+Score: 1
+Created UTC: 1767604748.0
+Comment: I see no reason not to train using a focal loss.
+How do you measure difficulty though? What's a "hard" token to predict?
+Btw I've been thinking about this as well, so I'd be down to chat.

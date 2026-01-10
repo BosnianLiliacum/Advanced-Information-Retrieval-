@@ -1,0 +1,117 @@
+Post Title: I need help with a Use case using Langgraph with Langmem for memory management.
+Author: Inside_Student_8720
+Score: 4
+URL: https://www.reddit.com/r/LangChain/comments/1pkikoy/i_need_help_with_a_use_case_using_langgraph_with/
+Number of comments: 0
+Created UTC: 1765513065.0
+
+Post Content:
+So we have a organizational api with us already built in.
+
+when asked the right questions related to the organizational transactions , and policies and some company related data it will answer it properly.
+
+But we wanted to build a wrapper kinda flow where in
+
+say user 1 asks :
+
+Give me the revenue for 2021 for some xyz department.
+
+and next as a follow up he asks
+
+for 2022
+
+now this follow up is not a complete question.
+
+So what we decided was we'll use a Langgraph postgres store and checkpointers and all and retreive the previous messages.
+
+we have a workflow somewhat like..
+
+graph.add\_edge("fetch\_memory" , "decision\_node")  
+graph.add\_conditional\_edge("decision\_node",  
+if (output\[route\] == "Answer " : API else " repharse",
+
+{
+
+"answer\_node" : "answer\_node",  
+"repharse\_node: : "repharse\_node"  
+}
+
+and again repharse node to answer\_node.
+
+now for repharse we were trying to pass the checkpointers memory data.
+
+like previous memory as a context to llm and make it repharse the questions
+
+and as you know the follow ups can we very dynamic
+
+if a api reponse gives a tabular data and the next follow up can be a question about the
+
+1st row or 2nd row ...something like that...
+
+so i'd have to pass the whole question and answer for every query to the llm as context and this process gets very difficult for llm becuase the context can get large.
+
+how to build an system..
+
+and i also have some issue while implementation
+
+i wanted to use the langgraph postgres store to store the data and fetch it while having to pass the whole context to llm if question is a follow up.
+
+but what happened was
+
+while passing the store im having to pass it like along with the "with" keyword because of which im not able to use the store everywhere.
+
+&gt;
+
+DB\_URI = "postgresql://postgres:postgres@localhost:5442/postgres?sslmode=disable"  
+\# highlight-next-line  
+with PostgresStore.from\_conn\_string(DB\_URI) as store:  
+builder = StateGraph(...)  
+\# highlight-next-line  
+graph = builder.compile(store=store)
+
+&gt;
+
+and now when i have to use langmem on top of this
+
+&gt;
+
+here's a implementation ,
+
+i define this memory\_manager on top and
+
+i have my workflow defined
+
+when i where im passing the store ,
+
+and in one of the nodes from the workflow where the final answer is generated i as adding the question and answer
+
+&gt;
+
+like this but when i did a search on store
+
+store.search(("memories",))
+
+i didn't get all the previous messages that were there ...
+
+and in the node where i was using the memory\_manager was like
+
+def answer\_node(state , \* , store = BaseStore)  
+{
+
+..................  
+to\_process = {"messages": \[{"role": "user", "content": message}\] + \[response\]}  
+await memory\_manager.ainvoke(to\_process)
+
+}
+
+is this how i should or should i be taking it as postgres store ??
+
+So can someone tell me why all the previous intercations were not stored
+
+i like i don't know how to pass the thread id and config into memory\_manager for langmem.
+
+Or are there any other better approaches ???  
+to handle context of previous messages and use it as a context to frame new questions based on a user's follow up ??
+
+
+Top 0 comments:

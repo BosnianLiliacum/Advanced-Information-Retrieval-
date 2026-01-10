@@ -1,0 +1,86 @@
+Post Title: I mutation-tested my LangChain agent and it failed in ways evals didn’t catch
+Author: No-Common1466
+Score: 18
+URL: https://www.reddit.com/r/LangChain/comments/1q23mny/i_mutationtested_my_langchain_agent_and_it_failed/
+Number of comments: 4
+Created UTC: 1767372485.0
+
+Post Content:
+I’ve been working on an agent that passed all its evals and manual tests.
+
+Out of curiosity, I ran it through mutation testing  small changes like:
+
+\- typos
+
+\- formatting changes
+
+\- tone shifts
+
+\- mild prompt injection attempts
+
+
+
+It broke. Repeatedly.
+
+
+
+Some examples:
+
+\- Agent ignored tool constraints under minor wording changes
+
+\- Safety logic failed when context order changed
+
+\- Agent hallucinated actions it never took before
+
+
+
+I built a small open-source tool to automate this kind of testing (Flakestorm).
+
+It generates adversarial mutations and runs them against your agent.
+
+
+
+I put together a minimal reproducible example here:
+
+ GitHub repo:  [https://github.com/flakestorm/flakestorm](https://github.com/flakestorm/flakestorm)
+
+Example: [https://github.com/flakestorm/flakestorm/tree/main/examples/langchain\_agent](https://github.com/flakestorm/flakestorm/tree/main/examples/langchain_agent)
+
+
+
+You can reproduce the failure locally in \~10 minutes:
+
+\- pip install
+
+\- run one command
+
+\- see the report
+
+
+
+This is very early and rough - I’m mostly looking for:
+
+\- feedback on whether this is useful
+
+\- what kinds of failures you’ve seen but couldn’t test for
+
+\- whether mutation testing belongs in agent workflows at all
+
+
+
+Not selling anything. Genuinely curious if others hit the same issues.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Reasonable-Life7326
+Score: 1
+Created UTC: 1767379873.0
+Comment: Of, that's rough. Glad you found it though!
+
+Comment 2:
+Author: erikg1337
+Score: 1
+Created UTC: 1767406068.0
+Comment: Flakestorm looks very interesting..

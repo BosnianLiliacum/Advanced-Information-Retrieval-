@@ -1,0 +1,46 @@
+Post Title: What makes a LangChain-based AI app feel reliable in production?
+Author: Own_Working_8729
+Score: 19
+URL: https://www.reddit.com/r/LangChain/comments/1pt88tq/what_makes_a_langchainbased_ai_app_feel_reliable/
+Number of comments: 11
+Created UTC: 1766430981.0
+
+Post Content:
+I’ve been experimenting with building an AI app using LangChain, mainly around chaining and memory.
+Things work well in demos, but production behavior feels different.
+For those using LangChain seriously, what patterns or setups made your apps more stable and predictable?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 7
+Created UTC: 1766434268.0
+Comment: The production behavior difference usually comes down to data variability and pipeline brittleness that doesn't show up in controlled demos. Your chunking and retrieval quality can vary wildly based on document formats, content structure, and edge cases that slip through during development, making the whole chain feel unreliable even when the LangChain logic itself is solid.
+
+The real fix is getting visibility into your document processing pipeline before anything hits the vector store, so you can catch parsing failures and chunking issues at their source instead of three steps later when retrieval goes sideways. I built vectorflow.dev specifically for this problem since debugging RAG apps without seeing your processed docs is like coding blindfolded. What kinds of documents are you processing, and have you noticed patterns in when things break?
+
+Comment 2:
+Author: Electrical-Signal858
+Score: 2
+Created UTC: 1766474533.0
+Comment: easy: don't use it in production
+
+Comment 3:
+Author: Reasonable-Life7326
+Score: 1
+Created UTC: 1766549435.0
+Comment: Testing, testing, testing.
+
+Comment 4:
+Author: AI_Data_Reporter
+Score: 1
+Created UTC: 1766701006.0
+Comment: Production reliability in LangChain-based RAG hinges on achieving 85-95% faithfulness targets. Demos mask the 30% variance in retrieval latency and chunking-induced hallucinations. Transitioning to LangGraph for cyclic orchestration reduces state-loss by 42% compared to linear chains. RAGPulse (Nov 2025) benchmarks confirm that per-component unit testing on retrieval precision is the only path to deterministic outputs. Stop guessing, start measuring.
+
+Comment 5:
+Author: General_Savings3950
+Score: 0
+Created UTC: 1766434627.0
+Comment: You asked about the [AI google sheet](https://docs.google.com/spreadsheets/d/1IDBggQ048cEhQmuod00zps6BopXiGwjmr7-8DJB3C8E/) companion apps

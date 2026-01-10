@@ -1,0 +1,176 @@
+Post Title: [P] The Story Of Topcat (So Far)
+Author: JosephLChu
+Score: 14
+URL: https://www.reddit.com/r/MachineLearning/comments/1purjmx/p_the_story_of_topcat_so_far/
+Number of comments: 10
+Created UTC: 1766594462.0
+
+Post Content:
+*TL;DR: A story about my long-running attempt to develop an output activation function better than softmax.*
+
+*I'd appreciate any kind of feedback about whether or not this project has enough actual merit to publish or at least keep going with, or if I'm stuck in a loop of motivated reasoning.*
+
+Years ago, when I was still working at Huawei, I had a lot of ideas for ways to improve artifical neural network architectures. Many of the things I tried either didn’t really work, or worked, but not reliably, which is to say, they were better in some situations, but not all.
+
+For instance, if you tie the weights but not the biases of each of the gates and the cell of an LSTM, you get something I called an LSTM-LITE, where LITE stands for Local Intercept Terminal Entanglement. Basically, it still, surprisingly works, with only 1/4 the parameters, albeit the performance isn’t as good as a regular LSTM. If you scale up the parameters to match an LSTM, it works about the same in terms of performance.
+
+LSTMs are more or less obsolete now though with transformers in vogue, so this interesting thing isn’t really useful.
+
+Another weird thing that I discovered was that, in some circumstances, multiplying the output of the tanh hidden activation function by the Golden Ratio improves performance. Again, this isn’t very reliable in practice, but it sometimes seems to help. Recently, I tried to figure out why, and my cursory analysis was that if the input into such a scaled function was mean 0 and mean absolute deviation (MAD) 1, then the output would also be mean 0 and MAD 1. This would propagate through many hidden layers and probably act as a kind of self-normalization, which might be beneficial in some circumstances.
+
+But, this isn’t a story about those things. This is a story about something I’ve been obsessively tinkering with for years and may finally have solved. Topcat.
+
+It stands for Total Output Probability Certainty Aware Transform (TOPCAT). The basic idea is that the output layers of the neural network, you want probabilities. For this, everyone currently uses the softmax activation function. There are strong theoretical reasons why this is supposedly optimal, but researchers have long noticed that the thing tends to lead to overconfident models.
+
+I sought to solve this overconfidence, and try to also improve performance at the same time. My solution was to incorporate the Principle of Indifference, aka, the Principle of Maximum Entropy, as a prior. The simplest version of this is the Uniform Distribution. That is to say, given N possibilities or classes, the prior probability of each is 1/N.
+
+Neural networks generally operate in a kind of space where many different features are signalled to be present or absent, and the combination of these is summed to represent how certain the network is that something is or is not. When the network outputs a zero before the final activation function, it can be said to be maximally uncertain.
+
+A while back, I thought about the idea of, instead of using probabilities that go from 0 to 1, we use a certainty metric that goes from -1 to 1, with 1 being most certain, -1 being most certainly not, and 0 being most uncertain. This zero would naturally map to 1/N in probability space. Certainties are similar to correlations, but I treat them as a different thing here. Their main advantage would be being neutral to the number of possibilities, which could be useful when the number is unknown.
+
+Anyway, I hypothesized that you could convert the raw logit outputs of a neural net into the certainty space and then the probability space, and thus get more informed outputs. This was the beginning of Topcat.
+
+After a lot of trial and error, I came up with some formulas that could convert between probability and certainty and vice versa (the “nullifier” and “denullifier” formulas). The denullifier formula became the core of Topcat.
+
+Nullifier: c = log(p \* n + (1 – p) / n – p \* (1 – p)) / log(n)
+
+Denullifier: p = (n\^c \* (c + 1)) / (2\^c \* n)
+
+To get the real numbers of the logit space to become certainties, I needed an “insignifier” function. Initially I tried tanh, which seemed to work well enough. Then I took those certainties and put them through the formula. And to make sure the outputs summed to one, I divided the output by the sum of all the outputs. Admittedly this is a hack that technically breaks the 0 = 1/N guarantee, but NLL loss doesn’t work otherwise, and hopefully the probabilities are closer to ideal than softmax would be.
+
+Anyway, the result was the first version of Topcat.
+
+I tried it on a simple, small language modelling task on a dataset called text8, using a very small character level LSTM. The result was fantastic. It learned way faster and achieved a much lower loss and higher accuracy (note: for language modelling, accuracy is not a very useful metric, so most people use loss/perplexity as the main metric to evaluate them).
+
+Then I tried it again with some different configurations. It was still good, but not -as- good as that first run.
+
+And it began.
+
+That first run, which in retrospect could have easily been a fluke, convinced me for a long time that I had something. There are lots of hidden layer activation functions that people publish all the time. But output layer activations are exceedingly rare, since softmax already works so well. So, to get an output layer activation function that worked better would be… a breakthrough? Easily worth publishing a paper at a top tier conference like NeurIPS, I thought.
+
+At the same time, I wanted to prove that Topcat was special, so I devised a naive alternative that also set 0 = 1/N, but going directly from real numbers to probabilities without the certainty transition. This is the Entropic Sigmoid Neuron (EnSigN).
+
+Ensign = (1 / (1 + e\^(-x) \* (n – 1))) / sum
+
+Ensign would be my control alongside softmax. It also… worked, though not as well as Topcat.
+
+And then things got complicated. To prove that I had something, I had to show it worked across many different tasks, many different models and datasets. I shared my initial version with an intern at Huawei who was a PhD student of one of the professors working with us. When he inserted Topcat in place of softmax… it got NaN errors and didn’t train.
+
+I quickly figured out a hacky fix involving clipping the outputs, and sent that version to a colleague who used it on his latest model… it worked! But it wasn’t better than softmax…
+
+I tried a bunch of things. I tried using binary cross entropy as the loss function instead of categorical cross entropy. I tried customizing the loss function to use N as the base power instead of e, which sometimes helped and sometimes didn’t. I tried using softsign instead of tanh as the insignifier. It still worked, but much slower and less effectively in most circumstances, though it no longer needed clipping for numerical stability.
+
+I came up with more insignifiers. I came across an obscure formula in the literature called the Inverse Square Root (ISR): x / sqrt(x\^2 + 1). Tried this too. It didn’t really help. I tried a combination of softsign and ISR that I called Iris: 2x / (|x| + sqrt(x\^2 + 1)). The original version of this used the Golden Ratio in place of 1, and also added the Golden Ratio Conjugate to the denominator. Initially, it seemed like this helped, but later I found they didn’t seem to…
+
+I tried all these things. Even after I left Huawei, I obsessively tried to make Topcat work again. On and off, here and there, whenever I had an idea.
+
+And then, a few weeks ago, while tinkering with something else, I had a new idea. What if the problem with Topcat was that the input into the insignifier was saturating tanh too quickly. How could I actually fix that while still using tanh? Tanh had the advantage over softsign and the others that it was exponential, which made it play well with the NLL loss function, the same way softmax did. I had come across a paper earlier about Dynamic Tanh from LeCun, and looked at various forms of normalizations. So, on a lark, I tried normalizing the input into the tanh by the standard deviation. Somehow, it helped!
+
+I also tried doing standardization where you also subtract the mean, but that didn’t work nearly as well. I tried various alternative normalizations, like RMS, Mean Absolute Deviation (MAD), etc. Standard Deviation worked better. At least, improving accuracy with a simple CNN on MNIST and loss with NanoGPT in Tiny Shakespeare. But, for some reason, the loss on the simple CNN on MNIST was worse. Perhaps that could be justified in that underconfidence would lead to that when accuracy was very high.
+
+Then, I realized that my implementation didn’t account for how, during inference, you might not have many batches. The normalization used the statistics from the entire tensor of inputs, which at training included all batches. I tried instead making it just element-wise, and it worked much worse than before.
+
+Batch Norm generally gets around this by having a moving average stored from training. I tried this. It worked! Eventually I settled on a version that included both the tensor-wise stats and the element-wise stats during training, and then the moving average of the tensor-wise stats, and the element-wise stats at inference.
+
+But standard deviation still had some issues. It still had significantly worse loss on MNIST. MAD worked better on MNIST, but without clipping went infinity loss on NanoGPT. Other things like RMS had massive loss on MNIST, though it worked decently on NanoGPT. Inconsistency!
+
+So, the final piece of the puzzle. Standard deviation and MAD both share a similar structure. Perhaps they represent a family of functions? I tried a version that replaced square root with logarithm and square with exponential. I call this LMEAD: log(mean(e\^|x-mean(x)|)). Being logarithmic/exponential, it might play better with tanh.
+
+I put that in place of standard deviation. It worked, really, really, well.
+
+Better loss and amazing accuracy on MNIST. Better loss on NanoGPT. I tried five random seeds and confirmed all. So then, I tried a more serious task. CIFAR-10 with a WideResNet.
+
+The latest version of Topcat… went NaN again.
+
+Doom right?
+
+I tried the version with standard deviation. It worked… but… not as well as softmax.
+
+It seemed like I was back to the drawing board.
+
+But then, I tried some things to fix the numerical instability. I found a simple hack. Clip the absolute deviation part of LMEAD to max 50. Maybe the logits were exploding. This would fix that. I checked, and this didn’t change the results on the earlier experiments, where the logits were likely better behaved. I tried this on CIFAR-10 again…
+
+It worked.
+
+The first run finished, and result looks promising.
+
+And that’s where I am now.
+
+I also tried things on a small word level language model to make sure very large values of N didn’t break things, and it seems good.
+
+I still need to try more random seeds for CIFAR-10. The experiments take hours instead of the minutes with MNIST and NanoGPT, so it’ll be a while before I can confirm things for sure. I also should check calibration error and see if Topcat actually creates less overconfident models as intended.
+
+But I think. Maybe… I finally have something I can publish…
+
+*Okay, if you got this far, thanks for reading! Again, I'd appreciate any kind of feedback from the actual qualified ML folks here on whether it makes sense to keep going with this, what other tasks I should try, what conferences to try to publish in if this actually works, or if I should just release it on GitHub, etc.*
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Sad-Razzmatazz-5188
+Score: 16
+Created UTC: 1766596023.0
+Comment: I think the most important problem with softmax probabilities is that we don't feed our models with probabilities as ground truths.
+
+
+This is why instead distillation works well, and I don't know if it's been studied but I'd bet some cents on distilled models being less overconfident than their teachers.
+
+
+I think you are largely over engineering a solution to said main problem, but that is also a joy of R&amp;D...
+
+Comment 2:
+Author: literum
+Score: 11
+Created UTC: 1766637427.0
+Comment: Research is difficult. Most ideas don't work even if they sound great in theory; but that doesn't mean that the project is a failure or you can't find a way to success. Some general advice:
+
+1. Keep reading the literature: At the very least you'll have better understanding of adjacent ideas, methodologies, ways to test etc. For example, you mention that softmax leads to overconfidence, but why? I did some quick research and there's lots of good literature on the overconfidence issue. If you understand better the theory behind overconfidence, the mitigations and more, you can better iterate on your own activation.
+
+2. Have more structure: What is your ultimate goal in this project? It sounds like you started from trying to fix overconfidence and then moved onto better performance. If your goal is still mitigating overconfidence, then why not use metrics that measure overconfidence instead of accuracy? And to be honest, I would bet that finding an activation layer with better calibration characteristics will be much much easier than one with better performance.
+
+3. Get some results out: You mentioned Github and that's probably a good idea. Maybe bring together most of the ideas you tried, run some experiments and ablation studies and put it on Github. It's okay if you have negative results. Having some intermediate results, even if negative, will mean you have something to show, and often writing out your results or putting together a good repo will help you see the issues in your approach or get new ideas. Ask for feedback from researchers afterwards.
+
+4. Pause, come back later: Sometimes it's better to shelve an idea and come back to it later. If you work on something related you may gain a better understanding of the overall research field and have an easier time when you come back. Research is slow, taking a few years off isn't the worst thing. If you're an amateur researcher, this is even easier since your livelihood doesn't depend on pushing out papers. Also, sometimes the brain needs time to properly to process ideas and that can be a subconscious process that takes months. You can miss obvious things when you're very focused on a single idea. 
+
+5. Find people: I'm not sure what your background in research is, but if you don't have many papers published, have a PhD etc. it might be a good idea to find a mentor, probably someone experienced with research. Or find others researching similar ideas, discord groups, niche forums. Meet people in real life. Go to conferences. Find collaborators.
+
+Comment 3:
+Author: serge_cell
+Score: 3
+Created UTC: 1766653377.0
+Comment: The biggest problme I see there is no proof that shape of activation is of any importance, while there are hints that it is not imortant, like reported success of using rounding error as activation. In that case leaky RELU win by maximum simplicity.
+
+Comment 4:
+Author: RestedNative
+Score: 1
+Created UTC: 1767017301.0
+Comment: I read reems and not a single word about Officer Dibble. I feel cheated.
+
+Comment 5:
+Author: whatwilly0ubuild
+Score: 1
+Created UTC: 1767081622.0
+Comment: The inconsistency pattern across tasks and architectures is a massive red flag. When something works brilliantly once then needs constant tweaking to work elsewhere, you're usually overfitting to specific scenarios rather than discovering a fundamental improvement.
+
+Softmax overconfidence is a real problem but it's mostly addressed through temperature scaling, label smoothing, and calibration techniques that are way simpler than what you've built. The complexity of your current solution with multiple normalization strategies, moving averages, and clipping thresholds suggests the approach might be fundamentally unstable.
+
+The fact that you needed different insignifiers, different normalizations, and different clipping strategies for different tasks means you're not finding a general replacement for softmax. You're finding task-specific configurations that sometimes work better, which isn't publishable at top venues.
+
+Our clients doing ML research hit similar patterns where initial promising results turn into years of chasing consistency. Usually means the core idea has issues that patches can't fully fix. The number of hyperparameters and design choices you've accumulated is concerning because it makes the method hard to use and less likely to generalize.
+
+For what you should do next, run way more experiments before considering publication. Five seeds on CIFAR-10 isn't enough. You need multiple architectures, multiple datasets, multiple task types. ImageNet, large language models, different domains. If you can't show consistent improvements across diverse settings without task-specific tuning, it's not ready.
+
+Check calibration carefully since that was your original motivation. Use proper calibration metrics like Expected Calibration Error. If Topcat doesn't actually reduce overconfidence reliably, the theoretical justification falls apart.
+
+Compare against existing solutions to overconfidence like label smoothing, mixup, and temperature scaling. If your complex method doesn't beat simple baselines significantly, reviewers will reject it for adding unnecessary complexity.
+
+The LMEAD normalization with clipping feels like you're papering over numerical instability rather than solving it. Stable methods shouldn't need aggressive clipping. This suggests your formulas might have pathological behavior in certain regimes.
+
+For publication strategy if results hold up, start with a workshop paper at ICLR or NeurIPS rather than main conference. Workshops are more forgiving of preliminary work and you'll get feedback from experts. If the workshop reception is positive and you can strengthen results, then aim for main conference.
+
+Releasing on GitHub makes sense regardless. Even if it's not groundbreaking, it's interesting exploration that others might build on. Write it up clearly, document the instabilities you encountered, and let people experiment.
+
+The motivated reasoning concern is valid. After years of investment it's natural to want this to work. Getting external review through workshop submission or just sharing the work publicly will give you honest feedback on whether you're onto something or chasing noise.
+
+Brutal assessment: the pattern of inconsistency, the accumulation of fixes, and the complexity of the final method all suggest you might not have a general improvement over softmax. But the only way to know for sure is running comprehensive experiments across diverse settings. Do that before investing more years into this.

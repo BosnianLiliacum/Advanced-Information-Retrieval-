@@ -1,0 +1,30 @@
+Post Title: Interview Study for A University Research Study
+Author: LeoXzz
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1pt6qbc/interview_study_for_a_university_research_study/
+Number of comments: 5
+Created UTC: 1766427497.0
+
+Post Content:
+Hi, we are students from University of Maryland. We are inviting individuals with experience using (and preferably designing and building) multi-agent AI systems (MAS) to participate in a research study. The goal of this study is to understand how people conceptualize, design and build multi-agent AI systems in real-world contexts.
+
+If you choose to participate, you will be asked to join a 45–60 minute interview (via Zoom). During the session, we will ask about your experiences with MAS design and use—such as how you define agent roles, handle coordination between agents, and respond to unexpected behaviors.
+
+Eligibility:
+
+18 years or older
+
+Fluent in English
+
+Have prior experience using (and preferably designing and building) multi-agent AI systems
+
+Compensation: You will receive $40 (in Tango gift card) upon completion of the interview.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: HoldZealousideal1966
+Score: 1
+Created UTC: 1766428555.0
+Comment: In

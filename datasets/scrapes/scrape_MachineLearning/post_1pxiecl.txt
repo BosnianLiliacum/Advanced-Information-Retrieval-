@@ -1,0 +1,46 @@
+Post Title: [R] Sophia: A Framework for Persistent LLM Agents with Narrative Identity and Self-Driven Task Management
+Author: bullmeza
+Score: 13
+URL: https://arxiv.org/pdf/2512.18202
+Number of comments: 4
+Created UTC: 1766896856.0
+
+Post Content:
+The paper argue that current System 1 (fast intuition) and System 2 (slow reasoning) architectures make agents feel "amnesiac" and purely reactive.
+
+They propose Sophia, a framework that adds a "System 3" layer to handle persistence and narrative identity.
+
+* Instead of just standard RAG, it maintains a continuous "autobiographical" record to ensure the agent's "identity" stays consistent over long periods.
+* For recurring tasks, the agent transforms repetitive deliberation into a self-driven process, significantly cutting down on reasoning by \~80%.
+* It uses a hybrid reward system (internal + external) to drive autonomous behavior so it isn't just waiting for a human prompt
+
+It’s a pretty interesting take on making agents function more as long-lived entities.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: CampfireHeadphase
+Score: 3
+Created UTC: 1766929795.0
+Comment: Where are the benchmarks? 
+
+Comment 2:
+Author: decawrite
+Score: 1
+Created UTC: 1766902018.0
+Comment: Interesting, I'll have to read more about this.
+
+Comment 3:
+Author: propjerry
+Score: -1
+Created UTC: 1766918017.0
+Comment: **Thanks for sharing.**
+
+**Without Intelligence (Volcano):** The system follows the path of least resistance (Maximum Entropy Production), exploding or decaying randomly.
+
+**With Intelligence (Garden):** The system “models the generative process” (understands the thermodynamics) and intervenes. It uses information (DNA, or in Kawasaki’s case, logistics plans) to **delay** entropy production, capturing that energy to build complex structures first.
+
+What System 3 is all about, management of entropy for stability and navigation of chaos.
+
+[https://www.reddit.com/user/propjerry/comments/1pxo7iv/sophia\_a\_persistent\_agent\_framework\_of\_artificial/?sort=hot](https://www.reddit.com/user/propjerry/comments/1pxo7iv/sophia_a_persistent_agent_framework_of_artificial/?sort=hot)

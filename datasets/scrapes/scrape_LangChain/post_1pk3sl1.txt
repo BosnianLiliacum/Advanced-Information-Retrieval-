@@ -1,0 +1,48 @@
+Post Title: How to make a agent to wait for 2sec
+Author: Character_Leg1134
+Score: 4
+URL: https://www.reddit.com/r/LangChain/comments/1pk3sl1/how_to_make_a_agent_to_wait_for_2sec/
+Number of comments: 7
+Created UTC: 1765474974.0
+
+Post Content:
+H
+
+
+Top 5 comments:
+
+Comment 1:
+Author: PostmaloneRocks94
+Score: 4
+Created UTC: 1765480980.0
+Comment: I’d suggest creating a tool called pauseActivity that takes N seconds as param/input, with a return of success:true and tell the agent to invoke it when you need and ask the agent to always wait for the return statement before proceeding 
+
+Hope this helps or atleast gives you an idea
+
+Comment 2:
+Author: Hot_Substance_9432
+Score: 1
+Created UTC: 1765500819.0
+Comment: One other way
+
+To introduce a 2-second wait in a LangGraph agent, you can define a custom node function that uses a **sleep function from a standard library** (like Python's `time.sleep()`) and include this node in your graph. 
+
+Comment 3:
+Author: lavangamm
+Score: 1
+Created UTC: 1765505969.0
+Comment: a bit more context on at what time you want your agent to wait for 2sec may help
+
+Comment 4:
+Author: Ok_Student8599
+Score: 1
+Created UTC: 1765732016.0
+Comment: time.sleep(2), no?
+
+Or "wait for 2 seconds" in playbooks
+
+Comment 5:
+Author: lambdasintheoutfield
+Score: -1
+Created UTC: 1765487436.0
+Comment: Literally a one liner in python. You can register a tool with MCP if you want to use LangShit but seriously this is not necessary.

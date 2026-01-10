@@ -1,0 +1,28 @@
+Post Title: LangChain Beginner’s Guide | Basic RAG — Playlist &amp; What You’ll Learn
+Author: Amplifyabhi1
+Score: 6
+URL: https://www.youtube.com/playlist?list=PL04fRXMy5cnYTA11ppBwSqTxK0g65RWoI
+Number of comments: 4
+Created UTC: 1766715941.0
+
+Post Content:
+Hey everyone! 👋 I made a **LangChain beginner’s guide playlist** covering the key ideas you need to build real LLM apps from scratch. The playlist walks through core concepts and practical pieces you need to understand how LangChain works.
+
+Finally a simple RAG is created in 4th part will be released soon.....
+
+Note: \*\*\*Beginner guide.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Hot_Substance_9432
+Score: 1
+Created UTC: 1766719262.0
+Comment: Very cool video thanks for sharing!!
+
+Comment 2:
+Author: Amplifyabhi1
+Score: 1
+Created UTC: 1766816437.0
+Comment: New tutorial in this series - [https://youtu.be/R\_cIN3QMvW0](https://youtu.be/R_cIN3QMvW0)

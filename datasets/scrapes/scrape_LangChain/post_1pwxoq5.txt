@@ -1,0 +1,28 @@
+Post Title: Best Paid Courses for Generative AI + Agentic AI Learning Path? (Developer Track)
+Author: Grand-Moment6104
+Score: 5
+URL: https://www.reddit.com/r/LangChain/comments/1pwxoq5/best_paid_courses_for_generative_ai_agentic_ai/
+Number of comments: 2
+Created UTC: 1766841634.0
+
+Post Content:
+Hey folks,
+
+I'm looking to deepen my skills in **Generative AI and Agentic AI** this year, and I want to invest in quality paid courses rather than relying purely on free resources. I have a solid Python background and some experience with APIs, so I'm not starting from zero.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: WineOrDeath
+Score: 1
+Created UTC: 1766849334.0
+Comment: Check Maven.  Lots of quality courses there.
+
+Comment 2:
+Author: Happy-Conversation54
+Score: 1
+Created UTC: 1767170558.0
+Comment: When I started learning Agentic AI, my background was mostly in time series analysis with traditional ML. I tried building a job application pipeline on my own, but realized I needed a framework like LangChain or an SDK to make real progress. Following a structured program helped me understand the current landscape and get ready for what’s coming next.
+
+If anyone’s curious, here’s the program I used: [link](https://go.readytensor.ai/cert-983-certifications)

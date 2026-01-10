@@ -1,0 +1,36 @@
+Post Title: Free PDF-to-Markdown demo that finally extracts clean tables from 10-Ks (Docling)
+Author: AmineAce
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1puphjs/free_pdftomarkdown_demo_that_finally_extracts/
+Number of comments: 5
+Created UTC: 1766588931.0
+
+Post Content:
+Building RAG apps and hating how free tools mangle tables in financial PDFs?
+
+I built a free demo using IBM's Docling – it handles merged cells and footnotes way better than most open-source options.
+
+Try your own PDF: [https://huggingface.co/spaces/AmineAce/pdf-tables-rag-demo](https://huggingface.co/spaces/AmineAce/pdf-tables-rag-demo)
+
+Example on Apple 10-K (shareholders' equity table):
+
+https://preview.redd.it/s2bygren369g1.png?width=945&amp;format=png&amp;auto=webp&amp;s=e2b59a62e15c57d99831922b1817993f21869acc
+
+Simple test PDF also clean (headers, lists, table pipes).
+
+Note: Large docs (80+ pages) take 5-10 min on free tier – worth it for the accuracy.
+
+Would you pay $10/mo for a fast API version (1k pages, async queue, higher limits)?
+
+Feedback welcome – planning waitlist if there's interest!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 2
+Created UTC: 1766593083.0
+Comment: The equity table output looks solid. Merged cells and multi-column headers are usually where things get ugly, especially in 10-Ks where you get those nested column spans with units in one row and dates in another. How does it handle tables that span multiple pages? Most tools either lose header row context entirely or create duplicate headers that break downstream parsing. SEC filings are particularly nasty for this with footnote references like that "(1)" pointing to specific cells.
+
+What's your chunking strategy after the markdown conversion? Clean table extraction can still produce garbage retrieval if chunks split rows from their headers, or if the table loses its relationship to the surrounding text that explains what the numbers mean. I built vectorflow.dev to catch this stuff before it hits the vector store. For the $10/mo API, would you get visibility into intermediate processing steps or just final markdown? Batch processing 80+ page docs blind makes debugging painful when something downstream breaks.

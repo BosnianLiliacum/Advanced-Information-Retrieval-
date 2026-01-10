@@ -1,0 +1,34 @@
+Post Title: [D] Why there are no training benchmarks on the Pro 6000 GPU?
+Author: oren_a
+Score: 13
+URL: https://www.reddit.com/r/MachineLearning/comments/1q1izxh/d_why_there_are_no_training_benchmarks_on_the_pro/
+Number of comments: 3
+Created UTC: 1767311240.0
+
+Post Content:
+Hi, I am searching for benchmarks on training models on the Pro 6000 and I could not really find any:
+
+[https://lambda.ai/gpu-benchmarks](https://lambda.ai/gpu-benchmarks)
+
+[https://bizon-tech.com/gpu-benchmarks/NVIDIA-RTX-A5000-vs-NVIDIA-RTX-4090-vs-NVIDIA-RTX-PRO-6000](https://bizon-tech.com/gpu-benchmarks/NVIDIA-RTX-A5000-vs-NVIDIA-RTX-4090-vs-NVIDIA-RTX-PRO-6000)
+
+
+Top 2 comments:
+
+Comment 1:
+Author: StraussInTheHaus
+Score: 11
+Created UTC: 1767315623.0
+Comment: I found this benchmark on Akamai's website: [https://www.akamai.com/blog/cloud/benchmarking-nvidia-rtx-pro-6000-blackwell-akamai-cloud](https://www.akamai.com/blog/cloud/benchmarking-nvidia-rtx-pro-6000-blackwell-akamai-cloud), though it is only inference.   
+  
+This is somewhat speculative, but there are a number of critical limitations of the RTX Pro 6000 in comparison with the Sm100 cards (B200, etc) that may lead to its limited use in training. 
+
+* The memory bandwidth of the RTX Pro 6000 is 23% that of the B200 - 1.8 TB/s vs 8 TB/s. Given that training is generally a memory-bound process, the tensor cores on the RTX Pro 6000 are not going to be fed sufficiently. 
+* The Sm120 architecture lacks the larger mma instructions found on Sm90 and Sm100.
+* The Sm120 architecture lacks tensor memory (TMEM), the new memory region that alleviates register pressure in mma instructions (the \`tcgen05.mma\` instruction accumulates in TMEM). TMEM is how all Blackwell kernels (like FlashAttention-4) can get such good performance.
+
+Comment 2:
+Author: 1deasEMW
+Score: 1
+Created UTC: 1767316330.0
+Comment: it's just not as powerful as the other stuff they can get their hands on in academia.

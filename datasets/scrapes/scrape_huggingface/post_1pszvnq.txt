@@ -1,0 +1,53 @@
+Post Title: TraceML: lightweight, real-time profiler for PyTorch / HF training
+Author: traceml-ai
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1pszvnq/traceml_lightweight_realtime_profiler_for_pytorch/
+Number of comments: 2
+Created UTC: 1766410994.0
+
+Post Content:
+Hi everyone,
+
+I am sharing **TraceML**, a small open-source tool I’ve been building to make **PyTorch / Hugging Face training runs more observable while they’re running.**
+
+The focus is on things I kept missing when training or fine-tuning models:
+
+* **Layer-wise memory usage** (activations + gradients)
+* **Layer-wise timing** (forward &amp; backward)
+* **Step timers** for user-defined sections (data loading, forward, backward, optimizer, etc.)
+
+It is designed to be always-on and lightweight, not a heavy profiler you run once and turn off.  
+Tested on **NVIDIA T4**, showing **low  overhead** in real training runs.
+
+👉 GitHub: [https://github.com/traceopt-ai/traceml/](https://github.com/traceopt-ai/traceml/)
+
+https://preview.redd.it/prdlzxuuer8g1.png?width=1906&amp;format=png&amp;auto=webp&amp;s=8fc5fafc6252ac60136ddedf4a15330512d9155b
+
+Current status:
+
+* Single-GPU training supported
+* CLI / notebook friendly output
+* Minimal setup (hooks + timers, no big config)
+
+What I am working on next:
+
+* DDP / multi-GPU support
+* Testing on larger GPUs &amp; faster machines (where Python/GIL effects show up)
+* A simple offline viewer for saved trace logs
+
+I would really appreciate:
+
+* ⭐ **Stars** if this looks useful
+* Feedback on **what metrics or views matter most** during HF training
+* Suggestions from people debugging **OOMs, slow steps, or unexpected memory spikes**
+
+Happy to iterate based on community feedback. Thanks!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: [deleted]
+Score: 2
+Created UTC: 1766960379.0
+Comment: [removed]

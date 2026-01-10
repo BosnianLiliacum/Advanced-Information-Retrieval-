@@ -1,0 +1,14 @@
+Post Title: [P] ONNX Runtime &amp; CoreML May Silently Convert Your Model to FP16 (And How to Stop It)
+Author: throwaway16362718383
+Score: 12
+URL: https://ym2132.github.io/ONNX_MLProgram_NN_exploration
+Number of comments: 0
+Created UTC: 1766363436.0
+
+Post Content:
+Hey, wrote this post to summarise my experience working through an issue I had with ONNX RunTime and the precision of my models changing when going from ONNX RunTime with CoreML on CPU vs Apple GPU.
+
+Would be happy to discuss the post further/any questions or feedback.
+
+
+Top 0 comments:

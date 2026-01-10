@@ -1,0 +1,70 @@
+Post Title: Are there ANY NSFW / uncensored roleplay models with “Inference Available” that work across ALL Hugging Face serverless inference providers?
+Author: FunPhysical2147
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pyql8z/are_there_any_nsfw_uncensored_roleplay_models/
+Number of comments: 0
+Created UTC: 1767025451.0
+
+Post Content:
+Hi everyone,
+
+I’m trying to get a **clear and realistic answer** about NSFW / uncensored / roleplay-oriented models on Hugging Face —  
+**specifically models that are marked as “Inference Available” and actually usable across** ***all*** **Hugging Face serverless inference providers.**
+
+To be very explicit, by this I mean models that:
+
+* Are explicitly marked **“Inference Available”** on their Hugging Face model page
+* Can be called via **Hugging Face Inference Providers**
+* Use **serverless inference** (no self-hosted endpoints, no local GGUF)
+* And work across the **entire provider layer**, not just a single backend
+
+
+
+# The issue I keep running into
+
+There are many community models labeled as:
+
+* *uncensored*
+* *low-alignment*
+* *roleplay-focused*
+
+However, in practice:
+
+* Many of these models are **NOT marked as “Inference Available”**
+* Or they are marked as available, but:
+   * return 404 when called via inference APIs
+   * are “not supported by this provider”
+   * or are silently moderated / filtered at the provider layer
+* Some models may work on **one specific provider**, but **fail on others**, which breaks real production usage
+
+So in reality, *“uncensored” + “Inference Available” + “all serverless inference providers”* seems to be an almost empty intersection.
+
+
+
+# My questions
+
+1. **Are there** ***any*** **models that:**
+   * are genuinely low-alignment / uncensored (especially for roleplay or character chat),
+   * are explicitly marked **Inference Available**,
+   * and work across **all Hugging Face serverless inference providers**?
+2. If the realistic answer is “no”:
+   * Is it fair to say that **HF serverless inference is fundamentally incompatible with NSFW / RP-heavy use cases** in 2025?
+3. Architecturally:
+   * Is moderation enforced **upstream at the inference provider or router layer**, regardless of model alignment?
+   * Or are there known exceptions where providers remain permissive *when accessed through HF’s router*?
+
+
+
+# What I’m not asking for
+
+* Not asking for illegal content
+* Not asking for local GGUF
+* Not asking for self-hosted inference endpoints
+
+I’m trying to understand the **actual practical boundary** of HF serverless inference —  
+and whether “uncensored models” on HF are effectively **local-only unless you run your own infrastructure**.
+
+Any recent, hands-on insights would be greatly appreciated. Thanks!
+
+
+Top 0 comments:

@@ -1,0 +1,32 @@
+Post Title: I wrote a beginner-friendly explanation of how Large Language Models work
+Author: Feisty-Promise-78
+Score: 8
+URL: https://blog.lokes.dev/how-large-language-models-work
+Number of comments: 2
+Created UTC: 1767359279.0
+
+Post Content:
+I recently published my first technical blog where I break down how Large Language Models work under the hood.
+
+The goal was to build a clear mental model of the full generation loop:
+
+* tokenization
+* embeddings
+* attention
+* probabilities
+* sampling
+
+I tried to keep it high-level and intuitive, focusing on *how the pieces fit together* rather than implementation details.
+
+Blog link: [https://blog.lokes.dev/how-large-language-models-work](https://blog.lokes.dev/how-large-language-models-work)
+
+I’d genuinely appreciate feedback, especially if you work with LLMs or are learning GenAI and feel the internals are still a bit unclear.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: canHeSuccess
+Score: 2
+Created UTC: 1767967577.0
+Comment: very clear introduction👍

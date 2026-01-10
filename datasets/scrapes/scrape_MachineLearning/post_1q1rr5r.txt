@@ -1,0 +1,110 @@
+Post Title: [P] LEMMA: A Rust-based Neural-Guided Theorem Prover with 220+ Mathematical Rules
+Author: Federal_Ad1812
+Score: 51
+URL: https://www.reddit.com/r/MachineLearning/comments/1q1rr5r/p_lemma_a_rustbased_neuralguided_theorem_prover/
+Number of comments: 20
+Created UTC: 1767336677.0
+
+Post Content:
+# Hello r/MachineLearning
+
+I've been building LEMMA, an open-source symbolic mathematics engine that uses Monte Carlo Tree Search guided by a learned policy network. The goal is to combine the rigor of symbolic computation with the intuition that neural networks can provide for rule selection.
+
+# The Problem
+
+Large language models are impressive at mathematical reasoning, but they can produce plausible-looking proofs that are actually incorrect. Traditional symbolic solvers are sound but struggle with the combinatorial explosion of possible rule applications. LEMMA attempts to bridge this gap: every transformation is verified symbolically, but neural guidance makes search tractable by predicting which rules are likely to be productive.
+
+# Technical Approach
+
+The core is a typed expression representation with about 220 transformation rules covering algebra, calculus, trigonometry, number theory, and inequalities. When solving a problem, MCTS explores the space of rule applications. A small transformer network (trained on synthetic derivations) provides prior probabilities over rules given the current expression, which biases the search toward promising branches.
+
+The system is implemented in Rust (14k lines of Rust, no python dependencies for the core engine) Expression trees map well to Rust's enum types and pattern matching, and avoiding garbage collection helps with consistent search latency.
+
+# What It Can Solve
+
+Algebraic Manipulation:
+
+* (x+1)² - (x-1)² → 4x  (expansion and simplification)
+* a³ - b³  → (a-b)(a² + ab + b²) (difference of cubes factorization)
+
+Calculus:
+
+* d/dx\[x·sin(x)\]  → sin(x) + x·cos(x) (product rule)
+* ∫ e\^x dx  → e\^x + C  (integration)
+
+Trigonometric Identities:
+
+* sin²(x) + cos²(x)  → 1  (Pythagorean identity)
+* sin(2x) → 2·sin(x)·cos(x)  (double angle)
+
+Number Theory:
+
+* gcd(a,b) · lcm(a,b) → |a·b|  (GCD-LCM relationship)
+* C(n,k) + C(n,k+1)  → C(n+1,k+1)  (Pascal's identity)
+
+Inequalities:
+
+* Recognizes when a² + b² ≥ 2ab  applies (AM-GM)
+* |a + b| ≤ |a| + |b|  (triangle inequality bounds)
+
+Summations:
+
+* Σ\_{i=1}\^{n} i  evaluates to closed form when bounds are concrete
+* Proper handling of bound variables and shadowing
+
+# Recent Additions
+
+The latest version adds support for summation and product notation with proper bound variable handling, number theory primitives (GCD, LCM, modular arithmetic, factorials, binomial coefficients), and improved AM-GM detection that avoids interfering with pure arithmetic.
+
+# Limitations and Open Questions
+
+The neural component is still small and undertrained. I'm looking for feedback on:
+
+* What rule coverage is missing for competition mathematics?
+* Architecture suggestions - the current policy network is minimal
+* Strategies for generating training data that covers rare but important rule chains
+
+The codebase is at [https://github.com/Pushp-Kharat1/LEMMA](https://github.com/Pushp-Kharat1/LEMMA). Would appreciate any thoughts from people working on similar problems.
+
+PR and Contributions are Welcome!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: JustOneAvailableName
+Score: 12
+Created UTC: 1767349255.0
+Comment: &gt; What rule coverage is missing for competition mathematics?
+
+I am not really sure there is a finite list, and I don't even think the rules of math are as defined as we'd like them to be. Did you already take a look at LEAN for inspiration?
+
+&gt; Architecture suggestions - the current policy network is minimal
+
+If your language/rules are LR parsing, you can just train a regular "LLM" on this as policy function.
+
+Comment 2:
+Author: Tylerich
+Score: 4
+Created UTC: 1767361118.0
+Comment: Cool, but I didn't quite understand what is happening behind the scenes. For example when expanding and simplifying the polynomial, you mentioned, what exactly does the neural network predict in the first step? The probability of single token, like in a transformer? No, right? Rather a probability of a certain transformation?
+
+Also, how does it now it found the "best" simplification and not something like X**2 +5 - 5
+
+Comment 3:
+Author: EdwardRaff
+Score: 1
+Created UTC: 1767386533.0
+Comment: This seems really cool! It would be nice to add a string parser for less verbose usage, and some examples on how to make it do inequalities and similar.
+
+Comment 4:
+Author: ScottBurson
+Score: 1
+Created UTC: 1767396867.0
+Comment: Very interesting work!  Why did you pick Rust?
+
+Comment 5:
+Author: EdwardRaff
+Score: 1
+Created UTC: 1767420529.0
+Comment: I just remembered about Rubi https://rulebasedintegration.org/ , you should politely steal their integrator rules.

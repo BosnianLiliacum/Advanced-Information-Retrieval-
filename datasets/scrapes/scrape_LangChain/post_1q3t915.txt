@@ -1,0 +1,42 @@
+Post Title: How can I develop an agent skill system on top of LangChain 1.0
+Author: GardenOwn1917
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1q3t915/how_can_i_develop_an_agent_skill_system_on_top_of/
+Number of comments: 11
+Created UTC: 1767541820.0
+
+Post Content:
+How can I develop an agent skill system on top of LangChain 1.0 toolset to replace tools, and enable the agent to automatically unload and load these tools? How should I design the prompts for this? Can anyone share their approach?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: vtrivedy-lc
+Score: 5
+Created UTC: 1767544899.0
+Comment: Hey op, our deepagents repo is built on the 1.0 create_agent() and we have an integrated SkillsMiddleware in the deepagents-cli that supports adding skills [here](https://github.com/langchain-ai/deepagents/blob/master/libs/deepagents-cli/deepagents_cli/skills/middleware.py)
+
+Hope that’s a good example to get started with and understand how skill building/loading works.  It uses the latest AgentSkills spec.
+
+We also have this [blog](https://blog.langchain.com/using-skills-with-deep-agents/) on Using Skills with DeepAgents that walks through it.  Hope this helps, lmk if there’s any way we can help as you build!
+
+Comment 2:
+Author: pbalIII
+Score: 2
+Created UTC: 1767562272.0
+Comment: The key distinction u/cmndr_spanky raised is worth clarifying... skills are higher-order than tools. A tool is a single function with a docstring. A skill bundles prompts, scripts, and context that the agent can discover and execute on demand.
+
+For the mode-switching you're describing, LLMToolSelectorMiddleware is probably what you want. It runs before the main model call and filters down to relevant tools based on query context. Combine that with domain-specific prompt templates in a custom before_model hook and you get something close to skill switching without the multi-agent overhead.
+
+One gotcha: dynamic tool addition after agent creation isn't supported yet. All tools need to be registered upfront, middleware just filters the active set per turn.
+
+Comment 3:
+Author: adlx
+Score: 1
+Created UTC: 1767542238.0
+Comment: Do you mean a first step does select some most  relevant tools from a listbof (possibly many) available tools and then offers them to the next llm call as tools?
+
+I'd say first is a chain with structured output to return list of selected tools. 
+
+Then just bind those selected tools for the llm to use in next calls/graph

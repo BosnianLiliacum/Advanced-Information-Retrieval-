@@ -1,0 +1,79 @@
+Post Title: [D] Self-Promotion Thread
+Author: AutoModerator
+Score: 19
+URL: https://www.reddit.com/r/MachineLearning/comments/1q1nko4/d_selfpromotion_thread/
+Number of comments: 36
+Created UTC: 1767323732.0
+
+Post Content:
+Please post your personal projects, startups, product placements, collaboration needs, blogs etc.
+
+Please mention the payment and pricing requirements for products and services.
+
+Please do not post link shorteners, link aggregator websites , or auto-subscribe links.
+
+\--
+
+Any abuse of trust will lead to bans.
+
+Encourage others who create new posts for questions to post here instead!
+
+Thread will stay alive until next one so keep posting after the date in the title.
+
+\--
+
+Meta: This is an experiment. If the community doesnt like this, we will cancel it. This is to encourage those in the community to promote their work by not spamming the main threads.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: anotherallan
+Score: 10
+Created UTC: 1767333767.0
+Comment: https://wizwand.com is PapersWithCode alternative but reimplemented from the ground up aiming for better results. PapersWithCode was heavily spammed in recent years and eventually got sunsetted after taken over by HF, and we want to help the ML/AI research community to stay up to date with SOTA benchmarks again.
+
+Pricing: completely free 🎉
+
+Comment 2:
+Author: New-Skin-5064
+Score: 4
+Created UTC: 1767379955.0
+Comment: I trained Physics Informed Neural Networks for the heat equation, Burgers' Equation, and the Schrödinger equation: [https://github.com/sr5434/pinns](https://github.com/sr5434/pinns)  
+Let me know what you think/how I can improve my project!
+
+Comment 3:
+Author: nekize
+Score: 2
+Created UTC: 1767340621.0
+Comment: We made an open-source MLOps workflow suite that can also run on raspberry pi-like edge devices, and support distributed training, modela storage and deployment. We are currently in the process of upgrading it into agentOps and also MCP server for agent access: https://github.com/sensorlab/NAOMI
+
+Comment 4:
+Author: baradas
+Score: 2
+Created UTC: 1767362646.0
+Comment: [https://counsel.getmason.io](https://counsel.getmason.io)  
+  
+Counsel MCP Server: a “deep synthesis” workflow via MCP (research + synthesis with structured debates)
+
+Inspired a ton by Karpathy’s work on the LLM-council product, over the holidays, built **Counsel MCP Server**: an MCP server that runs **structured debates** across a **family of LLM agents** to **research + synthesize** with fewer silent errors. The council emphasizes: a debuggable artifact trail and a MCP integration surface that can be plugged in into any assistant.
+
+# What it does ?
+
+* You submit a research question or task.
+* The server runs a structured loop with multiple LLM agents (examples: propose, critique, synthesize, optional judge).
+* You get back artifacts that make it inspectable:
+   * **final** synthesis (answer or plan)
+   * **critiques** (what got challenged and why)
+   * **decision record** (assumptions, key risks, what changed)
+   * **trace** (run timeline, optional per-agent messages, cost/latency)
+
+not only a "N models voting” in a round robin pattern - the council runs structured arguments and critique aimed at improving research synthesis.
+
+Comment 5:
+Author: Sorry_Transition_599
+Score: 1
+Created UTC: 1767330544.0
+Comment: Developing https://meetily.ai, An Privacy first Ai meeting note taker.
+
+We wanted to use local ML models to do inferencing on user's personal devices so that the meeting data never leaves the system, ensuring privacy.

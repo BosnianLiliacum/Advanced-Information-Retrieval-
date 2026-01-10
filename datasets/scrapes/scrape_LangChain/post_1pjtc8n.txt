@@ -1,0 +1,82 @@
+Post Title: Solved my LangChain memory problem with multi-layer extraction, here's the pattern that actually works
+Author: FeelingWatercress871
+Score: 15
+URL: https://www.reddit.com/r/LangChain/comments/1pjtc8n/solved_my_langchain_memory_problem_with/
+Number of comments: 5
+Created UTC: 1765445237.0
+
+Post Content:
+Been wrestling with LangChain memory for a personal project and finally cracked something that feels sustainable. Thought I'd share since I see this question come up constantly.
+
+The problem is that standard ConversationBufferMemory works fine for short chats but becomes useless once you hit real conversations. ConversationSummaryMemory helps but you lose all the nuance. VectorStoreRetrieverMemory is better but still feels like searching through a pile of sticky notes.
+
+What I realized is that good memory isn't just about storage, it's about extraction layers. Instead of dumping raw conversations into vectors, I started building a pipeline that extracts different types of memories at different granularities.
+
+First layer is atomic events. Extract individual facts from each exchange like "user mentioned they work at Google" or "user prefers Python over JavaScript" or "user is planning a vacation to Japan". These become searchable building blocks. Second layer groups these into episodes, so instead of scattered facts you get coherent stories like "user discussed their new job at Google, mentioned the interview process was tough, seems excited about the tech stack they'll be using." Third layer is where it gets interesting. You extract semantic patterns and predictions like "user will likely need help with enterprise Python patterns" or "user might ask about travel planning tools in the coming weeks". Sounds weird but this layer catches context that pure retrieval misses.
+
+The LangChain implementation is pretty straightforward. I use custom memory classes that inherit from BaseMemory and run extraction chains after each conversation turn. Here's the rough structure:
+
+    from langchain.memory import BaseMemory
+    from langchain.chains import LLMChain
+    
+    class LayeredMemory(BaseMemory):
+        def __init__(self, llm, vectorstore):
+            self.atomic_chain = LLMChain(llm=llm, prompt=atomic_extraction_prompt)
+            self.episode_chain = LLMChain(llm=llm, prompt=episode_prompt) 
+            self.semantic_chain = LLMChain(llm=llm, prompt=semantic_prompt)
+            self.vectorstore = vectorstore
+        
+        def save_context(self, inputs, outputs):
+            conversation = f"Human: {inputs}\nAI: {outputs}"
+            
+            # extract atomic facts
+            atomics = self.atomic_chain.run(conversation)
+            self.vectorstore.add_texts(atomics, metadata={"layer": "atomic"})
+            
+            # periodically build episodes from recent atomics
+            if self.should_build_episode():
+                episode = self.episode_chain.run(self.recent_atomics)
+                self.vectorstore.add_texts([episode], metadata={"layer": "episode"})
+            
+            # semantic extraction runs async to save latency
+            self.queue_semantic_extraction(conversation)
+
+The retrieval side uses a hybrid approach. For direct questions, hit the atomic layer. For context heavy requests, pull from episodes. For proactive suggestions, the semantic layer is gold.
+
+I got some of these ideas from looking at how projects like EverMemOS structure their memory layers. They have this episodic plus semantic architecture that made a lot of sense once I understood the reasoning behind it.
+
+Been running this for about a month on a coding assistant that helps with LangChain projects (meta, I know). The difference is night and day. It remembers not just what libraries I use, but my coding style preferences, the types of problems I typically run into, even suggests relevant patterns before I ask.
+
+Cost wise it's more expensive upfront because of the extraction overhead, but way cheaper long term since you're not stuffing massive conversation histories into context windows.
+
+Anyone else experimented with multi layer memory extraction in LangChain? Curious what patterns you've found that work. Also interested in how others handle the extraction vs retrieval cost tradeoff.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Temporaryso
+Score: 3
+Created UTC: 1765445967.0
+Comment: How do you handle the latency on save\_context? Running three LLM chains after every turn seems like it would add noticeable delay. Or do you batch these somehow?
+
+Comment 2:
+Author: cremaster_
+Score: 1
+Created UTC: 1765523160.0
+Comment: I was also tinkering with long term memory lately. I went with a similar approach:
+
+\- Evaluating every two turns for if there's something important to remember and saving it to a vector DB  
+\- Evaluating every ten turns and grabbing a more strategic/thematic memory and saving it to a vector DB
+
+I also have some limits and pruning mechanisms, but it's pretty basic right now. I'm also tinkering with what I should compare to the embedded facts for similarity. Right now it's just the last query (no rewriting), but perhaps it should be a few turns.
+
+Feel free to check it out. I used Inworld Runtime which is somewhat similar to LangGraph but in TS.
+
+[https://github.com/cshape/inworld-memory-cli](https://github.com/cshape/inworld-memory-cli)
+
+Comment 3:
+Author: RepulsivePurchase257
+Score: 1
+Created UTC: 1765730679.0
+Comment: The EverMemOS mention is interesting, I looked into their stuff a while back. They have some papers or docs about why the episodic/semantic split matters for long term coherence. Might be worth digging into if you want to optimize your episode extraction prompts.

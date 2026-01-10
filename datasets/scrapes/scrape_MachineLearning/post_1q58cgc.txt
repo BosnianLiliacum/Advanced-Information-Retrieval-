@@ -1,0 +1,55 @@
+Post Title: [D] Shall I Reject Reviewing this CVPR Paper?
+Author: Outrageous_Tip_8109
+Score: 36
+URL: https://www.reddit.com/r/MachineLearning/comments/1q58cgc/d_shall_i_reject_reviewing_this_cvpr_paper/
+Number of comments: 19
+Created UTC: 1767672383.0
+
+Post Content:
+I am reviewing CVPR paper this season and have found out that authors have included an **"external link"** to the paper which is a **clear violation** of the CVPR submission guidelines.
+
+I also confirmed that authors have checked the "No external link checkbox" clearly stating: I confirm that the paper submission and supplementary material contain no external links intended to expand content...
+
+Guidelines says: Authors are not allowed to include external links (e.g., to **webpages, images**, or videos)
+
+I've **not opened** the link but it looks like **google site webpage** of the paper may contain videos/images or other same/extra stuff.
+
+I've checked reviewer's guideline on official CVPR page for this but it seems that CVPR have not provided what you should do in such cases.
+
+What are my options? Shall I add confidential comment to AC/PC? Has anyone encountered the same?
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: redlow0992
+Score: 71
+Created UTC: 1767674083.0
+Comment: Desk reject for violating submission policy, no?
+
+Comment 2:
+Author: stalin1891
+Score: 50
+Created UTC: 1767674466.0
+Comment: You should write an official comment (you have two buttons, official review and official comment), asking the AC or PCs about it. It is likely that the AC missed it (they have 10s of papers to deal with). Last year, I had one paper where the authors had content spanning 8.5 pages. I brought this to notice using the official comment, and it was shortly desk rejected by the PCs. 
+Don't spend unnecessary time reviewing, make the official comment first and let them deicide first.
+
+Comment 3:
+Author: Runninganddogs979
+Score: 10
+Created UTC: 1767679152.0
+Comment: agreed to ask your AC but otherwise review paper as normal unless they say otherwise
+
+Comment 4:
+Author: Affectionate_Horse86
+Score: 2
+Created UTC: 1767700656.0
+Comment: Does the conference have a program chair? part of their role is to solve these issues. Going to Reddit rather than to them is rather weird.
+
+Comment 5:
+Author: roman_fyseek
+Score: -8
+Created UTC: 1767674002.0
+Comment: DQ

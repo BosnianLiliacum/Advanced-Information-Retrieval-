@@ -1,0 +1,58 @@
+Post Title: [D] Ilya Sutskever's latest tweet
+Author: we_are_mammals
+Score: 88
+URL: https://www.reddit.com/r/MachineLearning/comments/1pnm0r0/d_ilya_sutskevers_latest_tweet/
+Number of comments: 111
+Created UTC: 1765840124.0
+
+Post Content:
+&gt; One point I made that didn’t come across:
+&gt;
+&gt; - Scaling the current thing will keep leading to improvements.  In particular, it won’t stall.
+&gt; - But something important will continue to be missing.
+
+What do you think that "something important" is, and more importantly, what will be the practical implications of it being missing?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: bikeskata
+Score: 210
+Created UTC: 1765840190.0
+Comment: I don't know, but I suspect he's happy to answer if you give him $50 million at a $1.2 billion valuation.
+
+Comment 2:
+Author: howtorewriteaname
+Score: 72
+Created UTC: 1765841182.0
+Comment: something important being that there seems to be fundamental things the current framework can not attain. e.g. a cat finding a way to get on top of a table demonstrates remarkable generalization capabilities and complex planning, very efficiently, without relying on language. is this something scaling LLMs solve? not really
+
+Comment 3:
+Author: nathanjd
+Score: 65
+Created UTC: 1765842276.0
+Comment: Scaling LLMs won't ever stop hallucinations.
+
+Comment 4:
+Author: ricafernandes
+Score: 39
+Created UTC: 1765844937.0
+Comment: Hey, that's a foundational problem in the current ML reasearch mainstream...
+
+What happens: 
+transformers architectures are based on the language distributional hypothesis, which captures syntax and morfological patterns in languages. "I am ____" is probably an adjective.
+
+Thus, it learns meaning by words coocurrences, we know that an adjective will be there because of what it usually is expected (from here we can deduce "suprise" metrics like perplexity and entropy)
+
+If our vector spaces (embedding spaces) have meaning because of words coocurrence and how words are distributed accross languages, it is actually a miracle how chatGPT-like came up with zero shot performance on so many tasks... But expecting it to further miracle itself it into a computer god is too much to ask for
+
+When we RL models we are fine tuning them on a new word distribution, which is our annotated data, but there is no amount of tokens to make it recognize and fix all cognitive dissonances packed and, with that, guarantee "reason" or "reasonable responses within an ethical frame". 
+
+It isn't aligned with truth or anything similar (and cant, by design, it isn't learning the underlying representation of language, it roughly approximates it by tokens that walk together), it is aligned with training data token distribution.
+
+Comment 5:
+Author: not_particulary
+Score: 14
+Created UTC: 1765851160.0
+Comment: My dog can stay focused on a single task for lots more sequential tokens, and he's more robust to adversarial attacks such as camouflage. He can get stung by a bee by the rose bush and literally never make that mistake again.

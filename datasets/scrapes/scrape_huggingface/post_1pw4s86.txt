@@ -1,0 +1,32 @@
+Post Title: Fine-Tuned Model for Legal-tech Minimal Hallucination Summarization
+Author: ThatParking526
+Score: 3
+URL: https://www.reddit.com/r/huggingface/comments/1pw4s86/finetuned_model_for_legaltech_minimal/
+Number of comments: 1
+Created UTC: 1766757140.0
+
+Post Content:
+Hey all,
+
+I’ve been exploring how transformer models handle legal text and noticed that most open summarizers miss specificity; they simplify too much. That led me to build **LexiBrief**, a fine-tuned Google FLAN-T5 model trained on *BillSum* using QLoRA for efficiency.
+
+[https://huggingface.co/AryanT11/lexibrief-legal-summarizer](https://huggingface.co/AryanT11/lexibrief-legal-summarizer)
+
+It generates concise, clause-preserving summaries of legal and policy documents, kind of like a TL;DR that still respects the law’s intent.
+
+Metrics:
+
+* ROUGE-L F1: **0.72**
+* BERTScore (F1): **0.86**
+* Hallucinations (FactCC): **↓35% vs base FLAN-T5**
+
+It’s up on Hugging Face if you want to play around with it. I’d love feedback from anyone who’s worked on factual summarization or domain-specific LLM tuning.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: true-though
+Score: 1
+Created UTC: 1766759833.0
+Comment: Thank you, great job!

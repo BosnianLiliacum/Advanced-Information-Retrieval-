@@ -1,0 +1,99 @@
+Post Title: Why "yesterday" and "6 months ago" produce identical embeddings and how I fixed it
+Author: Defiant-Sale8382
+Score: 34
+URL: https://www.reddit.com/r/LangChain/comments/1pt4y4m/why_yesterday_and_6_months_ago_produce_identical/
+Number of comments: 11
+Created UTC: 1766423383.0
+
+Post Content:
+AI agents don't "forget." ChatGPT stores your memories. Claude keeps context. The storage works fine.
+
+The problem is **retrieval**.
+
+I've been building AI agent systems for a few months, and I kept hitting the same wall.
+
+Picture this: you're building an agent with long-term memory. User tells it something important, let's say a health condition. Months go by, thousands of conversations happen, and now the user asks a related question.
+
+The memory is stored. It's sitting right there in your vector database.
+
+But when you search for it? Something else comes up. Something more recent. Something with higher semantic similarity but completely wrong context.
+
+I dug into why this happens, and it turns out the **underlying embeddings** (OpenAI's, Cohere's, all the popular ones) were trained on **static documents**. They understand what words mean. They don't understand when things happened.
+
+"Yesterday" and "six months ago" produce nearly identical vectors.
+
+For document search, this is fine. For agent memory where timing matters, it's a real problem.
+
+**How I fixed it (AgentRank):**
+
+The core idea: make embeddings understand time and memory types, not just words.
+
+Here's what I added to a standard transformer encoder:
+
+1. **Temporal embeddings:** 10 learnable time buckets (today, 1-3 days, this week, last month, etc.). You store memories with their timestamp, and at query time, the system calculates how old each memory is and picks the right bucket. The model learns during training that queries with "yesterday" should match recent buckets, and "last year" should match older ones.
+2. **Memory type embeddings:** 3 categories: episodic (events), semantic (facts/preferences), procedural (instructions). When you store "user prefers Python" you tag it as semantic. When you store "we discussed Python yesterday" you tag it as episodic. The model learns that "what do I prefer" matches semantic memories, "what did we do" matches episodic.
+3. **How they combine:** The final embedding is: semantic meaning + temporal embedding + memory type embedding. All three signals combined. Then L2 normalized so you can use cosine similarity.
+4. **Training with hard negatives:** I generated 500K samples where each had 7 "trick" negatives: same content but different time, same content but different type, similar words but different meaning. Forces the model to learn the nuances, not just keyword matching.
+
+**Result:** 21% better MRR, 99.6% Recall@5 (vs 80% for baselines). That health condition from 6 months ago now surfaces when it should.
+
+**Then there's problem #2.**
+
+If you're running multiple agents: research bot, writing bot, analysis bot - they have no idea what each other knows.
+
+I measured this on my own system: agents were duplicating work constantly. One would look something up, and another would search for the exact same thing an hour later. Anthropic actually published research showing multi-agent systems can waste 15x more compute because of this.
+
+Human teams don't work like this. You know X person handles legal and Y person knows the codebase. You don't ask everyone everything.
+
+**How I fixed it (CogniHive):**
+
+Implemented something called **Transactive Memory** from cognitive science, it's how human teams naturally track "**who knows what**".
+
+Each agent registers with their expertise areas upfront (e.g., "data\_agent knows: databases, SQL, analytics"). When a question comes in, the system uses **semantic** matching to find the best expert. This means "optimize my queries" matches an agent who knows "databases", you don't need to hardcode every keyword variation.
+
+Over time, expertise profiles can **evolve** based on what each agent actually handles. If the data agent keeps answering database questions successfully, its expertise in that area strengthens.
+
+Both free, both work with CrewAI/AutoGen/LangChain/OpenAI Assistants.
+
+I'm not saying existing tools are bad. I'm saying there's a gap when you need temporal awareness and multi-agent coordination.
+
+If you're building something where these problems matter, try it out:
+
+\- CogniHive: \`pip install cognihive\`
+
+\- AgentRank: [https://huggingface.co/vrushket/agentrank-base](https://huggingface.co/vrushket/agentrank-base)
+
+\- AgentRank(small): [https://huggingface.co/vrushket/agentrank-small](https://huggingface.co/vrushket/agentrank-small)
+
+\- Code: [https://github.com/vmore2/AgentRank-base](https://github.com/vmore2/AgentRank-base)
+
+Everything is **free and open-source**.
+
+And if you've solved these problems differently, genuinely curious what approaches worked for you.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: adlx
+Score: 4
+Created UTC: 1766427358.0
+Comment: Embeddings dont store words. They store semantics
+..
+
+Also consider two embedding models will make different vectors for same texts
+
+Comment 2:
+Author: one-wandering-mind
+Score: 1
+Created UTC: 1766464485.0
+Comment: Cool doing the work and building something. Why do this instead of filtering by date in the search? Id suspect that the side effect to your approach is that for many searches, it will now take into account much more than is desirable. 
+
+
+Also, just FYI you aren't going to get the extract same embedding from "yesterday" and "6 months ago" . 
+
+Comment 3:
+Author: Abhi_Survase
+Score: -1
+Created UTC: 1766431674.0
+Comment: If I ask Gemini to attend a marriage on 26th Dec, will it store the data as Context or Memory

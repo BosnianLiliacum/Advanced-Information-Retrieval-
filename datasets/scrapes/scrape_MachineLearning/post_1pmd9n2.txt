@@ -1,0 +1,51 @@
+Post Title: [D] On the linear trap of autoregression
+Author: Chinese_Zahariel
+Score: 22
+URL: https://www.reddit.com/r/MachineLearning/comments/1pmd9n2/d_on_the_linear_trap_of_autoregression/
+Number of comments: 14
+Created UTC: 1765716428.0
+
+Post Content:
+Hi, during a casual conversation with a colleague, he mentioned the concept of the linearity trap, which seems to stem from the autoregressive feature of LLMs. However, he didn't seem to have much domain-specific knowledge, so I didn't get a good explanation; the problem just lingered in my mind, which appears to be a cause for LLM's hallucination and error accumulation. 
+
+I'd like to know if this is a real problem that is worth investigating. If so, are there any promising directions? Thanks in advance.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Sad-Razzmatazz-5188
+Score: 71
+Created UTC: 1765717425.0
+Comment: Hallucinations are a stupid name for a plain concept: the models are trained on words, not on facts, and it's easy to predict a sequence of words that is grammatically correct, syntactically fine, statistically plausible and factually wrong or even meaningless. 
+Linearity and autoregression have nothing to do with it.
+
+
+Maybe they were trying to channel LeCun's note on the fact that autoregressive models with a constant chance of error will eventually predict the wrong token and then drift away from the right answer, which is a so-so concern as we can't always conceptualize a situation as having right and wrong tokens 
+
+Comment 2:
+Author: NER0IDE
+Score: 29
+Created UTC: 1765716874.0
+Comment:  Hallucinations are not specific to auto-reg models. Eg. diffusion models are also susceptible to it.
+
+Comment 3:
+Author: joaogui1
+Score: 7
+Created UTC: 1765719846.0
+Comment: I think a simple example of the problem with autoregression is computing the product of 2 numbers (the sum would also work). Generally when computing the product we start by determining the least important digits, because doing that gives us the carries that will affect the computation of subsequent digits, but with autoregression you have to output the most significant digit of the result first, so you have to almost solve the whole problem before outputting a single digit. 
+
+
+Before chain of thought you could get significantly better results by training llms that would output the digits of the result in reverse order because of that, but this is obviously a very specific strategy to deal with the limitations of autoregressive models
+
+Comment 4:
+Author: Mediocre_Common_4126
+Score: 3
+Created UTC: 1765746682.0
+Comment: yeah it’s a real thing, the linear trap basically means every token prediction depends on the last one, so any small error compounds forward, like a feedback loop with no correction, that’s why long outputs drift or hallucinate, some folks try to break it with non-autoregressive decoding, self-consistency sampling, or retrieval refresh between segments, another path is hybrid models that ground each chunk on an external state instead of pure next-token prediction, worth looking into if you’re studying error propagation or model stability
+
+Comment 5:
+Author: HybridRxN
+Score: -2
+Created UTC: 1765735213.0
+Comment: All these people talking about transformers as LLMs , xLSTMs don’t seem to have those same limitations in context, but zeitgeist is transformer

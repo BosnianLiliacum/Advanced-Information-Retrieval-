@@ -1,0 +1,104 @@
+Post Title: [P] Re-engineered the Fuzzy-Pattern Tsetlin Machine from scratch: 10x faster training, 34x faster inference (32M+ preds/sec) &amp; capable of text generation
+Author: ArtemHnilov
+Score: 29
+URL: https://www.reddit.com/r/MachineLearning/comments/1q6igw3/p_reengineered_the_fuzzypattern_tsetlin_machine/
+Number of comments: 14
+Created UTC: 1767799988.0
+
+Post Content:
+Hi everyone,
+
+I’ve recently finished re-engineering the Fuzzy-Pattern Tsetlin Machine (FPTM) from the ground up. My goal was to leverage low-level optimizations to see just how much throughput I could squeeze out of the architecture.
+
+The results are pretty wild. By focusing on cache locality and SIMD instructions, the new implementation is up to **10× faster in training** and **34× faster in inference** compared to the original FPTM.
+
+**MNIST Benchmarks (Ryzen 7950X3D):**
+
+* ⚡ **Throughput:** 4 GB/s
+* 🧠 **Inference:** 32M+ predictions/sec (98% accuracy)
+* ⏱️ **Training:** 1000 training epochs in just 11 seconds
+
+**Key Engineering Optimizations:**  
+To get this performance, I focused on:
+
+* Extensive use of Bitwise operations and SIMD instructions.
+* A specialized, cache-friendly memory layout.
+* BitSet indexing over literals for handling very large, sparse binary vectors.
+* Automatic selection of UInt8/UInt16 TA states.
+* Model "compilation" to minimize memory overhead.
+
+**Why speed matters (Generative Tsetlin Machines):**  
+Because this implementation is so efficient, it is now practical to explore generative tasks with Tsetlin Machines. I implemented a character-level text generator using FPTM with HDC hypervectors and Monte Carlo sparse context subsampling.
+
+Here is the raw output from the model generating text in the style of Shakespeare:
+
+    ROMEO:
+    The father's death,
+    And then I shall be so;
+    For I have done that was a queen,
+    That I may be so, my lord.
+    
+    JULIET:
+    I would have should be so, for the prince,
+    And then I shall be so;
+    For the princely father with the princess,
+    And then I shall be the virtue of your soul,
+    Which your son,--
+    
+    ESCALUS:
+    What, what should be particular me to death.
+    
+    BUCKINGHAM:
+    God save the queen's proclaim'd:
+    Come, come, the Duke of York.
+    
+    KING EDWARD IV:
+    So do I do not know the prince,
+    And then I shall be so, and such a part.
+    
+    KING RICHARD III:
+    Shall I be some confess the state,
+    Which way the sun the prince's dead;
+    And then I will be so.
+
+  
+**Code &amp; Examples:**  
+The code is open source and available here:  
+[https://github.com/BooBSD/Tsetlin.jl](https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Fgithub.com%2FBooBSD%2FTsetlin.jl)
+
+I’d love to hear your thoughts on the optimization approach or the generative output!  
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: CireNeikual
+Score: 5
+Created UTC: 1767807981.0
+Comment: Great work! The combination of FPTM and HDC/VSA sounds very interesting to me, and it looks like it gets some neat results too! Do you think it might be worth going all the way and re-writing this in C? Also, which HDC/VSA are you using, I have found that BSDC-SEG codes work particularly well.
+
+Comment 2:
+Author: Chocolate_Pickle
+Score: 5
+Created UTC: 1767818721.0
+Comment: Did an LLM generate this post?
+
+Comment 3:
+Author: Medium_Compote5665
+Score: 3
+Created UTC: 1767913414.0
+Comment: If a symbolic-discrete model can generate plausible text and run at tens of millions of preds per second on the CPU,
+then the space of “viable” models is larger than we care to admit.
+
+Comment 4:
+Author: __Maximum__
+Score: 2
+Created UTC: 1767830990.0
+Comment: First time hearing this. What is this FPTM?
+
+Comment 5:
+Author: 1deasEMW
+Score: 2
+Created UTC: 1767873636.0
+Comment: Tm was never broadly adopted. Was this more for practice/fun or do you plan to scale tm, kinda like how some ppl did for rkwv

@@ -1,0 +1,18 @@
+Post Title: What am I doing wrong????
+Author: slrg1968
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1puxzxa/what_am_i_doing_wrong/
+Number of comments: 0
+Created UTC: 1766612269.0
+
+Post Content:
+I'm obviously doing something wrong using huggingface.co.  I cannot seem to find the stuff im searching for.  For example, today i read about a new model on NanoGPT ([https://nano-gpt.com/media?mode=image&amp;model=flux-2-turbo](https://nano-gpt.com/media?mode=image&amp;model=flux-2-turbo)), and I wanted to check it out to see if I can run it locally etc.  so I went to [huggingface.co](http://huggingface.co), and in the search bar at top entered flux.2\[turbo\]  got nothing remotely like it -- tried other combinations.  NADA!
+
+so what am I doing wrong -- I suspect its me, not the site, i think im just being dumb.
+
+Also -- people mention being able to find LORA etc on HF, and im not having any luck -- can someone please help me out?
+
+tim
+
+
+Top 0 comments:

@@ -1,0 +1,66 @@
+Post Title: I'm planning to develop an agent application, and I've seen frameworks like LangChain, LangGraph, and Agno. How do I choose?
+Author: Zestyclose_Thing1037
+Score: 10
+URL: https://www.reddit.com/r/LangChain/comments/1puc8ak/im_planning_to_develop_an_agent_application_and/
+Number of comments: 37
+Created UTC: 1766543639.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 5 comments:
+
+Comment 1:
+Author: BeerBatteredHemroids
+Score: 5
+Created UTC: 1766545287.0
+Comment: Been running pydantic AI for our agents and langgraph to orchestrate workflows using those agents
+
+Comment 2:
+Author: Luneriazz
+Score: 4
+Created UTC: 1766547808.0
+Comment: there 2 type ai agent:
+- workflow agent
+- crew/agent-agent/agent-supervisor
+
+Comment 3:
+Author: cmndr_spanky
+Score: 4
+Created UTC: 1766552065.0
+Comment: I prefer Pydantic AI agent framework over langchain, just feels more intuitive to me. 
+
+https://ai.pydantic.dev/
+
+Comment 4:
+Author: Own_Sir4535
+Score: 4
+Created UTC: 1766543981.0
+Comment: As I understand it, the langchain is for creating agents, and the langraph is for orchestrating those agents. Basically, it's the pimp of the AI ​​world.
+
+Comment 5:
+Author: jerrysyw
+Score: 2
+Created UTC: 1766642111.0
+Comment: It really depends on what problem you’re trying to solve.
+
+
+
+My short take:
+
+If you’re exploring ideas or prototyping quickly → LangChain is fine.
+
+If you care about reliability, control, and production behavior → LangGraph is the better choice.
+
+If you want something opinionated and lightweight → Agno can work, but you’ll hit limits sooner.
+
+
+
+I personally recommend LangGraph. Not only for building agents, but because it lets you formalize existing workflows (business rules, approvals, fallbacks) as explicit graphs.
+
+That makes behavior more inspectable, testable, and closer to how real systems already operate.
+
+
+
+In practice, agents that work in production often look more like stateful workflows with AI nodes, and LangGraph fits that mental model well.

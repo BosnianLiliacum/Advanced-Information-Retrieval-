@@ -1,0 +1,58 @@
+Post Title: I built an Async Checkpointer for LangGraph that keeps SQL and Vector DBs in sync (v0.4 Beta)
+Author: scream4ik
+Score: 13
+URL: https://www.reddit.com/r/LangChain/comments/1pqlce1/i_built_an_async_checkpointer_for_langgraph_that/
+Number of comments: 0
+Created UTC: 1766151567.0
+
+Post Content:
+Hi everyone,
+
+I've been working on a library called **MemState** to fix a specific problem I faced with LangGraph.
+
+  
+**The "Split-Brain" problem.**  
+When my agent saves its state (checkpoint), I also want to update my Vector DB (for RAG). If one fails (e.g., Qdrant network error), the other one stays updated. My data gets out of sync, and the agent starts "hallucinating" old data.
+
+  
+Standard LangGraph checkpointers save the state, but they don't manage the **transaction** across your Vector DB.
+
+  
+**So I built MemState v0.4.0.**  
+It works as a drop-in replacement for the LangGraph checkpointer, but it adds **ACID-like properties**:
+
+1. **Atomic Sync:** It saves the graph state (Postgres/SQLite) AND upserts to Chroma/Qdrant in one go.
+2. **Auto-Rollback:** If the vector DB update fails, the graph state is rolled back.
+3. **Full Async Support:** I just released v0.4.0 which is fully async (non-blocking). It plays nicely with FastAPI and async LangGraph workflows.
+
+  
+How it looks in LangGraph:
+
+```python
+
+from memstate.integrations.langgraph import AsyncMemStateCheckpointer  
+  
+# It handles the SQL save + Vector embedding automatically  
+checkpointer = AsyncMemStateCheckpointer(memory=mem)  
+  
+# Just pass it to your graph  
+app = workflow.compile(checkpointer=checkpointer)
+
+```
+
+  
+**New in v0.4.0:**
+
+* **Postgres support** (using JSONB).
+* **Qdrant integration** (with FastEmbed).
+* **Async/Await** everywhere.
+
+It is open source (Apache 2.0). I would love to hear if this solves a pain for your production agents, or if you handle this sync differently?
+
+**Repo:** [https://github.com/scream4ik/MemState](https://github.com/scream4ik/MemState)  
+**Docs:** [https://scream4ik.github.io/MemState/](https://scream4ik.github.io/MemState/)
+
+
+
+
+Top 0 comments:

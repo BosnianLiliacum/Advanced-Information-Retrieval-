@@ -1,0 +1,20 @@
+Post Title: Help with Hugging Face?
+Author: OpinionesVersatiles
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pz53o4/help_with_hugging_face/
+Number of comments: 1
+Created UTC: 1767059628.0
+
+Post Content:
+I am new to the world of AI. I have a question: Can I install "Hugging face" as an application on Fedora Linux or does it only work online?
+
+
+Top 1 comments:
+
+Comment 1:
+Author: whatsaquark
+Score: 2
+Created UTC: 1767063108.0
+Comment: There are a few different ways to use hugging face models. If you haven’t used them a lot and want to run them on your local hardware try out ollama. You can install it and that will let you download and interact with hugging face models in an app similar to ChatGPT.  
+You can also use their APIs platform if you get some keys and pay for it.  
+Take a look at this to get started. https://huggingface.co/docs/hub/en/local-apps

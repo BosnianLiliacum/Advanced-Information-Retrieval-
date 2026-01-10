@@ -1,0 +1,70 @@
+Post Title: Ilya Sutskever is puzzled by the gap between AI benchmarks and the economic impact [D]
+Author: we_are_mammals
+Score: 461
+URL: https://www.reddit.com/r/MachineLearning/comments/1pm2zsb/ilya_sutskever_is_puzzled_by_the_gap_between_ai/
+Number of comments: 216
+Created UTC: 1765679601.0
+
+Post Content:
+In a recent interview, Ilya Sutskever said: 
+
+&gt; This is one of the very confusing things about the models right now. How to reconcile the fact that they are doing so well on evals... And you look at the evals and you go "Those are pretty hard evals"... They are doing so well! But the economic impact seems to be dramatically behind.
+
+I'm sure Ilya is familiar with the idea of "leakage", and he's still puzzled. So how do *you* explain it?
+
+*Edit:* `GPT-5.2 Thinking` scored 70% on GDPval, meaning it outperformed industry professionals on economically valuable, well-specified knowledge work spanning 44 occupations.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: polyploid_coded
+Score: 256
+Created UTC: 1765680920.0
+Comment: I'll give three reasons  
+\- AI tooling / agents are not doing a lot of tasks start-to-finish. Consider that PyTorch, HF Transformers, etc. are ML repos set up by ML engineers and the issues, code, PRs, etc. still code that's written and reviewed by humans.  
+\- In my own data science work, we might go through multiple rounds of code changes where I ask clarifying questions, provide some insight, and push back on things which don't sound right. Current AIs are too sycophantic, and they have a conversational model which rushes to resolve the problem to the letter of the request.  
+\- A lot of tasks and transactions are based on building trust and relationships.
+
+Comment 2:
+Author: AmericanNewt8
+Score: 224
+Created UTC: 1765680229.0
+Comment: Ever hear of the Solow Paradox? It was in 1987, and economist Richard Solow wrote:
+
+
+&gt; You can see the computer age everywhere but in the productivity statistics
+
+
+And indeed, he was correct. It wasn't until the 1990s that real productivity growth soared. 
+
+
+*Why*, is an interesting question. The main arguments are either that early computing wasn't effective enough (and being an early mover may have actually been counterproductive since it would lock you into technological dead ends), or that institutions took time to fully appreciate and integrate the new technology. Both are probably true. 
+
+
+
+
+In the case of new ML technologies, at least the marketing put out by the large LLM providers is, imo, completely useless when it comes to actual adoption, because they can't do the things they say they can (despite being really neat). As interesting as they are, I don't think any LLM application has equalled the impact of Lotusnotes, Excel, SQL or even the fax machine yet^1. There's no task where essentially everyone not decidedly old-fashioned goes "oh I'll just ChatGPT it", aside from, perhaps, coding (but how much AI generated code is actually boosting output is..... well, who knows!)
+
+
+
+
+1. There's a pretty interesting argument that the fax machine had a similar total impact to the PC on productivity. 
+
+Comment 3:
+Author: rightful_vagabond
+Score: 146
+Created UTC: 1765682079.0
+Comment: I remember reading in the book "No Silver Bullet" the argument that there were no available speedups that would double developer productivity, and one of the arguments it gave for that was that most of a developer's time wasn't spent on coding. So even if you could drastically speed up coding time, it's unlikely that alone would lead to a significant speed up in developer productivity.
+
+Comment 4:
+Author: bikeranz
+Score: 46
+Created UTC: 1765680325.0
+Comment: My interpretation was that he was directly (indirectly?) talking about benchmaxing being a problem. Or rather, that they're not generalizing well.
+
+Comment 5:
+Author: mmark92712
+Score: 45
+Created UTC: 1765694764.0
+Comment: He shouldn’t be so puzzled since OpenAI was already found at the beginning of this year to be secretly funding and had access to the FrontierMath benchmarking dataset.

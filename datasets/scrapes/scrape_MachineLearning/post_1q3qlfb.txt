@@ -1,0 +1,21 @@
+Post Title: [P] LEMMA: A Rust-based Neural-Guided Math Problem Solver
+Author: Federal_Ad1812
+Score: 12
+URL: https://www.reddit.com/r/MachineLearning/comments/1q3qlfb/p_lemma_a_rustbased_neuralguided_math_problem/
+Number of comments: 0
+Created UTC: 1767535134.0
+
+Post Content:
+Previous Post : https://www.reddit.com/r/MachineLearning/s/9E5DmSRwZc
+
+Hello everyone,
+Thank you for the kind support and constructive Feedback on the previous post 
+
+I have being working on this project for the past 7 months and now LEMMA has 450+ Mathematics Rules which it can use to solve problem, the NN which is used to "Guide" the MCTS is now 10x more larger having 10 million parameters compared to 1million previously, this improves the overall accuracy and the ability to "Think" for the Model, LEMMA now shows promising results for solving complex problems and having a Multi-domain support 
+
+GitHub link : https://github.com/Pushp-Kharat1/LEMMA
+
+I would love to answer questions or solve doubts related to LEMMA, Contributions and PR are welcome!
+
+
+Top 0 comments:

@@ -1,0 +1,41 @@
+Post Title: Open-source full-stack template for AI/LLM apps with FastAPI + Next.js – PydanticAI agents, Logfire observability, and upcoming LangChain support!
+Author: VanillaOk4593
+Score: 13
+URL: https://www.reddit.com/r/LangChain/comments/1prx83x/opensource_fullstack_template_for_aillm_apps_with/
+Number of comments: 4
+Created UTC: 1766289936.0
+
+Post Content:
+Hey r/LangChain,
+
+I'm excited to share an open-source project generator I've created for building production-ready full-stack AI/LLM applications. It's focused on getting you from idea to deployable app quickly, with all the enterprise-grade features you need for real-world use.
+
+Repo: [https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template](https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template?referrer=grok.com)  
+(Install via pip install fastapi-fullstack, then generate your project with fastapi-fullstack new – interactive CLI for customization)
+
+**Key features:**
+
+* Backend with FastAPI: Async APIs, auth (JWT/OAuth/API keys), databases (PostgreSQL/MongoDB/SQLite), background tasks (Celery/Taskiq/ARQ), rate limiting, webhooks, and a clean repository + service architecture
+* Frontend with Next.js 15: React 19, Tailwind, dark mode, i18n, and a built-in chat interface with real-time WebSocket streaming
+* Over 20 configurable integrations: Redis caching, admin panels, Sentry/Prometheus monitoring, and more
+* Django-style CLI for easy management (user creation, DB migrations, custom commands)
+* Built-in AI capabilities via PydanticAI: Type-safe agents with tool calling, streaming responses, conversation persistence, and easy custom tool extensions
+
+Plus, full observability with Logfire – it instruments everything from AI agent runs and LLM calls to database queries and API performance, giving you traces, metrics, and logs in one dashboard.
+
+While it currently uses PydanticAI for the agent layer (which plays super nicely with the Pydantic ecosystem), **LangChain support is coming soon**! We're planning to add optional LangChain integration for chains, agents, and tools – making it even more flexible for those already in the LangChain workflow.
+
+Screenshots, demo GIFs, architecture diagrams, and docs are in the README. It's saved me hours on recent projects, and I'd love to hear how it could fit into your LangChain-based apps.
+
+Feedback welcome, and **contributions are encouraged** – especially if you're interested in helping with the LangChain integration or adding new features. Let's make building LLM apps even easier! 🚀
+
+Thanks!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Junior-Tax-1203
+Score: 1
+Created UTC: 1766301451.0
+Comment: Which ai model do you used in it

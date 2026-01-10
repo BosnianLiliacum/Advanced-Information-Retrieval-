@@ -1,0 +1,50 @@
+Post Title: What're you using for PDF parsing?
+Author: ILikeLungsSoYeah
+Score: 65
+URL: https://www.reddit.com/r/LangChain/comments/1pn4pw5/whatre_you_using_for_pdf_parsing/
+Number of comments: 59
+Created UTC: 1765796760.0
+
+Post Content:
+I'm building an RAG pipeline for contract analysis. I'm getting GIGO because my PDF parsing is very bad. And I'm not able to pass this to the LLM for extraction because of poor OCR.
+
+PyPDF gives me text but the structure is messed up. Tables are jumbled and the headers get mixed into body text.
+
+Tried Unstructured but it doesn't work that well for complex layouts.
+
+What's everyone us⁤ing for the parsing layer?
+
+I just need clean, structured text from PDFs - I'll handle the LLM calls myself.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: freehuntx
+Score: 14
+Created UTC: 1765797919.0
+Comment: DeepseekOCR
+
+Comment 2:
+Author: met0xff
+Score: 13
+Created UTC: 1765799596.0
+Comment: Currently going with Docling
+
+Comment 3:
+Author: Weary_Long3409
+Score: 6
+Created UTC: 1765798739.0
+Comment: For most of PDFs, Tika served very well. But for PDF images, using VLM is better and steerable. Tiny model like Qwen2.5-VL-3B-Instruct performs better than tesseract, even better when outputs structured text in one pass. VLM can discard text noises like page numbers, header/footer, and even watermarks.
+
+Comment 4:
+Author: maniac_runner
+Score: 6
+Created UTC: 1765874328.0
+Comment: Depends on your docs honestly. For contract analysis, I'd probably start with LLMWhisperer or docling (extremely slow for large batches), since layout matters. pdfplumber if your PDFs are all native and simple (it's poor with scans and tables.)
+
+Comment 5:
+Author: Any_Raisin_5357
+Score: 4
+Created UTC: 1765798724.0
+Comment: Use LLM for the text extraction or use some good OCR.

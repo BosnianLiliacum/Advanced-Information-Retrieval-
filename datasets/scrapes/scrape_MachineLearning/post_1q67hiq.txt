@@ -1,0 +1,36 @@
+Post Title: [D] ICLR new ACs — how’s it going?
+Author: plantparent2021
+Score: 35
+URL: https://www.reddit.com/r/MachineLearning/comments/1q67hiq/d_iclr_new_acs_hows_it_going/
+Number of comments: 8
+Created UTC: 1767765533.0
+
+Post Content:
+Anyone care to share their experiences? Is the task doable/too much effort? Are the reviews helpful without reliable scores? Whats become your process to make a decision?
+
+Just curious, any info appreciated
+
+
+Top 2 comments:
+
+Comment 1:
+Author: TheDeviousPanda
+Score: 16
+Created UTC: 1767771146.0
+Comment: This is from the email they sent us:
+
+&gt; Frequently asked questions
+
+What if I am not able to say how the reviewer may have changed their ratings? If you share a concern with the reviewer, please put yourself in their shoes when reading the author's response and judge for yourself whether the response addresses the concern.
+
+—-
+
+I found this part pretty challenging. I think most of the ACs who I talked to felt similarly. We basically have to simulate the entire rebuttal process in our heads. I would guess that most folks just didn’t assume the reviewers would raise their scores.
+
+Comment 2:
+Author: confirm-jannati
+Score: -5
+Created UTC: 1767816077.0
+Comment: I hope the AC rejects my paper lol. It's since been revised a bunch, making a much stronger submission to ICML.
+
+But I also can't withdraw because... reasons.

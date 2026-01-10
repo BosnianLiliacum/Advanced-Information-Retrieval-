@@ -1,0 +1,37 @@
+Post Title: Pinokio - Why does StableDiffusion not show up anymore
+Author: Relaxo66
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1q654s5/pinokio_why_does_stablediffusion_not_show_up/
+Number of comments: 1
+Created UTC: 1767758371.0
+
+Post Content:
+Hey there,
+
+I had to set up Pinokio from scratch and was wondering why StableDiffusion (Automatic1111) isn't showing up within their Discover browser anymore. It isn't even showing up on their official landing page anymore.
+
+Any ideas on how to get it back working again without installing everything manually?
+
+Thanks a bunch!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Relaxo66
+Score: 1
+Created UTC: 1767802258.0
+Comment: Nevermind, I asked in Discord and apparently they basically gave up on the Repo due to it being quite old now and noone is interested in curating it anymore.
+
+I was advised to switch over to 'SwarmUI' instead of StableDiffusion so I'm now trying to get that running inside Pinokio. Luckily there are some helpful tutorials out there on how to do so: [https://www.youtube.com/watch?v=T2Ulh5KHCGE](https://www.youtube.com/watch?v=T2Ulh5KHCGE)
+
+Since the alternative to both options, namely 'ComfyUI' is too complicated to get into for me at least for now I will have a look at SwarmUI and see if that suits me.
+
+  
+EDIT:
+
+SwarmUI is amazing!  
+I've never seen such a clean and well organized and well performing UI for generating content.  
+It uses ComfyUI as backend by default (unless you opt for a custom backend during the installation), so you can easily switch over to the ComfyUI-Workflow-Tab and have a look at how the current workflow works in order to understand everything in more detail or to improve upon it. And all of that without any knowledge of Python!
+
+I found my forever home it seems :).

@@ -1,0 +1,34 @@
+Post Title: Is it one big agent, or sub-agents?
+Author: AdditionalWeb107
+Score: 5
+URL: https://www.reddit.com/r/LangChain/comments/1q0uf3q/is_it_one_big_agent_or_subagents/
+Number of comments: 6
+Created UTC: 1767237398.0
+
+Post Content:
+If you are building agents, are you resorting to send traffic to one agent that is responsible for all sub-tasks (via its instructions) and packaging tools intelligently - or are you using a lightweight router to define/test/update sub-agents that can handle user specific tasks.
+
+The former is a simple architecture, but I feel its a large bloated piece of software that's harder to debug. The latter is cleaner and simpler to build (especially packaging tools) but requires a great/robust orchestration/router.
+
+How are you all thinking about this? Would love framework-agnostic approaches because these frameworks add very little value and become an operational nightmare as you push agents to production.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Seeking_Adrenaline
+Score: 3
+Created UTC: 1767256661.0
+Comment: Start with s single prompt and tools. Grow and split as needed. Use evals to measure this and detect when to change and if you are making progress. Every additional prompt layer is a slower end result, take this into consideration.
+
+Comment 2:
+Author: attn-transformer
+Score: 2
+Created UTC: 1767303365.0
+Comment: Once you include more than ~8 tools then the llm may not select the right tool. This is the limitation of the llm that should drive the decision between single or multi agent.
+
+Comment 3:
+Author: Zealousideal_Emu7912
+Score: 1
+Created UTC: 1767314188.0
+Comment: Depends on how long a single agent's context gets. I find that agents handle upto 100k context length quite well these days, so I tend to keep to simple and have everything in one prompt. I only use sub-agents when there's an isolated context-intensive task with little to no follow ups for the sub-agent.

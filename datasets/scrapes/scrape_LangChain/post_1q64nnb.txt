@@ -1,0 +1,49 @@
+Post Title: A unified Knowledge Graph router for AI agents (Apache-2.0)
+Author: moshestv
+Score: 35
+URL: https://github.com/neuledge/graph
+Number of comments: 8
+Created UTC: 1767757066.0
+
+Post Content:
+Hey everyone,
+
+I built \`@neuledge/graph\` because I got tired of the "integration tax" every time I wanted to build a simple AI agent.
+
+Usually, if you want an agent to know the weather or stock prices, you have to:
+
+1. Find a reliable API.
+2. Sign up and manage another API key.
+3. Write a Zod schema/tool definition.
+4. Handle the messy JSON response so the LLM doesn't get confused.
+
+I wanted to turn that into a one-liner. This library provides a unified lookup tool that gives agents structured data in &lt;100ms. It’s built with TypeScript and works out of the box with Vercel AI SDK, LangChain, and OpenAI Agents.
+
+**Status:** It's Apache-2.0. We currently support weather, stocks, and FX.
+
+I’d love to hear what other data sources would be useful for your projects. News? Sports? Crypto? Let me know!
+
+**Repo:** [https://github.com/neuledge/graph](https://github.com/neuledge/graph)
+
+
+Top 3 comments:
+
+Comment 1:
+Author: HOLDL
+Score: 2
+Created UTC: 1767765491.0
+Comment: New to this so not trying to throw shade but what’s the point? Ex if I search any of the examples in Claude I get the same answers. Is the idea that there is more latency with web search and this makes retrieval more efficient / contextual?
+
+Comment 2:
+Author: macromind
+Score: 1
+Created UTC: 1767757771.0
+Comment: This is really cool, the integration tax is so real (API keys, schema plumbing, then massaging JSON so the model does not derail). Love the &lt;100ms structured lookup angle, that is basically the missing piece for agentic flows that need reliable tools.
+
+Curious, do you have a pattern for caching and tool fallback (like if a provider is down)? I have been collecting notes on agent reliability and tool orchestration here too: https://www.agentixlabs.com/blog/
+
+Comment 3:
+Author: Signal_Question9074
+Score: 1
+Created UTC: 1767771908.0
+Comment: you are getting a fat star from me and hopefully ill be able to add my contributions to you on the weekend.

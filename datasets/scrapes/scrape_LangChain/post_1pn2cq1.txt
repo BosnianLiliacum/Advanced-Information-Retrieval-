@@ -1,0 +1,335 @@
+Post Title: Kreuzberg v4.0.0-rc.8 is available
+Author: Goldziher
+Score: 17
+URL: https://www.reddit.com/r/LangChain/comments/1pn2cq1/kreuzberg_v400rc8_is_available/
+Number of comments: 1
+Created UTC: 1765787180.0
+
+Post Content:
+Hi Peeps,
+
+I'm excited to announce that [Kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) v4.0.0 is coming very soon. We will release v4.0.0 at the beginning of next year - in just a couple of weeks time. For now, v4.0.0-rc.8 has been released to all channels.
+
+## What is Kreuzberg?
+
+Kreuzberg is a document intelligence toolkit for extracting text, metadata, tables, images, and structured data from 56+ file formats. It was originally written in Python (v1-v3), where it demonstrated strong performance characteristics compared to alternatives in the ecosystem.
+
+## What's new in V4?
+
+### A Complete Rust Rewrite with Polyglot Bindings
+
+The new version of Kreuzberg represents a massive architectural evolution. **Kreuzberg has been completely rewritten in Rust** - leveraging Rust's memory safety, zero-cost abstractions, and native performance. The new architecture consists of a high-performance Rust core with native bindings to multiple languages. That's right - it's no longer just a Python library.
+
+**Kreuzberg v4 is now available for 7 languages across 8 runtime bindings:**
+
+- **Rust** (native library)
+- **Python** (PyO3 native bindings)
+- **TypeScript** - Node.js (NAPI-RS native bindings) + Deno/Browser/Edge (WASM)
+- **Ruby** (Magnus FFI)
+- **Java 25+** (Panama Foreign Function &amp; Memory API)
+- **C#** (P/Invoke)
+- **Go** (cgo bindings)
+
+**Post v4.0.0 roadmap includes:**
+
+- PHP
+- Elixir (via Rustler - with Erlang and Gleam interop)
+
+Additionally, it's available as a **CLI** (installable via `cargo` or `homebrew`), **HTTP REST API server**, **Model Context Protocol (MCP) server** for Claude Desktop/Continue.dev, and as **public Docker images**.
+
+### Why the Rust Rewrite? Performance and Architecture
+
+The Rust rewrite wasn't just about performance - though that's a major benefit. It was an opportunity to fundamentally rethink the architecture:
+
+**Architectural improvements:**
+- **Zero-copy operations** via Rust's ownership model
+- **True async concurrency** with Tokio runtime (no GIL limitations)
+- **Streaming parsers** for constant memory usage on multi-GB files
+- **SIMD-accelerated text processing** for token reduction and string operations
+- **Memory-safe FFI boundaries** for all language bindings
+- **Plugin system** with trait-based extensibility
+
+### v3 vs v4: What Changed?
+
+| Aspect | v3 (Python) | v4 (Rust Core) |
+|--------|-------------|----------------|
+| **Core Language** | Pure Python | Rust 2024 edition |
+| **File Formats** | 30-40+ (via Pandoc) | **56+ (native parsers)** |
+| **Language Support** | Python only | **7 languages** (Rust/Python/TS/Ruby/Java/Go/C#) |
+| **Dependencies** | Requires Pandoc (system binary) | **Zero system dependencies** (all native) |
+| **Embeddings** | Not supported | ✓ FastEmbed with ONNX (3 presets + custom) |
+| **Semantic Chunking** | Via semantic-text-splitter library | ✓ Built-in (text + markdown-aware) |
+| **Token Reduction** | Built-in (TF-IDF based) | ✓ Enhanced with 3 modes |
+| **Language Detection** | Optional (fast-langdetect) | ✓ Built-in (68 languages) |
+| **Keyword Extraction** | Optional (KeyBERT) | ✓ Built-in (YAKE + RAKE algorithms) |
+| **OCR Backends** | Tesseract/EasyOCR/PaddleOCR | **Same + better integration** |
+| **Plugin System** | Limited extractor registry | **Full trait-based** (4 plugin types) |
+| **Page Tracking** | Character-based indices | **Byte-based with O(1) lookup** |
+| **Servers** | REST API (Litestar) | **HTTP (Axum) + MCP + MCP-SSE** |
+| **Installation Size** | ~100MB base | **16-31 MB complete** |
+| **Memory Model** | Python heap management | **RAII with streaming** |
+| **Concurrency** | asyncio (GIL-limited) | **Tokio work-stealing** |
+
+### Replacement of Pandoc - Native Performance
+
+Kreuzberg v3 relied on **Pandoc** - an amazing tool, but one that had to be invoked via subprocess because of its GPL license. This had significant impacts:
+
+**v3 Pandoc limitations:**
+- System dependency (installation required)
+- Subprocess overhead on every document
+- No streaming support
+- Limited metadata extraction
+- ~500MB+ installation footprint
+
+**v4 native parsers:**
+- **Zero external dependencies** - everything is native Rust
+- Direct parsing with full control over extraction
+- **Substantially more metadata** extracted (e.g., DOCX document properties, section structure, style information)
+- **Streaming support** for massive files (tested on multi-GB XML documents with stable memory)
+- Example: PPTX extractor is now a **fully streaming parser** capable of handling gigabyte-scale presentations with constant memory usage and high throughput
+
+### New File Format Support
+
+v4 expanded format support from ~20 to **56+ file formats**, including:
+
+**Added legacy format support:**
+- `.doc` (Word 97-2003)
+- `.ppt` (PowerPoint 97-2003)
+- `.xls` (Excel 97-2003)
+- `.eml` (Email messages)
+- `.msg` (Outlook messages)
+
+**Added academic/technical formats:**
+- LaTeX (`.tex`)
+- BibTeX (`.bib`)
+- Typst (`.typ`)
+- JATS XML (scientific articles)
+- DocBook XML
+- FictionBook (`.fb2`)
+- OPML (`.opml`)
+
+**Better Office support:**
+- XLSB, XLSM (Excel binary/macro formats)
+- Better structured metadata extraction from DOCX/PPTX/XLSX
+- Full table extraction from presentations
+- Image extraction with deduplication
+
+### New Features: Full Document Intelligence Solution
+
+The v4 rewrite was also an opportunity to close gaps with commercial alternatives and add features specifically designed for **RAG applications and LLM workflows**:
+
+#### 1. **Embeddings (NEW)**
+- **FastEmbed integration** with full ONNX Runtime acceleration
+- Three presets: `"fast"` (384d), `"balanced"` (512d), `"quality"` (768d/1024d)
+- Custom model support (bring your own ONNX model)
+- Local generation (no API calls, no rate limits)
+- Automatic model downloading and caching
+- Per-chunk embedding generation
+
+```python
+from kreuzberg import ExtractionConfig, EmbeddingConfig, EmbeddingModelType
+
+config = ExtractionConfig(
+    embeddings=EmbeddingConfig(
+        model=EmbeddingModelType.preset("balanced"),
+        normalize=True
+    )
+)
+result = kreuzberg.extract_bytes(pdf_bytes, config=config)
+# result.embeddings contains vectors for each chunk
+```
+
+#### 2. **Semantic Text Chunking (NOW BUILT-IN)**
+Now integrated directly into the core (v3 used external semantic-text-splitter library):
+- **Structure-aware chunking** that respects document semantics
+- Two strategies:
+  - Generic text chunker (whitespace/punctuation-aware)
+  - Markdown chunker (preserves headings, lists, code blocks, tables)
+- Configurable chunk size and overlap
+- Unicode-safe (handles CJK, emojis correctly)
+- Automatic chunk-to-page mapping
+- Per-chunk metadata with byte offsets
+
+#### 3. **Byte-Accurate Page Tracking (BREAKING CHANGE)**
+This is a critical improvement for LLM applications:
+
+- **v3**: Character-based indices (`char_start`/`char_end`) - incorrect for UTF-8 multi-byte characters
+- **v4**: Byte-based indices (`byte_start`/`byte_end`) - correct for all string operations
+
+Additional page features:
+- O(1) lookup: "which page is byte offset X on?" → instant answer
+- Per-page content extraction
+- Page markers in combined text (e.g., `--- Page 5 ---`)
+- Automatic chunk-to-page mapping for citations
+
+#### 4. **Enhanced Token Reduction for LLM Context**
+Enhanced from v3 with three configurable modes to save on LLM costs:
+
+- **Light mode**: ~15% reduction (preserve most detail)
+- **Moderate mode**: ~30% reduction (balanced)
+- **Aggressive mode**: ~50% reduction (key information only)
+
+Uses TF-IDF sentence scoring with position-aware weighting and language-specific stopword filtering. SIMD-accelerated for improved performance over v3.
+
+#### 5. **Language Detection (NOW BUILT-IN)**
+- 68 language support with confidence scoring
+- Multi-language detection (documents with mixed languages)
+- ISO 639-1 and ISO 639-3 code support
+- Configurable confidence thresholds
+
+#### 6. **Keyword Extraction (NOW BUILT-IN)**
+Now built into core (previously optional KeyBERT in v3):
+- **YAKE** (Yet Another Keyword Extractor): Unsupervised, language-independent
+- **RAKE** (Rapid Automatic Keyword Extraction): Fast statistical method
+- Configurable n-grams (1-3 word phrases)
+- Relevance scoring with language-specific stopwords
+
+#### 7. **Plugin System (NEW)**
+Four extensible plugin types for customization:
+
+- **DocumentExtractor** - Custom file format handlers
+- **OcrBackend** - Custom OCR engines (integrate your own Python models)
+- **PostProcessor** - Data transformation and enrichment
+- **Validator** - Pre-extraction validation
+
+Plugins defined in Rust work across all language bindings. Python/TypeScript can define custom plugins with thread-safe callbacks into the Rust core.
+
+#### 8. **Production-Ready Servers (NEW)**
+- **HTTP REST API**: Production-grade Axum server with OpenAPI docs
+- **MCP Server**: Direct integration with Claude Desktop, Continue.dev, and other MCP clients
+- **MCP-SSE Transport** (RC.8): Server-Sent Events for cloud deployments without WebSocket support
+- All three modes support the same feature set: extraction, batch processing, caching
+
+## Performance: Benchmarked Against the Competition
+
+We maintain **continuous benchmarks** comparing Kreuzberg against the leading OSS alternatives:
+
+### Benchmark Setup
+- **Platform**: Ubuntu 22.04 (GitHub Actions)
+- **Test Suite**: 30+ documents covering all formats
+- **Metrics**: Latency (p50, p95), throughput (MB/s), memory usage, success rate
+- **Competitors**: Apache Tika, Docling, Unstructured, MarkItDown
+
+
+### How Kreuzberg Compares
+
+**Installation Size** (critical for containers/serverless):
+- **Kreuzberg**: **16-31 MB complete** (CLI: 16 MB, Python wheel: 22 MB, Java JAR: 31 MB - all features included)
+- **MarkItDown**: ~251 MB installed (58.3 KB wheel, 25 dependencies)
+- **Unstructured**: ~146 MB minimal (open source base) - **several GB with ML models**
+- **Docling**: ~1 GB base, **9.74GB Docker image** (includes PyTorch CUDA)
+- **Apache Tika**: ~55 MB (tika-app JAR) + dependencies
+- **GROBID**: 500MB (CRF-only) to **8GB** (full deep learning)
+
+**Performance Characteristics:**
+
+| Library | Speed | Accuracy | Formats | Installation | Use Case |
+|---------|-------|----------|---------|--------------|----------|
+| **Kreuzberg** | ⚡ Fast (Rust-native) | Excellent | 56+ | **16-31 MB** | **General-purpose, production-ready** |
+| **Docling** | ⚡ Fast (3.1s/pg x86, 1.27s/pg ARM) | Best | 7+ | 1-9.74 GB | Complex documents, when accuracy &gt; size |
+| **GROBID** | ⚡⚡ Very Fast (10.6 PDF/s) | Best | PDF only | 0.5-8 GB | **Academic/scientific papers only** |
+| **Unstructured** | ⚡ Moderate | Good | 25-65+ | 146 MB-several GB | Python-native LLM pipelines |
+| **MarkItDown** | ⚡ Fast (small files) | Good | 11+ | ~251 MB | **Lightweight Markdown conversion** |
+| **Apache Tika** | ⚡ Moderate | Excellent | **1000+** | ~55 MB | Enterprise, broadest format support |
+
+**Kreuzberg's sweet spot:**
+- **Smallest full-featured installation**: 16-31 MB complete (vs 146 MB-9.74 GB for competitors)
+- **5-15x smaller** than Unstructured/MarkItDown, **30-300x smaller** than Docling/GROBID
+- **Rust-native performance** without ML model overhead
+- **Broad format support** (56+ formats) with native parsers
+- **Multi-language support** unique in the space (7 languages vs Python-only for most)
+- **Production-ready** with general-purpose design (vs specialized tools like GROBID)
+
+## Is Kreuzberg a SaaS Product?
+
+**No.** Kreuzberg is and will remain **MIT-licensed open source**.
+
+However, we are building **Kreuzberg.cloud** - a commercial SaaS and self-hosted document intelligence solution built *on top of* Kreuzberg. This follows the proven open-core model: the library stays free and open, while we offer a cloud service for teams that want managed infrastructure, APIs, and enterprise features.
+
+**Will Kreuzberg become commercially licensed?** Absolutely not. There is no BSL (Business Source License) in Kreuzberg's future. The library was MIT-licensed and will remain MIT-licensed. We're building the commercial offering as a separate product around the core library, not by restricting the library itself.
+
+## Target Audience
+
+Any developer or data scientist who needs:
+- Document text extraction (PDF, Office, images, email, archives, etc.)
+- OCR (Tesseract, EasyOCR, PaddleOCR)
+- Metadata extraction (authors, dates, properties, EXIF)
+- Table and image extraction
+- Document pre-processing for RAG pipelines
+- Text chunking with embeddings
+- Token reduction for LLM context windows
+- Multi-language document intelligence in production systems
+
+**Ideal for:**
+- RAG application developers
+- Data engineers building document pipelines
+- ML engineers preprocessing training data
+- Enterprise developers handling document workflows
+- DevOps teams needing lightweight, performant extraction in containers/serverless
+
+## Comparison with Alternatives
+
+### Open Source Python Libraries
+
+**Unstructured.io**
+- **Strengths**: Established, modular, broad format support (25+ open source, 65+ enterprise), LLM-focused, good Python ecosystem integration
+- **Trade-offs**: Python GIL performance constraints, 146 MB minimal installation (several GB with ML models)
+- **License**: Apache-2.0
+- **When to choose**: Python-only projects where ecosystem fit &gt; performance
+
+**MarkItDown (Microsoft)**
+- **Strengths**: Fast for small files, Markdown-optimized, simple API
+- **Trade-offs**: Limited format support (11 formats), less structured metadata, ~251 MB installed (despite small wheel), requires OpenAI API for images
+- **License**: MIT
+- **When to choose**: Markdown-only conversion, LLM consumption
+
+**Docling (IBM)**
+- **Strengths**: Excellent accuracy on complex documents (97.9% cell-level accuracy on tested sustainability report tables), state-of-the-art AI models for technical documents
+- **Trade-offs**: Massive installation (1-9.74 GB), high memory usage, GPU-optimized (underutilized on CPU)
+- **License**: MIT
+- **When to choose**: Accuracy on complex documents &gt; deployment size/speed, have GPU infrastructure
+
+### Open Source Java/Academic Tools
+
+**Apache Tika**
+- **Strengths**: Mature, stable, broadest format support (1000+ types), proven at scale, Apache Foundation backing
+- **Trade-offs**: Java/JVM required, slower on large files, older architecture, complex dependency management
+- **License**: Apache-2.0
+- **When to choose**: Enterprise environments with JVM infrastructure, need for maximum format coverage
+
+**GROBID**
+- **Strengths**: Best-in-class for academic papers (F1 0.87-0.90), extremely fast (10.6 PDF/sec sustained), proven at scale (34M+ documents at CORE)
+- **Trade-offs**: Academic papers only, large installation (500MB-8GB), complex Java+Python setup
+- **License**: Apache-2.0
+- **When to choose**: Scientific/academic document processing exclusively
+
+### Commercial APIs
+
+There are numerous commercial options from startups (LlamaIndex, Unstructured.io paid tiers) to big cloud providers (AWS Textract, Azure Form Recognizer, Google Document AI). These are not OSS but offer managed infrastructure.
+
+**Kreuzberg's position**: As an open-source library, Kreuzberg provides a self-hosted alternative with no per-document API costs, making it suitable for high-volume workloads where cost efficiency matters.
+
+## Community &amp; Resources
+
+- **GitHub**: Star us at https://github.com/kreuzberg-dev/kreuzberg
+- **Discord**: Join our community server at [discord.gg/pXxagNK2zN](https://discord.gg/pXxagNK2zN)
+- **Subreddit**: Join the discussion at [r/kreuzberg_dev](https://www.reddit.com/r/kreuzberg_dev/)
+- **Documentation**: [kreuzberg.dev](https://kreuzberg.dev)
+
+We'd love to hear your feedback, use cases, and contributions!
+
+---
+
+**TL;DR**: Kreuzberg v4 is a complete Rust rewrite of a document intelligence library, offering native bindings for 7 languages (8 runtime targets), 56+ file formats, Rust-native performance, embeddings, semantic chunking, and production-ready servers - all in a 16-31 MB complete package (5-15x smaller than alternatives). Releasing January 2025. MIT licensed forever.
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: South-Opening-9720
+Score: 1
+Created UTC: 1765914939.0
+Comment: This is awesome — huge congrats on the Rust rewrite and the multi-language bindings, that streaming parser for huge PPTX files sounds particularly useful.
+
+We've been using Kreuzberg outputs to build RAG agents on Chat Data (we feed extracted text/tables/images into our training pipeline and get much cleaner context for chatbots). Curious: does the v4 embedding/chunk metadata map cleanly to per-chunk IDs so downstream systems (like ours) can reconcile chunks back to source files/pages? Would love to test the RC.8 CLI with a sample dataset.

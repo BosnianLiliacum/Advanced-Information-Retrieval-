@@ -1,0 +1,117 @@
+Post Title: Building Natural Language to Business Rules Parser - Architecture Help Needed
+Author: ComfortableEcho6816
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1poduex/building_natural_language_to_business_rules/
+Number of comments: 2
+Created UTC: 1765919745.0
+
+Post Content:
+# Building Natural Language to Business Rules Parser - Architecture Help Needed
+
+# TL;DR
+
+Converting conversational business rules like "If customer balance &gt; $5000 and age &gt; 30 then update tier to Premium" into structured executable format. Need advice on best LLM approach.
+
+# The Problem
+
+Building a parser that maps natural language → predefined functions/attributes → structured output format.
+
+**Example:**
+
+* User types: "customer monthly balance &gt; 5000"
+* System must:
+   * Identify "balance" → `customer_balance` function (from 1000+ functions)
+   * Infer argument: `duration=monthly`
+   * Map operator: "&gt;" → `GREATER_THAN`
+   * Extract value: 5000
+* Output: `customer_balance(duration=monthly) GREATER_THAN 5000`
+
+# Complexity
+
+* 1000+ predefined functions with arguments
+* 1400+ data attributes
+* Support nested conditions: `(A AND B) OR (C AND NOT D)`
+* Handle ambiguity: "balance" could be 5 different functions
+* Infer implicit arguments from context
+
+# What I'm Considering
+
+**Option A: Structured Prompting**
+
+    prompt = f"""
+    Parse this rule: {user_query}
+    Functions available: {function_library}
+    Return JSON: {{function, operator, value}}
+    """
+
+**Option B: Chain-of-Thought**
+
+    prompt = f"""
+    Let's parse step-by-step:
+    1. Identify what's being measured
+    2. Map to function from library
+    3. Extract operator and value
+    ...
+    """
+
+**Option C: Logic-of-Thoughts**
+
+    prompt = f"""
+    Convert to logical propositions:
+    P1: Balance(customer) &gt; 5000
+    P2: Age(customer) &gt; 30
+    Structure: P1 AND P2
+    Now map each proposition to functions...
+    """
+
+**Option D: Multi-stage Pipeline**
+
+    NL → Extract logical propositions (LoT)
+       → Map to functions (CoT)
+       → FOL intermediate format
+       → Validate
+       → Convert to target JSON
+
+# Questions
+
+1. **Which prompting technique gives best accuracy for logical/structured parsing?**
+2. **Is a multi-stage pipeline better than single-shot prompting?** (More API calls but better accuracy?)
+3. **How to handle 1000+ function library in prompt?** Semantic search to filter to top 50? Categorize and ask LLM to pick category first?
+4. **For ambiguity:** Return multiple options to user or use Tree-of-Thoughts to self-select best option?
+5. **Should I collect data and fine-tune,** or is prompt engineering sufficient for this use case?
+
+# Current Plan
+
+Start with **Logic-of-Thoughts + Chain-of-Thought hybrid** because:
+
+* No training data needed
+* Good fit for logical domain
+* Transparent reasoning (important for business users)
+* Can iterate quickly on prompts
+
+Add **First-Order Logic intermediate layer** because:
+
+* Clean abstraction (target format still being decided)
+* Easy to validate
+* Natural fit for business rules
+
+Thoughts? Better approaches? Pitfalls I'm missing?
+
+Thanks in advance!
+
+
+Top 2 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 1
+Created UTC: 1765948764.0
+Comment: For business rules parsing with that many functions, I'd lean toward your multi-stage pipeline approach. The single-shot prompts will struggle with the complexity once you hit real world edge cases, especially with 1000+ functions in context. Your instinct about semantic search to filter the function library is solid, maybe even do a two-tier filter where you first categorize (financial, customer, product, etc.) then semantically search within category.
+
+The Logic-of-Thoughts approach makes sense for the domain, but you might want to consider how you'll validate those intermediate representations before they hit your target format. With vectorflow.dev you can actually preview how your rule parsing outputs look at each pipeline stage before they get embedded or stored, which helps catch issues in the logical structure early. Are you planning to embed these parsed rules for similarity matching, or keeping them purely as executable logic?
+
+Comment 2:
+Author: rkpandey20
+Score: 1
+Created UTC: 1765953377.0
+Comment: Not sure if you already considered it to build DSL on your domain rule. Share grammar with LLM with some examples and then ask it to convert natural language conversational style to that DSL. 

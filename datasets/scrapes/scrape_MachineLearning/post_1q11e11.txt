@@ -1,0 +1,55 @@
+Post Title: [R] New paper by DeepSeek: mHC: Manifold-Constrained Hyper-Connections
+Author: Nunki08
+Score: 296
+URL: https://www.reddit.com/gallery/1q11e11
+Number of comments: 44
+Created UTC: 1767263929.0
+
+Post Content:
+Paper: mHC: Manifold-Constrained Hyper-Connections  
+Zhenda Xie, Yixuan Wei, Huanqi Cao, Chenggang Zhao, Chengqi Deng, Jiashi Li, Damai Dai, Huazuo Gao, Jiang Chang, Liang Zhao, Shangyan Zhou, Zhean Xu, Zhengyan Zhang, Wangding Zeng, Shengding Hu, Yuqing Wang, Jingyang Yuan, Lean Wang, Wenfeng Liang  
+Abstract: Recently, studies exemplified by Hyper-Connections (HC) have extended the ubiquitous residual connection paradigm established over the past decade by expanding the residual stream width and diversifying connectivity patterns. While yielding substantial performance gains, this diversification fundamentally compromises the identity mapping property intrinsic to the residual connection, which causes severe training instability and restricted scalability, and additionally incurs notable memory access overhead. To address these challenges, we propose Manifold-Constrained Hyper-Connections (mHC), a general framework that projects the residual connection space of HC onto a specific manifold to restore the identity mapping property, while incorporating rigorous infrastructure optimization to ensure efficiency. Empirical experiments demonstrate that mHC is effective for training at scale, offering tangible performance improvements and superior scalability. We anticipate that mHC, as a flexible and practical extension of HC, will contribute to a deeper understanding of topological architecture design and suggest promising directions for the evolution of foundational models.  
+arXiv:2512.24880 \[cs.CL\]: https://arxiv.org/abs/2512.24880
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Mbando
+Score: 87
+Created UTC: 1767279496.0
+Comment: They got a pretty big bump in performance for a minuscule 6.7% compute increase by scaling the number of channels information flows on. This is essentially a new scaling dimension, within the architecture. This is only a 27B toy demonstration, we don't know if it works alongside other efficiency innovations like DSA or MOE, but it's potentially a big deal.
+
+Comment 2:
+Author: Low-Temperature-6962
+Score: 36
+Created UTC: 1767291912.0
+Comment: Doubly stochastic matrices can still have eigenvalues of size down to zero.  Why is that not a problem?  (I am just thinking out loud. this is not meant to be negative criticism, the work is good!)
+
+Comment 3:
+Author: Majestic_Appeal5280
+Score: 5
+Created UTC: 1767429952.0
+Comment: Can someone explain the motivation behind Hyper connections? i.e what exactly is the problem with normal residual connections and how a learnable mapping solves it. is there any theoretical /empirical justification or are we just trying out different things?
+
+Comment 4:
+Author: Sad-Razzmatazz-5188
+Score: 4
+Created UTC: 1767547917.0
+Comment: Despite reading better the original HC paper, I am not sure all's worth it.
+
+
+I like both papers, however they clearly state that the matrix substituting the identity mapping is the most important for performance gains, which makes sense as the other 2 are wrapping a layer that is actually doing the heavy lifting. 
+However, one could just use the idea to compress and decompress a lot channel dimensions around nonlinear layers, and add a mixing matrix instead of the identity mapping.
+Or dually, compress and decompress on the identity mapping, and leave the residual path with the layer. 
+The take-home message for me is that lots of linear layers, with just a sprinkle of nonlinearity, go a long way. 
+
+
+Btw it's a bit depressing how the community still mixes up residual path and skip connection. 
+The residual has a nonlinear layer, the skip connection (often miscalled residual) is the identity mapping. 
+
+Comment 5:
+Author: Few_Detail9288
+Score: 2
+Created UTC: 1767381612.0
+Comment: Breath of fresh air coming from this group. I wonder if 2026 will have more macro-architecture papers - I haven’t seen anything super interesting outside of the safari lab, (though hyena stuff is becoming stale).

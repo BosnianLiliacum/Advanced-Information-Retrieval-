@@ -1,0 +1,44 @@
+Post Title: Langgraph vrs Langchain
+Author: Friendly_Maybe9168
+Score: 15
+URL: https://www.reddit.com/r/LangChain/comments/1po3asy/langgraph_vrs_langchain/
+Number of comments: 12
+Created UTC: 1765895285.0
+
+Post Content:
+Since the release of the stable version of langchain 1.0, building a multi-agentic system can solely be done using langchain, since it's built on top of langgraph. I am building a supervisor architecture, at which point do I need to use langgraph over LangChain? LangChain gives me all I need ot build. I welcome thoughts
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ialijr
+Score: 6
+Created UTC: 1765899732.0
+Comment: I mean, all of the agent abstractions have been built on top of LangGraph since v1. If I were in your place and already knew how LangGraph works, to speed up development I’d use the abstractions. And when I need something more custom, I can still substitute specific parts of the architecture with my own LangGraph graph or agent, since I have access to the low-level implementation on the LangChain GitHub.
+
+Comment 2:
+Author: Cocoa_Pug
+Score: 5
+Created UTC: 1765895915.0
+Comment: Brother most of still using the langgraph is still better in a production or enterprise setting for agents.
+
+Comment 3:
+Author: Kortopi-98
+Score: 2
+Created UTC: 1765979131.0
+Comment: If it’s already working in LangChain, you’re fine sticking with it. LangGraph really only matters when things get more complex, like managing state or branching workflows. Otherwise, LangChain is enough.
+
+Comment 4:
+Author: lavangamm
+Score: 1
+Created UTC: 1765895534.0
+Comment: Have you tried the buildin supervisor agent and tried to monitor?? 
+
+It's gonna consume all the tokens it's better to write custom one rather than using generalized and having all tokens consumption
+
+Comment 5:
+Author: Analytics-Maken
+Score: 1
+Created UTC: 1766106485.0
+Comment: Your plan makes sense, use what's already working and swap in custom parts later if needed. Watch out for when your agents start needing real data from outside sources, use ETL connectors like Windsor ai to avoid developing pipelines. Ensure each agent in your supervisor pattern has a clear job and the right tools to do it.

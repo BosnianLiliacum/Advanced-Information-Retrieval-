@@ -1,0 +1,66 @@
+Post Title: [D] Deep Learning/LLMs for Operations Research Problems in Production: Real-world Adoption?
+Author: Rich-Effect2152
+Score: 18
+URL: https://www.reddit.com/r/MachineLearning/comments/1ptrrj7/d_deep_learningllms_for_operations_research/
+Number of comments: 8
+Created UTC: 1766489752.0
+
+Post Content:
+Hi everyone,
+
+I'm a data scientist working primarily at the intersection of ML and Operations Research. Recently, I've been seeing a growing number of papers exploring the use of deep learning and even LLMs to solve classical OR problems (TSP, VRP, job scheduling, etc.).
+
+My question: How much of this is actually being deployed in production at scale, particularly at companies dealing with real-time optimization problems?
+
+For context, I'm specifically curious about:
+
+1. Ride-sharing/delivery platforms (Uber, DoorDash, Lyft, etc.) - Are they using DL-based approaches for their matching/routing problems, or are they still primarily relying on traditional heuristics + exact solvers?
+2. Performance comparisons - In cases where DL methods have been deployed, do they actually outperform well-tuned classical heuristics (genetic algorithms, simulated annealing, or specialized algorithms for specific problem structures)?
+3. Hybrid approaches - Are companies finding success with hybrid methods that combine neural networks with traditional OR techniques?
+
+I'm seeing papers claiming impressive results on benchmark datasets, but I'm wondering:
+
+* Do these translate to real-world scenarios with dynamic constraints, noisy data, and hard real-time requirements?
+* What are the practical challenges in deployment (interpretability, reliability, latency, etc.)?
+* Are we at a point where DL-based OR solvers are genuinely competitive, or is this still mostly academic exploration?
+
+Would love to hear from anyone with industry experience or insights into what's actually being used in production systems. Papers or blog posts describing real-world deployments would be especially appreciated!
+
+Thanks in advance!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: NuclearVII
+Score: 25
+Created UTC: 1766494270.0
+Comment: &gt; I'm seeing papers claiming impressive results on benchmark datasets
+
+You just described 90% of the machine learning academia.
+
+Comment 2:
+Author: FlipMeister56
+Score: 5
+Created UTC: 1766495218.0
+Comment: Not an industry practitioner, so commenting mostly to follow, but as a researcher in the area my opinion is this: end-to-end ML is probably not the first thing I would use for a problem like this in industry. And that will be the case until foundation models start performing reliably cross-problem and cross-distribution. That said, as others have commented, ML-assistance in exact algorithms and heuristics can be great for scaling and improving effiency.
+
+Comment 3:
+Author: Satist26
+Score: 4
+Created UTC: 1766491284.0
+Comment: I doubt that these large scale production systems use DL primarily. These systems have to be extremely fast and predictable, neural networks are for the most part black boxes and extremely slow on scale compared to the heuristic systems. They may be using them in a 2-system configuration with offline DL models augmenting the heuristic systems, and live heuristic systems that actually do the job and once in a while being updated with latest DL-augmented heuristics. ALTHOUGH I have no idea, this is completely theoretical I haven't worked or know anyone that works in these companies, this is just my opinion.
+
+Comment 4:
+Author: currentscurrents
+Score: 3
+Created UTC: 1766508408.0
+Comment: &gt; Ride-sharing/delivery platforms (Uber, DoorDash, Lyft, etc.) - Are they using DL-based approaches for their matching/routing problems
+
+Some problems, yes: https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/
+
+Comment 5:
+Author: Gowty_Naruto
+Score: 2
+Created UTC: 1766558554.0
+Comment: We did a Hybrid solution Transformer Based Model as a initial solution which gets used in OR Tools for faster convergence. This gave quite a boost in runtime without quality loss. This was for CVRP. Using only the Transformer model wasn't working as good.

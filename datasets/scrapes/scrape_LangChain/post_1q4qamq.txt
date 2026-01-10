@@ -1,0 +1,90 @@
+Post Title: Anyone monitoring their LangChain/LangGraph workflows in production?
+Author: gkarthi280
+Score: 17
+URL: https://www.reddit.com/r/LangChain/comments/1q4qamq/anyone_monitoring_their_langchainlanggraph/
+Number of comments: 15
+Created UTC: 1767630517.0
+
+Post Content:
+I’ve been building a few apps using LangChain, and once things moved beyond simple chains, I ran into a familiar issue: very little visibility into what’s actually happening during execution.
+
+As workflows get more complex (multi-step chains, agents, tool calls, retries), it gets hard to answer questions like:
+
+* Where is latency coming from?
+* How many tokens are we using per chain or user?
+* Which tools, chains, or agents are invoked most?
+* Where do errors, retries, or partial failures happen?
+
+To get better insight, I instrumented a LangChain-based app with OpenTelemetry, exporting traces, logs, and metrics to an OTEL-compatible backend (SigNoz in my case).
+
+https://preview.redd.it/c6iwa9vu4kbg1.png?width=2886&amp;format=png&amp;auto=webp&amp;s=c8d260a9b50eac20b714d7e68d7028a4ce228dfc
+
+You can use the traces, logs, and metrics to create useful dashboards as well which tracks things like:
+
+* Tool call distribution
+* Errors over time
+* Token usage &amp; cost
+
+Curious how others here think about observability for LangChain apps:
+
+* What metrics or signals are you tracking?
+* How do you evaluate chain or agent output quality over time?
+* Are you monitoring failures or degraded runs?
+
+If anyone’s interested, I followed the LangChain + OpenTelemetry setup here:  
+[https://signoz.io/docs/langchain-observability/](https://signoz.io/docs/langchain-observability/)
+
+Would love to hear how others are monitoring and debugging LangChain workflows in production.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: pbalIII
+Score: 6
+Created UTC: 1767640503.0
+Comment: LangSmith is the obvious choice if you're already in the LangChain ecosystem... one env var and you get full trace visibility with zero latency overhead. The async collector runs out of band so it doesn't slow your agent down.
+
+Langfuse is solid if you want something OSS or need to self-host. Works with LangGraph out of the box and gives you the same trace-level debugging.
+
+The tricky part is figuring out what to actually monitor. Token costs and latency are easy. Catching when your agent loops or picks the wrong tool is harder. I've found step-level tracing plus a few custom evals on production traffic catches most of the weird stuff.
+
+Comment 2:
+Author: mdrxy
+Score: 1
+Created UTC: 1767639748.0
+Comment: [https://www.langchain.com/langsmith/observability](https://www.langchain.com/langsmith/observability)
+
+Comment 3:
+Author: OnyxProyectoUno
+Score: 1
+Created UTC: 1767656123.0
+Comment: Solid setup with OTEL, that's the right foundation. The token and latency tracking will save you a lot of headaches.
+
+One thing I'd add: most of the "where did this go wrong" debugging I've done traces back upstream of the chain execution itself. Like, the retrieval returned garbage because the chunks were bad, or the tool got invoked with wrong context because metadata didn't propagate correctly. By the time you're looking at traces, you're seeing symptoms not causes.
+
+For output quality over time, I've found it useful to log the actual retrieved chunks alongside the final response. When quality degrades, you can usually spot it in what got retrieved vs what should have. Evals on final output alone miss a lot.
+
+What's your retrieval setup look like? That's usually where the interesting failure modes hide.
+
+Comment 4:
+Author: saurabhjain1592
+Score: 1
+Created UTC: 1767664530.0
+Comment: OTEL + LangSmith or Langfuse work well once you are inside LangChain execution.
+
+One thing we kept running into in production is that many of the worst failures do not show up as errors in traces. They show up as valid executions that should not have happened, like retries with side effects, tools invoked with stale permissions, or chains continuing after the business outcome was already decided.
+
+Tracing tells you what happened. You still need some notion of runtime control to decide whether it should have happened and to stop or intervene mid-run.
+
+Curious if others have hit this once workflows became long-running or stateful.
+
+Comment 5:
+Author: dinkinflika0
+Score: 1
+Created UTC: 1767673106.0
+Comment: Your OTel setup handles infra metrics well but how do you track output quality?
+
+We had the same stack and it showed us when things broke, but not why outputs degraded. Like retrieval working fine (low latency, no errors) but the agent ignoring context.
+
+Added Maxim on top for LLM-specific metrics - hallucination rates, context usage, tool accuracy. Works with OTel but adds quality evaluation. [https://www.getmaxim.ai/products/agent-observability](https://www.getmaxim.ai/products/agent-observability)

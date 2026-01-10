@@ -1,0 +1,32 @@
+Post Title: I made 64 swarm agents compete to write gpu kernels
+Author: kwa32
+Score: 1
+URL: https://i.redd.it/ldpnwbwt04cg1.png
+Number of comments: 0
+Created UTC: 1767871237.0
+
+Post Content:
+I got annoyed by how slow torch.compile(mode='max-autotune') is. on H100 it's still 3 to 5x slower than hand written cuda
+
+the problem is nobody has time to write cuda by hand. it takes weeks
+
+i tried something different. instead of one agent writing a kernel, i launched 64 agents in parallel. 32 write kernels, 32 judge them. they compete and teh fastest kernel wins
+
+the core is inference speed. nemotron 3 nano 30b runs at 250k tokens per second across all the swarms. at that speed you can explore thousands of kernel variations in minutes.
+
+there's also an evolutionary search running on top. map-elites with 4 islands. agents migrate between islands when they find something good
+
+* llama 3.1 8b: torch.compile gets 42.3ms. this gets 8.2ms. same gpu
+* Qwen2.5-7B: 4.23×  
+* Mistral-7B: 3.38×
+
+planning to open source it soon. main issue is token cost. 64 agents at 250k tokens per second burns through credits fast. still figuring out how to make it cheap enough to run.
+
+if anyone's working on kernel stuff or agent systems would love to hear what you think because from the results, we can make something stronger after I open-source it:D
+
+[https://rightnowai.co/forge](https://rightnowai.co/forge)
+
+
+
+
+Top 0 comments:

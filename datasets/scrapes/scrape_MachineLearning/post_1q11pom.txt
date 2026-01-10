@@ -1,0 +1,54 @@
+Post Title: [P] Eigenvalues as models - scaling, robustness and interpretability
+Author: alexsht1
+Score: 55
+URL: https://www.reddit.com/r/MachineLearning/comments/1q11pom/p_eigenvalues_as_models_scaling_robustness_and/
+Number of comments: 26
+Created UTC: 1767265206.0
+
+Post Content:
+I started exploring the idea of using matrix eigenvalues as the "nonlinearity" in models, and wrote a second post in the series where I explore the scaling, robustness and interpretability properties of this kind of models. It's not surprising, but matrix spectral norms play a key role in robustness and interpretability.
+
+I saw a lot of replies here for the previous post, so I hope you'll also enjoy the next post in this series:   
+[https://alexshtf.github.io/2026/01/01/Spectrum-Props.html](https://alexshtf.github.io/2026/01/01/Spectrum-Props.html)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: UnusualClimberBear
+Score: 43
+Created UTC: 1767267303.0
+Comment: Theses kind of considerations has been bread and butter for signal processing for many years before deep learning. If you don't already know it you should be interested in Wigner's semicircle distribution.
+
+Yet it falls short to explain DL. Baron space is a thing for two layers deep nets [https://arxiv.org/pdf/1906.08039](https://arxiv.org/pdf/1906.08039) and there are works showing optimality of deep nets in a certain sense, but nothing that can actually be leveraged to perform better.
+
+Comment 2:
+Author: SlowFail2433
+Score: 12
+Created UTC: 1767268761.0
+Comment: Am I understanding correctly that the main potential benefits are hard shape guarantees (monotone, concave etc), some robustness to perturbations and a nice interpretability mechanism?
+
+Comment 3:
+Author: Sad-Razzmatazz-5188
+Score: 6
+Created UTC: 1767266469.0
+Comment: Just a nomenclature comment, can we really say we are using eigenvalues as models?
+
+
+Isn't it more like implicit eigenfunctions as nonlinearities? 
+Because the eigenvalue is itself a function of the matrices we're using, but is a parameter of the nonlinear model we're learning
+
+Comment 4:
+Author: Sad-Razzmatazz-5188
+Score: 1
+Created UTC: 1767366519.0
+Comment: I noticed that in your first post, the scaled matrix is always the same for every feature of the x vector, while in the second post you take the "bias" matrix as diagonal, but there is a different matrix for every feature of x. 
+
+
+How much does it change to keep the scaled matrix fixed across features, and what is the relation between searching models by changing matrix entries or by changing eigenvalue of interest? 
+
+Comment 5:
+Author: [deleted]
+Score: 0
+Created UTC: 1767274524.0
+Comment: [deleted]

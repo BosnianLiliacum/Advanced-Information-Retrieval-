@@ -1,0 +1,64 @@
+Post Title: [P] Lace is a probabilistic ML tool that lets you ask pretty much anything about your tabular data. Like TabPFN but Bayesian.
+Author: bbbbbaaaaaxxxxx
+Score: 55
+URL: https://www.reddit.com/r/MachineLearning/comments/1poy0pn/p_lace_is_a_probabilistic_ml_tool_that_lets_you/
+Number of comments: 4
+Created UTC: 1765982001.0
+
+Post Content:
+A few weeks ago, we published v0.9.0 of of [lace](https://www.lace.dev/) under MIT license after it having been BUSL for years. Happy to answer any questions.
+
+Lace is a probabilistic ML tool optimized for speed of asking and answering questions of tabular data. Lace learns a joint distribution over your data allowing you to query conditional distributions very quickly. Lace lets you
+
+* Predict any feature(s) given any other feature(s)
+* Simulate any feature(s) given any other feature(s)
+* Compute epistemic and aleatoric uncertainty
+* Understand statistical dependence between features
+* Find errors and anomalies
+* Learn from streams of data without retraining or catastrophic forgetting
+
+Lace supports missing (at random and not-at-random) data as well as continuous and categorical values.
+
+    import pandas as pd
+    import lace
+    
+    df = pd.read_csv("animals.csv", index_col=0)
+    
+    # Initialize 
+    animals = lace.Engine.from_df(df)
+    
+    # Fit the model
+    animals.update(5000)
+    
+    # Simulate 10 times from f(swims, costal, furry | flippers=true)
+    animals.simulate(
+        ['swims', 'coastal', 'furry'],
+        given={'flippers': 1},
+        n=10
+    )
+    
+
+**Scaling**
+
+I've used this on millions of rows and tens of thousands of features though it required a pretty beefy EC2 instance.
+
+**Task Performance**
+
+Lace is designed for joint learning--holistic understanding of your entire dataset. If you want to hyper optimize one prediction, there are methods to do that, but you won't always get catboost prediction performance out of the box. It has outperformed catboost in a number of healthcare-related tasks where it is deployed (you may have used it without knowing).
+
+Lace is excels at anomaly detection/attribution and synthetic data generation.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: malenkydroog
+Score: 3
+Created UTC: 1765988784.0
+Comment: Thanks for posting; I had briefly played around with CrossCat and BayesDB a few years ago... is this an updated/modern re-implementation of those? Any major differences/changes worth noting?
+
+Comment 2:
+Author: va1en0k
+Score: 3
+Created UTC: 1765998647.0
+Comment: I'm very happy to hear about the license change. I have a use-case that seems ripe for this one (sports analytics with 100s of features). I wasn't sure how to breach the subject of paying for this one before I experimented enough to prove the exact value but now I think I can simply start integrating it into our diagnostic workflows, to start with. Still curious about Ephesus too.

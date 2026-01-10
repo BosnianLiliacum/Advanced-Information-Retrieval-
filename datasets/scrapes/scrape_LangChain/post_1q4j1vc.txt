@@ -1,0 +1,32 @@
+Post Title: How to use postgres for checkpointer, when using langchain dev
+Author: SearchTricky7875
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1q4j1vc/how_to_use_postgres_for_checkpointer_when_using/
+Number of comments: 5
+Created UTC: 1767611678.0
+
+Post Content:
+I m using free version of langsmith n hosting my deep agent with agent server [https://docs.langchain.com/langsmith/agent-server#parts-of-a-deployment](https://docs.langchain.com/langsmith/agent-server#parts-of-a-deployment) everything works but my agent using inmemory for storing checkpoint store, if I configure postgres, created checkpoint tables calling with PostgresSaver.from\_conn\_string(DATABASE\_URL) as checkpointer:
+
+checkpointer.setup()
+
+but when I pass the checkpointer to agent it says, on dev mode langchain doesnt support custom checkpointer. Do I need to buy license for it, which version of license should I buy if I need to.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Heavymetal_17
+Score: 1
+Created UTC: 1767684782.0
+Comment: I have been attempting it too,
+But found out we just have to set environment variables 
+https://github.com/langchain-ai/langgraph/issues/5360 https://github.com/langchain-ai/langgraph/issues/6559 https://docs.langchain.com/langsmith/env-var#postgres-uri-custom https://forum.langchain.com/t/postgres-uri-custom-is-ignored-by-langgraph-runtime-runtime-always-fa…
+
+But as you can see in the issues even that is not working. So I am not at all sure how to proceed.
+
+Comment 2:
+Author: Heavymetal_17
+Score: 1
+Created UTC: 1767684872.0
+Comment: One might bypass langgraph dev completely and create fastapis directly and then attempt  from there.

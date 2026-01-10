@@ -1,0 +1,43 @@
+Post Title: I Finished a Fully Local Agentic RAG Tutorial
+Author: CapitalShake3085
+Score: 20
+URL: https://www.reddit.com/r/LangChain/comments/1q4rm66/i_finished_a_fully_local_agentic_rag_tutorial/
+Number of comments: 0
+Created UTC: 1767633328.0
+
+Post Content:
+Hi,
+I’ve just finished a **complete Agentic RAG tutorial + repository** that shows how to build a fully local, end-to-end system.
+
+No APIs, no cloud, no hidden costs.
+
+---
+
+### 💡 What’s inside
+
+The tutorial covers the full pipeline, including the parts most examples skip:
+
+- PDF → Markdown ingestion  
+- Hierarchical chunking (parent / child)  
+- Hybrid retrieval (dense + sparse)  
+- Vector store with **Qdrant**  
+- Query rewriting + **human-in-the-loop**  
+- Context summarization  
+- **Multi-agent map-reduce** with **LangGraph**  
+- Local inference with **Ollama**  
+- Simple **Gradio** UI
+
+---
+
+### 🎯 Who it’s for
+
+If you want to **understand Agentic RAG by building it**, not just reading theory, this might help.
+
+---
+
+### 🔗 Repo
+
+ https://github.com/GiovanniPasq/agentic-rag-for-dummies
+
+
+Top 0 comments:

@@ -1,0 +1,57 @@
+Post Title: [D] Open sourced Loop Attention for Qwen3-0.6B: two-pass global + local attention with a learnable gate (code + weights + training script)
+Author: Wittica
+Score: 119
+URL: https://www.reddit.com/r/MachineLearning/comments/1q1wyfi/d_open_sourced_loop_attention_for_qwen306b/
+Number of comments: 11
+Created UTC: 1767355537.0
+
+Post Content:
+Recently I was curious about Loop Attention and what effect it would have on small language models. I finished a small architectural tweak specifically for Qwen's architecture and recently tried the full training for Qwen3-0.6B and wanted to share it openly.
+
+Instead of doing attention once, Loop Attention does a quick global attention pass, then a second pass that looks at a local sliding window, and a learnable gate blends the two.
+
+The gate starts off strongly biased toward the normal global behavior (so it doesn’t immediately go off the rails) and can learn when to lean more local.
+
+I didn’t want to just drop weights and disappear, so the repo includes the actual model/attention code (Transformers, trust\_remote\_code) / the training script I used and how I built the attention function from scratch.
+
+All artifacts are there from beginning of the repo and I hope I interest a few folks to mess with this and hopefully someone wants to collaborate on this!
+
+Initial experimental results of the current loop attention implementation  (evaluation script can be found in the HF repo) / WikiText-2 eval.
+
+|Model|Validation Loss|Perplexity|
+|:-|:-|:-|
+|Baseline Qwen3-0.6B|3.7274|41.57|
+|Loop Attention Run 1|3.5549|35.01|
+
+Link is here: [https://huggingface.co/coolpoodle/Qwen3-0.6B-Looped](https://huggingface.co/coolpoodle/Qwen3-0.6B-Looped)
+
+Cheers!
+
+Edit: fixing grammar.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Wittica
+Score: 13
+Created UTC: 1767355761.0
+Comment: sorry if english borke im not sleep rn. ok goodnight
+
+Comment 2:
+Author: PaluszkiSlone
+Score: 8
+Created UTC: 1767364085.0
+Comment: Can you give the source for Loop Attention? Is there a paper that talks about it or something?
+
+Comment 3:
+Author: kouteiheika
+Score: 5
+Created UTC: 1767411536.0
+Comment: Is your baseline vanilla Qwen3-0.6B? If so that's... not very useful? You should finetune the model twice - once *without* the loop attention, and once *with*, and compare those two. Otherwise it's not really an apples-to-apples comparison - you're just comparing a "finetuned vs unfinetuned" model, and you don't actually know whether the improvement you're seeing is purely because you've finetuned the model, or because of your architectural tweak.
+
+Comment 4:
+Author: Fearless_Yam_2375
+Score: 2
+Created UTC: 1767376948.0
+Comment: Pretty cool, would love to see further improvements

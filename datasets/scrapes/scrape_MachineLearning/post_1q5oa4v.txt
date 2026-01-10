@@ -1,0 +1,70 @@
+Post Title: [D]NVIDIA Rubin proves that Inference is now a System Problem, not a Chip Problem.
+Author: pmv143
+Score: 41
+URL: https://www.reddit.com/r/MachineLearning/comments/1q5oa4v/dnvidia_rubin_proves_that_inference_is_now_a/
+Number of comments: 18
+Created UTC: 1767719096.0
+
+Post Content:
+Everyone is focusing on the FLOPs, but looking at the Rubin specs released at CES, it’s clear the bottleneck has completely shifted.
+
+The Specs:
+
+• 1.6 TB/s scale-out bandwidth per GPU (ConnectX-9).
+
+• 72 GPUs operating as a single NVLink domain.
+
+• HBM Capacity is only up 1.5x, while Bandwidth is up 2.8x and Compute is up 5x.
+
+The Thesis:
+
+We have officially hit the point where the "Chip" is no longer the limiting factor. The limiting factor is feeding the chip.
+
+Jensen explicitly said: "The future is orchestrating multiple great models at every step of the reasoning chain."
+
+If you look at the HBM-to-Compute ratio, it's clear we can't just "load bigger models" statically. We have to use that massive 1.6 TB/s bandwidth to stream and swap experts dynamically.
+
+We are moving from "Static Inference" (loading weights and waiting) to "System Orchestration" (managing state across 72 GPUs in real-time).
+
+If your software stack isn't built for orchestration, a Rubin Pod is just a very expensive space heater.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: appenz
+Score: 65
+Created UTC: 1767719732.0
+Comment: This has been the case for a while now. Large model inference performance is bound by memory bandwidth and fabric bandwidth. I am not super deep into these architectures, but I don't think swapping experts is a major use case. Instead: 
+
+1. Typical agentic workloads today use identical large context windows for many requests. To get these performant, you need to swap the KV caches. Doing this on a single node is inefficient, so what you do is use distributed KV caches. NVIDIA's marketing term for this is [NVIDIA Inference Context Memory Storage Platform](https://nvidianews.nvidia.com/news/nvidia-bluefield-4-powers-new-class-of-ai-native-storage-infrastructure-for-the-next-frontier-of-ai).
+2. You want to run very high batch sized to maximize throughput. This requires splitting the model across multiple nodes and you need a fast fabric between them. 
+3. For training you need to reconcile weights after a number of steps. This is a non-trivial problem as the traffic is very bursty and tail latency drives performance.
+
+Does that help?
+
+Comment 2:
+Author: Mundane_Ad8936
+Score: 26
+Created UTC: 1767720574.0
+Comment: Sorry this isn't really anything new.. this has been true all the way to the mainframe days. Buses and networking has always been the bottleneck and always will be. 
+
+The only thing that changes is every generation the buses get updated the problem is diminished for a while until other components in the stack exceed capacity again.
+
+Comment 3:
+Author: [deleted]
+Score: 3
+Created UTC: 1767719690.0
+Comment: Why they bought Groq. Their chips are about feeding the pipeline with data.
+
+Comment 4:
+Author: samajhdar-bano2
+Score: 1
+Created UTC: 1767727200.0
+Comment: Seems like Arista and Cisco are going to be back in business
+
+Comment 5:
+Author: OptimalDescription39
+Score: 1
+Created UTC: 1767799198.0
+Comment: This perspective underscores a significant shift in how we approach inference, emphasizing the importance of system-level optimizations over just chip advancements.

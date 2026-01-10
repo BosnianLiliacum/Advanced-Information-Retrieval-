@@ -1,0 +1,58 @@
+Post Title: GraphQLite - Embedded graph database for building GraphRAG with SQLite
+Author: Fit-Presentation-591
+Score: 28
+URL: https://www.reddit.com/r/LangChain/comments/1q0t2qd/graphqlite_embedded_graph_database_for_building/
+Number of comments: 15
+Created UTC: 1767232775.0
+
+Post Content:
+For anyone building GraphRAG systems who doesn't want to run Neo4j just to store a knowledge graph, I've been working on something that might help.
+
+
+
+GraphQLite is an SQLite extension that adds Cypher query support. The idea is that you can store your extracted entities and relationships in a graph structure, then use Cypher to traverse and expand context during retrieval. Combined with sqlite-vec for the vector search component, you get a fully embedded RAG stack in a single database file.
+
+
+
+It includes graph algorithms like PageRank and community detection, which are useful for identifying important entities or clustering related concepts. There's an example in the repo using the HotpotQA multi-hop reasoning dataset if you want to see how the pieces fit together.
+
+
+
+\`pip install graphqlite\`
+
+
+
+GitHub: [https://github.com/colliery-io/graphqlite](https://github.com/colliery-io/graphqlite)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: International_Quail8
+Score: 2
+Created UTC: 1767235315.0
+Comment: Very cool!
+
+Comment 2:
+Author: Don_Ozwald
+Score: 1
+Created UTC: 1767235047.0
+Comment: Can someone explain to me, what’s useful about GraphRAG?
+
+Comment 3:
+Author: BetaCuck80085
+Score: 1
+Created UTC: 1767236538.0
+Comment: Wow, *exactly* what I’ve been looking for. Use Neo4j on the job, wanted to use something more lightweight for a few personal endeavors. Really appreciate you sharing this.
+
+Comment 4:
+Author: eternviking
+Score: 1
+Created UTC: 1767273064.0
+Comment: It's SQLite and you missed the chance to name it GRAPHite.
+
+Comment 5:
+Author: Bjalal
+Score: 1
+Created UTC: 1767542323.0
+Comment: Wؤثؤ،،¤《 ٩ر

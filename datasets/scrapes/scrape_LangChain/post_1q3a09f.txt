@@ -1,0 +1,33 @@
+Post Title: Autonomous Manim Coder with Deepagents
+Author: Eastwindy123
+Score: 4
+URL: https://v.redd.it/1krmmk8t08bg1
+Number of comments: 1
+Created UTC: 1767483808.0
+
+Post Content:
+TLDR : Open source Manim Coding Agent : https://github.com/eduly-ai/eduly
+
+First of all, I want to say. Man, LLMs suck at Manim! I guess its not really represented well in their training data but even then literally every single frontier model falls flat when giving coherent, decent visuals out of the box.
+
+So, I had some free time in my Christmas break, and ive had this idea of making a manim agent for a while so i thought why not and I (with Claude Code) decided to see how far i can get within a week. And its not bad, definitely could be worse.
+
+What improved the output a lot was switching from structured outputs and RAG to just making a coding agent and giving it access to up to date Manim docs by just dumping markdown into a folder and prompting the agent to use the docs as reference. It worked a lot better than I expected 
+
+The attached video is an explanation of the recent hype around hyper connections made
+The next step is to add an AI voice over which i think will help a lot.
+
+See my page for more details : landing.eduly.ai
+
+Thanks!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: vtrivedy-lc
+Score: 1
+Created UTC: 1767493718.0
+Comment: Hey this is awesome thanks for sharing!!  Would love to feature it and hear about how using DeepAgents went (and how we can make it better).  Will DM you!
+
+Was a math major in undergrad, Manim was always magic :)

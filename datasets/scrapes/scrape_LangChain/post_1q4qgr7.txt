@@ -1,0 +1,59 @@
+Post Title: What are you using instead of LangSmith?
+Author: clickittech
+Score: 9
+URL: https://www.reddit.com/r/LangChain/comments/1q4qgr7/what_are_you_using_instead_of_langsmith/
+Number of comments: 31
+Created UTC: 1767630884.0
+
+Post Content:
+I’ve been reading some negative opinions about LangSmith lately, not that it’s bad, just that it doesn’t always fit once things get real.
+
+Stuff like, gets expensive fast or hard to fit into existing observability stacks
+
+I’ve some alternatives for langsimth like
+
+* Arize Phoenix
+* OpenTelemetry setups
+* Datadog/ELK
+* ZenML
+* Mirascope
+* HoneyHive
+* Helicone
+
+what are you guys using instead?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: caprica71
+Score: 17
+Created UTC: 1767635970.0
+Comment:  Langfuse
+
+Comment 2:
+Author: Ecto-1A
+Score: 4
+Created UTC: 1767633336.0
+Comment: We’re in the process of getting Confident AI set up. We tested most of these and it seemed to be the best fit without much code rewriting. Langsmith has been fine for the past year and a half but as our infrastructure grows, it becomes more obvious where langsmith is lacking.
+
+Comment 3:
+Author: necati-ozmen
+Score: 2
+Created UTC: 1767634141.0
+Comment: We have users migration from langsmith to Voltagent which has built-in observability &amp; automation layer.  
+[https://github.com/VoltAgent/voltagent](https://github.com/VoltAgent/voltagent)
+
+Comment 4:
+Author: Ancient-Direction231
+Score: 2
+Created UTC: 1767639095.0
+Comment: https://www.nfrax.com/ai-infra
+
+Combines langsmith/langchain, pydantic-ai, llmlite and more capabilities into one
+
+Comment 5:
+Author: ninadpathak
+Score: 2
+Created UTC: 1767631719.0
+Comment: The fact that this question even exists shows observability tooling for AI wasn't built with developers in mind. In 5 years these tools will be baked into the LLM frameworks themselves. Right now people cobble together open-source solutions. Keep an eye on who's building observability-first AI agents because that market category is about to explode.

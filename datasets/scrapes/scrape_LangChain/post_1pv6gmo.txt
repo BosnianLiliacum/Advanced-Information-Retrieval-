@@ -1,0 +1,34 @@
+Post Title: Large Website data ingestion for RAG
+Author: Vishwaraj13
+Score: 11
+URL: https://www.reddit.com/r/LangChain/comments/1pv6gmo/large_website_data_ingestion_for_rag/
+Number of comments: 6
+Created UTC: 1766641553.0
+
+Post Content:
+I am working on a project where i need to add WHO.int (World Health Organization) website as a data source for my RAG pipeline. Now this website has ton of data available. It has lots of articles, blogs, fact sheets and even PDFs attached which has data that also needs to be extracted as a data source. Need suggestions on what would be best way to tackle this problem ?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: BeerBatteredHemroids
+Score: 4
+Created UTC: 1766684370.0
+Comment: This thread has basically become a place for newbs to come beg for information on how to do basic shit. Not sure why Im even a member of this anymore.
+
+Comment 2:
+Author: OnyxProyectoUno
+Score: 3
+Created UTC: 1766644956.0
+Comment: The tricky part with large websites like WHO.int is the mixed content types and nested structures. You'll want to start with a crawler that can handle both the HTML content and follow PDF links, something like Scrapy or even a headless browser setup if there's dynamic content. The PDFs are going to be your biggest pain point since medical documents often have complex tables, multi-column layouts, and embedded images that basic parsers butcher.
+
+For the actual processing pipeline, you'll need different strategies for articles versus PDFs versus fact sheets since they have completely different information densities and structures. I built vectorflow.dev to debug exactly this kind of multi-format pipeline mess before documents hit the vector store. The real question is whether you're planning to crawl everything upfront or do incremental updates, because WHO.int updates frequently and you'll need to handle content versioning. What's your planned update cadence?
+
+Comment 3:
+Author: Born_Owl7750
+Score: 1
+Created UTC: 1766778784.0
+Comment: Checkout Tavily for content search. Also checkout google search API. Directly use the API to search for information. Lock by domain.
+
+You might have to write custom scraping code for downloading PDFs or for content not available on the tavily or google search API. Once downloaded, you will need some OCR tools to get content from it.

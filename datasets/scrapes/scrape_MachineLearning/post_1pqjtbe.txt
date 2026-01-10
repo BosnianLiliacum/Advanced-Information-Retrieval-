@@ -1,0 +1,50 @@
+Post Title: [D] AAMAS 2026 result is out.
+Author: Colin-Onion
+Score: 30
+URL: https://www.reddit.com/r/MachineLearning/comments/1pqjtbe/d_aamas_2026_result_is_out/
+Number of comments: 32
+Created UTC: 1766147092.0
+
+Post Content:
+This year we received a total of 1343 submissions (after withdrawals and desk rejections) of which 338 were accepted as full papers, resulting in an acceptance rate of 25%. Another 205 submissions were accepted as extended abstracts for an overall (full papers + extended abstracts) acceptance rate of 40%.
+
+They originally set Dec 22nd as the announcement date, but it seems like they decided to go earlier.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Fantastic-Nerve-4056
+Score: 12
+Created UTC: 1766147214.0
+Comment: Got EA with a score of 6 and 8, and no major cons. The meta review simply had one line saying 
+"Relevant for another AAMAS session"
+
+
+Definitely disappointed with the results, but even more disappointed with the Meta Review, which gives no clarity 
+
+Comment 2:
+Author: AIGuy1234
+Score: 5
+Created UTC: 1766150177.0
+Comment: Got accept (poster) with 5,7,8 but since I deselected EA as an option, got rejected:/
+
+Comment 3:
+Author: team-daniel
+Score: 3
+Created UTC: 1766150591.0
+Comment: Got an EA with 6,6,6
+
+Wasn’t hopeful so very chuffed
+
+Comment 4:
+Author: kcorder
+Score: 3
+Created UTC: 1766242762.0
+Comment: Rejected with 5,5,7. The main method complaints were incorrect interpretations, but of course no reviews updated after rebuttal  :-( 
+
+Comment 5:
+Author: NightmareOx
+Score: 3
+Created UTC: 1766312892.0
+Comment: See you in Cyprus. Got accepted with a 9, 6, and 6.

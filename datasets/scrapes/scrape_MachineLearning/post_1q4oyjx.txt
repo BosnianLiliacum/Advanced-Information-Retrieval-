@@ -1,0 +1,45 @@
+Post Title: [D] PhD students admitted in the last 5 years: did you have an interview at schools that accepted you?
+Author: CadavreContent
+Score: 46
+URL: https://www.reddit.com/r/MachineLearning/comments/1q4oyjx/d_phd_students_admitted_in_the_last_5_years_did/
+Number of comments: 29
+Created UTC: 1767627624.0
+
+Post Content:
+My PI at my undergrad school mentioned that getting in without an interview is very rare in ML, but I've heard that the opposite is actually true. I'm assuming that it may be that it has changed in the last few years given the increasingly competitive nature of admissions, so I'm curious about recent admits' experiences.
+
+If you were admitted to an ML PhD program in the US in the last few years, especially in the T20-T30, were you interviewed? Feel free to provide as little or as much detail as you are comfortable giving.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: lv-lab
+Score: 39
+Created UTC: 1767628470.0
+Comment: I do ML for robotics. I’d say right now is the most competitive it’s ever been, and the funding situation isn’t helping. I applied to 9 schools in T30, interviewed with 3, and was only admitted to 1 school due to fostering a good relationship with my PI. I had a strong GPA, strong publication record, and great internships. I recommend casting a wide net 😅
+
+Comment 2:
+Author: GuestCheap9405
+Score: 24
+Created UTC: 1767631582.0
+Comment: ML professor here: I interview anybody I'm interested in hiring. All faculty in my dept do. 
+Where I did my PhD, I got 2 interviews from 2 different faculty when I was applying but I don't think all faculty in my PhD institution did that. But then again that was 2015
+
+Comment 3:
+Author: DataDiplomat
+Score: 20
+Created UTC: 1767637622.0
+Comment: Not being interviewed and receiving an offer is a red flag. Makes you wonder if the PI cares about their PhD students and how they collaborate 
+
+Comment 4:
+Author: HerrHruby
+Score: 11
+Created UTC: 1767631630.0
+Comment: I was interviewed for every school that I was eventually admitted to. Multiple interviews at most of those.
+
+Comment 5:
+Author: MahlersBaton
+Score: 8
+Created UTC: 1767640290.0
+Comment: How the hiring/admission process is handled tells you a lot about a group's culture and the professor's approach to the PhD students. Ofc this is ultimately a personal fit thing, but I would never work with a prof who doesn't even interview (even a postdoc can do the interviews!) the applicants and would advise anyone I know heavily against such a position.

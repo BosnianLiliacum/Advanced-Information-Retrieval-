@@ -1,0 +1,208 @@
+Post Title: Genesis-152M-Instruct — Hybrid GLA + FoX + Test-Time Training at small scale
+Author: Kassanar
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1pwa0ms/genesis152minstruct_hybrid_gla_fox_testtime/
+Number of comments: 0
+Created UTC: 1766770705.0
+
+Post Content:
+Hey everyone 👋
+
+I’m sharing **Genesis-152M-Instruct**, an **experimental small language model** built to explore how *recent architectural ideas interact* when combined in a single model — especially under **tight data constraints**.
+
+
+
+This is **research-oriented**, not a production model or SOTA claim.
+
+
+
+
+
+🔍 **Why this might be interesting**
+
+
+
+Most recent architectures (GLA, FoX, TTT, µP, sparsity) are tested **in isolation** and usually at **large scale**.
+
+I wanted to answer a simpler question:
+
+
+
+*How much can architecture compensate for data at \~150M parameters?*
+
+
+
+Genesis combines several **ICLR 2024–2025 ideas** into one model and evaluates the result.
+
+
+
+
+
+⚡ **TL;DR**
+
+• **152M parameters**
+
+• Trained on **\~2B tokens** (vs \~2T for SmolLM2)
+
+• Hybrid **GLA + FoX attention**
+
+• **Test-Time Training (TTT)** during inference
+
+• **Selective Activation (sparse FFN)**
+
+• **µP-scaled training**
+
+• Fully open-source (Apache 2.0)
+
+
+
+🤗 Model: [https://huggingface.co/guiferrarib/genesis-152m-instruct](https://huggingface.co/guiferrarib/genesis-152m-instruct)
+
+📦 pip install genesis-llm
+
+
+
+
+
+📊 **Benchmarks (LightEval, Apple MPS)**
+
+
+
+ARC-Easy     → 44.0%   (random: 25%)
+
+BoolQ        → 56.3%   (random: 50%)
+
+HellaSwag    → 30.2%   (random: 25%)
+
+SciQ         → 46.8%   (random: 25%)
+
+Winogrande   → 49.1%   (random: 50%)
+
+
+
+**Important context:**
+
+SmolLM2-135M was trained on **\~2 trillion tokens**.
+
+Genesis uses **\~2 billion tokens** — so this is not a fair head-to-head, but an exploration of **architecture vs data scaling**.
+
+
+
+
+
+🧠 **Architecture Overview**
+
+
+
+**Hybrid Attention (Qwen3-Next inspired)**
+
+
+
+**Layer** **%** **Complexity** **Role**
+
+Gated DeltaNet (GLA) 75% O(n) Long-range efficiency
+
+FoX (Forgetting Attention) 25% O(n²) Precise retrieval
+
+
+
+GLA uses:
+
+• Delta rule memory updates
+
+• Mamba-style gating
+
+• L2-normalized Q/K
+
+• Short convolutions
+
+
+
+FoX adds:
+
+• Softmax attention
+
+• Data-dependent forget gate
+
+• Output gating
+
+
+
+
+
+**Test-Time Training (TTT)**
+
+
+
+Instead of frozen inference, Genesis can **adapt online**:
+
+• Dual-form TTT (parallel gradients)
+
+• Low-rank updates (rank=4)
+
+• Learnable inner learning rate
+
+
+
+Paper: *Learning to (Learn at Test Time)* (MIT, ICML 2024)
+
+
+
+
+
+**Selective Activation (Sparse FFN)**
+
+
+
+SwiGLU FFNs with **top-k activation masking** (85% kept).
+
+Currently acts as **regularization** — real speedups need sparse kernels.
+
+
+
+
+
+**µP Scaling + Zero-Centered RMSNorm**
+
+• Hyperparameters tuned on small proxy
+
+• Transferred via µP rules
+
+• Zero-centered RMSNorm for stable scaling
+
+
+
+
+
+⚠️ **Limitations (honest)**
+
+• Small training corpus (2B tokens)
+
+• TTT adds \~5–10% inference overhead
+
+• No RLHF
+
+• Experimental, not production-ready
+
+
+
+
+
+📎 **Links**
+
+• 🤗 Model: [https://huggingface.co/guiferrarib/genesis-152m-instruct](https://huggingface.co/guiferrarib/genesis-152m-instruct)
+
+• 📦 PyPI: [https://pypi.org/project/genesis-llm/](https://pypi.org/project/genesis-llm/)
+
+
+
+
+
+I’d really appreciate feedback — especially from folks working on **linear attention**, **hybrid architectures**, or **test-time adaptation**.
+
+
+
+*Built by Orch-Mind Team*
+
+
+Top 0 comments:

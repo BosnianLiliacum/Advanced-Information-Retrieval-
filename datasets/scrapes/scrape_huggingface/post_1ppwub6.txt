@@ -1,0 +1,30 @@
+Post Title: Is this the same huggingface that used to have a site that converted a jpeg to a 3D model?
+Author: IcebornCube
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1ppwub6/is_this_the_same_huggingface_that_used_to_have_a/
+Number of comments: 4
+Created UTC: 1766079320.0
+
+Post Content:
+There used to be a site where u could create a 3D model and download it. Then animate that. Is this the same huggingface website? 
+
+
+Top 3 comments:
+
+Comment 1:
+Author: dogstar__man
+Score: 7
+Created UTC: 1766085692.0
+Comment: Probably. But that’s a bit like asking if Facebook is the website with that photo of a cat on it.
+
+Comment 2:
+Author: Astralnugget
+Score: 3
+Created UTC: 1766087753.0
+Comment: Yes you’re thinking probably of the Microsoft Trellis 3D or other similar spaces
+
+Comment 3:
+Author: TomatoInternational4
+Score: 1
+Created UTC: 1766604511.0
+Comment: SOTA https://huggingface.co/facebook/sam-3d-body-dinov3

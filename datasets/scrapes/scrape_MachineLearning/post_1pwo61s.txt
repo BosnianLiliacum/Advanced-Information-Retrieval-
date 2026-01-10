@@ -1,0 +1,68 @@
+Post Title: [D] Feature Selection Techniques for Very Large Datasets
+Author: Babbage224
+Score: 24
+URL: https://www.reddit.com/r/MachineLearning/comments/1pwo61s/d_feature_selection_techniques_for_very_large/
+Number of comments: 13
+Created UTC: 1766808139.0
+
+Post Content:
+For those that have built models using data from a vendor like Axciom, what methods have you used for selecting features when there are hundreds to choose from? I currently use WoE and IV, which has been successful, but I’m eager to learn from others that may have been in a similar situation.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: sgt102
+Score: 18
+Created UTC: 1766830341.0
+Comment: Under rated... find a domain expert and ask them about the domain to get ideas about what should matter and what shouldn't. I've found that sometimes this doesn't do much for the headline test results, but does make for classifiers that are more robust in prod.
+
+Comment 2:
+Author: bbbbbaaaaaxxxxx
+Score: 10
+Created UTC: 1766837733.0
+Comment: Lace (https://lace.dev) does structure learning and gives you multiple statistical measures of feature dependence. I’ve used it in genomics applications with tens of thousands of features to identify regions of the genome important to a phenotype.
+
+Comment 3:
+Author: nightshadew
+Score: 4
+Created UTC: 1766866778.0
+Comment: (1) filter stable features that won’t degrade in prod (PSI works well) (2) univariate importance (IV works) (3) correlation (4) multivariate selection (e.g. backwards selection)
+
+Even if you’re training a random forest or other things with “embedded” feature selection, they tend to not test all possible choices, so it’s good to remove trash beforehand. How much you remove will probably depend on your compute budget (if you had infinite processing and still want to remove variables just do backwards selection for everything lmao)
+
+Comment 4:
+Author: RandomForest42
+Score: 4
+Created UTC: 1766825219.0
+Comment: What does WoE and IV stand for? 
+
+I usually throw a Random Forest to get feature importance, and start from there. Features with close to 0 importance are discarded right away, and I iteratively try to understand the remaining ones if possible
+
+Comment 5:
+Author: whatwilly0ubuild
+Score: 2
+Created UTC: 1767082625.0
+Comment: WoE and IV are solid for interpretable models like scorecards where you need to explain feature contributions. For more flexible approaches with hundreds of features, here's what works in practice:
+
+LASSO or ElasticNet regularization automatically zeros out irrelevant features during training. This is way more efficient than manual selection when you have hundreds of candidates. The regularization parameter controls how aggressive the pruning is.
+
+Tree-based feature importance from Random Forest or XGBoost gives you quick rankings of which features actually contribute to predictions. Train a model on all features, extract importance scores, then retrain on top N features. This is fast and usually effective.
+
+Our clients working with vendor data learned that correlation filtering upfront saves tons of time. Drop features with &gt;0.9 correlation with each other before doing expensive selection. Vendor datasets often have redundant variations of the same underlying attribute.
+
+For massive feature sets, use recursive feature elimination with cross-validation. Start with all features, iteratively remove the least important, and track performance. Expensive but finds minimal feature sets that maintain accuracy.
+
+Permutation importance is underrated for understanding which features actually matter versus just correlating with target. Shuffle each feature and measure performance drop. Features that don't hurt performance when randomized are useless.
+
+Domain knowledge filtering before statistical methods saves time. With vendor data like Axciom, tons of features are variations on themes. Pick the most relevant demographic, behavioral, or financial categories upfront rather than letting algorithms wade through everything.
+
+Stability selection runs feature selection on multiple bootstrap samples and only keeps features consistently selected. This catches features that are important but might be missed by single-run methods due to data quirks.
+
+What doesn't work well at scale is forward/backward stepwise selection. Too slow with hundreds of features and prone to local optima.
+
+For production models, the tradeoff is interpretability versus performance. WoE/IV gives you clean scorecards regulators understand. Tree-based or LASSO models perform better but are harder to explain. Pick based on your use case and regulatory requirements.
+
+Practical workflow that works: correlation filter to reduce redundancy, tree-based importance to get top 50-100 candidates, then WoE/IV or regularization depending on whether you need interpretability. This balances speed with quality.
+
+For vendor data specifically, watch for data leakage. Some Axciom features are suspiciously predictive because they're derived from outcomes you're trying to predict. Validate that features are truly forward-looking.

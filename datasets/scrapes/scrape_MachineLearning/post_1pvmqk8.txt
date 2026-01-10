@@ -1,0 +1,32 @@
+Post Title: [D] Best survey papers of 2025?
+Author: al3arabcoreleone
+Score: 57
+URL: https://www.reddit.com/r/MachineLearning/comments/1pvmqk8/d_best_survey_papers_of_2025/
+Number of comments: 5
+Created UTC: 1766696418.0
+
+Post Content:
+Inspired by this [post](https://www.reddit.com/r/MachineLearning/comments/1hgwjqu/d_best_survey_papers_of_2024/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button) from last year,  hopefully there are more broad survey papers of different aspect of AI this year.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: bendee983
+Score: 10
+Created UTC: 1766698223.0
+Comment: I'm reading this one right now and it's fantastic. I'm not sure if we can consider it a survey, but it gives a full framework to classify all agentic systems:
+
+[https://arxiv.org/abs/2512.16301](https://arxiv.org/abs/2512.16301)
+
+Comment 2:
+Author: burnt-Tacos
+Score: 1
+Created UTC: 1766717356.0
+Comment: This is a pretty good survey of agent memory. I’m reading it and it’s quite good: https://arxiv.org/pdf/2512.13564
+
+Comment 3:
+Author: ArtisticHamster
+Score: -5
+Created UTC: 1766696568.0
+Comment: Why limiting yourself to just survey papers? https://www.reddit.com/r/MachineLearning/comments/1pvmrx9/d_best_papers_of_2025/

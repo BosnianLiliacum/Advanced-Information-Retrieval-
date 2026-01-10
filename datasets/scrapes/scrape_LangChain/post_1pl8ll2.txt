@@ -1,0 +1,42 @@
+Post Title: LangConfig - Open Source No Code Multi/Deep Agent Workflow Builder
+Author: LangConfig
+Score: 11
+URL: https://www.langconfig.com/
+Number of comments: 3
+Created UTC: 1765587955.0
+
+Post Content:
+Hello there,
+
+I wanted to share an open source no code LangChain/LangGraph builder that I’ve been building out as I learn LangChain and create Deep Agents.
+
+It’s called LangConfig Current functionality provides:
+
+Building regular or deep agents, configuring which tools and middleware they have access to, create your own custom tools, run workflows with tracing to see how the agent performs. Chat with the agent to improve its prompt, logic and store that conversation context for workflow usage. 
+
+There’s a lot more to it that I’ve been building, polishing and keeping up with all the new releases! 
+
+I have a large roadmap on what I want to make with this and would love to get feedback for those learning or experienced with LangChain. 
+
+I’m a product manager and this is my first open source project so I understand it’s not the cleanest code but I hope you have fun using it! 
+
+https://github.com/LangConfig/langconfig
+
+
+Top 1 comments:
+
+Comment 1:
+Author: gardenia856
+Score: 3
+Created UTC: 1765588924.0
+Comment: The core idea is strong: a visual way to design deep/multi-agent workflows without forcing people to learn every LangChain/LangGraph primitive first.
+
+If you want this to be more than a toy, I’d double down on three things:
+
+1) Guardrails and observability: per-tool timeouts, max depth for “deep” agents, and a simple “runbook” view that shows which node blew up and why. LangSmith-style traces baked in are gold for folks debugging weird tool loops.
+
+2) Reusability: let users version workflow templates, pin model/tool configs, and share/import blueprints so teams can standardize patterns.
+
+3) Integrations that unlock real use cases: easy webhooks, queue consumers (Kafka/SQS), and stable data APIs. I’ve wired agents on top of Supabase and Hasura, and used DreamFactory plus PostgREST to expose legacy SQL as clean REST tools the graph can call.
+
+Main point for me: if LangConfig makes it trivial to go from “fun graph” to “reliable, observable workflow hitting real services,” it’ll stand out fast.

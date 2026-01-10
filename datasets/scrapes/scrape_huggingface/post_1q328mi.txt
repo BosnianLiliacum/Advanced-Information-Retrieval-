@@ -1,0 +1,34 @@
+Post Title: LLM to help with character cards
+Author: slrg1968
+Score: 3
+URL: https://www.reddit.com/r/huggingface/comments/1q328mi/llm_to_help_with_character_cards/
+Number of comments: 2
+Created UTC: 1767465324.0
+
+Post Content:
+HI!
+
+Is there an LLM out there that is specifically trained (or fine tuned or whatever) to help the user create viable character cards... like i would tell it... "*my character is a 6 foot tall 20 year old college sophomore. he likes science, and hates math and english, he wears a hoodie and jeans, has brown hair, blue eyes. he gets along well with science geeks because he is one, he tries to get along with jocks but sometimes they pick on him.*" etc etc etc
+
+once that was added the program or model or whatever would ask any pertinent questions about the character, and then spit out a properly formatted character card for use in silly tavern or other RP engines. Things like figuring out his personality type and including that in the card would be a great benefit
+
+Thanks
+
+TIM
+
+
+Top 2 comments:
+
+Comment 1:
+Author: dizzyelk
+Score: 1
+Created UTC: 1767476498.0
+Comment: There's [CardProjector](https://huggingface.co/SlerpE/CardProjector-27B-v4). It does alright, especially paired with a card that's specific to creating other character cards.
+
+And, while not specifically for creating cards, I found that [Maginum-Cydoms](https://huggingface.co/Casual-Autopsy/Maginum-Cydoms-24B) did alright with making cards.
+
+Comment 2:
+Author: Tony_009_
+Score: 1
+Created UTC: 1767693643.0
+Comment: Give llm a preset prompt that it’s a character card maker

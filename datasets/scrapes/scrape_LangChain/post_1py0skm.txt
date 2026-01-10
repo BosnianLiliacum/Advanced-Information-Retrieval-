@@ -1,0 +1,63 @@
+Post Title: Relay: a proposal for framework-agnostic agent orchestration
+Author: bumswagger
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1py0skm/relay_a_proposal_for_frameworkagnostic_agent/
+Number of comments: 7
+Created UTC: 1766951855.0
+
+Post Content:
+You have LangGraph agents, teammate has CrewAI, another team uses custom agents. Getting them to work together sucks.
+
+Proposal: agents coordinate through "relay repos"
+
+* Shared versioned state store
+* Agents commit outputs, read inputs from previous commits
+* Branch for parallel experimentation
+* Policies define triggers (when agent A commits, run agent B)
+* MCP for agent interface - framework agnostic
+
+It's like git for agent collaboration instead of code collaboration.
+
+Would this actually help? What's wrong with this model?
+
+
+Top 4 comments:
+
+Comment 1:
+Author: rkpandey20
+Score: 3
+Created UTC: 1766960026.0
+Comment: Just wondering if you can use A2A protocol to communicate. 
+
+Comment 2:
+Author: Khade_G
+Score: 2
+Created UTC: 1766964483.0
+Comment: Interesting idea. I think the “git for agents” framing is directionally right, but the pain usually isn’t state storage… it’s semantics + contracts.
+
+What would help:
+- Framework-agnostic interfaces (MCP-style)
+- Versioned artifacts so runs are reproducible
+- Branching for experimentation
+
+Potential pitfalls id see:
+- “Shared state” becomes a junk drawer unless outputs are strongly typed
+- Triggers quickly turn into a hidden workflow engine (Airflow/Temporal vibes)
+- Merge conflicts aren’t like code… agents need domain-specific conflict rules
+- Latency + debugging get ugly if everything is commit/poll/trigger
+
+So this works only if it’s really a typed artifact registry + eventing + policies, with git-like versioning as UX… not literally “git as the runtime.”
+
+Otherwise it risks being a clever abstraction that mostly re-implements orchestration, but harder to debug.
+
+Comment 3:
+Author: AdditionalWeb107
+Score: 1
+Created UTC: 1766976860.0
+Comment: Checkout: [https://github.com/katanemo/plano](https://github.com/katanemo/plano) \- Plano is delivery infrastructure for agents, and promises to be framework-agnostic and offers support for "agents as tools" via MCP. It doesn't have policy-defined orchestration, but has user-trigger orchestration worfklows built in.
+
+Comment 4:
+Author: Ok-Priority35
+Score: 1
+Created UTC: 1766998090.0
+Comment:  were actively working on this at [slashmcp.com](http://slashmcp.com)

@@ -1,0 +1,12 @@
+Post Title: Building a QnA Dataset from Large Texts and Summaries: Dealing with False Negatives in Answer Matching – Need Validation Workarounds!
+Author: Aakash12980
+Score: 1
+URL: /r/askdatascience/comments/1pww3sj/building_a_qna_dataset_from_large_texts_and/
+Number of comments: 1
+Created UTC: 1766837377.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 0 comments:

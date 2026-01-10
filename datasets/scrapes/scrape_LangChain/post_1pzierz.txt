@@ -1,0 +1,85 @@
+Post Title: I built a lightweight, durable full stack AI orchestration framework
+Author: Worried_Market4466
+Score: 9
+URL: https://www.reddit.com/r/LangChain/comments/1pzierz/i_built_a_lightweight_durable_full_stack_ai/
+Number of comments: 5
+Created UTC: 1767102079.0
+
+Post Content:
+Hello everyone,
+
+I've been building agentic webapps for around a year and a half now. Started with loops, then moved onto langgraph + Assistant UI. I've been using the lang ecosystem since their launch and have seen their evolution.
+
+It's great and easy to build agents, but things got really frustrating once I needed more fine grained control, especially has a hard time building interesting user experiences. I loved the idea of building agents as DAGs, but I really wanted to model UIs in my flow as nodes too. 
+
+Deployment was another nightmare. I am kinda cheap and the per node executed tax seemed ... Well, not great. But hey, the devs gotta eat.
+
+
+Around six months back, I snapped and started working on an idea i had been throwing around for a while. It's called Cascaide.
+
+Cascaide is a lightweight low level AI orchestration framework written in typescript designed to run anywhere JS/TS can. It is primarily built for web applications. However, you can create headless AI agents and workflows with it in Node.js.
+
+Here are the reasons why you should try it out. We are in the process of opensourcing it(probably Jan first week).
+
+Developer Experience and UX
+
+🍱 Learn Fast – Simple, powerful abstractions you can learn over lunch
+
+🎨 Build UI First – UI and human-in-the-loop support is natural, not an add-on
+
+🏎️ Build Fast – Single codebase (if you choose), no context switching
+
+⏳ Debug Easily – Debugging and time-travel out of the box
+
+🌍 Deploy Anywhere – Deploy like any other application, no caveats
+
+🪶 Stay Light – Tiny bundle size, small enough to actually understand
+
+🔮 UX Possibilities – Enables novel UX patterns beyond chatbots: smart components, AI workflow visualization, and dynamic portalling
+
+🔌 Extensibility – Easily extend for custom capabilities via middleware patterns
+
+🧑‍💻Stack Agnostic – Use with your favorite stack
+
+Costs
+
+Zero orchestration costs in production 
+
+Low TCO - far less moving parts to maintain
+
+Talent pool: enable any web dev to easily transition to AI engineering.
+
+Observability and reliability 
+
+
+Durability: enterprise grade durability with no new overhead. Resume workflows post server/client crashes easily, or pick up weeks or months later.
+
+Observability and control: full observability out of the box with easy timetravel rollback and forking
+
+
+I have two production apps running on it and it's working great for us. It's very easy to use with serverless as well.
+
+I would love to talk to devs and get some feedback. We can do an early sneek peek!
+
+Cheers!
+
+
+Top 3 comments:
+
+Comment 1:
+Author: hyma
+Score: 2
+Created UTC: 1767105830.0
+Comment: is this a competitor to langgraph?
+
+Comment 2:
+Author: Live-Guitar-8661
+Score: 1
+Created UTC: 1767144847.0
+Comment: Sounds interesting, we are building something similar. Would love to chat if you are up for it.
+
+Comment 3:
+Author: Worried_Market4466
+Score: 1
+Created UTC: 1767178818.0
+Comment: Opensourcing on 3rd January!

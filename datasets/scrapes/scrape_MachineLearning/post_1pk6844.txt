@@ -1,0 +1,85 @@
+Post Title: [R] Reproduced "Scale-Agnostic KAG" paper, found the PR formula is inverted compared to its source
+Author: m3m3o
+Score: 46
+URL: https://www.reddit.com/r/MachineLearning/comments/1pk6844/r_reproduced_scaleagnostic_kag_paper_found_the_pr/
+Number of comments: 27
+Created UTC: 1765480560.0
+
+Post Content:
+I attempted to reproduce "Scale-Agnostic Kolmogorov-Arnold Geometry" (Vanherreweghe et al., arXiv:2511.21626v2).
+
+
+
+\*\*The problem:\*\*
+
+The paper claims \~30% lower PR with augmentation. After 6 code iterations and full paper conformance (h=256, Cosine scheduler, 10k samples), I consistently got +29% — the opposite direction.
+
+
+
+\*\*The discovery:\*\*
+
+The paper cites Freedman &amp; Mulligan (arXiv:2509.12326) for the Participation Ratio.
+
+
+
+\- Freedman Eq. IV.5 (p.17): PR = ‖m‖₁ / ‖m‖₂
+
+\- Vanherreweghe Eq. 3 (p.4): PR = ‖m‖₂ / ‖m‖₁
+
+
+
+The formula is inverted.
+
+
+
+\*\*Results:\*\*
+
+\- L2/L1 (paper): +29.0%
+
+\- L1/L2 (original): -22.5% ✅
+
+
+
+The original formula reproduces the claimed effect.
+
+
+
+\*\*Takeaway:\*\*
+
+The paper's conclusions appear correct, but the formula as written gives opposite results. This is why reproduction matters.
+
+
+
+Full write-up with code: [https://open.substack.com/pub/mehmetgoekce/p/i-tried-to-reproduce-an-ai-paper?r=241asc&amp;utm\_campaign=post&amp;utm\_medium=web&amp;showWelcomeOnShare=true](https://open.substack.com/pub/mehmetgoekce/p/i-tried-to-reproduce-an-ai-paper?r=241asc&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true)
+
+
+
+Has anyone else encountered similar notation issues when reproducing papers?  
+
+
+
+Top 4 comments:
+
+Comment 1:
+Author: kdfn
+Score: 44
+Created UTC: 1765493414.0
+Comment: Why not ping the authors that there's an error (looks like a typo)? Why do you need to do a whole social media loop for this?
+
+Comment 2:
+Author: qalis
+Score: 6
+Created UTC: 1765522815.0
+Comment: This is actually a really useful peer review &amp; reproducibility. Did you contact the authors about this?
+
+Comment 3:
+Author: mathewvanherreweghe
+Score: 3
+Created UTC: 1765840230.0
+Comment: Author here - thanks for the discussion! There was a typo in the appendix hyperparameters (now correcting). The PR formula (L2/L1) is intentional. The key discrepancy seems to be our augmentation results - in my experiments, augmented training shows a smaller PR increase than standard, which is opposite to what's reported here. This holds even with the incorrect listed hyperparams. I've reached out directly to compare code and figure out where our setups differ. Will update once we find the source of the discrepancy.
+
+Comment 4:
+Author: [deleted]
+Score: -67
+Created UTC: 1765488014.0
+Comment: [removed]

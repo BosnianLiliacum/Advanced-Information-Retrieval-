@@ -1,0 +1,45 @@
+Post Title: [D] Any success with literature review tools?
+Author: Entrepreneur7962
+Score: 29
+URL: https://www.reddit.com/r/MachineLearning/comments/1punnfy/d_any_success_with_literature_review_tools/
+Number of comments: 20
+Created UTC: 1766583726.0
+
+Post Content:
+I’m still doing it the old-fashioned way - going back and forth between google scholar, with some help from chatGPT to speed up things (like finding how relevant a paper is before investing more time in it). 
+
+It feels a bit inefficient, I wonder if there's a better way.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Finix3r
+Score: 36
+Created UTC: 1766584068.0
+Comment: Scholar Inbox is spot on for this - you “train” a small recommendation system with your ~20 relevant papers and builds a weekly email digest with your new relevant papers. Also puts a relevance score on each one.
+Completely free, from the creators of Semantic Reader iirc: https://www.scholar-inbox.com/
+
+Comment 2:
+Author: Elkantars
+Score: 10
+Created UTC: 1766592959.0
+Comment: Asta (from AllenAI) is excellent in my opinion (in CS/NLP at least, didn't really tried other domains) : https://asta.allen.ai/
+
+Comment 3:
+Author: CMDRJohnCasey
+Score: 7
+Created UTC: 1766585056.0
+Comment: I don't know if you have noticed the labs feature from Google scholar: [https://scholar.google.com/scholar\_labs/search](https://scholar.google.com/scholar_labs/search) it's basically a RAG on top of scholar
+
+Comment 4:
+Author: PangolinPossible7674
+Score: 3
+Created UTC: 1766598927.0
+Comment: If you have research questions formulated, Google Scholar Labs can find relevant papers and describe how they address your question. This can act like an advanced filter to find out relevant papers. Of course, it's always recommended to read the papers and not just rely on AI-generated answers.
+
+Comment 5:
+Author: rduke79
+Score: 2
+Created UTC: 1766653927.0
+Comment: I really like elicit. It gives you a tabular summary of the most relevant papers to your question. The killer feature is that you can add custom columns to the table, like "which dataset was used for evaluation" and it will autofill the column. Very handy. 

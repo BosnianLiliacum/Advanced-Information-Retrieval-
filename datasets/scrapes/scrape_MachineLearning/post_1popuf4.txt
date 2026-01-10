@@ -1,0 +1,61 @@
+Post Title: [P] Eigenvalues as models
+Author: alexsht1
+Score: 208
+URL: https://www.reddit.com/r/MachineLearning/comments/1popuf4/p_eigenvalues_as_models/
+Number of comments: 45
+Created UTC: 1765954101.0
+
+Post Content:
+Sutskever said mane things in his recent interview, but one that caught me was that neurons should probably do much more compute than they do now. Since my own background is in optimization, I thought - why not solve a small optimization problem in one neuron?
+
+Eigenvalues have this almost miraculous property that they are solutions to nonconvex quadratic optimization problems, but we can also reliably and quickly compute them. So I try to explore them more in a blog post series I started. 
+
+Here is the first post: https://alexshtf.github.io/2025/12/16/Spectrum.html
+I hope you have fun reading.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ulfgardleo
+Score: 72
+Created UTC: 1765962951.0
+Comment: What is the intuitive basis for why we should care about eigenvalues as opposed to any other (non)-convex optimisation problem? They have huge downsides, from non-differentiability, to being formally a set, not a function. Should we care about the largest or smallest eigenvalue? What about their sign? Or any other operator of them? Finally since they are invariant to orthogonal transformations, it is difficult to really use them without a fully invariant architecture.
+
+We already had somewhat successful approaches where neurons did a lot more: neural fields. They were developed in the late 90s to early 2000s in the field of computational neuroscience. The idea was that the neurons on each layer are recurrently connected and solve a fixed-point PDE. The math behind them is a bit insane because you have to backprop through the PDE. But they are strong enough to act as associative memory.
+
+This is a very old paper that described an example of such a model:
+
+https://link.springer.com/article/10.1023/B:GENP.0000023689.70987.6a
+
+Comment 2:
+Author: mr_stargazer
+Score: 48
+Created UTC: 1765961738.0
+Comment: I always find cute when Machine Learning people discover mathematics, that in principle they were supposed to know.
+
+Now, I am waiting for someone to point out eigenvalues, the connection to Mercer's theorem and all the machinery behind RKHS that was "thrown in the trash", almost overnight because, hey, CNN's came about.
+
+Perhaps we should even use eigenfunctions and eigenvalues to meaningfully understand Deep Learning (cough...NTK...cough). Never mind.
+
+Comment 3:
+Author: TwistedBrother
+Score: 15
+Created UTC: 1765959713.0
+Comment: All hail the operator!
+
+Comment 4:
+Author: raindeer2
+Score: 14
+Created UTC: 1765975946.0
+Comment: Spectral methods are well studied within ML. Also for learning representations in deep architectures.
+
+Some random references:  
+[https://arxiv.org/abs/2205.11508](https://arxiv.org/abs/2205.11508)  
+[https://ieeexplore.ieee.org/document/6976988](https://ieeexplore.ieee.org/document/6976988)
+
+Comment 5:
+Author: bill_klondike
+Score: 5
+Created UTC: 1765983782.0
+Comment: Can we compute them quickly? For a dense matrix, eigenvalues are O(m\^2 n) (assume n &lt; m). If m = n, that's n\^3 . Is that supposed to be quick?

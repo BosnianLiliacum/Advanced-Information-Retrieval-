@@ -1,0 +1,12 @@
+Post Title: Collections seems to no longer work
+Author: Treeshark12
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1q2xl1e/collections_seems_to_no_longer_work/
+Number of comments: 0
+Created UTC: 1767454652.0
+
+Post Content:
+I can create collections but not add models to them.
+
+
+Top 0 comments:

@@ -1,0 +1,78 @@
+Post Title: Best way to evaluate agent reasoning quality without heavy infra?
+Author: Diamond_Grace1423
+Score: 9
+URL: https://www.reddit.com/r/LangChain/comments/1povxh8/best_way_to_evaluate_agent_reasoning_quality/
+Number of comments: 11
+Created UTC: 1765976456.0
+
+Post Content:
+I’m working on a project that uses tool-using agents with some multi-step reasoning, and I’m trying to figure out the least annoying way to evaluate them. Right now I’m doing it all manually analysing spans and traces, but that obviously doesn’t scale.
+
+I’m especially trying to evaluate: tool-use consistency, multi-step reasoning, and tool hallucination (which tools do and doesn't the agent have access to).
+
+I really don’t want to make up a whole eval pipeline. I’m not building a company around this, just trying to check models without committing to full-blown infra.
+
+How are you all doing agent evals? Any frameworks, tools, or hacks to offline test in batch  quality of your agent without managing cloud resources?
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: greasytacoshits
+Score: 3
+Created UTC: 1765982825.0
+Comment: I’ve been using Moyai for a bit, they monitor and evaluate your agent with no infrastructure requirements. Runs directly on your observability logs that you can collect with any otel-native agent SDK.
+
+Comment 2:
+Author: badgerbadgerbadgerWI
+Score: 2
+Created UTC: 1766035951.0
+Comment: Lightweight evaluation without heavy infra is doable. Some approaches:
+
+**Cheap and fast:**
+- LLM-as-judge with a smaller model (Claude Haiku, GPT-4-mini) rating your agent's outputs
+- Compare against golden examples with cosine similarity
+- Simple rubric scoring on key dimensions
+
+**Medium effort:**
+- A/B test with real users, track task completion rates
+- Synthetic test suite with known-good answers
+- Chain-of-thought analysis - does the reasoning make sense even when wrong?
+
+**What to measure:**
+- Task completion rate (did it actually solve the problem?)
+- Reasoning coherence (does the thinking follow?)
+- Tool use efficiency (did it take a reasonable path?)
+- Failure mode analysis (when it fails, why?)
+
+The key insight: you don't need perfect evaluation, you need evaluation good enough to catch regressions and compare approaches. Ship fast, iterate based on real failures.
+
+Comment 3:
+Author: AdVivid5763
+Score: 1
+Created UTC: 1765978503.0
+Comment: Been dealing with the same thing, manual trace-watching dies as soon as you have more than a handful of runs.
+
+What’s worked for me is logging each run as a compact “reasoning trace” (thoughts + tools + key obs), then using an LLM to flag failure modes (bad tool call, continued after bad obs, hallucinated output). 
+
+Then I only read the worst cases instead of everything.
+
+I’m hacking on a small visual “cognition debugger” for this exact problem, it maps those traces as a graph and highlights the bad decisions. If you’re curious, here’s the current prototype + it’s free &amp; no login :) 
+
+[Scope](https://trace-map-visualizer--labroussemelchi.replit.app/)
+
+Honestly “this is useless because X” feedback is super welcome.
+
+Comment 4:
+Author: Kortopi-98
+Score: 1
+Created UTC: 1765979220.0
+Comment: If all you need is correctness evals, you can just write small unit style tests with expected outputs… but for agent autonomy, it can get messy.
+
+Comment 5:
+Author: screechymeechydoodle
+Score: 1
+Created UTC: 1765981052.0
+Comment: I hacked together a tiny eval runner that just replays tasks through my agent and logs the tool calls and final output. It's not the most efficient, but better than reading through observability spans and traces manually.

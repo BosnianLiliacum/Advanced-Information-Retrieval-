@@ -1,0 +1,63 @@
+Post Title: My agents work in dev but break in prod. Is "Git for Agents" the answer, or just better logging?
+Author: bumswagger
+Score: 17
+URL: https://www.reddit.com/r/LangChain/comments/1pv10o3/my_agents_work_in_dev_but_break_in_prod_is_git/
+Number of comments: 23
+Created UTC: 1766621843.0
+
+Post Content:
+I’ve been building agents for a while (mostly LangGraph), and I keep running into the same issue: I tweak a prompt to fix one edge case, and it breaks three others. I’m building something to specifically "version control" agent reasoning to roll back to the exact state/prompt/model config that worked yesterday. Is this overkill? Do you guys just use Git for prompts + LangSmith for traces, or do you wish you had a "snapshot" of the agent's brain before you deployed?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: adiberk
+Score: 4
+Created UTC: 1766624765.0
+Comment: I mean this isn’t novel. It’s called evals and prompt versioning.
+
+Some services like langsmith offer these things out of the box. I built my own for my company. But yeah - very valuable
+
+Comment 2:
+Author: Khade_G
+Score: 3
+Created UTC: 1766631748.0
+Comment: Not overkill… I think this is a real problem, and Git + LangSmith only partially solves it.
+
+Why Git + traces fall short
+- Git versions prompts, not the runtime (model version, tool schemas, retriever state, routing logic).
+- Traces explain failures, but don’t reliably let you reproduce a working state.
+
+When snapshots make sense
+If you use RAG, tools, LangGraph state, or deploy often, you need more than prompt diffs. “Worked yesterday, broke today” usually means something outside the prompt changed.
+
+Minimum useful “agent snapshot”
+- prompt bundle
+- model + decoding params
+- graph/routing config
+- tool schemas + versions
+- retriever/index version
+
+Think of it like a deploy artifact for agents. Not overkill but just DevOps discipline applied to LLM systems.
+
+Comment 3:
+Author: wheres-my-swingline
+Score: 2
+Created UTC: 1766633578.0
+Comment: Langfuse?
+
+Comment 4:
+Author: AdditionalWeb107
+Score: 1
+Created UTC: 1766624817.0
+Comment: I am not sure i would re-invent change control for agents - there are a lot tools out there. But the one thing is true that the rate of changes being pushed out is a lot. If you are looking for production-grade infrastructure to deliver agents to prod, you might want to look at [https://github.com/katanemo/plano](https://github.com/katanemo/plano)
+
+Comment 5:
+Author: adlx
+Score: 1
+Created UTC: 1766656985.0
+Comment: In our case, code and config is in git, policies (authorization) are in database. Users memory are also in database. Prompts are in several places, code, config, database (user memories) and also part in document store.
+So basically everything is under control, except user memories.
+
+But what is never under control is what the user will come with, they are usually extremely creative and will always come with questions that will through us in edge cases or beyond 😂

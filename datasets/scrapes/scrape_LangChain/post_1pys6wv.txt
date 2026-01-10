@@ -1,0 +1,18 @@
+Post Title: Implementing Production-Grade Human-in-the-Loop (HITL) with LangGraph for Sensitive Workflows
+Author: No-Conversation-8984
+Score: 9
+URL: https://rampakanayev.com/blog/langgraph-human-in-the-loop
+Number of comments: 0
+Created UTC: 1767029025.0
+
+Post Content:
+Most agentic tutorials focus on fully autonomous loops, but in production (especially for legal or financial tools), you need a hard stop for manual approval.
+
+I’ve been working on a pattern for LangGraph that handles state persistence specifically for HITL. The goal was to ensure that if an agent suggests a critical database write or an external API call, the state "pauses" and waits for a signed-off manual intervention without losing the conversation context.
+
+This approach uses a checkpointer for state management and a dedicated "Approval" node. It’s significantly more stable than trying to prompt-engineer an agent to "wait for permission."
+
+**Code and Patterns:**[https://rampakanayev.com/blog/langgraph-human-in-the-loop](https://rampakanayev.com/blog/langgraph-human-in-the-loop)
+
+
+Top 0 comments:

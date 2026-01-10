@@ -1,0 +1,47 @@
+Post Title: Just finished my first voice agent project at an AI dev shop - what else should I explore beyond LiveKit?
+Author: Important_Director_1
+Score: 9
+URL: https://www.reddit.com/r/LangChain/comments/1pr7thf/just_finished_my_first_voice_agent_project_at_an/
+Number of comments: 2
+Created UTC: 1766212708.0
+
+Post Content:
+Started working at an AI dev shop called ZeroSlide recently and honestly the team's been great. My first project was building voice agents for a medical billing client, and we went with LiveKit for the implementation.
+LiveKit worked well - it's definitely scalable and handles the real-time communication smoothly. The medical billing use case had some specific requirements around call quality and reliability that it met without issues.
+But now I'm curious: what else is out there in the voice agent space? I want to build up my knowledge of the ecosystem beyond just what we used on this project.
+For context, the project involved:
+Real-time voice conversations
+Medical billing domain (so accuracy was critical)
+Need for scalability
+What other platforms/frameworks should I be looking at for voice agent development? Interested in hearing about:
+Alternative real-time communication platforms
+Different approaches to voice agent architecture
+Tools you've found particularly good (or bad) for production use
+Would love to hear what the community is using and why you chose it over alternatives
+
+
+Top 2 comments:
+
+Comment 1:
+Author: sailorsams
+Score: 1
+Created UTC: 1766561555.0
+Comment: what is it like ask questions on medical bills using your own voice?
+
+Comment 2:
+Author: ByeBiel
+Score: 1
+Created UTC: 1766763413.0
+Comment: Nice work on landing your first project in medical billing, that's definitely one of the more demanding domains for accuracy and reliability.
+
+Since you're exploring beyond LiveKit, I'd suggest thinking about it in layers:
+
+Communication platforms: Twilio Voice is probably the most mature if you need PSTN integration and don't mind less infrastructure control. For pure WebRTC with more customization, some folks use mediasoup or even roll custom solutions. Vonage and Plivo are decent middle grounds.A
+
+rchitecture wise: You've done real time conversations already, but worth exploring different patterns like full streaming (where ASR, LLM, TTS are all incremental so interruptions feel natural) vs turn based approaches. Each has tradeoffs for latency and complexity.
+
+Tools that caught my attention: Vapi and Retell AI are newer platforms built specifically for voice agents that abstract away a lot of complexity. Deepgram for transcription is crazy accurate, and ElevenLabs if you need really natural voice synthesis.
+
+One thing that's helped me a lot when researching different stacks is using Genspark. It's basically an AI search engine that pulls together organized comparisons of these platforms instead of me jumping between dozens of blog posts and docs. Really handy when you're trying to map out "LiveKit vs Twilio vs custom WebRTC" with actual pros/cons and use cases side by side.
+
+Also worth checking GitHub for "real time voice agent" and "ai call center" repos to see how others wire these pieces together in practice.

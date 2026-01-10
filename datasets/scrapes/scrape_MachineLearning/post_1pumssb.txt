@@ -1,0 +1,72 @@
+Post Title: [D]2025 Year in Review: The old methods quietly solving problems the new ones can't
+Author: moji-mf-joji
+Score: 124
+URL: https://www.reddit.com/r/MachineLearning/comments/1pumssb/d2025_year_in_review_the_old_methods_quietly/
+Number of comments: 34
+Created UTC: 1766581067.0
+
+Post Content:
+Karpathy recently posted his [2025 LLM Year in Review](https://karpathy.bearblog.dev/year-in-review-2025/). RLVR. Jagged intelligence. Vibe coding. Claude Code. Awesome coverage of what changed.
+
+Here's what didn't change.
+
+I did NLP research from 2015-2019. MIT CSAIL. Georgia Tech. HMMs, Viterbi, n-gram smoothing, kernel methods for dialectal variation. By 2020 it felt obsolete. I left research thinking my technical foundation was a sunk cost. Something to not mention in interviews.
+
+I was wrong.
+
+The problems Transformers can't solve efficiently are being solved by revisiting pre-Transformer principles:
+
+* **Mamba/S4** are continuous HMMs. Same problem: compress history into fixed-size state. The state-space equations are the differential form of Markov recurrence. Not analogy. Homology.
+* **Constrained decoding** is Viterbi. Karpathy mentions vibe coding. When vibe-coded apps need reliable JSON, you're back to a 1970s algorithm finding optimal paths through probability distributions. Libraries like `guidance`and `outlines` are modern Viterbi searches.
+* **Model merging** feels like n-gram smoothing at billion-parameter scale. Interpolating estimators to reduce variance. I haven't seen this connection made explicitly, but the math rhymes.
+
+Karpathy's "jagged intelligence" point matters here. LLMs spike in verifiable domains. Fail unpredictably elsewhere. One reason: the long tail of linguistic variation that scale doesn't cover. I spent years studying how NLP systems fail on dialects and sociolects. Structured failures. Predictable by social network. That problem hasn't been solved by scale. It's been masked by evaluating on the head of the distribution.
+
+Full story [here](https://medium.com/@tahaymerghani/i-thought-my-nlp-training-was-obsolete-in-the-llm-era-i-was-wrong-c4be804d9f69?postPublishedType=initial)!
+
+Not diminishing what's new. RLVR is real. But when Claude Code breaks on an edge case, when your RAG system degrades with more context, when constrained decoding refuses your schema, the debugging leads back to principles from 2000.
+
+The methods change. The problems don't.
+
+Curious if others see this pattern or if I'm overfitting to my own history. I probably am, but hey I might learn something. 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: mileylols
+Score: 114
+Created UTC: 1766587856.0
+Comment: did an AI write this post
+
+Comment 2:
+Author: moji-mf-joji
+Score: 27
+Created UTC: 1766586485.0
+Comment: I realized after writing this that I’m essentially arguing for Christopher Manning’s side in his famous 2018 debate with Yann LeCun. [https://www.youtube.com/watch?v=fKk9KhGRBdI&amp;t=214s](https://www.youtube.com/watch?v=fKk9KhGRBdI&amp;t=214s)
+
+Back then, LeCun argued structure was a 'necessary evil' to be minimized in favor of scale and generic architectures. For 5 years (the Transformer era), he was 100% right. We stripped away linguistic priors and won.
+
+But looking at the 2025 landscape (Mamba, System 2 reasoning, constrained decoding), it feels like we’ve hit the limit of 'evil' we can do without. We are re-injecting structure (Manning’s 'innate priors') because pure scale hits a wall on efficiency and reliability.
+
+I am effectively advocating for Manning’s world in a discourse still dominated by LeCun’s victory. But what do I know \*shruggy emoji\*
+
+Comment 3:
+Author: Fresh-Opportunity989
+Score: 15
+Created UTC: 1766600428.0
+Comment: Mamba is snake oil in new bottles.
+
+A lot of AI research is incremental and fraudulent.   Fundamental advances are few and far between.
+
+Comment 4:
+Author: lqstuart
+Score: 5
+Created UTC: 1766636901.0
+Comment: Thanks ChatGPT
+
+Comment 5:
+Author: mrcanada66
+Score: 0
+Created UTC: 1766603640.0
+Comment: It's interesting to see how traditional methods are still effective in solving problems that newer approaches struggle with. This highlights the importance of not discarding established techniques as we push for innovation in machine learning. Balancing the old and new could lead to even more robust solutions in the future.

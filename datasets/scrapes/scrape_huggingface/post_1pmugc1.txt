@@ -1,0 +1,40 @@
+Post Title: Qwen 3 vl 8b inference time is way too much for a single image
+Author: Distinct-Ebb-9763
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pmugc1/qwen_3_vl_8b_inference_time_is_way_too_much_for_a/
+Number of comments: 1
+Created UTC: 1765760927.0
+
+Post Content:
+So here's the specs of my lambda server:
+GPU: A100(40 GB)
+RAM: 100 GB
+
+Qwen 3 VL 8B Instruct using hugging face for 1 image analysis uses:
+3 GB RAM and 18 GB of VRAM.
+(97 GB RAM and 22 GB VRAM unutilized)
+
+My images range from 2000 pixels to 5000 pixels. Prompt is of around 6500 characters.
+
+Time it takes for 1 image analysis is 5-7 minutes which is crazy.
+
+I am using flash-attn as well.
+
+Set max new tokens to 6500, image size allowed is 2560×32×32, batch size is 16.
+
+It may utilise more resources even double so how to make it really quick?
+
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: indicava
+Score: 1
+Created UTC: 1765927204.0
+Comment: &gt; using hugging face
+
+You mean using transformers? That’s slow af, use vLLM. Also, the VRAM usage checks out, 8B model at BF16 is 16GB + KV.
+
+https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3-VL.html

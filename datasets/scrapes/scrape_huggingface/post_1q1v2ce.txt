@@ -1,0 +1,20 @@
+Post Title: IT2Video Perf KPIs With HuggingFace
+Author: Rough-Charity-6708
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1q1v2ce/it2video_perf_kpis_with_huggingface/
+Number of comments: 0
+Created UTC: 1767348965.0
+
+Post Content:
+Hello,
+
+I’m doing image-to-video and text-to-video generation, and I’m trying to measure system performance across different models. I’m using an RTX 5090, and in some cases the video generation takes a long time. I’m definitely using pipe.to("cuda"), and I offload to CPU when necessary. My code is in Python and uses Hugging Face APIs.
+
+One thing I’ve noticed is that, in some cases, ComfyUI seems to generate faster than my Python script while using the same model. That’s another reason I want a precise way to track performance. I tried nvidia-smi, but it doesn’t give me much detail. I also started looking into PyTorch CUDA APIs, but I haven’t gotten very far yet.
+
+Considering the reliability lack in the generation of video I am even wondering if gpu really is used a lot of time, or if cpu offloading is taking place.
+
+Thanks in advance! 
+
+
+Top 0 comments:

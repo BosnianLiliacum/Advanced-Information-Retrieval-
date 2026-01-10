@@ -1,0 +1,457 @@
+Post Title: Tool calling with 30+ parameters is driving me insane - anyone else dealing with this?
+Author: Capital-Feedback6711
+Score: 24
+URL: https://www.reddit.com/r/LangChain/comments/1posj5m/tool_calling_with_30_parameters_is_driving_me/
+Number of comments: 27
+Created UTC: 1765964613.0
+
+Post Content:
+So I've been building this ReAct agent with LangGraph that needs to call some pretty gnarly B2B SaaS APIs - we're talking 30-50+ parameters per tool. The agent works okay for single searches, but in multi-turn conversations it just... forgets things? Like it'll completely drop half the filters from the previous turn for no reason.
+
+I'm experimenting with a delta/diff approach (basically teaching the LLM to only specify what changed, like git diffs) but honestly not sure if this is clever or just a band-aid. Would love to hear if anyone's solved this differently.
+
+## Background
+
+I'm working on an agent that orchestrates multiple third-party search APIs. Think meta-search but for B2B data - each tool has its own complex filtering logic:
+
+```
+┌─────────────────────────────────────────────────────┐
+│                   User Query                        │
+│     "Find X with criteria A, B, C..."              │
+└────────────────────┬────────────────────────────────┘
+                     │
+                     v
+┌─────────────────────────────────────────────────────┐
+│              LangGraph ReAct Agent                  │
+│  ┌──────────────────────────────────────────────┐  │
+│  │  Agent decides which tool to call            │  │
+│  │  + generates parameters (30-50 fields)       │  │
+│  └──────────────────────────────────────────────┘  │
+└────────────────────┬────────────────────────────────┘
+                     │
+         ┌───────────┴───────────┬─────────────┐
+         v                       v             v
+    ┌─────────┐            ┌─────────┐   ┌─────────┐
+    │ Tool A  │            │ Tool B  │   │ Tool C  │
+    │ (35     │            │ (42     │   │ (28     │
+    │ params) │            │ params) │   │ params) │
+    └─────────┘            └─────────┘   └─────────┘
+```
+
+Right now each tool is wrapped with Pydantic BaseModels for structured parameter generation. Here's a simplified version (actual one has 35+ fields):
+
+```python
+class ToolASearchParams(BaseModel):
+    query: Optional[str]
+    locations: Optional[List[str]]
+    category_filters: Optional[CategoryFilters]  # 8 sub-fields
+    metrics_filters: Optional[MetricsFilters]    # 6 sub-fields
+    score_range: Optional[RangeModel]
+    date_range: Optional[RangeModel]
+    advanced_filters: Optional[AdvancedFilters]  # 12+ sub-fields
+    # ... and about 20 more
+```
+
+Standard LangGraph tool setup, nothing fancy.
+
+## The actual problems I'm hitting
+
+### 1. Parameters just... disappear between turns?
+
+Here's a real example that happened yesterday:
+
+```
+Turn 1:
+User: "Search for items in California"
+Agent: [generates params with location=CA, category=A, score_range.min=5]
+Returns ~150 results, looks good
+
+Turn 2: 
+User: "Actually make it New York"
+Agent: [generates params with ONLY location=NY]
+Returns 10,000+ results ???
+```
+
+Like, where did the category filter go? The score range? It just randomly decided to drop them. This happens maybe 1 in 4 multi-turn conversations.
+
+I think it's because the LLM is sampling from this huge 35-field parameter space each time and there's no explicit "hey, keep the stuff from last time unless user changes it" mechanism. The history is in the context but it seems to get lost.
+
+### 2. Everything is slow
+
+With these giant parameter models, I'm seeing:
+- 4-7 seconds just for parameter generation (not even the actual API call!)
+- Token usage is stupid high - like 1000-1500 tokens per tool call
+- Sometimes the LLM just gives up and only fills in 3-4 fields when it should fill 10+
+
+For comparison, simpler tools with like 5-10 params? Those work fine, ~1-2 seconds, clean parameters.
+
+### 3. The tool descriptions are ridiculous
+
+To explain all 35 parameters to the LLM, my tool description is like 2000+ tokens. It's basically:
+
+```python
+TOOL_DESCRIPTION = """
+This tool searches with these params:
+1. query (str): blah blah...
+2. locations (List[str]): blah blah, format is...
+3. category_filters (CategoryFilters): 
+   - type (str): one of A, B, C...
+   - subtypes (List[str]): ...
+   - exclude (List[str]): ...
+... [repeat 32 more times]
+"""
+```
+
+The prompt engineering alone is becoming unmaintainable.
+
+## What I've tried (spoiler: didn't really work)
+
+**Attempt 1: Few-shot prompting**
+
+Added a bunch of examples to the system prompt showing correct multi-turn behavior:
+
+```python
+SYSTEM_PROMPT = """
+Example:
+Turn 1: search_tool(locations=["CA"], category="A")
+Turn 2 when user changes location: 
+  CORRECT: search_tool(locations=["NY"], category="A")  # kept category!
+  WRONG: search_tool(locations=["NY"])  # lost category
+"""
+```
+
+Helped a tiny bit (maybe 10% fewer dropped params?) but still pretty unreliable. Also my prompt is now even longer.
+
+**Attempt 2: Explicitly inject previous params into context**
+
+```python
+def pre_model_hook(state):
+    last_params = state.get("last_tool_params", {})
+    if last_params:
+        context = f"Previous search used: {json.dumps(last_params)}"
+        # inject into messages
+```
+
+This actually made things slightly better - at least now the LLM can "see" what it did before. But:
+- Still randomly changes things it shouldn't 
+- Adds another 500-1000 tokens per turn
+- Doesn't solve the fundamental "too many parameters" problem
+
+## My current thinking: delta/diff-based parameters?
+
+So here's the idea I'm playing with (not sure if it's smart or dumb yet):
+
+Instead of making the LLM regenerate all 35 parameters every turn, what if it only specifies what changed? Like git diffs:
+
+```
+What I do now:
+Turn 1: {A: 1, B: 2, C: 3, D: 4, ... Z: 35} (all 35 fields)
+Turn 2: {A: 1, B: 5, C: 3, D: 4, ... Z: 35} (all 35 again)
+         Only B changed but LLM had to regen everything
+
+What I'm thinking:
+Turn 1: {A: 1, B: 2, C: 3, D: 4, ... Z: 35} (full params, first time only)
+Turn 2: [{ op: "set", path: "B", value: 5 }] (just the delta!)
+        Everything else inherited automatically
+```
+
+Basic flow would be:
+
+```
+User: "Change location to NY"
+    ↓
+LLM generates: [{op: "set", path: "locations", value: ["NY"]}]
+    ↓
+Delta applier: merge with previous params from state
+    ↓
+Execute tool with {locations: ["NY"], category: "A", score: 5, ...}
+```
+
+### Rough implementation
+
+Delta model would be something like:
+
+```python
+class ParameterDelta(BaseModel):
+    op: Literal["set", "unset", "append", "remove"]
+    path: str  # e.g. "locations" or "advanced_filters.score.min"
+    value: Any = None
+
+class DeltaRequest(BaseModel):
+    deltas: List[ParameterDelta]
+    reset_all: bool = False  # for "start completely new search"
+```
+
+Then need a delta applier:
+
+```python
+class DeltaApplier:
+    @staticmethod
+    def apply_deltas(base_params: dict, deltas: List[ParameterDelta]) -&gt; dict:
+        result = copy.deepcopy(base_params)
+        for delta in deltas:
+            if delta.op == "set":
+                set_nested(result, delta.path, delta.value)
+            elif delta.op == "unset":
+                del_nested(result, delta.path)
+            elif delta.op == "append":
+                append_to_list(result, delta.path, delta.value)
+            # etc
+        return result
+```
+
+Modified tool would look like:
+
+```python
+@tool(description=DELTA_TOOL_DESCRIPTION)
+def search_with_tool_a_delta(
+    state: Annotated[AgentState, InjectedState],
+    delta_request: DeltaRequest,
+):
+    base_params = state.get("last_tool_a_params", {})
+    new_params = DeltaApplier.apply_deltas(base_params, delta_request.deltas)
+    
+    validated = ToolASearchParams(**new_params)
+    result = execute_search(validated)
+    
+    state["last_tool_a_params"] = new_params
+    return result
+```
+
+Tool description would be way simpler:
+
+```python
+DELTA_TOOL_DESCRIPTION = """
+Refine the previous search. Only specify what changed.
+
+Examples:
+- User wants different location: {deltas: [{op: "set", path: "locations", value: ["NY"]}]}
+- User adds filter: {deltas: [{op: "append", path: "categories", value: ["B"]}]}
+- User removes filter: {deltas: [{op: "unset", path: "date_range"}]}
+
+ops: set, unset, append, remove
+"""
+```
+
+**Theory:** This should be faster (way less tokens), more reliable (forced inheritance), and easier to reason about.
+
+**Reality:** I haven't actually tested it yet lol. Could be completely wrong.
+
+## Concerns / things I'm not sure about
+
+**Is this just a band-aid?** 
+
+Honestly feels like I'm working around LLM limitations rather than fixing the root problem. Ideally the LLM should just... remember context better? But maybe that's not realistic with current models.
+
+On the other hand, humans naturally talk in deltas ("change the location", "add this filter") so maybe this is actually more intuitive than forcing regeneration of everything?
+
+**Dual tool problem**
+
+I'm thinking I'd need to maintain:
+- `search_full()` - for first search
+- `search_delta()` - for refinements
+
+Will the agent reliably pick the right one? Or just get confused and use the wrong one half the time?
+
+Could maybe do a single unified tool with auto-detection:
+
+```python
+@tool
+def search(mode: Literal["full", "delta"] = "auto", ...):
+    if mode == "auto":
+        mode = "delta" if state.get("last_params") else "full"
+```
+
+But that feels overengineered.
+
+**Nested field paths**
+
+For deeply nested stuff, the path strings get kinda nasty:
+
+```python
+{
+  "op": "set",
+  "path": "advanced_filters.scoring.range.min",
+  "value": 10
+}
+```
+
+Not sure if the LLM will reliably generate correct paths. Might need to add path aliases or something?
+
+## Other ideas I'm considering
+
+Not fully sold on the delta approach yet, so also thinking about:
+
+**Better context formatting**
+
+Maybe instead of dumping the raw params JSON, format it as a human-readable summary:
+
+```python
+# Instead of: {"locations": ["CA"], "category_filters": {"type": "A"}, ...}
+# Show: "Currently searching: California, Category A, Score &gt; 5"
+```
+
+Then hope the LLM better understands what to keep vs change. Less invasive than delta but also less guaranteed to work.
+
+**Smarter tool responses**
+
+Make the tool explicitly state what was searched:
+
+```python
+{
+  "results": [...],
+  "search_summary": "Found 150 items in California with Category A",
+  "active_filters": {...}  # explicit and highlighted
+}
+```
+
+Maybe with better RAG/attention on the `active_filters` field? Not sure.
+
+**Parameter templates/presets**
+
+Define common bundles:
+
+```python
+PRESETS = {
+    "broad_search": {"score_range": {"min": 3}, ...},
+    "narrow_search": {"score_range": {"min": 7}, ...},
+}
+```
+
+Then agent picks a preset + 3-5 overrides instead of 35 individual fields. Reduces the search space but feels pretty limiting for complex queries.
+
+## So, questions for the community:
+
+1. **Has anyone dealt with 20-30+ parameter tools in LangGraph/LangChain?** How did you handle multi-turn consistency?
+
+2. **Is delta-based tool calling a thing?** Am I reinventing something that already exists? (couldn't find much on this in the docs)
+
+3. **Am I missing something obvious?** Maybe there's a LangGraph feature that solves this that I don't know about?
+
+4. **Any red flags with the delta approach?** What could go wrong that I'm not seeing?
+
+Would really appreciate any insights - this has been bugging me for weeks and I feel like I'm either onto something or going down a completely wrong path.
+
+---
+
+## What I'm doing next
+
+Planning to build a quick POC with the delta approach on one tool and A/B test it against the current full-params version. Will instrument everything (parameter diffs, token usage, latency, error rates) and see what actually happens vs what I think will happen.
+
+Also going to try the "better context formatting" idea in parallel since that's lower effort.
+
+If there's interest I can post an update in a few weeks with actual data instead of just theories.
+
+---
+
+Current project structure for reference:
+
+```
+project/
+├── agents/
+│   └── search_agent.py              # main ReAct agent
+├── tools/
+│   ├── tool_a/
+│   │   ├── models.py                # the 35-field monster
+│   │   ├── search.py                # API integration
+│   │   └── description.py           # 2000+ token prompt
+│   ├── tool_b/
+│   │   └── ...
+│   └── delta/                       # new stuff I'm building
+│       ├── models.py                # ParameterDelta, etc
+│       ├── applier.py               # delta merge logic
+│       └── descriptions.py          # hopefully shorter prompts
+└── state/
+    └── agent_state.py               # state with param caching
+```
+
+Anyway, thanks for reading this wall of text. Any advice appreciated!
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: FuriaDePantera
+Score: 8
+Created UTC: 1765968527.0
+Comment: I didn't read everything, but keeping parameters in a "state" of the conversation wouldn't help?
+
+Comment 2:
+Author: llamacoded
+Score: 4
+Created UTC: 1766002803.0
+Comment: Built something similar - agent with 40+ parameter tools. Your delta approach is actually smart, not a band-aid.
+
+**What worked for us:**
+
+**Delta-based updates + explicit state tracking**
+
+Your delta idea is right. We went further - store "active search state" explicitly:
+
+python
+
+`state["active_search"] = {`  
+`"base_params": {...},  # full 35 fields`  
+`"user_intent": "location=CA, category=A"  # human readable`  
+`}`  
+  
+Agent sees the summary, generates delta, we merge. Dropped parameter loss by \~80%.  
+  
+**Component-level evaluation**  
+  
+Test parameter generation separately from tool execution:  
+\- "Did agent preserve unchanged filters?"   
+\- "Did it correctly apply user's delta?"  
+  
+**Simpler tool description**  
+  
+Don't list all 35 params. Group them:  
+
+
+    Location params (3 fields)
+    Category params (8 fields)  
+    Advanced filters (24 fields)
+
+Agent requests groups: "I need location + category params." You return relevant schema.
+
+**Real numbers from our setup:**
+
+* Parameter loss: 25% → 5%
+* Token usage: -40%
+* Latency: 6s → 2.5s
+
+**Your dual tool concern:** Use single tool with mode detection. Works fine. LLMs get it.
+
+Delta approach isn't a band-aid - it matches how users think ("change location to NY" = delta, not "regenerate everything").
+
+Build the POC. Would love to see results.
+
+Comment 3:
+Author: Revision2000
+Score: 4
+Created UTC: 1765971157.0
+Comment: I’m wondering, why are there even that many parameters (exposed) to begin with. Can’t the tools be made to be more dedicated / scoped? 
+
+Also, did you try different model? That might yield different results. 
+
+Comment 4:
+Author: RetiredApostle
+Score: 3
+Created UTC: 1765970847.0
+Comment: You could try asking it to provide brief reasoning for each parameter it changes/keeps/removes. Not sure how would this work with the \`tool\` decorator though - adding a \`reasoning\` dict maybe. If you'd use a LangGraph and BaseTool-based tool, you'd have better control on signatures and, you could add a parsing node (a pre‑tool‑call node) that separates the reasoning from the actual params. It will add some tokens... But even if it won't add a reliability, you might catch flaws in the reasoning itself, which you could then use to adjust your prompts.
+
+Comment 5:
+Author: badgerbadgerbadgerWI
+Score: 3
+Created UTC: 1766035547.0
+Comment: 30+ parameters in a single tool is almost always a design smell. The model will hallucinate or miss required fields constantly.
+
+What's worked for us:
+1. Break it into multiple focused tools (5-7 params max each)
+2. Use a "wizard" pattern - first tool gathers context, second tool does the action
+3. Accept structured JSON as a single parameter for complex inputs, with a schema the model can reference
+
+Also, smaller context-focused models often handle complex tool calls better than larger general models. A fine-tuned 7B can outperform GPT-4 on domain-specific tool calling if you give it good examples.
+
+What's the use case? There might be a way to restructure the workflow entirely rather than fighting the tool call complexity.

@@ -1,0 +1,50 @@
+Post Title: [P] A lightweight tool for comparing time series forecasting models
+Author: Slow_Butterscotch435
+Score: 11
+URL: https://i.redd.it/gbayga1q20ag1.jpeg
+Number of comments: 17
+Created UTC: 1766951747.0
+
+Post Content:
+I’ve been working on a web application aimed at simplifying the comparison of common time series forecasting models.
+
+The idea is to provide a lightweight way to:
+- upload a time series dataset,
+- train a set of baseline and widely used models (e.g. linear regression with lags, XGBoost, Prophet),
+- compare their forecasts and evaluation metrics on the same split.
+
+The focus is not on introducing new modeling techniques, but on making model comparison more transparent and reproducible for exploratory work and prototyping.
+
+App: https://time-series-forecaster.vercel.app
+
+I’d be interested in feedback from the community on:
+- whether this type of tool is actually useful in practice,
+- potential pitfalls or misleading aspects of such comparisons,
+- important features or evaluation practices that you think are missing
+
+
+Top 4 comments:
+
+Comment 1:
+Author: SlowFail2433
+Score: 1
+Created UTC: 1767009988.0
+Comment: Looks like an attractive GUI I like the brown and green colours
+
+Comment 2:
+Author: versking
+Score: 1
+Created UTC: 1767029070.0
+Comment: Very cool. Open source? Would love to add some functionality. 
+
+Comment 3:
+Author: spontanurlaub
+Score: 1
+Created UTC: 1767039294.0
+Comment: Does it support probabilistic time series forecasting?
+
+Comment 4:
+Author: [deleted]
+Score: -5
+Created UTC: 1766954602.0
+Comment: [deleted]

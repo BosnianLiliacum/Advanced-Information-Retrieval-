@@ -1,0 +1,63 @@
+Post Title: Data Agent
+Author: fumes007
+Score: 15
+URL: https://www.reddit.com/r/LangChain/comments/1pu7v2b/data_agent/
+Number of comments: 5
+Created UTC: 1766531094.0
+
+Post Content:
+Built an open-source **natural language → SQL data agent** using **LangChain + LangGraph**. Under the hood, it builds on LangChain’s community SQLDatabase utility rather than re-inventing database access:
+
+Uses SQLDatabase for schema inspection, execution, and result handling
+
+Extends it with support for Azure AD auth for the Azure native databases + Cosmos DB.
+
+Supported databases:
+
+* PostgreSQL
+* Azure SQL / Synapse
+* Cosmos DB
+* Databricks SQL
+* BigQuery
+
+Allows either per-agent datasource configs or a shared, pre-initialized SQLDatabase if you want tighter control over connections and pooling
+
+You ask a question in plain English, and it:
+
+* Uses an **intent detection agent** to route the question to the right datasource
+* Generates SQL using schema context + optional few-shot examples
+* **Validates SQL safely** with `sqlglot` (blocked functions, enforced LIMITs, dialect-aware)
+* Executes the query and turns results back into a natural-language response
+* Supports **multi-turn comvos**
+
+It’s designed as a **multi-agent system**:
+
+* One agent for intent routing
+* Multiple specialized data agents, each tied to a domain and database
+
+Everything is **YAML-driven** (agents, schemas, prompts, validation rules), and it also exposes an **A2A (Agent-to-Agent) server** so other agents can discover and call it programmatically.
+
+Repo:
+[https://github.com/eosho/langchain_data_agent](https://github.com/eosho/langchain_data_agent)
+
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Hopeful-Jicama-1613
+Score: 1
+Created UTC: 1766686786.0
+Comment: Explain more
+
+Comment 2:
+Author: importmind
+Score: 1
+Created UTC: 1766742042.0
+Comment: Will it work in isolated environment with no internet access?
+
+Comment 3:
+Author: BeerBatteredHemroids
+Score: 1
+Created UTC: 1766803398.0
+Comment: Databricks already has this... its called Genie and it has billions of dollars in funding and development behind it.

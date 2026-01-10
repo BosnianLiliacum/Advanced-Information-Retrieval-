@@ -1,0 +1,33 @@
+Post Title: Best local TTS model for Polish audiobooks in 2026? Looking for natural prosody and long-form stability.
+Author: wieckos
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1q4knb5/best_local_tts_model_for_polish_audiobooks_in/
+Number of comments: 0
+Created UTC: 1767616801.0
+
+Post Content:
+Hi everyone!
+
+I’m looking for the current state-of-the-art in **local** Text-to-Speech specifically for the **Polish language**. My goal is to generate long-form audiobooks.
+
+I’ve been out of the loop for a few months and I'm wondering what's the best choice right now that balances quality and hardware requirements.
+
+**Key requirements:**
+
+1. **Polish support:** Must handle Polish phonetics, accents, and "sz/cz" sounds naturally without a heavy "americanized" accent.
+2. **Long-form stability:** Needs to handle long chapters without hallucinating, losing the voice profile, or becoming robotic over time.
+3. **Local hosting:** Privacy and cost are key, so I’m looking for something I can run on my own hardware (RTX 3090/4090).
+
+**Models I'm considering:**
+
+* **XTTS v2:** Is it still the king for Polish or has it been surpassed?
+* **Fish Speech (v1.5/2.0):** How is the Polish quality compared to English?
+* **Kokoro-82M:** I heard it's fast, but does it have a solid Polish voice yet?
+* **F5-TTS / VibeVoice:** Are these viable for full-length books?
+
+What is your experience with Polish prosody (intonation) in these models? Are there any specific fine-tunes or "community voices" for Polish that you would recommend?
+
+Thanks in advance!
+
+
+Top 0 comments:

@@ -1,0 +1,50 @@
+Post Title: Open-source full-stack template for AI/LLM apps with FastAPI + Next.js – now with LangChain support alongside PydanticAI!
+Author: VanillaOk4593
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1psdndx/opensource_fullstack_template_for_aillm_apps_with/
+Number of comments: 1
+Created UTC: 1766342413.0
+
+Post Content:
+Hey r/LangChain,
+
+For those new to the project: I've built an open-source CLI generator that creates production-ready full-stack templates for AI/LLM applications. It's designed to handle all the heavy lifting – from backend infrastructure to frontend UI – so you can focus on your core AI logic, like building agents, chains, and tools. Whether you're prototyping a chatbot, an ML-powered SaaS, or an enterprise assistant, this template gets you up and running fast with scalable, professional-grade features.
+
+*Repo:* [*https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template*](https://github.com/vstorm-co/full-stack-fastapi-nextjs-llm-template?referrer=grok.com)  
+*(Install via pip install fastapi-fullstack, then generate with fastapi-fullstack new – interactive wizard lets you pick LangChain as your AI framework)*
+
+**Big update: I've just added full LangChain support!** Now you can choose between LangChain or PydanticAI for your AI framework during project generation. This means seamless integration for LangChain agents (using LangGraph for ReAct-style setups), complete with WebSocket streaming, conversation persistence, custom tools, and multi-model support (OpenAI, Anthropic, etc.). Plus, it auto-configures LangSmith for observability – tracing runs, monitoring token usage, collecting feedback, and more.
+
+**Quick overview for newcomers:**
+
+* **Backend (FastAPI):** Async APIs, auth (JWT/OAuth/API keys), databases (async PostgreSQL/MongoDB/SQLite), background tasks (Celery/Taskiq/ARQ), rate limiting, webhooks, and a clean repository + service pattern.
+* **Frontend (Next.js 15):** Optional React 19 UI with Tailwind, dark mode, i18n, and a built-in chat interface for real-time streaming responses and tool visualizations.
+* **AI/LLM Features:** LangChain agents with streaming, persistence, and easy tool extensions (e.g., database searches or external APIs). Observability via LangSmith (or Logfire if using PydanticAI).
+* **20+ Integrations:** Redis caching, admin panels, Sentry/Prometheus, Docker/CI/CD/Kubernetes – all configurable to fit your needs.
+* **Django-style CLI:** Manage everything with commands like my\_app db migrate, my\_app user create, or custom scripts.
+* **Why use it?** Skip boilerplate for production setups. It's inspired by popular FastAPI templates but tailored for AI devs, with 100% test coverage and enterprise-ready tools.
+
+Screenshots (new chat UI, auth pages, LangSmith dashboard), demo GIFs, architecture diagrams, and full docs are in the README. There's also a related project for advanced agents: [pydantic-deep](https://github.com/vstorm-co/pydantic-deepagents?referrer=grok.com).
+
+If you're building with LangChain, I'd love to hear how this fits your workflow:
+
+* Does the integration cover your typical agent setups?
+* Any features to add (e.g., more LangChain components)?
+* Pain points it solves for full-stack LLM apps?
+
+Feedback and contributions welcome – especially on the LangChain side! 🚀
+
+Thanks!
+
+https://preview.redd.it/bpjn2752sl8g1.png?width=3023&amp;format=png&amp;auto=webp&amp;s=29922e183e86b5138f3162f1770a8f856999aeca
+
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Prestigious-Yak9217
+Score: 1
+Created UTC: 1766388619.0
+Comment: Looks impressive

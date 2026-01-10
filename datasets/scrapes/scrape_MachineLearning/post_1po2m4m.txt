@@ -1,0 +1,48 @@
+Post Title: [P] Plotting ~8000 entities embeddings with cluster tags and ontologicol colour coding
+Author: South_Camera8126
+Score: 17
+URL: https://www.reddit.com/gallery/1po2m4m
+Number of comments: 9
+Created UTC: 1765893549.0
+
+Post Content:
+This is a side project I've been working on for a few months.
+
+I've designed a trait based ontology; 32 bits each representating a yes/no question, I've created trait specifications including examples and edge cases for each trait.
+
+The user names and describes an entity (anything you can imagine) then submits it for classification. 
+
+The entity plus trait description is passed in 32 separate LLM calls to assess the entity, and also provide standard embeddings.
+
+I used some OpenRouter free models to populate what was originally 11,000+ entities. I've since reduced it, as I noticed I'd inadvertantly encoded 3,000 separate radioactive isotopes.
+
+I've used wikidata for the bulk of the entities, but also created over 1000 curated entities to try and show the system is robust.
+
+What we see in the plot is every entity in the semantic embedding location, derived through UMAP compression to 2D.
+
+The colours are assigned by the trait based ontology - whichever of the layers has the most assigned traits sets the colour.
+
+It shows interesting examples of where ontology and semantics agree and disagree.
+
+I hope to develop the work to show that there is a secondary axis of meaning, which could be combined with language models, to provide novel or paradoxical insights.
+
+The second image is the entity gallery - over 2500 images, quite a few auto generated at classification time via Nano Banana.
+
+Happy to go into more detail if anyone is interested.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: South_Camera8126
+Score: 1
+Created UTC: 1765894152.0
+Comment: image quality is poor - you can see the real thing here [https://factory.universalhex.org/explorer](https://factory.universalhex.org/explorer)
+
+(non commercial site, purely my own research)
+
+Comment 2:
+Author: Helpful_ruben
+Score: 0
+Created UTC: 1766038373.0
+Comment: Error generating reply.

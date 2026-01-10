@@ -1,0 +1,89 @@
+Post Title: Building an Autonomous "AI Auditor" for ISO Compliance: How would you architect this for production?
+Author: doctorallfix
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1psi2qz/building_an_autonomous_ai_auditor_for_iso/
+Number of comments: 5
+Created UTC: 1766353762.0
+
+Post Content:
+​I am building an agentic workflow to automate the documentation review process for third-party certification bodies. I have already built a functional prototype using Google Anti-gravity based on a specific framework, but now I need to determine the absolute best stack to rebuild this for a robust, enterprise-grade production environment.
+
+
+​The Business Process:
+​Ingestion: The system receives a ZIP file containing complex unstructured audit evidence (PDFs, images, technical drawings, scanned hand-written notes).
+
+​Context Recognition: It identifies the applicable ISO standard (e.g., 9001, 27001) and any integrated schemes.
+
+
+​Dynamic Retrieval: It retrieves the specific Audit Protocols and SOPs for that exact standard from a knowledge base.
+
+
+​Multimodal Analysis:Instead of using brittle OCR/Python text extraction scripts, I am leveraging Gemini 1.5/3 Pro’s multimodal capabilities to visually analyze the evidence, "see" the context, and cross-reference it against the ISO clauses.
+
+
+​Output Generation: The agent must perfectly fill out a rigid, complex compliance checklist (Excel/JSON) and flag specific non-conformities for the human auditor to review.
+
+
+​The Challenge:
+The prototype proves the logic works, but moving from a notebook environment to a production system that processes massive files without crashing is a different beast.
+
+
+​My Questions for the Community:
+​Orchestration &amp; State: For a workflow this heavy (long-running processes, handling large ZIPs, multiple reasoning steps per document), what architecture do you swear by to manage state and handle retries? I need something that won't fail if an API hangs for 30 seconds.
+
+
+​Structured Integrity: The output checklists must be 100% syntactically correct to map into legacy Excel files. What is the current "gold standard" approach for forcing strictly formatted schemas from multimodal LLM inputs without degrading the reasoning quality?
+​RAG Strategy for Compliance: ISO standards are hierarchical and cross-referenced. 
+
+How would you structure the retrieval system (DB type, indexing strategy) to ensure the agent pulls the exact clause it needs, rather than just generic semantic matches?
+
+​Goal: I want a system that is anti-fragile, deterministic, and scalable. How would you build this today?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 2
+Created UTC: 1766361157.0
+Comment: The structured output problem for compliance checklists is brutal because you need perfect JSON/Excel mapping while preserving the nuanced reasoning that multimodal models excel at. For your ISO use case, I'd recommend a two-stage approach: let Gemini do the heavy lifting on document analysis and evidence evaluation in natural language first, then use a smaller, fine-tuned model specifically trained on your compliance schema formats to handle the structured output conversion. This keeps the reasoning quality intact while getting deterministic formatting.
+
+For the RAG side with hierarchical ISO standards, the real challenge is that semantic similarity often misses the precise clause relationships and cross-references that matter for compliance. You need chunking strategies that preserve the document structure and hierarchy, plus embedding approaches that understand these regulatory relationships rather than just surface-level content similarity. This exact problem with chunking and parsing for complex document workflows is what made me realize I needed to build [VectorFlow](https://vectorflow.dev/?utm_source=redditCP_d) to debug these pipeline issues before they hit production. Let me know if you want to check it out.
+
+Comment 2:
+Author: gnulib
+Score: 1
+Created UTC: 1766472408.0
+Comment: This is a classic "Day 2" Agent problem. You've proven the reasoning works (Day 1), but now you need to survive the distributed systems reality (timeouts, state loss, rigid schema enforcement).
+
+I'm the creator of **soorma** (an open-source framework for distributed agent orchestration), and your use case is exactly what we designed for.
+
+Here is how I would architect this for production (and how we solve it in soorma):
+
+**1. Orchestration vs. Choreography (The "Anti-Fragile" Fix)** Don't use a monolithic orchestration script (like LangChain chains) that holds a connection open while Gemini processes a 50MB PDF. That will timeout.
+
+* **Architecture:** Use an **Event-Driven Architecture (NATS)**.
+* **Flow:** Your Ingestion Service publishes `audit.evidence.received`. A "Planner" agent wakes up, sees the event, and dispatches a `standard.identification.request`.
+* **Why:** If the "Analysis Agent" takes 5 minutes to crunch a blueprint, your system doesn't hang. It just emits `analysis.completed` when done. This is natively supported in soorma via the DisCo protocol.
+
+**2. Structured Integrity (The Validator Pattern)** Never trust the "Analysis Agent" to generate the final JSON. It's too creative.
+
+* **Pattern:** Use a **Validator Agent**.
+* **Flow:** Analysis Agent -&gt; `draft.checklist` \-&gt; Validator Agent.
+* The Validator Agent has *one job*: Check the draft against the rigid Schema. If it fails, it rejects it and sends it back to the Analysis Agent with a critique. We literally just built a reference implementation for this pattern (checking legal compliance): [https://github.com/soorma-ai/soorma-core/tree/main/examples/research-advisor](https://github.com/soorma-ai/soorma-core/tree/main/examples/research-advisor)
+
+**3. State Management** You need a "State Tracker" that persists the workflow state (e.g., "Document A is 50% analyzed").
+
+* We use a decoupled Tracker that watches the event bus. If the "Analysis Agent" crashes, the Tracker sees it didn't emit a result and can re-queue the job.
+
+**The Offer:** I am currently looking for **one** design partner to stress-test our new state-tracking engine on a complex, real-world use case like this.
+
+I'd be happy to help you architect this "ISO Auditor" using soorma-core. I can act as a forward-deployed engineer to help you set up the event bus and agent capabilities, purely to see if our infra holds up to your workload.
+
+DM me if you want to chat architecture.
+
+Comment 3:
+Author: BeerBatteredHemroids
+Score: -5
+Created UTC: 1766361450.0
+Comment: Ill give you an answer but not for free

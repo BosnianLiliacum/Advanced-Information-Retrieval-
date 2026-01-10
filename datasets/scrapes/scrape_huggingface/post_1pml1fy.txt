@@ -1,0 +1,26 @@
+Post Title: Pothole detection model
+Author: peterhddcoding
+Score: 2
+URL: https://huggingface.co/peterhdd/pothole-detection-yolov8
+Number of comments: 1
+Created UTC: 1765736634.0
+
+Post Content:
+I fine-tuned YOLOv8 on a pothole dataset using Nebius Cloud and uploaded the model to HuggingFace.
+
+Sharing my results and training metrics here, i would like to get some feedback or improvement suggestions.
+
+For future reference also, the model was used here in inference:
+
+[https://github.com/PeterHdd/pothole-detection-yolo](https://github.com/PeterHdd/pothole-detection-yolo)
+
+The repository documents how the training, inference and mobile app were done and integrated 
+
+
+Top 1 comments:
+
+Comment 1:
+Author: microcandella
+Score: 2
+Created UTC: 1765743910.0
+Comment: My feedback is:  Thank you for using current tech to work on a worldwide problem.

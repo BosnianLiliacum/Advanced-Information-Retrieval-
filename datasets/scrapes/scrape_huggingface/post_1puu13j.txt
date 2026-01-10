@@ -1,0 +1,39 @@
+Post Title: DS Take-Home Assignment – Feedback &amp; Interview Prep Help Needed
+Author: HotHedgehog5936
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1puu13j/ds_takehome_assignment_feedback_interview_prep/
+Number of comments: 0
+Created UTC: 1766601065.0
+
+Post Content:
+Hi everyone 👋  
+I’m preparing for a **Data Scientist take-home assessment** involving **vector-based similarity scores for job titles** (LLM embeddings).
+
+I’ve already completed my answers, but I’d really appreciate **feedback from practicing Data Scientists**
+
+id,job\_title1,job\_title2,score
+
+0,development team leader,development team leader,100
+
+198,infirmier praticien,infirmière praticienne,89
+
+269,IBM SALES PROFESSIONAL,PROFISSIONAL DU VENDAS DA IBM,6
+
+| 1) Based on the available scores, what do you think of the model performance? How would you evaluate it?
+
+2) Based on the available scores, what do you think of the model’s gender bias and fairness compliance?
+
+3) Do you think a keyword-based matching would outperform a vector-based approach on this data? Why (not)?
+
+4) If you had access to the model, would you generate any other data to expand the evaluation?
+
+If you’ve interviewed candidates for DS roles or worked on **NLP / embedding / similarity models**, I’d love to hear:
+
+* What follow-ups you’d ask
+* Common pitfalls candidates miss
+* What would make an answer stand out as *senior / production-ready*
+
+Thanks in advance—happy to share more details if helpful! 🙏
+
+
+Top 0 comments:

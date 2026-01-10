@@ -1,0 +1,31 @@
+Post Title: Building AI agents that actually learn from you, instead of just reacting
+Author: Nir777
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1pzpltc/building_ai_agents_that_actually_learn_from_you/
+Number of comments: 0
+Created UTC: 1767119102.0
+
+Post Content:
+Just added a brand new tutorial about Mem0 to my "Agents Towards Production" repo. It addresses the "amnesia" problem in AI, which is the limitation where agents lose valuable context the moment a session ends.
+
+While many developers use standard chat history or basic RAG, Mem0 offers a specific approach by creating a self-improving memory layer. It extracts insights, resolves conflicting information, and evolves as you interact with it.
+
+The tutorial walks through building a Personal AI Research Assistant with a two-phase architecture:
+
+* Vector Memory Foundation: Focusing on storing semantic facts. It covers how the system handles knowledge extraction and conflict resolution, such as updating your preferences when they change.
+* Graph Enhancement: Mapping explicit relationships. This allows the agent to understand lineage, like how one research paper influenced another, rather than just finding similar text.
+
+A significant benefit of this approach is efficiency. Instead of stuffing the entire chat history into a context window, the system retrieves only the specific memories relevant to the current query. This helps maintain accuracy and manages token usage effectively.
+
+This foundation helps transform a generic chatbot into a personalized assistant that remembers your interests, research notes, and specific domain connections over time.
+
+Part of the collection of practical guides for building production-ready AI systems.
+
+Check out the full repo with 30+ tutorials and give it a ⭐ if you find it useful:[https://github.com/NirDiamant/agents-towards-production](https://github.com/NirDiamant/agents-towards-production)
+
+Direct link to the tutorial:[https://github.com/NirDiamant/agents-towards-production/blob/main/tutorials/agent-memory-with-mem0/mem0\_tutorial.ipynb](https://github.com/NirDiamant/agents-towards-production/blob/main/tutorials/agent-memory-with-mem0/mem0_tutorial.ipynb)
+
+How are you handling long-term context? Are you relying on raw history, or are you implementing structured memory layers?
+
+
+Top 0 comments:

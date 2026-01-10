@@ -1,0 +1,22 @@
+Post Title: What are the top models for determining if evidence supports a claim (in the domain of politics)?
+Author: arc_in_tangent
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1pmp12v/what_are_the_top_models_for_determining_if/
+Number of comments: 1
+Created UTC: 1765746465.0
+
+Post Content:
+I am looking for some kind of NLI model, where the specific task is given some information about a law, does it support predictions about the law's effects. What is the SOTA out there now? I do not want to just use something like GPT-4 because I want it to be non-stochastic and able to run locally. 
+
+
+Top 1 comments:
+
+Comment 1:
+Author: stunspot
+Score: 1
+Created UTC: 1766029557.0
+Comment: What do mean by non-stochastic?
+
+It sounds like you want a Turing machine, not an LLM. 
+
+The basics problem you describe is quite doable. I would look at prompting and RAG support first, though. NotebookLM+Deep Research may also be suitable.

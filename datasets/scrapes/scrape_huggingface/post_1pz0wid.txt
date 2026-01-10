@@ -1,0 +1,16 @@
+Post Title: CLI tool to use transformer and diffuser models
+Author: zashboy
+Score: 5
+URL: https://www.reddit.com/r/huggingface/comments/1pz0wid/cli_tool_to_use_transformer_and_diffuser_models/
+Number of comments: 0
+Created UTC: 1767048841.0
+
+Post Content:
+At some point over the summer, I wanted to try out some image and video models from HF locally, but I didn't want to open up my IDE and hardcode my prompts each time. I've been looking for tools that would give me an Ollama CLI-like experience, but I couldn't find anything like that, so I started building something for myself. It works with the models I'm interested in and more. 
+
+Since then, I haven't checked if there are any similar or better tools because this one meets my needs, but maybe there's something new out there already. I'm just sharing it in case it's useful to anyone else for quickly running image-to-image, text-to-image, text-to-video, text-to-speech and speech-to-text models locally. Definitely, if you have AMD GPUs like I do.
+
+[https://github.com/zb-ss/hftool](https://github.com/zb-ss/hftool)
+
+
+Top 0 comments:

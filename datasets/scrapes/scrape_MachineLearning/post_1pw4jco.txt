@@ -1,0 +1,100 @@
+Post Title: [P] NOMA: Neural networks that realloc themselves during training (compile-time autodiff to LLVM IR)
+Author: Cylicium
+Score: 36
+URL: https://www.reddit.com/r/MachineLearning/comments/1pw4jco/p_noma_neural_networks_that_realloc_themselves/
+Number of comments: 13
+Created UTC: 1766756430.0
+
+Post Content:
+I’m the author of NOMA (Neural-Oriented Machine Architecture), an experimental systems language + compiler where reverse-mode autodiff is implemented as a compiler pass (Rust → LLVM IR). The goal is to make gradient-based training feel like a systems primitive, producing standalone native binaries.
+
+Repo: [https://github.com/pierridotite/Noma](https://github.com/pierridotite/Noma)
+
+# What’s different (vs typical Python frameworks)
+
+In PyTorch/TensorFlow, a neural network is effectively an object hierarchy. If you want to change topology mid-training (dynamic capacity, grow/prune, neuroevolution-style experiments), you typically end up doing: stop the loop → rebuild objects → copy weights → rebuild optimizer state → resume.
+
+In NOMA, a network is treated as a managed memory buffer. Growing capacity is a language primitive:
+
+* alloc / realloc / free are explicit
+* the compiler’s AD pass remaps gradients to the new layout
+* the intent is to preserve optimizer state across growth events (e.g., momentum/Adam moments) by mapping previous slots into the expanded buffer
+
+# [XOR Demo Loss](https://github.com/pierridotite/NOMA/tree/main/demo_self_growing_xor)
+
+This benchmark evaluates the performance of a self-growing neural network that:
+
+1. Starts with 2 hidden neurons
+2. Trains on XOR until a fixed step (growth trigger)
+3. Expands to 16 hidden neurons
+4. Continues training until convergence (loss &lt; 0.002)
+
+All implementations share identical initial weights and hyperparameters to ensure fair comparison.
+
+[XOR Training with NOMA language](https://preview.redd.it/zs8u6ux16z9g1.png?width=2083&amp;format=png&amp;auto=webp&amp;s=a797c3e0ada9cfcf8ce58375bd3b0f32c23bb35e)
+
+# Current status (alpha)
+
+Implemented:
+
+* Reverse-mode autodiff as a compiler pass
+* LLVM IR codegen → native compilation
+* Optimizers: SGD, Adam, RMSprop
+* Tensor ops (incl. broadcasting), user-defined functions
+* Dynamic memory: alloc/realloc/free
+* Batch training
+* File I/O: CSV + safetensors
+* Interpreter mode for rapid iteration
+* VS Code extension (syntax highlighting/snippets)
+
+Known limitations / not done yet:
+
+* Single numeric type (f64) only
+* Single-file programs (no module system/imports yet)
+* Control flow is limited (loops currently handled via unrolling; true runtime CFG/phi nodes not implemented)
+* Minimal debugging/tooling
+
+# What I’m looking for (feedback + contributors)
+
+If you’re into compilers / LLVM / ML systems, I’d appreciate feedback (or PRs) in these areas:
+
+* **LLVM backend**: true control flow (phi nodes) instead of loop unrolling
+* **GPU backend**: expand PTX/CUDA kernel generation beyond the current stub
+* **Stdlib**: higher-level layers (Conv2D, LSTM), more ops, better numerics
+* **Tooling**: error messages, debugging, multi-file projects/imports
+
+# Questions for the community
+
+1. What’s the cleanest design for AD + true runtime control flow (branches/loops) while keeping gradients correct and efficient in LLVM IR?
+2. For the realloc growth primitive: what semantics would you recommend for optimizer-state remapping when tensors expand (esp. Adam moments)?
+3. Any prior art I should study that is closest to “compiler-first autodiff + explicit memory/topology semantics”?
+
+Repo again: [https://github.com/pierridotite/Noma](https://github.com/pierridotite/Noma)
+
+
+Top 3 comments:
+
+Comment 1:
+Author: gafan_8
+Score: 24
+Created UTC: 1766759027.0
+Comment: Ok. And there goes another shower thought I had and never implemented
+
+Comment 2:
+Author: JanBitesTheDust
+Score: 10
+Created UTC: 1766756956.0
+Comment: So the growing part of the network is a realloc where you add new randomly initialized dimensions to the weight space?
+
+Comment 3:
+Author: SlayahhEUW
+Score: 3
+Created UTC: 1766760824.0
+Comment: Why do you not compare performance to other compiled backends?
+
+This line is not true and refers to older frameworks:  
+\&gt; Most ML frameworks (PyTorch, TensorFlow) implement autodiff as a *runtime library.*
+
+PyTorch has supported pytorch.compile() since 2023 which compiles and autograds the TorchInductor graph. Or JAX which does the same in XLA. No-one uses TensorFlow for training, and PyTorch eager is used for debug not prod.
+
+For me it feels like flaunting big improvement numbers when using compiled programs vs eager programs...

@@ -1,0 +1,99 @@
+Post Title: I built an open-source Python SDK for prompt compression, enhancement, and validation - PromptManager
+Author: 1Hesham
+Score: 14
+URL: https://www.reddit.com/r/LangChain/comments/1poyvo4/i_built_an_opensource_python_sdk_for_prompt/
+Number of comments: 3
+Created UTC: 1765984099.0
+
+Post Content:
+# Hey everyone,
+
+I've been working on a Python library called **PromptManager** and wanted to share it with the community.
+
+**The problem I was trying to solve:**
+
+Working on production LLM applications, I kept running into the same issues:
+
+* Prompts getting bloated with unnecessary tokens
+* No systematic way to improve prompt quality
+* Injection attacks slipping through
+* Managing prompt versions across deployments
+
+So I built a toolkit to handle all of this.
+
+**What it does:**
+
+* **Compression** \- Reduces token count by 30-70% while preserving semantic meaning. Multiple strategies (lexical, statistical, code-aware, hybrid).
+* **Enhancement** \- Analyzes and improves prompt structure/clarity. Has a rules-only mode (fast, no API calls) and a hybrid mode that uses an LLM for refinement.
+* **Generation** \- Creates prompts from task descriptions. Supports zero-shot, few-shot, chain-of-thought, and code generation styles.
+* **Validation** \- Detects injection attacks, jailbreak attempts, unfilled templates, etc.
+* **Pipelines** \- Chain operations together with a fluent API.
+
+**Quick example:**
+
+    from promptmanager import PromptManager
+    
+    pm = PromptManager()
+    
+    # Compress a prompt to 50% of original size
+    result = await pm.compress(prompt, ratio=0.5)
+    print(f"Saved {result.tokens_saved} tokens")
+    
+    # Enhance a messy prompt
+    result = await pm.enhance("help me code sorting thing", level="moderate")
+    # Output: "Write clean, well-documented code to implement a sorting algorithm..."
+    
+    # Validate for injection
+    validation = pm.validate("Ignore previous instructions and...")
+    print(validation.is_valid)  # False
+    
+
+**Some benchmarks:**
+
+|Operation|1000 tokens|Result|
+|:-|:-|:-|
+|Compression (lexical)|\~5ms|40% reduction|
+|Compression (hybrid)|\~15ms|50% reduction|
+|Enhancement (rules)|\~10ms|\+25% quality|
+|Validation|\~2ms|\-|
+
+**Technical details:**
+
+* Provider-agnostic (works with OpenAI, Anthropic, or any provider via LiteLLM)
+* Can be used as SDK, REST API, or CLI
+* Async-first with sync wrappers
+* Type-checked with mypy
+* 273 tests passing
+
+**Installation:**
+
+    pip install promptmanager
+    
+    # With extras
+    pip install promptmanager[all]
+    
+
+**GitHub:** [https://github.com/h9-tec/promptmanager](https://github.com/h9-tec/promptmanager)
+
+**License:** MIT
+
+I'd really appreciate any feedback - whether it's about the API design, missing features, or use cases I haven't thought of. Also happy to answer any questions.
+
+If you find it useful, a star on GitHub would mean a lot!
+
+
+
+
+Top 2 comments:
+
+Comment 1:
+Author: BeautifulFeature3650
+Score: 2
+Created UTC: 1766009100.0
+Comment: Damn cool stuff, stared it,I would try to improve the validation component
+
+Comment 2:
+Author: Comfortable-Power-71
+Score: 2
+Created UTC: 1766023229.0
+Comment: Will give this a try and report back.

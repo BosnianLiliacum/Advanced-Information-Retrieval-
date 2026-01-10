@@ -1,0 +1,72 @@
+Post Title: [D] Reasoning over images and videos: modular pipelines vs end-to-end VLMs
+Author: sjrshamsi
+Score: 13
+URL: https://www.reddit.com/r/MachineLearning/comments/1q1952u/d_reasoning_over_images_and_videos_modular/
+Number of comments: 6
+Created UTC: 1767287368.0
+
+Post Content:
+I’ve been thinking about how we should reason over images and videos once we move beyond single-frame understanding.
+
+End-to-end VLMs are impressive, but in practice I’ve found them brittle when dealing with:
+
+* long or high-FPS videos,
+* stable tracking over time,
+* and exact spatial or count-based reasoning.
+
+This pushed me toward a more modular setup:
+
+Use specialized vision models for perception (detection, tracking, metrics), and let an LLM reason over structured outputs instead of raw pixels.
+
+Some examples of reasoning tasks I care about:
+
+* event-based counting in traffic videos,
+* tracking state changes over time,
+* grounding explanations to specific detected objects,
+* avoiding hallucinated references in video explanations.
+
+I’m curious how people here think about this tradeoff:
+
+* Where do modular pipelines outperform end-to-end VLMs?
+* What reasoning tasks are still poorly handled by current video models?
+* Do you see LLMs as a post-hoc reasoning layer, or something more tightly integrated?
+
+I’ve built this idea into a small Python library and added a short demo video showing image and video queries end-to-end.
+
+Happy to share details or discuss design choices if useful.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: HelpingForDoughnuts
+Score: 3
+Created UTC: 1767287893.0
+Comment: Totally agree on the modular approach for complex video tasks. End-to-end VLMs are cool but yeah, they fall apart on longer videos or when you need precise tracking/counting.
+Your pipeline idea makes sense - let specialized models handle what they’re good at, then have LLMs reason over the structured outputs. Much more reliable than trying to get a VLM to track objects frame-by-frame.
+The Python library sounds interesting! Are you running this stuff locally or do you need serious compute for the video processing pipeline? Some of those detection/tracking models can get pretty heavy on longer videos.
+
+Comment 2:
+Author: sjrshamsi
+Score: 2
+Created UTC: 1767345480.0
+Comment: For anyone interested, I’ve open-sourced a Python library that explores this modular approach and added a short demo video here:
+https://github.com/MugheesMehdi07/langvio
+
+Comment 3:
+Author: sjrshamsi
+Score: 1
+Created UTC: 1767287831.0
+Comment: Demo Video: [https://www.youtube.com/watch?v=f-JnZoHM4to](https://www.youtube.com/watch?v=f-JnZoHM4to)
+
+Comment 4:
+Author: Helpful_ruben
+Score: 1
+Created UTC: 1767334369.0
+Comment: Error generating reply.
+
+Comment 5:
+Author: Helpful_ruben
+Score: 1
+Created UTC: 1767391969.0
+Comment: Error generating reply.

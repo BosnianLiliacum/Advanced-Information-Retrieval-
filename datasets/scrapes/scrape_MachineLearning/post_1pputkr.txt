@@ -1,0 +1,91 @@
+Post Title: [D]What should I expect to pay for colocating an 8x B200 GPU cluster in Texas?
+Author: Captkn0wledge
+Score: 28
+URL: https://www.reddit.com/r/MachineLearning/comments/1pputkr/dwhat_should_i_expect_to_pay_for_colocating_an_8x/
+Number of comments: 18
+Created UTC: 1766074580.0
+
+Post Content:
+
+
+I'm planning to self-host an AI compute cluster instead of burning cash on cloud GPU rentals, and I'm trying to get realistic numbers for colocation costs in Texas.
+
+**My setup:**
+
+* 8x NVIDIA B200 GPUs (192GB HBM3e each)
+* \~7kW total power draw under full load
+* 112 CPU cores, 2TB RAM, 33TB NVMe storage
+* Will run 24/7 for AI training and LLM inference
+
+**What I'm trying to figure out:**
+
+* What's a reasonable $/kW/month rate for colocation in Texas?
+* Should I expect to pay per kW or per rack unit?
+* What's typical for power costs ($/kWh) on top of colocation?
+* Any hidden fees I should watch out for (cross-connects, hands-on support, etc.)?
+
+**Context:** I just read about a European startup that broke even on their B200 purchase in 6-8 months by self-hosting vs. renting cloud H100s. They were paying around $3k/month total for colocation + power in Norway. Texas power should be cheaper, but I'm not sure what the facility/colocation premiums look like.
+
+I've reached out to CoreScientific and a few others, but wanted to get a reality check from people who've actually done this before I commit to anything.
+
+**Questions:**
+
+1. Anyone colocating GPU clusters in Texas? What are you paying?
+2. Which datacenters have you had good experiences with for AI workloads?
+3. Am I missing any major cost factors?
+4. At what point does it make more sense to just rent a small cage vs. cabinet space?
+
+Trying to get my numbers dialed in before I drop $400k+ on hardware. Any insights appreciated!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: MachineZer0
+Score: 20
+Created UTC: 1766077759.0
+Comment: $600 for a full rack with 10kw. More if you need A/B power or cross connects to multiple backbone providers. Texas does charge real estate tax to Colo.
+
+Comment 2:
+Author: whatwilly0ubuild
+Score: 17
+Created UTC: 1766097904.0
+Comment: Colocation pricing in Texas runs $200 to $400 per kW monthly for cabinet space. Power itself is $0.08 to $0.12 per kWh. At 7kW continuous, expect roughly $1,400 to $2,800 monthly for colocation plus another $500 to $600 for power.
+
+The $3k/month European startup paid sounds right but Texas won't necessarily be cheaper. Power is cheap here but facility costs are similar and Texas summer cooling drives up operational expenses.
+
+Hidden costs that kill budgets: bandwidth overage charges, remote hands fees, cross-connect fees, and setup fees of $1k to $5k just to rack your gear.
+
+Our clients running GPU clusters learned colocation only makes sense above certain utilization thresholds. If GPUs sit idle 30% of the time, cloud rental wins. You're betting $400k that you'll keep those B200s busy enough to justify capital outlay.
+
+For 7kW, cabinet space makes more sense than cage. Cages make sense around 20-30kW when you need multiple racks. Most facilities charge per kW with minimum commitments.
+
+CoreScientific is solid but priced for enterprise. Look at DataBank or CyrusOne facilities in Dallas or Austin for better rates.
+
+Reality check on 6-8 month breakeven: assumes 100% utilization, no hardware failures, and stable cloud pricing. In practice you'll have downtime and issues. Budget 12-18 months for realistic breakeven.
+
+Major missing costs: insurance for $400k hardware, travel costs when things break and remote hands can't fix it, and opportunity cost of capital in depreciating GPUs.
+
+Economic tipping point for self-hosting is sustained 70%+ utilization over 18+ months. Below that, cloud flexibility beats capex. Bursty workloads favor cloud, production inference 24/7 favors colocation.
+
+For Texas datacenters, Dallas has better connectivity and options than Austin or Houston. Avoid single-carrier facilities.
+
+Serious consideration: buying B200s now locks you in for years while cloud providers will have newer hardware within 18 months. Hardware depreciation in AI is brutal.
+
+Comment 3:
+Author: Rxyro
+Score: 10
+Created UTC: 1766088956.0
+Comment: I’d see if you can keep a p6-b200 well utilized / shared among teams for a month before doing this.
+
+Comment 4:
+Author: MountCrispy
+Score: 1
+Created UTC: 1766348148.0
+Comment: I used to colo my gpus, but I've just brought them all home and self host.  Got fiber to the house.   Just a bit of extra heat to deal with.
+
+Comment 5:
+Author: ThinConnection8191
+Score: -20
+Created UTC: 1766075741.0
+Comment: Why do you need B200 to start with?

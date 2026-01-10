@@ -1,0 +1,18 @@
+Post Title: I don't get the Reachy robot.
+Author: GreatBigSmall
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1q6ey56/i_dont_get_the_reachy_robot/
+Number of comments: 0
+Created UTC: 1767791415.0
+
+Post Content:
+I don't understand the reachy mini robot.
+
+I get that it's more for. Learning but the robot is stationary and it doesn't have anything to interact with the world (like a hand or claw or something). 
+
+So it kind of defeats the purpose of being a robot. Yes it has moveable parts but just "display" ones. I don't think it's posible to do anything compelling with it? 
+
+What am I missing here? 
+
+
+Top 0 comments:

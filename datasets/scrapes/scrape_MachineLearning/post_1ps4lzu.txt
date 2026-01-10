@@ -1,0 +1,36 @@
+Post Title: [P] A memory effecient TF-IDF project in Python to vectorize datasets large than RAM
+Author: mrnerdy59
+Score: 44
+URL: https://www.reddit.com/r/MachineLearning/comments/1ps4lzu/p_a_memory_effecient_tfidf_project_in_python_to/
+Number of comments: 11
+Created UTC: 1766317144.0
+
+Post Content:
+Re-designed at C++ level, this library can easily process datasets around 100GB and beyond on as small as a 4GB memory
+
+It does have its constraints but the outputs are comparable to sklearn's output
+
+[fasttfidf](https://github.com/purijs/fasttfidf)
+
+EDIT: Now supports parquet as well
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Tiny_Arugula_5648
+Score: 34
+Created UTC: 1766318169.0
+Comment: I'd recommend using a binary format. CSV is extremely likely to break with unstructured text embedded into it. Parquet, orc or avro are the primary binary formats. They are the defaults in a data lake so other engineering tools (Spark, DuckDB, etc) will work better with your solution.
+
+Comment 2:
+Author: DigThatData
+Score: 0
+Created UTC: 1766329801.0
+Comment: people still use tfidf? and why would a giant corpus of unprocessed text be in csv format?
+
+Comment 3:
+Author: [deleted]
+Score: -1
+Created UTC: 1766320949.0
+Comment: [deleted]

@@ -1,0 +1,90 @@
+Post Title: [P] PixelBank - Leetcode for ML
+Author: Winners-magic
+Score: 21
+URL: https://www.reddit.com/r/MachineLearning/comments/1puaf7x/p_pixelbank_leetcode_for_ml/
+Number of comments: 17
+Created UTC: 1766538250.0
+
+Post Content:
+Hey everyone! 👋
+
+I've been working on [PixelBank](https://pixelbank.dev) \- a hands-on coding practice platform designed specifically for Machine Learning and AI.
+
+Link: [https://pixelbank.dev](https://pixelbank.dev)
+
+
+
+Why I built this:
+
+LeetCode is great for DSA, but when I was prepping for ML Engineer interviews, I couldn't find anywhere to actually practice writing PyTorch models, NumPy operations, or CV algorithms with instant feedback. So I built it.
+
+What you can practice:
+
+🔥 PyTorch - Datasets, transforms, model building, training loops
+
+📊 NumPy - Array manipulation, slicing, broadcasting, I/O operations
+
+👁️ Computer Vision - Image processing, filters, histograms, Haar cascades
+
+🧠 Deep Learning - Activation functions, regularization, optimization
+
+🔄 RNNs - Sequence modeling and more
+
+How it works:
+
+Pick a problem from organized Collections → Topics
+
+Write your solution in the Monaco editor (same as VS Code)
+
+Hit run - your code executes against test cases with instant feedback
+
+Track your progress on the leaderboard
+
+Features:
+
+✅ Daily challenges to build consistency
+
+✅ Math equations rendered beautifully (LaTeX/KaTeX)
+
+✅ Hints and solutions when you're stuck
+
+✅ Dark mode (the only mode 😎)
+
+✅ Progress tracking and streaks
+
+The platform is free to use with optional premium for additional problems.
+
+Would love feedback from the community! What topics would you want to see added?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: trialofmiles
+Score: 11
+Created UTC: 1766673312.0
+Comment: No offense but spreading the gamification of interviewing to computer vision and ML isn’t something I’m excited about, no matter how well this idea is executed.
+
+Comment 2:
+Author: [deleted]
+Score: 7
+Created UTC: 1766668198.0
+Comment: [deleted]
+
+Comment 3:
+Author: KegOfAppleJuice
+Score: 3
+Created UTC: 1766754047.0
+Comment: Idea is kind of nice, but I am too uswd to being able to do code challenges for free, so I wouldn't pay for it personally.
+
+Comment 4:
+Author: Rebuman
+Score: -2
+Created UTC: 1766566820.0
+Comment: I like the idea. Are you planning to provide also video lectures for topics that you are covering ? And what about training models. I see a Deep Learning category. How are you handling many people connected at the same time trying to send you a training request ?
+
+Comment 5:
+Author: Winners-magic
+Score: -10
+Created UTC: 1766549466.0
+Comment: What do you guys think? Which topics should I add?

@@ -1,0 +1,64 @@
+Post Title: Web Crawler using AI
+Author: Om_Patil_07
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1ppoycu/web_crawler_using_ai/
+Number of comments: 2
+Created UTC: 1766058775.0
+
+Post Content:
+Hey everyone,
+
+Web Scraping was one of the most both, time and effort consuming task.The goal was simple: Tell the AI what you want in plain English, and get back a clean CSV. How it works
+
+The app uses **Crawl4AI** for the heavy lifting (crawling) and **LangChain** to coordinate the extraction logic. The "magic" part is the **Dynamic Schema Generation**—it uses an LLM to look at your prompt, figure out the data structure, and build a Pydantic model on the fly to ensure the output is actually structured.
+
+# Core Stack:
+
+**- Frontend:** Streamlit.
+
+**- Orchestration:** LangChain.
+
+**- Crawling:** Crawl4AI.
+
+**- LLM Support:**
+
+\- **Ollama:** For those who want to run everything locally (Llama 3, Mistral).
+
+**- Gemini API:** For high-performance multimodal extraction.
+
+**- OpenRouter:** To swap between basically any top-tier model.
+
+# Current Features:
+
+* Natural language extraction (e.g., "Get all pricing tiers and their included features").
+* One-click CSV export.
+* Local-first options via Ollama.
+* Robust handling of dynamic content.
+
+# I need your help / Suggestions:
+
+This is still in the early stages, and I’d love to get some honest feedback from the community:
+
+1. **Rate Limiting:** How are you guys handling intelligent throttling in AI-based scrapers?
+2. **Large Pages:** Currently, very long pages can eat up tokens. I'm looking into better chunking strategies.
+
+Repo: [https://github.com/OmPatil44/web\_scraping](https://github.com/OmPatil44/web_scraping)
+
+Open to all suggestions and feature requests. What’s the one thing that always breaks your scrapers that you’d want an AI to handle?
+
+https://preview.redd.it/e01mcpyray7g1.png?width=1859&amp;format=png&amp;auto=webp&amp;s=23e0dde12f47f8873a92e7be4324156c854b743c
+
+https://preview.redd.it/pc8x9qyray7g1.png?width=1859&amp;format=png&amp;auto=webp&amp;s=0d9e7a2a54787244216907860c5f925c71d72609
+
+https://preview.redd.it/zhwnlpyray7g1.png?width=1846&amp;format=png&amp;auto=webp&amp;s=ba9c7a741f3262c0c978e74d6d198c21bc8a7f48
+
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Capable-Spinach10
+Score: 2
+Created UTC: 1766059171.0
+Comment: That sounds expensive

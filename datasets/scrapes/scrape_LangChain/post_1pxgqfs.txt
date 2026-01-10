@@ -1,0 +1,58 @@
+Post Title: What do people here think about drag-and-drop agent builders?
+Author: Ok-Introduction354
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1pxgqfs/what_do_people_here_think_about_draganddrop_agent/
+Number of comments: 8
+Created UTC: 1766891866.0
+
+Post Content:
+I'm thinking of frameworks such as n8n and Gumloop, and equivalent prompted agents such as Lindy.ai that generate flow charts from prompts that can then be customized.
+
+Related: do you know of or use any agent builder platforms that create agents directly in code (rather than drag-and-drop interfaces) from natural language prompts? For example, the agent could write code in Langchain, or some other framework.
+
+There have been a few players in this broader space. Curious what folks are using and finding helpful, if anything.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: ur-krokodile
+Score: 8
+Created UTC: 1766893650.0
+Comment: Same as drag-n-drop websites.
+
+Comment 2:
+Author: fasti-au
+Score: 2
+Created UTC: 1766904209.0
+Comment: They exist.  They work. They inform a product concept.  Sometimes run the world.  
+
+What do you think ant webpages. Are they better than blank screens or is a blank screen better?
+
+Comment 3:
+Author: SteviaMcqueen
+Score: 1
+Created UTC: 1766958584.0
+Comment: Pretty good for some use cases. Too pricey for an agency model. Those agency platforms are capturing your agency’s profits.
+
+Comment 4:
+Author: Khade_G
+Score: 1
+Created UTC: 1766963603.0
+Comment: I’ve played with a few of these, and IMO they’re useful but pretty bounded.
+
+Drag-and-drop builders (n8n, Gumloop, Lindy-style prompt → flow) are great for:
+- quick experiments / PoCs
+- visualizing simple agent flows
+- onboarding non-devs
+
+They tend to fall apart once you need real branching logic, reuse, testing, or version control. At that point I usually want to be in code.
+
+What’s been more interesting to me lately is prompt → code rather than prompt → diagram. I’ve seen early tools and templates that take a natural-language spec and scaffold LangChain (or similar) agents directly. Still rough, but promising.
+
+Right now my default is:
+- brainstorm flows visually if it helps
+- treat code as the source of truth
+- use NL prompts to generate scaffolding, not final agents
+
+Curious if anyone’s found a solid workflow that reliably goes from prompt → clean, maintainable agent code.

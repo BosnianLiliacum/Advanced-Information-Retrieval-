@@ -1,0 +1,78 @@
+Post Title: [D] Tools to read research papers effectively
+Author: Outrageous_Tip_8109
+Score: 52
+URL: https://www.reddit.com/r/MachineLearning/comments/1pmzhef/d_tools_to_read_research_papers_effectively/
+Number of comments: 33
+Created UTC: 1765776343.0
+
+Post Content:
+As the title says, I’m looking for tools—both software and device recommendations—to help me read research papers more effectively. By “effective,” I mean not just reading, but also organizing papers so they collectively support my research workflow.
+
+Right now, I’m printing out 8–10 pages per paper, highlighting them, and taking notes by hand. It works, but it feels like a pretty naive approach, and the physical stack of papers is getting out of control.
+
+So I have two main questions:
+
+1. 	How do you all read research papers effectively?
+
+2. 	Do you have any tools or device suggestions (free or paid) that can help me read, annotate, and organize papers more efficiently?
+
+For context, I’m a computer vision researcher currently working in the video surveillance domain.
+
+Thank you!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: DigThatData
+Score: 54
+Created UTC: 1765780724.0
+Comment: I got u bae https://www.semanticscholar.org/ (free)
+
+&gt; I’m a computer vision researcher currently working in the video surveillance domain.
+
+please try to use your powers for good...
+
+Comment 2:
+Author: Hex_Medusa
+Score: 51
+Created UTC: 1765781580.0
+Comment: "How do you all read research papers effectively?"   
+\-Cup of coffee   
+\-Pick a time during which there is no distraction (early mornings works great for that)   
+\-Have a marker and pencil ready (if you read on paper)   
+\-Read twice (First quickly to get an overview and a second time slowly to read in-depth and make notes and/or markers)   
+\-Follow up research on things and concepts you are not familiar with   
+\-Let it marinate (I usually let it hang in the back of my mind for like half or a full day to give my subconscious time to think about it)   
+\-Lastly take a look at your notes again and try to write an abstract of the paper (not using the abstract of the paper itself ofc)
+
+"Do you have any tools or device suggestions (free or paid) that can help me read, annotate, and organize papers more efficiently?"   
+It depends what you prefer and what is more effective for you. I use both paper and Laptop depending on the situation (although paper seems to be more effective, in the sense that I learn more, for me). For computer I use Okular (it is free) since I am on a Linux system. You can make notes, markings and a bunch of other stuff on it.
+
+The most important step in the process however is the cup of coffee and what you learn from it and not how fast can you be done with it.
+
+Comment 3:
+Author: LouisAckerman
+Score: 11
+Created UTC: 1765778089.0
+Comment: Have a weekly paper reading group where one of the members have to prepare a presentation and share with the group. They will help you skim through a lot of papers.
+
+Ideally, don’t do literature review alone.
+
+Comment 4:
+Author: CurlyCoiledString
+Score: 7
+Created UTC: 1765788976.0
+Comment: Second a lot of what’s suggested here. I’d also recommend a reference manager like Zotero or Papers. I can annotate papers, add tags + meta information, and organize papers by topic or a particular project, Both can be used on mobile and tablet I believe, also. Personally, a three pass reading approach worked well when I was first starting. The first read was a light skim of the paper meant to be done in ~30 min or less and skipping over math heavy proofs, theorems, equations, etc. On a second read, I’d tackle any intermediate questions from the first read. Then on a third pass, I’d read the paper in full. 
+
+Reading groups (e.g.,  ML Collective) really helped with learning new ML topics and discovering new ML research + ways of thinking and communicating. It was super helpful not to do thinking and learning in a vacuum (which is to say reading alone sucks). It might be a good idea to find ways to present what you’re reading to others as it can force you to make different logic connections that can help when reading. Early on, broad reading and reading seminal works (check out course syllabi for seminal papers) can be a huge help for understanding papers more effectively (this may also point to where some norms and notation conventions originate). 
+
+Also, the more you read the faster + more effective you get. Other things that helped were reimplementing code and deriving proofs. Sometimes this can be used to learn what is noise or not actually useful in understanding a paper. Good luck :)
+
+Eta: more info oof
+
+Comment 5:
+Author: badgerbadgerbadgerWI
+Score: 6
+Created UTC: 1765812594.0
+Comment: Zotero + Better BibTeX changed my workflow. For actual reading, I use a 10" e-ink tablet. No distractions, easy on the eyes. PDF annotation syncs back to Zotero.

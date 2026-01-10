@@ -1,0 +1,67 @@
+Post Title: [D] Do Some Research Areas Get an Easier Accept? The Quiet Biases Hiding in ICLR's Peer Review
+Author: team-daniel
+Score: 90
+URL: https://www.reddit.com/r/MachineLearning/comments/1plwkqz/d_do_some_research_areas_get_an_easier_accept_the/
+Number of comments: 15
+Created UTC: 1765661432.0
+
+Post Content:
+Hey all,
+
+So I am sure you already know the ICLR drama this year + since reciprocal reviewing, authors have struggled with reviews. Well, I scraped public OpenReview metadata for ICLR 2018–2025 and did a simple analysis of acceptance vs (i) review score, (ii) primary area, and (iii) year to see if any hidden biases exist within the process.
+
+Check out my[ **blogpost here** ](https://daniel-bethell.co.uk/posts/peer-review-biases/)for the full breakdown.
+
+TL;DR
+
+Across 2018–2025, acceptance at ICLR is overwhelmingly driven by review score (obviously): the empirical heatmap shows the probability of acceptance given a mean review score rises sharply with score in every area, with notable differences between areas that mainly appear in the mid-score “decision boundary” region rather than at the extremes. For example, at an average score of 6.0, ‘Robotics’ and ‘LLMs’ have higher acceptance rates. At an average score of 6.5, ’time series’ and ‘probabilistic methods’ see a notably lower acceptance rate.
+
+https://preview.redd.it/20rpydgjh17g1.png?width=1249&amp;format=png&amp;auto=webp&amp;s=e22862df8a46985518508b4237dde697e7882f46
+
+When we zoom out to the AI ’ecosystem’ dynamics, previously it could be argued that ‘Robotics’ and ‘LLMs’ may have higher acceptance rates because they are hot topics and thus want to be showcased more in the conference. But this image below shows that this may not be the case. Areas like ‘XAI’ and ‘PINNs’ are just as popular to ‘Robotics’ and ‘LLMs' but don’t have the same excess acceptance rate as them.
+
+https://preview.redd.it/6h1b6j4kh17g1.png?width=1000&amp;format=png&amp;auto=webp&amp;s=154aec624b27e77895b8a4445a7b6af59162a5a8
+
+Overall, my analysis shows for some strange reason, which we can’t prove as to why, some sub-areas have a higher chance of getting into ICLR just because of the area alone. We showed it was not because of area growth, but due to an unexplainable ‘bias’ towards those fields.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Beor_The_Old
+Score: 41
+Created UTC: 1765662119.0
+Comment: This isn’t bias it’s a fact of different subdivisions of machine learning. Neuroscience and cognitive science applications have been foundational to machine learning since before it was a fully formed research area, but those papers are rare and they don’t get cited a million times by every masters student’s rejected paper that gets uploaded to arxiv. That doesn’t make them less impactful or important.
+
+Comment 2:
+Author: LaVieEstBizarre
+Score: 36
+Created UTC: 1765666518.0
+Comment: Worth noting the sampling bias inherent in the given areas. Robotics has: 
+- a lot more funding for hardware platforms (a base UR10 is $40k+, this isn't including any sensors, lab space, mocap setups, etc)
+- many skilled teams who have to know more about hardware and non learning based robotics areas alongside the ML skills
+- large non ML focused conferences which are usually less effort to publish in (the experimental bar for ML has gotten larger over time) 
+
+So anything that ends up at ICLR is probably well funded, with strong teams and worth the extra effort to publish in ICLR over ICRA. Just the concrete difficult experimental bar that is extensive hardware experiments might make papers more likely to be published, even if the rest of the paper is mid. 
+
+I imagine LLMs might have a similar bias towards requiring high funding, or being a major interest for companies/groups with high funding.
+
+Comment 3:
+Author: azraelxii
+Score: 12
+Created UTC: 1765663375.0
+Comment: Part of this is some subareas have clearly defined benchmarks and standards that make it easy for a reviewer to understand the significance.
+
+Comment 4:
+Author: Old_Stable_7686
+Score: 3
+Created UTC: 1765677155.0
+Comment: I've noticed a trend of going for VLA/Robotics+LLMs these days from my colleagues in other countries, even those who used to work only on vision/language domain. Apparently, some groups have included "robotics" into one of the core research domains.
+
+Also, nice scraping btw!
+
+Comment 5:
+Author: intpthrowawaypigeons
+Score: 2
+Created UTC: 1765707564.0
+Comment: could you also check which primary area makes it easier to get oral/spotlight?

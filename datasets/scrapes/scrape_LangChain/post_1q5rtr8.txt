@@ -1,0 +1,53 @@
+Post Title: I applied "Systemic Design" principles from Game Dev (BioShock/Star Wars) to AI Agents. Here is why it works better than hard-coding.
+Author: reidkimball
+Score: 15
+URL: https://www.reddit.com/r/LangChain/comments/1q5rtr8/i_applied_systemic_design_principles_from_game/
+Number of comments: 3
+Created UTC: 1767726660.0
+
+Post Content:
+I spent 10+ years as a game designer (LucasArts) before moving into AI and App development. In games, we rely heavily on "Systemic Design" where we create systems (physics, AI rules, environmental hazards) that interact to create emergent gameplay instead of scripting every single moment.
+
+I’ve been applying this same philosophy to building AI Agents, and I think it solves the "brittleness" problem a lot of us are facing with LLMs.
+
+**The Problem: Deterministic vs. Systemic**  
+When I started building my current health app (Meadow Mentor), my instinct was to hard-code logic for safety.
+
+* The Old Way: Write endless if/else statements. If user.isDairyFree AND item == 'milk', then suggest\_alternative().
+* The Issue: This doesn't scale. You spend weeks mapping out edge cases.
+
+**The Solution: Systemic Agent Design**  
+Instead of scripting the path, I set up a system consisting of three parts:
+
+1. **Dynamic Data:** The user's live state (e.g., "Dairy-Free," "High Stress").
+2. **Systemic Tools:** Functions like addToShoppingList or updateStressLevel.
+3. **Reasoning:** An LLM with a system prompt to strictly adhere to health safety.
+
+**The Result (Emergent Behavior)**  
+I tested this by asking my agent to "add milk, eggs, and bananas" to my list while my profile was set to Dairy-Free.
+
+I hadn't written a specific script to handle this conflict. However, the agent paused, analyzed the input against the **Dynamic Data**, and refused the request. It autonomously suggested swapping for Oat or Almond milk. Once I confirmed, it called the tool with the safe ingredients.
+
+What would have been a 2-week sprint of mapping out diet vs. ingredient conflicts took about an hour to set up as a system.
+
+**The Takeaway**  
+If you are building agents, stop trying to predict every user path. Focus on defining the "physics" of your app (the tools) and the "environment" (the data) and let the model handle the navigation.
+
+I wrote a longer breakdown of the logic and the "Recipe Search" implementation on my site if anyone wants to see the specific setup:
+
+[https://reidkimball.com/journal/systemic-agent-design/](https://reidkimball.com/journal/systemic-agent-design/)
+
+Are you building Systemic Agents? Feel free to reach out, would love to share notes and help each other grow in this new discipline.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Objective-Fig-4250
+Score: 4
+Created UTC: 1767729443.0
+Comment: You can go even more meta than this. By your analogy, choose "physics" (tools) as - application types you want - assistant / researcher / consultant - "environment" (data) as - sectors like HealthCare / education / environment &amp; let LLM think of ways to jot down &amp; connect all these low-level components, to form something cohesive &amp; workable at a high level - like your "Meadows Mentor" application.
+
+The excerpt above is just to state that this paradigm of agentic AI development was designed with EXACTLY this methodology or workflow in mind, that you have eventually have come across in your own explorations - of defining the tools + data &amp; letting the LLM come up with reasoning of what control flow the program should opt for. Without needing to chart your own decision tree of all possible scenarios &amp; edge cases! 
+
+If I am wrong, please correct me, but I think you've just rehashed what agentic development expects of us, based on your own deep understanding of game development. I can't seem to find that great of a distinction here. Sorry, if I misread what you're trying to convey. Like, for example, how will "your way" reduce confabulations of a diet plan that adheres to constraints by suggesting something that's not edible ?

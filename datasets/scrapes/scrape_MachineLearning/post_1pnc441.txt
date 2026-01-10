@@ -1,0 +1,64 @@
+Post Title: [P] PapersWithCode’s alternative + better note organizer: Wizwand
+Author: anotherallan
+Score: 39
+URL: https://www.reddit.com/r/MachineLearning/comments/1pnc441/p_paperswithcodes_alternative_better_note/
+Number of comments: 27
+Created UTC: 1765816940.0
+
+Post Content:
+Hey all, since PapersWithCode has been down for a few months, we built an alternative tool called WizWand ([wizwand.com](https://www.wizwand.com)) to bring back a similar PwC style SOTA / benchmark + paper to code experience.
+
+* You can browse SOTA benchmarks and code links just like PwC ( [wizwand.com/sota](https://www.wizwand.com/sota) ).
+* We reimplemented the benchmark processing algorithm from ground up to aim for better accuracy. If anything looks off to you, please flag it.
+
+In addition, we added a good paper notes organizer to make it handy for you:
+
+* Annotate/highlight on PDFs directly in browser (select area or text)
+* Your notes &amp; bookmarks are backend up and searchable
+
+It’s completely free (🎉) as you may expect, and we’ll open source it soon. 
+
+I hope this will be helpful to you. For feedbacks, please join the Discord/WhatsApp groups: [wizwand.com/contact](http://wizwand.com/contact)
+
+[Example SOTA screenshot](https://preview.redd.it/5gg4s6awde7g1.png?width=2282&amp;format=png&amp;auto=webp&amp;s=52b85b8bf736ca6a19ff79583efe8b19a2f01726)
+
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ewankenobi
+Score: 3
+Created UTC: 1765819620.0
+Comment: Really like this, been missing papers with code. 
+
+Would I be correct in presuming mAP on the object detection page is mAP 50-95? Not sure if you should specify that? Maybe it's a reasonable assumption that people will deduce it is mAP 50-95 since it's so common.
+
+Comment 2:
+Author: captainRubik_
+Score: 2
+Created UTC: 1765817861.0
+Comment: Thanks this is great. I have few questions:
+
+In the audio domain for sota, why does classification include vision benchmarks?
+
+How can we add a benchmark?
+
+Comment 3:
+Author: AdInner8724
+Score: 2
+Created UTC: 1766377272.0
+Comment: good results! i don't see that many results yet, i'm looking for image generation and tokenizers topics. anyway congrats!
+
+Comment 4:
+Author: return_reza
+Score: 1
+Created UTC: 1765974223.0
+Comment: Your “playing games” and “robotics” sections are very bare. There’s certainly been more than 7 papers on continuous control (i.e. mujoco) and more than 5 for Atari. I think there’s research labs with more than 5 papers on Atari in a year.
+
+Comment 5:
+Author: Willinki7
+Score: 1
+Created UTC: 1765817366.0
+Comment: This is great!

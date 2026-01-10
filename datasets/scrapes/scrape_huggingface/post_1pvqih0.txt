@@ -1,0 +1,29 @@
+Post Title: Is it possible to use open source LLM models as Brain for my Agents
+Author: No-Possession-272
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1pvqih0/is_it_possible_to_use_open_source_llm_models_as/
+Number of comments: 1
+Created UTC: 1766707705.0
+
+Post Content:
+I am completely new to agents and recent grad in general. Now I want to learn about them and also make an agent-to-agent project for my school. 
+
+I have tried the new Microsoft framework, but it keeps using Azure AI or some APIs. But for some reason, Azure is not allowing me to create an account there. To solve this, I have chosen Google AI. But after replacing the code to fit Google AI, I am getting my limits exceeded message even though this is my first message. 
+
+I have spent last 2 hours converting the code to google SDK for GenAI only to get shit on this API messages error. 
+
+  
+TLDR: Is it possible to get free inferencing from any LLM and use it towards my agents. I just came to know about Hugging face. So does it offer generous limits and has anyone tried it. Basically, I am looking for free LLM inferencing for learning purposes. 
+
+I have also taken a look at earlier post from a nice guy where he was telling me to start from making APIs from scratch and then move onto framework. I will be following his advice. But is there anything else you guys would like to add. 
+
+Again, I apologize for the title or the post, but I am kinda pissed because how hard it is just to get started and learn among this AI noise and new frameworks keep dropping but not good resources such as pytorch.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: frank_brsrk
+Score: 1
+Created UTC: 1766733322.0
+Comment: Yes you can open source them easily on models,  u may see here examples on my profile https://huggingface.co/frankbrsrk :) good lucks

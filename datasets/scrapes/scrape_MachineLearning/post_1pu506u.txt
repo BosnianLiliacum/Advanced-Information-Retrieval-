@@ -1,0 +1,47 @@
+Post Title: [P] TraceML Update: Layer timing dashboard is live + measured 1-2% overhead on real training runs
+Author: traceml-ai
+Score: 12
+URL: https://www.reddit.com/r/MachineLearning/comments/1pu506u/p_traceml_update_layer_timing_dashboard_is_live/
+Number of comments: 2
+Created UTC: 1766523701.0
+
+Post Content:
+Hey everyone,
+
+Quick update on TraceML **the dashboard is done** and you can now see exactly how much time each layer takes on GPU vs CPU during training.
+
+**What's new:**
+
+🎯 **Layer-by-layer timing breakdown** showing where your training time actually goes (forward, backward, per-layer)
+
+📊**Live dashboard** that updates as you train, no more guessing which layers are bottlenecks
+
+⚡ **Low overhead: On NVIDIA T4** in real PyTorch/HuggingFace training runs ( profiling that doesn't kill your throughput)
+
+Why this matters
+
+Ever wonder why your model takes forever to train? Or which layers are eating all your time? Now you can actually *see* it while training, not just guess from total step time.
+
+Perfect for:
+
+* Debugging slow training runs
+* Finding unexpected bottlenecks before they waste hours
+* Optimizing mixed-precision setups
+* Understanding where CPU/GPU sync is hurting you
+
+[Fine-tuning Bert on AG news dataset on Nvidia L4](https://i.redd.it/13oaj4ciq09g1.gif)
+
+👉 **GitHub:** [https://github.com/traceopt-ai/traceml](https://github.com/traceopt-ai/traceml)
+
+Working on DDP support and testing on bigger GPUs. If you try it out, I'd love to hear what you find—especially any surprising bottlenecks.
+
+**⭐ Star if useful** | Feedback welcome
+
+
+Top 1 comments:
+
+Comment 1:
+Author: whyareyouflying
+Score: 2
+Created UTC: 1766558027.0
+Comment: this looks sweet! is there any way to sync logs to something like wandb?

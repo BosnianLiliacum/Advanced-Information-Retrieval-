@@ -1,0 +1,67 @@
+Post Title: [D] Google DeepMind Research Engineer/Scientist Interview Prep Advice?
+Author: hmm-yes-sure
+Score: 163
+URL: https://www.reddit.com/r/MachineLearning/comments/1q2wiub/d_google_deepmind_research_engineerscientist/
+Number of comments: 50
+Created UTC: 1767452055.0
+
+Post Content:
+Hey everyone,
+
+I'm currently an Applied Scientist II at Amazon working primarily with LLMs (in the speech domain, but open to other areas), and I'm considering applying to Google DeepMind for either Research Engineer or Research Scientist roles.
+
+For context on my background:
+
+* AS II level at Amazon
+* I do not have PhD, but 3+ years of experience
+
+I'd love to hear from anyone who has:
+
+1. Interviewed at DeepMind (especially for RE or RS roles) - what should I focus on preparing?
+2. Insight on RE vs RS roles - which might be a better fit given my background?
+
+Specific questions:
+
+* How much does the interview focus on novel research ideas vs. implementation/systems knowledge?
+* Are there particular areas in LLMs/deep learning I should deep-dive on?
+* How important is having a strong publication record for RE or RS roles?
+* Final and most important question, how do I even get the interview? 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: felolorocher
+Score: 135
+Created UTC: 1767453492.0
+Comment: You’re not getting an RS interview unless you’ve published heavily during your time at Amazon especially without a PhD. 
+
+Apply for RE. Try and connect with a recruiter first
+
+All my interviews with Deepmind came from recruiters and having a relationship with them but I’ve had friends who cold applied who got offers.
+
+Comment 2:
+Author: thinking_byte
+Score: 24
+Created UTC: 1767458072.0
+Comment: From the outside looking in, the biggest difference I’ve seen between RE and RS is how much ambiguity you’re expected to drive yourself. RS tends to be more about setting research direction and defending ideas, RE is more about turning ideas into working systems that survive contact with reality. With your background, I’d bias prep toward explaining concrete problems you owned end to end and the trade-offs you made. For LLMs, people usually underestimate how deep you can be probed on fundamentals once you say you work with them. On getting the interview, referrals and visible work seem to matter more than certs or titles. Blog posts, open source, or internal projects you can talk about clearly often carry more weight than people expect.
+
+Comment 3:
+Author: [deleted]
+Score: 23
+Created UTC: 1767458709.0
+Comment: [deleted]
+
+Comment 4:
+Author: hmm-yes-sure
+Score: 20
+Created UTC: 1767454332.0
+Comment: EDIT: 
+
+I do have publications guys. Not many, but few with 50+ citations.
+
+Comment 5:
+Author: chasingth
+Score: 14
+Created UTC: 1767452412.0
+Comment: how do you become AS at Amazon without PhD and publications?

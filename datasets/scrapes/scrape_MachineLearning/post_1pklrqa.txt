@@ -1,0 +1,54 @@
+Post Title: [P] I built an open plant species classification model trained on 2M+ iNaturalist images
+Author: Lonely-Marzipan-9473
+Score: 8
+URL: https://www.reddit.com/r/MachineLearning/comments/1pklrqa/p_i_built_an_open_plant_species_classification/
+Number of comments: 5
+Created UTC: 1765523833.0
+
+Post Content:
+I’ve been working on an image classification model for plant species identification, trained on \~2M iNaturalist/GBIF images across \~14k species. It is a fine tuned version of the google ViT base model.
+
+Currently the model is single image input -&gt; species prob. output, however (if I get funding) I would like to do multiple image + metadata (location, date, etc.) input -&gt; species prob. output which could increase accuracy greatly.
+
+I’m mainly looking for feedback on:
+
+* failure modes you’d expect
+* dataset or evaluation pitfalls
+* whether this kind of approach is actually useful outside research
+
+Happy to answer technical questions.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Lonely-Marzipan-9473
+Score: 4
+Created UTC: 1765523846.0
+Comment: Link: [https://huggingface.co/spaces/juppy44/plant-classification](https://huggingface.co/spaces/juppy44/plant-classification)
+
+Comment 2:
+Author: KayranElite
+Score: 3
+Created UTC: 1765526763.0
+Comment: Cool project. Good job.
+
+Why did you decide to use a ViT? Did you test and compare it with common alternatives?
+
+I don't understand why you would expect funding for such a project. Training a classification model is nothing groundbreaking. Shouldn't anyone be able to copy your approach quite easily? Or is there anything special that you did that would warrant funding? If yes, could you explain what makes your approach unique?
+
+Do you have suitable data for your second approach? Do your images include the necessary metadata so you can easily use them for training? 
+
+What is your proposed approach to using multiple images? Do you want to do multiple predictions and then do a majority vote at the end? Is there a good way to fuse the inputs from multiple images from different angles? If yes, can you cite a relevant paper? I can't imagine, for example, that a simple 3D-CNN would work here.
+
+Comment 3:
+Author: lord_acedia
+Score: 1
+Created UTC: 1765524836.0
+Comment: What's the accuracy?
+
+Comment 4:
+Author: zoontechnicon
+Score: 1
+Created UTC: 1765525060.0
+Comment: Super cool! I've been yearning for an open model for this use case!

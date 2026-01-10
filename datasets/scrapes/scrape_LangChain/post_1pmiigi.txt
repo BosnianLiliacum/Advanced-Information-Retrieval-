@@ -1,0 +1,38 @@
+Post Title: Title: [Feature] I built native grounding tools to stop Agents from hallucinating dates (TimeAwareness &amp; UUIDs)
+Author: FreePipe4239
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1pmiigi/title_feature_i_built_native_grounding_tools_to/
+Number of comments: 5
+Created UTC: 1765730552.0
+
+Post Content:
+Hey everyone,
+
+I've been running CrewAI agents in production and kept hitting two annoying issues:
+
+1. **Temporal Hallucinations:** My agents kept thinking it was 2023 (or random past dates) because of LLM training cutoffs. This broke my scheduling workflows.
+2. **Hard Debugging:** I couldn't trace specific execution chains across my logs because agents were running tasks without unique transaction IDs.
+
+Instead of writing custom hacky scripts every time, I decided to fix it in the core.
+
+I just opened **PR #4082** to add two native utility tools:
+
+* `TimeAwarenessTool`: Gives the agent access to the real system time/date.
+* `IDGenerationTool`: Generates UUIDs on demand for database tagging.
+
+**Here is the output running locally:**
+
+https://preview.redd.it/en724u0h777g1.png?width=1919&amp;format=png&amp;auto=webp&amp;s=9fd775bc72c21016a4fcec8ae7fb9d2562300855
+
+**PR Link:** [https://github.com/crewAIInc/crewAI/pull/4082](https://github.com/crewAIInc/crewAI/pull/4082)
+
+It’s a small change, but it makes agents much more reliable for real-world tasks. Let me know if you find it useful!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: johndoerayme1
+Score: 3
+Created UTC: 1765731820.0
+Comment: Why would you do today's date with a tool and not just simply inject it into the system prompt? Genuinely curious.

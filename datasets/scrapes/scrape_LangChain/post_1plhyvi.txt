@@ -1,0 +1,27 @@
+Post Title: Does LangChain allow streaming token by token while using an agent for calling various tools?
+Author: harshi_03
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1plhyvi/does_langchain_allow_streaming_token_by_token/
+Number of comments: 4
+Created UTC: 1765620211.0
+
+Post Content:
+I was just working on this project .. wherein I have created a chatbot and want the responses to be streaming. I am using langchain, agents, tools, openai, fastapi and js.
+
+
+Top 2 comments:
+
+Comment 1:
+Author: NoleMercy05
+Score: 2
+Created UTC: 1765626687.0
+Comment: Yes, there is streaming support and hooks to implement. 
+Use the llm chat on their docs page to find examples.
+
+Comment 2:
+Author: mamaBiskothu
+Score: -1
+Created UTC: 1765624575.0
+Comment: Of course not. How dare you ask for real feature from a framework. Langchain and all its bullshit brethren will only give you inane abstractions around simple api calls that you could have vibe from scratch in an hour anyway. 
+
+Converting an agent framework to supporting streaming is a mental exercise beyond the brains that write these frameworks and best left as homework for the user.

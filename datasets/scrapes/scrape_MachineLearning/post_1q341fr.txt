@@ -1,0 +1,44 @@
+Post Title: [P] Interactive visualization of DeepSeek's mHC - why doubly stochastic constraints fix Hyper-Connection instability
+Author: bassrehab
+Score: 60
+URL: https://www.reddit.com/r/MachineLearning/comments/1q341fr/p_interactive_visualization_of_deepseeks_mhc_why/
+Number of comments: 13
+Created UTC: 1767469412.0
+
+Post Content:
+I built an interactive demo to understand DeepSeek's new mHC paper (https://arxiv.org/abs/2512.24880).
+
+**The problem:** Hyper-Connections use learned matrices to mix residual streams. Stacking 64 layers multiplies these matrices together, and small amplifications compound to 10^16.
+
+**The fix:** Project matrices onto the doubly stochastic manifold using Sinkhorn-Knopp. Since doubly stochastic matrices are closed under multiplication, the composite mapping stays bounded at any depth.
+
+**The surprise:** One Sinkhorn iteration is enough. At k=0, gain = 10^16. At k=1, gain ≈ 1.
+
+**Interactive demo:** https://subhadipmitra.com/mhc-visualizer (drag the "Sinkhorn iterations" slider and watch the lines change)
+
+**Full writeup:** https://subhadipmitra.com/blog/2026/deepseek-mhc-manifold-constrained-hyper-connections/
+
+**Code:** https://github.com/bassrehab/mhc-visualizer
+
+Includes PyTorch implementation if anyone wants to try it in their own models.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: LetterRip
+Score: 7
+Created UTC: 1767474516.0
+Comment: Really nice write up and demo, thanks.
+
+Comment 2:
+Author: AuspiciousApple
+Score: 1
+Created UTC: 1767800500.0
+Comment: Thanks, very cool. How does this compare to spectral normalisation that's used in GANs?
+
+Comment 3:
+Author: Similar_Fix7222
+Score: 1
+Created UTC: 1767907891.0
+Comment: Something I was interested in was seeing what multiplying 64 of these matrices look like? On the one hand, they are closed under multiplication, but the eigenvalues are systematically pushed down to 0 except one that is by construction always equal to 1. So do the last layers necessarily only have the average of the first layer? (the matrix with 1/N on each entry)

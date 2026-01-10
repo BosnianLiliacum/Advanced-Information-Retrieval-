@@ -1,0 +1,82 @@
+Post Title: [R] Semantic-Drive: Mining "Dark Data" in AV Logs via Neuro-Symbolic VLMs. Beating CLIP Recall by ~50% using "System 2" Inference-Time Verification (Code + Benchmark)
+Author: Pale_Location_373
+Score: 19
+URL: https://www.reddit.com/r/MachineLearning/comments/1ppmajk/r_semanticdrive_mining_dark_data_in_av_logs_via/
+Number of comments: 6
+Created UTC: 1766048651.0
+
+Post Content:
+**Hi** r/MachineLearning,
+
+I am an independent researcher working on Autonomous Vehicle perception. I’m releasing **Semantic-Drive**, a framework designed to solve the "Dark Data" crisis in AVs: finding rare edge cases (e.g., a wheelchair on the road, passive construction zones) without relying on expensive manual labeling or cloud APIs.
+
+**Paper:** [https://arxiv.org/abs/2512.12012](https://arxiv.org/abs/2512.12012)  
+**Code:** [https://github.com/AntonioAlgaida/Semantic-Drive](https://www.google.com/url?sa=E&amp;q=https%3A%2F%2Fgithub.com%2FAntonioAlgaida%2FSemantic-Drive)  
+**Interactive Demo:** [https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer](https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer)
+
+# The Core Problem: CLIP is Spatially Blind
+
+The industry standard for semantic search is using embeddings (like CLIP). However, in my benchmarks on **nuScenes**, I found that CLIP suffers from severe "Bag-of-Words" blindness.
+
+* **The Failure:** CLIP assigns high similarity to "Pedestrian Hazard" even when the pedestrian is safely on the sidewalk. It sees the objects, but not the risk.
+* **The Result:** Terrible Recall (0.475) for actual safety-critical events.
+
+# The Solution: "System 2" Inference-Time Search
+
+Instead of training a larger model, I used **Inference-Time Compute** (similar to the "System 2" architecture recently discussed by [Waymo](https://waymo.com/blog/2025/12/demonstrably-safe-ai-for-autonomous-driving)).
+
+1. **Symbolic Grounding (**[YOLOE](https://docs.ultralytics.com/models/yoloe/)**):** Extracts a high-recall text inventory.
+2. **Cognitive Analysis (Qwen3-VL-30B,  Gemma-3-27B, and Kimi-VL):** Performs Chain-of-Thought reasoning. I enforce a **"Skepticism Policy":** the VLM must explicitly verify the YOLO detections against pixel evidence before accepting them.
+3. **Consensus Judge:** A local **Mistral/Ministral-3-14B** aggregates multiple scouts using a **Best-of-N** search, scored by a deterministic **Explicit Outcome Reward Model (ORM)**.
+
+# Results (Gold Set N=108)
+
+I manually curated a Gold Set of complex edge cases to benchmark the approach:
+
+|Method|**Precision ↑**|**Recall ↑**|**Risk MAE ↓**|
+|:-|:-|:-|:-|
+|**CLIP (Baseline)**|0.683|0.475|N/A|
+|**Pure VLM (Zero-Shot)**|0.691|0.814|1.389|
+|**Semantic-Drive (Ours)**|**0.712**|**0.966**|**0.676**|
+
+The "System 2" approach reduces the Risk Assessment Error by 51% compared to a vanilla VLM.
+
+# Reproducibility
+
+The entire pipeline runs on a single **NVIDIA RTX 3090 (24GB)** using 4-bit quantization (llama.cpp). I’ve released the Docker container, the Gold Set annotations, and the full code to allow anyone to reproduce these results locally.
+
+Would love to hear thoughts on the project, the Reward Model implementation, or how you are handling long-tail mining in your own workflows!
+
+Thanks!
+
+
+Top 2 comments:
+
+Comment 1:
+Author: SlayahhEUW
+Score: 6
+Created UTC: 1766051830.0
+Comment: Hey, can you clarify some things:
+
+1. In benchmark\_final.py, you use a set THRESHOLD of 0.25 for CLIP, at the same time in benchmark\_clip.py, you use softmax for the CLIP probabilites, if you have many object in the scene, you softmax will dilute the probabilities for CLIP, leading to a really bad recall and unfair evaluation.
+
+Also, in benchmark\_final.py, the VLM Recall is driven by semantics and gives a 1 if the word is in wod\_e2e\_tags.  
+It seems odd to use different modalities for recall(set list of probabilties from CLIP and a free-text list with 0 or 1 if the word is present for VLM).
+
+2) The system prompt in src/judge.py seems to heavily favor YOLO detections, for a task that YOLO is really heavily overtained on (pedestrians/cars/traffic cones). The 108 "Gold Set" annotations seem to be picked to be easy for YOLO to perform detections looking at HuggingFace.
+
+System prompt:
+
+\### RULES OF EVIDENCE
+
+1. \*\*Trust Grounding:\*\* If YOLO detects an object, favor scouts that confirm it visually.
+
+I am not sure about any System 2-thinking here, it seems more like YOLO task-specific outputs being fed into an LLM.
+
+I would run YOLO alone for the 108 images, and see the detection rate, if its 97%, the model does not add much.
+
+Comment 2:
+Author: notcooltbh
+Score: 1
+Created UTC: 1766049189.0
+Comment: Great use for VLMs, I think you could get even better precision by using proprietary models (e.g. Gemini 3) alas it would cost more but it'd allow for faster and better annotations

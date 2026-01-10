@@ -1,0 +1,49 @@
+Post Title: [N] ACL 2026 (ARR Jan 2026), No Rebuttal period?
+Author: Healthy_Horse_2183
+Score: 15
+URL: https://www.reddit.com/r/MachineLearning/comments/1pztniz/n_acl_2026_arr_jan_2026_no_rebuttal_period/
+Number of comments: 7
+Created UTC: 1767128486.0
+
+Post Content:
+I noticed that there is no rebuttal and discussion period in ARR Jan 2026 cycle. It seems like we will directly get reviews and the meta reviewer score and make a decision to commit to ACL 2026. From my past experience with ARR cycles reviewers have mostly not responded to the rebuttal let alone increase the score.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: HelpingForDoughnuts
+Score: 6
+Created UTC: 1767129292.0
+Comment: Honestly not sure it changes much in practice? Like you said, rebuttals are mostly theater at this point. You spend hours crafting a careful response addressing every point, reviewers either ghost or reply “I have read the rebuttal and maintain my score,” and life goes on.
+The cynical read is that cutting rebuttal just makes the timeline more honest about what was already happening. The less cynical read is that it puts more pressure on reviewers to get it right the first time (lol).
+What I’m more curious about is whether meta reviewers will actually do more heavy lifting now or if this just means borderline papers get rejected faster. ARR meta reviews have been pretty hit or miss in terms of actual engagement with the paper vs just averaging scores.
+Also lowkey worried this sets a precedent. If ACL drops rebuttal and the sky doesn’t fall, other venues might follow. And while rebuttals rarely work, they at least give authors a way to flag obvious misunderstandings for the meta reviewer. Without that you’re just hoping someone in the loop actually read your paper carefully.
+Anyone know if there’s been official reasoning posted somewhere? Or did they just quietly update the timeline and hope nobody noticed?
+
+Comment 2:
+Author: Status-Effect9157
+Score: 4
+Created UTC: 1767129320.0
+Comment: Where did you notice / how did you infer this?
+
+Comment 3:
+Author: S4M22
+Score: 4
+Created UTC: 1767158829.0
+Comment: The dates for the rebuttal period will be announced on the ARR website:
+https://aclrollingreview.org/dates
+
+
+It was the same last year. ACL 2025 didn't specify rebuttal dates either:
+https://2025.aclweb.org/calls/main_conference_papers/#important-dates
+
+Comment 4:
+Author: choHZ
+Score: 3
+Created UTC: 1767164081.0
+Comment: You are looking at the wrong site. Venues like ACL do not have a rebuttal period, because technically we rebut during an ARR cycle (which can be different from the Jan 26 one) and then commit to the venue.
+
+Rebuttal is always a heavily luck-driven thing, and with the current ML review mechanism having little incentive to encourage reviewers to “do good,” and basically no penalty outside desk-reject-worthy behavior, of course the review outcome is often less in the authors’ favor. However, having a rebuttal is strictly better than not having one, because without it we do not even have a channel to engage — even if the reviewers or AC on the other end are willing to go the extra mile. 
+
+Granted ARR often has a very short rebuttal period, I always do it unless there is another timely matter.

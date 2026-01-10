@@ -1,0 +1,88 @@
+Post Title: [D] AISTATS is Desk-Rejecting Papers Where Authors Accessed Reviewer Identities via the OpenReview Bug
+Author: Dangerous-Hat1402
+Score: 128
+URL: https://www.reddit.com/r/MachineLearning/comments/1pp4eca/d_aistats_is_deskrejecting_papers_where_authors/
+Number of comments: 43
+Created UTC: 1765996876.0
+
+Post Content:
+I just got the email from AISTATS PCs. I would believe that ICLR will take the same action.
+
+\---
+
+
+
+Dear AISTATS Community,
+
+We are contacting authors, reviewers, ACs, and SACs for all AISTATS 2026 submissions. As you know, OpenReview suffered a major security incident a couple of weeks ago. You can read their report on the matter here, and their initial analysis here.
+
+As mentioned in our previous emails, there were a few (\~2%, &lt;40) active submissions where reviewer identities (by querying explicitly for reviewer tags and paper numbers) have been exposed due to this unauthorized access, and a handful in which either AC or author identities were exposed.
+
+We want to point out that what happened with AISTATS is very different from ICLR in terms of the extent of the leak, but also in terms of PCs being able to accurately identify who accessed what information. Here are some plain facts:
+
+OpenReview logged every call to the API during the leak, including the IP, user-agent, the timing, the exact query, etc.
+OpenReview always logs every time a user logs into OpenReview (openreview-id, IP, timing, etc).
+At the time of the incident, the only people who knew all the reviewer tags for a paper were the authors, one AC, one SAC, and the PCs and Workflow Chairs, but amongst these, only the authors did not know reviewer identities (AC, SAC also do not know author identities).
+At that time, for each paper, each reviewer could see their own tag (unique for each paper-reviewer pair), but could not see the other reviewer tags, these were only revealed later.
+We worked closely with OpenReview to make sure our investigation is airtight. We have gone through each of the papers that were accessed through the API, and we have identified who accessed what for each of them. This information is highly confidential and will not be shared with anyone. The investigation also showed that for some papers that were 'frozen' for investigation, the person querying for a reviewer identity was in fact the reviewer themselves. In such cases, the paper will continue through the rest of the meta-review process as usual.
+
+Keeping the reviewer identities blind is at the very core of the reviewing practices at AISTATS. Violations for any sort of breaches of blindness typically lead to desk-rejecting the submission in question. In this case, we organizers have decided on a uniform policy: If an author unblinded a reviewer or AC/SAC identity, the corresponding paper will soon be desk-rejected, if the authors have not withdrawn the paper themselves. We have not taken these actions yet out of an abundance of caution, and realizing that every one of the 35 desk-rejections must be triple-checked before making it.
+
+We understand that many uses of the API were done out of curiosity or without thinking. However, this is still a very serious breach of our double-blind policy (imagine being a critical reviewer who is now exposed!). One analogy is that just because a window of a house has been found to have been left open by mistake, it does not mean that it is any more okay to enter someone else's house knowing fully well that they do not want anyone to enter it. Still, some authors may proclaim their innocence. As a compromise, we point out that desk-rejected papers cannot be differentiated from other rejected papers, and the public will only have access to reviews of accepted papers, with no trail for any rejected papers.
+
+The disruption has affected the community (some more than others), but we need to move on. We hope that the affected authors and reviewers will continue to trust in the review process. We have decided not to share more information about this incident (to authors, reviewers, other venues, and even to future AISTATS PCs), and hope that the AISTATS community will find the strength to move on to 2026, leaving this unfortunate incident behind them. Such incidents remind us that humans make mistakes, and still, we must support each other through such difficult moments.
+
+Sincerely,
+
+Aaditya Ramdas and Arno Solin
+Emtiyaz Khan and Yingzhen Li
+AISTATS 2026 Program Chairs and General Chairs
+
+
+Top 5 comments:
+
+Comment 1:
+Author: WhiteBear2018
+Score: 36
+Created UTC: 1765998200.0
+Comment: &gt; As a compromise, we point out that desk-rejected papers cannot be differentiated from other rejected papers, and the public will only have access to reviews of accepted papers, with no trail for any rejected papers.
+
+Since when does the public have access to reviews for AISTATS? Is this a new policy?
+
+Comment 2:
+Author: SlayahhEUW
+Score: 30
+Created UTC: 1766001911.0
+Comment: &gt;One analogy is that just because a window of a house has been found to have been left open by mistake, it does not mean that it is any more okay to enter someone else's house knowing fully well that they do not want anyone to enter it
+
+I think the difference is also that if a window of a house is broken and then you look inside and its 30% AI-generated peer-reviews as well as people rejecting papers within their own field to increase their chances its not an invalid thing to lift this with the community instead of pushing this under the carpet/passing the issue forward to the next conference and punishing curious people for looking.
+
+Comment 3:
+Author: shadows_lord
+Score: 20
+Created UTC: 1765997602.0
+Comment: Morons. I didn't have an active submission so I'm not affected, but I did the check if I can access a random reviewer just to see if the bug is real as I was a reviewer for ICLR and didn't want my identity exposed. If they desk rejected my paper (purely out of their utter incompetence) I would've been very pissed.
+
+Comment 4:
+Author: Tall_Interaction7358
+Score: 13
+Created UTC: 1766035701.0
+Comment: This is a tough situation all around. I get why the PCs are taking a hard line on maintaining double-blind integrity, especially if they can confidently attribute access from the logs. At the same time, it does feel uncomfortable that a security bug created a scenario where curiosity or poor judgment can lead to irreversible consequences.
+
+What stood out to me is the distinction they’re making between authors and reviewers who accessed their own tags. That at least suggests they’re trying to be precise rather than punitive across the board. Still, desk rejection is a heavy outcome, even if it’s procedurally consistent with past policy.
+
+I’m curious how other conferences will respond long term. Will this lead to stricter API access controls or clearer guidance to authors about what *not* to touch, even if it’s technically accessible? It feels like a case where process, tooling, and human behavior all collided in the worst possible way.
+
+Comment 5:
+Author: S4M22
+Score: 5
+Created UTC: 1766042746.0
+Comment: ARR has just issued their statement. Interestingly enough, they do not desk reject any papers but just replace the AC or SACs whose identities were compromised:
+
+&gt;As noted in the [ACL’s Nov 29 announcement](https://www.aclweb.org/portal/content/statement-acl-and-eacl-2026-organizers-1), OpenReview was notified on Nov 27 of a software bug that allowed unauthorized access to authors, reviewers, and area chairs. The ACL announcement details how any use of the leaked information may result in severe consequences. Thankfully, the OpenReview team was able to fix the issue quickly.
+
+&gt;After analyzing the server logs, OpenReview leadership met with ARR and informed us that the impact on ARR was very minor in comparison to other conferences hosted by OpenReview (especially ICLR). Since nearly all reviews had been finalized when the incident happened, only a small number of very late third reviews could have possibly been unduly influenced. However, there were nine papers where the area chair or senior area chair’s identity had been compromised. Consequently, we decided to replace the ACs and/or SACs of these papers to ensure that they received objective meta-reviews and to reduce the risk of retaliation against the AC or SAC for a negative meta-review. Please note though that we have no evidence that the unauthorized queries were issued by the authors, so the action we took was out of precaution.
+
+&gt;For the next few cycles, ARR will additionally ensure that resubmissions receive new reviewers if the identities of the earlier submission’s reviewers were leaked.
+
+&gt;The ARR October 2025 Editors-in-Chief and EACL 2026 Program Chairs

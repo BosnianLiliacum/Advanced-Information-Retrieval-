@@ -1,0 +1,38 @@
+Post Title: New to LangChain – What Should I Learn Next?
+Author: Select-Day-873
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1prmdem/new_to_langchain_what_should_i_learn_next/
+Number of comments: 10
+Created UTC: 1766258473.0
+
+Post Content:
+Hello everyone,
+
+I am currently learning LangChain and have recently built a simple chatbot. However, I am eager to learn more and explore some of the more advanced concepts. I would appreciate any suggestions on what I should focus on next. For example, I have come across Langraph and other related topics—are these areas worth prioritizing?
+
+I am also interested in understanding what is currently happening in the industry. Are there any exciting projects or trends in LangChain and AI that are worth following right now? As I am new to this field, I would love to get a sense of where the industry is heading.
+
+Additionally, I am not familiar with web development and am primarily focused on AI engineering. Should I consider learning web development as well to build a stronger foundation for the future?
+
+Any advice or resources would be greatly appreciated.
+
+
+
+[Simple Q&amp;A Chatbot](https://preview.redd.it/vx6l6llqre8g1.png?width=1350&amp;format=png&amp;auto=webp&amp;s=fb2d1e091abad7179fe78eaf7205a3e0b9383390)
+
+
+
+
+Top 2 comments:
+
+Comment 1:
+Author: AdditionalWeb107
+Score: 2
+Created UTC: 1766258829.0
+Comment: how to unlearn LangChain
+
+Comment 2:
+Author: otli4nick
+Score: 1
+Created UTC: 1766261992.0
+Comment: Langgraph

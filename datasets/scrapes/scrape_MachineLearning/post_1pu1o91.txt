@@ -1,0 +1,36 @@
+Post Title: [P] RewardScope - reward hacking detection for RL training
+Author: Famous-Initial7703
+Score: 10
+URL: https://www.reddit.com/r/MachineLearning/comments/1pu1o91/p_rewardscope_reward_hacking_detection_for_rl/
+Number of comments: 5
+Created UTC: 1766515482.0
+
+Post Content:
+Reward hacking is a known problem but tooling for catching it is sparse. I built RewardScope to fill that gap.
+
+It wraps your environment and monitors reward components in real-time. Detects state cycling, component imbalance, reward spiking, and boundary exploitation. Everything streams to a live dashboard.
+
+Demo (Overcooked multi-agent): [https://youtu.be/IKGdRTb6KSw](https://youtu.be/IKGdRTb6KSw)
+
+    pip install reward-scope
+
+[github.com/reward-scope-ai/reward-scope](http://github.com/reward-scope-ai/reward-scope)
+
+Looking for feedback, especially from anyone doing RL in production (robotics, RLHF). What's missing? What would make this useful for your workflow?
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Hungry_Age5375
+Score: 1
+Created UTC: 1766517484.0
+Comment: Tricky problem - distinguishing emergent behavior from exploits. How's RewardScope handling that gray area in complex environments?
+
+Comment 2:
+Author: pvatokahu
+Score: 1
+Created UTC: 1766521195.0
+Comment: This is really interesting timing - we've been seeing similar issues with our AI agents at Okahu where the reward functions get gamed in ways we didn't anticipate. The state cycling detection especially catches my eye... had a case last month where an agent figured out it could maximize rewards by just oscillating between two states instead of actually completing the task.
+
+The live dashboard is smart. When i was debugging reward hacking at Microsoft we'd have to dig through logs after the fact, which made it way harder to spot patterns. Being able to see the component imbalance in real time would've saved us weeks of debugging. Have you thought about adding some kind of anomaly detection that learns what "normal" reward patterns look like for a specific environment? That's been on my wishlist for a while.

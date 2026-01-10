@@ -1,0 +1,18 @@
+Post Title: Small LLMs for SQL Generation
+Author: RamiKrispin
+Score: 6
+URL: https://www.reddit.com/r/huggingface/comments/1q4ub51/small_llms_for_sql_generation/
+Number of comments: 2
+Created UTC: 1767638983.0
+
+Post Content:
+Any recommendations for open-weighted small LLMs to support a SQL AI agent? Is there any category that tracks the performance of models in SQL generation tasks? Thx!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: frank_brsrk
+Score: 1
+Created UTC: 1767651747.0
+Comment: Ehy mate are u trying to build an sql agent? I can help u with that. Write me if u are interested

@@ -1,0 +1,22 @@
+Post Title: I open-sourced my entire DNA (CRAM + VCF), PET, MRI's for nervous system resilience.
+Author: OpenSourceHumanAI
+Score: 5
+URL: https://www.reddit.com/r/huggingface/comments/1pos2ss/i_opensourced_my_entire_dna_cram_vcf_pet_mris_for/
+Number of comments: 0
+Created UTC: 1765962782.0
+
+Post Content:
+Hi everyone,
+
+I’m Leander. I decided to open-source my entire self under a CC0 license.
+
+If you are waiting on your results or are curious about the file structures, file sizes, or quality of the raw data , you are welcome to explore my files. I’ve uploaded the massive `.cram` file (\~100GB) and the `.vcf.gz` files.
+
+**Website:**[https://www.opensourcehuman.xyz/](https://www.opensourcehuman.xyz/)
+
+**Hugging Face:** [https://huggingface.co/datasets/opensourcehuman/leanderjohanneskahrens](https://huggingface.co/datasets/opensourcehuman/leanderjohanneskahrens)
+
+**The Repo:**[https://github.com/opensourcehumanai](https://github.com/opensourcehumanai)
+
+
+Top 0 comments:

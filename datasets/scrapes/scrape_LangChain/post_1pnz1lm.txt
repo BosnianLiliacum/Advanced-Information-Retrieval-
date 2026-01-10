@@ -1,0 +1,32 @@
+Post Title: At what point do autonomous agents need explicit authorization layers?
+Author: Unlucky-Ad7349
+Score: 5
+URL: https://www.reddit.com/r/LangChain/comments/1pnz1lm/at_what_point_do_autonomous_agents_need_explicit/
+Number of comments: 6
+Created UTC: 1765882420.0
+
+Post Content:
+For teams deploying agents that can affect money, infra, or users:
+
+Do you rely on hardcoded checks, or do you pause execution and require human approval for risky actions?
+
+We’ve been prototyping an authorization layer around agents and I’m curious what patterns others have seen work (or fail).
+
+
+Top 2 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 1
+Created UTC: 1765959818.0
+Comment: We've tackled similar challenges with production agents, and the pattern that's worked best combines both approaches depending on the action's blast radius. For anything touching financial transactions or critical infrastructure, we pause execution and require explicit human approval through a simple webhook system that posts to Slack with context about what the agent wants to do. For lower risk actions like updating documentation or sending notifications, we use hardcoded guardrails with detailed logging so humans can review after the fact.
+
+The key insight we learned is that your authorization layer needs to be stateful and maintain context about what the agent has already done in a session. An agent that's already transferred $100 today should face different thresholds than one making its first financial action. We also found that giving humans a "approve similar actions for the next hour" option dramatically reduced approval fatigue while keeping safety intact. What kinds of actions are you finding create the most friction between safety and agent autonomy?
+
+Comment 2:
+Author: Individual-Artist223
+Score: 0
+Created UTC: 1765897015.0
+Comment: Run LLM in VM, let it do whatever.
+
+Check it really does what it says.

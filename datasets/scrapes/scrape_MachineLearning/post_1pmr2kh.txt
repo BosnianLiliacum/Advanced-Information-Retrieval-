@@ -1,0 +1,46 @@
+Post Title: [D] Discrete Diffusion: where can I find the derivation for q(x_{t-1} | x_t, x_0)?
+Author: _cata1yst
+Score: 18
+URL: https://www.reddit.com/r/MachineLearning/comments/1pmr2kh/d_discrete_diffusion_where_can_i_find_the/
+Number of comments: 3
+Created UTC: 1765751585.0
+
+Post Content:
+[It appears in DiffusionBERT \(\[1\]\)](https://preview.redd.it/g01sil58y87g1.png?width=633&amp;format=png&amp;auto=webp&amp;s=5b9f4393e5ad28e1ee8121180527c5d5e940ea27)
+
+  
+
+
+[As well as in D3PM \(\[2\]\)](https://preview.redd.it/uxxr71eus87g1.png?width=767&amp;format=png&amp;auto=webp&amp;s=e7afc49159ee49f40a7ad816736a9e250f88ef27)
+
+\[1\]: [DiffusionBERT](https://arxiv.org/pdf/2211.15029)
+
+\[2\]: [D3PM](https://arxiv.org/pdf/2107.03006)
+
+But I don't understand how to get to the final result. Expanding the Bayes fraction should give:
+
+[Where division is elementwise as well,](https://preview.redd.it/endzp2nht87g1.png?width=206&amp;format=png&amp;auto=webp&amp;s=000ccafa16589596ac79b986d8352631f940c25d)
+
+And if you try to equalize it with the pdf from the articles I'm stuck at:
+
+[Which I don't see how to further simplify.](https://preview.redd.it/obh0og5nx87g1.png?width=402&amp;format=png&amp;auto=webp&amp;s=3861bf161847bb8ad9eda4359d44a9f89a679249)
+
+So where can I find the original derivation? Thank you!
+
+
+Top 2 comments:
+
+Comment 1:
+Author: fakefolkblues
+Score: 5
+Created UTC: 1765814046.0
+Comment: Might be useful: [https://arxiv.org/pdf/2209.14734](https://arxiv.org/pdf/2209.14734)  
+In Appendix D ("True posterior distribution"), they provide the derivation
+
+Comment 2:
+Author: WakingMusic
+Score: 3
+Created UTC: 1765838472.0
+Comment: So I think the heart of your confusion is that q(x_t | x_0) is a scalar value, while we want q(x_{t-1} | x_0) to be a vector of probabilities for each possible value of x_{t-1}.
+
+You could also write this as q(x_{t-1} | x_t, x_0) = x_t Q_t^T x_{t-1} x_0 \bar{Q}_{t-1} x_{t-1} / x_0 \bar{Q}_t x_t^T.

@@ -1,0 +1,44 @@
+Post Title: [D] VL-JEPA: Why predicting embeddings beats generating tokens - 2.85x faster decoding with 50% fewer parameters
+Author: Fair-Rain3366
+Score: 99
+URL: https://www.reddit.com/r/MachineLearning/comments/1pzgrsg/d_vljepa_why_predicting_embeddings_beats/
+Number of comments: 13
+Created UTC: 1767097347.0
+
+Post Content:
+TL;DR: VL-JEPA uses JEPA's embedding prediction approach for vision-language tasks. Instead of generating tokens autoregressively like LLaVA/Flamingo, it predicts continuous embeddings. Results: 1.6B params matching larger models, 2.85x faster decoding via adaptive selective decoding.
+
+[https://rewire.it/blog/vl-jepa-why-predicting-embeddings-beats-generating-tokens/](https://rewire.it/blog/vl-jepa-why-predicting-embeddings-beats-generating-tokens/)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: threeshadows
+Score: 27
+Created UTC: 1767134425.0
+Comment: The article is so high level I’m losing it a bit. They make a big point of predicting the embedded concept shared by tcat vs kitty vs feline. But how is this any different from the vector before softmax in token prediction, where it latently represents the shared concept of those three words and is thus projected to softmax output where those three tokens have higher probability than others?
+
+Comment 2:
+Author: Busy-Organization-17
+Score: 17
+Created UTC: 1767116071.0
+Comment: This is fascinating! Could someone explain how VL-JEPA's embedding prediction compares to newer architectures like Diffusion Transformers? And how does this 50% parameter reduction affect fine-tuning on downstream tasks?
+
+Comment 3:
+Author: maizeq
+Score: 5
+Created UTC: 1767126684.0
+Comment: Diffusion models also predict in embedding space (the embedding space of a VAE)
+
+Comment 4:
+Author: iris_retina
+Score: 3
+Created UTC: 1767118717.0
+Comment: Just saw the paper on VL-JEPA. It's crazy how it's predicting with so few parameters. This is revolutionary in the field of robotics. Yann LeCun explains why the noisy  , high dimensional and continuous real world data is and the methods used to train LLMs do not work in the real world.  That explains why LLMs solve equations but we don't have a domestic robot.
+
+Comment 5:
+Author: wahnsinnwanscene
+Score: 1
+Created UTC: 1767231362.0
+Comment: Continuous vs Discrete? Isn't everything discrete ?

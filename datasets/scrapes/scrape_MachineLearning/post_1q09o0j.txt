@@ -1,0 +1,91 @@
+Post Title: [R] Do AI companies pay for large proprietary language datasets?
+Author: Soggy-Wait-8439
+Score: 37
+URL: https://www.reddit.com/r/MachineLearning/comments/1q09o0j/r_do_ai_companies_pay_for_large_proprietary/
+Number of comments: 22
+Created UTC: 1767175995.0
+
+Post Content:
+Hi everyone,  
+I’m looking for some honest input from people who have experience with AI or data licensing.
+
+My family owns a large multilingual dictionary dataset that has been manually built and curated over several decades. I’m currently trying to figure out whether data like this still has meaningful market value today (especially in the context of LLMs), and if so, where such data is typically sold or licensed.
+
+Rough overview of the dataset:
+
+* around 5.85M dictionary entries in total
+* language pairs: English–Czech (\~3.23M) and German–Czech (\~2.61M)
+* each entry contains multiple structured fields (lemma, morphology, domain tags, usage notes, idioms, explanations, etc.)
+* strong coverage of specialized areas like engineering, IT/electronics, medicine/chemistry, law/business, sciences, humanities, and military terminology
+* entirely human-curated, consistent structure, no scraped or crowdsourced content
+* full and clean ownership (single private company)
+
+What I’m trying to understand is whether datasets like this are realistically:
+
+* licensed or sold to AI companies
+* actually worth something non-trivial compared to large web-scale corpora
+
+I’d be especially interested in:
+
+* rough price ranges people have seen for comparable datasets
+* whether large AI labs buy this kind of data
+* which channels tend to work in practice (direct outreach, marketplaces, brokers, something else)
+
+Any insight, experience, or pointers would be really appreciated.  
+Thanks in advance.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: AngledLuffa
+Score: 52
+Created UTC: 1767179919.0
+Comment: I work at Stanford, and wanted to buy something similar, and my PI was pretty meh about it
+
+
+Multiple times he did shell out a few K for a dataset where we had a clear path to publication
+
+
+Big companies probably can do it in house or just scrape enough to work around what they're missing
+
+
+So you're in a weird spot of: if someone sees a clear and immediate use, a lab might pay for it.  If a smaller company is doing something that needs exactly what you're offering, maybe.  Otherwise, no one who can afford it wants it
+
+
+Still, it doesn't cost much to throw up a webpage, and it sounds like it'd be helpful to anyone working in those spaces
+
+Comment 2:
+Author: entsnack
+Score: 42
+Created UTC: 1767179276.0
+Comment: Lots of hearsay from people who don't run AI companies in this thread.
+
+Yes, we buy data. I don't run Meta but I do run an AI company. This is one dataset we recently licensed: https://www.shutterstock.com/data-licensing. We have licensed others too.
+
+For your data specifically, you'll have to package and market it, just like any other product.
+
+Comment 3:
+Author: EyedMoon
+Score: 10
+Created UTC: 1767176805.0
+Comment: They mostly scrap everything they can and avoid paying anything
+
+Comment 4:
+Author: tihokan
+Score: 9
+Created UTC: 1767192886.0
+Comment: Yes, AI companies definitely buy proprietary datasets. At quick glance your dataset seems very niche though, so it’s unlikely to be of interest to companies building general purpose LLMs (that focus on domains of most interest to end users of their models). A dictionary is also not the kind of data format you’d use in post-training, so you’d probably need to find a Czech company doing pre-training which I assume must be somewhat rare. Bottom line == unlikely to make much money out of it, sorry.
+
+Comment 5:
+Author: llothar
+Score: 7
+Created UTC: 1767178392.0
+Comment: I have bad news for you: https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-staff-torrented-nearly-82tb-of-pirated-books-for-ai-training-court-records-reveal-copyright-violations
+
+
+
+They do not give a damm and pirate everything.
+
+
+Edit: they also claim that it's impossible to make LLM without copyrighted material, and therefore it is OK to just use it for free https://www.techspot.com/news/101475-openai-tells-regulators-training-usable-ai-models-without.html

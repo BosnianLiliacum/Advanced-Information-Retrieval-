@@ -1,0 +1,57 @@
+Post Title: [D] On the essence of the diffusion model
+Author: Chinese_Zahariel
+Score: 46
+URL: https://www.reddit.com/r/MachineLearning/comments/1pkuoay/d_on_the_essence_of_the_diffusion_model/
+Number of comments: 38
+Created UTC: 1765553193.0
+
+Post Content:
+Hi all, I am learning about diffusion models and want to understand their essence rather than just applications. My initial understanding is that diffusion models can generate a series of new data starting from isotropic Gaussian noise. 
+
+I noticed that some instructions describe the inference of the diffusion model as a denoising process, which can be represented as a set of regression tasks. However, I still find it confusing. I want to understand the essence of the diffusion model, but its derivation is rather mathematically heavy. The more abstract summaries would be helpful. Thanks in advance.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: CampAny9995
+Score: 32
+Created UTC: 1765557883.0
+Comment: I would look at Song’s SDE paper, Karras’s EDM paper, or Ermon’s new book. Diffusion models do have their roots in concrete mathematical structures (SDEs, the heat equation). I find the presentations that try to avoid those foundations are mostly designed to get grad students up and running without necessarily understanding what the core concepts. It’s worth spending a few weeks doing math if you want to understand the core concepts.
+
+Comment 2:
+Author: didimoney
+Score: 7
+Created UTC: 1765560630.0
+Comment: There clearly is no math background in these comments lol
+
+Ermon's new notes are good.
+
+Comment 3:
+Author: SpeciousPerspicacity
+Score: 7
+Created UTC: 1765562624.0
+Comment: Ernest Ryu has a really excellent set of slides that explain the underlying mathematics in exacting detail.
+
+Comment 4:
+Author: RealSataan
+Score: 6
+Created UTC: 1765561880.0
+Comment: Unfortunately, diffusion models cannot be understood without extensive mathematical rigor. 
+
+Diffusion models can be trained in several ways. 
+
+Once you solve the elbo for the probability, it comes down to just the mse loss between the mean of two normal distributions. One distribution is the reverse distribution conditioned on x0, the other is the neural network distribution. 
+
+Now this elbo can be rewritten in plenty of ways. As per the original way it can be written as the mse loss between two means. One mean dependent on xt,t for the reverse distribution. The other mean would be dependent on xt,x0 for the neural network. So here you are training the network to predict the mean associated with xt and t. 
+
+You can further rewrite the inference process such that your network is predicting the noise. In this case your network is predicting the noise added at time t-1 to get t. Now according to this formulation of ddpm, this noise is supposed to be standard normal distribution. So here the training is more consistent. The network is always supposed to predict standard normal distribution.
+
+Comment 5:
+Author: SlayahhEUW
+Score: 5
+Created UTC: 1765554210.0
+Comment: I just see it as a compression-decompression model. You are slowly learning a mapping from X to Y by compressing the data with various amounts of noise added. If you tried to do it in a single step, like a GAN does, it makes the task harder because you get a bad distribution match.
+
+
+When you see that the arch is just autoencoder followed by UNet of attention on the compressed latent you kind of feel like it's just compression all the way 😅

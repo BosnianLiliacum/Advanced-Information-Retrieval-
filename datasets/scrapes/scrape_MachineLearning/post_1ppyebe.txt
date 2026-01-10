@@ -1,0 +1,59 @@
+Post Title: [D] Anybody owning DGX Spark?
+Author: lucellent
+Score: 15
+URL: https://www.reddit.com/r/MachineLearning/comments/1ppyebe/d_anybody_owning_dgx_spark/
+Number of comments: 15
+Created UTC: 1766082936.0
+
+Post Content:
+Since there's no way to rent it on cloud and do experiments there, I thought I'd ask here - if anybody that has it is open to run a test for training. Why I'm asking is because the models I'm training are not necessarily memory bandwidth bound so I'm curious to see how the speed would be paired with 128GB VRAM.
+
+It's an audio separation repo on GitHub, I will send you a very small dataset with songs to try and train - I just need to know how long it takes per epoch, how much batch size it fits etc. everything is in a document file (realistically no more than 20-30 minutes of testing)
+
+Let me know if anybody is interested! You can DM me directly as well
+
+
+Top 5 comments:
+
+Comment 1:
+Author: ThinConnection8191
+Score: 6
+Created UTC: 1766086853.0
+Comment: It is slow. My friend pairs two of them and it seems to handle the big model OK-ish.
+I have tons of A100 for experiments and API keys for others. So I dont see the point of owning one.
+
+Comment 2:
+Author: isrish
+Score: 6
+Created UTC: 1766091484.0
+Comment: DM me. I can help you.
+
+Comment 3:
+Author: Disposable110
+Score: 3
+Created UTC: 1766172454.0
+Comment: My company has several, they're terrible because a lot of the ML tools don't run on it easily because it's Linux and ARM processor and a ton of propietary NVIDIA crap. You get vendor locked in. We just set up a cluster with modified Chinese cards (2080 22GB) for anything that doesn't really care about FP8, and a couple 4090s/5090s for everything that does.
+
+Also there's an AMD solution that's half the money and half the hassle.
+
+Comment 4:
+Author: Helpful_ruben
+Score: 1
+Created UTC: 1766441569.0
+Comment: Error generating reply.
+
+Comment 5:
+Author: whatwilly0ubuild
+Score: 0
+Created UTC: 1766196177.0
+Comment: Finding someone with DGX Spark who'll run your tests is pretty unlikely. That hardware sits in enterprise environments where people can't just spin up random GitHub repos without approvals and security reviews.
+
+Your better move is contacting NVIDIA directly through their developer program. They sometimes grant access for benchmarking, especially if you can show interesting results that demonstrate their hardware capabilities. Academic partnerships work too if you're at a university.
+
+For audio separation specifically, if you're not memory bandwidth bound then the 128GB VRAM mainly helps with batch size, not necessarily training speed. Profile your current setup first to identify actual bottlenecks before chasing exotic hardware you can't access.
+
+Lambda Labs or RunPod with H100s will give you enough data to extrapolate DGX performance without needing the exact system. The architectural differences matter less for your use case than you'd think, especially if bandwidth isn't your constraint.
+
+At my job we've seen clients waste time optimizing for hardware they don't have access to. Test on what you can actually rent or buy, then scale from there. If your bottleneck is data loading or preprocessing rather than compute, better GPUs won't help anyway.
+
+Try posting in NVIDIA developer forums or specialized ML infrastructure communities. General subreddits won't have many people with production DGX access who can help with one-off tests.

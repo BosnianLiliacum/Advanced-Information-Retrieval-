@@ -1,0 +1,58 @@
+Post Title: mem0, Zep, Letta, Supermemory etc: why do memory layers keep remembering the wrong things?
+Author: nicolo_memorymodel
+Score: 12
+URL: https://www.reddit.com/r/LangChain/comments/1q0dpty/mem0_zep_letta_supermemory_etc_why_do_memory/
+Number of comments: 8
+Created UTC: 1767189765.0
+
+Post Content:
+Hi everyone,
+this question is for people building AI agents that go a bit beyond basic demos.
+I keep running into the same limitation: many memory layers (mem0, Zep, Letta, Supermemory, etc.) decide for you what should be remembered.
+
+Concrete example: contracts that evolve over time
+– initial agreement
+– addenda / amendments
+– clauses that get modified or replaced
+
+What I see in practice:
+RAG: good at retrieving text, but it doesn’t understand versions, temporal priority, or clause replacement.
+Vector DBs: they flatten everything, mixing old and new clauses together.
+
+Memory layers: they store generic or conversational “memories”, but not the information that actually matters, such as:
+
+-clause IDs or fingerprints
+-effective dates
+-active vs superseded clauses
+-relationships between different versions of the same contract
+
+The problem isn’t how much is remembered, but what gets chosen as memory.
+
+So my questions are:
+how do you handle cases where you need structured, deterministic, temporal memory?
+
+do you build custom schemas, graphs, or event logs on top of the LLM?
+
+or do these use cases inevitably require a fully custom memory layer?
+
+
+Top 3 comments:
+
+Comment 1:
+Author: southern_gio
+Score: 1
+Created UTC: 1767199145.0
+Comment: Have you tried EverMemOS?
+
+Comment 2:
+Author: rkpandey20
+Score: 1
+Created UTC: 1767212858.0
+Comment: All of these memory layers just solve the problem of compaction of context. Compaction can be done on context from many different ways and depending on the use case, some may work better than others. 
+I am not sure if general purpose memory layer can solve all use cases. You may have to plug-in your code to extract important bits from the context and preserve it. 
+
+Comment 3:
+Author: BeerBatteredHemroids
+Score: 0
+Created UTC: 1767234822.0
+Comment: Idk wtf you're talking about. You can store anything you want in your database as memory. Why are you pretending like you have no choice in the matter? Im not even sure you know what you're talking about.

@@ -1,0 +1,22 @@
+Post Title: How to see recent models(only actual ones) on HF Page?
+Author: pmttyji
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1pn7qli/how_to_see_recent_modelsonly_actual_ones_on_hf/
+Number of comments: 2
+Created UTC: 1765806388.0
+
+Post Content:
+[https://huggingface.co/models?sort=created](https://huggingface.co/models?sort=created)
+
+Though above link(after selecting 'Recently Created' from Sort) could show all the recent models, but it's filled with tons of Adapters, Finetunes, Merges, Quantizations which's totally overwhelming. Any ways to see only Actual models alone?
+
+Thanks
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Not_Magma_
+Score: 1
+Created UTC: 1765865590.0
+Comment: Uhhhh.... Huh??? Bots?

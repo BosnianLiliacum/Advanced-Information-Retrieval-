@@ -1,0 +1,38 @@
+Post Title: Implemented 17 LangChain Agentic Architectures in a Simpler Way
+Author: FareedKhan557
+Score: 46
+URL: https://www.reddit.com/r/LangChain/comments/1pleeoz/implemented_17_langchain_agentic_architectures_in/
+Number of comments: 5
+Created UTC: 1765606339.0
+
+Post Content:
+I have implemented 17 agentic architectures (LangChain, LangGraph, etc.) to help developers and students learn agent-based systems.
+
+Any recommendations or improvements are welcome.
+
+GitHub: [https://github.com/FareedKhan-dev/all-agentic-architectures](https://github.com/FareedKhan-dev/all-agentic-architectures)
+
+
+Top 3 comments:
+
+Comment 1:
+Author: tifa_cloud0
+Score: 5
+Created UTC: 1765630931.0
+Comment: awesome :)
+
+thanks for this.
+
+Comment 2:
+Author: PostmaloneRocks94
+Score: 3
+Created UTC: 1765636770.0
+Comment: This is cool
+
+Comment 3:
+Author: NoleMercy05
+Score: 1
+Created UTC: 1765670789.0
+Comment: Amazing. Perfect timing for me.
+
+Thanks for sharing!

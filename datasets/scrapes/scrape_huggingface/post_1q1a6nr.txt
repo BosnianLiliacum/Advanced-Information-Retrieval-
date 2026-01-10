@@ -1,0 +1,40 @@
+Post Title: Are there image generation interfaces for Windows for models that don't have gguf files?
+Author: PMYourTitsIfNotRacst
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1q1a6nr/are_there_image_generation_interfaces_for_windows/
+Number of comments: 6
+Created UTC: 1767289870.0
+
+Post Content:
+Hey y'all, I want to generate images locally with [https://huggingface.co/Tongyi-MAI/Z-Image-Turbo](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo), but it doesn't  have a gguf file. I see that Draw Things and Diffusion Bee are available, but they're Mac based.
+
+How can I get something like [https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo](https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo) running locally on Windows?
+
+I can get Text models running fine on Ollama, Chatbox or Open-WebUI, but I don't know where to start with this kind of model.
+
+
+Top 3 comments:
+
+Comment 1:
+Author: qwen_next_gguf_when
+Score: 1
+Created UTC: 1767291066.0
+Comment: https://docs.comfy.org/tutorials/image/z-image/z-image-turbo
+
+Comment 2:
+Author: KvAk_AKPlaysYT
+Score: 1
+Created UTC: 1767334599.0
+Comment: I cooked this and a lot of people love it:
+
+https://github.com/Aaryan-Kapoor/z-image-turbo
+
+Btw it has GGUF support in the gguf-support branch. Just choose the model from the dropdown.
+
+Comment 3:
+Author: slacksXD
+Score: 1
+Created UTC: 1767335436.0
+Comment: Open the hugging face spaces link you sent: [https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo](https://huggingface.co/spaces/Tongyi-MAI/Z-Image-Turbo)
+
+Then at the top right click the 3 dots. Then go to run locally. Theres instructions to run that space locally using docker or python

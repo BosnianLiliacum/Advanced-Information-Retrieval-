@@ -1,0 +1,52 @@
+Post Title: [P] My DC-GAN works better then ever!
+Author: Jumbledsaturn52
+Score: 281
+URL: https://www.reddit.com/gallery/1q0cmvw
+Number of comments: 55
+Created UTC: 1767186546.0
+
+Post Content:
+I recently made a Deep Convolutional Generative adviseral Network which had some architecture problem at the starting but now it works . It still takes like 20mins for 50 epochs . Here are some images It generated. 
+
+I want to know if my architecture can be reduced to make it less gpu consuming.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Jumbledsaturn52
+Score: 49
+Created UTC: 1767186583.0
+Comment: Here is my code- https://github.com/Rishikesh-2006/NNs/blob/main/Pytorch/DCGAN.ipynb
+
+Comment 2:
+Author: One_eyed_warrior
+Score: 17
+Created UTC: 1767189821.0
+Comment: Good stuff
+
+I tried working on anime images and it didn't work at all like I expected due to vanishing gradients, might get back to that one
+
+Comment 3:
+Author: A_Again
+Score: 13
+Created UTC: 1767207418.0
+Comment: You can always play with things like Separable Convolutions to make the model lighter; they're very much like LoRA in principle (split up operation into two operations that are less memory intensive, tho one is spatial and one is at training) and it'd be good to familiarize yourself with why these things can or can't work here :) 
+
+Good work!
+
+Comment 4:
+Author: DigThatData
+Score: 8
+Created UTC: 1767237627.0
+Comment: you might consider this "cheating", but you can accelerate convergence by using a pretrained feature space for your objective.
+
+https://github.com/autonomousvision/projected-gan
+
+Comment 5:
+Author: throwaway16362718383
+Score: 2
+Created UTC: 1767257397.0
+Comment: Good stuff! GANs are so much fun, when that first moment of images coming out which aren’t just noise feels amazing. 
+
+I did a blog series of StyleGAN and progressive growing GAN a while, you might find the series interesting: [https://ym2132.github.io/Progressive_GAN](https://ym2132.github.io/Progressive_GAN) (this is the first post in the series the others can be found on the site :) )

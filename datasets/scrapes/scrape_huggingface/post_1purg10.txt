@@ -1,0 +1,26 @@
+Post Title: Show off your Hugging Face activity on your GitHub profile!
+Author: GlitteringFootball34
+Score: 5
+URL: https://www.reddit.com/r/huggingface/comments/1purg10/show_off_your_hugging_face_activity_on_your/
+Number of comments: 1
+Created UTC: 1766594187.0
+
+Post Content:
+Hey everyone! 👋 I built a tool called **hf-grass**. It generates a GitHub-style contribution heatmap (grass) based on your Hugging Face activity.
+
+It produces an SVG that you can easily embed in your GitHub README. It also comes with a GitHub Actions workflow, so it updates automatically every day!
+
+**Wishing everyone a Merry Christmas! 🎄✨**
+
+https://preview.redd.it/1aommmehj69g1.png?width=1352&amp;format=png&amp;auto=webp&amp;s=ee67f2147ab482119cd5a994f7e243476f86b08d
+
+[https://github.com/kbsooo/hf-grass](https://github.com/kbsooo/hf-grass)
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Duhbeed
+Score: 1
+Created UTC: 1766594530.0
+Comment: Interesting, thanks for sharing!

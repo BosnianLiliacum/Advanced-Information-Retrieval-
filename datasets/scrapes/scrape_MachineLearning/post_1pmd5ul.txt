@@ -1,0 +1,28 @@
+Post Title: [D] Causal ML, did a useful survey or textbook emerge?
+Author: TajineMaster159
+Score: 44
+URL: https://www.reddit.com/r/MachineLearning/comments/1pmd5ul/d_causal_ml_did_a_useful_survey_or_textbook_emerge/
+Number of comments: 7
+Created UTC: 1765716077.0
+
+Post Content:
+Hi, asking if a unified resource emerged on Causal ML. To be clear, I am asking specifically (and kindly) for a coherent and comparative discussion of some of the more recent advances (10y). I am hoping for a research survey/primer or a graduate textbook. 
+
+It would be ideal that the resource situates causal ML within the better understood and widely adopted class of causal inference tools (e.g endogenous causal identification from  econometrics). 
+
+
+Top 2 comments:
+
+Comment 1:
+Author: bikeskata
+Score: 28
+Created UTC: 1765724892.0
+Comment: [This](https://causalml-book.org/), from the Double ML folks, is probably the best, most recent overview. And free online!
+
+Comment 2:
+Author: confirm-jannati
+Score: 2
+Created UTC: 1765754164.0
+Comment: Elements of Causal Inference by J. Peters
+
+I find the notation much more friendly for ML folk.

@@ -1,0 +1,65 @@
+Post Title: [D] Intra-lab collaborations
+Author: valuat
+Score: 11
+URL: https://www.reddit.com/r/MachineLearning/comments/1q6sgx5/d_intralab_collaborations/
+Number of comments: 12
+Created UTC: 1767821823.0
+
+Post Content:
+Hi everyone,
+
+I have a question some of you may be able to help me with.
+
+I’m a physician with a background in EE/CS and have been working in ML/AI for the past 12 years or so (cancer genomics, mostly).
+
+I’m now working at a large academic hospital in the US, doing research in clinical AI (not only LLMs but NN/ML in general). I have my own research workstation with a few GPUs and do my own work. Since physicians typically don’t have the ML background I’ve noticed some of them keep coming to me “to ask questions”, not about how to install CUDA in Ubuntu or compile XYZ with gcc, but mainly architectural questions: “How should I analyse this? What model should I use? How do I use LangGraph? (really), etc.”
+
+I don’t mind helping out with very specific questions (pip vs uv; VS Code vs something else) but I feel that the questions I’m getting are more critical to their projects to the level of actual research collaborations and not simply “helping out”. Tiny example: When the PI told us we could get a brand new MBP, I came up with my own specs and they simply tagged along because they didn’t know any better. Not a single “Thank you”; not that I care, it’s just for context.
+
+How do you guys typically handle this? When “being helpful” actually morphs into “being a co-author”? And how does one go about this? Just begin the conversation with “This is a collaboration, right?”
+
+TIA
+
+
+
+Top 5 comments:
+
+Comment 1:
+Author: LetsTacoooo
+Score: 5
+Created UTC: 1767822848.0
+Comment: If they need need your help you should be a collaborator. You need to defend your time. Setup healthy working boundaries. Overall you can help a little but if it starts taking away from your research time, you need to bring it up "if I'm gonna spend more time on this, would like to know expectations of the project to collaborate effectively".
+
+If they need technical help and you are not an explicit collaborator say stuff like " it's easy to Google that!", "Check the docs, they are pretty useful", "sorry I can't put time into non-research projects", etc.
+
+Comment 2:
+Author: SelfMonitoringLoop
+Score: 3
+Created UTC: 1767822730.0
+Comment: If you truly feel like you should be compensated for your contributions, stop giving them for free. 
+People might try to frame you as being a dick for looking out for your own interests, but business is not family, its a  contractual exchange. 
+If you're that important as the 'go to' guy, negotiate to reflect it, or stop answering questions.
+
+Comment 3:
+Author: bill_klondike
+Score: 3
+Created UTC: 1767862725.0
+Comment: Quick thoughts:
+
+1. Talk to your PI. If this is a productivity issue for you then you need to bring it up.
+2. Talk to your Pi. If they have additional funding, maybe they can use some for training, workshops, communities of practice, etc.
+3. Bring in outside speakers who can share experiences with model selection and applying models to other real-world problems. Get on listservs for upcoming talks at your institution and make sure they get forwarded to the rest of your peers. They need to take some initiative; again, talk to your PI and have them communicate out that continuous learning is a part of your peers’ job.
+4. Find collaborations across your institution. Your PI should be able to help with this.
+5. If all else fails, talk to your PI about renegotiating your contract to include time, knowledge transfer, and leadership skills you are already using to help your colleagues make an impact.
+
+Comment 4:
+Author: patternpeeker
+Score: 2
+Created UTC: 1767940695.0
+Comment: In practice, this crosses from “being helpful” to collaboration as soon as you are shaping problem framing or model choice in a way that affects outcomes. Debugging installs or sanity checking code is support. Deciding how to analyze data, what architecture makes sense, or what not to try is intellectual contribution. In academic settings, authorship norms are fuzzy unless you force clarity early, which is uncomfortable but necessary. I have found it helps to say something like, happy to chat, but if I am contributing to design decisions we should align on authorship up front. Otherwise you slowly become the default ML brain without credit. The awkwardness is usually worse in your head than in reality, and serious researchers tend to respect the boundary.
+
+Comment 5:
+Author: dataflow_mapper
+Score: 1
+Created UTC: 1767872629.0
+Comment: This is a really common gray zone in academic ML, especially when one person is the only one who actually understands modeling end to end. What has worked for me is drawing a soft line early by framing answers at a higher level and saying something like, “If you want me to think through model choice or system design, that probably turns into a collaboration.” Most reasonable PIs get the hint when it is phrased as time and ownership rather than credit chasing. If they keep coming back with core research questions, I take that as the signal to explicitly talk authorship and expectations. It feels awkward the first time, but it gets easier and saves a lot of quiet resentment later.

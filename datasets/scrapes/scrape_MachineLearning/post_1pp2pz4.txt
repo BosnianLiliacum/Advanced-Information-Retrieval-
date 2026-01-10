@@ -1,0 +1,46 @@
+Post Title: [D] Any interesting and unsolved problems in the VLA domain?
+Author: Chinese_Zahariel
+Score: 21
+URL: https://www.reddit.com/r/MachineLearning/comments/1pp2pz4/d_any_interesting_and_unsolved_problems_in_the/
+Number of comments: 27
+Created UTC: 1765993020.0
+
+Post Content:
+Hi, all. I'm currently starting to research some work in the VLA field. And I'd like to discuss which cutting-edge work has solved interesting problems, and which remain unresolved but are worth exploring.
+
+ Any suggestions or discussions are welcomed, thank you!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: willpoopanywhere
+Score: 17
+Created UTC: 1765994650.0
+Comment: Vision models are terrible right now.  for example, i can few shot prompt with medical data or radar data that is very easy for a human to learn from and the VLA/VLM does terrible interpreting it.  This is not generic human perception.  There is MUCH work to do this space.
+
+Comment 2:
+Author: ElectionGold3059
+Score: 14
+Created UTC: 1766011182.0
+Comment: Nothing is solved in VLA...
+
+Comment 3:
+Author: willpoopanywhere
+Score: 11
+Created UTC: 1765993956.0
+Comment: ive been in machine learning for 23 years.. what is VLA?
+
+Comment 4:
+Author: tomatoreds
+Score: 4
+Created UTC: 1766003277.0
+Comment: VLA benefits are not obvious over alternate approaches.
+
+Comment 5:
+Author: evanthebouncy
+Score: 2
+Created UTC: 1766030921.0
+Comment: https://arxiv.org/abs/2504.20294
+
+I built a dataset for eval. Take a look

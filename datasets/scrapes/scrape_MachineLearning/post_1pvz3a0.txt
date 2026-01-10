@@ -1,0 +1,50 @@
+Post Title: [D] Where to find realworld/production results &amp; experiences?
+Author: anotherallan
+Score: 13
+URL: https://www.reddit.com/r/MachineLearning/comments/1pvz3a0/d_where_to_find_realworldproduction_results/
+Number of comments: 9
+Created UTC: 1766736298.0
+
+Post Content:
+Hi everyone! I’m seeing lots of ML/AI benchmark results but fewer ‘we tried it in production and here's what we see...’ discussions—am I missing good places for that?
+
+Or, are people not really willing to share or see these kind of real world experiences? If so what would be the concern?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dataflow_mapper
+Score: 6
+Created UTC: 1766738633.0
+Comment: You’re not really missing much. A lot of production learnings live in private postmortems, internal docs, or Slack threads that never see daylight. People are hesitant to share because real results usually include messy data, partial failures, cost surprises, or decisions that look dumb in hindsight.
+
+Another factor is that once you talk about production, you’re talking about business constraints, infra tradeoffs, and organizational stuff. That doesn’t fit neatly into r/MachineLearning’s usual benchmark or paper discussion style. The few honest writeups I’ve seen usually come from conference talks, engineering blogs, or random comments buried in threads like this.
+
+I do think there’s appetite for it, but it takes a certain level of seniority and safety to publicly say “this worked but also broke in these ways.” Most people don’t have incentives to be that open.
+
+Comment 2:
+Author: lord_acedia
+Score: 5
+Created UTC: 1766737180.0
+Comment: most benchmarks are there as proof of concept for the algorithm, the real bottlenecks in productions are feature engineering and deployment, however this differs by every company based on how they utilize the algorithm discussed in the paper.
+
+if you're looking at write ups for production check technical blogs of AI startups, they normally have the write ups you want but they don't go into too much detail as doing that poses a vulnerability risk.
+
+Comment 3:
+Author: superawesomepandacat
+Score: 3
+Created UTC: 1766950792.0
+Comment: "we tried it in production" means ab-testing, and ab-tests are expensive to run so employers aren't allowed to just share the results outside of the company.
+
+Comment 4:
+Author: pppeer
+Score: 2
+Created UTC: 1766743994.0
+Comment: If you are looking for peer reviewed results, the KDD and ECMLPKDD applied data science tracks are some good starting points, for example [https://kdd2025.kdd.org/applied-data-science-ads-track-call-for-papers/](https://kdd2025.kdd.org/applied-data-science-ads-track-call-for-papers/) and [https://ecmlpkdd.org/2025/accepted-papers-ads/](https://ecmlpkdd.org/2025/accepted-papers-ads/)
+
+Comment 5:
+Author: SMFet
+Score: 1
+Created UTC: 1766755161.0
+Comment: The KDD Applied DS papers and the SigWeb Applied track have that. A requirement they have is to post insights and real-life results of the papers.

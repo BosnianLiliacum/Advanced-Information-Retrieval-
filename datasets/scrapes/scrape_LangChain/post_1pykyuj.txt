@@ -1,0 +1,50 @@
+Post Title: Are agent evals the new unit tests?
+Author: Hot-Guide-4464
+Score: 21
+URL: https://www.reddit.com/r/LangChain/comments/1pykyuj/are_agent_evals_the_new_unit_tests/
+Number of comments: 14
+Created UTC: 1767010996.0
+
+Post Content:
+I’ve been thinking about this a lot as agent workflows get more complex. Because in software, we’d never ship anything without unit tests. But right now most people just “try a few prompts” and call it good. That clearly doesn’t scale once you have agents doing workflow automation or anything that has a real failure cost.
+
+So I’m wondering if we’re moving to a future where CI-style evals become a standard part of building and deploying agents? Or am I overthinking it and we’re still too early for something this structured? I’d appreciate any insights on how folks in this community are running evals without drowning in infra.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Kortopi-98
+Score: 10
+Created UTC: 1767018484.0
+Comment: I think evals have to become the new unit tests because once an agent interacts with real data or systems, "vibes-based QA" becomes a liability. So we’ve been moving towards lightweight CI-like evals for our internal agents. Nothing super formal, just a set of representative tasks and expected behaviors. Just so you know, setting up the infra for this sucks unless you build your own harness. We switched to Moyai because they make this a lot less painful. Their eval workflow is basically: define agent, run them across diverse tasks, get diffs or outliers, done.
+
+Comment 2:
+Author: imnotafanofit
+Score: 5
+Created UTC: 1767014727.0
+Comment: We started doing mini regression suite for agents. They're fast and lightweight but the biggest challenge is infra though. Spinning up evals can get expensive if you run them often.
+
+Comment 3:
+Author: MathematicianSome289
+Score: 5
+Created UTC: 1767034919.0
+Comment: See em as more integration tests than unit tests. Evals test how the pieces work together. Units test the individual pieces.
+
+Comment 4:
+Author: charlyAtWork2
+Score: 4
+Created UTC: 1767011497.0
+Comment: Most of the time is only ETL.
+
+A boring step by step transformation with LLM in the middle.
+
+Comment 5:
+Author: hidai25
+Score: 2
+Created UTC: 1767038041.0
+Comment: I’m mostly with you, but I don’t think it maps 1:1 to unit tests. For agents it feels more like integration/regression tests, because the “output string” is the least stable thing in the system. What *is* stable is behavior: did it call the right tools, avoid the wrong ones, return valid structure, and stay within time/$ budgets.
+
+The only way I’ve seen this not turn into eval-infra hell is keeping a small “this can’t break” suite in CI, running the bigger flaky stuff nightly, and turning every real failure into a test case. That’s when it starts compounding like real testing.
+
+Full disclosure: I’m building an OSS harness around exactly this idea (EvalView). If it’s useful, it’s here: [https://github.com/hidai25/eval-view]()

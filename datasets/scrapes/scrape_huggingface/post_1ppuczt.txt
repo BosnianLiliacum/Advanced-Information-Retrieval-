@@ -1,0 +1,38 @@
+Post Title: Why is discovering “different but similar” datasets/models on HuggingFace basically hard/impossible?
+Author: ehsanta
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1ppuczt/why_is_discovering_different_but_similar/
+Number of comments: 2
+Created UTC: 1766073500.0
+
+Post Content:
+TL;DR : HF search is fine for exact matches, but weak for discovering “similar enough” datasets/models (with slightly different names/labels/tasks), so valuable relevant options often never show up. 
+
+--- 
+  
+My main issue with Hugging Face search is that it usually doesn’t work well when I’m trying to find datasets/models that are close to my problem, unless I already know exactly what I’m looking for and can search with an exact match.
+
+In industry, we often deal with problems that aren’t trendy or standardized, and don’t have a big community around them. That makes searching harder and more time-consuming, and success becomes heavily dependent on luck. Also, in these kinds of problems you shouldn’t even expect to find a dataset/model that fits your needs perfectly. Finding something “close enough” is often more than enough: data from the same family, with similar labels, or even a different task but in the same domain. These are valuable as baselines, and sometimes can be used as pretrained starting points and then fine-tuned.
+
+Hugging Face is one of the places I always search for models and datasets. It’s not an exaggeration to say you can find almost everything there. But in my experience, its search works best when you already know exactly what you want and can find it with a few specific keywords. When you’re trying to discover “similar items,” discovery becomes almost impossible, especially when the title/details/domain are slightly different.
+
+For example, I might be looking for a dataset that classifies different breeds of “cats” and “dogs,” but a dataset that contains some of the classes I need might be published under a broader title like “pets,” and then searching “cat” or “dog” might not surface it at all. Or sometimes the task isn’t exactly the same (e.g., object detection with bounding boxes instead of pixel-wise segmentation), but it’s still from the same family and can be very useful for an initial version. With the current HF search, I often can’t find those either.
+
+Part of this may be due to how I search, and I’m sure there are better ways to do it. Still, it’s hard to deny a bigger problem in ML hubs (and Hugging Face is one of the most popular ones): finding the exact thing you want (especially if it’s common/trendy) is often doable, but good, relevant “nearby” options may never show up.
+
+
+
+
+Top 2 comments:
+
+Comment 1:
+Author: Astralnugget
+Score: 1
+Created UTC: 1766186523.0
+Comment: It’s kind of funny/ironic when you consider that search is one of the best uses for AI and you know …
+
+Comment 2:
+Author: Good-Budget7176
+Score: 1
+Created UTC: 1766232682.0
+Comment: So true - I have been struggling to find an answer too!

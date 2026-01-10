@@ -1,0 +1,20 @@
+Post Title: Qwen/Qwen2.5-Coder-32B-Instruct failing health check
+Author: bjl218
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pkw0qb/qwenqwen25coder32binstruct_failing_health_check/
+Number of comments: 4
+Created UTC: 1765556408.0
+
+Post Content:
+i'm going through the Hugging Face agents course which makes a lot of use of the **Qwen/Qwen2.5-Coder-32B-Instruct** model. Today I started getting health check errors on that model so I let the InferenceClientModel choose the default model which is **Qwen/Qwen3-Next-80B-A3B-Thinking**. However, this model is not quite as adept at code generation and gives completely different output than shown in the course's notebook.
+
+What are my options here? Is there some other model I should be using when using a CodeAgent?
+
+
+Top 1 comments:
+
+Comment 1:
+Author: bjl218
+Score: 2
+Created UTC: 1765558617.0
+Comment: Silly me. You'd think I'd learn to just ask an AI this question. I ended up going with **Qwen/Qwen2.5-72B-Instruct** which seems to be working nicely

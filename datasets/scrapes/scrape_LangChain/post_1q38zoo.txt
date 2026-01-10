@@ -1,0 +1,48 @@
+Post Title: Built a Lovable with Deepagents
+Author: Releow
+Score: 22
+URL: https://www.reddit.com/r/LangChain/comments/1q38zoo/built_a_lovable_with_deepagents/
+Number of comments: 12
+Created UTC: 1767481278.0
+
+Post Content:
+Hi guys, just wanted to share my project done used to deep dive into the deepagents architecture.
+
+It is a little coding agent to build react app inspired by lovable.
+
+[https://github.com/emanueleielo/deepagents-open-lovable](https://github.com/emanueleielo/deepagents-open-lovable)
+
+Asking for feedback!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: hwchase17
+Score: 5
+Created UTC: 1767487752.0
+Comment: This is great!
+
+Comment 2:
+Author: vtrivedy-lc
+Score: 3
+Created UTC: 1767494026.0
+Comment: Hey this is awesome!!  Also nice agent eng design with the subagent delegation.  Would love to hear how it went using deepagents and how we can make it better to help you build more cool stuff :). Will DM you!
+
+Comment 3:
+Author: Feisty-Promise-78
+Score: 2
+Created UTC: 1767498552.0
+Comment: Great work! Did you come up with the prompt as by yourself or ask AI to generate it or you copy pasted from some else?
+
+Comment 4:
+Author: monkeybrain_
+Score: 2
+Created UTC: 1767507526.0
+Comment: Seems pretty interesting, will come back later to review in detail. Did you build the skills middleware yourself?
+
+Comment 5:
+Author: lundrog
+Score: 2
+Created UTC: 1767510526.0
+Comment: Ill check this out

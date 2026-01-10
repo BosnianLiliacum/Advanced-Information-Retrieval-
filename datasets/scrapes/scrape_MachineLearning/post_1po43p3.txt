@@ -1,0 +1,42 @@
+Post Title: Denoising Language Models for Speech Recognition
+Author: albertzeyer
+Score: 16
+URL: https://arxiv.org/abs/2512.13576
+Number of comments: 2
+Created UTC: 1765897254.0
+
+Post Content:
+We studied *denoising language models* (error correction models) as an alternative to standard language models.
+
+Denoising LMs use an encoder-decoder architecture, and are trained to reconstruct the original text from a corrupted version of it.
+We test them for speech recognition, and specifically train them on errors made by a standard speech recognition system.
+We use the *data-constrained setting* where we have limited paired data (speech + transcript) and large amounts of unpaired text data.
+
+Paper: https://arxiv.org/abs/2512.13576
+
+* Clear improvements over a very competitive baseline with standard language models.
+
+* State-of-the-art results on LibriSpeech under the data-constrained setting.
+
+* Scaling laws: Similar behavior as for *diffusion LMs*: For data-constrained setting, the amount of compute matters: With less compute, standard LMs are better, but at some point, denoising LMs become better (see Figure 2).
+
+* Decoding speed with denoising LM is faster than with standard LM.
+
+* Very comprehensive study.
+
+* Reproducing same findings on the [Loquacious dataset](https://huggingface.co/datasets/speechbrain/LoquaciousSet).
+
+* Public recipes.
+
+And much more in the paper.
+
+
+
+Top 1 comments:
+
+Comment 1:
+Author: LelouchZer12
+Score: 2
+Created UTC: 1766321860.0
+Comment: 80 pages ? Damn.
+I am mostly using standard transformer encoder (ctc) with a ngram LM ,  is it really worth to have a heavier decoder ?

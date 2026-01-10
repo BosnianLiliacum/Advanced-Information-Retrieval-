@@ -1,0 +1,20 @@
+Post Title: Is anyone using any model for investing/trading?
+Author: peterhddcoding
+Score: 8
+URL: https://www.reddit.com/r/huggingface/comments/1psgaot/is_anyone_using_any_model_for_investingtrading/
+Number of comments: 1
+Created UTC: 1766349104.0
+
+Post Content:
+Has anyone here experimented with any finance model and integrated in an investing/trading workflow? If so which one? How is it going so far? 
+
+
+Top 1 comments:
+
+Comment 1:
+Author: frank_brsrk
+Score: 0
+Created UTC: 1766745415.0
+Comment: I don't know if my response is right for your question. But I know grok 4.2 had some great performance on trading benchmarks. Check it out. IF the model api key is too expensive for constant usage. You can use  4.2 api key to generate synthetic data to train an agent on trading skills.
+
+Have a good day!

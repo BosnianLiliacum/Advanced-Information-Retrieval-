@@ -1,0 +1,567 @@
+Post Title: Your LangChain Chain Is Probably Slower Than It Needs To Be
+Author: Electrical-Signal858
+Score: 28
+URL: https://www.reddit.com/r/LangChain/comments/1pkw2si/your_langchain_chain_is_probably_slower_than_it/
+Number of comments: 8
+Created UTC: 1765556543.0
+
+Post Content:
+Built a chain that worked perfectly. Then I actually measured latency.
+
+It was 10x slower than it needed to be.
+
+Not because the chain was bad. Because I wasn't measuring what was actually slow.
+
+**The Illusion Of Speed**
+
+I'd run the chain and think "that was fast."
+
+Took 8 seconds. Felt instant when I triggered it manually.
+
+Then I added monitoring.
+
+Real data: 8 seconds was terrible.
+
+    Where the time went:
+    - LLM inference: 2s
+    - Token counting: 0.5s
+    - Logging: 1.5s
+    - Validation: 0.3s
+    - Caching check: 0.2s
+    - Serialization: 0.8s
+    - Network overhead: 1.2s
+    - Database calls: 1.5s
+    Total: 8s
+
+Only 2s was actual LLM work. The other 6s was my code.
+
+**The Problems I Found**
+
+**1. Synchronous Everything**
+
+    # My code
+    token_count = count_tokens(input)  
+    # Wait
+    cached_result = check_cache(input)  
+    # Wait
+    llm_response = llm.predict(input)  
+    # Wait
+    validated = validate_output(llm_response)  
+    # Wait
+    logged = log_execution(validated)  
+    # Wait
+    
+    # These could run in parallel
+    # Instead they ran sequentially
+
+**2. Doing Things Twice**
+
+    # My code
+    result = chain.run(input)
+    validated = validate(result)
+    
+    # Validation parsed JSON
+    # Later I parsed JSON again
+    # Wasteful
+    
+    # Same with:
+    - Serialization/deserialization
+    - Embedding the same text multiple times
+    - Checking the same conditions multiple times
+
+**3. No Caching**
+
+    # User asks same question twice
+    response1 = chain.run("What's pricing?")  
+    # 8s
+    response2 = chain.run("What's pricing?")  
+    # 8s (same again!)
+    
+    # Should have cached
+    response2 = cache.get("What's pricing?")  
+    # Instant
+
+**4. Verbose Logging**
+
+    # I logged everything
+    logger.debug(f"Starting chain with input: {input}")
+    logger.debug(f"Token count: {tokens}")
+    logger.debug(f"Retrieved documents: {docs}")
+    logger.debug(f"LLM response: {response}")
+    logger.debug(f"Validated output: {validated}")
+    # ... 10 more log statements
+    
+    # Each log line: ~100ms
+    # 10 lines: 1 second wasted on logging
+
+**5. Unnecessary Computation**
+
+    # I was computing things I didn't need
+    token_count = count_tokens(input)  
+    # Why? Never used
+    complexity_score = assess_complexity(input)  
+    # Why? Never used
+    estimated_latency = predict_latency(input)  
+    # Why? Never used
+    
+    # These added 1.5 seconds
+    # Never actually needed them
+
+**How I Fixed It**
+
+**1. Parallelized What Could Be Parallel**
+
+    import asyncio
+    
+    async def fast_chain(input):
+        
+    # These can run in parallel
+        token_task = asyncio.create_task(count_tokens_async(input))
+        cache_task = asyncio.create_task(check_cache_async(input))
+        
+        
+    # Wait for both
+        tokens, cached = await asyncio.gather(token_task, cache_task)
+        
+        if cached:
+            return cached  
+    # Early exit
+        
+        
+    # LLM run
+        response = await llm_predict_async(input)
+        
+        
+    # Validation and logging can be parallel
+        validate_task = asyncio.create_task(validate_async(response))
+        log_task = asyncio.create_task(log_async(response))
+        
+        validated, _ = await asyncio.gather(validate_task, log_task)
+        
+        return validated
+
+Latency: 8s → 5s (cached paths are instant)
+
+**2. Removed Unnecessary Work**
+
+    # Before
+    def process(input):
+        token_count = count_tokens(input)  
+    # Remove
+        complexity = assess_complexity(input)  
+    # Remove
+        estimated = predict_latency(input)  
+    # Remove
+        result = chain.run(input)
+        return result
+    
+    # After
+    def process(input):
+        result = chain.run(input)
+        return result
+
+Latency: 5s → 3.5s
+
+**3. Implemented Smart Caching**
+
+    from functools import lru_cache
+    
+    (maxsize=1000)
+    async def cached_chain(input: str) -&gt; str:
+        return await chain.run(input)
+    
+    # Same input twice
+    result1 = await cached_chain("What's pricing?")  
+    # 3.5s
+    result2 = await cached_chain("What's pricing?")  
+    # Instant (cached)
+
+Latency (cached): 3.5s → 0.05s
+
+**4. Smart Logging**
+
+    # Before: log everything
+    logger.debug(f"...")  
+    # 100ms
+    logger.debug(f"...")  
+    # 100ms
+    logger.debug(f"...")  
+    # 100ms
+    # Total: 300ms+
+    
+    # After: log only if needed
+    if logger.isEnabledFor(logging.DEBUG):
+        logger.debug(f"...")  
+    # Only if actually logging
+    
+    if slow_request():
+        logger.warning(f"Slow request: {latency}s")
+
+Latency: 3.5s → 2.8s
+
+**5. Measured Carefully**
+
+    import time
+    from contextlib import contextmanager
+    
+    u/contextmanager
+    def timer(name):
+        start = time.perf_counter()
+        try:
+            yield
+        finally:
+            end = time.perf_counter()
+            print(f"{name}: {(end-start)*1000:.1f}ms")
+    
+    async def optimized_chain(input):
+        with timer("total"):
+            with timer("llm"):
+                response = await llm.predict(input)
+            
+            with timer("validation"):
+                validated = validate(response)
+            
+            with timer("logging"):
+                log(validated)
+        
+        return validated
+    ```
+    
+    Output:
+    ```
+    llm: 2000ms
+    validation: 300ms
+    logging: 50ms
+    total: 2350ms
+    ```
+    
+    From 8000ms to 2350ms. 3.4x faster.
+    
+    **The Real Numbers**
+    
+    | Stage | Before | After | Savings |
+    |-------|--------|-------|---------|
+    | LLM | 2000ms | 2000ms | 0ms |
+    | Token counting | 500ms | 0ms | 500ms |
+    | Cache check | 200ms | 50ms | 150ms |
+    | Logging | 1500ms | 50ms | 1450ms |
+    | Validation | 300ms | 300ms | 0ms |
+    | Caching | 200ms | 0ms | 200ms |
+    | Serialization | 800ms | 100ms | 700ms |
+    | Network | 1200ms | 500ms | 700ms |
+    | Database | 1500ms | 400ms | 1100ms |
+    | **Total** | **8000ms** | **3400ms** | **4600ms** |
+    
+    2.35x faster. Not even touching the LLM.
+    
+    **What I Learned**
+    
+    1. **Measure first** - You can't optimize what you don't measure
+    2. **Bottleneck hunting** - Find where time actually goes
+    3. **Parallelization** - Most operations can run together
+    4. **Caching** - Cached paths should be instant
+    5. **Removal** - Best optimization is code you don't run
+    6. **Profiling** - Use actual timing, not guesses
+    
+    **The Checklist**
+    
+    Before optimizing your chain:
+    - [ ] Measure total latency
+    - [ ] Measure each step
+    - [ ] Identify slowest steps
+    - [ ] Can any steps parallelize?
+    - [ ] Can you remove any steps?
+    - [ ] Are you caching?
+    - [ ] Is logging excessive?
+    - [ ] Are you doing work twice?
+    
+    **The Honest Lesson**
+    
+    Most chain performance problems aren't the chain.
+    
+    They're the wrapper around the chain.
+    
+    Measure. Find bottlenecks. Fix them.
+    
+    Your chain is probably fine. Your code around it probably isn't.
+    
+    Anyone else found their chain wrapper was the real problem?
+    
+    ---
+    
+    ## 
+    
+    **Title:** "I Measured What Agents Actually Spend Time On (Spoiler: Not What I Thought)"
+    
+    **Post:**
+    
+    Built a crew and assumed agents spent time on thinking.
+    
+    Added monitoring. Turns out they spent most time on... nothing useful.
+    
+    **What I Assumed**
+    
+    Breakdown of agent time:
+    ```
+    Thinking/reasoning: 70%
+    Tool usage: 20%
+    Overhead: 10%
+    ```
+    
+    This seemed reasonable. Agents need to think.
+    
+    **What Actually Happened**
+    
+    Real breakdown:
+    ```
+    Waiting for tools: 45%
+    Serialization/deserialization: 20%
+    Tool execution: 15%
+    Thinking/reasoning: 10%
+    Error handling/retries: 8%
+    Other overhead: 2%
+
+Agents spent 45% of time **waiting** for tools to respond.
+
+Not thinking. Waiting.
+
+**Where Time Actually Went**
+
+**1. Waiting For External Tools (45%)**
+
+    # Agent tries to use tool
+    result = tool.call(args)  
+    # Agent waits here
+    # 4 seconds to get response
+    # Agent does nothing while waiting
+
+**2. Serialization Overhead (20%)**
+
+    # Agent output → JSON
+    # JSON → Tool input
+    # Tool output → JSON
+    # JSON → Agent input
+    
+    # Each conversion: 100-200ms
+    # 4 conversions per tool call
+    # = 400-800ms wasted per tool use
+
+**3. Tool Execution (15%)**
+
+    # Actually running the tool
+    # Database query: 1s
+    # API call: 2s
+    # Computation: 0.5s
+    
+    # This is unavoidable
+    # Can only optimize the tool itself
+
+**4. Thinking/Reasoning (10%)**
+
+    # Agent actually thinking
+    # Deciding what to do next
+    # Evaluating results
+    
+    # Only 10% of time!
+    # We were paying for thinking but agents barely think
+
+**5. Error Handling (8%)**
+
+    # Tool failed? Retry
+    # Tool returned wrong format? Retry
+    # Tool timed out? Retry
+    
+    # Each error adds latency
+    # Multiple retries add up
+
+**How I Fixed It**
+
+**1. Parallel Tool Calls**
+
+    # Before: sequential
+    result1 = tool1.call()  
+    # Wait 2s
+    result2 = tool2.call()  
+    # Wait 2s
+    result3 = tool3.call()  
+    # Wait 2s
+    # Total: 6s
+    
+    # After: parallel
+    results = await asyncio.gather(
+        tool1.call_async(),
+        tool2.call_async(),
+        tool3.call_async(),
+    )
+    # Total: 2s (longest tool only)
+    
+    # Saved: 4s per crew execution
+
+**2. Optimized Serialization**
+
+    # Before: JSON serialization
+    json_str = json.dumps(agent_output)
+    tool_input = json.loads(json_str)
+    # Slow and wasteful
+    
+    # After: Direct object passing
+    tool_input = agent_output  
+    # Direct reference
+    # No serialization needed
+    
+    # Saved: 0.5s per tool call
+
+**3. Better Error Handling**
+
+    # Before: retry everything
+    try:
+        result = tool.call()
+    except Exception:
+        result = tool.call()  
+    # Retry
+    except Exception:
+        result = tool.call()  
+    # Retry again
+    # Adds 6s per failure
+    
+    # After: smart error handling
+    try:
+        result = tool.call(timeout=2)
+    except ToolTimeoutError:
+        
+    # Don't retry timeouts, use fallback
+        result = fallback_tool.call()
+    except ToolError:
+        
+    # Retry errors, not timeouts
+        result = tool.call(timeout=5)
+    except Exception:
+        
+    # Give up
+        return escalate_to_human()
+    
+    # Saves 4s on failures
+
+**4. Asynchronous Agents**
+
+    # Before: synchronous
+    def agent_step(task):
+        tool_result = tool.call()  
+    # Blocks
+        next_step = think(tool_result)  
+    # Blocks
+        return next_step
+    
+    # After: async
+    async def agent_step(task):
+        
+    # Start tool call and thinking in parallel
+        tool_task = asyncio.create_task(tool.call_async())
+        
+        
+    # While tool is running, agent can:
+        
+    # - Think about previous results
+        
+    # - Plan next steps
+        
+    # - Prepare for tool output
+        
+        tool_result = await tool_task
+        return next_step
+
+**5. Removed Unnecessary Steps**
+
+    # Before
+    agent.run(task)
+    # Agent logs everything
+    # Agent validates everything
+    # Agent checks everything
+    
+    # After
+    agent.run(task)
+    # Agent logs only on errors
+    # Agent validates only when needed
+    # Agent checks only critical paths
+    
+    # Saved: 1-2s per execution
+    ```
+    
+    **The Results**
+    ```
+    Before optimization:
+    - 10s per crew execution
+    - 45% waiting for tools
+    
+    After optimization:
+    - 3.5s per crew execution
+    - Tools run in parallel
+    - Less overhead
+    - More thinking time
+
+2.8x faster just by understanding where time actually goes.
+
+**What I Learned**
+
+1. **Measure everything** \- Don't guess
+2. **Find real bottlenecks** \- Not assumed ones
+3. **Parallelize I/O** \- Tools can run together
+4. **Optimize serialization** \- Often hidden cost
+5. **Smart error handling** \- Retrying everything is wasteful
+6. **Async is your friend** \- Agent can think while tools work
+
+**The Checklist**
+
+Add monitoring to your crew:
+
+*  Time total execution
+*  Time each agent
+*  Time each tool call
+*  Time serialization
+*  Count tool calls
+*  Count retries
+*  Track errors
+
+Then optimize based on real data, not assumptions.
+
+**The Honest Lesson**
+
+Agents spend most time waiting, not thinking.
+
+Optimize for waiting:
+
+* Parallelize tools
+* Remove serialization
+* Better error handling
+* Async execution
+
+Make agents actually think less and work more efficiently.
+
+Anyone else measured their crew and found surprising results?
+
+
+Top 4 comments:
+
+Comment 1:
+Author: kevjumba34
+Score: 12
+Created UTC: 1765573993.0
+Comment: Reads as hella fictional. There is no way a database call should take 1.5 seconds
+
+Comment 2:
+Author: -Cubie-
+Score: 4
+Created UTC: 1765617415.0
+Comment: This is fucking two posts in one again. None of the numbers check out either... It's impossible to find actual advice with real experiments nowadays.
+
+Comment 3:
+Author: Stunning_Budget57
+Score: 4
+Created UTC: 1765561813.0
+Comment: 100ms per logging is nuts - I think you’re experiencing the observer problem, ie your instrumentation is impacting timing
+
+Comment 4:
+Author: Lee-stanley
+Score: 1
+Created UTC: 1765796375.0
+Comment: After assuming LLM calls were slowing me down, I discovered my own wrapper code was the real bottleneck by profiling each step, I reduced my chain’s latency from 8 seconds to 3.4 seconds without touching the LLM. Here’s what helped: time every part of your chain to see what’s actually slow, run I/O operations in parallel instead of waiting on each one, cache repeated calls and deterministic steps, and strip out any unnecessary logging or repeated parsing. A bit of focused optimization made a huge difference.

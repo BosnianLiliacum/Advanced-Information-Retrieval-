@@ -1,0 +1,69 @@
+Post Title: [P] I forked Andrej Karpathy's LLM Council and added a Modern UI &amp; Settings Page, multi-AI API support, web search providers, and Ollama support
+Author: KobyStam
+Score: 39
+URL: https://www.reddit.com/r/MachineLearning/comments/1q4xj1d/p_i_forked_andrej_karpathys_llm_council_and_added/
+Number of comments: 13
+Created UTC: 1767645936.0
+
+Post Content:
+Hey everyone!
+
+I recently spent a couple of weekends improving Karpathy's excellent LLM Council Open Source Project.
+
+The [original project](https://github.com/karpathy/llm-council) was brilliant but lacked usability and flexibility imho.
+
+**What I added:**
+
+* Web search integration (DuckDuckGo, Tavily, Brave, Jina AI)
+* Clean Modern UI with a settings page to support:
+   * Support for multiple API providers (OpenRouter, Anthropic, OpenAI, Google, etc.)
+   * Customizable system prompts and temperature controls (the custom prompts open up tons of use cases beyond a "council")
+   * Export &amp; Import of councils, prompts, and settings (for backup and even sharing)
+   * Control the council size (from 1 to 8 - original only supported 3)
+* Full Ollama support for local models
+* "I'm Feeling Lucky" random model selector
+* Filter only Free models on OpenRouter (although Rate Limits can be an issue)
+* Control the Process, from a simple asking multiple models a question in parallel (Chat Only), Chat &amp; peer rating where models rate the responses of other models, and Full end-to-end deliberation where the Chairman model makes the final decision on the best answer
+
+You can compare up to 8 models simultaneously, watch them deliberate, and see rankings.
+
+Perfect for comparing local models or commercial models via APIs.
+
+📹 Demo video: [https://www.youtube.com/watch?v=HOdyIyccOCE](https://www.youtube.com/watch?v=HOdyIyccOCE)
+
+🔗 GitHub: [https://github.com/jacob-bd/llm-council-plus](https://github.com/jacob-bd/llm-council-plus)
+
+Would love to hear your thoughts - it was made with a lot of love and attention to detail, and now I am sharing it with you!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: olearyboy
+Score: 6
+Created UTC: 1767663376.0
+Comment: Suggest you do dockerized version of it, make it easier to get up and going
+
+Comment 2:
+Author: DigThatData
+Score: 5
+Created UTC: 1767667424.0
+Comment: any particular reason you opted to fork instead of upstream your improvements via one or more PRs?
+
+Comment 3:
+Author: 4whatreason
+Score: 4
+Created UTC: 1767669514.0
+Comment: Take a look at [MassGen](https://github.com/massgen/MassGen) it's pretty similar and quite advanced at this point
+
+Comment 4:
+Author: sampdoria_supporter
+Score: 2
+Created UTC: 1767661541.0
+Comment: Wow, very cool. Subscribed and starred the repo.
+
+Comment 5:
+Author: ChaosReminder
+Score: 2
+Created UTC: 1767672507.0
+Comment: Nice! Subscribed, liked and starred!

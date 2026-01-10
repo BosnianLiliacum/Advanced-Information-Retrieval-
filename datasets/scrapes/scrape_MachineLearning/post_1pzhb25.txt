@@ -1,0 +1,48 @@
+Post Title: [D] Project Silicon: Differentiable CPU Simulators for Gradient-Based Assembly Optimization
+Author: Fair-Rain3366
+Score: 20
+URL: https://www.reddit.com/r/MachineLearning/comments/1pzhb25/d_project_silicon_differentiable_cpu_simulators/
+Number of comments: 9
+Created UTC: 1767098994.0
+
+Post Content:
+TL;DR: AlphaDev discovered faster sorting algorithms using MCTS, but treats the CPU as a black box requiring billions of samples. Project Silicon proposes training a 7B-parameter neural network to simulate x86-64 execution differentiably. This enables gradient descent on constants/operands while MCTS handles instruction selection. Key insight: separate discrete choices (which instruction) from continuous choices (what operands).
+
+[https://rewire.it/blog/project-silicon-gradient-descent-on-assembly-code/](https://rewire.it/blog/project-silicon-gradient-descent-on-assembly-code/)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: HelpingForDoughnuts
+Score: 7
+Created UTC: 1767129370.0
+Comment: Interesting framing. The discrete vs continuous decomposition makes sense on paper—MCTS for instruction selection, gradients for operands. But I’m a little skeptical about a few things:
+Training a 7B model to accurately simulate x86-64 microarchitecture seems… ambitious? Like you’re not just modeling the ISA semantics, you need to capture pipeline behavior, cache effects, branch prediction, etc. for the performance signal to mean anything. And that stuff varies wildly across CPU generations. A model trained on Zen4 behavior might give you garbage gradients for Alder Lake. Are you targeting one specific microarch or trying to generalize?
+Also wondering about the gradient quality even if the simulator is accurate-ish. Assembly optimization is notoriously discontinuous—swap one instruction and your whole pipeline schedule changes, a loop suddenly fits in cache or doesn’t, etc. Feels like the loss landscape might be so jagged that gradients are misleading more often than helpful. AlphaDev’s black-box approach is sample-hungry but at least it’s not lying to itself about smoothness that isn’t there.
+That said, the hybrid approach is compelling if it works. Even a rough differentiable approximation could help prune the MCTS search space dramatically. Has there been any preliminary work on how accurate the neural simulator needs to be before the gradients become useful rather than harmful?
+Cool project either way. Will be following along.
+
+Comment 2:
+Author: AsIAm
+Score: 2
+Created UTC: 1767124509.0
+Comment: I love this. Looking forward to some results.
+
+Comment 3:
+Author: NoLifeGamer2
+Score: 2
+Created UTC: 1767105060.0
+Comment: This is very cool! However, just because it is differentiable doesn't mean that the loss surface wrt the assembly code tokens will be smooth. Have you done some sort of PCA analysis of the loss surface of some optimization problem wrt the input tokens (which I assume are what you would be optimising for)?
+
+Comment 4:
+Author: slashdave
+Score: 1
+Created UTC: 1767202465.0
+Comment: If you want to build a better compiler optimizer, your first step is to actually understand how a compiler works.
+
+Comment 5:
+Author: LiquidDinosaurs69
+Score: 1
+Created UTC: 1767207034.0
+Comment: How do they model the memory usage? Thy talk about the model predicting the state of the registers, but I think it would really be more difficult to model the memory usage. Which has its own latencies too.

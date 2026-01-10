@@ -1,0 +1,29 @@
+Post Title: unable to do much with agents course final assignment
+Author: Witty_Barnacle1710
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1pzdu74/unable_to_do_much_with_agents_course_final/
+Number of comments: 2
+Created UTC: 1767087152.0
+
+Post Content:
+after downloading the questions from the given url, i'm unable to fetch the correct images from the url. i consulted it's openapi.json, asked various ai chatbots, but nothing gave me a good response. when i enter the url in the browser, alll it says is 
+
+    {"detail":"No file path associated with task_id {task_id."}
+
+where i just copy pasted the task id  
+the url was [https://agents-course-unit4-scoring.hf.space/files/{task\_id}](https://agents-course-unit4-scoring.hf.space/files/{task_id}) i don't know what to do anymore
+
+
+Top 2 comments:
+
+Comment 1:
+Author: slrg1968
+Score: 1
+Created UTC: 1767121904.0
+Comment: Contact the course author or your professor -- there might be an error in the URL you were given
+
+Comment 2:
+Author: jungaHung
+Score: 1
+Created UTC: 1767239951.0
+Comment: The task id in your url is a placeholder. Do you have the task id? Try replacing {task_id} with the actual task id.

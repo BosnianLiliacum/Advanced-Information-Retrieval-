@@ -1,0 +1,37 @@
+Post Title: Hindsight: Python OSS Memory for AI Agents - SOTA (91.4% on LongMemEval)
+Author: fanciullobiondo
+Score: 5
+URL: https://www.reddit.com/r/LangChain/comments/1po3ood/hindsight_python_oss_memory_for_ai_agents_sota/
+Number of comments: 0
+Created UTC: 1765896245.0
+
+Post Content:
+Not affiliated - sharing because the benchmark result caught my eye.
+
+A Python OSS project called Hindsight just published results claiming 91.4% on LongMemEval, which they position as SOTA for agent memory.
+
+Might this be better than LangMem and a drop-in replacement??
+
+
+
+The claim is that most agent failures come from poor memory design rather than model limits, and that a structured memory system works better than prompt stuffing or naive retrieval.
+
+Summary article:
+
+[https://venturebeat.com/data/with-91-accuracy-open-source-hindsight-agentic-memory-provides-20-20-vision](https://venturebeat.com/data/with-91-accuracy-open-source-hindsight-agentic-memory-provides-20-20-vision)
+
+arXiv paper:
+
+[https://arxiv.org/abs/2512.12818](https://arxiv.org/abs/2512.12818)
+
+GitHub repo (open-source):
+
+[https://github.com/vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)
+
+Would be interested to hear how people here judge LongMemEval as a benchmark and whether these gains translate to real agent workloads.
+
+  
+
+
+
+Top 0 comments:

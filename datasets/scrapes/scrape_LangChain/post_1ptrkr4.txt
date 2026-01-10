@@ -1,0 +1,38 @@
+Post Title: Is deep-agents-cli meant only for CLI use?
+Author: Other_Past_2880
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1ptrkr4/is_deepagentscli_meant_only_for_cli_use/
+Number of comments: 10
+Created UTC: 1766489087.0
+
+Post Content:
+Quick question about `deep-agents-cli` vs `deepagents`:
+
+I understand that `deepagents` is a separate Python package and not directly related to the CLI. What I’m trying to figure out is whether `deep-agents-cli` is intended **only** for CLI-based workflows, or if it’s also reasonable to use it as a standard agent inside a larger multi-agent system.
+
+In other words: is the CLI a thin interface over a reusable agent, or is it intentionally scoped just for CLI products?
+
+Also, if anyone is using `deep-agents-cli` **in production** (e.g. deployed in the cloud, as part of an internal tool, or integrated into a broader system), I’d really appreciate hearing about your setup and lessons learned.
+
+
+
+
+Top 2 comments:
+
+Comment 1:
+Author: vtrivedy-lc
+Score: 4
+Created UTC: 1766523215.0
+Comment: hey hey OP, really good question!  I lead DeepAgents at LangChain, we should def make this clearer!
+
+So we have the deepagents package which is our SDK for building fully open, customizable agents/harnesses.  The deepagents-cli package is an opinionated project and usable reference implementation built on the SDK that adds some features and middleware specifically for agentic coding tasks.  Yes it’s primarily for CLI workflows but again is fully open and built on the SDK which we recommend and should make clear as the best starting point if you’re looking to build and host your own agents.
+
+There are features in the CLI that we’re working on adding to the SDK as first class citizens like Skills.  Actually would love to get any feedback from the community on what builders want from the SDK to make the DX easier and more configurable to build on!
+
+Hope this helps!  Any questions feel free to reply or DM me here!
+
+Comment 2:
+Author: Less-Ad8845
+Score: 2
+Created UTC: 1766875218.0
+Comment: It would be great to see deep-agents-cli working with Bedrock. Skills will be a big plus for the SDK.

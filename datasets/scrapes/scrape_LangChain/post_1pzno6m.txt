@@ -1,0 +1,70 @@
+Post Title: Semantic caching cut our LLM costs by almost 50% and I feel stupid for not doing it sooner
+Author: Otherwise_Flan7339
+Score: 131
+URL: https://www.reddit.com/r/LangChain/comments/1pzno6m/semantic_caching_cut_our_llm_costs_by_almost_50/
+Number of comments: 27
+Created UTC: 1767114743.0
+
+Post Content:
+So we've been running this AI app in production for about 6 months now. Nothing crazy, maybe a few hundred daily users, but our OpenAI bill hit $4K last month and I was losing my mind. Boss asked me to figure out why we're burning through so much money.
+
+Turns out we were caching responses, but only with exact string matching. Which sounds smart until you realize users never type the exact same thing twice. "What's the weather in SF?" gets cached. "What's the weather in San Francisco?" hits the API again. Cache hit rate was like 12%. Basically useless.
+
+Then I learned about semantic caching and honestly it's one of those things that feels obvious in hindsight but I had no idea it existed. We ended up using Bifrost (it's an open source LLM gateway) because it has semantic caching built in and I didn't want to build this myself.
+
+The way it works is pretty simple. Instead of matching exact strings, it matches the meaning of queries using embeddings. You generate an embedding for every query, store it with the response in a vector database, and when a new query comes in you check if something semantically similar already exists. If the similarity score is high enough, return the cached response instead of hitting the API.
+
+Real example from our logs - these four queries all had similarity scores above 0.90:
+
+* "How do I reset my password?"
+* "Can't remember my password, help"
+* "Forgot password what do I do"
+* "Password reset instructions"
+
+With traditional caching that's 4 API calls. With semantic caching it's 1 API call and 3 instant cache hits.
+
+Bifrost uses Weaviate for the vector store by default but you can configure it to use Qdrant or other options. The embedding cost is negligible - like $8/month for us even with decent traffic. GitHub: [https://github.com/maximhq/bifrost](https://github.com/maximhq/bifrost)
+
+After running this for 30 days our bill dropped drastically. Cache hit rate went up. And as a bonus, cached responses are way faster - like 180ms vs 2+ seconds for actual API calls.
+
+The tricky part was picking the similarity threshold. We tried 0.70 at first and got some weird responses where the cache would return something that wasn't quite right. Bumped it to 0.95 and the cache barely hit anything. Settled on 0.85 and it's been working great.
+
+Also had to think about cache invalidation - we expire responses after 24 hours for time-sensitive stuff and 7 days for general queries.
+
+The best part is we didn't have to change any of our application code. Just pointed our OpenAI client at Bifrost's gateway instead of OpenAI directly and semantic caching just works. It also handles failover to Claude if OpenAI goes down, which has saved us twice already.
+
+If you're running LLM stuff in production and not doing semantic caching you're probably leaving money on the table. We're saving almost $2K/month now.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: hyma
+Score: 21
+Created UTC: 1767131322.0
+Comment: Advertisement?
+
+Comment 2:
+Author: Whyme-__-
+Score: 11
+Created UTC: 1767149017.0
+Comment: Just pipe the entire codebase of Roo code into Gemini and ask it to pull the algorithm of semantic caching and distill into simple technical spec sheet.  Then add it to your code. Concepts like these are easier to implement if you already have someone who opensourced the tech.
+
+Comment 3:
+Author: Conscious_Nobody9571
+Score: 6
+Created UTC: 1767122579.0
+Comment: Repost
+
+Comment 4:
+Author: Far_Buyer_7281
+Score: 3
+Created UTC: 1767117355.0
+Comment: Seems like something I would warn my users about at least?  
+isn't a query more then its semantic meaning?
+
+Comment 5:
+Author: tomomcat
+Score: 3
+Created UTC: 1767216339.0
+Comment: Lame advert. This is just pollution.

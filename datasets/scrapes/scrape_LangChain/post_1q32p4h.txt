@@ -1,0 +1,59 @@
+Post Title: Do you prefer to make Human-in-the-loop approvals on your phone or PC
+Author: Antique_Try7765
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1q32p4h/do_you_prefer_to_make_humanintheloop_approvals_on/
+Number of comments: 16
+Created UTC: 1767466356.0
+
+Post Content:
+I am currently building an HITL system that initiates with systems but I want to understand how people prefer to make human input into their workflows or agents. &gt;&gt; [hitl.sh](http://hitl.sh)
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Signal_Question9074
+Score: 4
+Created UTC: 1767479281.0
+Comment: ok, let me save you from some hair pulling.
+
+Great question furst if all becuase I've been building HITL into my own agent system, so I have some thoughts on this.
+
+**Short answer: PC for complex decisions, phone for quick approvals.**
+
+But the real insight I learned: **the UX design matters more than the device.**
+
+**What I built:**
+
+My system uses a request/response pattern (similar to how Claude Code handles it). When the agent needs human input, it doesn't truly "pause" mid-execution it completes its turn, returns a question marker, and the backend emits a socket event to the frontend:
+
+    // Agent returns this when it needs input
+    {
+      __askUser: true,
+      question: "Which database should we use?",
+      options: [
+        { label: "PostgreSQL", description: "Relational, ACID compliant" },
+        { label: "MongoDB", description: "Document store, flexible schema" }
+      ],
+      multiSelect: false
+    }
+
+Comment 2:
+Author: amilo111
+Score: 3
+Created UTC: 1767483346.0
+Comment: Who are you building this for?  The answer to your question depends heavily on the target persona and use case.
+
+Also what hitl interactions are you solving for?  I’ve worked on applications that had hitl and we had to solve for multiple different interaction models depending on what the customer was trying to do and how we fit into their processes.
+
+Comment 3:
+Author: Reasonable-Life7326
+Score: 2
+Created UTC: 1767496877.0
+Comment: PC all the way
+
+Comment 4:
+Author: pebblebypebble
+Score: 1
+Created UTC: 1767491207.0
+Comment: Phone if it is quick but mostly on my laptop… either way I prefer to do any of it with audio playback at the same time. Some of it can be complicated and the audio playback as I read really helps.

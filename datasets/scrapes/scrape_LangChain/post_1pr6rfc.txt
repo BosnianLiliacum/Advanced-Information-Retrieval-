@@ -1,0 +1,50 @@
+Post Title: How are you guys designing your agents?
+Author: SnooRobots7280
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1pr6rfc/how_are_you_guys_designing_your_agents/
+Number of comments: 6
+Created UTC: 1766209054.0
+
+Post Content:
+After testing a few different methods, what I've ended up liking is using standard tool calling with langgraph worfklows. So i wrap the deterministic workflows as agents which the main LLM calls as tools. This way the main LLM gives the genuine dynamic UX and just hands off to a workflow to do the heavy lifting which then gives its output nicely back to the main LLM. 
+
+Sometimes I think maybe this is overkill and just giving the main LLM raw tools would be fine but at the same time, all the helper methods and arbitrary actions you want the agent to take is literally built for workflows.   
+  
+This is just from me experimenting but I would be curious if there's a consensus/standard way of  designing agents at the moment. It depends on your use case, sure, but what's been your typical experience 
+
+
+Top 4 comments:
+
+Comment 1:
+Author: attn-transformer
+Score: 3
+Created UTC: 1766305567.0
+Comment: Your workflow isn’t overkill. This has worked for me : 
+
+- Reduce the cognitive load of every llm call. 
+- Keep context windows as small as possible, only pass what is required. 
+- Really really good tracing tools. 
+- Pass in a limited set of tools.
+
+Comment 2:
+Author: BandiDragon
+Score: 2
+Created UTC: 1766240058.0
+Comment: Deterministic tasks -&gt; workflows
+Non deterministic tasks -&gt; agent plus reasoning if the domain is very non specific
+
+If you have subtasks that are deterministic tools with frameworks inside are a cool approach
+
+Comment 3:
+Author: Spy_machine
+Score: 1
+Created UTC: 1766234942.0
+Comment: I haven’t deployed anything to production yet, but my thinking was a hybrid of both approaches. For the use cases we want to nail, use subgraphs to direct the flow. For use cases that are rare or we haven’t accounted for, more generic tools that can be mixed and matched by LLM.
+
+Then use tracing to find what problems customers are trying to solve the most or are having the most issues with, and prioritize building subgraphs for those.
+
+Comment 4:
+Author: mikelevan
+Score: 1
+Created UTC: 1766525274.0
+Comment: I think you’re thinking about it the right way. I don’t believe there’s overthinking to get deterministic results in a non-deterministic world.

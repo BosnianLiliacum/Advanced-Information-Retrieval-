@@ -1,0 +1,36 @@
+Post Title: A lightweight, local alternative to LangChain for pre-processing RAG data? I built a pure-Polars engine.
+Author: Low-Flow-6572
+Score: 5
+URL: https://i.redd.it/ivh08u4u868g1.png
+Number of comments: 2
+Created UTC: 1766154753.0
+
+Post Content:
+Hi everyone,
+
+I love the LangChain ecosystem for building apps, but sometimes I just need to clean, chunk, and deduplicate a messy dataset *before* it even hits the vector database. Spinning up a full LC pipeline just for ETL felt like overkill for my laptop.
+
+So I built **EntropyGuard** – a standalone CLI tool specifically for RAG data prep.
+
+**Why you might find it useful:**
+
+* **Zero Bloat:** It doesn't install the entire LC ecosystem. Just Polars, FAISS, and Torch.
+* **Semantic Deduplication:** Removes duplicates from your dataset *before* you pay for embedding/storage in Pinecone/Weaviate.
+* **Native Chunker:** I implemented a `RecursiveCharacterTextSplitter` logic natively in Polars, so it's super fast on large files (CSV/Excel/Parquet).
+
+It runs 100% locally (CPU), supports custom separators, and handles 10k+ rows in minutes.
+
+**Repo:** [https://github.com/DamianSiuta/entropyguard](https://github.com/DamianSiuta/entropyguard)
+
+Hope it helps save some tokens and storage costs!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: OnyxProyectoUno
+Score: 1
+Created UTC: 1766157816.0
+Comment: EntropyGuard looks like a solid approach for the preprocessing stage. The semantic deduplication step is particularly smart since catching duplicates before embedding can save serious compute costs, especially when you're dealing with messy enterprise datasets that tend to have tons of redundant content.
+
+One thing I've noticed with preprocessing pipelines is that debugging chunking issues becomes tricky once you've committed to a strategy, since you often don't see the problems until retrieval quality suffers later. vectorflow.dev lets you preview exactly what your chunks look like at each processing step before anything hits the vector store, which can be helpful for dialing in those separator rules and chunk sizes. Are you planning to add any visualization features to EntropyGuard to show the chunk boundaries and sizes?

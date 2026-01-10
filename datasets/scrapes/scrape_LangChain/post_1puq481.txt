@@ -1,0 +1,63 @@
+Post Title: (TOOL) Built the first LangSmith observability skill for Claude Code - fetch traces directly from terminal
+Author: Signal_Question9074
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1puq481/tool_built_the_first_langsmith_observability/
+Number of comments: 0
+Created UTC: 1766590627.0
+
+Post Content:
+Hey r/LangChain! 👋
+
+I've been building production LangChain agents for the past year, and one thing that consistently slowed me down was debugging. LangSmith Studio has excellent traces, but I was constantly switching between my terminal and browser to fetch and analyze them.
+
+So I built a Claude Code skill that automates this entire workflow.
+
+# What it does:
+
+Claude can now automatically:
+
+* Fetch recent traces from LangSmith (last N minutes)
+* Analyze specific trace by ID
+* Detect and categorize errors
+* Review tool calls and execution flow
+* Check memory operations (LTM)
+* Track token usage and costs
+* Export debug sessions to files
+
+# Example workflow:
+
+    You: "Debug my agent - what happened in the last 5 minutes?"
+    
+    Claude: [Automatically runs langsmith-fetch commands]
+    
+    Found 3 traces:
+    - Trace 1: ✅ Success (memento, 2.3s, 1,245 tokens)
+    - Trace 2: ❌ Error (cypher, Neo4j timeout at search_nodes)
+    - Trace 3: ✅ Success (memento, 1.8s, 892 tokens)
+    
+    💡 Issue: Trace 2 failed due to Neo4j timeout. Recommend adding retry logic.
+
+# Technical details:
+
+* Uses the `langsmith-fetch` CLI under the hood
+* Model-invoked (Claude decides when to use it)
+* Works with any LangChain/LangGraph agent
+* 4 core debugging workflows built-in
+* MIT licensed
+
+# Installation:
+
+    pip install langsmith-fetch
+    mkdir -p ~/.claude/skills/langsmith-fetch
+    curl -o ~/.claude/skills/langsmith-fetch/SKILL.md https://raw.githubusercontent.com/OthmanAdi/langsmith-fetch-skill/main/SKILL.md
+
+**Repo:** [https://github.com/OthmanAdi/langsmith-fetch-skill](https://github.com/OthmanAdi/langsmith-fetch-skill)
+
+This is v0.1.0 - would love feedback from the community! What other debugging workflows would be helpful?
+
+Also just submitted a PR to awesome-claude-skills. Hoping this fills a gap in the Claude Skills ecosystem (currently no observability/debugging skills exist).
+
+Let me know if you run into issues or have suggestions! 🙏
+
+
+Top 0 comments:

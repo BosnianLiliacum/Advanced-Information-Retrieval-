@@ -1,0 +1,52 @@
+Post Title: [R] debugging-only LLM? chronos-1 paper claims 4–5x better results than GPT-4 ... thoughts?
+Author: DingoOk9171
+Score: 12
+URL: https://www.reddit.com/r/MachineLearning/comments/1pjxs4c/r_debuggingonly_llm_chronos1_paper_claims_45x/
+Number of comments: 13
+Created UTC: 1765460439.0
+
+Post Content:
+i stumbled on a paper about a model called chronos-1 that’s trained purely on debugging workflows ... no autocomplete, no codegen, just stack traces, logs, test failures, and bug patches.
+they claim 80.33% on SWE-bench Lite. (for reference: gpt-4 gets 13.8%, claude 14.2%).
+ it also does graph-guided repo traversal, uses persistent memory of prior bugs, and runs an internal fix → test → refine loop.
+they're calling it the first LLM made only for debugging. not public yet, but the paper is out:
+ https://arxiv.org/abs/2507.12482
+they’re pushing the idea that debugging is a different task from generation ... more causal, historical, iterative.
+curious: has anyone here looked into it deeper? what’s your take on AGR + persistent memory as the core innovation?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: marr75
+Score: 9
+Created UTC: 1765464295.0
+Comment: 1. Not public yet
+2. Quarrels with firmly established ideas of positive transfer
+3. Results on a notoriously problematic benchmark where performance is DOMINATED by the agentic harness over the actual model
+
+Yeah, I'm going to have to wait until the model is available and there's some independent verification to care about this one.
+
+Comment 2:
+Author: kdfn
+Score: 2
+Created UTC: 1765467100.0
+Comment: Why did they pick the exact same name as the widely used Amazon time series foundation models?
+
+Comment 3:
+Author: Lup1chu
+Score: 1
+Created UTC: 1765469149.0
+Comment: can’t wait for someone to replicate the benchmarks. feels too good lol.
+
+Comment 4:
+Author: nadji190
+Score: 1
+Created UTC: 1765579437.0
+Comment: i’ve been saying for years that debugging needs a separate modeling approach. generation is about creativity. debugging is about forensics. completely different mental model. this is the first paper that seems to get that. agr sounds sick too...traversing the repo as a graph instead of linear text? finally. hope open....source gets something similar soon.
+
+Comment 5:
+Author: lucasjesus7
+Score: 1
+Created UTC: 1765673799.0
+Comment: debug-only llm is a wild idea. surprised no one tried this earlier. results are insane if they hold up.

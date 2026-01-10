@@ -1,0 +1,36 @@
+Post Title: Reachy Mini IDE Prototype
+Author: Creative-Scene-6743
+Score: 4
+URL: https://www.reddit.com/r/huggingface/comments/1pyv0vf/reachy_mini_ide_prototype/
+Number of comments: 2
+Created UTC: 1767035217.0
+
+Post Content:
+I received my **Reachy Mini**, and instead of sticking with the usual “SSH-terminal juggling” workflow, I wanted to see if I could configure something that feels closer to modern day IDE workflow using VS Code as a base.
+
+The goal for this IDE:  
+ \- Remote development directly on Reachy Mini  
+ \- Run programs inside Reachy Mini’s App Python environement   
+ \- Full Python debugging support  
+ \- Primitive, but realtime performance monitoring 
+
+I ended up combining VS Code with [Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh), [SSH monitor](https://marketplace.visualstudio.com/items?itemName=femtowork.ssh-remote-monitor) and installation of [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) in Remote Extension Host to enable debugging. Full step-by-step guide availlable [here](https://tobrun.github.io/blog/reachy-mini-ide/) 
+
+[Remote Python Debugging](https://preview.redd.it/c6m4olwgy6ag1.png?width=2384&amp;format=png&amp;auto=webp&amp;s=f02c52af4d71dd3127a758c44cbf590925596c7b)
+
+
+
+
+Top 2 comments:
+
+Comment 1:
+Author: clem59480
+Score: 1
+Created UTC: 1767408153.0
+Comment: very cool
+
+Comment 2:
+Author: LostGoatOnHill
+Score: 1
+Created UTC: 1767689394.0
+Comment: nice! How are you finding Reachy mini, still experimenting? Did you got for the lite or wireless version, how did you decide?

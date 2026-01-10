@@ -1,0 +1,24 @@
+Post Title: [P] I wrote a CUDA Locality Sensitive Hashing library with Python bindings
+Author: doku_
+Score: 15
+URL: https://www.reddit.com/r/MachineLearning/comments/1q533gi/p_i_wrote_a_cuda_locality_sensitive_hashing/
+Number of comments: 0
+Created UTC: 1767658784.0
+
+Post Content:
+I've been working on cuLSH, a GPU-accelerated library for Locality Sensitive Hashing.
+
+**Main Features:**
+
+* **Scikit-Learn Style API:** Uses a familiar `fit()` / `query()` style API for building and searching the LSH index.
+* **CUDA-native:** All components (projection generation, hashing, indexing, querying), are performed on the GPU via custom kernels. 
+* **End-to-End:** Not just a hasher; includes bucketed searching and candidate neighbor collection.
+
+I know there are plenty of LSH implementations out there, but many focus purely on generating signatures rather than a full indexing/querying pipeline, so that was what I was going for. I'm aware LSH may be less popular in favor of graph-based algorithms, but I was really drawn to the theory of LSH, so it was a fun learning project. 
+
+**GitHub link:** [https://github.com/rishic3/cuLSH](https://github.com/rishic3/cuLSH)
+
+Would love some feedback on the API design or implementation, and suggestions for improvement!
+
+
+Top 0 comments:

@@ -1,0 +1,30 @@
+Post Title: A free goldmine of AI agent examples, and advanced workflows
+Author: Creepy-Row970
+Score: 16
+URL: https://www.reddit.com/r/LangChain/comments/1poxh6j/a_free_goldmine_of_ai_agent_examples_and_advanced/
+Number of comments: 1
+Created UTC: 1765980636.0
+
+Post Content:
+Hey folks,
+
+I’ve been exploring AI agent frameworks for a while, mostly by reading docs and blog posts, and kept feeling the same gap. You understand the ideas, but you still don’t know how a real agent app should look end to end.
+
+That’s how I found [Awesome AI Apps](https://github.com/Arindam200/awesome-ai-apps) **repo on Github**. I started using it as a reference, found it genuinely helpful, and later began contributing small improvements back.
+
+It’s an open source collection of **70+ working AI agent projects**, ranging from simple starter templates to more advanced, production style workflows. What helped me most is seeing similar agent patterns implemented across multiple frameworks like LangChain and LangGraph, LlamaIndex, CrewAI, Google ADK, OpenAI Agents SDK, AWS Strands Agent, and Pydantic AI. You can compare approaches instead of mentally translating patterns from docs.
+
+The examples are practical:
+
+* Starter agents you can extend
+* Simple agents like finance trackers, HITL workflows, and newsletter generators
+* MCP agents like GitHub analyzers and doc Q&amp;A
+* RAG apps such as resume optimizers, PDF chatbots, and OCR pipelines
+* Advanced agents like multi-stage research, AI trend mining, and job finders
+
+In the last few months the repo has crossed **almost 8,000 GitHub stars**, which says a lot about how many developers are looking for real, runnable references instead of theory.
+
+If you’re learning agents by reading code or want to see how the same idea looks across different frameworks, this repo is worth bookmarking. I’m contributing because it saved me time, and sharing it here because it’ll likely do the same for others.
+
+
+Top 0 comments:

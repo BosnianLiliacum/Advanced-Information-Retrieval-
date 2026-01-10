@@ -1,0 +1,74 @@
+Post Title: [R] EGGROLL: trained a model without backprop and found it generalized better
+Author: Ok_Rub1689
+Score: 76
+URL: https://www.reddit.com/r/MachineLearning/comments/1ps8ru7/r_eggroll_trained_a_model_without_backprop_and/
+Number of comments: 17
+Created UTC: 1766330144.0
+
+Post Content:
+https://preview.redd.it/20m7rjecqk8g1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=df9c02904799f3667d1f7f7e90e72d3859f8edf0
+
+everyone uses contrastive loss for retrieval then evaluates with NDCG;
+
+i was like "what if i just... optimize NDCG directly" ...
+
+and I think that so wild experiment released by EGGROLL - Evolution Strategies at the Hyperscale ([https://arxiv.org/abs/2511.16652](https://arxiv.org/abs/2511.16652))
+
+the paper was released with JAX implementation so i rewrote it into pytorch.
+
+the problem is that NDCG has sorting. can't backprop through sorting.
+
+the solution is not to backprop, instead use evolution strategies. just add noise, see what helps, update in that direction. caveman optimization.
+
+the quick results...
+
+\- contrastive baseline: train=1.0 (memorized everything), val=0.125
+
+\- evolution strategies: train=0.32, val=0.154
+
+ES wins by 22% on validation despite worse training score.
+
+the baseline literally got a PERFECT score on training data and still lost. that's how bad overfitting can get with contrastive learning apparently.
+
+[https://github.com/sigridjineth/eggroll-embedding-trainer](https://github.com/sigridjineth/eggroll-embedding-trainer)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: OctopusGrime
+Score: 115
+Created UTC: 1766335737.0
+Comment: I don’t think you can draw such strong conclusions from the NanoMSMarco dataset, that’s only like 150 queries against 20k documents, of course gradient descent is going to overfit on that especially with a 1e-3 learning rate which is way too high for large retrieval models.
+
+Comment 2:
+Author: LanchestersLaw
+Score: 22
+Created UTC: 1766336991.0
+Comment: You didn’t put enough compute into either method. Let it cook.
+
+Comment 3:
+Author: Robot_Apocalypse
+Score: 16
+Created UTC: 1766358266.0
+Comment: Why are comparing to a broken training scheme? of course yours is better. 
+
+
+You are comparing to a baseline where it overfit and memorised the data, resulting in very poor performance on validation data, and then say your is better because your validation gets a better score than overfit-memorised-data validation?
+
+
+That's like saying my skateboard is better than your broken car that doesnt move. Of course it's better, the car is broken and doesn't move. 
+
+Comment 4:
+Author: elbiot
+Score: 13
+Created UTC: 1766340365.0
+Comment: Did you look at differentiable sorting methods? 
+
+https://arxiv.org/pdf/2006.16038
+
+Comment 5:
+Author: Celmeno
+Score: 8
+Created UTC: 1766355588.0
+Comment: Well. Neuroevolution works. Not a new revelation tbh. But always cool to see some prelim stuff work out. If you get to the point of it performing well / better on larger benchmarks this might be really interesting

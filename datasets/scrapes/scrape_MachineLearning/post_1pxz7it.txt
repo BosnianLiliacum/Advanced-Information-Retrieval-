@@ -1,0 +1,58 @@
+Post Title: How do you as an AI/ML researcher stay current with new papers and repos? [D]
+Author: 0ZQ0
+Score: 146
+URL: https://www.reddit.com/r/MachineLearning/comments/1pxz7it/how_do_you_as_an_aiml_researcher_stay_current/
+Number of comments: 62
+Created UTC: 1766948115.0
+
+Post Content:
+For those doing AI/ML research or engineering:
+
+1. How do you currently discover and track new research?
+2. What's the most frustrating part of your research workflow?
+3. How much time per week do you spend on research/staying current?
+
+Genuinely curious how others handle this and how much time you’re spending. Thanks!
+
+
+Top 5 comments:
+
+Comment 1:
+Author: dieplstks
+Score: 131
+Created UTC: 1766948856.0
+Comment: Author notifications on Scholar along with searching accepted papers at conferences (mostly ICML, ICLR, NeurIPS, and AAMAS) for keywords that I work on. Also Twitter
+
+Huge backlog since it's hard to determine how much signal a paper represents and there's so many of them. Have started having LLMs determine what's worth reading, but still calibrating how good it is at this
+
+10-12 hours a week (but I'm a 3rd year PhD student) on reading
+
+Comment 2:
+Author: K3tchM
+Score: 38
+Created UTC: 1766948923.0
+Comment: My niche has seminal papers that are usually cited in related works section of papers that would be relevant to me. I track citations to those paper through Google scholar, which is straightforward to set up.
+
+
+I am also tuning scholar-inbox recommendation algorithms. https://www.scholar-inbox.com/
+The tool send you a digested list of new papers along with a relevance score. Very useful to avoid the need to browse conference proceedings.
+
+Comment 3:
+Author: randOmCaT_12
+Score: 33
+Created UTC: 1766948998.0
+Comment: I know someone who spends time reading the title and abstract of every single paper that appears in top conferences. If he finds a paper interesting, he continues reading it. He just spent an entire week reading everything from NeurIPS. And whenever I want to find papers, I just ask him.
+
+Comment 4:
+Author: v1kstrand
+Score: 15
+Created UTC: 1766950963.0
+Comment: I use -&gt; [https://www.semanticscholar.org/](https://www.semanticscholar.org/) 
+
+Basically, it lets you do semantic searches based on papers added to your library, and it gives you updates when new papers match your profile.
+
+Comment 5:
+Author: Remote_Marzipan_749
+Score: 11
+Created UTC: 1766950975.0
+Comment: Authors and labs that I trust because I have tested their code can reproduce and repeat their experiments. Can’t read all of them and I have made peace with not knowing all of them. My field is niche combinatorial with reinforcement learning. So it helps.

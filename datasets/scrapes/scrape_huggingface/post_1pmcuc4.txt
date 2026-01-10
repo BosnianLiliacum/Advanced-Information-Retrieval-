@@ -1,0 +1,31 @@
+Post Title: Models are not downloaded
+Author: romyxr
+Score: 0
+URL: https://www.reddit.com/r/huggingface/comments/1pmcuc4/models_are_not_downloaded/
+Number of comments: 5
+Created UTC: 1765715002.0
+
+Post Content:
+The download doesn't even move. I am in the territory of Russia
+
+
+Top 3 comments:
+
+Comment 1:
+Author: Frosty_Chest8025
+Score: 1
+Created UTC: 1765747262.0
+Comment: I am not in russia, and hf download does nothing. Absolutely junk.
+
+Comment 2:
+Author: ZlobniyShurik
+Score: 1
+Created UTC: 1765810276.0
+Comment: Try Tor Browser. It's slow, but it works sometimes.   
+I'm from Russia, and yes, I can't download anything from HF either.
+
+Comment 3:
+Author: datamini
+Score: 1
+Created UTC: 1766158643.0
+Comment: God bless you. Use google colab to download model from HF to colab and then download from colab to your PC. Example command for colab: !wget path/to/file.safetensors Alternate way is to use modelscope website

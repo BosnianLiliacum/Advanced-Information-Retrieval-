@@ -1,0 +1,60 @@
+Post Title: [D] I summarized my 4-year PhD on Geometric Deep Learning for Molecular Design into 3 research questions
+Author: chaitjo
+Score: 156
+URL: https://www.reddit.com/r/MachineLearning/comments/1q72bd8/d_i_summarized_my_4year_phd_on_geometric_deep/
+Number of comments: 12
+Created UTC: 1767846890.0
+
+Post Content:
+I recently defended my PhD thesis at Cambridge and wrote a blog post reflecting on the journey. The thesis focuses on Geometric Deep Learning and moves from pure theory to wet-lab applications.
+
+I broke the research down into three main questions:
+
+1. **Expressivity:** How do we characterize the power of 3D representations? (Introducing the Geometric Weisfeiler-Leman Test).
+2. **Generative Modelling:** Can we build unified models for periodic and non-periodic systems? (Proposing the All-atom Diffusion Transformer).
+3. **Real-world Design:** Can generative AI actually design functional RNA? (Developing gRNAde and validating it with wet-lab experiments).
+
+It covers the transition from working on graph isomorphism problems to training large diffusion models and finally collaborating with biologists to test our designs in vitro.
+
+Full post here if you're interested: [https://chaitjo.substack.com/p/phd-thesis-in-three-questions](https://chaitjo.substack.com/p/phd-thesis-in-three-questions)
+
+Would love to discuss the current state of AI for Science or the transition from theory to application!
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Affectionate-Dot5725
+Score: 30
+Created UTC: 1767850129.0
+Comment: Hey Chaitanya,
+
+I've been a big fan of yours since gRNAde. I am curious about your opinions on the following couple. Thank you in advance.
+
+1. How do you see the equivariant models going with all going on? Do you think their role will change as the scale + data augmentation can overcome some of the use cases? I've read your posts on this but curious if your opinion changed with time. I am especially curious how you think this reflects to choice of models in industry. 
+
+2. What do you think is the way to test transfer learning in the models. For example you all atom diffusion is SOTA but to what extent can you say/how can you detect joint training increased representation learning. I might be looking at this in the wrong way tho.
+
+3. What are some of the hard lessons you've learned about the field in your phd. Especially in the wet lab validation phase.
+
+4. I am curious is what is next for you. I have been following your work since 2023 and as an undergrad wasn't sure on what he wanted to do, I have to say you've inspired me a lot. Unfortunately I missed your talk in netherlands a couple months before but please if you ever come to netherlands for a talk, post it on X.
+
+Comment 2:
+Author: NoPriorThreat
+Score: 1
+Created UTC: 1767892000.0
+Comment: Where do you get the initial training structures? Is it from X-ray of crystal or do you use ab initio methods? 
+
+How do you deal in both case with the fact that X-ray describes usually "unbiologically frozen" crystal and therefore it is different than in vivo structure or in a case of ab initio that the most ab initio method useful for such large systems are too costly and the approximate methods are often qualitatively wrong?
+
+Comment 3:
+Author: pfd1986
+Score: 1
+Created UTC: 1767898113.0
+Comment: Are you interested in a postdoc position on industry by any chance?
+
+Comment 4:
+Author: platinumposter
+Score: 1
+Created UTC: 1767905394.0
+Comment: Hey the link isn't working

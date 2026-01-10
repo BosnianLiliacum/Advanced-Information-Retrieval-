@@ -1,0 +1,25 @@
+Post Title: [P] The State Of LLMs 2025: Progress, Problems, and Predictions
+Author: seraschka
+Score: 111
+URL: https://magazine.sebastianraschka.com/p/state-of-llms-2025
+Number of comments: 20
+Created UTC: 1767123206.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 2 comments:
+
+Comment 1:
+Author: cavedave
+Score: 42
+Created UTC: 1767123493.0
+Comment: The OP has done AMA's here before and generally helped the community. So approved an non arXiv post even though its not the weekend
+
+Comment 2:
+Author: DrawWorldly7272
+Score: -12
+Created UTC: 1767126611.0
+Comment: What I personally felt throughout this year that several reasoning models are already achieving gold-level performance in major math competitions. On the top of that,  MCP has already become the standard for tool and data access in agent-style LLM systems (for now)   
+Also I'm predicting that the open-weight community will slowly but steadily adopt LLMs with local tool use and increasingly agentic capabilities. A lot of LLM benchmark and performance progress will come from improved tooling and inference-time scaling rather than from training or the core model itself.

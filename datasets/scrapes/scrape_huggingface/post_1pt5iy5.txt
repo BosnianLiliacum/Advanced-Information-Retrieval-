@@ -1,0 +1,12 @@
+Post Title: Nepalish dataset
+Author: Theory_582
+Score: 1
+URL: https://www.reddit.com/r/huggingface/comments/1pt5iy5/nepalish_dataset/
+Number of comments: 0
+Created UTC: 1766424729.0
+
+Post Content:
+I need code mix dataset for my final year project. I tried to scrape the google reviews of different part of Pokhara but those datasets are too messy and as i am working with code mix ones they are difficult to segregate. So anyone who has code mix dataset can you provide me? Otherwise it someone know how to detect romanized Nepali words in English text ca you help me?
+
+
+Top 0 comments:

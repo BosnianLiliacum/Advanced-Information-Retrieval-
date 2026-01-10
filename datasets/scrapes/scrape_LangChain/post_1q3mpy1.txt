@@ -1,0 +1,23 @@
+Post Title: How can I use use-stream-react / CopilotKit without LangSmith Cloud / AgentServer (self-hosted LangGraph)?
+Author: Other_Past_2880
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1q3mpy1/how_can_i_use_usestreamreact_copilotkit_without/
+Number of comments: 0
+Created UTC: 1767522610.0
+
+Post Content:
+Hey all,  
+I’m building a web app with **LangGraph** and I’m running my own backend/server.
+
+I’d like to use **LangSmith** `use-stream-react` (and possibly **CopilotKit**) to stream agent/graph updates to the React client, but the docs seem to assume **LangSmith Cloud + AgentServer**.
+
+**Question:**  
+Can [use-stream-react](https://docs.langchain.com/langsmith/use-stream-react) / CopilotKit work with a self-hosted server (no AgentServer / no LangSmith Cloud)?  
+If yes, what does my server need to expose (SSE? specific event schema?) so the client hooks/components work?
+
+If not, what’s the recommended way to stream LangGraph events to React in a similar experience?
+
+Thanks!
+
+
+Top 0 comments:

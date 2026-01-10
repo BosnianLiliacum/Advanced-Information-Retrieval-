@@ -1,0 +1,14 @@
+Post Title: How can I duplicate and pay for a model?
+Author: moneynoclass
+Score: 2
+URL: https://www.reddit.com/r/huggingface/comments/1ptzs4r/how_can_i_duplicate_and_pay_for_a_model/
+Number of comments: 0
+Created UTC: 1766510996.0
+
+Post Content:
+Hi, I am a pro user but need more GPU time than the 25 minutes. I gave tried duplicating the space I want to use but whenever I try to switch the hardware I get an error. 
+
+I'm totally new, complete beginner to this. What's an easy way to duplicate a space that's on zeroGPU and be able to pay to use it myself? Thank you for any help or guidance. 
+
+
+Top 0 comments:

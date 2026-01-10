@@ -1,0 +1,171 @@
+Post Title: Top Reranker Models: I tested them all so You don't have to
+Author: Kacjy
+Score: 35
+URL: https://www.reddit.com/r/LangChain/comments/1pnos8a/top_reranker_models_i_tested_them_all_so_you_dont/
+Number of comments: 12
+Created UTC: 1765847464.0
+
+Post Content:
+Hey guys, I've been working on LLM apps with RAG systems for the past 15 months as a forward deployed engineer. I've used the following rerank models extensively in production setups: **ZeroEntropy**'s **zerank-2**, **Cohere Rerank** 4, **Jina Reranker** v2, and **LangSearch Rerank** V1.  
+
+
+# Quick Intro on the rerankers: 
+
+  
+\- ZeroEntropy zerank-2 (released November 2025): Multilingual cross-encoder available via API and Hugging Face (non-commercial license for weights). Supports instructions in the query, 100+ languages with code-switching, normalized scores (0-1), \~60ms latency reported in tests.  
+**-** Cohere Rerank 4 (released December 2025): Enterprise-focused, API-based. Supports 100+ languages, quadrupled context window compared to previous version.  
+**-** Jina Reranker v2 (base-multilingual, released 2024/2025 updates): Open on Hugging Face, cross-lingual for 100+ languages, optimized for code retrieval and agentic tasks, high throughput (reported 15x faster than some competitors like bge-v2-m3).  
+**-** LangSearch Rerank V1: Free API, reorders up to 50 documents with 0-1 scores, integrates with keyword or vector search.
+
+# Why use rerankers in LLM apps?
+
+Rerankers reorder initial retrieval results based on relevance to the query. This improves metrics like NDCG@10 and reduces irrelevant context passed to the LLM.
+
+Even with large context windows in modern LLMs, precise retrieval matters in enterprise cases. You often need specific company documents or domain data without sending everything, to avoid high costs, latency, or off-topic responses. Better retrieval directly affects accuracy and ROI.
+
+# Quick overviews
+
+We'll explore their features, advantages, and applicable scenarios, accompanied by a comprehensive comparison table to present what we're going to do. ZeroEntropy zerank-2 leads with instruction handling, calibrated scores, and \~60ms latency for multilingual search. Cohere Rerank 4 offers deep reasoning with quadrupled context. Jina prioritizes fast inference and code optimization. LangSearch enables no-cost semantic boosts.
+
+Below is a comparison based on data from HF, company blogs, and published benchmarks up to December 2025. I'm also running personal tests on my own datasets, and I'll share those results in a separate thread later.
+
+# [**ZeroEntropy zerank-2**](https://www.zeroentropy.dev/articles/zerank-2-advanced-instruction-following-multilingual-reranker)
+
+https://preview.redd.it/w67nruk4sg7g1.png?width=881&amp;format=png&amp;auto=webp&amp;s=b9bff43e07b7e3c667043d5cb0eb8376ecca5029
+
+[ZeroEntropy](https://www.zeroentropy.dev/) released zerank-2 in November 2025, a multilingual cross-encoder for semantic search and RAG. API/Hugging Face available.
+
+**Features:**
+
+* Instruction-following for query refinement (e.g., disambiguate "IMO").
+* 100+ languages with code-switching support.
+* Normalized 0-1 scores + confidence.
+* Aggregation/sorting like SQL "ORDER BY".
+* \~60ms latency.
+* zELO training for reliable scores.
+
+**Advantages:**
+
+* \~15% &gt; Cohere on multilingual and 12% higher NDCG@10 sorting.
+* $0.025/1M tokens which is 50% cheaper than proprietary.
+* Fixes scoring inconsistencies and jargon.
+* Drop-in integration and open-source.
+
+**Scenarios:** Complex workflows like legal/finance, agentic RAG, multilingual apps.
+
+# Cohere Rerank 4
+
+Cohere launched Rerank 4 in December 2025 for enterprise search. API-compatible with AWS/Azure.
+
+https://preview.redd.it/3n2ljcnosg7g1.png?width=883&amp;format=png&amp;auto=webp&amp;s=a6022cf84c4b91fc167964a718446f0985846845
+
+**Features:**
+
+* Reasoning for constrained queries with metadata/code.
+* 100+ languages, strong in business ones.
+* Cross-encoding scoring for RAG optimization.
+* Low latency.
+
+**Advantages:**
+
+* Builds on 23.4% &gt; hybrid, 30.8% &gt; BM25.
+* Enterprise-grade, cuts tokens/hallucinations.
+
+**Scenarios:** Large-scale queries, personalized search in global orgs.
+
+# Jina Reranker v2
+
+https://preview.redd.it/kn47gp50tg7g1.png?width=605&amp;format=png&amp;auto=webp&amp;s=d747a23dd9bd21f22d953a947fcdd0db492a94e9
+
+Jina AI v2 (June 2024), speed-focused cross-encoder. Open on Hugging Face.
+
+**Features:**
+
+* 100+ languages cross-lingual.
+* Function-calling/text-to-SQL for agentic RAG.
+* Code retrieval optimized.
+* Flash Attention 2 with 278M params.
+
+**Advantages:**
+
+* 15x throughput &gt; bge-v2-m3.
+* 20% &gt; vector on BEIR/MKQA.
+* Open-source customization.
+
+**Scenarios:** Real-time search, code repos, high-volume processing.
+
+# LangSearch Rerank V1
+
+https://preview.redd.it/q9avcqw6tg7g1.png?width=893&amp;format=png&amp;auto=webp&amp;s=1d308083b01423aade0fea82a477a5befec6be80
+
+LangSearch free API for semantic upgrades. Docs on GitHub.
+
+**Features:**
+
+* Reorders up to 50 docs with 0-1 scores.
+* Integrates with BM25/RRF.
+* Free for small teams.
+
+**Advantages:**
+
+* No cost, matches paid performance.
+* Simple API key setup.
+
+**Scenarios:** Budget prototyping, quick semantic enhancements.
+
+
+
+
+
+# Performance comparison table
+
+|**Model**|**Multilingual Support**|**Speed/Latency/Throughput**|**Accuracy/Benchmarks**|**Cost/Open-Source**|**Unique Features**|
+|:-|:-|:-|:-|:-|:-|
+|ZeroEntropy zerank-2|100+ cross-lingual|\~60ms|\~15% &gt; Cohere multilingual and 12% higher NDCG@10 sorting|$0.025/1M and Open HF|Instruction-following, calibration|
+|Cohere Rerank 4|100+|Negligible|Builds on 23.4% &gt; hybrid, 30.8% &gt; BM25|Paid API|Self-learning, quadrupled context|
+|Jina Reranker v2|100+ cross-lingual|6x &gt; v1; 15x &gt; bge-v2-m3|20% &gt; vector BEIR/MKQA|Open HF|Function-calling, agentic|
+|LangSearch Rerank V1|Semantic focus|Not quantified|Matches larger models with 80M params|Free|Easy API boostsModel|
+
+# Integration with LangChain
+
+Use wrappers like ContextualCompressionRetriever for seamless addition to vector stores, improving retrieval in custom flows.
+
+# Summary
+
+All in all. ZeroEntropy zerank-2 emerges as a versatile leader, combining accuracy, affordability, and features like instruction-following for multilingual RAG challenges. Cohere Rerank 4 suits enterprise, Jina v2 real-time, LangSearch V1 free entry. 
+
+If you made it to the end, don't hesitate to share your takes and insights, would appreciate some feedback before I start working on a followup thread. Cheers !  
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Ashamed_Giraffe_5165
+Score: 12
+Created UTC: 1765848008.0
+Comment: Stuck with Cohere in prod because it's enterprise safe, but honestly, are we all just paying premium for marginally better benchmarks while ignoring how bad standard rerankers suck at basic disambiguation?
+Anyone actually getting real wins from instruction-tuned ones on messy real-world intent? Or is this all hype?
+
+Comment 2:
+Author: InitiativeInitial213
+Score: 8
+Created UTC: 1765988048.0
+Comment: Thanks for running these, super helpful. Yeah, embedding upgrades barely move the needle anymore. Slapping a reranker on top is where the magic happens. zerank-2 has consistently outperformed Cohere and lighter options in my ecommerce prototypes (ranking finally feels intentional). Main downside is cost adds up faster than the free alternatives if you’re doing high volume. Still worth it for quality though.
+
+Comment 3:
+Author: SmokeOk8058
+Score: 5
+Created UTC: 1765873643.0
+Comment: Great post but missing Qwen3-0.6B or Jina v3? How's zerank-2 vs bge-v2-gemma on self-host latency?
+
+Comment 4:
+Author: Prestigious-Yak9217
+Score: 1
+Created UTC: 1765857979.0
+Comment: Will langseach v1 be good enough for ~2000 queries a day...our user base is a limited number of people, current using gpt 4o mini, cost is almost 10 times than nano, so would this langseach reranker help enough to change the model back to nano?
+
+Comment 5:
+Author: water_bottle_goggles
+Score: 1
+Created UTC: 1765926264.0
+Comment: ![gif](giphy|JVOiFUFPIxLBXdxaMz)

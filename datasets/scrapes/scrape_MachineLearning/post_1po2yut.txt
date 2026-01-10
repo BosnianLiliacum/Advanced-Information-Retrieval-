@@ -1,0 +1,53 @@
+Post Title: [P] Cyreal - Yet Another Jax Dataloader
+Author: smorad
+Score: 33
+URL: https://www.reddit.com/r/MachineLearning/comments/1po2yut/p_cyreal_yet_another_jax_dataloader/
+Number of comments: 10
+Created UTC: 1765894459.0
+
+Post Content:
+Looking for a JAX dataloader that is fast, lightweight, and flexible? Try out Cyreal!
+
+[GitHub](https://github.com/smorad/cyreal)  [Documentation](https://smorad.github.io/cyreal/cyreal.html)
+
+**Note:** This is a new library and probably full of bugs. If you find one, please file an issue.
+
+**Background**
+
+JAX is a great library but the lack of dataloaders has been driving me crazy. I find it crazy that [Google's own documentation often recommends using the Torch dataloader](https://docs.jax.dev/en/latest/notebooks/Neural_Network_and_Data_Loading.html). Installing JAX and Torch together inevitably pulls in gigabytes of dependencies and conflicting CUDA versions, often breaking each other.
+
+Fortunately, Google has been investing effort into [Grain, a first-class JAX dataloader](https://github.com/google/grain). Unfortunately, [it still relies on Torch or Tensorflow to download datasets](https://google-grain.readthedocs.io/en/latest/tutorials/data_loader_tutorial.html#dataloader-guide), defeating the purpose of a JAX-native dataloader and forcing the user back into dependency hell. Furthermore, the Grain dataloader can be quite slow [\[1\]](https://github.com/google/grain/issues/569) [\[2\]](https://github.com/google/grain/issues/851) [\[3\]](https://github.com/google/grain/issues/1164).
+
+And so, I decided to create a JAX dataloader library called Cyreal. Cyreal is unique in that:
+
+* It has no dependencies besides JAX
+* It is JITtable and fast
+* It downloads its own datasets similar to TorchVision
+* It provides Transforms similar to the the Torch dataloader
+* It support in-memory, in-GPU-memory, and streaming disk-backed datasets
+* It has tools for RL and continual learning like Gymnax datasources and replay buffers 
+
+
+Top 3 comments:
+
+Comment 1:
+Author: CampAny9995
+Score: 2
+Created UTC: 1765912433.0
+Comment: It looks nice! I haven’t had major problems with Grain so far, but I suppose the trick is that you when you have data workers enabled it just needs to load the next batch faster than one training/validation step.
+
+Comment 2:
+Author: ClearlyCylindrical
+Score: 1
+Created UTC: 1765962154.0
+Comment: What transforms do torch data loaders provide? Is this an AI hallucination?
+
+Comment 3:
+Author: Ivrolan
+Score: 1
+Created UTC: 1767388971.0
+Comment: Hey, it seems nice! I was just searching for alternatives to Grain as I was facing the same negative points you point out:
+
+&gt;Unfortunately, [it still relies on Torch or Tensorflow to download datasets](https://google-grain.readthedocs.io/en/latest/tutorials/data_loader_tutorial.html#dataloader-guide), defeating the purpose of a JAX-native dataloader and forcing the user back into dependency hell. Furthermore, the Grain dataloader can be quite slow [\[1\]](https://github.com/google/grain/issues/569) [\[2\]](https://github.com/google/grain/issues/851) [\[3\]](https://github.com/google/grain/issues/1164). 
+
+On the other hand, how do you compare Cyreal to [jax-dataloader](https://github.com/BirkhoffG/jax-dataloader) ? It seems both projects share many points.

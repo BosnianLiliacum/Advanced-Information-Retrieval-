@@ -1,0 +1,84 @@
+Post Title: Introducing Enterprise-Ready Hierarchy-Aware Chunking for RAG Pipelines
+Author: Code-Axion
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1pvatao/introducing_enterpriseready_hierarchyaware/
+Number of comments: 1
+Created UTC: 1766659352.0
+
+Post Content:
+Hello everyone,
+
+We're excited to announce a major upgrade to the **Agentic Hierarchy Aware Chunker.** We're discontinuing subscription-based plans and transitioning to an **Enterprise-first offering** designed for maximum security and control.  
+After conversations with users, we learned that businesses strongly prefer absolute **privacy** and **on-premise solutions**. They want to avoid vendor lock-in, eliminate data leakage risks, and maintain full control over their infrastructure.  
+That's why we're shifting to an enterprise-exclusive model with on-premise deployment and complete source code access—giving you the full flexibility, security, and customization according to your development needs.
+
+Try it yourself in our playground:  
+[https://hierarchychunker.codeaxion.com/](https://hierarchychunker.codeaxion.com/)
+
+See the Agentic Hierarchy Aware Chunker live:  
+[https://www.youtube.com/watch?v=czO39PaAERI&amp;t=2s](https://www.youtube.com/watch?v=czO39PaAERI&amp;t=2s)
+
+**For Enterprise &amp; Business Plans:**  
+Dm us or contact us at [codeaxion77@gmail.com](mailto:codeaxion77@gmail.com)
+
+# What Our Hierarchy Aware Chunker offers
+
+*  Understands document structure (titles, headings, subheadings, sections).
+*  Merges nested subheadings into the right chunk so context flows properly.
+*  Preserves multiple levels of hierarchy (e.g., Title → Subtitle→ Section → Subsections).
+*  Adds metadata to each chunk (so every chunk knows which section it belongs to).
+*  Produces chunks that are context-aware, structured, and retriever-friendly.
+* Ideal for legal docs, research papers, contracts, etc.
+* It’s Fast and uses LLM inference combined with our optimized parsers.
+* Works great for Multi-Level Nesting.
+* No preprocessing needed — just paste your raw content or Markdown and you’re are good to go !
+* Flexible Switching: Seamlessly integrates with any LangChain-compatible Providers (e.g., OpenAI, Anthropic, Google, Ollama).
+
+#  Upcoming Features (In-Development)
+
+* Support Long Document Context Chunking Where Context Spans Across Multiple Pages
+
+&amp;#8203;
+
+         Example Output
+        --- Chunk 2 --- 
+        
+        Metadata:
+          Title: Magistrates' Courts (Licensing) Rules (Northern Ireland) 1997
+          Section Header (1): PART I
+          Section Header (1.1): Citation and commencement
+        
+        Page Content:
+        PART I
+        
+        Citation and commencement 
+        1. These Rules may be cited as the Magistrates' Courts (Licensing) Rules (Northern
+        Ireland) 1997 and shall come into operation on 20th February 1997.
+        
+        --- Chunk 3 --- 
+        
+        Metadata:
+          Title: Magistrates' Courts (Licensing) Rules (Northern Ireland) 1997
+          Section Header (1): PART I
+          Section Header (1.2): Revocation
+        
+        Page Content:
+        Revocation
+        2.-(revokes Magistrates' Courts (Licensing) Rules (Northern Ireland) SR (NI)
+        1990/211; the Magistrates' Courts (Licensing) (Amendment) Rules (Northern Ireland)
+        SR (NI) 1992/542.
+
+You can notice how the headings are preserved and attached to the chunk → the retriever and LLM always know which section/subsection the chunk belongs to.
+
+No more chunk overlaps and spending hours tweaking chunk sizes .
+
+Happy to answer questions here. Thanks for the support and we are excited to see what you build with this.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: FormalAd7367
+Score: 1
+Created UTC: 1766749559.0
+Comment: just curious - what will happen to people who have paid for subscription?

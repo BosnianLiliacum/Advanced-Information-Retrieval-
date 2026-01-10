@@ -1,0 +1,24 @@
+Post Title: [P] Meta Seal: Open-source invisible watermarking suite for Image, Video, Audio, and Text (SOTA, MIT License)
+Author: hadyelsahar
+Score: 13
+URL: https://www.reddit.com/r/MachineLearning/comments/1pquj88/p_meta_seal_opensource_invisible_watermarking/
+Number of comments: 0
+Created UTC: 1766173803.0
+
+Post Content:
+We are open-sourcing **Meta Seal**, a comprehensive framework for invisible watermarking across all major modalities (Image, Video, Audio, Text). Invisible watermarking has grown in popularity recently for lots of applications including provenance and attribution to help distinguish between human and AI-generated content.
+
+[https://facebookresearch.github.io/meta-seal/](https://facebookresearch.github.io/meta-seal/)
+
+**The Models:**
+
+* **Pixel Seal:** Image &amp; video watermarking using adversarial training for robustness.
+* **Chunky Seal:** High-capacity image watermarking (1024-bit payload).
+* **Dist Seal:** Latent space watermarking with 20x inference speedup.
+* **Audio Seal:** Localized audio watermarking at the sample level.
+* **Text Seal:** Post-hoc watermarking for LLMs to detect training data contamination.
+
+Full weights and training code are available under the MIT license. We are happy to answer questions about the implementation or robustness benchmarks.
+
+
+Top 0 comments:

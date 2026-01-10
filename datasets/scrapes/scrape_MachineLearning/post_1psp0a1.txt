@@ -1,0 +1,27 @@
+Post Title: [R] No causal inference workshops at ICLR 2026?
+Author: confirm-jannati
+Score: 27
+URL: https://www.reddit.com/r/MachineLearning/comments/1psp0a1/r_no_causal_inference_workshops_at_iclr_2026/
+Number of comments: 9
+Created UTC: 1766373325.0
+
+Post Content:
+What gives? Anyone got any alternative venues in mind for causal topics? Otherwise we going straight to the main track I guess.
+
+  
+**p.s.** The [full list is posted on twitter](https://x.com/YananSui/status/2000953573845397679?s=20). Also some of these are [already on openreview](https://openreview.net/group?id=ICLR.cc/2026/Workshop).
+
+
+Top 2 comments:
+
+Comment 1:
+Author: honey_bijan
+Score: 24
+Created UTC: 1766377970.0
+Comment: CLeaR is a whole conference dedicated to causal inference! Lots of causality papers also go to the AISTATS and UAI main tracks
+
+Comment 2:
+Author: Striking-Warning9533
+Score: 8
+Created UTC: 1766373955.0
+Comment: Finally out thanks

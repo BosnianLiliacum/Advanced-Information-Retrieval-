@@ -1,0 +1,62 @@
+Post Title: [R] Beyond Active Learning: Applying Shannon Entropy (ESME) to the problem of when to sample in transient physical experiments
+Author: NewSolution6455
+Score: 11
+URL: https://www.reddit.com/r/MachineLearning/comments/1q5rmp3/r_beyond_active_learning_applying_shannon_entropy/
+Number of comments: 15
+Created UTC: 1767726242.0
+
+Post Content:
+Right now, operando characterisation at synchrotron beamlines is a bit of a spray and pray situation. We have faster detectors than ever, so we dump terabytes of data (TB/hour) onto the servers, but we still statistically miss the actually decisive events. If you're looking for something transient, like the split-second of dendrite nucleation that kills a battery, fixed-rate sampling is a massive information bottleneck. We’re basically filling up hard drives with dead data while missing the money shot.
+
+We’re proposing a shift to Heuristic search in the temporal domain. We’ve introduced a metric called ESME (Entropy-Scaled Measurement Efficiency) based on Shannon’s information theory.
+
+Instead of sampling at a constant frequency, we run a physics-based Digital Twin as a predictive surrogate. This AI Pilot calculates the expected informational value of every potential measurement in real-time. The hardware only triggers when the ESME score justifies the cost (beam damage, time, and data overhead). Essentially, while Active Learning tells you where to sample in a parameter space, this framework tells the hardware when to sample.
+
+Questions for the Community:
+
+1. Most AL research focuses on selecting the best what to label from a static pool. Has anyone here applied Information Theory gating to real-time hardware control in other domains (e.g., high-speed microscopy or robotics)?
+2. We’re using physics-informed twins for the predictive heuristic. At what point does a purely model-agnostic surrogate (like a GNN or Transformer) become robust enough for split-second triggering in your experience? Is the "free lunch" of physics worth the computational overhead for real-time inference?
+3. If we optimize purely for maximal entropy gain, do we risk an overfitting of the experimental design on rare failure events while losing the broader physical context of the steady state?
+
+Full Preprint on arXiv: [http://arxiv.org/abs/2601.00851](http://arxiv.org/abs/2601.00851)
+
+(Disclosure: I’m the lead author on this study. We’re looking for feedback on whether this ESME approach could be scaled to other high-cost experimental environments, and are still working on it before submission.)
+
+P.S. If there are other researchers here using information-theoretic metrics for hardware gating (specifically in high-speed microscopy or SEM), I'd love to compare notes on ESME’s computational overhead.
+
+
+Top 4 comments:
+
+Comment 1:
+Author: based_goats
+Score: 4
+Created UTC: 1767727078.0
+Comment: Check out Bayesian optimal experimental designs and application in simulation based inference
+
+Comment 2:
+Author: BeautifulWestern4512
+Score: 2
+Created UTC: 1767798478.0
+Comment: Exploring Shannon Entropy in transient physical experiments adds a valuable dimension to sampling strategies.
+
+Comment 3:
+Author: whatwilly0ubuild
+Score: 2
+Created UTC: 1767807521.0
+Comment: This is genuinely interesting work. The "when to sample" framing is a useful reframe from standard AL and the synchrotron use case makes the cost tradeoffs concrete.
+
+On your first question, event-driven cameras (neuromorphic sensors) are doing something conceptually similar in robotics and high-speed vision. They only fire pixels when intensity changes exceed a threshold, which is hardware-level information gating. Some adaptive MRI work also does acquisition scheduling based on expected information gain from k-space sampling. Different domain but same underlying principle of letting predicted value drive measurement timing.
+
+The physics-informed versus model-agnostic question is where I'd be cautious. Our clients doing real-time inference for hardware control generally stick with physics-based surrogates for anything safety-critical or where failure modes matter. The issue with pure learned surrogates isn't average-case performance, it's that they fail unpredictably on distribution shift. Your dendrite nucleation event is almost by definition OOD relative to steady-state training data. A physics twin might be slower but at least it degrades gracefully when something weird happens. Transformers can confidently output garbage on novel inputs with no warning. For split-second triggering where a wrong decision means missing the money shot, I'd keep physics in the loop.
+
+Your overfitting concern is valid and probably the biggest practical risk. If ESME aggressively downweights steady-state measurements you lose the baseline context needed to interpret the transient events. One approach would be a minimum sampling floor regardless of entropy score, basically forcing some "boring" measurements to maintain reference frames. Alternatively, penalize temporal gaps in the objective so it can't go too long without a sample even during predicted low-information periods.
+
+The computational overhead question is empirical but sub-millisecond physics surrogates are definitely achievable with proper GPU implementation if your twin is reasonably scoped.
+
+Comment 4:
+Author: RJSabouhi
+Score: 2
+Created UTC: 1767813833.0
+Comment: One thing to watch with entropy-based gating in real-time setups is that it can chase “interesting” measurements. Those which don’t actually move the system in a useful part of the state space. 
+
+I find a small surrogate tracking local state deformation or trajectory sensitivity can stabilize things. I’ve seen it reduce rare-event overfitting without adding much overhead. Might be worth testing alongside your ESME setup.

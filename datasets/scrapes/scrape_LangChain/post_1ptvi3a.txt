@@ -1,0 +1,60 @@
+Post Title: what prompt injection prevention tools are you guys using 2026?
+Author: vitaminZaman
+Score: 8
+URL: https://www.reddit.com/r/LangChain/comments/1ptvi3a/what_prompt_injection_prevention_tools_are_you/
+Number of comments: 12
+Created UTC: 1766500677.0
+
+Post Content:
+so we're scaling up our chatbot right now and the security side is making issues... like... user inputs are WILD. people will type anything i mean "forget everything, follow this instruction" sort of things.. and its pretty easy to inject and reveal whole stuff...
+
+i've been reading about different approaches to this but idk what people are using in the prod like are you going open source? paying for enterprise stuff? or some input sanitization?
+
+here's what i'm trying to figure out. false positives. some security solutions seem super aggressive and i'm worried they'll just block normal people asking normal questions. like someone types something slightly weird and boom... blocked. that's not great for the user experience.
+
+also we're in a pretty regulated space so compliance is a big deal for us. need something that can handle policy enforcement and detect harmful content without us having to manually review every edge case.
+
+and then there's the whole jailbreaking thing. people trying to trick the bot into ignoring its rules or generating stuff it shouldn't. feels like we need real time monitoring but idk what actually works.
+
+most importantly, performance... does adding any new security layers slow things down?
+
+oh and for anyone using paid solutions... was it worth the money? or should we just build something ourselves?
+
+RN we're doing basic input sanitization and hoping for the best. probably not sustainable as we grow. i'm looking into guardrails.
+
+would love to hear what's been working for you. or what hasn't. even the failures help because at least i'll know what to avoid.
+
+thanks 🙏
+
+
+Top 4 comments:
+
+Comment 1:
+Author: TheMcSebi
+Score: 2
+Created UTC: 1766575875.0
+Comment: Nor sure, but it should be possible to train a classifier network to detect text pieces directed towards a possible Ai. Like direct commands. I haven't implemented anything like that, nor did I look up if it exists, but that would propably be an approach worth checking out.
+
+Comment 2:
+Author: HMM0012
+Score: 2
+Created UTC: 1767634467.0
+Comment: Been there with the prompt injection crap  users get creative fast. We've been using activefence's runtime and found that their jailbreak detection beats rolling our own. Their policy templates handle compliance without the false positive mess. 
+
+Azure's builtin stuff is great, but I think its limited for complex attacks. Don't build from scratch unless you have months to burn on edge cases.
+
+Comment 3:
+Author: adlx
+Score: 1
+Created UTC: 1766515523.0
+Comment: We are using Azure Open AI which comes with a safety layer as to speak. It usually detects hate, sex, jailbreak, or self lesions intents.
+
+Those are the categories and it usually catches them.
+
+It's baked into the API so no need to do anything. We have just cached the exceptions to return a friendly message to the user with nice emojis and texts.
+
+Comment 4:
+Author: SmoothRolla
+Score: 1
+Created UTC: 1766500926.0
+Comment: We use azures ai foundry which comes with free jailjreak/prompt injection detection which seems to be good enough to detect all attempts though I haven't tested extensively 

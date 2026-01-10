@@ -1,0 +1,44 @@
+Post Title: Is hugging face still an industry leader?
+Author: AWeb3Dad
+Score: 14
+URL: https://www.reddit.com/r/huggingface/comments/1pn2fod/is_hugging_face_still_an_industry_leader/
+Number of comments: 31
+Created UTC: 1765787526.0
+
+Post Content:
+Heard about it a while back. Curious if people still use it for things
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Frosty_Chest8025
+Score: 25
+Created UTC: 1765787679.0
+Comment: No its not anymore, I switched to Slappingface while ago.
+
+Comment 2:
+Author: Fearless-Intern-2344
+Score: 3
+Created UTC: 1765857717.0
+Comment: Yes, it is a great resource for accessing open-weight models (GPT-OSS, GLM, DeepSeek, that sort of thing).
+
+Comment 3:
+Author: [deleted]
+Score: 2
+Created UTC: 1765829460.0
+Comment: [deleted]
+
+Comment 4:
+Author: LocoMod
+Score: 2
+Created UTC: 1765832696.0
+Comment: Did you just wake up from hibernation or something? Emerged from the vault? Stepped out from under the rock?
+
+These questions are more relevant than what you asked.
+
+Comment 5:
+Author: rickschott
+Score: 1
+Created UTC: 1765882627.0
+Comment: yes

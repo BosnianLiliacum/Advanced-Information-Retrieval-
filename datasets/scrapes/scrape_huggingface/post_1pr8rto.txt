@@ -1,0 +1,61 @@
+Post Title: I hosted the new Wan 2.2 (14B) model so you don't have to. Free to use, no sign-up, supports Text+Image to Video.
+Author: Otherwise_Ad1725
+Score: 31
+URL: https://i.redd.it/qmxuc3h8bb8g1.png
+Number of comments: 11
+Created UTC: 1766216305.0
+
+Post Content:
+[No content/Link only]
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Energivesen
+Score: 2
+Created UTC: 1766218035.0
+Comment: So where is this accessible?
+
+Comment 2:
+Author: Commercial_Milk_6026
+Score: 1
+Created UTC: 1766335132.0
+Comment: Amazing, thank you
+
+Comment 3:
+Author: JudgmentPale458
+Score: 1
+Created UTC: 1766937337.0
+Comment: This is impressive — especially making a **14B I2V model accessible without signup**. Hosting friction is honestly one of the biggest blockers for people who just want to *try* these models.
+
+A couple of things I’m curious about:
+
+* How are you handling **VRAM optimization / batching** for concurrent users at 14B scale?
+* Any noticeable trade-offs between the **Lightning LoRA** speedups and temporal consistency in longer clips?
+* Have you tested prompts that push camera motion vs. subject motion separately?
+
+Really appreciate people who put in the effort to make cutting-edge models usable, not just publishable. 👍
+
+Comment 4:
+Author: OutsideSoil-8888
+Score: 1
+Created UTC: 1767286902.0
+Comment: # Upgrade Your AI Experience with a PRO Account
+
+Your ZeroGPU daily quota has been exceeded!  
+Get 8x more daily quota with a PRO account.
+
+Subscribe to PRO to unlock a 8x increase in your daily ZeroGPU quota. For example, every day you could:
+
+* Create up to \~600 images (using Flux Schnell)
+* Generate up to \~50 3D models (using TRELLIS)
+* Remove background from \~570 images (using BRIA)
+* Generate \~20 hours of audio (using Kokoro-TTS)
+* Transcribe \~150 minutes of audio (using Whisper)
+
+And much more with the +10,000 compatible AI apps!
+
+or [Create a free account](https://huggingface.co/join) with limited quota
+
+**"Generated a 2 second video for free and quota was up lol"**

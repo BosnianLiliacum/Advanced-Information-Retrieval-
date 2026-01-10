@@ -1,0 +1,38 @@
+Post Title: Do you ever spend too much time on finding the right datasets for your model?
+Author: New-Mathematician645
+Score: 2
+URL: https://huggingface.co/spaces/durinn/dowser
+Number of comments: 2
+Created UTC: 1767364528.0
+
+Post Content:
+I kept seeing teams fine tune over and over, swapping datasets, changing losses, burning GPU, without really knowing which data was helping and which was actively hurting.
+
+So we built **Dowser**  
+[https://huggingface.co/spaces/durinn/dowser](https://huggingface.co/spaces/durinn/dowser)
+
+Dowser benchmarks models directly against large sets of open Hugging Face datasets and assigns **influence scores** to data. Positive influence helps the target capability. Negative influence degrades it.
+
+Instead of guessing or retraining blindly, you can see which datasets are worth training on before spending compute.
+
+What it does  
+• Benchmarks across all HF open datasets  
+• Cached results in under 2 minutes, fresh evals in \~10 to 30 minutes  
+• Runs on modest hardware 8GB RAM, 2 vCPU  
+• Focused on data selection and training direction, not infra
+
+Why we built it  
+Training is increasingly data constrained, not model constrained. Synthetic data is creeping into pipelines, gains are flattening, and most teams still choose data by intuition.
+
+This is influence guided training made practical for smaller teams.
+
+Would love feedback from anyone here who fine tunes models or curates datasets.
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Astralnugget
+Score: 1
+Created UTC: 1767710455.0
+Comment: Would be nice to talk about it yourself some instead of having ChatGPT write the post

@@ -1,0 +1,91 @@
+Post Title: [D] GPT confidently generated a fake NeurIPS architecture. Loss function, code, the works. How does this get fixed?
+Author: SonicLinkerOfficial
+Score: 30
+URL: https://www.reddit.com/gallery/1pkrc6c
+Number of comments: 57
+Created UTC: 1765544564.0
+
+Post Content:
+I asked ChatGPT a pretty normal research style question.  
+Nothing too fancy. Just wanted a summary of a supposed NeurIPS 2021 architecture called NeuroCascade by J. P. Hollingsworth.
+
+(Neither the architecture nor the author exists.)  
+NeuroCascade is a medical term unrelated to ML. No NeurIPS, no Transformers, nothing.
+
+Hollingsworth has unrelated work.
+
+But ChatGPT didn't blink. It very confidently generated:
+
+• a full explanation of the architecture
+
+• a list of contributions ???
+
+• a custom loss function (wtf)
+
+• pseudo code (have to test if it works)
+
+• a comparison with standard Transformers
+
+• a polished conclusion like a technical paper's summary
+
+All of it very official sounding, but also completely made up.
+
+The model basically hallucinated a whole research world and then presented it like an established fact.
+
+What I think is happening:
+
+* The answer looked legit because the model took the cue “NeurIPS architecture with cascading depth” and mapped it to real concepts like routing, and conditional computation. It's seen thousands of real papers, so it knows what a NeurIPS explanation should sound like.
+* Same thing with the code it generated. It knows what this genre of code should like so it made something that looked similar. (Still have to test this so could end up being useless too)
+* The loss function makes sense mathematically because it combines ideas from different research papers on regularization and conditional computing, even though this exact version hasn’t been published before.
+* The confidence with which it presents the hallucination is (probably) part of the failure mode. If it can't find the thing in its training data, it just assembles the closest believable version based off what it's seen before in similar contexts.
+
+A nice example of how LLMs fill gaps with confident nonsense when the input feels like something that should exist.
+
+Not trying to dunk on the model, just showing how easy it is for it to fabricate a research lineage where none exists.
+
+I'm curious if anyone has found reliable prompting strategies that force the model to expose uncertainty instead of improvising an entire field. Or is this par for the course given the current training setups?
+
+
+Top 5 comments:
+
+Comment 1:
+Author: GarlicIsMyHero
+Score: 215
+Created UTC: 1765545234.0
+Comment: &gt; All of it very official sounding, but also completely made up.
+
+&gt; The model basically hallucinated a whole research world and then presented it like an established fact.
+
+This is precisely why we see a million different posts each day ~~cleaning~~ claiming to have solved AGI as independent researchers. It's important to understand that if you don't know how to verify the work it's presenting you, you can't accept it is true.
+
+Comment 2:
+Author: Miquel_420
+Score: 106
+Created UTC: 1765545288.0
+Comment: Wow chatgpt confidently generating things wrong? :0
+
+Comment 3:
+Author: isparavanje
+Score: 56
+Created UTC: 1765545621.0
+Comment: FWIW Claude Sonnet 4.5 and Opus 4.5 just search the web instead of trying to do it off internal knowledge, and then notes that the paper doesn't seem to exist. Opus 4.5 amusingly says:
+
+A few possibilities:
+
+1. The paper doesn't exist (perhaps you're testing my tendency to confabulate)
+2. You may be misremembering the author name, paper title, venue, or year
+3. It could be an obscure workshop paper or preprint that isn't well-indexed
+
+This is why most people I know who actually use LLMs in academia frequently use Claude or Gemini (the latter partially because we have an institutional plan, also no affiliation to both). I have not noticed obvious hallucinations from the 4.5 models often, the threshold to just search the web or otherwise consult tools/documentation seems to be lower, and Gemini seems to search the web even more than Claude and does so even for information that I would expect to be in the training sometimes, so Gemini is probably asked to search for things in the system prompt or something like that.
+
+Comment 4:
+Author: NuclearVII
+Score: 31
+Created UTC: 1765544823.0
+Comment: This is a feature. Not a bug.
+
+Comment 5:
+Author: Salty_Comedian100
+Score: 28
+Created UTC: 1765544945.0
+Comment: The pseudo code doesn't work. It is just some boilerplate training code without the actual model definition. The main idea is valid and has been explored in papers as "early exit".

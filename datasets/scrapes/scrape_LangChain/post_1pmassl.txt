@@ -1,0 +1,75 @@
+Post Title: Pydantic-DeepAgents: A Pydantic-AI based alternative to LangChain's deepagents framework
+Author: VanillaOk4593
+Score: 36
+URL: https://www.reddit.com/r/LangChain/comments/1pmassl/pydanticdeepagents_a_pydanticai_based_alternative/
+Number of comments: 7
+Created UTC: 1765707408.0
+
+Post Content:
+Hey r/LangChain!
+
+I recently discovered LangChain's excellent deepagents project.
+
+That inspired me to build something similar but in the Pydantic-AI ecosystem: **Pydantic-DeepAgents**.
+
+Repo: [https://github.com/vstorm-co/pydantic-deepagents](https://github.com/vstorm-co/pydantic-deepagents?referrer=grok.com)
+
+It provides comparable "deep agent" capabilities while leveraging Pydantic's strong typing and validation:
+
+* Planning via TodoToolset
+* Filesystem operations (FilesystemToolset)
+* Subagent delegation (SubAgentToolset)
+* Extensible skills system (markdown-defined prompts)
+* Multiple backends: in-memory, persistent filesystem, DockerSandbox (for safe/isolated execution), and CompositeBackend
+* File uploads for agent processing
+* Automatic context summarization for long sessions
+* Built-in human-in-the-loop confirmation workflows
+* Full streaming support
+* Type-safe structured outputs via Pydantic models
+
+Demo app example: [https://github.com/vstorm-co/pydantic-deepagents/tree/main/examples/full\_app](https://github.com/vstorm-co/pydantic-deepagents/tree/main/examples/full_app?referrer=grok.com)  
+Quick demo video: [https://drive.google.com/file/d/1hqgXkbAgUrsKOWpfWdF48cqaxRht-8od/view?usp=sharing](https://drive.google.com/file/d/1hqgXkbAgUrsKOWpfWdF48cqaxRht-8od/view?usp=sharing&amp;referrer=grok.com)
+
+**Key differences/advantages vs. LangChain deepagents:**
+
+* Built on Pydantic-AI instead of LangChain/LangGraph → lighter dependency footprint, native Pydantic integration for robust structured data handling
+* Adds a secure DockerSandbox backend (not in LangChain's version)
+* Skills system for easy markdown-based custom behaviors
+* Explicit file upload handling
+
+If you're in the Pydantic-AI world or want a more minimal/type-strict alternative for production agents, give it a try!
+
+Thanks! 
+
+
+Top 5 comments:
+
+Comment 1:
+Author: kshnkvn
+Score: 2
+Created UTC: 1765722496.0
+Comment: There are exists an official [pydantic agent framework](https://ai.pydantic.dev/)
+
+Comment 2:
+Author: Chemical-Breath-3906
+Score: 1
+Created UTC: 1765714895.0
+Comment: Can you tell a bit about the use cases for this?
+
+Comment 3:
+Author: tifa_cloud0
+Score: 1
+Created UTC: 1765742833.0
+Comment: this is good. saving this ✌🏻
+
+Comment 4:
+Author: fratkabula
+Score: 1
+Created UTC: 1766007888.0
+Comment: very cool, looks useful
+
+Comment 5:
+Author: Own_Welcome_9101
+Score: 1
+Created UTC: 1766100727.0
+Comment: 👀

@@ -1,0 +1,74 @@
+Post Title: I built a LangChain tool for searching Federal Acquisition Regulations (FAR)
+Author: blueskylineassets
+Score: 7
+URL: https://www.reddit.com/r/LangChain/comments/1pwp8k4/i_built_a_langchain_tool_for_searching_federal/
+Number of comments: 2
+Created UTC: 1766811456.0
+
+Post Content:
+Hey everyone,
+
+I built a LangChain tool that lets AI agents search Federal Acquisition Regulations (FAR) - the rules governing U.S. government contracting.
+
+
+
+**Install:**
+
+pip install far-search-tool
+
+
+
+**Usage:**
+
+from far\_search import FARSearchTool
+
+from langchain.agents import initialize\_agent, AgentType
+
+from langchain\_openai import ChatOpenAI
+
+tool = FARSearchTool()
+
+agent = initialize\_agent(
+
+tools=\[tool\],
+
+llm=ChatOpenAI(model="gpt-4"),
+
+agent=AgentType.OPENAI\_FUNCTIONS
+
+)
+
+response = agent.run("What are the FAR requirements for small business subcontracting?")
+
+
+
+**Features:**
+
+\- Semantic search over 617 FAR clauses
+
+\- Pre-computed embeddings for fast queries
+
+\- Works with any LangChain agent
+
+\- Free tier available, paid tier for production use
+
+
+
+**Links:**
+
+\- PyPI: [https://pypi.org/project/far-search-tool/](https://pypi.org/project/far-search-tool/)
+
+\- GitHub: [https://github.com/blueskylineassets/far-search-tool](https://github.com/blueskylineassets/far-search-tool)
+
+Useful for anyone building AI tools for government contractors, procurement specialists, or compliance automation.
+
+Happy to answer any questions!
+
+
+Top 1 comments:
+
+Comment 1:
+Author: Percentage-Virtual
+Score: 2
+Created UTC: 1767159487.0
+Comment: Interesting I’m building out a whole ecosystem for the govcon space that could utilize this!

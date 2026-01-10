@@ -1,0 +1,12 @@
+Post Title: Experiences from building enterprise agents with DSPy and GEPA
+Author: FreakedoutNeurotic98
+Score: 6
+URL: https://slavozard.bearblog.dev/experiences-from-building-enterprise-agents-with-dspy-and-gepa/
+Number of comments: 0
+Created UTC: 1767747865.0
+
+Post Content:
+Been involved in building enterprise agents for the past few months at work, so wrote a (long) blog post detailing some of my experiences. It uses DSPy and GEPA for optimisation, python for all other scaffolding, tool calls and observability. It’s a bit detailed discussing the data issues for enterprise workflows, agents harness, evals and observability. Plus some stuff that did not seem to work…
+
+
+Top 0 comments:

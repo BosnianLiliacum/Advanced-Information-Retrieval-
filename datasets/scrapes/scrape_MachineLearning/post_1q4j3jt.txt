@@ -1,0 +1,62 @@
+Post Title: [R] Which are some good NLP venues except ACL?
+Author: kami-sama-arigatou
+Score: 16
+URL: https://www.reddit.com/r/MachineLearning/comments/1q4j3jt/r_which_are_some_good_nlp_venues_except_acl/
+Number of comments: 16
+Created UTC: 1767611837.0
+
+Post Content:
+My research work is mostly in Multilingual NLP, but it's very tough to find a lot of options to submit my paper. ACL conferences or TACL, CL journals are prestigious and very well known. However, I find it very difficult to find any other good venues focused on this research area.
+
+Are there any venues which are not in generic AI but accept NLP-focused work mostly? I don't mind if they're journals, however conferences would be good.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Lonely-Dragonfly-413
+Score: 14
+Created UTC: 1767615334.0
+Comment: naacl emnlp
+
+Comment 2:
+Author: Pvt_Twinkietoes
+Score: 8
+Created UTC: 1767614395.0
+Comment: ICLR, NeurIPS
+
+Comment 3:
+Author: dataflow_mapper
+Score: 6
+Created UTC: 1767616395.0
+Comment: If you want NLP-first venues beyond ACL, EMNLP, NAACL, and EACL are the obvious ones and still very strong for multilingual work. COLING is also worth a look, especially for language resources, evaluation, and less trendy but solid multilingual papers. LREC-COLING has become a pretty natural home for multilingual and low-resource work too, even if it leans more applied. On the journal side, Computational Linguistics and Natural Language Engineering are both respected and more forgiving on timelines and scope. Also do not sleep on focused workshops at ACL or EMNLP, since a lot of multilingual work actually lands there first and gets good visibility.
+
+Comment 4:
+Author: whatwilly0ubuild
+Score: 3
+Created UTC: 1767628392.0
+Comment: EMNLP and NAACL are the obvious ones if you're not already considering them. Same tier as ACL basically, and EMNLP in particular has been publishing a ton of multilingual work lately.
+
+COLING is solid and not ACL-affiliated which means different reviewers and sometimes a better shot if your work got borderline rejections at ACL venues. Slightly less competitive but still respected.
+
+For multilingual specifically, LREC-COLING is probably your best bet. They explicitly care about language resources and low-resource languages. If you're working on anything involving new datasets, annotation, or underrepresented languages this is the venue. The community there is way more receptive to multilingual contributions than the main ACL track tends to be.
+
+EACL and AACL are worth considering too depending on timing. Smaller pools, still decent reputation, and AACL especially if your work touches Asian languages.
+
+Workshop route is underrated honestly. ACL workshops like MRL (Multilingual Representation Learning) or SIGUL stuff on under-resourced languages can get solid visibility and the acceptance rates are more forgiving. Good way to get feedback and build citations before going for a main venue.
+
+Journal-wise beyond TACL and CL, there's Natural Language Engineering and Language Resources and Evaluation. Neither is as prestigious but turnaround can be faster and they're more open to incremental multilingual contributions.
+
+Our clients doing NLP research usually target EMNLP or LREC for multilingual stuff since the reviewer pools actually know the subfield. Main ACL can be a crapshoot if your reviewers don't care about low-resource languages.
+
+Comment 5:
+Author: ThinConnection8191
+Score: 3
+Created UTC: 1767688705.0
+Comment: NAACL/EMNLP/EACL/AACL all papers are now reviewed by the same pool of reviewers. So the review quality is virtually the same.
+ICLR/AAAI/Neurips are also very popular among NLP community.
+COLM is for Language Model.
+LREC/COLING are good as well but not as high as *ACL. They especially focus more on resources.
+Some workshops are very good like Machine Translation, *SEM, SemEval.
+
+Journal: TACL and CL

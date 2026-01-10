@@ -1,0 +1,147 @@
+Post Title: [D] Best papers of 2025
+Author: ArtisticHamster
+Score: 295
+URL: https://www.reddit.com/r/MachineLearning/comments/1pvmrx9/d_best_papers_of_2025/
+Number of comments: 37
+Created UTC: 1766696516.0
+
+Post Content:
+Which papers do you think are the most important ones which were released in 2025?
+
+Please, provide a link to the paper if you share one.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Shizuka_Kuze
+Score: 207
+Created UTC: 1766700365.0
+Comment: My opinion by importance, like impact and long term potential: 
+
+**Deepseek:**
+
+The biggest was definitely Deepseek R1 and V3, not only did it bring a lot of attention to open source LLMs but demonstrated the power of Chinese, and the open source community. Without them, open source wouldn’t have been taken as seriously. They also had several innovations like HAI-LLM and honestly innovations like Multi-Head Latent Attention would be obscure without them. 3,000 citations already!!
+
+https://arxiv.org/html/2502.02523v1
+
+https://arxiv.org/abs/2412.19437
+
+**Large Language Diffusion Models:**
+
+Faster to run, more controllable, and breaks the reversal curse. Truly, I think BERT-based Masked Diffusion Language Models had a good year, granted, I don’t think this type of model in their current iteration is the future. 
+
+https://arxiv.org/abs/2502.09992
+
+**Vision Language Action Models:**
+
+This is really promising for robotics! It’s especially useful to allow agents the ability to interact with the real world directly rather than through high level wrappers.
+
+https://arxiv.org/abs/2505.04769
+
+https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf
+
+https://arxiv.org/abs/2509.02722 (not vision language action model but it appears to be about world modeling which is related to robotics and RL.)
+
+**Recurrent/Latent Reasoning Models:**
+
+Not LLM focused but they really shook up ARC this year. Maybe RNNs aren’t dead! (Or maybe… they never were…)
+
+https://arxiv.org/abs/2510.04871
+
+Similar work exists with LLMs but it’s not the same.
+
+https://arxiv.org/abs/2412.06769
+
+I personally wasn’t impressed by anything in standard reinforcement learning or computer vision this year. There weren’t any “Dreamer-V3” or “PPO” moments, and D-fine etc are from 2024. It’s a little lame most of the best papers are in language modeling, but what can one?
+
+**Work on Efficient LLMs:**
+
+Stuff that lowers the access barrier was really nice this year! Especially for those of us constrained by compute and data.
+
+https://arxiv.org/pdf/2508.09834
+
+Technically NOT papers but really awesome! 
+
+https://github.com/karpathy/nanochat
+
+https://github.com/KellerJordan/modded-nanogpt
+
+**My choice for good unpopular paper:**
+
+Would be nice for alternatives to tokenization to arise .
+
+https://openreview.net/forum?id=SMK0f8JoKF
+
+**Mandatory AI safety papers:**
+
+https://papers.cool/venue/34928@AAAI
+
+**Honorable Mentions from FOSS:**
+
+Kimi K2 for popularizing Muon optimizer: https://arxiv.org/abs/2507.20534 (NorMuon works well too: https://arxiv.org/abs/2510.05491)
+
+Qwen and everything their family of models are doing: https://arxiv.org/abs/2505.09388
+
+https://arxiv.org/abs/2508.02324
+
+**Honorable Mentions from Industry:**
+
+On The Biology of LLMs was fairly informative when it came out, honestly the best interpretability paper in awhile.
+
+https://transformer-circuits.pub/2025/attribution-graphs/biology.html
+
+https://www.anthropic.com/research/tracing-thoughts-language-model
+
+Google really smacked everyone hard this year. Genie-3, Gemini 3, Veo 3, Imagen 4, Nano Banana Pro, etc. They’re also trying ro reclaim the Transformers eureka moment but most of their attempts are subject to criticism at best.
+
+https://research.google/blog/titans-miras-helping-ai-have-long-term-memory/
+
+https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/
+
+SAM 3 is pretty solid, but really heavy.
+
+https://arxiv.org/abs/2511.16719
+
+**You can find most accepted 2025 NeurIPS, AAI and ICML papers here:**
+
+https://papercopilot.com/paper-list/neurips-paper-list/neurips-2025-paper-list/
+
+https://papercopilot.com/paper-list/aaai-paper-list/aaai-2025-paper-list/
+
+https://papercopilot.com/paper-list/icml-paper-list/icml-2025-paper-list/
+
+Comment 2:
+Author: FickleShare9406
+Score: 71
+Created UTC: 1766697470.0
+Comment: The field moves fast and we still have 6 days! It’s not time to call it yet!
+
+Comment 3:
+Author: bio_ruffo
+Score: 29
+Created UTC: 1766705046.0
+Comment: Dude it's Christmas
+
+Comment 4:
+Author: bmoser1995
+Score: 14
+Created UTC: 1766699387.0
+Comment: In my memory it comes down to two papers, one-step diffusion called MeanFlow and unlocking deep networks for RL, that will have a greater impact in the next months :) But I am pretty sure I forgot some other cool publications…
+
+RL:
+https://arxiv.org/abs/2503.14858
+
+Diffusion:
+https://arxiv.org/abs/2505.13447
+
+Comment 5:
+Author: Forward-Phase-2432
+Score: 10
+Created UTC: 1766703519.0
+Comment: # Data Shapley in One Training Run
+
+  
+Solves the previously computationally impossible problem of measuring each training example's value during a single training run, rather than requiring thousands of retraining cycles. Game-changing for data quality assessment and curation.
+
+[https://arxiv.org/abs/2406.11011](https://arxiv.org/abs/2406.11011)

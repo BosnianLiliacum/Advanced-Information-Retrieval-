@@ -1,0 +1,44 @@
+Post Title: [D] My Machine learning research notes: 15 years of continuous writing and 8.8k GitHub stars!
+Author: Delicious_Screen_789
+Score: 190
+URL: https://www.reddit.com/r/MachineLearning/comments/1q3rxa3/d_my_machine_learning_research_notes_15_years_of/
+Number of comments: 10
+Created UTC: 1767538585.0
+
+Post Content:
+My ML research notes are continuously updated to cover both theory and implementation. I chose this format because writing a book for Machine Learning no longer makes sense; a dynamic, evolving resource is the only way to keep up with the industry.
+
+Check it out here: [https://github.com/roboticcam/machine-learning-notes](https://github.com/roboticcam/machine-learning-notes)
+
+
+Top 5 comments:
+
+Comment 1:
+Author: Accomplished_Bus8852
+Score: 8
+Created UTC: 1767538873.0
+Comment: Good job bro, thanks for the resource especially for the Chinese
+
+Comment 2:
+Author: ag-mout
+Score: 2
+Created UTC: 1767541694.0
+Comment: Awesome repo! I thought they were markdown or LaTex notes, but the PDFs are also very cool
+
+Comment 3:
+Author: heisenberg_cookss
+Score: 1
+Created UTC: 1767554608.0
+Comment: impressive
+
+Comment 4:
+Author: Good_Apricot_2210
+Score: 1
+Created UTC: 1767619345.0
+Comment: I am a complete beginner. If I were to start your course how would I go about it?
+
+Comment 5:
+Author: yawninglionroars
+Score: 1
+Created UTC: 1767903373.0
+Comment: 謝謝教授

@@ -1,0 +1,53 @@
+Post Title: How to stream effectively using a supervisor agent
+Author: Friendly_Maybe9168
+Score: 6
+URL: https://www.reddit.com/r/LangChain/comments/1pqh5jp/how_to_stream_effectively_using_a_supervisor_agent/
+Number of comments: 12
+Created UTC: 1766137441.0
+
+Post Content:
+So I am using a supervisor agent, with the other agents all available to it as tools, now I want to stream only the final output, i dont want the rest. The issue is i have tried many custom implementations, i just realized the internal agent's output get streamed, so does the supervsior, so i get duplicate stramed responses, how best to stream only final response from supervisor ?
+
+
+Top 4 comments:
+
+Comment 1:
+Author: Hot_Substance_9432
+Score: 1
+Created UTC: 1766137794.0
+Comment: Something like this will work
+
+    output = ""
+    # Assuming 'supervisor' is the name of your final node
+    for chunk in app.stream(input_state, stream_mode="messages"):
+        for message in chunk.values():
+            
+    # Check if the message is from the intended final node
+            if message.metadata.get("langgraph_node") == "supervisor":
+                if hasattr(message, "content") and isinstance(message.content, str):
+                    print(message.content, flush=True)
+                    output += message.content
+
+Comment 2:
+Author: Hot_Substance_9432
+Score: 1
+Created UTC: 1766137974.0
+Comment: I got that from
+
+[https://forum.langchain.com/t/streaming-from-langgraph-supervisor/1789/2](https://forum.langchain.com/t/streaming-from-langgraph-supervisor/1789/2)
+
+Comment 3:
+Author: steitcher
+Score: 1
+Created UTC: 1766142092.0
+Comment: The most reliable stream mode is "custom" where you have full control on what is streamed. When using messages and having a complex network of nodes you may stream some some intermediate results that you don't want.
+
+Comment 4:
+Author: chester-lc
+Score: 1
+Created UTC: 1766179913.0
+Comment: Hello, we just updated the agents streaming guide to go into more detail on some use cases (like this one). Could you take a look here? [https://docs.langchain.com/oss/python/langchain/streaming#streaming-from-sub-agents](https://docs.langchain.com/oss/python/langchain/streaming#streaming-from-sub-agents)
+
+Would really appreciate any feedback!
+
+Chester from LangChain

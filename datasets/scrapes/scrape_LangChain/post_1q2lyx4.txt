@@ -1,0 +1,14 @@
+Post Title: Langgraph history summarisation
+Author: ankitsi9gh
+Score: 4
+URL: https://www.reddit.com/r/LangChain/comments/1q2lyx4/langgraph_history_summarisation/
+Number of comments: 1
+Created UTC: 1767417371.0
+
+Post Content:
+How do you guys summarise old chats in langgraph with trim_message, without deleting or removing old chats from state. ??
+
+Like for summarizing should I use langmem our build custom node and also for trim_message what would be best token base trimming or message count base trimming ??
+
+
+Top 0 comments:

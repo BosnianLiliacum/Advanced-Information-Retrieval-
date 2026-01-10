@@ -1,0 +1,227 @@
+Post Title: [D] r/MachineLearning - a year in review
+Author: Everlier
+Score: 186
+URL: https://www.reddit.com/r/MachineLearning/comments/1px1agd/d_rmachinelearning_a_year_in_review/
+Number of comments: 13
+Created UTC: 1766851467.0
+
+Post Content:
+This is a review of most upvoted posts on this sub in 2025, loosely grouped into high-level themes. Many important news will be missing, however that is indicative of discussion lying elsewhere at that time. I hope that you'll find it informative.
+
+---
+
+## Open-Source Parity and Training Efficiency
+
+The year began with excitement about frontier models becoming accessible. [DeepSeek R1 and its open-source distillations dominated discussion](https://www.reddit.com/r/MachineLearning/comments/1i9xwbr/r_learn_how_to_run_deepseekr1_locally_a_free/) (386 upvotes, by u/Brief-Zucchini-180), though users noted that locally-runnable versions were distilled models (8B or 32B) rather than the full 671B version, performing at roughly GPT-3.5 level. The broader story was [DeepSeek's decision to open-source](https://www.reddit.com/r/MachineLearning/comments/1ib2vtx/d_why_did_deepseek_opensource_their_work/) (965 upvotes, by u/we_are_mammals), despite reportedly achieving 45x training efficiency gains. Discussion centered on monetization models - commenters drew parallels to Meta's Llama strategy, noting open-source drives adoption and hosting revenue while reducing self-hosting friction. By late year, [a researcher replicated DeepSeek-R1-Zero's RL recipe on a 3B model for under $30](https://www.reddit.com/r/MachineLearning/comments/1i9dmwc/r_replicating_deepseekr3zero_rl_recipe_on_3b_llm/) (278 upvotes, by u/Happysedits), though skepticism emerged about whether improvements represented genuine iterative development or data leakage.
+
+## The Conference Crisis
+
+NeurIPS became a cautionary tale about scale. The community watched submission volumes climb to unprecedented levels (from 9k in 2022 to 25k in 2025 according to [one discussion](https://www.reddit.com/r/MachineLearning/comments/1kph8k7/d_has_a_research_field_ever_been_as_saturated_or/) (243 upvotes, by u/lapurita)), with acceptance becoming "increasingly lottery-like." Reports emerged that [NeurIPS was instructing Senior Area Chairs to reject already-accepted papers due to venue constraints](https://www.reddit.com/r/MachineLearning/comments/1n4bebi/d_neurips_is_pushing_to_sacs_to_reject_already/) (433 upvotes, by u/impatiens-capensis), despite positive reviews. [AAAI 2026 received 29,000 submissions](https://www.reddit.com/r/MachineLearning/comments/1n1wm8n/n_unprecedented_number_of_submissions_at_aaai_2026/) (201 upvotes, by u/Adventurous-Cut-7077), with roughly 20,000 from China, but reviewers reported widespread quality issues (incomplete implementations, unreproducible code, trivial errors). A researcher published [a position paper arguing the current conference model is unsustainable](https://www.reddit.com/r/MachineLearning/comments/1mo0ynr/r_position_the_current_ai_conference_model_is/) (399 upvotes, by u/NuoJohnChen), citing environmental costs and mental health concerns alongside publication saturation.
+
+The infrastructure groaned under the load. [Overleaf went down ahead of a NeurIPS deadline](https://www.reddit.com/r/MachineLearning/comments/1km8d7p/d_overleaf_is_down/) (192 upvotes, by u/), overwhelming with simultaneous users. [ArXiv announced it will stop accepting literature reviews and surveys without prior peer-review](https://www.reddit.com/r/MachineLearning/comments/1ol8wup/d_arxiv_cs_to_stop_accepting_literature/) (399 upvotes, by u/NamerNotLiteral), citing LLM-generated spam, though discussion questioned whether a preprint site requiring prior publication undermined its original purpose. The [arXiv migration from Cornell to Google Cloud Platform](https://www.reddit.com/r/MachineLearning/comments/1k22p74/arxiv_moving_from_cornell_servers_to_google_cloud/) (265 upvotes, by u/sh_tomer) sparked concern about combining a platform rewrite with cloud migration (a risky dual undertaking).
+
+## Visa and Access Barriers
+
+International researchers faced mounting obstacles. A researcher [denied a U.S. B1 visa for ICCV 2025 in Hawaii](https://www.reddit.com/r/MachineLearning/comments/1mtfikh/d_conferences_need_to_find_better_venues/) (202 upvotes, by u/AnyIce3007) raised concerns that major venues should relocate to countries with fewer visa barriers. The discussion revealed widespread frustration - commenters shared personal experiences of visa denials and expressed reluctance to submit work to U.S.-based conferences. One commenter noted that AAAI 2026's Singapore location attracted significantly higher submissions from China, partly because visa accessibility was easier than previous U.S./Canada venues.
+
+## Research Integrity and Review Quality
+
+The year exposed systemic problems in peer review and publishing integrity. [A Tsinghua paper was withdrawn from ICLR after all four reviewers identified AI-generated citations](https://www.reddit.com/r/MachineLearning/comments/1p01c70/d_tsinghua_iclr_paper_withdrawn_due_to_numerous/) (360 upvotes, by u/fourDnet), including fabricated references with fictitious authors like "Jane Doe." The incident sparked broader concerns about publication pressure in Chinese institutions where citation metrics drive promotion decisions.
+
+More damaging was [a researcher who discovered critical data quality issues in an Apple paper under review for ICLR 2026](https://www.reddit.com/r/MachineLearning/comments/1p82cto/d_got_burned_by_an_apple_iclr_paper_it_was/) (1555 upvotes, by u/diyer22). After adapting their model to the benchmark and getting poor results, they debugged the official code and found a critical bug: image content wasn't being passed to the vision language model. Manual inspection revealed approximately 30% error rates in the dataset. Reviewers missed it. After the researcher filed a public comment on OpenReview, the authors withdrew the paper and deleted the repository. The discussion praised the researcher's due diligence while acknowledging such issues are unfortunately common and often go undetected.
+
+Another case involved [a published 2024 ACL ArgMining paper on scientific fraud detection using fraudulent methodology itself](https://www.reddit.com/r/MachineLearning/comments/1pcaxi3/d_published_paper_uses_hardcoded_seed_and/) (288 upvotes, by u/WhiteBear2018). The authors trained separate models per class and reported results as a single model, hardcoded a seed that collapsed one model, and deleted the repository when issues were raised.
+
+Discussion coalesced around [declining review quality at top ML conferences](https://www.reddit.com/r/MachineLearning/comments/1pcgmma/d_on_low_quality_reviews_at_ml_conferences/) (191 upvotes, by u/BetterbeBattery). A researcher noted their theory-heavy paper received thoughtful reviews at AISTATS but faced dismissive reviews at NeurIPS and ICLR from reviewers who only commented on missing baselines. The consensus pointed to massive submission volumes forcing underqualified reviewers, zero incentive structures for quality, suspected AI-generated template reviews, and insufficient mathematical training. Commenters noted this affects both theoretical and empirical work and suggested alternative venues like TMLR and domain-specific journals showed better review standards.
+
+## Mamba's Disappearance
+
+The year saw continued discussion of why Mamba faded despite initial hype. [A discussion titled "Why Mamba disappeared"](https://www.reddit.com/r/MachineLearning/comments/1ihen9v/d_why_mamba_disappeared/) (190 upvotes, by u/Alarming-Power-813) revealed Mamba hasn't actually disappeared (7 survey papers were published last year), but lacks practical adoption outside research. Commenters noted that while Mamba showed theoretical promise, transformers have become deeply optimized across hardware and software stacks, making retraining massive models with unproven architecture economically unjustifiable when results are comparable or worse. [Another thread tackled "Why MAMBA did not catch on"](https://www.reddit.com/r/MachineLearning/comments/1hpg91o/d_why_mamba_did_not_catch_on/) (264 upvotes, by u/TwoSunnySideUp) with commenters identifying that Mamba's real-world performance matches or underperforms well-optimized transformers, the mature transformer software stack creates significant switching costs, and Mamba's fixed state memory cannot selectively retrieve ignored tokens.
+
+## Vision Transformers vs. CNNs
+
+The field remained unsettled on whether [Vision Transformers have won in Computer Vision](https://www.reddit.com/r/MachineLearning/comments/1hzn0gg/d_have_transformers_won_in_computer_vision/) (197 upvotes, by u/Amgadoz). Discussion revealed a nuanced landscape: while transformers are increasingly preferred for many tasks and excel with large datasets, CNNs and hybrid architectures remain competitive in low-data regimes, medical imaging, and specialized domains. Commenters noted ConvNext provides strong alternatives, transformers require more memory and complicate variable image resolutions, and dataset quality matters more than architecture choice.
+
+## Infrastructure and GPU Competition
+
+[NVIDIA's cuML team announced GPU acceleration for scikit-learn, UMAP, and HDBSCAN without code changes](https://www.reddit.com/r/MachineLearning/comments/1k1nn8d/n_we_just_made_scikitlearn_umap_and_hdbscan_run/) (453 upvotes, by u/celerimo), reporting speedups including 25x for Random Forest and 175x for HDBSCAN. Users expressed interest though some questioned memory limitations compared to CPU-only execution.
+
+[Huawei's 96GB GPU under $2k sparked discussion](https://www.reddit.com/r/MachineLearning/comments/1n4y2y3/d_huaweis_96gb_gpu_under_2k_what_does_this_mean/) (243 upvotes, by u/pmv143) about inference economics, but commenters identified critical limitations (the memory is LPDDR4 with lower bandwidth, lacks BF16 support, and software ecosystem remains immature). The consensus was that despite theoretical efficiency benefits, CUDA's dominance persists due to AMD's similar struggles and the software ecosystem maturity around GPUs.
+
+[Discussion emerged on why TPUs haven't achieved GPU prominence](https://www.reddit.com/r/MachineLearning/comments/1ornns5/d_why_tpus_are_not_as_famous_as_gpus/) (212 upvotes, by u/DryHat3296). Commenters identified multiple factors: TPUs are primarily available only through Google Cloud (vendor lock-in), lack local development capabilities, have limited software support requiring JAX, and lag in features like FP8 training support.
+
+## Emerging Techniques and Tools
+
+[A developer released Termite, a CLI that generates terminal UIs from natural language prompts](https://www.reddit.com/r/MachineLearning/comments/1hoyzao/p_i_made_termite_a_cli_that_can_generate_terminal/) (310 upvotes, by u/jsonathan), though discussion centered on security implications of executing generated code and comparison to existing tools. [Another developer released Promptimal, a CLI for optimizing prompts using a genetic algorithm](https://www.reddit.com/r/MachineLearning/comments/1hubl11/p_i_made_a_cli_for_improving_prompts_using_a/) (236 upvotes, by u/jsonathan).
+
+[A user built a Snake game with a Diffusion model as the game engine](https://www.reddit.com/r/MachineLearning/comments/1hz1l2j/p_built_a_snake_game_with_a_diffusion_model_as/) (537 upvotes, by u/jurassimo), predicting next frames from user input in near real-time. Discussion focused on training data, diffusion steps, and sampling schedulers.
+
+[A developer created torchvista, an interactive PyTorch visualization package for notebooks](https://www.reddit.com/r/MachineLearning/comments/1l0xvq9/p_interactive_pytorch_visualization_package_that/) (283 upvotes, by u/Dev-Table) showing model forward passes as expandable computation graphs. [Another created ml-visualized.com combining interactive visualizations with mathematical derivations](https://www.reddit.com/r/MachineLearning/comments/1lhtkr4/p_i_made_a_website_to_visualize_machine_learning/) (426 upvotes, by u/Bright_Aioli_1828) using marimo and Jupyter notebooks.
+
+[A developer released an LLM-powered Python debugger allowing natural language queries about program state](https://www.reddit.com/r/MachineLearning/comments/1lnem9e/p_i_built_a_python_debugger_that_you_can_talk_to/) (202 upvotes, by u/jsonathan). [Someone created a lightweight manga generation model by finetuning Pixart-Sigma on 20 million manga images](https://www.reddit.com/r/MachineLearning/comments/1jws42t/p_a_lightweight_opensource_model_for_generating/) (191 upvotes, by u/fumeisama), supporting character consistency through embeddings from a pre-trained manga encoder.
+
+[A researcher introduced DF11 (Dynamic-Length Float) compression reducing BF16 models to 70% size during inference](https://www.reddit.com/r/MachineLearning/comments/1k7of6w/rp_we_compress_any_bf16_model_to_70_size_during/) (199 upvotes, by u/choHZ), enabling models like Llama 3.1 405B to fit on 8x H100s.
+
+## Diffusion and Generative Models
+
+[Researchers demonstrated generative models trained only on furniture and cars somehow generalized to segment basically everything else](https://www.reddit.com/r/MachineLearning/comments/1kuq3h0/r_we_taught_generative_models_to_segment_only/) (321 upvotes, by u/PatientWrongdoer9257). The approach finetuned Stable Diffusion and MAE for instance segmentation using only furniture and cars with novel instance coloring loss, yet generalized to unseen categories.
+
+[Google released Gemini Diffusion, a text generation model using diffusion rather than autoregressive approaches](https://www.reddit.com/r/MachineLearning/comments/1ksdn9b/d_google_already_out_with_a_text_diffusion_model/) (270 upvotes, by u/hiskuu). Commenters noted diffusion models theoretically allow tokens to be refined globally rather than generated strictly left-to-right, potentially addressing limitations of autoregressive generation.
+
+[Researchers built NeuralOS, an experimental generative operating system generating every screen pixel from user inputs](https://www.reddit.com/r/MachineLearning/comments/1m3v7ll/r_neuralos_a_generative_os_entirely_powered_by/) (590 upvotes, by u/yuntiandeng) at 1.8fps on H100 using an RNN and diffusion model. Discussion acknowledged impracticality but noted novelty as a tech demonstrator.
+
+## Interpretability and Understanding
+
+[Anthropic released a paper on interpretability using attribution graphs to trace internal mechanisms](https://www.reddit.com/r/MachineLearning/comments/1jmhoq6/r_anthropic_on_the_biology_of_a_large_language/) (230 upvotes, by u/hiskuu) across tasks including reasoning, poetry planning, and refusal. Discussion focused heavily on biological metaphors, with critics arguing these anthropomorphize pattern-matching without genuine foresight.
+
+[A researcher shared work on LLM circuit visualization extending 3Blue1Brown concepts](https://www.reddit.com/r/MachineLearning/comments/1laqsz2/p_3blue1brown_followup_from_hypothetical_examples/) (213 upvotes, by u/ptarlye) using mechanistic interpretability to decompose how models process specific examples. Discussion addressed framings of model behavior, with commenters noting attention works through learned statistical processes rather than symbolic rules.
+
+[Researchers showed LLMs can be converted to locally linear systems at inference time](https://www.reddit.com/r/MachineLearning/comments/1l4rpe2/r_llms_are_locally_linear_mappings_qwen_3_gemma_3/) (239 upvotes, by u/jamesvoltage), achieving reconstruction error around 10⁻⁶. However, limitations emerged - the linear system is input-sequence-specific and takes 10+ seconds to compute for 3B models.
+
+## Performance Benchmarking and Reasoning
+
+[Gemini officially achieved gold-medal standard at the International Mathematical Olympiad](https://www.reddit.com/r/MachineLearning/comments/1m5qudf/d_gemini_officially_achieves_goldmedal_standard/) (227 upvotes, by u/currentscurrents). Discussion centered on concerns about validation, compute requirements, and contradictions with models struggling on easier problems. [A post analyzed reasoning model limitations](https://www.reddit.com/r/MachineLearning/comments/1ophthe/reasoning_models_dont_degrade_gracefully_they_hit/) (208 upvotes, by u/Fair-Rain3366) finding they exhibit catastrophic failure rather than graceful degradation - maintaining high accuracy up to a complexity threshold before collapsing.
+
+[CompressARC achieved 34.75% on ARC without pretraining](https://www.reddit.com/r/MachineLearning/comments/1j4dw38/r_3475_on_arc_without_pretraining/) (246 upvotes, by u/currentscurrents), training small networks during inference on individual puzzles in roughly 20 minutes. Discussion touched connections to test-time adaptation and whether just-in-time training will become more prevalent.
+
+[A researcher evaluated LLMs on real-world software engineering tasks from Upwork](https://www.reddit.com/r/MachineLearning/comments/1isbo6t/r_evaluating_llms_on_realworld_software/) (197 upvotes, by u/Successful-Western27), creating a $1M benchmark with Claude 3.5 Sonnet earning $208,050 but resolving only 26.2% of tasks. Discussion centered on whether benchmarks capture isolated task completion rather than realistic scenarios within established codebases.
+
+[A post analyzing 400+ ML competitions from 2024](https://www.reddit.com/r/MachineLearning/comments/1ixrxoq/r_analysis_of_400_ml_competitions_in_2024/) (391 upvotes, by u/hcarlens) found Python nearly universal among winners, PyTorch dominates at 9:1 over TensorFlow, CNNs still outpace transformers in computer vision, and quantization/LoRA increasingly common in language model competitions.
+
+## Activation Functions and Architecture Components
+
+[A post discussed why cosine similarity isn't the silver bullet](https://www.reddit.com/r/MachineLearning/comments/1i0hfsd/r_cosine_similarity_isnt_the_silver_bullet_we/) (460 upvotes, by u/skeltzyboiii) from Netflix and Cornell researchers. Discussion revealed disagreement about novelty (commenters noted the issue is using cosine similarity on embeddings trained with losses that don't optimize for angular distances, not with cosine similarity itself).
+
+[A user sparked discussion critiquing softmax](https://www.reddit.com/r/MachineLearning/comments/1i44h5v/d_i_hate_softmax/) (269 upvotes, by u/Sad-Razzmatazz-5188), highlighting that it only cares about differences between inputs, not absolute magnitudes. Discussion revealed fundamental disagreements about whether properties are bugs or features (defenders argued invariance to scaling is intentional and desirable for learning probability distributions).
+
+[Researchers introduced SUGAR (Surrogate Gradient Learning for ReLU)](https://www.reddit.com/r/MachineLearning/comments/1kz5t16/r_the_resurrection_of_the_relu/) (235 upvotes, by u/Radiant_Situation340) addressing dying ReLU by using smooth surrogate gradients during backpropagation. Discussion raised concerns about overhead and inconsistencies between claimed benefits and evidence.
+
+[Meta researchers proposed Transformers without Normalization using Dynamic Tanh](https://www.reddit.com/r/MachineLearning/comments/1jbs7xg/r_transformers_without_normalization_fair_meta/) (270 upvotes, by u/Nunki08). Discussion was mixed (some found work interesting, others criticized lack of theoretical justification and questioned results at small scales).
+
+[A researcher introduced the Periodic Linear Unit (PLU) based on Fourier synthesis](https://www.reddit.com/r/MachineLearning/comments/1mfi8li/r_from_taylor_series_to_fourier_synthesis_the/) (230 upvotes, by u/bill1357). Commenters highlighted insufficient literature review, lack of comparison with existing periodic functions like SIREN, and unfair baselines, cautioning the core idea may have merit but requires substantial additional work.
+
+## Training Techniques and Adaptation
+
+[Sakana AI introduced Transformer², a framework for real-time LLM adaptation](https://www.reddit.com/r/MachineLearning/comments/1i1l8d4/r_transformer²_selfadaptive_llms/) (188 upvotes, by u/hardmaru) modifying only singular components rather than full fine-tuning. However, discussion revealed mixed results (significant gains on smaller models but minimal improvement on 70B models).
+
+[A researcher presented TMemNet-I with irreversible memory updates](https://www.reddit.com/r/MachineLearning/comments/1jh6lr0/researchcan_ai_remember_irreversibly_like_a_brain/) (264 upvotes, by u/No_Release_3665) using entropy-based decay. Discussion revealed skepticism about whether irreversibility is necessary versus a biological constraint, and questions about architectural details.
+
+[LeJEPA was presented as theoretically grounded for self-supervised learning](https://www.reddit.com/r/MachineLearning/comments/1ovm4fd/r_lejepa_new_yann_lecun_paper/) (303 upvotes, by u/jacobgorm), using Sketched Isotropic Gaussian Regularization to enforce optimal embedding representations. Discussion praised theoretical contribution but raised questions about practical efficiency and generalization.
+
+## Emerging Research Areas
+
+[Andrew Barto and Richard Sutton were awarded the 2024 ACM A.M. Turing Award](https://www.reddit.com/r/MachineLearning/comments/1j42icj/andrew_barto_and_richard_sutton_are_the/) (422 upvotes, by u/MTGTraner) for foundational reinforcement learning contributions. Discussion emphasized the 40-year journey from 1980s breakthroughs to real-world applications.
+
+[AI-designed proteins neutralized lethal snake venom](https://www.reddit.com/r/MachineLearning/comments/1il78ti/r_aidesigned_proteins_neutralize_lethal_snake/) (242 upvotes, by u/prototypist) using AlphaFold 2 and RFdiffusion. Discussion noted while de novo design is significant, the actual therapeutic challenge is achieving selectivity without harming human tissue.
+
+[Meta released DINOv3 trained on 1.7B images](https://www.reddit.com/r/MachineLearning/comments/1ms9d2u/r_dino_v3_selfsupervised_learning_for_vision_at/) (219 upvotes, by u/say_wot_again) achieving state-of-the-art results with linear probing, plus satellite imagery-specific variants. Discussion focused on evaluation methodology and whether compute requirements justify adoption.
+
+[A GPU mini-grant program was announced](https://www.reddit.com/r/MachineLearning/comments/1j8bu9k/p_im_starting_a_gpu_minigrant/) (186 upvotes, by u/tczoltan) to provide computational resources where computing power is the limiting factor. The initiative aimed to democratize access similar to how personal computing replaced mainframes.
+
+[Bloat in machine learning shared libraries was quantified at &gt;70%](https://www.reddit.com/r/MachineLearning/comments/1kwxxv2/r_bloat_in_machine_learning_shared_libs_is_70/) (353 upvotes, by u/Specialist_Square818), with Negativa-ML reducing device code by up to 75% and total size by 55%. Discussion attributed bloat to historical gaps in GPU programming expertise and redundant operations across libraries.
+
+## Reasoning About Economic Impact
+
+[Ilya Sutskever expressed puzzlement at the gap between AI benchmarks and economic impact](https://www.reddit.com/r/MachineLearning/comments/1pm2zsb/ilya_sutskever_is_puzzled_by_the_gap_between_ai/) (442 upvotes, by u/we_are_mammals). Commenters offered several explanations: AI tools struggle with end-to-end task completion, benchmarks may overfit to specific metrics, and institutional integration takes time similar to Solow Paradox patterns.
+
+[Larry Ellison claimed inference is where AI money will be made](https://www.reddit.com/r/MachineLearning/comments/1nfav96/d_larry_ellison_inference_is_where_the_money_is/) (210 upvotes, by u/pmv143). While there was agreement that inference represents monetization (versus training as a cost), skepticism dominated about Oracle's competitive viability given custom chips from cloud providers.
+
+## Career and Community Issues
+
+[A senior ML engineer with 9 years of experience expressed concern about career stagnation](https://www.reddit.com/r/MachineLearning/comments/1npdfh1/d_is_senior_ml_engineering_just_api_calls_now/) (398 upvotes, by u/Only_Emergencies) as roles shifted from building models to integrating APIs. Discussion revealed widespread agreement that engineers who trained models in the 2010s now spend most time on API integration and infrastructure.
+
+[A PhD student with strong publication credentials asked how to secure research scientist internships](https://www.reddit.com/r/MachineLearning/comments/1nomagf/d_how_do_you_actually_land_a_research_scientist/) (190 upvotes, by u/ParticularWork8424). Responses emphasized that venue prestige matters less than real-world impact, but networking and referrals remain critical barriers.
+
+[A user posted about mental health struggles during NLP graduate research](https://www.reddit.com/r/MachineLearning/comments/1ltejq6/d_remembering_felix_hill_and_the_pressure_of/) (209 upvotes, by u/moji-mf-joji), motivated by Felix Hill's encouragement before his death. The essay sparked discussions where readers shared difficult experiences in PhD programs, emphasizing the importance of normalizing conversations about these challenges.
+
+[Discussion emerged on preparing for a DeepMind Gemini Team interview](https://www.reddit.com/r/MachineLearning/comments/1k8gy12/d_preparing_for_a_deepmind_gemini_team_interview/) (238 upvotes, by u/Healthy_Fisherman_88). Respondents emphasized ML system design differs from traditional software engineering - focusing on throughput, memory constraints, latency tradeoffs, and KV cache optimization rather than conventional distributed systems.
+
+[A candidate who rejected a solid offer while waiting for a dream job](https://www.reddit.com/r/MachineLearning/comments/1kmpzpy/d_rejected_a_solid_offer_waiting_for_my_dream_job/) (193 upvotes, by u/DNNenthusiast) found themselves unemployed when both fell through. Most commenters agreed they should have accepted and resigned later - a strategy several reported using successfully.
+
+## Information Quality and Misinformation
+
+[A user raised concerns about the proliferation of misinformation on social media](https://www.reddit.com/r/MachineLearning/comments/1lbct3w/d_machine_learning_like_many_other_popular_field/) (375 upvotes, by u/Striking-Warning9533). Commenters identified self-appointed experts using imprecise terminology, LLMs enabling people to appear knowledgeable without understanding mechanics, and media personalities offering conflicting narratives on unsettled questions.
+
+[A discussion emerged about LLMs validating people with delusional thinking](https://www.reddit.com/r/MachineLearning/comments/1lkmkuw/d_alarming_amount_of_schizoid_people_being/) (319 upvotes, by u/GodIsAWomaniser). Concerns centered on LLM sycophancy creating reinforcing feedback loops - when external criticism is faced, users return to chatbots for validation, further isolating them from reality.
+
+## Educational Resources
+
+[3Blue1Brown's video explaining attention mechanisms received appreciation](https://www.reddit.com/r/MachineLearning/comments/1i6zh6p/d_a_3blue1brown_video_that_explains_attention/) (395 upvotes, by u/yogimankk) for visual explanations and pedagogical approach. Commenters clarified a rushed explanation about causal masking and referenced complementary resources.
+
+[A developer released beyond-nanoGPT, a 20k+ line educational repository](https://www.reddit.com/r/MachineLearning/comments/1l9lb0c/p_i_reimplemented_all_of_frontier_deep_learning/) (247 upvotes, by u/tanishqkumar07) implementing modern deep learning from scratch. While praised for bridging theory and practice, critiques included missing test suites, specific technical errors, and skepticism about AI-generated portions.
+
+[Stanford announced an updated Deep Learning course](https://www.reddit.com/r/MachineLearning/comments/1nwhihj/n_stanford_is_updating_their_deep_learning_course/) (273 upvotes, by u/al3arabcoreleone). Discussion noted alternative courses from CMU and Andrew Ng while expressing interest in what specifically changed.
+
+## Discussion on Yann LeCun's Positions
+
+[Discussion emerged around Yann LeCun's claim that auto-regressive LLMs are fundamentally limited](https://www.reddit.com/r/MachineLearning/comments/1jvrk68/d_yann_lecun_autoregressive_llms_are_doomed/) (356 upvotes, by u/hiskuu). While commenters acknowledged concerns about scaling limitations, several challenged his specific probability-of-correctness argument. Broader consensus suggested auto-regressive approaches may not be sufficient for AGI but remain practical SOTA.
+
+[A user asked for clarification on LeCun's comparison of human sensory data to YouTube uploads](https://www.reddit.com/r/MachineLearning/comments/1kk19ob/d_what_yann_lecun_means_here/) (434 upvotes, by u/turhancan97). Discussion centered on whether this highlights multimodal sensory learning advantages over text-based training, with counterpoints about blind children learning language effectively.
+
+## Hardware Utilization and System Design
+
+[An interview question about calculating hardware utilization](https://www.reddit.com/r/MachineLearning/comments/1kjuoz4/d_pov_you_get_this_question_in_your_interview/) (559 upvotes, by u/Arqqady) sparked discussion showing calculations arriving at approximately 21.6% utilization. Commenters highlighted significant ambiguities (the answer depends heavily on unstated architectural details, making precise answers difficult). Skepticism emerged about the question's pedagogical value, with some noting it functions as trivia rather than assessing practical ML engineering ability.
+
+## Miscellaneous Technical Work
+
+[A discussion examined legacy tools like Performer Attention](https://www.reddit.com/r/MachineLearning/comments/1ku5n68/r_the_gamechanger_of_performer_attention_mechanism/) (244 upvotes, by u/theMonarch776) as potential game-changers. Commentary revealed practical limitations (underperformance in LLMs and being superseded by alternatives like Flash Attention).
+
+[A researcher built an LSTM-based malware packer](https://www.reddit.com/r/MachineLearning/comments/1ln4omn/r_lstm_or_transformer_as_malware_packer/) (343 upvotes, by u/Acanthisitta-Sea) storing code in model weights through intentional overfitting. Security engineers raised significant practical limitations (the technique only evades trivial static detection and would still be detected once unpacked in memory).
+
+[A user shared a knowledge graph traversal approach for RAG systems](https://www.reddit.com/r/MachineLearning/comments/1ookxb0/r_knowledge_graph_traversal_with_llms_and/) (312 upvotes, by u/Alieniity). Discussion clarified the work implements semantic similarity graph traversal rather than true knowledge graph construction requiring typed entities and relations.
+
+[A user addressed image denoising model performance](https://www.reddit.com/r/MachineLearning/comments/1lhny9b/p_this_has_been_done_like_a_thousand_time_before/) (608 upvotes, by u/Nyaalice) on smooth noise types. Suggestions included treating as upsampling problem, switching to U-Net, artificially varying noise distributions, and exploring Plug-and-Play methods.
+
+[A researcher proposed using eigenvalues as computational primitives](https://www.reddit.com/r/MachineLearning/comments/1popuf4/p_eigenvalues_as_models/) (205 upvotes, by u/alexsht1). Discussion highlighted significant concerns (non-differentiability and set-valued nature pose implementation challenges, and eigendecomposition is O(n³)).
+
+## Year-End Reflections
+
+[The subreddit discussed best papers of 2025](https://www.reddit.com/r/MachineLearning/comments/1pvmrx9/d_best_papers_of_2025/) (228 upvotes, by u/ArtisticHamster). Top-voted comment identified DeepSeek R1/V3 and Diffusion-based models as most impactful, followed by Vision Language Action models for robotics and Reasoning models.
+
+[A proposal to add "no AI slop" as a subreddit rule](https://www.reddit.com/r/MachineLearning/comments/1pnegk8/d_idea_add_no_ai_slop_as_subreddit_rule/) (207 upvotes, by u/qalis) received mixed support. While commenters endorsed the idea for giving moderators clearer grounds, detractors raised concerns about enforcement and distinguishing AI assistance from human-written content.
+
+---
+
+**P.S.** Special recognition to the researcher who publicly documented data quality issues in the Apple ICLR paper (1555 upvotes) - due diligence like this was rare and needed. Also notable: the Tsinghua fake citations case, the ACL fraud detection paper using fraudulent methodology, and the broader recognition that massive submission volumes have broken the peer review system in ways that need structural rather than merely procedural fixes. The award to Barto and Sutton for reinforcement learning reminded the field that foundational work takes 40 years to pay off.
+
+
+Top 5 comments:
+
+Comment 1:
+Author: SlayahhEUW
+Score: 14
+Created UTC: 1766852440.0
+Comment: Thank you, nice summary!  
+
+
+For the linear attention/Mamba fans, I think that Mamba's disappearance can also be attributed to that the field of Linear Attention has generalized and expanded beyond Mamba. Here is a list of 50 submissions to ICLR sorted by topic that all use similar techniques to Mamba.
+
+[https://docs.google.com/spreadsheets/d/1ooCMOwkUup\_WRsHJuu5Dmjj29lB60YrZPdUP-02kq\_g/edit?gid=1013819544#gid=1013819544](https://docs.google.com/spreadsheets/d/1ooCMOwkUup_WRsHJuu5Dmjj29lB60YrZPdUP-02kq_g/edit?gid=1013819544#gid=1013819544)
+
+Comment 2:
+Author: GeorgeBird1
+Score: 8
+Created UTC: 1766880188.0
+Comment: This was a fantastic read to summarise the year! Thanks for all the effort :))
+
+It seems like a major open forum reconsideration of preprints/publications and peer review might be in order in the age of LLM papers and reviewers to uphold quality and maintain a good signal to noise ratio of shared works. It’ll be interesting to see where this leads in the near term and what solutions can be developed.
+
+Comment 3:
+Author: theawesomenachos
+Score: 2
+Created UTC: 1766885826.0
+Comment: the openreview leak was incredible times, was checking the ML subreddit almost like a drama subreddit for a bit
+
+Comment 4:
+Author: dannyf7
+Score: 2
+Created UTC: 1766999793.0
+Comment: Nice and helpful summary! Thanks for doing this!
+
+Comment 5:
+Author: bujibudax
+Score: 2
+Created UTC: 1766859452.0
+Comment: One hell of a year huh.
+
+Detecting generated content might be the next thing.

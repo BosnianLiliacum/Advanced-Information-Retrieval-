@@ -1,0 +1,49 @@
+Post Title: [D] Interview preparation for research scientist/engineer or Member of Technical staff position for frontier labs
+Author: hmi2015
+Score: 83
+URL: https://www.reddit.com/r/MachineLearning/comments/1pkhblb/d_interview_preparation_for_research/
+Number of comments: 26
+Created UTC: 1765509452.0
+
+Post Content:
+How do people prepare for interviews at frontier labs for research oriented positions or member of techncial staff positions? I am particularly interested in as someone  interested in post-training, reinforcement learning, finetuning, etc.
+
+1.	⁠How do you prepare for research aspect of things
+2.	⁠How do you prepare for technical parts (coding, leetcode, system design etc)
+
+PS: This is for someone doing PhD in ML and for entry level (post PhD) positions
+
+
+Top 3 comments:
+
+Comment 1:
+Author: pm_me_your_pay_slips
+Score: 80
+Created UTC: 1765515483.0
+Comment: If I gave you a buggy version of any part of some deep learning code (including training loop, forward and backwards functions for all ops) would you be able to spot the bugs?
+
+If I gave you a base architecture code, would you be able to write everything that’s needed to run ablations on different architecture hyper parameters?
+
+If I gave you some paper describing a new model architecture, would you be able to implement it and test it on a toy dataset?
+
+Since you mention postraining and RL, would you be able to implement Lora from scratch? Would you be able to implement DPO from scratch? Which metrics would you track to determine whether your code works?
+
+As far as I can tell, companies these days care more about engineering than about research. So, even if you’re applying for a research position, you’ll be evaluated heavily on the ML engineering side.
+
+Leetcode is a waste of everyone’s time, and if you agree with me you should let recruiters know your opinion as early as possible.
+
+Comment 2:
+Author: koolaidman123
+Score: 20
+Created UTC: 1765553549.0
+Comment: 95% luck 5% skill
+
+interviews generally cover both depth and breadth, and a lot of times you only really know the answer if you have worked on it before for ex they may ask during rl training you're running into a bunch of problems: entropy collapse, model reasoning in another language, terrible mfu etc. and it's hard to give a good answer unless you have dealt with these issues before
+
+plus coding is a crapshoot. not a lot of leetcode but still get questions that is hard to solve if you're not super familiar/haven't solve similar problems
+
+Comment 3:
+Author: DigThatData
+Score: -33
+Created UTC: 1765525619.0
+Comment: if you have to ask, you're not ready for a staff level role.
