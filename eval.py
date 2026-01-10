@@ -16,7 +16,7 @@ from insert_data import vectorize_text
 # Config
 # ----------------------------
 DB_LOCAL = True
-K = 20
+K = 10
 
 SUBREDDIT_FIELD = "subreddit"
 
