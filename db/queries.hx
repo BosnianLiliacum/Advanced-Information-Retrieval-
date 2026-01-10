@@ -28,4 +28,4 @@ QUERY get_all_posts() =>
 QUERY search_posts_vec(query: [F64], k: I32) =>
     vecs <- SearchV<Content>(query, k)
     posts <- vecs::In<EmbeddingOf>
-    RETURN posts::{subreddit, title, content, url, comments}
+    RETURN posts

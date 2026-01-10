@@ -64,21 +64,23 @@ def vectorize_text(text):
     return embedding
 
 if __name__ == "__main__":
-    db = helix.Client(local=True, verbose=True)
-
     data = load_all_posts("datasets/scrapes")
 
-    #vecs = []
-    #for _, _, content, _, _, _ in tqdm(data):
-    #    vec = vectorize_text(content)
-    #    vecs.append(vec)
-    #with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
+    VECTORIZE = False # set to true then run then false then run again
 
-    n_data = []
-    vecs = json.load(open("embeded_vectors.json"))
-    for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
-        comments = [c for c, _ in comments]
-        db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
+    if VECTORIZE:
+        vecs = []
+        for _, _, content, _, _, _ in tqdm(data):
+            vec = vectorize_text(content)
+            vecs.append(vec)
+        with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
+    else:
+        db = helix.Client(local=True, verbose=True)
+        n_data = []
+        vecs = json.load(open("embeded_vectors.json"))
+        for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
+            comments = [c for c, _ in comments]
+            db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
 
-    posts = db.query("get_all_posts")
-    print(len(posts[0]["posts"]))
+        posts = db.query("get_all_posts")
+        print(len(posts[0]["posts"]))

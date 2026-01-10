@@ -232,6 +232,7 @@ def run_eval(db: helix.Client, queries: List[Tuple[str, str]], k: int) -> Tuple[
 
         retrieved_labels = []
         for p in posts:
+            p = p
             lab = extract_label(p, SUBREDDIT_FIELD)
             if lab is not None:
                 retrieved_labels.append(lab)
