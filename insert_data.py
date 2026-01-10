@@ -22,7 +22,7 @@ class upload_a_post(helix.Query):
         vector: List[float],
         url: str,
         score: int,
-        comments: List[Tuple[str, int]]
+        comments: List[str]
     ):
         super().__init__()
         self.subreddit = subreddit
@@ -34,9 +34,8 @@ class upload_a_post(helix.Query):
         self.comments = comments
 
     def query(self) -> List[helix.Payload]:
-        comments_payload = []
-        for ct, score in comments:
-            comments_payload.append({ "ic_content": ct, "ic_score": int(score) })
+        #comments_payload = []
+        #for ct in comments: comments_payload.append(ct)
         return [{
             "subreddit": self.subreddit,
             "title": self.title,
@@ -44,11 +43,10 @@ class upload_a_post(helix.Query):
             "vector": self.vector,
             "url": self.url,
             "score": int(self.score),
-            "comments": comments_payload,
+            "comments": self.comments,
         }]
 
-    def response(self, response):
-        return response
+    def response(self, response): return response
 
 def vectorize_text(text):
     inputs = tokenizer(
@@ -70,16 +68,17 @@ if __name__ == "__main__":
 
     data = load_all_posts("datasets/scrapes")
 
-    vecs = []
-    for _, _, content, _, _, _ in tqdm(data):
-        vec = vectorize_text(content)
-        vecs.append(vec)
-    with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
+    #vecs = []
+    #for _, _, content, _, _, _ in tqdm(data):
+    #    vec = vectorize_text(content)
+    #    vecs.append(vec)
+    #with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
 
-    #n_data = []
-    #vecs = json.load(open("embeded_vectors.json"))
-    #for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
-    #    db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
+    n_data = []
+    vecs = json.load(open("embeded_vectors.json"))
+    for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
+        comments = [c for c, _ in comments]
+        db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
 
-    #posts = db.query("get_all_posts")
-    #print(len(posts[0]["posts"]))
+    posts = db.query("get_all_posts")
+    print(len(posts[0]["posts"]))

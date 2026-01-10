@@ -4,6 +4,7 @@ from typing import List, Tuple
 from insert_data import vectorize_text
 import json
 import requests
+from pprint import pprint
 import helix
 import torch
 from tqdm import tqdm
@@ -19,25 +20,6 @@ model.to(device)
 model.eval()
 
 class search_posts_vec(helix.Query):
-    def __init__(
-        self,
-        query_vec: List[float],
-        k: int,
-    ):
-        super().__init__()
-        self.query_vec = query_vec
-        self.k = k
-
-    def query(self) -> List[helix.Payload]:
-        return [{
-            "query": self.query_vec,
-            "k": self.k,
-        }]
-
-    def response(self, response):
-        return response
-
-class search_posts_vec_with_comments(helix.Query):
     def __init__(
         self,
         query_vec: List[float],
@@ -88,76 +70,102 @@ def create_rephrase(text: str) -> str:
     """
     return prompt_template
 
-def create_prompt(out: list, query: str) -> str:
-    formatted_context = ""
-    subreddits = set()
+#def create_prompt(out: list, query: str) -> str:
+#    formatted_context = ""
+#    subreddits = set()
+#    urls = []
+#
+#    for idx, post in enumerate(out, 1):
+#        title = post.get('title', 'N/A')
+#        subreddit = post.get('subreddit', 'N/A')
+#        content = post.get('content', 'N/A')
+#        url = post.get('url', 'N/A')
+#
+#        formatted_context += f"Source {idx}: {title}\n"
+#        formatted_context += f"Subreddit: r/{subreddit}\n"
+#        formatted_context += f"Content: {content}\n"
+#        formatted_context += "-" * 80 + "\n\n"
+#
+#        subreddits.add(subreddit)
+#        urls.append(url)
+#
+#    subreddit_recs = ", ".join([f"r/{sub}" for sub in list(subreddits)[:3]])
+#
+#    # Format URLs list
+#    urls_section = "\n".join([f"- {url}" for url in urls if url != 'N/A'])
+#
+#    prompt_template = """<instructions>
+#    Based on the provided sources below, answer the user's question to the best of your ability.
+#
+#    In your response:
+#    1. Provide a comprehensive answer drawing from the sources
+#    2. List the top key points or answers clearly
+#    3. Recommend relevant subreddits where the user could visit for more detailed discussions on this topic
+#    4. Include all source URLs at the end for the user to explore further
+#    </instructions>
+#
+#    <question>
+#    {query}
+#    </question>
+#
+#    <sources>
+#    {context}
+#    </sources>
+#
+#    <recommended_subreddits>
+#    For more discussions and answers on this topic, consider visiting: {subreddits}
+#    </recommended_subreddits>
+#
+#    <source_urls>
+#    {urls}
+#    </source_urls>
+#    """
+#
+#    prompt = prompt_template.format(
+#        query=query,
+#        context=formatted_context,
+#        subreddits=subreddit_recs,
+#        urls=urls_section
+#    )
+#    return prompt
+
+def format_helix_results(results):
+    context_parts = []
     urls = []
+    subreddits = set()
 
-    for idx, post in enumerate(out, 1):
-        title = post.get('title', 'N/A')
-        subreddit = post.get('subreddit', 'N/A')
-        content = post.get('content', 'N/A')
-        url = post.get('url', 'N/A')
+    for post in results:
+        # 1. Build the source text
+        post_text = f"Subreddit: r/{post['subreddit']}\n"
+        post_text += f"Title: {post['title']}\n"
+        post_text += f"Post Content: {post['content']}\n"
 
-        formatted_context += f"Source {idx}: {title}\n"
-        formatted_context += f"Subreddit: r/{subreddit}\n"
-        formatted_context += f"Content: {content}\n"
-        formatted_context += "-" * 80 + "\n\n"
+        if post.get('comments'):
+            post_text += "Top Comments:\n"
+            for comment in post['comments']:
+                post_text += f"- [Score {comment['score']}]: {comment['content']}\n"
 
-        subreddits.add(subreddit)
-        urls.append(url)
+        context_parts.append(post_text)
 
-    subreddit_recs = ", ".join([f"r/{sub}" for sub in list(subreddits)[:3]])
+        # 2. Collect metadata for other template slots
+        urls.append(post['url'])
+        subreddits.add(f"r/{post['subreddit']}")
 
-    # Format URLs list
-    urls_section = "\n".join([f"- {url}" for url in urls if url != 'N/A'])
-
-    prompt_template = """<instructions>
-    Based on the provided sources below, answer the user's question to the best of your ability.
-
-    In your response:
-    1. Provide a comprehensive answer drawing from the sources
-    2. List the top key points or answers clearly
-    3. Recommend relevant subreddits where the user could visit for more detailed discussions on this topic
-    4. Include all source URLs at the end for the user to explore further
-    </instructions>
-
-    <question>
-    {query}
-    </question>
-
-    <sources>
-    {context}
-    </sources>
-
-    <recommended_subreddits>
-    For more discussions and answers on this topic, consider visiting: {subreddits}
-    </recommended_subreddits>
-
-    <source_urls>
-    {urls}
-    </source_urls>
-    """
-
-    prompt = prompt_template.format(
-        query=query,
-        context=formatted_context,
-        subreddits=subreddit_recs,
-        urls=urls_section
-    )
-    return prompt
+    return {
+        "context": "\n---\n".join(context_parts),
+        "urls": "\n".join(urls),
+        "subreddits": ", ".join(subreddits)
+    }
 
 if __name__ == "__main__":
     text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
     vec = vectorize_text(text)
-    n = 5
-    res = db.query(search_posts_vec_with_comments(vec, n))
-    print(res)
+    res = db.query(search_posts_vec(vec, 5))
+    pprint(res)
 
     exit(1)
 
-    text = input("prompt: ")
-    #text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
+    #text = input("prompt: ")
     text_prompt = create_rephrase(text)
     print(text_prompt)
     res = get_ollama_response(text_prompt)
@@ -169,6 +177,14 @@ if __name__ == "__main__":
     # ['content', 'subreddit', 'title', 'url']
     out = [o for o in res[0]["posts"][:4]]
 
-    prompt = create_prompt(out, text)
-    res = get_ollama_response(prompt)
-    print(res)
+    prompt = format_helix_results(res)
+    print(prompt)
+    #res = get_ollama_response(prompt)
+    #print(res)
+
+
+
+    # for mistral and llama
+    # 20 questions, press enter to go onto the next question and self evaluate
+    # basically 1-10 how good they were
+

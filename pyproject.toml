@@ -1,5 +1,5 @@
 [project]
-name = "Advanced Information Retrieval"
+name = "Advanced-Information-Retrieval"
 version = "0.1.0"
 description = "A Reddit sub-reddits search engine using vector similarity search and retrieval augmented generation with small open source GPT LLMs"
 readme = "README.md"

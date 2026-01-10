@@ -4,6 +4,7 @@ N::Post {
     content: String,
     url: String,
     score: I32,
+    comments: [String],
 }
 
 V::Content {
@@ -13,14 +14,4 @@ V::Content {
 E::EmbeddingOf {
     From: Post,
     To: Content,
-}
-
-N::Comment {
-    content: String,
-    score: I32,
-}
-
-E::CommentOf {
-    From: Post,
-    To: Comment,
 }

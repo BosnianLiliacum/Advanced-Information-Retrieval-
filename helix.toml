@@ -3,6 +3,9 @@ name = "air_github_repo"
 queries = "./db/"
 container_runtime = "docker"
 
+[local.air_github_repo]
+build_mode = "debug"
+
 [local.dev]
 port = 6969
 build_mode = "debug"
