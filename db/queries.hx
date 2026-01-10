@@ -37,7 +37,10 @@ QUERY search_posts_vec(query: [F64], k: I32) =>
     posts <- vecs::In<EmbeddingOf>
     RETURN posts::{subreddit, title, content, url}
 
-//QUERY search_posts_vec_w_comments(query: [F64], k: I32) =>
-//    vecs <- SearchV<Embedding>(query, k)
-//    posts <- vecs::In<EmbeddingOf>
-//    RETURN posts::{subreddit, title, content, url}
+QUERY search_posts_vec_with_comments(query: [F64], k: I32) =>
+    vecs <- SearchV<Content>(query, k)
+    posts <- vecs::In<EmbeddingOf>
+
+    comments <- posts::Out<CommentOf>
+
+    RETURN posts::{subreddit, title, content}, comments::{content, score}

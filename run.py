@@ -37,6 +37,25 @@ class search_posts_vec(helix.Query):
     def response(self, response):
         return response
 
+class search_posts_vec_with_comments(helix.Query):
+    def __init__(
+        self,
+        query_vec: List[float],
+        k: int,
+    ):
+        super().__init__()
+        self.query_vec = query_vec
+        self.k = k
+
+    def query(self) -> List[helix.Payload]:
+        return [{
+            "query": self.query_vec,
+            "k": self.k,
+        }]
+
+    def response(self, response):
+        return response
+
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 
 def get_ollama_response(prompt):
@@ -129,15 +148,23 @@ def create_prompt(out: list, query: str) -> str:
     return prompt
 
 if __name__ == "__main__":
-    #text = input("prompt: ")
     text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
+    vec = vectorize_text(text)
+    n = 5
+    res = db.query(search_posts_vec_with_comments(vec, n))
+    print(res)
+
+    exit(1)
+
+    text = input("prompt: ")
+    #text = "Why is there a significant performance difference between downloading models directly from Ollama and installing GGUF models on Ollama, even when using the same quantization method?"
     text_prompt = create_rephrase(text)
     print(text_prompt)
     res = get_ollama_response(text_prompt)
     print(res)
 
     vec = vectorize_text(res)
-    res = db.query(search_posts_vec(vec, 20))
+    res = db.query(search_posts_vec(vec, 5))
 
     # ['content', 'subreddit', 'title', 'url']
     out = [o for o in res[0]["posts"][:4]]

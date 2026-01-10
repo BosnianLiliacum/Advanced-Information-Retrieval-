@@ -1,7 +1,7 @@
 [project]
-name = "air-github-repo"
+name = "Advanced Information Retrieval"
 version = "0.1.0"
-description = "Add your description here"
+description = "A Reddit sub-reddits search engine using vector similarity search and retrieval augmented generation with small open source GPT LLMs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
