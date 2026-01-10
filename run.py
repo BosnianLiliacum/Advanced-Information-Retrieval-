@@ -97,7 +97,8 @@ def create_prompt(out: list, query: str) -> str:
     urls_section = "\n".join([f"- {url}" for url in urls if url != 'N/A'])
 
     prompt_template = """<instructions>
-    Based on the provided sources below, answer the user's question to the best of your ability.
+    Based on the provided sources below, answer the user's question to the best of your ability. Go into depth,
+    but don't ramble on. Keep it short and minimal with only the necessary information.
 
     In your response:
     1. Provide a comprehensive answer drawing from the sources
