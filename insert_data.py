@@ -69,16 +69,16 @@ if __name__ == "__main__":
     db = helix.Client(local=True, verbose=True)
 
     data = load_all_posts("datasets/scrapes")
-    #vecs = []
-    #for _, _, content, _, _, _ in tqdm(data):
-    #    vec = vectorize_text(content)
-    #    vecs.append(vec)
-    #with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
+    vecs = []
+    for _, _, content, _, _, _ in tqdm(data):
+        vec = vectorize_text(content)
+        vecs.append(vec)
+    with open("embeded_vectors.json", "w") as f: json.dump(vecs, f, indent=2)
 
-    n_data = []
-    vecs = json.load(open("embeded_vectors.json"))
-    for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
-        db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
+    #n_data = []
+    #vecs = json.load(open("embeded_vectors.json"))
+    #for (subreddit, title, content, url, score, comments), vec in tqdm(zip(data, vecs)):
+    #    db.query(upload_a_post(subreddit, title, content, vec, url, score, comments))
 
-    posts = db.query("get_all_posts")
-    print(len(posts[0]["posts"]))
+    #posts = db.query("get_all_posts")
+    #print(len(posts[0]["posts"]))
