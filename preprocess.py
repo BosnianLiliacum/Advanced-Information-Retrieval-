@@ -22,9 +22,7 @@ from pathlib import Path
 from typing import List, Tuple, Optional, Dict, Any
 
 
-# -----------------------------
 # Data structures
-# -----------------------------
 @dataclass
 class Comment:
     author: Optional[str]
@@ -47,8 +45,7 @@ class Post:
 
     def to_required_tuple(self, top_k: int) -> Tuple[str, str, str, int, List[Tuple[str, int]]]:
         """
-        Return exactly what you asked for:
-        (title, content, URL, score, top_k_comments[(comment, score), ...])
+        Return: title, content, URL, score, top_k_comments[(comment, score),...
         """
         post_score = int(self.score) if self.score is not None else 0
 
@@ -66,9 +63,7 @@ class Post:
         return (self.title.strip(), self.content.strip(), self.url.strip(), post_score, top_k_pairs)
 
 
-# -----------------------------
 # Parsing helpers
-# -----------------------------
 _INT_RE = re.compile(r"-?\d+")
 
 def _parse_int(line: str) -> Optional[int]:
@@ -84,13 +79,8 @@ def _get_field(lines: List[str], prefix: str) -> Optional[str]:
 
 def _split_sections(text: str) -> Dict[str, str]:
     """
-    Splits into sections keyed by headers we care about.
-    We treat these headers as markers:
-      - "Post Content:"
-      - "Top " (e.g. "Top 4 comments:")
-    Everything above "Post Content:" is metadata lines.
+    Splits into sections keyed by headers
     """
-    # Normalize newlines
     t = text.replace("\r\n", "\n").replace("\r", "\n")
     return {"full": t}
 
@@ -102,7 +92,6 @@ def _extract_post_content(full_text: str) -> Tuple[str, str]:
     if marker in full_text:
         meta, rest = full_text.split(marker, 1)
         return meta.strip(), rest.strip()
-    # fallback: sometimes "Post Content:" may be directly after newline
     marker2 = "\nPost Content:\n"
     if marker2 in full_text:
         meta, rest = full_text.split(marker2, 1)
@@ -114,7 +103,6 @@ def _extract_comments_block(content_and_more: str) -> Tuple[str, str]:
     """
     Returns (content_text, comments_block)
     """
-    # Typical marker: "\n\nTop 4 comments:\n"
     m = re.search(r"\n\s*Top\s+\d+\s+comments:\s*\n", content_and_more)
     if not m:
         return content_and_more.strip(), ""
@@ -126,15 +114,7 @@ def _parse_comments(comments_block: str) -> List[Comment]:
     if not comments_block:
         return []
 
-    # Split by "Comment X:" blocks
-    # Example:
-    # Comment 1:
-    #   Author: ...
-    #   Comment: ...
-    #   Score: ...
-    #   Created UTC: ...
     parts = re.split(r"\n\s*Comment\s+\d+\s*:\s*\n", "\n" + comments_block)
-    # first element before first comment will be junk
     parts = [p.strip() for p in parts if p.strip()]
 
     comments: List[Comment] = []
@@ -145,7 +125,6 @@ def _parse_comments(comments_block: str) -> List[Comment]:
         score = None
         created = None
 
-        # Comment text can span multiple lines; it starts after "Comment:" (or "  Comment:")
         comment_text_lines: List[str] = []
         in_comment_text = False
 
@@ -198,7 +177,7 @@ def parse_post_file(path: Path) -> Post:
     content_text, comments_block = _extract_comments_block(rest)
     comments = _parse_comments(comments_block)
 
-    # subreddit name is the folder name under reddit/scrapes/
+    # subreddit folder under reddit/scrapes/
     subreddit = path.parent.name.replace("scrape_", "", 1)
 
     return Post(
@@ -213,10 +192,7 @@ def parse_post_file(path: Path) -> Post:
         comments=comments,
     )
 
-
-# -----------------------------
-# Main API you asked for
-# -----------------------------
+# loading point
 def load_all_posts(
     root: str | Path = "reddit/scrapes",
     top_k_comments: int = 4,
@@ -225,7 +201,6 @@ def load_all_posts(
     Returns:
       (subreddit, title, content, url, score, [(comment_text, comment_score), ...])
     """
-    # Make root path robust regardless of where you run `python preprocess.py` from
     script_dir = Path(__file__).resolve().parent
     root_path = Path(root)
     if not root_path.is_absolute():
@@ -237,7 +212,6 @@ def load_all_posts(
         print("[HINT] Check your repo structure. Expected something like: <repo>/reddit/scrapes/...")
         return []
 
-    # Try multiple patterns in case your filenames differ
     patterns = [
         "**/post_*.txt",
         "**/post*.txt",
@@ -280,9 +254,7 @@ def load_all_posts(
     return out
 
 
-# -----------------------------
-# Optional: quick CLI test
-# -----------------------------
+#CLI test
 if __name__ == "__main__":
     posts = load_all_posts("datasets/scrapes", top_k_comments=4)
     print(f"Loaded {len(posts)} posts.")
